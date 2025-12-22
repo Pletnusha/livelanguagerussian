@@ -8,7 +8,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -35,23 +35,24 @@
         }
 
         h1 {
-            font-family: "League Spartan", sans-serif;
-            font-size: 2.5rem;
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2.4rem;
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 1.5rem;
         }
 
-        /* LOGO */
+    
         .logo-wrap {
-            width: 220px;
-            height: 220px;
+            width: 160px;          
+            height: 160px;
             border-radius: 50%;
             overflow: hidden;
-            margin: 0 auto;
+            margin: 0 auto 2rem;
+            background-color: #ffffff;
         }
 
-        .logo {
+        .logo-wrap img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -60,12 +61,11 @@
 
         main {
             text-align: center;
-            max-width: 800px;
-            margin: 2rem auto;
+            max-width: 700px;
         }
 
         .intro-line-1 {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             font-weight: 600;
             color: #6B1D36;
             text-transform: uppercase;
@@ -75,25 +75,23 @@
         .intro-line-2,
         .intro-line-3 {
             font-size: 1.1rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .cta-button {
             display: inline-block;
             margin-top: 2rem;
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 2.4rem;
             background-color: #FF6B00;
             color: #000000;
             text-decoration: none;
             font-size: 1.1rem;
-            font-weight: 400;
-            border-radius: 50px;
-            transition: background-color 0.3s ease;
+            font-weight: 500;
+            border-radius: 999px;
         }
 
         .cta-button:hover {
-            background-color: #FF8520;
+            background-color: #ff8120;
         }
 
         @media (min-width: 768px) {
@@ -102,17 +100,12 @@
             }
 
             .logo-wrap {
-                width: 280px;
-                height: 280px;
+                width: 180px;
+                height: 180px;
             }
 
             .intro-line-1 {
-                font-size: 1.9rem;
-            }
-
-            .intro-line-2,
-            .intro-line-3 {
-                font-size: 1.3rem;
+                font-size: 1.6rem;
             }
         }
     </style>
@@ -122,8 +115,9 @@
 
     <header>
         <h1>LIVE LANGUAGE_RUSSIAN</h1>
+
         <div class="logo-wrap">
-            <img src="assets/logog%20scuola%20finfin.png" alt="LIVE LANGUAGE_RUSSIAN" class="logo">
+            <img src="assets/logog%20scuola%20finfin.png" alt="Live Language Russian logo">
         </div>
     </header>
 
@@ -132,7 +126,7 @@
         <div class="intro-line-2">Qui puoi esercitarti nella grammatica,</div>
         <div class="intro-line-3">che cosa aspetti?</div>
 
-        <a href="#" class="cta-button">imparare gratis</a>
+        <a href="form.html" class="cta-button">imparare gratis</a>
     </main>
 
 </body>
