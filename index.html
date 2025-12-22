@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIVE LANGUAGE_RUSSIAN</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #ffffff;
@@ -24,50 +28,57 @@
             justify-content: center;
             padding: 2rem;
         }
+
         header {
             text-align: center;
             margin-bottom: 2rem;
         }
+
         h1 {
             font-family: "League Spartan", sans-serif;
             font-size: 2.5rem;
             font-weight: 700;
-            color: #000000;
             text-transform: uppercase;
             margin-bottom: 1.5rem;
         }
-        .logo {
-            max-width: 350px;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+
+        /* LOGO */
+        .logo-wrap {
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
         }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         main {
             text-align: center;
             max-width: 800px;
             margin: 2rem auto;
         }
+
         .intro-line-1 {
-            font-family: "Montserrat", sans-serif;
             font-size: 1.6rem;
             font-weight: 600;
             color: #6B1D36;
             text-transform: uppercase;
-            display: block;
             margin-bottom: 1rem;
-            text-align: center;
         }
+
         .intro-line-2,
         .intro-line-3 {
-            font-family: "Montserrat", sans-serif;
             font-size: 1.1rem;
             font-weight: 400;
-            color: #000000;
-            display: block;
             margin-bottom: 0.5rem;
         }
+
         .cta-button {
             display: inline-block;
             margin-top: 2rem;
@@ -75,26 +86,30 @@
             background-color: #FF6B00;
             color: #000000;
             text-decoration: none;
-            font-family: "Montserrat", sans-serif;
-            font-weight: 400;
             font-size: 1.1rem;
+            font-weight: 400;
             border-radius: 50px;
-            text-transform: lowercase;
             transition: background-color 0.3s ease;
         }
+
         .cta-button:hover {
             background-color: #FF8520;
         }
+
         @media (min-width: 768px) {
             h1 {
                 font-size: 3rem;
             }
-            .logo {
-                max-width: 420px;
+
+            .logo-wrap {
+                width: 280px;
+                height: 280px;
             }
+
             .intro-line-1 {
                 font-size: 1.9rem;
             }
+
             .intro-line-2,
             .intro-line-3 {
                 font-size: 1.3rem;
@@ -102,16 +117,24 @@
         }
     </style>
 </head>
+
 <body>
+
     <header>
         <h1>LIVE LANGUAGE_RUSSIAN</h1>
-        <img src="assets/logog%20scuola%20finfin.png" class="logo" alt="LIVE LANGUAGE_RUSSIAN">
+        <div class="logo-wrap">
+            <img src="assets/logog%20scuola%20finfin.png" alt="LIVE LANGUAGE_RUSSIAN" class="logo">
+        </div>
     </header>
+
     <main>
-        <span class="intro-line-1">BENVENUTI NELLA LINGUA RUSSA</span>
-        <span class="intro-line-2">Qui puoi esercitarti nella grammatica,</span>
-        <span class="intro-line-3">che cosa aspetti?</span>
+        <div class="intro-line-1">BENVENUTI NELLA LINGUA RUSSA</div>
+        <div class="intro-line-2">Qui puoi esercitarti nella grammatica,</div>
+        <div class="intro-line-3">che cosa aspetti?</div>
+
         <a href="#" class="cta-button">imparare gratis</a>
     </main>
+
 </body>
-</html> Проверь код index.html, проверь возможности достраивать структуру постепенно, напиши мне о готовности кода  
+</html>
+вать структуру постепенно, напиши мне о готовности кода  
