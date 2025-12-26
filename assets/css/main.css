@@ -226,3 +226,132 @@ body {
   font-size: 0.95rem;
   color: #555;
 }
+/* ===== PRINCIPIANTI PAGE OVERRIDE – LARGE CENTERED GLASS BUTTONS ===== */
+
+.level-header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.level-header h1 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.level-description {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.level-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.macro-area {
+  margin-bottom: 3rem;
+}
+
+.macro-area-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.level-content .argomento-card {
+  display: block;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(200, 200, 200, 0.3);
+  border-radius: 16px;
+  
+  cursor: pointer;
+  
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  
+  transition:
+    background 0.3s ease,
+    backdrop-filter 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.25s ease,
+    border-color 0.3s ease;
+}
+
+.level-content .argomento-card:hover {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  border-color: rgba(200, 200, 200, 0.5);
+}
+
+.level-content .argomento-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: #1a1a1a;
+}
+
+.level-content .argomento-focus {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  color: #666;
+}
+
+.level-footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.back-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #2a5bd7;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .level-header h1 {
+    font-size: 3rem;
+  }
+  
+  .level-content .argomento-card {
+    padding: 2.25rem 3rem;
+  }
+  
+  .level-content .argomento-title {
+    font-size: 1.6rem;
+  }
+  
+  .level-content .argomento-focus {
+    font-size: 1.1rem;
+  }
+}
