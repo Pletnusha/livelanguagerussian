@@ -355,3 +355,65 @@ body {
     font-size: 1.1rem;
   }
 }
+/* ===== MOBILE RESPONSIVE – LEVEL PAGES ===== */
+
+@media (max-width: 480px) {
+  .level-header {
+    padding: 2rem 1rem 1rem;
+  }
+  
+  .level-header h1 {
+    font-size: 1.85rem;
+    line-height: 1.15;
+  }
+  
+  .level-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .level-content {
+    padding: 1.5rem 1rem 3rem;
+  }
+  
+  .macro-area {
+    margin-bottom: 2.5rem;
+  }
+  
+  .macro-area-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .level-content .argomento-card {
+    padding: 1.5rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    min-height: 90px;
+  }
+  
+  .level-content .argomento-card:active {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .level-content .argomento-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .level-content .argomento-focus {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .level-footer {
+    padding: 1.5rem 1rem;
+  }
+  
+  .back-link {
+    font-size: 0.9rem;
+  }
+}
