@@ -417,3 +417,23 @@ body {
     font-size: 0.9rem;
   }
 }
+/* ===== MOBILE SECTION TITLES – VISUAL HIERARCHY FIX ===== */
+
+@media (max-width: 480px) {
+  .macro-area {
+    margin-bottom: 2rem;
+  }
+  
+  .macro-area-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.85rem;
+    margin-top: 0;
+    color: #666;
+    letter-spacing: 0.02em;
+  }
+  
+  .macro-area:not(:first-child) .macro-area-title {
+    margin-top: 0.5rem;
+  }
+}
