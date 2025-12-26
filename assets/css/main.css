@@ -55,62 +55,15 @@ h1, h2, h3 {
   background: #ddd;
   color: #333;
 }
-/* ===== ACCUSATIVO PAGE – CLEAN LAYOUT + GLASS BUTTONS ===== */
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: #f5f6f7;
-  color: #1a1a1a;
-}
 
 /* ===== ACCUSATIVO PAGE – CLEAN LAYOUT + GLASS BUTTONS ===== */
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: #f5f6f7;
-  color: #1a1a1a;
-}
-
-/* Center main content */
 .exercises-section {
   max-width: 860px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem;
 }
 
-/* Exercise card = button */
-.exercise-card {
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 14px;
-  padding: 1.4rem 1.6rem;
-  margin-bottom: 1.2rem;
-
-  cursor: pointer;
-
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-
-  transition:
-    background 0.25s ease,
-    backdrop-filter 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.2s ease;
-}
-
-/* Hover glass effect */
-.exercise-card:hover {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
-}
-
-/* Exercise type label */
 .exercise-type {
   display: inline-block;
   font-size: 0.75rem;
@@ -121,20 +74,17 @@ body {
   margin-bottom: 0.4rem;
 }
 
-/* Exercise title */
 .exercise-title {
   font-size: 1.05rem;
   margin: 0.3rem 0 0.9rem;
 }
 
-/* Meta row: status + button */
 .exercise-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Status labels */
 .exercise-label {
   font-size: 0.8rem;
   font-weight: 600;
@@ -148,104 +98,7 @@ body {
   color: #999;
 }
 
-/* Buttons */
-.exercise-button {
-  font-family: 'Montserrat', sans-serif;
-  padding: 0.45rem 1rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-}
-
-.button-start {
-  background: #2a5bd7;
-  color: #ffffff;
-}
-
-.button-unlock {
-  background: #e0e0e0;
-  color: #333;
-}
 /* ===== PRINCIPIANTI PAGE – ARGOMENTO BUTTONS ===== */
-
-/* Center content */
-.level-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem;
-}
-
-/* Argomento card = button */
-.argomento-card {
-  display: block;
-  padding: 1.6rem 1.8rem;
-  margin-bottom: 1.2rem;
-
-  font-family: 'Montserrat', sans-serif;
-
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 16px;
-
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-
-  transition:
-    background 0.25s ease,
-    backdrop-filter 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.2s ease;
-}
-
-/* Hover glass effect */
-.argomento-card:hover {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14);
-  transform: translateY(-2px);
-}
-
-/* Argomento title */
-.argomento-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* Argomento focus */
-.argomento-focus {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  color: #555;
-}
-/* ===== PRINCIPIANTI PAGE OVERRIDE – LARGE CENTERED GLASS BUTTONS ===== */
-
-.level-header {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 1.5rem;
-  text-align: center;
-}
-
-.level-header h1 {
-  font-family: 'League Spartan', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.level-description {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.6;
-}
 
 .level-content {
   max-width: 720px;
@@ -264,7 +117,7 @@ body {
   text-align: center;
 }
 
-.level-content .argomento-card {
+.argomento-card {
   display: block;
   width: 100%;
   padding: 2rem 2.5rem;
@@ -294,7 +147,7 @@ body {
     border-color 0.3s ease;
 }
 
-.level-content .argomento-card:hover {
+.argomento-card:hover {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -303,7 +156,7 @@ body {
   border-color: rgba(200, 200, 200, 0.5);
 }
 
-.level-content .argomento-title {
+.argomento-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
@@ -311,13 +164,32 @@ body {
   color: #1a1a1a;
 }
 
-.level-content .argomento-focus {
+.argomento-focus {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
   margin: 0;
   color: #666;
+}
+
+.level-header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.level-header h1 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.level-description {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
 }
 
 .level-footer {
@@ -342,69 +214,21 @@ body {
   .level-header h1 {
     font-size: 3rem;
   }
-  /* ===== MOBILE LAYOUT FIX – HEADINGS + CARD ALIGNMENT ===== */
-
-@media (max-width: 768px) {
-  .level-content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
   
-  .level-content .macro-area {
-    margin-bottom: 2.5rem;
-  }
-  
-  .level-content .macro-area-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    text-align: left;
-    margin-bottom: 0.85rem;
-    margin-top: 0;
-    color: #999;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  }
-  
-  .level-content .macro-area:not(:first-child) {
-    margin-top: 2.75rem;
-  }
-  
-  .level-content .argomento-card {
-    display: block;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: left;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-  
-  .level-content .argomento-title {
-    text-align: left;
-  }
-  
-  .level-content .argomento-focus {
-    text-align: left;
-  }
-}
-  
-  .level-content .argomento-card {
+  .argomento-card {
     padding: 2.25rem 3rem;
   }
   
-  .level-content .argomento-title {
+  .argomento-title {
     font-size: 1.6rem;
   }
   
-  .level-content .argomento-focus {
+  .argomento-focus {
     font-size: 1.1rem;
   }
 }
-/* ===== MOBILE RESPONSIVE – LEVEL PAGES ===== */
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .level-header {
     padding: 2rem 1rem 1rem;
   }
@@ -428,32 +252,51 @@ body {
   }
   
   .macro-area-title {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: left;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+    color: #999;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   }
   
-  .level-content .argomento-card {
+  .macro-area:not(:first-child) {
+    margin-top: 2.75rem;
+  }
+  
+  .argomento-card {
+    display: block;
+    width: 100%;
     padding: 1.5rem 1.25rem;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 1rem;
+    text-align: left;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    min-height: 90px;
+    border: 1px solid rgba(200, 200, 200, 0.25);
   }
   
-  .level-content .argomento-card:active {
+  .argomento-card:active {
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
   }
   
-  .level-content .argomento-title {
+  .argomento-title {
     font-size: 1.15rem;
     margin-bottom: 0.6rem;
+    text-align: left;
   }
   
-  .level-content .argomento-focus {
+  .argomento-focus {
     font-size: 0.9rem;
     line-height: 1.4;
+    text-align: left;
   }
   
   .level-footer {
@@ -462,51 +305,5 @@ body {
   
   .back-link {
     font-size: 0.9rem;
-  }
-}
-/* ===== MOBILE SECTION TITLES – VISUAL HIERARCHY FIX ===== */
-
-@media (max-width: 480px) {
-  .macro-area {
-    margin-bottom: 2rem;
-  }
-  
-  .macro-area-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.85rem;
-    margin-top: 0;
-    color: #666;
-    letter-spacing: 0.02em;
-  }
-  
-  .macro-area:not(:first-child) .macro-area-title {
-    margin-top: 0.5rem;
-  }
-}
-/* ===== MOBILE SECTION HEADINGS – VISUAL HIERARCHY & ALIGNMENT ===== */
-
-@media (max-width: 768px) {
-  .level-content .macro-area {
-    margin-bottom: 2.25rem;
-  }
-  
-  .level-content .macro-area-title {
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    margin-top: 0;
-    color: #888;
-    text-align: left;
-    letter-spacing: 0.01em;
-    padding-left: 0.25rem;
-  }
-  
-  .level-content .macro-area:not(:first-child) {
-    margin-top: 2.5rem;
-  }
-  
-  .level-content .argomento-card:first-of-type {
-    margin-top: 0;
   }
 }
