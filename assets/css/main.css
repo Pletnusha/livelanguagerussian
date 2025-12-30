@@ -499,6 +499,17 @@ h1, h2, h3 {
   padding: 2rem 1.5rem;
 }
 
+/* ===== EXERCISE PANELS ===== */
+
+.exercise-panel:not([hidden]) {
+  border: 1px solid rgba(42, 91, 215, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
 @media (max-width: 768px) {
   .page-accusativo-come-ti-chiami .argomento-title {
     font-size: 2.2rem;
@@ -510,5 +521,9 @@ h1, h2, h3 {
 
   .page-accusativo-come-ti-chiami .exercise-card-section {
     padding: 1.5rem 1.25rem;
+  }
+
+  .exercise-panel:not([hidden]) {
+    padding: 1.5rem;
   }
 }
