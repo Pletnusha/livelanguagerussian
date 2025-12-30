@@ -26,15 +26,18 @@
 
     <main class="exercises-section">
 
-        <article class="exercise-card-section">
-            <h2 class="section-title">PRESENTARE SE STESSO E LA PROPRIA FAMIGLIA</h2>
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-1">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Presentare se stesso e la propria famiglia</h3>
+        </article>
 
+        <div class="exercise-panel" id="panel-acc-open-1" hidden>
             <section id="ex-accusativo-trascina-01">
     <div id="ex-accusativo-trascina-01-container"></div>
     <div id="ex-accusativo-trascina-01-completion" style="display:none;"></div>
 </section>
 
-<script>
+<script type="text/plain" data-lazy-script="panel-acc-open-1">
 (() => {
     const root = document.getElementById('ex-accusativo-trascina-01');
     const exerciseContainer = root.querySelector('#ex-accusativo-trascina-01-container');
@@ -243,18 +246,36 @@
     loadExercise(currentExerciseIndex);
 })();
 </script>
+        </div>
 
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-2">
+            <span class="exercise-type">Quiz</span>
+            <h3 class="exercise-title">Мою сестру зовут …</h3>
         </article>
 
-        <article class="exercise-card-section">
-            <h2 class="section-title">Мою сестру зовут …</h2>
+        <div class="exercise-panel" id="panel-acc-open-2" hidden>
+            <!-- TODO: exercise content -->
+        </div>
+
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-3">
+            <span class="exercise-type">Scrivere</span>
+            <h3 class="exercise-title">Как зовут твоего брата?</h3>
         </article>
 
-        <article class="exercise-card-section">
-            <h2 class="section-title">Как зовут твоего брата?</h2>
+        <div class="exercise-panel" id="panel-acc-open-3" hidden>
+            <!-- TODO: exercise content -->
+        </div>
+
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-4">
+            <span class="exercise-type">Flash cards</span>
+            <h3 class="exercise-title">Моя семья</h3>
         </article>
 
-        <article class="exercise-card" data-exercise-id="acc-3" data-status="locked">
+        <div class="exercise-panel" id="panel-acc-open-4" hidden>
+            <!-- TODO: exercise content -->
+        </div>
+
+        <article class="exercise-card" data-status="locked">
             <span class="exercise-type">Quiz</span>
             <h3 class="exercise-title">Scegli la forma corretta</h3>
             <div class="exercise-meta">
@@ -263,7 +284,7 @@
             </div>
         </article>
 
-        <article class="exercise-card" data-exercise-id="acc-4" data-status="locked">
+        <article class="exercise-card" data-status="locked">
             <span class="exercise-type">Scrivere</span>
             <h3 class="exercise-title">Completa il dialogo</h3>
             <div class="exercise-meta">
@@ -272,7 +293,7 @@
             </div>
         </article>
 
-        <article class="exercise-card" data-exercise-id="acc-5" data-status="locked">
+        <article class="exercise-card" data-status="locked">
             <span class="exercise-type">Flash cards</span>
             <h3 class="exercise-title">Verbi con l'accusativo</h3>
             <div class="exercise-meta">
@@ -281,7 +302,7 @@
             </div>
         </article>
 
-        <article class="exercise-card" data-exercise-id="acc-6" data-status="locked">
+        <article class="exercise-card" data-status="locked">
             <span class="exercise-type">Drag &amp; Drop</span>
             <h3 class="exercise-title">Ordina le parole</h3>
             <div class="exercise-meta">
@@ -290,7 +311,7 @@
             </div>
         </article>
 
-        <article class="exercise-card" data-exercise-id="acc-7" data-status="locked">
+        <article class="exercise-card" data-status="locked">
             <span class="exercise-type">Scrivere</span>
             <h3 class="exercise-title">Rispondi alle domande</h3>
             <div class="exercise-meta">
@@ -299,18 +320,9 @@
             </div>
         </article>
 
-        <article class="exercise-card" data-exercise-id="acc-8" data-status="locked">
+        <article class="exercise-card" data-status="locked">
             <span class="exercise-type">Esercizio</span>
-            <h3 class="exercise-title">Esercizio bloccato</h3>
-            <div class="exercise-meta">
-                <span class="exercise-label label-locked">🔒 Bloccato</span>
-                <button class="exercise-button button-unlock" data-action="unlock">Sblocca</button>
-            </div>
-        </article>
-
-        <article class="exercise-card" data-exercise-id="acc-9" data-status="locked">
-            <span class="exercise-type">Esercizio</span>
-            <h3 class="exercise-title">Esercizio bloccato</h3>
+            <h3 class="exercise-title">Esercizio avanzato</h3>
             <div class="exercise-meta">
                 <span class="exercise-label label-locked">🔒 Bloccato</span>
                 <button class="exercise-button button-unlock" data-action="unlock">Sblocca</button>
@@ -325,7 +337,43 @@
         <button class="cta-button" data-action="unlock-all">Sblocca ora</button>
     </section>
 
-    <script src="/assets/js/app.js"></script>
+    <script>
+    (function() {
+        const openCards = document.querySelectorAll('[data-status="open"]');
+
+        openCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.closest('button')) return;
+
+                const targetPanelId = this.getAttribute('data-target');
+                const targetPanel = document.getElementById(targetPanelId);
+
+                if (!targetPanel) return;
+
+                const isCurrentlyOpen = !targetPanel.hidden;
+
+                document.querySelectorAll('.exercise-panel').forEach(panel => {
+                    panel.hidden = true;
+                });
+
+                if (!isCurrentlyOpen) {
+                    targetPanel.hidden = false;
+
+                    if (!targetPanel.hasAttribute('data-initialized')) {
+                        const lazyScript = targetPanel.querySelector('[data-lazy-script]');
+                        if (lazyScript) {
+                            const scriptCode = lazyScript.textContent;
+                            const execScript = document.createElement('script');
+                            execScript.textContent = scriptCode;
+                            targetPanel.appendChild(execScript);
+                            targetPanel.setAttribute('data-initialized', 'true');
+                        }
+                    }
+                }
+            });
+        });
+    })();
+    </script>
 
 </body>
 </html>
