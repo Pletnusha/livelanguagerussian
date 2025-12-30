@@ -255,7 +255,697 @@
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-2" hidden>
-            <!-- TODO: exercise content -->
+            <style>
+#ex-flashcards-acc-01 {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#ex-flashcards-acc-01 .fca01-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#ex-flashcards-acc-01 .fca01-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+#ex-flashcards-acc-01 .fca01-header p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+#ex-flashcards-acc-01 .fca01-mode-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+#ex-flashcards-acc-01 .fca01-mode-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.65rem 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#ex-flashcards-acc-01 .fca01-mode-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: #2a5bd7;
+}
+
+#ex-flashcards-acc-01 .fca01-mode-btn.active {
+    background: #2a5bd7;
+    color: #fff;
+    border-color: #2a5bd7;
+}
+
+#ex-flashcards-acc-01 .fca01-section {
+    display: none;
+}
+
+#ex-flashcards-acc-01 .fca01-section.visible {
+    display: block;
+    animation: fca01FadeIn 0.4s;
+}
+
+@keyframes fca01FadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#ex-flashcards-acc-01 .fca01-card-container {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+}
+
+#ex-flashcards-acc-01 .fca01-card {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+#ex-flashcards-acc-01 .fca01-card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+#ex-flashcards-acc-01 .fca01-card-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#ex-flashcards-acc-01 .fca01-card-front {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    position: relative;
+}
+
+#ex-flashcards-acc-01 .fca01-card-back {
+    background-color: #2a5bd7;
+    color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+#ex-flashcards-acc-01 .fca01-audio-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s;
+}
+
+#ex-flashcards-acc-01 .fca01-audio-btn:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+#ex-flashcards-acc-01 .fca01-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#ex-flashcards-acc-01 .btn.btn-primary,
+#ex-flashcards-acc-01 .btn.btn-secondary {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    background: #2a5bd7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#ex-flashcards-acc-01 .btn.btn-primary:hover,
+#ex-flashcards-acc-01 .btn.btn-secondary:hover {
+    background: #1e4bb8;
+    transform: translateY(-1px);
+}
+
+#ex-flashcards-acc-01 .btn.btn-primary:focus,
+#ex-flashcards-acc-01 .btn.btn-secondary:focus {
+    outline: 2px solid rgba(42, 91, 215, 0.4);
+    outline-offset: 2px;
+}
+
+#ex-flashcards-acc-01 .fca01-btn-nav {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.65rem 1.5rem;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#ex-flashcards-acc-01 .fca01-btn-nav:hover {
+    background: #f8f8f8;
+    border-color: #2a5bd7;
+}
+
+#ex-flashcards-acc-01 .fca01-counter {
+    color: #999;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+#ex-flashcards-acc-01 .fca01-quiz-area {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+#ex-flashcards-acc-01 .fca01-quiz-question {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+#ex-flashcards-acc-01 .fca01-quiz-question .highlight {
+    color: #2a5bd7;
+}
+
+#ex-flashcards-acc-01 .fca01-quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+#ex-flashcards-acc-01 .fca01-quiz-option {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1rem;
+}
+
+#ex-flashcards-acc-01 .fca01-quiz-option:hover {
+    background: rgba(42, 91, 215, 0.05);
+    border-color: #2a5bd7;
+}
+
+#ex-flashcards-acc-01 .fca01-quiz-option.correct {
+    background: rgba(34, 197, 94, 0.1);
+    border-color: #22c55e;
+    color: #166534;
+}
+
+#ex-flashcards-acc-01 .fca01-quiz-option.wrong {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+    color: #991b1b;
+}
+
+#ex-flashcards-acc-01 .fca01-quiz-feedback {
+    text-align: center;
+    font-weight: 700;
+    min-height: 1.5rem;
+    margin-top: 1rem;
+}
+
+#ex-flashcards-acc-01 .fca01-quiz-feedback.correct {
+    color: #22c55e;
+}
+
+#ex-flashcards-acc-01 .fca01-quiz-feedback.wrong {
+    color: #ef4444;
+}
+
+#ex-flashcards-acc-01 .fca01-match-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+#ex-flashcards-acc-01 .fca01-match-feedback {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    min-height: 1.75rem;
+    margin-bottom: 1.25rem;
+    color: #999;
+}
+
+#ex-flashcards-acc-01 .fca01-match-feedback.correct {
+    color: #22c55e;
+}
+
+#ex-flashcards-acc-01 .fca01-match-feedback.wrong {
+    color: #ef4444;
+}
+
+#ex-flashcards-acc-01 .fca01-match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#ex-flashcards-acc-01 .fca01-match-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#ex-flashcards-acc-01 .fca01-match-card {
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #e0e0e0;
+    transition: all 0.2s;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+#ex-flashcards-acc-01 .fca01-match-card:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: #2a5bd7;
+}
+
+#ex-flashcards-acc-01 .fca01-match-card.selected {
+    background: #fff3cd;
+    border-color: #fbbf24;
+    transform: scale(1.02);
+}
+
+#ex-flashcards-acc-01 .fca01-match-card.wrong {
+    background: #fee2e2;
+    border-color: #ef4444;
+    animation: fca01Shake 0.4s;
+}
+
+#ex-flashcards-acc-01 .fca01-match-card.matched {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+
+@keyframes fca01Shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+#ex-flashcards-acc-01 .fca01-center-btn {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+#ex-flashcards-acc-01 .hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #ex-flashcards-acc-01 .fca01-card-face {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+    #ex-flashcards-acc-01 .fca01-match-grid {
+        gap: 0.65rem;
+    }
+    #ex-flashcards-acc-01 .fca01-match-card {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+</style>
+
+<section id="ex-flashcards-acc-01">
+    <div class="fca01-header">
+        <h2>Il verbo Звать: L'accusativo (I decl.)</h2>
+        <p>Scegliere modalità</p>
+    </div>
+
+    <div class="fca01-mode-buttons">
+        <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+        <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+        <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+    </div>
+
+    <div id="ex-flashcards-acc-01-section-study" class="fca01-section visible">
+        <div id="ex-flashcards-acc-01-learning-area-study"></div>
+        <div class="fca01-nav">
+            <button id="ex-flashcards-acc-01-prev-btn" class="fca01-btn-nav">← Назад</button>
+            <span id="ex-flashcards-acc-01-counter" class="fca01-counter">1 / 7</span>
+            <button id="ex-flashcards-acc-01-next-btn" class="btn btn-primary">Вперед →</button>
+        </div>
+    </div>
+
+    <div id="ex-flashcards-acc-01-section-quiz" class="fca01-section">
+        <div id="ex-flashcards-acc-01-learning-area-quiz"></div>
+        <div class="fca01-center-btn">
+            <button id="ex-flashcards-acc-01-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+        </div>
+    </div>
+
+    <div id="ex-flashcards-acc-01-section-match" class="fca01-section">
+        <div id="ex-flashcards-acc-01-learning-area-match"></div>
+        <div class="fca01-center-btn">
+            <button id="ex-flashcards-acc-01-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+        </div>
+    </div>
+</section>
+
+<script type="text/plain" data-lazy-script="panel-acc-open-2">
+(() => {
+    const rootEl = document.getElementById('ex-flashcards-acc-01');
+    if (!rootEl) {
+        console.warn('⚠️ Flashcards: Container #ex-flashcards-acc-01 NOT FOUND');
+        return;
+    }
+    console.warn('✅ Flashcards: Container found, initializing...');
+
+    function initFlashcardsAcc01(root) {
+        const flashcardsData = [
+            { front: "Мой отец Анатолий.", back: "Моего отца зовут Анатолий." },
+            { front: "Твой дедушка Павел", back: "Твоего дедушку зовут Павел." },
+            { front: "Наша бабушка Елена.", back: "Нашу бабушку зовут Елена." },
+            { front: "Их сын Дмитрий.", back: "Их сына зовут Дмитрий." },
+            { front: "Ваша сестра Мария.", back: "Вашу сестру зовут Мария?" },
+            { front: "Его дочь Александра.", back: "Его дочь зовут Александра."},
+            { front: "Её кот Барсик.", back: "Её кота зовут Барсик."}
+        ];
+
+        let currentMode = 'study';
+        let currentIndex = 0;
+        let selectedMatchCard = null;
+        let isProcessingMatch = false;
+        let cachedRuVoice = null;
+
+        function pickRuVoice() {
+            const voices = window.speechSynthesis.getVoices();
+            const ruVoice = voices.find(v => v.lang.includes('ru'));
+            if (ruVoice) {
+                cachedRuVoice = ruVoice;
+            }
+        }
+
+        function textToSpeech(text, lang = 'ru-RU') {
+            if (!('speechSynthesis' in window)) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang;
+            utterance.rate = 0.9;
+            utterance.pitch = 1;
+            utterance.volume = 1;
+            if (cachedRuVoice) {
+                utterance.voice = cachedRuVoice;
+            }
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function playAudio(text, event) {
+            event.stopPropagation();
+            textToSpeech(text);
+        }
+
+        function switchMode(mode) {
+            currentMode = mode;
+            root.querySelectorAll('.fca01-mode-btn').forEach(btn => btn.classList.remove('active'));
+            root.querySelectorAll('.fca01-section').forEach(sec => sec.classList.remove('visible'));
+            root.querySelector(`#ex-flashcards-acc-01-section-${mode}`).classList.add('visible');
+            root.querySelector(`[data-mode="${mode}"]`).classList.add('active');
+
+            if (mode === 'study') { currentIndex = 0; renderCard(); }
+            else if (mode === 'quiz') { renderQuiz(); root.querySelector('#ex-flashcards-acc-01-start-quiz-btn').classList.add('hidden'); }
+            else if (mode === 'match') { initMatchGame(); }
+        }
+
+        function renderCard() {
+            const area = root.querySelector('#ex-flashcards-acc-01-learning-area-study');
+            const counter = root.querySelector('#ex-flashcards-acc-01-counter');
+            const cardData = flashcardsData[currentIndex];
+
+            counter.textContent = `${currentIndex + 1} / ${flashcardsData.length}`;
+            area.innerHTML = `
+                <div class="fca01-card-container">
+                    <div class="fca01-card">
+                        <div class="fca01-card-face fca01-card-front">
+                            <button class="fca01-audio-btn" data-text="${cardData.front}">🔊</button>
+                            ${cardData.front}
+                        </div>
+                        <div class="fca01-card-face fca01-card-back">
+                            <button class="fca01-audio-btn" data-text="${cardData.back}">🔊</button>
+                            ${cardData.back}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            const card = area.querySelector('.fca01-card');
+            card.addEventListener('click', function() {
+                this.classList.toggle('is-flipped');
+            });
+
+            area.querySelectorAll('.fca01-audio-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => playAudio(btn.dataset.text, e));
+            });
+        }
+
+        function nextCard() {
+            currentIndex = (currentIndex + 1) % flashcardsData.length;
+            renderCard();
+        }
+
+        function prevCard() {
+            currentIndex = currentIndex > 0 ? currentIndex - 1 : flashcardsData.length - 1;
+            renderCard();
+        }
+
+        function renderQuiz() {
+            const area = root.querySelector('#ex-flashcards-acc-01-learning-area-quiz');
+            root.querySelector('#ex-flashcards-acc-01-start-quiz-btn').classList.add('hidden');
+
+            const randomIndex = Math.floor(Math.random() * flashcardsData.length);
+            const correctCard = flashcardsData[randomIndex];
+
+            let options = [correctCard];
+            while (options.length < 3 && options.length < flashcardsData.length) {
+                const randomWrong = flashcardsData[Math.floor(Math.random() * flashcardsData.length)];
+                if (!options.some(opt => opt.back === randomWrong.back)) {
+                    options.push(randomWrong);
+                }
+            }
+            options.sort(() => Math.random() - 0.5);
+
+            const buttonsHTML = options.map(opt =>
+                `<button class="fca01-quiz-option" data-answer="${opt.back}" data-correct="${correctCard.back}">
+                    ${opt.back}
+                </button>`
+            ).join('');
+
+            area.innerHTML = `
+                <div class="fca01-quiz-area">
+                    <h3 class="fca01-quiz-question">Найди вторую часть: <br><span class="highlight">"${correctCard.front}"</span></h3>
+                    <div class="fca01-quiz-options">${buttonsHTML}</div>
+                    <p class="fca01-quiz-feedback"></p>
+                </div>
+            `;
+
+            area.querySelectorAll('.fca01-quiz-option').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    checkQuizAnswer(this.dataset.answer, this.dataset.correct, this);
+                });
+            });
+        }
+
+        function checkQuizAnswer(selected, correct, btnElement) {
+            const feedback = root.querySelector('.fca01-quiz-feedback');
+            const nextBtn = root.querySelector('#ex-flashcards-acc-01-start-quiz-btn');
+
+            root.querySelectorAll('.fca01-quiz-option').forEach(btn => {
+                btn.style.pointerEvents = 'none';
+                if (btn.dataset.answer === correct) {
+                    btn.classList.add('correct');
+                }
+            });
+
+            if (selected === correct) {
+                feedback.textContent = "✅ Правильно!";
+                feedback.className = "fca01-quiz-feedback correct";
+            } else {
+                btnElement.classList.add('wrong');
+                feedback.textContent = "❌ Ошибка!";
+                feedback.className = "fca01-quiz-feedback wrong";
+            }
+            nextBtn.classList.remove('hidden');
+        }
+
+        function initMatchGame() {
+            const area = root.querySelector('#ex-flashcards-acc-01-learning-area-match');
+            selectedMatchCard = null;
+            isProcessingMatch = false;
+
+            let fronts = flashcardsData.map((card, index) => ({ text: card.front, type: 'front', id: index }));
+            let backs = flashcardsData.map((card, index) => ({ text: card.back, type: 'back', id: index }));
+
+            fronts.sort(() => Math.random() - 0.5);
+            backs.sort(() => Math.random() - 0.5);
+
+            area.innerHTML = `
+                <div class="fca01-match-container">
+                    <p class="fca01-match-feedback"></p>
+                    <div class="fca01-match-grid">
+                        <div class="fca01-match-col" id="ex-flashcards-acc-01-match-col-fronts"></div>
+                        <div class="fca01-match-col" id="ex-flashcards-acc-01-match-col-backs"></div>
+                    </div>
+                </div>
+            `;
+
+            const colFronts = root.querySelector('#ex-flashcards-acc-01-match-col-fronts');
+            const colBacks = root.querySelector('#ex-flashcards-acc-01-match-col-backs');
+
+            function createMatchElement(item) {
+                const div = document.createElement('div');
+                div.className = 'fca01-match-card';
+                div.textContent = item.text;
+                div.dataset.id = item.id;
+                div.dataset.type = item.type;
+                div.addEventListener('click', () => handleMatchClick(div));
+                return div;
+            }
+
+            fronts.forEach(item => colFronts.appendChild(createMatchElement(item)));
+            backs.forEach(item => colBacks.appendChild(createMatchElement(item)));
+        }
+
+        function handleMatchClick(clickedCard) {
+            if (isProcessingMatch || clickedCard.classList.contains('matched')) return;
+            if (clickedCard === selectedMatchCard) return;
+
+            const feedbackEl = root.querySelector('.fca01-match-feedback');
+
+            if (!selectedMatchCard) {
+                selectedMatchCard = clickedCard;
+                clickedCard.classList.add('selected');
+                return;
+            }
+
+            if (selectedMatchCard.dataset.type === clickedCard.dataset.type) {
+                selectedMatchCard.classList.remove('selected');
+                selectedMatchCard = clickedCard;
+                clickedCard.classList.add('selected');
+                return;
+            }
+
+            const firstId = selectedMatchCard.dataset.id;
+            const secondId = clickedCard.dataset.id;
+            const previousCard = selectedMatchCard;
+
+            if (firstId === secondId) {
+                previousCard.classList.add('matched');
+                clickedCard.classList.add('matched');
+                feedbackEl.textContent = "✨ Отлично!";
+                feedbackEl.className = "fca01-match-feedback correct";
+                selectedMatchCard = null;
+                setTimeout(() => { feedbackEl.textContent = ""; }, 1000);
+
+                const remaining = root.querySelectorAll('.fca01-match-card:not(.matched)').length;
+                if (remaining === 0) feedbackEl.textContent = "🎉 ПОБЕДА! 🎉";
+            } else {
+                isProcessingMatch = true;
+                clickedCard.classList.add('wrong');
+                previousCard.classList.add('wrong');
+                feedbackEl.textContent = "Неверно";
+                feedbackEl.className = "fca01-match-feedback wrong";
+
+                setTimeout(() => {
+                    clickedCard.classList.remove('selected', 'wrong');
+                    previousCard.classList.remove('selected', 'wrong');
+                    feedbackEl.textContent = "";
+                    isProcessingMatch = false;
+                }, 800);
+
+                selectedMatchCard = null;
+            }
+        }
+
+        pickRuVoice();
+        if (!cachedRuVoice) {
+            window.speechSynthesis.onvoiceschanged = () => {
+                pickRuVoice();
+                window.speechSynthesis.onvoiceschanged = null;
+            };
+        }
+
+        root.querySelectorAll('.fca01-mode-btn').forEach(btn => {
+            btn.addEventListener('click', () => switchMode(btn.dataset.mode));
+        });
+
+        root.querySelector('#ex-flashcards-acc-01-next-btn').addEventListener('click', nextCard);
+        root.querySelector('#ex-flashcards-acc-01-prev-btn').addEventListener('click', prevCard);
+        root.querySelector('#ex-flashcards-acc-01-start-quiz-btn').addEventListener('click', renderQuiz);
+        root.querySelector('#ex-flashcards-acc-01-reset-match-btn').addEventListener('click', initMatchGame);
+
+        switchMode('study');
+    }
+
+    initFlashcardsAcc01(rootEl);
+    console.warn('✅ Flashcards: Initialization complete');
+})();
+</script>
         </div>
 
         <article class="exercise-card" data-status="open" data-target="panel-acc-open-3">
