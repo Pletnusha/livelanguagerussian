@@ -550,6 +550,29 @@ h1, h2, h3 {
   outline-offset: 2px;
 }
 
+.exercise-panel .btn.btn-secondary {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  background: #2a5bd7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.exercise-panel .btn.btn-secondary:hover {
+  background: #1e4bb8;
+  transform: translateY(-1px);
+}
+
+.exercise-panel .btn.btn-secondary:focus {
+  outline: 2px solid rgba(42, 91, 215, 0.4);
+  outline-offset: 2px;
+}
+
 @media (max-width: 768px) {
   .page-accusativo-come-ti-chiami .argomento-title {
     font-size: 2.2rem;
