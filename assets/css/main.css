@@ -858,25 +858,39 @@ h1, h2, h3 {
 }
 
 @media (max-width: 600px) {
-  #ex-flashcards-acc-01 .fca01-card-container {
-    margin-bottom: 1.25rem;
+  /* Flashcards: add vertical padding to prevent overlap */
+  #ex-flashcards-acc-01 {
+    padding: 1rem 0;
   }
 
-  #ex-flashcards-acc-01 .fca01-nav {
-    position: relative;
-    z-index: 10;
+  /* Flashcards: reduce card width and height for mobile */
+  #ex-flashcards-acc-01 .fca01-card-container {
+    max-width: 280px;
+    margin-bottom: 2.5rem;  /* Increased from 1.25rem to prevent nav overlap */
   }
 
   #ex-flashcards-acc-01 .fca01-card {
-    position: relative;
-    z-index: 1;
+    height: 180px;  /* Reduced from 200px */
   }
 
   #ex-flashcards-acc-01 .fca01-card-face {
-    font-size: 1.1rem;
-    padding: 1rem;
+    font-size: 1.05rem;  /* Slightly smaller */
+    padding: 0.9rem;
   }
 
+  /* Flashcards: ensure navigation has clear separation */
+  #ex-flashcards-acc-01 .fca01-nav {
+    margin-top: 1.5rem;  /* Extra spacing above nav buttons */
+    gap: 0.5rem;
+  }
+
+  /* Flashcards: adjust nav button sizing */
+  #ex-flashcards-acc-01 .fca01-btn-nav {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  /* Flashcards: Match mode adjustments */
   #ex-flashcards-acc-01 .fca01-match-grid {
     gap: 0.65rem;
   }
@@ -884,5 +898,10 @@ h1, h2, h3 {
   #ex-flashcards-acc-01 .fca01-match-card {
     padding: 0.75rem;
     font-size: 0.9rem;
+  }
+
+  /* Flashcards: Quiz mode adjustments */
+  #ex-flashcards-acc-01 .fca01-quiz-area {
+    padding: 0 0.5rem;
   }
 }
