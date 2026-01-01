@@ -348,11 +348,9 @@ h1, h2, h3 {
   outline-offset: 2px;
 }
 
-/* ===== FLASHCARDS (01/02/03) ===== */
+/* ===== FLASHCARDS (acc-*) ===== */
 
-#ex-flashcards-acc-01,
-#ex-flashcards-acc-02,
-#ex-flashcards-acc-03 {
+[id^="ex-flashcards-acc-"] {
   font-family: 'Montserrat', sans-serif;
   width: 100%;
   max-width: 900px;
@@ -360,32 +358,24 @@ h1, h2, h3 {
   padding: 0;
 }
 
-#ex-flashcards-acc-01 .fca01-header,
-#ex-flashcards-acc-02 .fca01-header,
-#ex-flashcards-acc-03 .fca01-header {
+[id^="ex-flashcards-acc-"] .fca01-header {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-#ex-flashcards-acc-01 .fca01-header h2,
-#ex-flashcards-acc-02 .fca01-header h2,
-#ex-flashcards-acc-03 .fca01-header h2 {
+[id^="ex-flashcards-acc-"] .fca01-header h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #1a1a1a;
 }
 
-#ex-flashcards-acc-01 .fca01-header p,
-#ex-flashcards-acc-02 .fca01-header p,
-#ex-flashcards-acc-03 .fca01-header p {
+[id^="ex-flashcards-acc-"] .fca01-header p {
   color: #666;
   font-size: 0.95rem;
 }
 
-#ex-flashcards-acc-01 .fca01-mode-buttons,
-#ex-flashcards-acc-02 .fca01-mode-buttons,
-#ex-flashcards-acc-03 .fca01-mode-buttons {
+[id^="ex-flashcards-acc-"] .fca01-mode-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -393,9 +383,7 @@ h1, h2, h3 {
   margin-bottom: 2.5rem;
 }
 
-#ex-flashcards-acc-01 .fca01-mode-btn,
-#ex-flashcards-acc-02 .fca01-mode-btn,
-#ex-flashcards-acc-03 .fca01-mode-btn {
+[id^="ex-flashcards-acc-"] .fca01-mode-btn {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
@@ -408,30 +396,22 @@ h1, h2, h3 {
   transition: all 0.2s ease;
 }
 
-#ex-flashcards-acc-01 .fca01-mode-btn:hover,
-#ex-flashcards-acc-02 .fca01-mode-btn:hover,
-#ex-flashcards-acc-03 .fca01-mode-btn:hover {
+[id^="ex-flashcards-acc-"] .fca01-mode-btn:hover {
   background: rgba(255, 255, 255, 1);
   border-color: #2a5bd7;
 }
 
-#ex-flashcards-acc-01 .fca01-mode-btn.active,
-#ex-flashcards-acc-02 .fca01-mode-btn.active,
-#ex-flashcards-acc-03 .fca01-mode-btn.active {
+[id^="ex-flashcards-acc-"] .fca01-mode-btn.active {
   background: #2a5bd7;
   color: #fff;
   border-color: #2a5bd7;
 }
 
-#ex-flashcards-acc-01 .fca01-section,
-#ex-flashcards-acc-02 .fca01-section,
-#ex-flashcards-acc-03 .fca01-section {
+[id^="ex-flashcards-acc-"] .fca01-section {
   display: none;
 }
 
-#ex-flashcards-acc-01 .fca01-section.visible,
-#ex-flashcards-acc-02 .fca01-section.visible,
-#ex-flashcards-acc-03 .fca01-section.visible {
+[id^="ex-flashcards-acc-"] .fca01-section.visible {
   display: block;
   animation: fca01FadeIn 0.4s;
 }
@@ -441,9 +421,7 @@ h1, h2, h3 {
   to { opacity: 1; }
 }
 
-#ex-flashcards-acc-01 .fca01-card-container,
-#ex-flashcards-acc-02 .fca01-card-container,
-#ex-flashcards-acc-03 .fca01-card-container {
+[id^="ex-flashcards-acc-"] .fca01-card-container {
   perspective: 1000px;
   width: 100%;
   max-width: 320px;
@@ -451,9 +429,7 @@ h1, h2, h3 {
   box-sizing: border-box;
 }
 
-#ex-flashcards-acc-01 .fca01-card,
-#ex-flashcards-acc-02 .fca01-card,
-#ex-flashcards-acc-03 .fca01-card {
+[id^="ex-flashcards-acc-"] .fca01-card {
   width: 100%;
   min-height: 160px;
   height: 160px;
@@ -464,21 +440,18 @@ h1, h2, h3 {
   box-sizing: border-box;
 }
 
-#ex-flashcards-acc-01 .fca01-card.is-flipped,
-#ex-flashcards-acc-02 .fca01-card.is-flipped,
-#ex-flashcards-acc-03 .fca01-card.is-flipped {
+[id^="ex-flashcards-acc-"] .fca01-card.is-flipped {
   transform: rotateY(180deg);
 }
 
-#ex-flashcards-acc-01 .fca01-card-face,
-#ex-flashcards-acc-02 .fca01-card-face,
-#ex-flashcards-acc-03 .fca01-card-face {
+[id^="ex-flashcards-acc-"] .fca01-card-face {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -492,25 +465,19 @@ h1, h2, h3 {
   box-sizing: border-box;
 }
 
-#ex-flashcards-acc-01 .fca01-card-front,
-#ex-flashcards-acc-02 .fca01-card-front,
-#ex-flashcards-acc-03 .fca01-card-front {
+[id^="ex-flashcards-acc-"] .fca01-card-front {
   background-color: #ffffff;
   color: #1a1a1a;
   position: relative;
 }
 
-#ex-flashcards-acc-01 .fca01-card-back,
-#ex-flashcards-acc-02 .fca01-card-back,
-#ex-flashcards-acc-03 .fca01-card-back {
+[id^="ex-flashcards-acc-"] .fca01-card-back {
   background-color: #2a5bd7;
   color: #ffffff;
   transform: rotateY(180deg);
 }
 
-#ex-flashcards-acc-01 .fca01-audio-btn,
-#ex-flashcards-acc-02 .fca01-audio-btn,
-#ex-flashcards-acc-03 .fca01-audio-btn {
+[id^="ex-flashcards-acc-"] .fca01-audio-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -528,16 +495,12 @@ h1, h2, h3 {
   transition: all 0.2s;
 }
 
-#ex-flashcards-acc-01 .fca01-audio-btn:hover,
-#ex-flashcards-acc-02 .fca01-audio-btn:hover,
-#ex-flashcards-acc-03 .fca01-audio-btn:hover {
+[id^="ex-flashcards-acc-"] .fca01-audio-btn:hover {
   background: #fff;
   transform: scale(1.1);
 }
 
-#ex-flashcards-acc-01 .fca01-nav,
-#ex-flashcards-acc-02 .fca01-nav,
-#ex-flashcards-acc-03 .fca01-nav {
+[id^="ex-flashcards-acc-"] .fca01-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -545,17 +508,15 @@ h1, h2, h3 {
   margin: 0 auto;
 }
 
-#ex-flashcards-acc-01 .btn.btn-primary,
-#ex-flashcards-acc-01 .btn.btn-secondary,
-#ex-flashcards-acc-02 .btn.btn-primary,
-#ex-flashcards-acc-02 .btn.btn-secondary,
-#ex-flashcards-acc-03 .btn.btn-primary,
-#ex-flashcards-acc-03 .btn.btn-secondary {
+[id^="ex-flashcards-acc-"] .btn.btn-primary,
+[id^="ex-flashcards-acc-"] .btn.btn-secondary {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.75rem 1.25rem;
   min-width: 120px;
+  width: 120px;            /* <- одинаковая ширина */
+  flex: 0 0 120px;         /* <- одинаковый размер в flex */
   background: #2a5bd7;
   color: #fff;
   border: 1px solid transparent; /* equalize border width */
@@ -563,36 +524,30 @@ h1, h2, h3 {
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease;
   box-sizing: border-box;
+  text-align: center;
 }
 
-#ex-flashcards-acc-01 .btn.btn-primary:hover,
-#ex-flashcards-acc-01 .btn.btn-secondary:hover,
-#ex-flashcards-acc-02 .btn.btn-primary:hover,
-#ex-flashcards-acc-02 .btn.btn-secondary:hover,
-#ex-flashcards-acc-03 .btn.btn-primary:hover,
-#ex-flashcards-acc-03 .btn.btn-secondary:hover {
+[id^="ex-flashcards-acc-"] .btn.btn-primary:hover,
+[id^="ex-flashcards-acc-"] .btn.btn-secondary:hover {
   background: #1e4bb8;
   transform: translateY(-1px);
 }
 
-#ex-flashcards-acc-01 .btn.btn-primary:focus,
-#ex-flashcards-acc-01 .btn.btn-secondary:focus,
-#ex-flashcards-acc-02 .btn.btn-primary:focus,
-#ex-flashcards-acc-02 .btn.btn-secondary:focus,
-#ex-flashcards-acc-03 .btn.btn-primary:focus,
-#ex-flashcards-acc-03 .btn.btn-secondary:focus {
+[id^="ex-flashcards-acc-"] .btn.btn-primary:focus,
+[id^="ex-flashcards-acc-"] .btn.btn-secondary:focus {
   outline: 2px solid rgba(42, 91, 215, 0.4);
   outline-offset: 2px;
 }
 
-#ex-flashcards-acc-01 .fca01-btn-nav,
-#ex-flashcards-acc-02 .fca01-btn-nav,
-#ex-flashcards-acc-03 .fca01-btn-nav {
+/* если у тебя реально используются отдельные классы навигации */
+[id^="ex-flashcards-acc-"] .fca01-btn-nav {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.75rem 1.25rem;
   min-width: 120px;
+  width: 120px;            /* <- одинаковая ширина */
+  flex: 0 0 120px;         /* <- одинаковый размер в flex */
   background: #fff;
   color: #333;
   border: 1px solid #ddd;
@@ -600,34 +555,27 @@ h1, h2, h3 {
   cursor: pointer;
   transition: all 0.2s;
   box-sizing: border-box;
+  text-align: center;
 }
 
-#ex-flashcards-acc-01 .fca01-btn-nav:hover,
-#ex-flashcards-acc-02 .fca01-btn-nav:hover,
-#ex-flashcards-acc-03 .fca01-btn-nav:hover {
+[id^="ex-flashcards-acc-"] .fca01-btn-nav:hover {
   background: #f8f8f8;
   border-color: #2a5bd7;
 }
 
-#ex-flashcards-acc-01 .fca01-counter,
-#ex-flashcards-acc-02 .fca01-counter,
-#ex-flashcards-acc-03 .fca01-counter {
+[id^="ex-flashcards-acc-"] .fca01-counter {
   color: #999;
   font-family: monospace;
   font-size: 0.9rem;
 }
 
-#ex-flashcards-acc-01 .fca01-quiz-area,
-#ex-flashcards-acc-02 .fca01-quiz-area,
-#ex-flashcards-acc-03 .fca01-quiz-area {
+[id^="ex-flashcards-acc-"] .fca01-quiz-area {
   width: 100%;
   max-width: 550px;
   margin: 0 auto;
 }
 
-#ex-flashcards-acc-01 .fca01-quiz-question,
-#ex-flashcards-acc-02 .fca01-quiz-question,
-#ex-flashcards-acc-03 .fca01-quiz-question {
+[id^="ex-flashcards-acc-"] .fca01-quiz-question {
   font-size: 1.25rem;
   font-weight: 700;
   text-align: center;
@@ -635,24 +583,18 @@ h1, h2, h3 {
   line-height: 1.5;
 }
 
-#ex-flashcards-acc-01 .fca01-quiz-question .highlight,
-#ex-flashcards-acc-02 .fca01-quiz-question .highlight,
-#ex-flashcards-acc-03 .fca01-quiz-question .highlight {
+[id^="ex-flashcards-acc-"] .fca01-quiz-question .highlight {
   color: #2a5bd7;
 }
 
-#ex-flashcards-acc-01 .fca01-quiz-options,
-#ex-flashcards-acc-02 .fca01-quiz-options,
-#ex-flashcards-acc-03 .fca01-quiz-options {
+[id^="ex-flashcards-acc-"] .fca01-quiz-options {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   margin-bottom: 1rem;
 }
 
-#ex-flashcards-acc-01 .fca01-quiz-option,
-#ex-flashcards-acc-02 .fca01-quiz-option,
-#ex-flashcards-acc-03 .fca01-quiz-option {
+[id^="ex-flashcards-acc-"] .fca01-quiz-option {
   width: 100%;
   text-align: left;
   padding: 1rem 1.25rem;
@@ -664,61 +606,40 @@ h1, h2, h3 {
   font-size: 1rem;
 }
 
-#ex-flashcards-acc-01 .fca01-quiz-option:hover,
-#ex-flashcards-acc-02 .fca01-quiz-option:hover,
-#ex-flashcards-acc-03 .fca01-quiz-option:hover {
+[id^="ex-flashcards-acc-"] .fca01-quiz-option:hover {
   background: rgba(42, 91, 215, 0.05);
   border-color: #2a5bd7;
 }
 
-#ex-flashcards-acc-01 .fca01-quiz-option.correct,
-#ex-flashcards-acc-02 .fca01-quiz-option.correct,
-#ex-flashcards-acc-03 .fca01-quiz-option.correct {
+[id^="ex-flashcards-acc-"] .fca01-quiz-option.correct {
   background: rgba(34, 197, 94, 0.1);
   border-color: #22c55e;
   color: #166534;
 }
 
-#ex-flashcards-acc-01 .fca01-quiz-option.wrong,
-#ex-flashcards-acc-02 .fca01-quiz-option.wrong,
-#ex-flashcards-acc-03 .fca01-quiz-option.wrong {
+[id^="ex-flashcards-acc-"] .fca01-quiz-option.wrong {
   background: rgba(239, 68, 68, 0.1);
   border-color: #ef4444;
   color: #991b1b;
 }
 
-#ex-flashcards-acc-01 .fca01-quiz-feedback,
-#ex-flashcards-acc-02 .fca01-quiz-feedback,
-#ex-flashcards-acc-03 .fca01-quiz-feedback {
+[id^="ex-flashcards-acc-"] .fca01-quiz-feedback {
   text-align: center;
   font-weight: 700;
   min-height: 1.5rem;
   margin-top: 1rem;
 }
 
-#ex-flashcards-acc-01 .fca01-quiz-feedback.correct,
-#ex-flashcards-acc-02 .fca01-quiz-feedback.correct,
-#ex-flashcards-acc-03 .fca01-quiz-feedback.correct {
-  color: #22c55e;
-}
+[id^="ex-flashcards-acc-"] .fca01-quiz-feedback.correct { color: #22c55e; }
+[id^="ex-flashcards-acc-"] .fca01-quiz-feedback.wrong   { color: #ef4444; }
 
-#ex-flashcards-acc-01 .fca01-quiz-feedback.wrong,
-#ex-flashcards-acc-02 .fca01-quiz-feedback.wrong,
-#ex-flashcards-acc-03 .fca01-quiz-feedback.wrong {
-  color: #ef4444;
-}
-
-#ex-flashcards-acc-01 .fca01-match-container,
-#ex-flashcards-acc-02 .fca01-match-container,
-#ex-flashcards-acc-03 .fca01-match-container {
+[id^="ex-flashcards-acc-"] .fca01-match-container {
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
 }
 
-#ex-flashcards-acc-01 .fca01-match-feedback,
-#ex-flashcards-acc-02 .fca01-match-feedback,
-#ex-flashcards-acc-03 .fca01-match-feedback {
+[id^="ex-flashcards-acc-"] .fca01-match-feedback {
   text-align: center;
   font-size: 1.1rem;
   font-weight: 700;
@@ -727,37 +648,22 @@ h1, h2, h3 {
   color: #999;
 }
 
-#ex-flashcards-acc-01 .fca01-match-feedback.correct,
-#ex-flashcards-acc-02 .fca01-match-feedback.correct,
-#ex-flashcards-acc-03 .fca01-match-feedback.correct {
-  color: #22c55e;
-}
+[id^="ex-flashcards-acc-"] .fca01-match-feedback.correct { color: #22c55e; }
+[id^="ex-flashcards-acc-"] .fca01-match-feedback.wrong   { color: #ef4444; }
 
-#ex-flashcards-acc-01 .fca01-match-feedback.wrong,
-#ex-flashcards-acc-02 .fca01-match-feedback.wrong,
-#ex-flashcards-acc-03 .fca01-match-feedback.wrong {
-  color: #ef4444;
-}
-
-#ex-flashcards-acc-01 .fca01-match-grid,
-#ex-flashcards-acc-02 .fca01-match-grid,
-#ex-flashcards-acc-03 .fca01-match-grid {
+[id^="ex-flashcards-acc-"] .fca01-match-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-#ex-flashcards-acc-01 .fca01-match-col,
-#ex-flashcards-acc-02 .fca01-match-col,
-#ex-flashcards-acc-03 .fca01-match-col {
+[id^="ex-flashcards-acc-"] .fca01-match-col {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-#ex-flashcards-acc-01 .fca01-match-card,
-#ex-flashcards-acc-02 .fca01-match-card,
-#ex-flashcards-acc-03 .fca01-match-card {
+[id^="ex-flashcards-acc-"] .fca01-match-card {
   padding: 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -772,32 +678,24 @@ h1, h2, h3 {
   font-size: 0.95rem;
 }
 
-#ex-flashcards-acc-01 .fca01-match-card:hover,
-#ex-flashcards-acc-02 .fca01-match-card:hover,
-#ex-flashcards-acc-03 .fca01-match-card:hover {
+[id^="ex-flashcards-acc-"] .fca01-match-card:hover {
   background: rgba(255, 255, 255, 1);
   border-color: #2a5bd7;
 }
 
-#ex-flashcards-acc-01 .fca01-match-card.selected,
-#ex-flashcards-acc-02 .fca01-match-card.selected,
-#ex-flashcards-acc-03 .fca01-match-card.selected {
+[id^="ex-flashcards-acc-"] .fca01-match-card.selected {
   background: #fff3cd;
   border-color: #fbbf24;
   transform: scale(1.02);
 }
 
-#ex-flashcards-acc-01 .fca01-match-card.wrong,
-#ex-flashcards-acc-02 .fca01-match-card.wrong,
-#ex-flashcards-acc-03 .fca01-match-card.wrong {
+[id^="ex-flashcards-acc-"] .fca01-match-card.wrong {
   background: #fee2e2;
   border-color: #ef4444;
   animation: fca01Shake 0.4s;
 }
 
-#ex-flashcards-acc-01 .fca01-match-card.matched,
-#ex-flashcards-acc-02 .fca01-match-card.matched,
-#ex-flashcards-acc-03 .fca01-match-card.matched {
+[id^="ex-flashcards-acc-"] .fca01-match-card.matched {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -810,16 +708,12 @@ h1, h2, h3 {
   75% { transform: translateX(5px); }
 }
 
-#ex-flashcards-acc-01 .fca01-center-btn,
-#ex-flashcards-acc-02 .fca01-center-btn,
-#ex-flashcards-acc-03 .fca01-center-btn {
+[id^="ex-flashcards-acc-"] .fca01-center-btn {
   text-align: center;
   margin-top: 1.5rem;
 }
 
-#ex-flashcards-acc-01 .hidden,
-#ex-flashcards-acc-02 .hidden,
-#ex-flashcards-acc-03 .hidden {
+[id^="ex-flashcards-acc-"] .hidden {
   display: none;
 }
 
@@ -904,114 +798,85 @@ h1, h2, h3 {
   .page-accusativo-come-ti-chiami .section-title { font-size: 1.1rem; }
   .page-accusativo-come-ti-chiami .exercise-card-section { padding: 1.5rem 1.25rem; }
   .exercise-panel:not([hidden]) { padding: 1.5rem; }
+
+  /* MOBILE FIX: disable 3D flip (prevents 2 sides visible) */
+  [id^="ex-flashcards-acc-"] .fca01-card {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  [id^="ex-flashcards-acc-"] .fca01-card-back {
+    display: none !important;
+  }
+
+  [id^="ex-flashcards-acc-"] .fca01-card-front {
+    position: relative !important;
+    transform: none !important;
+    backface-visibility: visible !important;
+    -webkit-backface-visibility: visible !important;
+  }
 }
 
 @media (max-width: 600px) {
   /* Flashcards: add vertical padding to prevent overlap */
-  #ex-flashcards-acc-01,
-  #ex-flashcards-acc-02,
-  #ex-flashcards-acc-03 {
+  [id^="ex-flashcards-acc-"] {
     padding: 1rem 0;
   }
 
   /* Flashcards: reduce card width and height for mobile */
-  #ex-flashcards-acc-01 .fca01-card-container,
-  #ex-flashcards-acc-02 .fca01-card-container,
-  #ex-flashcards-acc-03 .fca01-card-container {
+  [id^="ex-flashcards-acc-"] .fca01-card-container {
     max-width: 280px;
     margin: 0 auto 2.5rem;
     box-sizing: border-box;
   }
 
-  #ex-flashcards-acc-01 .fca01-card,
-  #ex-flashcards-acc-02 .fca01-card,
-  #ex-flashcards-acc-03 .fca01-card {
+  [id^="ex-flashcards-acc-"] .fca01-card {
     height: 135px;
     min-height: 135px;
   }
 
-  #ex-flashcards-acc-01 .fca01-card-face,
-  #ex-flashcards-acc-02 .fca01-card-face,
-  #ex-flashcards-acc-03 .fca01-card-face {
+  [id^="ex-flashcards-acc-"] .fca01-card-face {
     font-size: 1.05rem;
     padding: 0.9rem;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-sizing: border-box;
   }
 
   /* Flashcards: ensure navigation has clear separation */
-  #ex-flashcards-acc-01 .fca01-nav,
-  #ex-flashcards-acc-02 .fca01-nav,
-  #ex-flashcards-acc-03 .fca01-nav {
+  [id^="ex-flashcards-acc-"] .fca01-nav {
     margin-top: 1.5rem;
     gap: 0.5rem;
   }
 
-  /* Flashcards: adjust nav button sizing */
-  #ex-flashcards-acc-01 .fca01-btn-nav,
-  #ex-flashcards-acc-02 .fca01-btn-nav,
-  #ex-flashcards-acc-03 .fca01-btn-nav {
+  /* Flashcards: adjust nav button sizing - equal width */
+  [id^="ex-flashcards-acc-"] .fca01-btn-nav {
     font-size: 0.95rem;
     font-weight: 600;
     padding: 0.7rem 1rem;
-    min-width: 100px;
+    min-width: 110px;
+    width: 110px;
+    flex: 0 0 110px;
   }
 
   /* Flashcards: Match mode adjustments */
-  #ex-flashcards-acc-01 .fca01-match-grid,
-  #ex-flashcards-acc-02 .fca01-match-grid,
-  #ex-flashcards-acc-03 .fca01-match-grid {
+  [id^="ex-flashcards-acc-"] .fca01-match-grid {
     gap: 0.65rem;
   }
 
-  #ex-flashcards-acc-01 .fca01-match-card,
-  #ex-flashcards-acc-02 .fca01-match-card,
-  #ex-flashcards-acc-03 .fca01-match-card {
+  [id^="ex-flashcards-acc-"] .fca01-match-card {
     padding: 0.75rem;
     font-size: 0.9rem;
   }
 
   /* Flashcards: Quiz mode adjustments */
-  #ex-flashcards-acc-01 .fca01-quiz-area,
-  #ex-flashcards-acc-02 .fca01-quiz-area,
-  #ex-flashcards-acc-03 .fca01-quiz-area {
+  [id^="ex-flashcards-acc-"] .fca01-quiz-area {
     padding: 0 0.5rem;
   }
 
   /* Card container centering fix */
-  #ex-flashcards-acc-01 .fca01-card-container,
-  #ex-flashcards-acc-02 .fca01-card-container,
-  #ex-flashcards-acc-03 .fca01-card-container {
+  [id^="ex-flashcards-acc-"] .fca01-card-container {
     margin-left: auto;
     margin-right: auto;
-  }
-}
-/* =========================
-   MOBILE FIX: disable 3D flip (prevents 2 sides visible)
-   Paste at the very end
-   ========================= */
-
-@media (max-width: 768px) {
-  /* stop 3D context */
-  #ex-flashcards-acc-01 .fca01-card,
-  #ex-flashcards-acc-02 .fca01-card,
-  #ex-flashcards-acc-03 .fca01-card{
-    transform: none !important;
-    transition: none !important;
-  }
-
-  /* hide back completely */
-  #ex-flashcards-acc-01 .fca01-card-back,
-  #ex-flashcards-acc-02 .fca01-card-back,
-  #ex-flashcards-acc-03 .fca01-card-back{
-    display: none !important;
-  }
-
-  /* make front a normal block */
-  #ex-flashcards-acc-01 .fca01-card-front,
-  #ex-flashcards-acc-02 .fca01-card-front,
-  #ex-flashcards-acc-03 .fca01-card-front{
-    position: relative !important;
-    transform: none !important;
-    backface-visibility: visible !important;
-    -webkit-backface-visibility: visible !important;
   }
 }
