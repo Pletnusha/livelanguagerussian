@@ -984,3 +984,34 @@ h1, h2, h3 {
     margin-right: auto;
   }
 }
+/* =========================
+   MOBILE FIX: disable 3D flip (prevents 2 sides visible)
+   Paste at the very end
+   ========================= */
+
+@media (max-width: 768px) {
+  /* stop 3D context */
+  #ex-flashcards-acc-01 .fca01-card,
+  #ex-flashcards-acc-02 .fca01-card,
+  #ex-flashcards-acc-03 .fca01-card{
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* hide back completely */
+  #ex-flashcards-acc-01 .fca01-card-back,
+  #ex-flashcards-acc-02 .fca01-card-back,
+  #ex-flashcards-acc-03 .fca01-card-back{
+    display: none !important;
+  }
+
+  /* make front a normal block */
+  #ex-flashcards-acc-01 .fca01-card-front,
+  #ex-flashcards-acc-02 .fca01-card-front,
+  #ex-flashcards-acc-03 .fca01-card-front{
+    position: relative !important;
+    transform: none !important;
+    backface-visibility: visible !important;
+    -webkit-backface-visibility: visible !important;
+  }
+}
