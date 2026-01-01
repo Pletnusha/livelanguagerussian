@@ -2025,3 +2025,69 @@ h1, h2, h3 {
     margin-right: auto;
   }
 
+/* ============================
+   FORCE STYLE: FLASHCARDS 03 = 02
+   Paste at the very end of the file
+   ============================ */
+
+#ex-flashcards-acc-03 {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#ex-flashcards-acc-03 .fca01-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#ex-flashcards-acc-03 .fca01-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+#ex-flashcards-acc-03 .fca01-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+#ex-flashcards-acc-03 .fca01-mode-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+#ex-flashcards-acc-03 .fca01-mode-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.65rem 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#ex-flashcards-acc-03 .fca01-mode-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: #2a5bd7;
+}
+
+#ex-flashcards-acc-03 .fca01-mode-btn.active {
+  background: #2a5bd7;
+  color: #fff;
+  border-color: #2a5bd7;
+}
+
+#ex-flashcards-acc-03 .fca01-section { display: none; }
+#ex-flashcards-acc-03 .fca01-section.visible { display: block; animation: fca01FadeIn 0.4s; }
+
+#ex-flashcards-acc-03 .fca01-c
