@@ -878,11 +878,45 @@
         <article class="exercise-card" data-status="open" data-target="panel-acc-open-4">
             <span class="exercise-type">Flashcards</span>
             <h3 class="exercise-title">Моя семья</h3>
-            <span class="card-subtitle">tutte declinazioni</span>
+            <span class="card-subtitle">FLASHCARDS</span>
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-4" hidden>
-            <section id="ex-flashcards-acc-04"></section>
+            <section id="ex-flashcards-acc-04">
+                <div class="fca01-header">
+                    <h2>Моя семья</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+
+                <div id="ex-flashcards-acc-04-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-acc-04-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-acc-04-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-acc-04-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-acc-04-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-acc-04-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-acc-04-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-acc-04-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-acc-04-section-match" class="fca01-section">
+                    <div id="ex-flashcards-acc-04-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-acc-04-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <article class="exercise-card" data-status="locked">
