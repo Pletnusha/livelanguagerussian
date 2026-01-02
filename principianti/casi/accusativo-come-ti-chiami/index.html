@@ -8,6 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- ============================================================
+         TEMPORARY: Hide paid/locked UI elements
+         Page: accusativo-come-ti-chiami
+         To re-enable: Remove this entire <style> block
+         ============================================================ -->
+    <style>
+        /* Hide all locked exercise cards */
+        .exercise-card[data-status="locked"] {
+            display: none !important;
+        }
+
+        /* Hide the unlock CTA section */
+        .cta-section {
+            display: none !important;
+        }
+    </style>
+    <!-- END: Hide paid/locked UI elements -->
+
 </head>
 <body class="page-accusativo-come-ti-chiami">
 
