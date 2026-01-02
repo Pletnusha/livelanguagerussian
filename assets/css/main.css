@@ -849,14 +849,16 @@ h1, h2, h3 {
     gap: 0.5rem;
   }
 
-  /* Flashcards: adjust nav button sizing - equal width */
-  [id^="ex-flashcards-acc-"] .fca01-btn-nav {
+  /* Flashcards: nav buttons - unified size for Back and Next */
+  [id^="ex-flashcards-acc-"] .fca01-btn-nav,
+  [id^="ex-flashcards-acc-"] .fca01-nav .btn.btn-primary {
     font-size: 0.95rem;
     font-weight: 600;
     padding: 0.7rem 1rem;
-    min-width: 110px;
+    min-width: 100px;
     width: 110px;
     flex: 0 0 110px;
+    box-sizing: border-box;
   }
 
   /* Flashcards: Match mode adjustments */
