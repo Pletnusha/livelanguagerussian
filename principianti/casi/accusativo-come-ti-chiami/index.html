@@ -1270,11 +1270,6 @@
                     background: #f9f9f9;
                     border-radius: 8px;
                 }
-                #panel-acc-open-5 .quiz-hint {
-                    color: #666;
-                    font-style: italic;
-                    margin-right: 0.5rem;
-                }
                 #panel-acc-open-5 .quiz-prompt {
                     font-size: 1.1rem;
                     margin-bottom: 0.75rem;
@@ -1337,7 +1332,7 @@
             </style>
 
             <h2 class="quiz-title">QUIZ</h2>
-            <p class="quiz-instruction">Finish the sentence by typing the correct answer.</p>
+            <p class="quiz-instruction">Закончите предложение, введя правильный ответ.</p>
             <ol class="quiz-list" id="panel-acc-open-5-quiz-list"></ol>
 
             <script type="text/plain" data-lazy-script="panel-acc-open-5">
@@ -1348,70 +1343,60 @@
     const quizData = [
         {
             id: "fam-001",
-            hint: "My mom",
             promptPrefix: "Моя мама ",
             promptSuffix: " зовут Анна.",
             answers: ["Мою маму"]
         },
         {
             id: "fam-002",
-            hint: "My brother",
             promptPrefix: "Мой брат ",
             promptSuffix: " зовут Александр.",
             answers: ["Моего брата"]
         },
         {
             id: "fam-003",
-            hint: "His girlfriend",
             promptPrefix: "Его девушка ",
             promptSuffix: " зовут Елена.",
             answers: ["Его девушку"]
         },
         {
             id: "fam-004",
-            hint: "Our grandpa",
             promptPrefix: "Наш дедушка ",
             promptSuffix: " зовут Владислав.",
             answers: ["Нашего дедушку"]
         },
         {
             id: "fam-005",
-            hint: "Her friend (f.)",
             promptPrefix: "Её подруга ",
             promptSuffix: " зовут Наталья.",
             answers: ["Её подругу"]
         },
         {
             id: "fam-006",
-            hint: "Your friend (m.) — question",
             promptPrefix: "Как зовут твой друг ",
             promptSuffix: " ?",
             answers: ["твоего друга"]
         },
         {
             id: "fam-007",
-            hint: "Their daughter",
             promptPrefix: "Их дочь ",
             promptSuffix: " зовут Катя.",
             answers: ["Их дочь"]
         },
         {
             id: "fam-008",
-            hint: "Our son",
             promptPrefix: "Наш сын ",
             promptSuffix: " зовут Анатолий.",
             answers: ["нашего сына"]
         },
         {
             id: "fam-009",
-            hint: "Your aunt — question",
             promptPrefix: "Как зовут ваша тётя ",
             promptSuffix: " ?",
             answers: ["вашу тётю"]
         },
         {
             id: "fam-010",
-            hint: "Your uncle",
             promptPrefix: "Твой дядя ",
             promptSuffix: " - зовут Альберт?!",
             answers: ["твоего дядю"]
@@ -1432,7 +1417,7 @@
 
             const promptDiv = document.createElement('div');
             promptDiv.className = 'quiz-prompt';
-            promptDiv.innerHTML = `<strong>${index + 1}.</strong> <span class="quiz-hint">(${item.hint})</span> ${item.promptPrefix}<input type="text" class="quiz-input" data-index="${index}">${item.promptSuffix}`;
+            promptDiv.innerHTML = `<strong>${index + 1}.</strong> ${item.promptPrefix}<input type="text" class="quiz-input" data-index="${index}">${item.promptSuffix}`;
 
             const controlsDiv = document.createElement('div');
             controlsDiv.className = 'quiz-controls';
