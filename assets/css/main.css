@@ -881,3 +881,12 @@ h1, h2, h3 {
     margin-right: auto;
   }
 }
+/* Quiz action button — smaller variant of FC primary */
+.quiz-check-btn.btn.btn-primary {
+  font-size: 0.75rem;          /* ~ -25% */
+  padding: 0.5rem 0.9rem;      /* ~ -25% */
+  min-width: 90px;
+  width: 90px;
+  flex: 0 0 90px;
+}
+
