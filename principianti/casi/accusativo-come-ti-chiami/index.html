@@ -24,6 +24,39 @@
         .cta-section {
             display: none !important;
         }
+
+        /* Blocked panel state - visible but non-interactive */
+        .exercise-panel[data-state="blocked"] {
+            position: relative;
+            pointer-events: none;
+            opacity: 0.5;
+            filter: grayscale(0.3);
+        }
+
+        .exercise-panel[data-state="blocked"]::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent;
+            z-index: 100;
+        }
+
+        /* Exercise card blocked state indicator */
+        .exercise-card[data-card-state="blocked"] {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .exercise-card[data-card-state="blocked"]::after {
+            content: '🔒';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.2rem;
+        }
     </style>
     <!-- END: Hide paid/locked UI elements -->
 
@@ -50,7 +83,7 @@
             <h3 class="exercise-title">PRESENTARE SE STESSO E LA PROPRIA FAMIGLIA</h3>
         </article>
 
-        <div class="exercise-panel" id="panel-acc-open-1" hidden>
+        <div class="exercise-panel" id="panel-acc-open-1" data-access="public" hidden>
             <section id="ex-accusativo-trascina-01">
                 <div id="ex-accusativo-trascina-01-container"></div>
                 <div id="ex-accusativo-trascina-01-completion" style="display:none;"></div>
@@ -271,7 +304,7 @@
             <span class="card-subtitle">Nomi · 1ª declinazione</span>
         </article>
 
-        <div class="exercise-panel" id="panel-acc-open-2" hidden>
+        <div class="exercise-panel" id="panel-acc-open-2" data-access="public" hidden>
             <section id="ex-flashcards-acc-03">
                 <div class="fca01-header">
                     <h2>Il verbo Звать: L'accusativo</h2>
@@ -586,7 +619,7 @@
         </article>
 
         <!-- ✅ ПЕРЕНЕСЕНО: ex-flashcards-acc-02 из panel-4 в panel-3 -->
-        <div class="exercise-panel" id="panel-acc-open-3" hidden>
+        <div class="exercise-panel" id="panel-acc-open-3" data-access="student" hidden>
             <section id="ex-flashcards-acc-02">
                 <div class="fca01-header">
                     <h2>Il verbo Звать: L'accusativo (II &amp; III decl.)</h2>
@@ -900,7 +933,7 @@
             <span class="card-subtitle">FLASHCARDS</span>
         </article>
 
-        <div class="exercise-panel" id="panel-acc-open-4" hidden>
+        <div class="exercise-panel" id="panel-acc-open-4" data-access="student" hidden>
             <section id="ex-flashcards-acc-04">
                 <div class="fca01-header">
                     <h2>Моя семья</h2>
@@ -1246,7 +1279,7 @@
             <h3 class="exercise-title">QUIZ</h3>
         </article>
 
-        <div class="exercise-panel" id="panel-acc-open-5" hidden>
+        <div class="exercise-panel" id="panel-acc-open-5" data-access="paid" hidden>
             <style>
                 #panel-acc-open-5 .quiz-title {
                     font-size: 1.5rem;
@@ -1542,6 +1575,72 @@
 
     <script>
     (function() {
+        // ============================================================
+        // ACCESS CONTROL - MVP Mock Implementation
+        // Page: accusativo-come-ti-chiami
+        // ============================================================
+
+        const ACCESS_LEVELS = { public: 1, student: 2, paid: 3 };
+        const STORAGE_KEY = 'accessLevel';
+
+        // Determine user access level from URL or localStorage
+        function getUserLevel() {
+            const params = new URLSearchParams(window.location.search);
+            const accessParam = params.get('access');
+
+            // Handle reset
+            if (accessParam === 'reset') {
+                localStorage.removeItem(STORAGE_KEY);
+                return 'public';
+            }
+
+            // If URL has valid access parameter, save and use it
+            if (accessParam && ACCESS_LEVELS.hasOwnProperty(accessParam)) {
+                localStorage.setItem(STORAGE_KEY, accessParam);
+                return accessParam;
+            }
+
+            // Otherwise read from localStorage, default to public
+            return localStorage.getItem(STORAGE_KEY) || 'public';
+        }
+
+        // Apply access control to all panels
+        function applyAccessControl(userLevel) {
+            const userLevelNum = ACCESS_LEVELS[userLevel] || 1;
+            const panels = document.querySelectorAll('.exercise-panel[data-access]');
+
+            panels.forEach(panel => {
+                const panelAccess = panel.getAttribute('data-access') || 'public';
+                const panelLevelNum = ACCESS_LEVELS[panelAccess] || 1;
+
+                if (userLevelNum >= panelLevelNum) {
+                    panel.setAttribute('data-state', 'open');
+                } else {
+                    panel.setAttribute('data-state', 'blocked');
+                }
+            });
+
+            // Update exercise cards to reflect blocked state
+            const cards = document.querySelectorAll('.exercise-card[data-target]');
+            cards.forEach(card => {
+                const targetId = card.getAttribute('data-target');
+                const panel = document.getElementById(targetId);
+                if (panel && panel.getAttribute('data-state') === 'blocked') {
+                    card.setAttribute('data-card-state', 'blocked');
+                } else {
+                    card.removeAttribute('data-card-state');
+                }
+            });
+        }
+
+        // Initialize access control
+        const userLevel = getUserLevel();
+        applyAccessControl(userLevel);
+
+        // ============================================================
+        // PANEL TOGGLE & LAZY SCRIPT EXECUTION
+        // ============================================================
+
         const openCards = document.querySelectorAll('[data-status="open"]');
 
         openCards.forEach(card => {
@@ -1553,6 +1652,12 @@
 
                 if (!targetPanel) return;
 
+                // Block interaction if panel is blocked
+                const panelState = targetPanel.getAttribute('data-state');
+                if (panelState === 'blocked') {
+                    return; // Do not open or initialize blocked panels
+                }
+
                 const isCurrentlyOpen = !targetPanel.hidden;
 
                 document.querySelectorAll('.exercise-panel').forEach(panel => {
@@ -1562,7 +1667,8 @@
                 if (!isCurrentlyOpen) {
                     targetPanel.hidden = false;
 
-                    if (!targetPanel.hasAttribute('data-initialized')) {
+                    // Only execute lazy script if panel is open AND not initialized
+                    if (panelState === 'open' && !targetPanel.hasAttribute('data-initialized')) {
                         const lazyScript = targetPanel.querySelector('[data-lazy-script]');
                         if (lazyScript) {
                             const scriptCode = lazyScript.textContent;
