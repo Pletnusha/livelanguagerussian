@@ -1082,140 +1082,156 @@
     const panel = document.getElementById('panel-acc-open-4');
     const quizList = panel.querySelector('#panel-acc-open-4-quiz-list');
 
-    const quizData = [
-        {
-            id: "fam-001",
-            promptPrefix: "Моя мама ",
-            promptSuffix: " зовут Анна.",
-            answers: ["Мою маму"]
-        },
-        {
-            id: "fam-002",
-            promptPrefix: "Мой брат ",
-            promptSuffix: " зовут Александр.",
-            answers: ["Моего брата"]
-        },
-        {
-            id: "fam-003",
-            promptPrefix: "Его девушка ",
-            promptSuffix: " зовут Елена.",
-            answers: ["Его девушку"]
-        },
-        {
-            id: "fam-004",
-            promptPrefix: "Наш дедушка ",
-            promptSuffix: " зовут Владислав.",
-            answers: ["Нашего дедушку"]
-        },
-        {
-            id: "fam-005",
-            promptPrefix: "Её подруга ",
-            promptSuffix: " зовут Наталья.",
-            answers: ["Её подругу"]
-        },
-        {
-            id: "fam-006",
-            promptPrefix: "Как зовут твой друг ",
-            promptSuffix: " ?",
-            answers: ["твоего друга"]
-        },
-        {
-            id: "fam-007",
-            promptPrefix: "Их дочь ",
-            promptSuffix: " зовут Катя.",
-            answers: ["Их дочь"]
-        },
-        {
-            id: "fam-008",
-            promptPrefix: "Наш сын ",
-            promptSuffix: " зовут Анатолий.",
-            answers: ["нашего сына"]
-        },
-        {
-            id: "fam-009",
-            promptPrefix: "Как зовут ваша тётя ",
-            promptSuffix: " ?",
-            answers: ["вашу тётю"]
-        },
-        {
-            id: "fam-010",
-            promptPrefix: "Твой дядя ",
-            promptSuffix: " - зовут Альберт?!",
-            answers: ["твоего дядю"]
-        }
-    ];
-
-    function normalizeInput(str) {
-        return str.trim().replace(/\s+/g, ' ');
-    }
-
-    function renderQuiz() {
-        quizList.innerHTML = '';
-
-        quizData.forEach((item, index) => {
-            const li = document.createElement('li');
-            li.className = 'quiz-item';
-            li.dataset.id = item.id;
-
-            const promptDiv = document.createElement('div');
-            promptDiv.className = 'quiz-prompt';
-            promptDiv.innerHTML = `<strong>${index + 1}.</strong> ${item.promptPrefix}<input type="text" class="quiz-input" data-index="${index}">${item.promptSuffix}`;
-
-            const controlsDiv = document.createElement('div');
-            controlsDiv.className = 'quiz-controls';
-
-            const checkBtn = document.createElement('button');
-            checkBtn.className = 'quiz-check-btn';
-            checkBtn.textContent = 'Проверить';
-            checkBtn.dataset.index = index;
-
-            const feedbackDiv = document.createElement('div');
-            feedbackDiv.className = 'quiz-feedback';
-            feedbackDiv.dataset.index = index;
-
-            controlsDiv.appendChild(checkBtn);
-
-            li.appendChild(promptDiv);
-            li.appendChild(controlsDiv);
-            li.appendChild(feedbackDiv);
-
-            quizList.appendChild(li);
-
-            const input = li.querySelector('.quiz-input');
-
-            checkBtn.addEventListener('click', () => {
-                checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
-            });
-
-            input.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' && !checkBtn.disabled) {
-                    checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
-                }
-            });
+    if (!quizList) {
+        requestAnimationFrame(() => {
+            const panel2 = document.getElementById('panel-acc-open-4');
+            const quizList2 = panel2 && panel2.querySelector('#panel-acc-open-4-quiz-list');
+            if (!quizList2) return;
+            initQuiz(panel2);
         });
+        return;
     }
 
-    function checkAnswer(index, input, button, feedback, correctAnswers) {
-        const userAnswer = normalizeInput(input.value);
+    initQuiz(panel);
 
-        const isCorrect = correctAnswers.some(ans => userAnswer === ans);
+    function initQuiz(panelEl) {
+        const quizListEl = panelEl.querySelector('#panel-acc-open-4-quiz-list');
 
-        if (isCorrect) {
-            input.classList.remove('incorrect');
-            input.classList.add('correct');
-            input.disabled = true;
-            button.disabled = true;
-            feedback.textContent = 'Правильно!';
-            feedback.className = 'quiz-feedback correct';
-        } else {
-            input.classList.remove('correct');
-            input.classList.add('incorrect');
-            feedback.textContent = 'Неправильно. Попробуйте ещё раз.';
-            feedback.className = 'quiz-feedback incorrect';
+        const quizData = [
+            {
+                id: "fam-001",
+                promptPrefix: "Моя мама ",
+                promptSuffix: " зовут Анна.",
+                answers: ["Мою маму"]
+            },
+            {
+                id: "fam-002",
+                promptPrefix: "Мой брат ",
+                promptSuffix: " зовут Александр.",
+                answers: ["Моего брата"]
+            },
+            {
+                id: "fam-003",
+                promptPrefix: "Его девушка ",
+                promptSuffix: " зовут Елена.",
+                answers: ["Его девушку"]
+            },
+            {
+                id: "fam-004",
+                promptPrefix: "Наш дедушка ",
+                promptSuffix: " зовут Владислав.",
+                answers: ["Нашего дедушку"]
+            },
+            {
+                id: "fam-005",
+                promptPrefix: "Её подруга ",
+                promptSuffix: " зовут Наталья.",
+                answers: ["Её подругу"]
+            },
+            {
+                id: "fam-006",
+                promptPrefix: "Как зовут твой друг ",
+                promptSuffix: " ?",
+                answers: ["твоего друга"]
+            },
+            {
+                id: "fam-007",
+                promptPrefix: "Их дочь ",
+                promptSuffix: " зовут Катя.",
+                answers: ["Их дочь"]
+            },
+            {
+                id: "fam-008",
+                promptPrefix: "Наш сын ",
+                promptSuffix: " зовут Анатолий.",
+                answers: ["нашего сына"]
+            },
+            {
+                id: "fam-009",
+                promptPrefix: "Как зовут ваша тётя ",
+                promptSuffix: " ?",
+                answers: ["вашу тётю"]
+            },
+            {
+                id: "fam-010",
+                promptPrefix: "Твой дядя ",
+                promptSuffix: " - зовут Альберт?!",
+                answers: ["твоего дядю"]
+            }
+        ];
+
+        function normalizeInput(str) {
+            return str.trim().replace(/\s+/g, ' ');
         }
-    }
 
-    renderQuiz();
+        function renderQuiz() {
+            quizListEl.innerHTML = '';
+
+            quizData.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.className = 'quiz-item';
+                li.dataset.id = item.id;
+
+                const promptDiv = document.createElement('div');
+                promptDiv.className = 'quiz-prompt';
+                promptDiv.innerHTML = `<strong>${index + 1}.</strong> ${item.promptPrefix}<input type="text" class="quiz-input" data-index="${index}">${item.promptSuffix}`;
+
+                const controlsDiv = document.createElement('div');
+                controlsDiv.className = 'quiz-controls';
+
+                const checkBtn = document.createElement('button');
+                checkBtn.className = 'quiz-check-btn';
+                checkBtn.textContent = 'Проверить';
+                checkBtn.dataset.index = index;
+
+                const feedbackDiv = document.createElement('div');
+                feedbackDiv.className = 'quiz-feedback';
+                feedbackDiv.dataset.index = index;
+
+                controlsDiv.appendChild(checkBtn);
+
+                li.appendChild(promptDiv);
+                li.appendChild(controlsDiv);
+                li.appendChild(feedbackDiv);
+
+                quizListEl.appendChild(li);
+
+                const input = li.querySelector('.quiz-input');
+
+                checkBtn.addEventListener('click', () => {
+                    checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
+                });
+
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' && !checkBtn.disabled) {
+                        checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
+                    }
+                });
+            });
+        }
+
+        function checkAnswer(index, input, button, feedback, correctAnswers) {
+            const userAnswer = normalizeInput(input.value);
+
+            const isCorrect = correctAnswers.some(ans => userAnswer === ans);
+
+            if (isCorrect) {
+                input.classList.remove('incorrect');
+                input.classList.add('correct');
+                input.disabled = true;
+                button.disabled = true;
+                feedback.textContent = 'Правильно!';
+                feedback.className = 'quiz-feedback correct';
+            } else {
+                input.classList.remove('correct');
+                input.classList.add('incorrect');
+                feedback.textContent = 'Неправильно. Попробуйте ещё раз.';
+                feedback.className = 'quiz-feedback incorrect';
+            }
+        }
+
+        renderQuiz();
+    }
 })();
             </script>
         </div>
