@@ -290,6 +290,261 @@
             </script>
         </div>
 
+        <!-- Panel 5 (student) -->
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-5">
+            <h3 class="exercise-title">QUIZ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-acc-open-5" data-access="student" hidden>
+            <style>
+                #panel-acc-open-5 .quiz-title {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    margin-bottom: 0.5rem;
+                    text-align: center;
+                }
+                #panel-acc-open-5 .quiz-instruction {
+                    text-align: center;
+                    margin-bottom: 1.5rem;
+                    color: #555;
+                }
+                #panel-acc-open-5 .quiz-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                #panel-acc-open-5 .quiz-item {
+                    margin-bottom: 1.5rem;
+                    padding: 1rem;
+                    background: #f9f9f9;
+                    border-radius: 8px;
+                }
+                #panel-acc-open-5 .quiz-prompt {
+                    font-size: 1.1rem;
+                    margin-bottom: 0.75rem;
+                    line-height: 1.6;
+                }
+                #panel-acc-open-5 .quiz-input {
+                    padding: 0.5rem 0.75rem;
+                    font-size: 1rem;
+                    border: 2px solid #ccc;
+                    border-radius: 4px;
+                    min-width: 180px;
+                    margin: 0 0.25rem;
+                }
+                #panel-acc-open-5 .quiz-input:focus {
+                    outline: none;
+                    border-color: #007bff;
+                }
+                #panel-acc-open-5 .quiz-input.correct {
+                    border-color: #28a745;
+                    background-color: #d4edda;
+                }
+                #panel-acc-open-5 .quiz-input.incorrect {
+                    border-color: #dc3545;
+                }
+                #panel-acc-open-5 .quiz-check-btn {
+                    padding: 0.5rem 1rem;
+                    font-size: 0.9rem;
+                    background: #007bff;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    margin-left: 0.5rem;
+                }
+                #panel-acc-open-5 .quiz-check-btn:hover:not(:disabled) {
+                    background: #0056b3;
+                }
+                #panel-acc-open-5 .quiz-check-btn:disabled {
+                    background: #6c757d;
+                    cursor: not-allowed;
+                }
+                #panel-acc-open-5 .quiz-feedback {
+                    margin-top: 0.5rem;
+                    font-size: 0.9rem;
+                    min-height: 1.2em;
+                }
+                #panel-acc-open-5 .quiz-feedback.correct {
+                    color: #28a745;
+                }
+                #panel-acc-open-5 .quiz-feedback.incorrect {
+                    color: #dc3545;
+                }
+                #panel-acc-open-5 .quiz-controls {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+                    margin-top: 0.5rem;
+                }
+            </style>
+
+            <h2 class="quiz-title">QUIZ</h2>
+            <p class="quiz-instruction">Закончите предложение, введя правильный ответ.</p>
+            <ol class="quiz-list" id="panel-acc-open-5-quiz-list"></ol>
+
+            <script type="text/plain" data-lazy-script="panel-acc-open-5">
+(() => {
+    const panel = document.getElementById('panel-acc-open-5');
+    const quizList = panel.querySelector('#panel-acc-open-5-quiz-list');
+
+    const quizData = [
+        {
+            id: "fam-001",
+            promptPrefix: "Моя мама ",
+            promptSuffix: " зовут Анна.",
+            answers: ["Мою маму"]
+        },
+        {
+            id: "fam-002",
+            promptPrefix: "Мой брат ",
+            promptSuffix: " зовут Александр.",
+            answers: ["Моего брата"]
+        },
+        {
+            id: "fam-003",
+            promptPrefix: "Его девушка ",
+            promptSuffix: " зовут Елена.",
+            answers: ["Его девушку"]
+        },
+        {
+            id: "fam-004",
+            promptPrefix: "Наш дедушка ",
+            promptSuffix: " зовут Владислав.",
+            answers: ["Нашего дедушку"]
+        },
+        {
+            id: "fam-005",
+            promptPrefix: "Её подруга ",
+            promptSuffix: " зовут Наталья.",
+            answers: ["Её подругу"]
+        },
+        {
+            id: "fam-006",
+            promptPrefix: "Как зовут твой друг ",
+            promptSuffix: " ?",
+            answers: ["твоего друга"]
+        },
+        {
+            id: "fam-007",
+            promptPrefix: "Их дочь ",
+            promptSuffix: " зовут Катя.",
+            answers: ["Их дочь"]
+        },
+        {
+            id: "fam-008",
+            promptPrefix: "Наш сын ",
+            promptSuffix: " зовут Анатолий.",
+            answers: ["нашего сына"]
+        },
+        {
+            id: "fam-009",
+            promptPrefix: "Как зовут ваша тётя ",
+            promptSuffix: " ?",
+            answers: ["вашу тётю"]
+        },
+        {
+            id: "fam-010",
+            promptPrefix: "Твой дядя ",
+            promptSuffix: " - зовут Альберт?!",
+            answers: ["твоего дядю"]
+        }
+    ];
+
+    function normalizeInput(str) {
+        return str.trim().replace(/\s+/g, ' ');
+    }
+
+    function renderQuiz() {
+        quizList.innerHTML = '';
+
+        quizData.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.className = 'quiz-item';
+            li.dataset.id = item.id;
+
+            const promptDiv = document.createElement('div');
+            promptDiv.className = 'quiz-prompt';
+            promptDiv.innerHTML = `<strong>${index + 1}.</strong> ${item.promptPrefix}<input type="text" class="quiz-input" data-index="${index}">${item.promptSuffix}`;
+
+            const controlsDiv = document.createElement('div');
+            controlsDiv.className = 'quiz-controls';
+
+            const checkBtn = document.createElement('button');
+            checkBtn.className = 'quiz-check-btn';
+            checkBtn.textContent = 'Проверить';
+            checkBtn.dataset.index = index;
+
+            const feedbackDiv = document.createElement('div');
+            feedbackDiv.className = 'quiz-feedback';
+            feedbackDiv.dataset.index = index;
+
+            controlsDiv.appendChild(checkBtn);
+
+            li.appendChild(promptDiv);
+            li.appendChild(controlsDiv);
+            li.appendChild(feedbackDiv);
+
+            quizList.appendChild(li);
+
+            const input = li.querySelector('.quiz-input');
+
+            checkBtn.addEventListener('click', () => {
+                checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !checkBtn.disabled) {
+                    checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
+                }
+            });
+        });
+    }
+
+    function checkAnswer(index, input, button, feedback, correctAnswers) {
+        const userAnswer = normalizeInput(input.value);
+
+        const isCorrect = correctAnswers.some(ans => userAnswer === ans);
+
+        if (isCorrect) {
+            input.classList.remove('incorrect');
+            input.classList.add('correct');
+            input.disabled = true;
+            button.disabled = true;
+            feedback.textContent = 'Правильно!';
+            feedback.className = 'quiz-feedback correct';
+        } else {
+            input.classList.remove('correct');
+            input.classList.add('incorrect');
+            feedback.textContent = 'Неправильно. Попробуйте ещё раз.';
+            feedback.className = 'quiz-feedback incorrect';
+        }
+    }
+
+    renderQuiz();
+})();
+            </script>
+        </div>
+
+        <!-- Panel 6 (paid) -->
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-6">
+            <span class="exercise-type">Quiz</span>
+            <h3 class="exercise-title">Scegli la forma corretta</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-acc-open-6" data-access="paid" hidden>
+            <section id="ex-panel-6-placeholder">
+                <p>Panel 6 content placeholder</p>
+            </section>
+            <script type="text/plain" data-lazy-script="panel-acc-open-6">
+(() => {
+    console.log('Panel 6 initialized');
+})();
+            </script>
+        </div>
+
+        <!-- Panel 2 (public) -->
         <article class="exercise-card" data-status="open" data-target="panel-acc-open-2">
             <span class="exercise-type">Flashcards</span>
             <h3 class="exercise-title">Мою сестру зовут …</h3>
@@ -604,13 +859,47 @@
             </script>
         </div>
 
+        <!-- Panel 7 (student) -->
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-7">
+            <span class="exercise-type">Scrivere</span>
+            <h3 class="exercise-title">Completa il dialogo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-acc-open-7" data-access="student" hidden>
+            <section id="ex-panel-7-placeholder">
+                <p>Panel 7 content placeholder</p>
+            </section>
+            <script type="text/plain" data-lazy-script="panel-acc-open-7">
+(() => {
+    console.log('Panel 7 initialized');
+})();
+            </script>
+        </div>
+
+        <!-- Panel 8 (paid) -->
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-8">
+            <span class="exercise-type">Flash cards</span>
+            <h3 class="exercise-title">Verbi con l'accusativo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-acc-open-8" data-access="paid" hidden>
+            <section id="ex-panel-8-placeholder">
+                <p>Panel 8 content placeholder</p>
+            </section>
+            <script type="text/plain" data-lazy-script="panel-acc-open-8">
+(() => {
+    console.log('Panel 8 initialized');
+})();
+            </script>
+        </div>
+
+        <!-- Panel 3 (public) -->
         <article class="exercise-card" data-status="open" data-target="panel-acc-open-3">
             <span class="exercise-type">Flashcards</span>
             <h3 class="exercise-title">Как зовут твоего брата?</h3>
             <span class="card-subtitle">Nomi · 1°&amp;2° declinazione</span>
         </article>
 
-        <!-- ✅ ПЕРЕНЕСЕНО: ex-flashcards-acc-02 из panel-4 в panel-3 -->
         <div class="exercise-panel" id="panel-acc-open-3" data-access="public" hidden>
             <section id="ex-flashcards-acc-02">
                 <div class="fca01-header">
@@ -919,6 +1208,41 @@
             </script>
         </div>
 
+        <!-- Panel 9 (paid) -->
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-9">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Ordina le parole</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-acc-open-9" data-access="paid" hidden>
+            <section id="ex-panel-9-placeholder">
+                <p>Panel 9 content placeholder</p>
+            </section>
+            <script type="text/plain" data-lazy-script="panel-acc-open-9">
+(() => {
+    console.log('Panel 9 initialized');
+})();
+            </script>
+        </div>
+
+        <!-- Panel 10 (paid) -->
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-10">
+            <span class="exercise-type">Scrivere</span>
+            <h3 class="exercise-title">Rispondi alle domande</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-acc-open-10" data-access="paid" hidden>
+            <section id="ex-panel-10-placeholder">
+                <p>Panel 10 content placeholder</p>
+            </section>
+            <script type="text/plain" data-lazy-script="panel-acc-open-10">
+(() => {
+    console.log('Panel 10 initialized');
+})();
+            </script>
+        </div>
+
+        <!-- Panel 4 (public) -->
         <article class="exercise-card" data-status="open" data-target="panel-acc-open-4">
             <span class="exercise-type">Flashcards</span>
             <h3 class="exercise-title">Моя семья</h3>
@@ -1266,296 +1590,6 @@
 })();
             </script>
         </div>
-
-        <article class="exercise-card" data-status="open" data-target="panel-acc-open-5">
-            <h3 class="exercise-title">QUIZ</h3>
-        </article>
-
-        <div class="exercise-panel" id="panel-acc-open-5" data-access="student" hidden>
-            <style>
-                #panel-acc-open-5 .quiz-title {
-                    font-size: 1.5rem;
-                    font-weight: 700;
-                    margin-bottom: 0.5rem;
-                    text-align: center;
-                }
-                #panel-acc-open-5 .quiz-instruction {
-                    text-align: center;
-                    margin-bottom: 1.5rem;
-                    color: #555;
-                }
-                #panel-acc-open-5 .quiz-list {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-                }
-                #panel-acc-open-5 .quiz-item {
-                    margin-bottom: 1.5rem;
-                    padding: 1rem;
-                    background: #f9f9f9;
-                    border-radius: 8px;
-                }
-                #panel-acc-open-5 .quiz-prompt {
-                    font-size: 1.1rem;
-                    margin-bottom: 0.75rem;
-                    line-height: 1.6;
-                }
-                #panel-acc-open-5 .quiz-input {
-                    padding: 0.5rem 0.75rem;
-                    font-size: 1rem;
-                    border: 2px solid #ccc;
-                    border-radius: 4px;
-                    min-width: 180px;
-                    margin: 0 0.25rem;
-                }
-                #panel-acc-open-5 .quiz-input:focus {
-                    outline: none;
-                    border-color: #007bff;
-                }
-                #panel-acc-open-5 .quiz-input.correct {
-                    border-color: #28a745;
-                    background-color: #d4edda;
-                }
-                #panel-acc-open-5 .quiz-input.incorrect {
-                    border-color: #dc3545;
-                }
-                #panel-acc-open-5 .quiz-check-btn {
-                    padding: 0.5rem 1rem;
-                    font-size: 0.9rem;
-                    background: #007bff;
-                    color: #fff;
-                    border: none;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    margin-left: 0.5rem;
-                }
-                #panel-acc-open-5 .quiz-check-btn:hover:not(:disabled) {
-                    background: #0056b3;
-                }
-                #panel-acc-open-5 .quiz-check-btn:disabled {
-                    background: #6c757d;
-                    cursor: not-allowed;
-                }
-                #panel-acc-open-5 .quiz-feedback {
-                    margin-top: 0.5rem;
-                    font-size: 0.9rem;
-                    min-height: 1.2em;
-                }
-                #panel-acc-open-5 .quiz-feedback.correct {
-                    color: #28a745;
-                }
-                #panel-acc-open-5 .quiz-feedback.incorrect {
-                    color: #dc3545;
-                }
-                #panel-acc-open-5 .quiz-controls {
-                    display: flex;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    gap: 0.5rem;
-                    margin-top: 0.5rem;
-                }
-            </style>
-
-            <h2 class="quiz-title">QUIZ</h2>
-            <p class="quiz-instruction">Закончите предложение, введя правильный ответ.</p>
-            <ol class="quiz-list" id="panel-acc-open-5-quiz-list"></ol>
-
-            <script type="text/plain" data-lazy-script="panel-acc-open-5">
-(() => {
-    const panel = document.getElementById('panel-acc-open-5');
-    const quizList = panel.querySelector('#panel-acc-open-5-quiz-list');
-
-    const quizData = [
-        {
-            id: "fam-001",
-            promptPrefix: "Моя мама ",
-            promptSuffix: " зовут Анна.",
-            answers: ["Мою маму"]
-        },
-        {
-            id: "fam-002",
-            promptPrefix: "Мой брат ",
-            promptSuffix: " зовут Александр.",
-            answers: ["Моего брата"]
-        },
-        {
-            id: "fam-003",
-            promptPrefix: "Его девушка ",
-            promptSuffix: " зовут Елена.",
-            answers: ["Его девушку"]
-        },
-        {
-            id: "fam-004",
-            promptPrefix: "Наш дедушка ",
-            promptSuffix: " зовут Владислав.",
-            answers: ["Нашего дедушку"]
-        },
-        {
-            id: "fam-005",
-            promptPrefix: "Её подруга ",
-            promptSuffix: " зовут Наталья.",
-            answers: ["Её подругу"]
-        },
-        {
-            id: "fam-006",
-            promptPrefix: "Как зовут твой друг ",
-            promptSuffix: " ?",
-            answers: ["твоего друга"]
-        },
-        {
-            id: "fam-007",
-            promptPrefix: "Их дочь ",
-            promptSuffix: " зовут Катя.",
-            answers: ["Их дочь"]
-        },
-        {
-            id: "fam-008",
-            promptPrefix: "Наш сын ",
-            promptSuffix: " зовут Анатолий.",
-            answers: ["нашего сына"]
-        },
-        {
-            id: "fam-009",
-            promptPrefix: "Как зовут ваша тётя ",
-            promptSuffix: " ?",
-            answers: ["вашу тётю"]
-        },
-        {
-            id: "fam-010",
-            promptPrefix: "Твой дядя ",
-            promptSuffix: " - зовут Альберт?!",
-            answers: ["твоего дядю"]
-        }
-    ];
-
-    function normalizeInput(str) {
-        return str.trim().replace(/\s+/g, ' ');
-    }
-
-    function renderQuiz() {
-        quizList.innerHTML = '';
-
-        quizData.forEach((item, index) => {
-            const li = document.createElement('li');
-            li.className = 'quiz-item';
-            li.dataset.id = item.id;
-
-            const promptDiv = document.createElement('div');
-            promptDiv.className = 'quiz-prompt';
-            promptDiv.innerHTML = `<strong>${index + 1}.</strong> ${item.promptPrefix}<input type="text" class="quiz-input" data-index="${index}">${item.promptSuffix}`;
-
-            const controlsDiv = document.createElement('div');
-            controlsDiv.className = 'quiz-controls';
-
-            const checkBtn = document.createElement('button');
-            checkBtn.className = 'quiz-check-btn';
-            checkBtn.textContent = 'Проверить';
-            checkBtn.dataset.index = index;
-
-            const feedbackDiv = document.createElement('div');
-            feedbackDiv.className = 'quiz-feedback';
-            feedbackDiv.dataset.index = index;
-
-            controlsDiv.appendChild(checkBtn);
-
-            li.appendChild(promptDiv);
-            li.appendChild(controlsDiv);
-            li.appendChild(feedbackDiv);
-
-            quizList.appendChild(li);
-
-            const input = li.querySelector('.quiz-input');
-
-            checkBtn.addEventListener('click', () => {
-                checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
-            });
-
-            input.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' && !checkBtn.disabled) {
-                    checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
-                }
-            });
-        });
-    }
-
-    function checkAnswer(index, input, button, feedback, correctAnswers) {
-        const userAnswer = normalizeInput(input.value);
-
-        const isCorrect = correctAnswers.some(ans => userAnswer === ans);
-
-        if (isCorrect) {
-            input.classList.remove('incorrect');
-            input.classList.add('correct');
-            input.disabled = true;
-            button.disabled = true;
-            feedback.textContent = 'Правильно!';
-            feedback.className = 'quiz-feedback correct';
-        } else {
-            input.classList.remove('correct');
-            input.classList.add('incorrect');
-            feedback.textContent = 'Неправильно. Попробуйте ещё раз.';
-            feedback.className = 'quiz-feedback incorrect';
-        }
-    }
-
-    renderQuiz();
-})();
-            </script>
-        </div>
-
-        <article class="exercise-card" data-status="locked">
-            <span class="exercise-type">Quiz</span>
-            <h3 class="exercise-title">Scegli la forma corretta</h3>
-            <div class="exercise-meta">
-                <span class="exercise-label label-locked">🔒 Bloccato</span>
-                <button class="exercise-button button-unlock" data-action="unlock">Sblocca</button>
-            </div>
-        </article>
-
-        <article class="exercise-card" data-status="locked">
-            <span class="exercise-type">Scrivere</span>
-            <h3 class="exercise-title">Completa il dialogo</h3>
-            <div class="exercise-meta">
-                <span class="exercise-label label-locked">🔒 Bloccato</span>
-                <button class="exercise-button button-unlock" data-action="unlock">Sblocca</button>
-            </div>
-        </article>
-
-        <article class="exercise-card" data-status="locked">
-            <span class="exercise-type">Flash cards</span>
-            <h3 class="exercise-title">Verbi con l'accusativo</h3>
-            <div class="exercise-meta">
-                <span class="exercise-label label-locked">🔒 Bloccato</span>
-                <button class="exercise-button button-unlock" data-action="unlock">Sblocca</button>
-            </div>
-        </article>
-
-        <article class="exercise-card" data-status="locked">
-            <span class="exercise-type">Drag &amp; Drop</span>
-            <h3 class="exercise-title">Ordina le parole</h3>
-            <div class="exercise-meta">
-                <span class="exercise-label label-locked">🔒 Bloccato</span>
-                <button class="exercise-button button-unlock" data-action="unlock">Sblocca</button>
-            </div>
-        </article>
-
-        <article class="exercise-card" data-status="locked">
-            <span class="exercise-type">Scrivere</span>
-            <h3 class="exercise-title">Rispondi alle domande</h3>
-            <div class="exercise-meta">
-                <span class="exercise-label label-locked">🔒 Bloccato</span>
-                <button class="exercise-button button-unlock" data-action="unlock">Sblocca</button>
-            </div>
-        </article>
-
-        <article class="exercise-card" data-status="locked">
-            <span class="exercise-type">Esercizio</span>
-            <h3 class="exercise-title">Esercizio avanzato</h3>
-            <div class="exercise-meta">
-                <span class="exercise-label label-locked">🔒 Bloccato</span>
-                <button class="exercise-button button-unlock" data-action="unlock">Sblocca</button>
-            </div>
-        </article>
 
     </main>
 
