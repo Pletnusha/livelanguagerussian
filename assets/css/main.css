@@ -893,4 +893,9 @@ h1, h2, h3 {
   justify-content: center;
   line-height: 1;
 }
+/* Hide non-public panels */
+.exercise-panel[data-access="student"],
+.exercise-panel[data-access="paid"] {
+  display: none;
+}
 
