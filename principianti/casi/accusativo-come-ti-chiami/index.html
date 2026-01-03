@@ -971,12 +971,39 @@
             <p class="quiz-instruction">Закончите предложение, введя правильный ответ.</p>
             <ol class="quiz-list" id="panel-acc-open-4-quiz-list"></ol>
 
+        </script >
+        </div>
+
+        <!-- Panel 10 (paid) -->
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-10">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Rispondi alle domande</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-acc-open-10" data-access="paid" hidden>
+            <script type="text/plain" data-lazy-script="panel-acc-open-10">
+            </script>
+        </div>
+
+        <!-- Panel 4 (public) -->
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-4">
+            <span class="exercise-type">Quiz</span>
+            <h3 class="exercise-title">QUIZ</h3>
+            <span class="card-subtitle"></span>
+        </article>
+
+        <div class="exercise-panel" id="panel-acc-open-4" data-access="public" hidden>
+            <h2 class="quiz-title"></h2>
+            <p class="quiz-instruction">Scrivete la forma corretta</p>
+            <ol class="quiz-list" id="panel-acc-open-4-quiz-list"></ol>
             <script type="text/plain" data-lazy-script="panel-acc-open-4">
 (() => {
+    
     const panel = document.getElementById('panel-acc-open-4');
+     if (!panel) return;
     const quizList = panel.querySelector('#panel-acc-open-4-quiz-list');
-
-    if (!quizList) {
+   
+        if (!quizList) {
         requestAnimationFrame(() => {
             const panel2 = document.getElementById('panel-acc-open-4');
             const quizList2 = panel2 && panel2.querySelector('#panel-acc-open-4-quiz-list');
@@ -1068,13 +1095,12 @@
 
                 const promptDiv = document.createElement('div');
                 promptDiv.className = 'quiz-prompt';
-                promptDiv.innerHTML = `<strong>${index + 1}.</strong> ${item.promptPrefix}<input type="text" class="quiz-input" data-index="${index}">${item.promptSuffix}`;
-
+               promptDiv.innerHTML = `${item.promptPrefix}<input type="text" class="quiz-input" data-index="${index}">${item.promptSuffix}`;
                 const controlsDiv = document.createElement('div');
                 controlsDiv.className = 'quiz-controls';
 
                 const checkBtn = document.createElement('button');
-                checkBtn.className = 'quiz-check-btn';
+                checkBtn.className = 'btn btn-primary quiz-check-btn';
                 checkBtn.textContent = 'Проверить';
                 checkBtn.dataset.index = index;
 
