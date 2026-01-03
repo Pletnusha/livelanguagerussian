@@ -1787,10 +1787,21 @@ h1, h2, h3 {
   justify-content: center;
   line-height: 1;
 }
-/* Hide non-public panels */
-.exercise-panel[data-access="student"],
-.exercise-panel[data-access="paid"] {
-  display: none;
+/* Hide cards + panels 5–10 (FREE-only view) */
+article.exercise-card[data-target="panel-acc-open-5"],
+article.exercise-card[data-target="panel-acc-open-6"],
+article.exercise-card[data-target="panel-acc-open-7"],
+article.exercise-card[data-target="panel-acc-open-8"],
+article.exercise-card[data-target="panel-acc-open-9"],
+article.exercise-card[data-target="panel-acc-open-10"],
+#panel-acc-open-5,
+#panel-acc-open-6,
+#panel-acc-open-7,
+#panel-acc-open-8,
+#panel-acc-open-9,
+#panel-acc-open-10 {
+  display: none !important;
 }
+
 
 
