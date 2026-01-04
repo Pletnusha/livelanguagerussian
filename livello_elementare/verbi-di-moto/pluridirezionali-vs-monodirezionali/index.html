@@ -775,7 +775,114 @@
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-4" data-access="public" hidden>
-            <!-- TODO: Quiz -->
+            <h2 class="quiz-title"><!-- TODO: Quiz title --></h2>
+            <p class="quiz-instruction"><!-- TODO: Quiz instruction --></p>
+            <ol class="quiz-list" id="panel-acc-open-4-quiz-list"></ol>
+            <script type="text/plain" data-lazy-script="panel-acc-open-4">
+(() => {
+    const panel = document.getElementById('panel-acc-open-4');
+    if (!panel) return;
+    const quizList = panel.querySelector('#panel-acc-open-4-quiz-list');
+
+    if (!quizList) {
+        requestAnimationFrame(() => {
+            const panel2 = document.getElementById('panel-acc-open-4');
+            const quizList2 = panel2 && panel2.querySelector('#panel-acc-open-4-quiz-list');
+            if (!quizList2) return;
+            initQuiz(panel2);
+        });
+        return;
+    }
+
+    initQuiz(panel);
+
+    function initQuiz(panelEl) {
+        const quizListEl = panelEl.querySelector('#panel-acc-open-4-quiz-list');
+
+        const quizData = [
+            // TODO: Add quiz data
+            // {
+            //     id: "plur-001",
+            //     promptPrefix: "...",
+            //     promptSuffix: "...",
+            //     answers: ["..."]
+            // },
+        ];
+
+        function normalizeInput(str) {
+            return str.trim().replace(/\s+/g, ' ');
+        }
+
+        function renderQuiz() {
+            quizListEl.innerHTML = '';
+
+            quizData.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.className = 'quiz-item';
+                li.dataset.id = item.id;
+
+                const promptDiv = document.createElement('div');
+                promptDiv.className = 'quiz-prompt';
+                promptDiv.innerHTML = `${item.promptPrefix}<input type="text" class="quiz-input" data-index="${index}">${item.promptSuffix}`;
+
+                const controlsDiv = document.createElement('div');
+                controlsDiv.className = 'quiz-controls';
+
+                const checkBtn = document.createElement('button');
+                checkBtn.className = 'btn btn-primary quiz-check-btn';
+                checkBtn.textContent = 'Проверить';
+                checkBtn.dataset.index = index;
+
+                const feedbackDiv = document.createElement('div');
+                feedbackDiv.className = 'quiz-feedback';
+                feedbackDiv.dataset.index = index;
+
+                controlsDiv.appendChild(checkBtn);
+
+                li.appendChild(promptDiv);
+                li.appendChild(controlsDiv);
+                li.appendChild(feedbackDiv);
+
+                quizListEl.appendChild(li);
+
+                const input = li.querySelector('.quiz-input');
+
+                checkBtn.addEventListener('click', () => {
+                    checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
+                });
+
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' && !checkBtn.disabled) {
+                        checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
+                    }
+                });
+            });
+        }
+
+        function checkAnswer(index, input, button, feedback, correctAnswers) {
+            const userAnswer = normalizeInput(input.value);
+
+            const isCorrect = correctAnswers.some(ans => userAnswer === ans);
+
+            if (isCorrect) {
+                input.classList.remove('incorrect');
+                input.classList.add('correct');
+                input.disabled = true;
+                button.disabled = true;
+                feedback.textContent = 'Правильно!';
+                feedback.className = 'quiz-feedback correct';
+            } else {
+                input.classList.remove('correct');
+                input.classList.add('incorrect');
+                feedback.textContent = 'Неправильно. Попробуйте ещё раз.';
+                feedback.className = 'quiz-feedback incorrect';
+            }
+        }
+
+        renderQuiz();
+    }
+})();
+            </script>
         </div>
 
     </main>
