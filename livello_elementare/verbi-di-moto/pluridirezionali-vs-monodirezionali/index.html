@@ -34,12 +34,30 @@
             <h3 class="exercise-title">Куда ты идёшь? Мы обычно ходим...</h3>
         </article>
 
-        <div class="exercise-panel" id="panel-acc-open-1" data-access="public" hidden>
-                       <section id="ex-dragdrop-plur-01">
-                <div id="ex-dragdrop-plur-01-container" class="universal-dd"> 
-                </div>
-      </section>
-           <script type="text/plain" data-lazy-script="panel-acc-open-1">
+        <div class="universal-dd" id="ex-dragdrop-plur-01" style="max-width: 800px; margin: 0 auto;">
+    
+    <div id="ex-dragdrop-plur-01-container">
+        </div>
+
+    <div id="ex-dragdrop-plur-01-completion" style="display: none; text-align: center; padding: 2rem;">
+        </div>
+
+</div>
+
+<style>
+    /* Дополнительные стили для совместимости с твоим скриптом */
+    #ex-dragdrop-plur-01 .exercise-counter {
+        font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;
+    }
+    #ex-dragdrop-plur-01 .feedback {
+        margin-top: 15px; font-weight: bold; min-height: 24px;
+    }
+    /* Цвета для кнопок, которые использует твой скрипт */
+    #ex-dragdrop-plur-01 .btn-primary { background-color: #2a5bd7; color: #fff; }
+    #ex-dragdrop-plur-01 .btn-secondary { background-color: #666; color: #fff; }
+</style>
+
+<script>
 (() => {
     const root = document.getElementById('ex-dragdrop-plur-01');
     const exerciseContainer = root.querySelector('#ex-dragdrop-plur-01-container');
@@ -227,6 +245,15 @@
         });
 
         feedback.textContent = `Corretto: ${correct} / ${total}`;
+        
+        // Меняем цвет текста обратной связи
+        if(correct === total) {
+             feedback.style.color = "#22c55e"; // Зеленый
+             feedback.textContent += " (Bravissimo!)";
+        } else {
+             feedback.style.color = "#ef4444"; // Красный
+        }
+
         checkBtn.style.display = 'none';
         nextBtn.style.display = 'inline-block';
     }
@@ -237,8 +264,9 @@
 
         completionScreen.innerHTML = `
             <div class="completion">
-                <h2>Complimenti!</h2>
-                <p>Hai completato tutti i ${exercises.length} esercizi.</p>
+                <h2 style="font-family: 'League Spartan'; font-size: 2rem; color: #2a5bd7;">Complimenti!</h2>
+                <p style="font-size: 1.2rem; margin-top: 1rem;">Hai completato tutti i ${exercises.length} esercizi.</p>
+                <button class="btn btn-primary" onclick="location.reload()" style="margin-top: 2rem;">Ricomincia</button>
             </div>
         `;
     }
