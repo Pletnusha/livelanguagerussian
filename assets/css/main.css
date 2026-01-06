@@ -1997,84 +1997,97 @@ article.exercise-card[data-target="panel-acc-open-10"],
     color: #991b1b;
 }
 /* ========================================= */
-/* Стили для упражнений (Drag & Drop)        */
+/* СТИЛИ ДЛЯ УПРАЖНЕНИЯ (КАК НА СКРИНШОТЕ)   */
 /* ========================================= */
 
-/* Линии для пропусков */
+/* 1. Белая карточка-контейнер */
+#ex-dragdrop-plur-01-container,
+.exercise-panel section div[id$="-container"] {
+    background-color: #ffffff;
+    border: 1px solid #e0e6ed; /* Светлая рамка */
+    border-radius: 12px;       /* Закругленные углы */
+    padding: 40px;             /* Простор внутри */
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;        /* Всё по центру */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 2. Текст упражнения */
+.exercise-text {
+    font-size: 1.3rem;
+    line-height: 2.5;          /* Большой межстрочный интервал, чтобы линии не наезжали */
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* 3. ПРОБЕЛЫ (Линии для вставки) */
 .gap {
     display: inline-block;
-    min-width: 120px;
-    height: 1.2em;
-    border-bottom: 2px solid #000; /* Черная линия */
-    margin: 0 5px;
-    vertical-align: bottom;
+    min-width: 150px;          /* Длинная линия (как на скрине) */
+    height: 1.4rem;
+    border-bottom: 2px solid #333; /* Черная линия снизу */
+    margin: 0 8px;
+    vertical-align: bottom;    /* Выравнивание по низу текста */
     text-align: center;
-    color: #0044cc;
-    font-weight: bold;
+    color: #2b5797;            /* Цвет вставленного слова (синий) */
+    font-weight: 600;
     cursor: pointer;
-    transition: border-color 0.3s ease;
 }
 
-/* Когда слово вставлено */
+/* Когда слово вставлено - линия становится синей */
 .gap.filled {
-    border-bottom-color: #0044cc; /* Синяя линия */
+    border-bottom: 2px solid #2b5797;
 }
+.gap.correct { border-bottom-color: #28a745; color: #28a745; }
+.gap.incorrect { border-bottom-color: #dc3545; color: #dc3545; }
 
-/* Правильный ответ */
-.gap.correct {
-    border-bottom-color: #28a745; /* Зеленая */
-    color: #28a745;
-}
 
-/* Неправильный ответ */
-.gap.incorrect {
-    border-bottom-color: #dc3545; /* Красная */
-    color: #dc3545;
-}
-
-/* Контейнер для слов (чтобы они были в ряд) */
+/* 4. СЛОВА ДЛЯ ВЫБОРА (В одну строку) */
 .word-options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f8f9fa; /* Легкий фон для зоны слов */
-    border-radius: 8px;
+    display: flex;             /* Включает режим "в одну строку" */
+    flex-wrap: wrap;           /* Если экран маленький, перенесет на след. строку */
+    justify-content: center;   /* Выравнивает по центру */
+    gap: 30px;                 /* Расстояние между словами */
+    margin-bottom: 30px;
+    padding: 0;
 }
 
-/* Кнопки со словами */
+/* Стиль самого слова (просто текст) */
 .word-option {
-    padding: 6px 12px;
-    background-color: #ffffff;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
+    background: transparent;   /* Прозрачный фон (нет кнопки) */
+    border: none;              /* Нет рамки */
+    padding: 5px;
+    font-size: 1.2rem;
+    color: #555;               /* Темно-серый цвет */
     cursor: pointer;
-    user-select: none;
-    transition: all 0.2s ease-in-out;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: color 0.2s;
 }
 
 .word-option:hover {
-    background-color: #e2e6ea;
-    transform: translateY(-1px);
-    border-color: #adb5bd;
+    color: #2b5797;            /* При наведении синеет */
 }
 
-/* Использованное слово */
+/* Если слово использовали */
 .word-option.used {
-    opacity: 0.4;
-    cursor: default;
-    background-color: #e9ecef;
-    box-shadow: none;
+    color: #ccc;               /* Становится бледным */
+    text-decoration: line-through; /* Зачеркиваем (по желанию) */
     pointer-events: none;
 }
 
-/* Текст упражнения */
-.exercise-text {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+
+/* 5. Кнопка проверки */
+.controls button.btn-primary {
+    background-color: #3366cc; /* Синий цвет кнопки */
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.controls button.btn-primary:hover {
+    background-color: #254db3;
 }
