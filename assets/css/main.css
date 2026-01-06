@@ -1996,4 +1996,85 @@ article.exercise-card[data-target="panel-acc-open-10"],
     border-color: #ef4444;
     color: #991b1b;
 }
+/* ========================================= */
+/* Стили для упражнений (Drag & Drop)        */
+/* ========================================= */
 
+/* Линии для пропусков */
+.gap {
+    display: inline-block;
+    min-width: 120px;
+    height: 1.2em;
+    border-bottom: 2px solid #000; /* Черная линия */
+    margin: 0 5px;
+    vertical-align: bottom;
+    text-align: center;
+    color: #0044cc;
+    font-weight: bold;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+/* Когда слово вставлено */
+.gap.filled {
+    border-bottom-color: #0044cc; /* Синяя линия */
+}
+
+/* Правильный ответ */
+.gap.correct {
+    border-bottom-color: #28a745; /* Зеленая */
+    color: #28a745;
+}
+
+/* Неправильный ответ */
+.gap.incorrect {
+    border-bottom-color: #dc3545; /* Красная */
+    color: #dc3545;
+}
+
+/* Контейнер для слов (чтобы они были в ряд) */
+.word-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa; /* Легкий фон для зоны слов */
+    border-radius: 8px;
+}
+
+/* Кнопки со словами */
+.word-option {
+    padding: 6px 12px;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.word-option:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-1px);
+    border-color: #adb5bd;
+}
+
+/* Использованное слово */
+.word-option.used {
+    opacity: 0.4;
+    cursor: default;
+    background-color: #e9ecef;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+/* Текст упражнения */
+.exercise-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
