@@ -282,6 +282,20 @@
 
     <script type="text/plain" data-lazy-script="panel-acc-open-5">
     (() => {
+        // === 1. НАСТРОЙКИ ===
+        const rootID = 'ex-dragdrop-plur-05'; // ID внутренностей
+        const panelID = 'panel-acc-open-5';   // ID всей панели (для аккордеона)
+
+        // === 2. ЛОГИКА АККОРДЕОНА (ВСТАВЛЯЕМ СЮДА) ===
+        const panel = document.getElementById(panelID);
+        const trigger = document.querySelector(`article[data-target="${panelID}"]`);
+        
+        if (panel && trigger) {
+            panel.hidden = true; // Скрываем при загрузке
+            trigger.addEventListener('click', () => {
+                panel.hidden = !panel.hidden; // Переключаем (открыть/закрыть)
+            });
+        }
         // === НАСТРОЙКИ ===
         // ID должен совпадать с тем, что в HTML выше (05)
         const rootID = 'ex-dragdrop-plur-05';
