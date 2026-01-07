@@ -567,6 +567,8 @@ h1, h2, h3 {
   color: #999;
   font-family: monospace;
   font-size: 0.9rem;
+  flex: 1;
+  text-align: center;
 }
 
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-quiz-area {
@@ -1462,6 +1464,8 @@ h1, h2, h3 {
   color: #999;
   font-family: monospace;
   font-size: 0.9rem;
+  flex: 1;
+  text-align: center;
 }
 
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-quiz-area {
