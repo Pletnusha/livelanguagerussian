@@ -512,15 +512,21 @@
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-6" data-access="paid" hidden>
-            <section id="ex-dragdrop-plur-06">
-                <div id="ex-dragdrop-plur-06-container">
-                    <!-- TODO: Exercise content will be rendered here -->
-                </div>
-                <div id="ex-dragdrop-plur-06-completion" style="display:none;">
-                    <!-- TODO: Completion screen -->
-                </div>
-            </section>
-            <!-- TODO: Add drag & drop JS logic -->
+            <div id="ex-dragdrop-plur-06" class="universal-dd">
+                <div id="ex-dragdrop-plur-06-container"></div>
+                <div id="ex-dragdrop-plur-06-completion" style="display: none;"></div>
+            </div>
+
+            <script type="text/plain" data-lazy-script="panel-acc-open-6">
+            (() => {
+                const rootID = 'ex-dragdrop-plur-06';
+                const root = document.getElementById(rootID);
+                if (!root) return;
+
+                root.querySelector(`#${rootID}-container`);
+                root.querySelector(`#${rootID}-completion`);
+            })();
+            </script>
         </div>
 
         <!-- ============================================================ -->

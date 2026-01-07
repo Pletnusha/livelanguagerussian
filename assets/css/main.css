@@ -1788,7 +1788,10 @@ h1, h2, h3 {
   justify-content: center;
   line-height: 1;
 }
-/* Hide cards + panels 5–10 (FREE-only view) */
+/* TEMP / DISABLED: Access-level visibility block for cards/panels 5–10.
+   Purpose: hide exercise cards/panels for FREE-only view.
+   DO NOT REMOVE — keep for future access-level implementation. */
+/*
 article.exercise-card[data-target="panel-acc-open-5"],
 article.exercise-card[data-target="panel-acc-open-6"],
 article.exercise-card[data-target="panel-acc-open-7"],
@@ -1803,6 +1806,7 @@ article.exercise-card[data-target="panel-acc-open-10"],
 #panel-acc-open-10 {
   display: none !important;
 }
+*/
 /* ============================================================
    НОВЫЙ УНИВЕРСАЛЬНЫЙ СТИЛЬ (Для новых упражнений)
    Используй класс: .universal-dd
