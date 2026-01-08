@@ -528,9 +528,147 @@
     const completionScreen = root && root.querySelector(`#${rootID}-completion`);
     const exercises = [];
 
-    if (!root || !exerciseContainer || !completionScreen) return;
-    exerciseContainer.textContent = 'Coming soon (D&D panel 6 initialized)';
-    root.dataset.initialized = 'true';
+    let currentExerciseIndex = 0;
+    let checked = false;
+    let gapElements = [];
+    let wordElements = [];
+
+    function loadExercise(index) {
+        if (index >= exercises.length) {
+            showCompletion();
+            return;
+        }
+
+        checked = false;
+        const exercise = exercises[index];
+
+        exerciseContainer.innerHTML = `
+            <div class="header">
+                <div class="exercise-counter">Esercizio ${index + 1} di ${exercises.length}</div>
+            </div>
+            <div class="instruction">${exercise.instruction}</div>
+            <div class="exercise-text" id="${rootID}-text">${exercise.text}</div>
+            <div class="word-options" id="${rootID}-options"></div>
+            <div class="controls">
+                <div class="feedback" id="${rootID}-feedback"></div>
+                <div>
+                    <button class="btn btn-primary" id="${rootID}-check">Verifica</button>
+                    <button class="btn btn-secondary" id="${rootID}-next" style="display:none;">Prossimo</button>
+                </div>
+            </div>
+        `;
+
+        const exerciseText = exerciseContainer.querySelector(`#${rootID}-text`);
+        const wordOptionsContainer = exerciseContainer.querySelector(`#${rootID}-options`);
+        const checkBtn = exerciseContainer.querySelector(`#${rootID}-check`);
+        const nextBtn = exerciseContainer.querySelector(`#${rootID}-next`);
+        const feedback = exerciseContainer.querySelector(`#${rootID}-feedback`);
+
+        const placeholderPattern = /\{\{(\d+)\}\}/g;
+        let textContent = exercise.text;
+
+        textContent = textContent.replace(placeholderPattern, (_, number) =>
+            `<span class="gap" data-gap="${number}"></span>`
+        );
+
+        exerciseText.innerHTML = textContent;
+
+        gapElements = Array.from(exerciseText.querySelectorAll('.gap'));
+        wordElements = [];
+
+        exercise.words.forEach((word, idx) => {
+            const el = document.createElement('div');
+            el.className = 'word-option';
+            el.textContent = word;
+            el.dataset.word = word;
+            el.dataset.index = idx;
+            el.addEventListener('click', () => handleWordClick(el));
+            wordOptionsContainer.appendChild(el);
+            wordElements.push(el);
+        });
+
+        gapElements.forEach(gap => {
+            gap.addEventListener('click', () => handleGapClick(gap));
+        });
+
+        checkBtn.addEventListener('click', () =>
+            checkAnswers(exercise, feedback, nextBtn, checkBtn)
+        );
+
+        nextBtn.addEventListener('click', () => {
+            currentExerciseIndex++;
+            loadExercise(currentExerciseIndex);
+        });
+    }
+
+    function handleWordClick(wordElement) {
+        if (wordElement.classList.contains('used') || checked) return;
+
+        const emptyGap = gapElements.find(g => !g.classList.contains('filled'));
+        if (!emptyGap) return;
+
+        emptyGap.textContent = wordElement.dataset.word;
+        emptyGap.classList.add('filled');
+        emptyGap.dataset.wordIndex = wordElement.dataset.index;
+        emptyGap.dataset.word = wordElement.dataset.word;
+        wordElement.classList.add('used');
+    }
+
+    function handleGapClick(gap) {
+        if (checked || !gap.classList.contains('filled')) return;
+
+        const wordIndex = gap.dataset.wordIndex;
+        const wordElement = wordElements.find(w => w.dataset.index === wordIndex);
+
+        gap.textContent = '';
+        gap.classList.remove('filled');
+        delete gap.dataset.wordIndex;
+        delete gap.dataset.word;
+
+        if (wordElement) wordElement.classList.remove('used');
+    }
+
+    function checkAnswers(exercise, feedback, nextBtn, checkBtn) {
+        checked = true;
+        let correct = 0;
+        const total = Object.keys(exercise.correctAnswers).length;
+
+        gapElements.forEach(gap => {
+            const n = parseInt(gap.dataset.gap, 10);
+            const user = gap.dataset.word;
+            const right = exercise.correctAnswers[n];
+
+            if (user === right) {
+                gap.classList.add('correct');
+                correct++;
+            } else {
+                gap.classList.add('incorrect');
+            }
+        });
+
+        feedback.textContent = `Risultato: ${correct}/${total}`;
+        feedback.style.color = correct === total ? '#15803d' : '#b91c1c';
+
+        checkBtn.style.display = 'none';
+        nextBtn.style.display = 'inline-block';
+    }
+
+    function showCompletion() {
+        exerciseContainer.style.display = 'none';
+        completionScreen.style.display = 'block';
+
+        completionScreen.innerHTML = `
+    <h2 style="color:#3b82f6;margin-bottom:20px;">Complimenti!</h2>
+    <p style="font-size:1.2rem;color:#4b5563;">
+        Hai completato tutti i ${exercises.length} esercizi.
+    </p>
+    <button class="btn btn-primary" onclick="location.reload()">
+        Ricomincia
+    </button>
+`;
+    }
+
+    loadExercise(currentExerciseIndex);
 })();
             </script>
         </div>
