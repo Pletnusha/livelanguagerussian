@@ -2011,11 +2011,11 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 /* =========================================
    СТИЛИ ДЛЯ УПРАЖНЕНИЙ (Drag & Drop)
-   Класс: .rus-drag-drop
+   Класс: .universal-dd
    ========================================= */
 
 /* 1. Основной контейнер */
-.rus-drag-drop {
+.universal-dd {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     max-width: 800px; 
     margin: 20px auto; 
@@ -2030,7 +2030,7 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 
 /* 2. Инструкция (Задание) */
-.rus-drag-drop .instruction { 
+.universal-dd .instruction { 
     font-weight: 600; 
     color: #374151; 
     margin-bottom: 20px; 
@@ -2038,14 +2038,14 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 
 /* 3. Текст упражнения */
-.rus-drag-drop .exercise-text { 
+.universal-dd .exercise-text { 
     font-size: 1.2rem; 
     line-height: 1.8; 
     margin-bottom: 30px; 
 }
 
 /* 4. Счётчик (1 из 10) */
-.rus-drag-drop .exercise-counter { 
+.universal-dd .exercise-counter { 
     color: #9ca3af; 
     font-size: 0.85rem; 
     text-transform: uppercase; 
@@ -2054,7 +2054,7 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 
 /* 5. Пропуски в тексте (Gaps) */
-.rus-drag-drop .gap {
+.universal-dd .gap {
     display: inline-flex; 
     align-items: center; 
     justify-content: center;
@@ -2071,27 +2071,27 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 
 /* Состояния пропусков */
-.rus-drag-drop .gap.filled { 
+.universal-dd .gap.filled { 
     background-color: #eff6ff; 
     border-radius: 6px; 
     border-bottom: 2px solid transparent; 
     color: #1d4ed8; 
 }
 
-.rus-drag-drop .gap.correct { 
+.universal-dd .gap.correct { 
     background-color: #dcfce7; 
     color: #15803d; 
     border: 1px solid #86efac; 
 }
 
-.rus-drag-drop .gap.incorrect { 
+.universal-dd .gap.incorrect { 
     background-color: #fee2e2; 
     color: #b91c1c; 
     border: 1px solid #fca5a5; 
 }
 
 /* 6. Блок с вариантами слов */
-.rus-drag-drop .word-options {
+.universal-dd .word-options {
     display: flex; 
     flex-wrap: wrap; 
     gap: 10px; 
@@ -2103,7 +2103,7 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 
 /* Отдельные слова-кнопки */
-.rus-drag-drop .word-option {
+.universal-dd .word-option {
     background: #fff; 
     border: 1px solid #d1d5db; 
     padding: 8px 16px; 
@@ -2113,13 +2113,13 @@ article.exercise-card[data-target="panel-acc-open-10"],
     user-select: none;
 }
 
-.rus-drag-drop .word-option:hover { 
+.universal-dd .word-option:hover { 
     border-color: #3b82f6; 
     transform: translateY(-2px); 
     box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
 }
 
-.rus-drag-drop .word-option.used { 
+.universal-dd .word-option.used { 
     opacity: 0.5; 
     background-color: #e5e7eb; 
     pointer-events: none; 
@@ -2127,7 +2127,7 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 
 /* 7. Панель кнопок (Внизу) */
-.rus-drag-drop .controls { 
+.universal-dd .controls { 
     display: flex; 
     align-items: center; 
     gap: 15px; 
@@ -2136,7 +2136,7 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 
 /* Кнопки (Проверить / Далее) */
-.rus-drag-drop .btn { 
+.universal-dd .btn { 
     padding: 10px 24px; 
     border: none; 
     border-radius: 6px; 
@@ -2146,22 +2146,22 @@ article.exercise-card[data-target="panel-acc-open-10"],
     transition: background-color 0.2s; 
 }
 
-.rus-drag-drop .btn-primary { 
+.universal-dd .btn-primary { 
     background-color: #3b82f6; 
     color: white; 
 }
 
-.rus-drag-drop .btn-primary:hover { 
+.universal-dd .btn-primary:hover { 
     background-color: #2563eb; 
 }
 
-.rus-drag-drop .btn-secondary { 
+.universal-dd .btn-secondary { 
     background-color: #6b7280; 
     color: white; 
 }
 
 /* Текст результата (Справа) */
-.rus-drag-drop .feedback { 
+.universal-dd .feedback { 
     font-weight: bold; 
     margin-left: auto; 
 }
