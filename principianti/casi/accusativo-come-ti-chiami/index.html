@@ -303,12 +303,7 @@
     const exerciseContainer = root && root.querySelector(`#${rootID}-container`);
     const completionScreen = root && root.querySelector(`#${rootID}-completion`);
     const exercises = [
-        {
-            instruction: "Completa la frase scegliendo 2 espressioni",
-            text: " {{1}} (подруга) зовут Анна, а {{2}} (сестра)зовут Лиза.", 
-            words: ["мою подруга", "мою подругу", "мою сестра", "мою сестру"], 
-            correctAnswers: { 1: "мою подругу", 2: "мою сестру" } 
-        },
+        const exercises = [
         {
             instruction: "Completa la frase scegliendo 2 espressioni",
             text: "{{1}} зовут Юрий, {{2}} зовут Елена.", 
@@ -340,7 +335,7 @@
             correctAnswers: { 1: "Их дядю", 2: "его жену" }
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressionи",
+            instruction: "Completa la frase scegliendo 2 espressioni",
             text: "{{1}} (подруга) зовут Лена, а {{2}}(сестра) зовут Анна.", 
             words: ["Наша подругу", "Нашу подругу", "её сестру", "её сестра"],   
             correctAnswers: { 1: "Нашу подругу", 2: "её сестру" } 
@@ -512,7 +507,7 @@
         <!-- Panel 6 (paid) -->
         <article class="exercise-card" data-status="open" data-target="panel-acc-open-6">
             <span class="exercise-type">Drag &amp; Drop</span>
-            <h3 class="exercise-title">Scegli la forma corretta</h3>
+            <h3 class="exercise-title">МОЕГО ДРУГА ЗОВУТ АЛЕКСЕЙ</h3>
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-6" data-access="paid" hidden>
@@ -526,7 +521,50 @@
     const root = document.getElementById(rootID);
     const exerciseContainer = root && root.querySelector(`#${rootID}-container`);
     const completionScreen = root && root.querySelector(`#${rootID}-completion`);
-    const exercises = [];
+    const exercises = [
+     {
+            instruction: "Completa la frase scegliendo 2 espressioni", 
+            text: "{{1}} (друг) зовут Виктор, а {{2}}(брат) зовут Борис.", 
+            words: ["моего друг", "моего друга", "его брату", "его брата"], 
+            correctAnswers: { 1: "Моего друга", 2: "его брата" } 
+        },
+         {
+            instruction: "Completa la frase scegliendo 2 espressioni", 
+            text: "{{1}} (сосед) зовут Барсик, а {{2}} (кот) зовут Мурка.", 
+            words: ["нашего соседу", "нашего соседа", "его кота", "его кот"], 
+            correctAnswers: { 1: "мою подругу", 2: "её кошку" } 
+        },
+         {
+            instruction: "Completa la frase scegliendo 2 espressionи", 
+            text: "{{1}} (брат) зовут Владислав, а {{2}} (друг) зовут Анатолий.", 
+            words: ["их брата", "их брату", "его друг", "их друга"], 
+            correctAnswers: { 1: "их брата", 2: "его друга" } 
+        },
+         {
+            instruction: "Completa la frase scegliendo 2 espressioni", 
+            text: "{{1}} (сын) зовут Денис, а {{2}} (сосед) зовут Андрей.", 
+            words: ["их сыну", "их сына", "его соседа", "её соседа"], 
+            correctAnswers: { 1: "их сына", 2: "его соседа" } 
+        },
+         {
+            instruction: "Completa la frase scegliendo 2 espressionи", 
+            text: "{{1}} (племянник) зовут Анатолий, а {{2}} (сын) зовут Тимур.", 
+            words: ["наш племянник", "нашего племянника", "его сына", "её сына"], 
+            correctAnswers: { 1: "мою подругу", 2: "её кошку" } 
+        },
+         {
+            instruction: "Completa la frase scegliendo 2 espressionи", 
+            text: "{{1}} (муж) зовут Владислав, а {{2}} (сын) зовут Анатолий.", 
+            words: ["её мужу", "её мужа", "её сын", "его сына"], 
+            correctAnswers: { 1: "её мужа", 2: "его сына" } 
+        },
+         {
+            instruction: "Completa la frase scegliendo 2 espressionи", 
+            text: "{{1}} (сосед) зовут Петр, а {{2}} (отец) зовут Дмитрий.", 
+            words: ["нашу соседа", "нашего соседа", "его отеца", "его отца"], 
+            correctAnswers: { 1: "нашего соседа", 2: "его отца" } 
+        },
+        ];
 
     let currentExerciseIndex = 0;
     let checked = false;
@@ -676,7 +714,7 @@
         <!-- Panel 2 (public) -->
         <article class="exercise-card" data-status="open" data-target="panel-acc-open-2">
             <span class="exercise-type">Flashcards</span>
-            <h3 class="exercise-title">Мою сестру зовут …</h3>
+            <h3 class="exercise-title">МОЮ СЕСТРУ ЗОВУТ …</h3>
             <span class="card-subtitle">Nomi · 1ª declinazione</span>
         </article>
 
