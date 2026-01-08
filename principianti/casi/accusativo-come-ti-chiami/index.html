@@ -286,24 +286,465 @@
         </div>
 
         <!-- Panel 5 (student) -->
-        <article class="exercise-card" data-status="open" data-target="panel-acc-open-5" hidden>
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-5">
             <span class="exercise-type">Drag &amp; Drop</span>
             <h3 class="exercise-title"></h3>
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-5" data-access="student" hidden>
+            <div id="ex-dragdrop-acc-05" class="universal-dd">
+                <div id="ex-dragdrop-acc-05-container"></div>
+                <div id="ex-dragdrop-acc-05-completion" style="display:none;"></div>
+            </div>
             <script type="text/plain" data-lazy-script="panel-acc-open-5">
+(() => {
+    // === НАСТРОЙКА НАЗВАНИЯ ===
+    // Если захотите поменять название, поменяйте его ТОЛЬКО ЗДЕСЬ
+    // и скрипт сам обновит всё остальное (не забудьте поменять id в HTML выше)
+    const rootID = 'ex-dragdrop-acc-05';
+    
+    const root = document.getElementById(rootID);
+    if (!root) return;
+
+    const exerciseContainer = root.querySelector(`#${rootID}-container`);
+    const completionScreen = root.querySelector(`#${rootID}-completion`);
+    // DEBUG_START
+    console.log('LAZY_EXEC panel-acc-open-5', {
+        root: !!root,
+        container: !!exerciseContainer,
+        completion: !!completionScreen
+    });
+    // DEBUG_END
+
+    // EDIT CONTENT HERE ONLY (instruction/text/words/correctAnswers). DO NOT TOUCH LOGIC.
+    const exercises = [
+        {
+            instruction: "TODO: Inserisci istruzione (Accusativo: ...)",
+            text: "TODO: Фраза с {{1}} и {{2}}.",
+            words: ["TODO1", "TODO2", "TODO3", "TODO4"],
+            correctAnswers: { 1: "TODO2", 2: "TODO3" }
+        },
+        {
+            instruction: "TODO: Inserisci istruzione (Accusativo: ...)",
+            text: "TODO: Фраза с {{1}} и {{2}}.",
+            words: ["TODO1B", "TODO2B", "TODO3B", "TODO4B"],
+            correctAnswers: { 1: "TODO1B", 2: "TODO4B" }
+        },
+        {
+            instruction: "TODO: Inserisci istruzione (Accusativo: ...)",
+            text: "TODO: Фраза с {{1}} и {{2}}.",
+            words: ["TODO1C", "TODO2C", "TODO3C", "TODO4C"],
+            correctAnswers: { 1: "TODO3C", 2: "TODO2C" }
+        }
+    ];
+
+    let currentExerciseIndex = 0;
+    let checked = false;
+    let gapElements = [];
+    let wordElements = [];
+
+    function loadExercise(index) {
+        if (index >= exercises.length) {
+            showCompletion();
+            return;
+        }
+
+        checked = false;
+        const exercise = exercises[index];
+
+        exerciseContainer.innerHTML = `
+            <div class="header">
+                <div class="exercise-counter">Esercizio ${index + 1} di ${exercises.length}</div>
+            </div>
+            <div class="instruction">${exercise.instruction}</div>
+            <div class="exercise-text" id="${rootID}-text">${exercise.text}</div>
+            <div class="word-options" id="${rootID}-options"></div>
+            <div class="controls">
+                <div class="feedback" id="${rootID}-feedback"></div>
+                <div>
+                    <button class="btn btn-primary" id="${rootID}-check">Verifica</button>
+                    <button class="btn btn-secondary" id="${rootID}-next" style="display:none;">Prossimo</button>
+                </div>
+            </div>
+        `;
+
+        const exerciseText = exerciseContainer.querySelector(`#${rootID}-text`);
+        const wordOptionsContainer = exerciseContainer.querySelector(`#${rootID}-options`);
+        const checkBtn = exerciseContainer.querySelector(`#${rootID}-check`);
+        const nextBtn = exerciseContainer.querySelector(`#${rootID}-next`);
+        const feedback = exerciseContainer.querySelector(`#${rootID}-feedback`);
+
+        const placeholderPattern = /\{\{(\d+)\}\}/g;
+        let textContent = exercise.text;
+
+        textContent = textContent.replace(placeholderPattern, (match, number) => {
+            return `<span class="gap" data-gap="${number}"></span>`;
+        });
+
+        exerciseText.innerHTML = textContent;
+
+        gapElements = Array.from(exerciseText.querySelectorAll('.gap'));
+        wordElements = [];
+
+        exercise.words.forEach((word, idx) => {
+            const wordElement = document.createElement('div');
+            wordElement.className = 'word-option';
+            wordElement.textContent = word;
+            wordElement.dataset.word = word;
+            wordElement.dataset.index = idx;
+            wordElement.addEventListener('click', () => handleWordClick(wordElement));
+            wordOptionsContainer.appendChild(wordElement);
+            wordElements.push(wordElement);
+        });
+
+        gapElements.forEach(gap => {
+            gap.addEventListener('click', () => handleGapClick(gap));
+        });
+
+        checkBtn.addEventListener('click', () => checkAnswers(exercise, feedback, nextBtn, checkBtn));
+        nextBtn.addEventListener('click', () => {
+            currentExerciseIndex++;
+            loadExercise(currentExerciseIndex);
+        });
+    }
+
+    function handleWordClick(wordElement) {
+        if (wordElement.classList.contains('used') || checked) return;
+
+        const emptyGap = gapElements.find(gap => !gap.classList.contains('filled'));
+        if (!emptyGap) return;
+
+        const word = wordElement.dataset.word;
+        emptyGap.textContent = word;
+        emptyGap.classList.add('filled');
+        emptyGap.dataset.wordIndex = wordElement.dataset.index;
+        emptyGap.dataset.word = word;
+        wordElement.classList.add('used');
+    }
+
+    function handleGapClick(gap) {
+        if (checked) return;
+        if (!gap.classList.contains('filled')) return;
+
+        const wordIndex = gap.dataset.wordIndex;
+        const wordElement = wordElements.find(w => w.dataset.index === wordIndex);
+
+        gap.textContent = '';
+        gap.classList.remove('filled');
+        delete gap.dataset.wordIndex;
+        delete gap.dataset.word;
+
+        if (wordElement) {
+            wordElement.classList.remove('used');
+        }
+    }
+
+    function checkAnswers(exercise, feedback, nextBtn, checkBtn) {
+        checked = true;
+        let correct = 0;
+        let total = Object.keys(exercise.correctAnswers).length;
+
+        gapElements.forEach(gap => {
+            const gapNum = parseInt(gap.dataset.gap);
+            const userAnswer = gap.dataset.word;
+            const correctAnswer = exercise.correctAnswers[gapNum];
+
+            if (userAnswer === correctAnswer) {
+                gap.classList.remove('filled');
+                gap.classList.add('correct');
+                correct++;
+            } else {
+                gap.classList.add('incorrect');
+            }
+        });
+
+        if(correct === total) {
+             feedback.style.color = "#15803d";
+             feedback.textContent = `Bravissimo! ${correct}/${total}`;
+        } else {
+             feedback.style.color = "#b91c1c";
+             feedback.textContent = `Risultato: ${correct}/${total}`;
+        }
+
+        checkBtn.style.display = 'none';
+        nextBtn.style.display = 'inline-block';
+    }
+
+    function showCompletion() {
+        exerciseContainer.style.display = 'none';
+        completionScreen.style.display = 'block';
+
+        completionScreen.innerHTML = `
+            <h2 style="color: #3b82f6; margin-bottom: 20px;">Complimenti!</h2>
+            <p style="font-size: 1.2rem; color: #4b5563;">Hai completato tutti i ${exercises.length} esercizi.</p>
+            <button class="btn btn-primary" onclick="location.reload()" style="margin-top: 30px;">Ricomincia</button>
+        `;
+    }
+
+    loadExercise(currentExerciseIndex);
+    // DEBUG_START
+    const panel = document.getElementById('panel-acc-open-5');
+    console.log('PANEL_HEIGHT_CHECK', {
+      panel_offsetHeight: panel ? panel.offsetHeight : null,
+      panel_scrollHeight: panel ? panel.scrollHeight : null,
+      panel_style: panel ? panel.getAttribute('style') : null
+    });
+    // DEBUG_END
+    // DEBUG_START
+    const containerRect = exerciseContainer ? exerciseContainer.getBoundingClientRect() : null;
+    const rootRect = root.getBoundingClientRect();
+    const panelRect = panel ? panel.getBoundingClientRect() : null;
+    const rootStyles = getComputedStyle(root);
+    const containerStyles = exerciseContainer ? getComputedStyle(exerciseContainer) : null;
+    console.log('DEBUG_METRICS panel-acc-open-5', {
+        panel_h: panelRect ? panelRect.height : null,
+        root_h: rootRect.height,
+        container_h: containerRect ? containerRect.height : null,
+        root_css: {
+            display: rootStyles.display,
+            visibility: rootStyles.visibility,
+            opacity: rootStyles.opacity,
+            height: rootStyles.height,
+            overflow: rootStyles.overflow
+        },
+        container_css: containerStyles ? {
+            display: containerStyles.display,
+            visibility: containerStyles.visibility,
+            opacity: containerStyles.opacity,
+            height: containerStyles.height,
+            overflow: containerStyles.overflow
+        } : null
+    });
+    // DEBUG_END
+})();
             </script>
         </div>
 
         <!-- Panel 6 (paid) -->
-        <article class="exercise-card" data-status="open" data-target="panel-acc-open-6" hidden>
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-6">
             <span class="exercise-type">Drag &amp; Drop</span>
             <h3 class="exercise-title">Scegli la forma corretta</h3>
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-6" data-access="paid" hidden>
+            <div id="ex-dragdrop-acc-06" class="universal-dd">
+                <div id="ex-dragdrop-acc-06-container"></div>
+                <div id="ex-dragdrop-acc-06-completion" style="display:none;"></div>
+            </div>
             <script type="text/plain" data-lazy-script="panel-acc-open-6">
+(() => {
+    // === НАСТРОЙКА НАЗВАНИЯ ===
+    // Если захотите поменять название, поменяйте его ТОЛЬКО ЗДЕСЬ
+    // и скрипт сам обновит всё остальное (не забудьте поменять id в HTML выше)
+    const rootID = 'ex-dragdrop-acc-06';
+    
+    const root = document.getElementById(rootID);
+    if (!root) return;
+
+    const exerciseContainer = root.querySelector(`#${rootID}-container`);
+    const completionScreen = root.querySelector(`#${rootID}-completion`);
+    // DEBUG_START
+    console.log('LAZY_EXEC panel-acc-open-6', {
+        root: !!root,
+        container: !!exerciseContainer,
+        completion: !!completionScreen
+    });
+    // DEBUG_END
+
+    // EDIT CONTENT HERE ONLY (instruction/text/words/correctAnswers). DO NOT TOUCH LOGIC.
+    const exercises = [
+        {
+            instruction: "TODO6: Inserisci istruzione (Accusativo: ...)",
+            text: "TODO6: Фраза с {{1}} и {{2}}.",
+            words: ["TODO6_1", "TODO6_2", "TODO6_3", "TODO6_4"],
+            correctAnswers: { 1: "TODO6_2", 2: "TODO6_3" }
+        },
+        {
+            instruction: "TODO6: Inserisci istruzione (Accusativo: ...)",
+            text: "TODO6: Фраза с {{1}} и {{2}}.",
+            words: ["TODO6_1B", "TODO6_2B", "TODO6_3B", "TODO6_4B"],
+            correctAnswers: { 1: "TODO6_1B", 2: "TODO6_4B" }
+        },
+        {
+            instruction: "TODO6: Inserisci istruzione (Accusativo: ...)",
+            text: "TODO6: Фраза с {{1}} и {{2}}.",
+            words: ["TODO6_1C", "TODO6_2C", "TODO6_3C", "TODO6_4C"],
+            correctAnswers: { 1: "TODO6_3C", 2: "TODO6_2C" }
+        }
+    ];
+
+    let currentExerciseIndex = 0;
+    let checked = false;
+    let gapElements = [];
+    let wordElements = [];
+
+    function loadExercise(index) {
+        if (index >= exercises.length) {
+            showCompletion();
+            return;
+        }
+
+        checked = false;
+        const exercise = exercises[index];
+
+        exerciseContainer.innerHTML = `
+            <div class="header">
+                <div class="exercise-counter">Esercizio ${index + 1} di ${exercises.length}</div>
+            </div>
+            <div class="instruction">${exercise.instruction}</div>
+            <div class="exercise-text" id="${rootID}-text">${exercise.text}</div>
+            <div class="word-options" id="${rootID}-options"></div>
+            <div class="controls">
+                <div class="feedback" id="${rootID}-feedback"></div>
+                <div>
+                    <button class="btn btn-primary" id="${rootID}-check">Verifica</button>
+                    <button class="btn btn-secondary" id="${rootID}-next" style="display:none;">Prossimo</button>
+                </div>
+            </div>
+        `;
+
+        const exerciseText = exerciseContainer.querySelector(`#${rootID}-text`);
+        const wordOptionsContainer = exerciseContainer.querySelector(`#${rootID}-options`);
+        const checkBtn = exerciseContainer.querySelector(`#${rootID}-check`);
+        const nextBtn = exerciseContainer.querySelector(`#${rootID}-next`);
+        const feedback = exerciseContainer.querySelector(`#${rootID}-feedback`);
+
+        const placeholderPattern = /\{\{(\d+)\}\}/g;
+        let textContent = exercise.text;
+
+        textContent = textContent.replace(placeholderPattern, (match, number) => {
+            return `<span class="gap" data-gap="${number}"></span>`;
+        });
+
+        exerciseText.innerHTML = textContent;
+
+        gapElements = Array.from(exerciseText.querySelectorAll('.gap'));
+        wordElements = [];
+
+        exercise.words.forEach((word, idx) => {
+            const wordElement = document.createElement('div');
+            wordElement.className = 'word-option';
+            wordElement.textContent = word;
+            wordElement.dataset.word = word;
+            wordElement.dataset.index = idx;
+            wordElement.addEventListener('click', () => handleWordClick(wordElement));
+            wordOptionsContainer.appendChild(wordElement);
+            wordElements.push(wordElement);
+        });
+
+        gapElements.forEach(gap => {
+            gap.addEventListener('click', () => handleGapClick(gap));
+        });
+
+        checkBtn.addEventListener('click', () => checkAnswers(exercise, feedback, nextBtn, checkBtn));
+        nextBtn.addEventListener('click', () => {
+            currentExerciseIndex++;
+            loadExercise(currentExerciseIndex);
+        });
+    }
+
+    function handleWordClick(wordElement) {
+        if (wordElement.classList.contains('used') || checked) return;
+
+        const emptyGap = gapElements.find(gap => !gap.classList.contains('filled'));
+        if (!emptyGap) return;
+
+        const word = wordElement.dataset.word;
+        emptyGap.textContent = word;
+        emptyGap.classList.add('filled');
+        emptyGap.dataset.wordIndex = wordElement.dataset.index;
+        emptyGap.dataset.word = word;
+        wordElement.classList.add('used');
+    }
+
+    function handleGapClick(gap) {
+        if (checked) return;
+        if (!gap.classList.contains('filled')) return;
+
+        const wordIndex = gap.dataset.wordIndex;
+        const wordElement = wordElements.find(w => w.dataset.index === wordIndex);
+
+        gap.textContent = '';
+        gap.classList.remove('filled');
+        delete gap.dataset.wordIndex;
+        delete gap.dataset.word;
+
+        if (wordElement) {
+            wordElement.classList.remove('used');
+        }
+    }
+
+    function checkAnswers(exercise, feedback, nextBtn, checkBtn) {
+        checked = true;
+        let correct = 0;
+        let total = Object.keys(exercise.correctAnswers).length;
+
+        gapElements.forEach(gap => {
+            const gapNum = parseInt(gap.dataset.gap);
+            const userAnswer = gap.dataset.word;
+            const correctAnswer = exercise.correctAnswers[gapNum];
+
+            if (userAnswer === correctAnswer) {
+                gap.classList.remove('filled');
+                gap.classList.add('correct');
+                correct++;
+            } else {
+                gap.classList.add('incorrect');
+            }
+        });
+
+        if(correct === total) {
+             feedback.style.color = "#15803d";
+             feedback.textContent = `Bravissimo! ${correct}/${total}`;
+        } else {
+             feedback.style.color = "#b91c1c";
+             feedback.textContent = `Risultato: ${correct}/${total}`;
+        }
+
+        checkBtn.style.display = 'none';
+        nextBtn.style.display = 'inline-block';
+    }
+
+    function showCompletion() {
+        exerciseContainer.style.display = 'none';
+        completionScreen.style.display = 'block';
+
+        completionScreen.innerHTML = `
+            <h2 style="color: #3b82f6; margin-bottom: 20px;">Complimenti!</h2>
+            <p style="font-size: 1.2rem; color: #4b5563;">Hai completato tutti i ${exercises.length} esercizi.</p>
+            <button class="btn btn-primary" onclick="location.reload()" style="margin-top: 30px;">Ricomincia</button>
+        `;
+    }
+
+    loadExercise(currentExerciseIndex);
+    // DEBUG_START
+    const panel = document.getElementById('panel-acc-open-6');
+    const containerRect = exerciseContainer ? exerciseContainer.getBoundingClientRect() : null;
+    const rootRect = root.getBoundingClientRect();
+    const panelRect = panel ? panel.getBoundingClientRect() : null;
+    const rootStyles = getComputedStyle(root);
+    const containerStyles = exerciseContainer ? getComputedStyle(exerciseContainer) : null;
+    console.log('DEBUG_METRICS panel-acc-open-6', {
+        panel_h: panelRect ? panelRect.height : null,
+        root_h: rootRect.height,
+        container_h: containerRect ? containerRect.height : null,
+        root_css: {
+            display: rootStyles.display,
+            visibility: rootStyles.visibility,
+            opacity: rootStyles.opacity,
+            height: rootStyles.height,
+            overflow: rootStyles.overflow
+        },
+        container_css: containerStyles ? {
+            display: containerStyles.display,
+            visibility: containerStyles.visibility,
+            opacity: containerStyles.opacity,
+            height: containerStyles.height,
+            overflow: containerStyles.overflow
+        } : null
+    });
+    // DEBUG_END
+})();
             </script>
         </div>
 
@@ -623,7 +1064,7 @@
         </div>
 
         <!-- Panel 7 (student) -->
-        <article class="exercise-card" data-status="open" data-target="panel-acc-open-7" hidden>
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-7">
             <span class="exercise-type">Flashcards</span>
             <h3 class="exercise-title">Completa il dialogo</h3>
         </article>
@@ -634,7 +1075,7 @@
         </div>
 
         <!-- Panel 8 (paid) -->
-        <article class="exercise-card" data-status="open" data-target="panel-acc-open-8" hidden>
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-8">
             <span class="exercise-type">Flashcards</span>
             <h3 class="exercise-title">Verbi con l'accusativo</h3>
         </article>
@@ -960,7 +1401,7 @@
         </div>
 
         <!-- Panel 9 (paid) -->
-        <article class="exercise-card" data-status="open" data-target="panel-acc-open-9" hidden>
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-9">
             <span class="exercise-type">Flashcards</span>
             <h3 class="exercise-title">Ordina le parole</h3>
         </article>
@@ -975,7 +1416,7 @@
         </div>
 
         <!-- Panel 10 (paid) -->
-       <article class="exercise-card" data-status="open" data-target="panel-acc-open-10" hidden>
+       <article class="exercise-card" data-status="open" data-target="panel-acc-open-10">
             <span class="exercise-type">Flashcards</span>
             <h3 class="exercise-title">Rispondi alle domande</h3>
         </article>
@@ -1226,7 +1667,7 @@
 
         // Initialize access control
         const userLevel = getUserLevel();
-        applyAccessControl(userLevel);
+        // applyAccessControl(userLevel);
 
         // ============================================================
         // PANEL TOGGLE & LAZY SCRIPT EXECUTION
@@ -1257,9 +1698,11 @@
 
                 if (!isCurrentlyOpen) {
                     targetPanel.hidden = false;
+                    const nextPanelState = targetPanel.hidden ? 'closed' : 'open';
+                    targetPanel.setAttribute('data-state', nextPanelState);
 
                     // Only execute lazy script if panel is open AND not initialized
-                    if (panelState === 'open' && !targetPanel.hasAttribute('data-initialized')) {
+                    if (nextPanelState === 'open' && !targetPanel.hasAttribute('data-initialized')) {
                         const lazyScript = targetPanel.querySelector('[data-lazy-script]');
                         if (lazyScript) {
                             const scriptCode = lazyScript.textContent;
