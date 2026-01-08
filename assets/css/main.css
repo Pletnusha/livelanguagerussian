@@ -259,27 +259,27 @@ h1, h2, h3 {
   color: #666;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) {
   text-align: center;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .header,
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .instruction,
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .exercise-text,
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .word-options,
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .controls {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .header,
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .instruction,
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .exercise-text,
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .word-options,
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .controls {
   text-align: center;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .instruction {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .instruction {
   margin-bottom: 1.5rem;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .exercise-text {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .exercise-text {
   margin-bottom: 2rem;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .word-options {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .word-options {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -287,7 +287,7 @@ h1, h2, h3 {
   margin-top: 1.5rem;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .controls {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .controls {
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -295,7 +295,7 @@ h1, h2, h3 {
   gap: 1rem;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .gap {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .gap {
   display: inline-block;
   min-width: 80px;
   padding: 0 0.5rem;
@@ -1158,27 +1158,27 @@ h1, h2, h3 {
   color: #666;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) {
   text-align: center;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .header,
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .instruction,
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .exercise-text,
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .word-options,
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .controls {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .header,
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .instruction,
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .exercise-text,
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .word-options,
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .controls {
   text-align: center;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .instruction {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .instruction {
   margin-bottom: 1.5rem;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .exercise-text {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .exercise-text {
   margin-bottom: 2rem;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .word-options {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .word-options {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1186,7 +1186,7 @@ h1, h2, h3 {
   margin-top: 1.5rem;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .controls {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .controls {
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -1194,7 +1194,7 @@ h1, h2, h3 {
   gap: 1rem;
 }
 
-.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01 .gap {
+.page-accusativo-come-ti-chiami #ex-accusativo-trascina-01:not(.universal-dd) .gap {
   display: inline-block;
   min-width: 80px;
   padding: 0 0.5rem;
