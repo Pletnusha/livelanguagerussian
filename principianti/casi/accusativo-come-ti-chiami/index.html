@@ -71,7 +71,7 @@
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-1" data-access="public" hidden>
-            <section id="ex-accusativo-trascina-01">
+            <section id="ex-accusativo-trascina-01" class="universal-dd">
                 <div id="ex-accusativo-trascina-01-container"></div>
                 <div id="ex-accusativo-trascina-01-completion" style="display:none;"></div>
             </section>
@@ -302,7 +302,8 @@
     const root = document.getElementById(rootID);
     const exerciseContainer = root && root.querySelector(`#${rootID}-container`);
     const completionScreen = root && root.querySelector(`#${rootID}-completion`);
-    const exercises = [         {
+    const exercises = [
+        {
             instruction: "Completa la frase scegliendo 2 espressioni",
             text: " {{1}} (подруга) зовут Анна, а {{2}} (сестра)зовут Лиза.", 
             words: ["мою подруга", "мою подругу", "мою сестра", "мою сестру"], 
@@ -321,19 +322,19 @@
             correctAnswers: { 1: "Мою тётю", 2: "моего дядю" }  
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
+            instruction: "Completa la frase scegliendo 2 espressionи", 
             text: "{{1}} (сестра) зовут Линда, а {{2}} (жена) зовут Елена.",  
             words: ["мою жена", "мою жену", "мою сестру", "моя сестру"],  
             correctAnswers: { 1: "мою сестру", 2: "мою жену" }  
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
+            instruction: "Completa la frase scegliendo 2 espressionи", 
             text: "Как зовут {{1}} (жена)? Как зовут {{2}} (сестра)?", 
             words: ["Твоя жена", "Твою сестра", "Твою жену", "Твою сестру"], 
             correctAnswers: { 1: "Твою жену", 2: "Твою сестру" } 
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
+            instruction: "Completa la frase scegliendo 2 espressionи", 
             text: "{{1}} зовут Николай, а {{2}} зовут Катя.",
             words: ["Их дядю", "его жена", "его жену", "Их дядя"], 
             correctAnswers: { 1: "Их дядю", 2: "его жену" }
@@ -345,27 +346,26 @@
             correctAnswers: { 1: "Нашу подругу", 2: "её сестру" } 
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
+            instruction: "Completa la frase scegliendo 2 espressionи", 
             text: "{{1}} (соседка) зовут Светлана, а {{2}} (подруга) зовут Ольга.", 
             words: ["Мою соседка", "Мою соседку", "её подругу", "его подругу"], 
             correctAnswers: { 1: "Мою соседку", 2: "её подругу" }  
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
+            instruction: "Completa la frase scegliendo 2 espressionи", 
             text: "{{1}} (подруга) зовут Виктория, а {{2}} (кошка)зовут Мурка.", 
             words: ["её кошка", "моего подругу", "мою подругу", "её кошку"], 
             correctAnswers: { 1: "мою подругу", 2: "её кошку" } 
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
+            instruction: "Completa la frase scegliendo 2 espressionи", 
             text: "{{1}} (собака) зовут Белка, а {{2}} (кошка)зовут Мурка.", 
             words: ["нашего собаку", "нашу кошку", "нашу собаку", "нашего кота"],
             correctAnswers: { 1: "нашу собаку", 2: "нашу кошку" }
         }
-    ]; 
+    ];
 
-})();
-          let currentExerciseIndex = 0;
+    let currentExerciseIndex = 0;
     let checked = false;
     let gapElements = [];
     let wordElements = [];
@@ -494,200 +494,7 @@
         exerciseContainer.style.display = 'none';
         completionScreen.style.display = 'block';
 
-         const completionScreen = root && root.querySelector(`#${rootID}-completion`);
-    const exercises = [         {
-            instruction: "Completa la frase scegliendo 2 espressioni",
-            text: " {{1}} (подруга) зовут Анна, а {{2}} (сестра)зовут Лиза.", 
-            words: ["мою подруга", "мою подругу", "мою сестра", "мою сестру"], 
-            correctAnswers: { 1: "мою подругу", 2: "мою сестру" } 
-        },
-        {
-            instruction: "Completa la frase scegliendo 2 espressioni",
-            text: "{{1}} зовут Юрий, {{2}} зовут Елена.", 
-            words: ["мою бабушка", "мою бабушку", "моего дедушку", "мою дедушку"],  
-            correctAnswers: { 1: "моего дедушку", 2: "мою бабушку" }
-        },
-        {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
-            text: "{{1}} зовут Светлана, а  {{2}} зовут Анатолий.",
-            words: ["Мою тётю", "мою дядя", "моего дядю", "Моего тётю"],   
-            correctAnswers: { 1: "Мою тётю", 2: "моего дядю" }  
-        },
-        {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
-            text: "{{1}} (сестра) зовут Линда, а {{2}} (жена) зовут Елена.",  
-            words: ["мою жена", "мою жену", "мою сестру", "моя сестру"],  
-            correctAnswers: { 1: "мою сестру", 2: "мою жену" }  
-        },
-        {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
-            text: "Как зовут {{1}} (жена)? Как зовут {{2}} (сестра)?", 
-            words: ["Твоя жена", "Твою сестра", "Твою жену", "Твою сестру"], 
-            correctAnswers: { 1: "Твою жену", 2: "Твою сестру" } 
-        },
-        {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
-            text: "{{1}} зовут Николай, а {{2}} зовут Катя.",
-            words: ["Их дядю", "его жена", "его жену", "Их дядя"], 
-            correctAnswers: { 1: "Их дядю", 2: "его жену" }
-        },
-        {
-            instruction: "Completa la frase scegliendo 2 espressionи",
-            text: "{{1}} (подруга) зовут Лена, а {{2}}(сестра) зовут Анна.", 
-            words: ["Наша подругу", "Нашу подругу", "её сестру", "её сестра"],   
-            correctAnswers: { 1: "Нашу подругу", 2: "её сестру" } 
-        },
-        {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
-            text: "{{1}} (соседка) зовут Светлана, а {{2}} (подруга) зовут Ольга.", 
-            words: ["Мою соседка", "Мою соседку", "её подругу", "его подругу"], 
-            correctAnswers: { 1: "Мою соседку", 2: "её подругу" }  
-        },
-        {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
-            text: "{{1}} (подруга) зовут Виктория, а {{2}} (кошка)зовут Мурка.", 
-            words: ["её кошка", "моего подругу", "мою подругу", "её кошку"], 
-            correctAnswers: { 1: "мою подругу", 2: "её кошку" } 
-        },
-        {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
-            text: "{{1}} (собака) зовут Белка, а {{2}} (кошка)зовут Мурка.", 
-            words: ["нашего собаку", "нашу кошку", "нашу собаку", "нашего кота"],
-            correctAnswers: { 1: "нашу собаку", 2: "нашу кошку" }
-        }
-    ]; 
-
-})();
-          let currentExerciseIndex = 0;
-    let checked = false;
-    let gapElements = [];
-    let wordElements = [];
-
-    function loadExercise(index) {
-        if (index >= exercises.length) {
-            showCompletion();
-            return;
-        }
-
-        checked = false;
-        const exercise = exercises[index];
-
-        exerciseContainer.innerHTML = `
-            <div class="header">
-                <div class="exercise-counter">Esercizio ${index + 1} di ${exercises.length}</div>
-            </div>
-            <div class="instruction">${exercise.instruction}</div>
-            <div class="exercise-text" id="${rootID}-text">${exercise.text}</div>
-            <div class="word-options" id="${rootID}-options"></div>
-            <div class="controls">
-                <div class="feedback" id="${rootID}-feedback"></div>
-                <div>
-                    <button class="btn btn-primary" id="${rootID}-check">Verifica</button>
-                    <button class="btn btn-secondary" id="${rootID}-next" style="display:none;">Prossimo</button>
-                </div>
-            </div>
-        `;
-
-        const exerciseText = exerciseContainer.querySelector(`#${rootID}-text`);
-        const wordOptionsContainer = exerciseContainer.querySelector(`#${rootID}-options`);
-        const checkBtn = exerciseContainer.querySelector(`#${rootID}-check`);
-        const nextBtn = exerciseContainer.querySelector(`#${rootID}-next`);
-        const feedback = exerciseContainer.querySelector(`#${rootID}-feedback`);
-
-        const placeholderPattern = /\{\{(\d+)\}\}/g;
-        let textContent = exercise.text;
-
-        textContent = textContent.replace(placeholderPattern, (_, number) =>
-            `<span class="gap" data-gap="${number}"></span>`
-        );
-
-        exerciseText.innerHTML = textContent;
-
-        gapElements = Array.from(exerciseText.querySelectorAll('.gap'));
-        wordElements = [];
-
-        exercise.words.forEach((word, idx) => {
-            const el = document.createElement('div');
-            el.className = 'word-option';
-            el.textContent = word;
-            el.dataset.word = word;
-            el.dataset.index = idx;
-            el.addEventListener('click', () => handleWordClick(el));
-            wordOptionsContainer.appendChild(el);
-            wordElements.push(el);
-        });
-
-        gapElements.forEach(gap => {
-            gap.addEventListener('click', () => handleGapClick(gap));
-        });
-
-        checkBtn.addEventListener('click', () =>
-            checkAnswers(exercise, feedback, nextBtn, checkBtn)
-        );
-
-        nextBtn.addEventListener('click', () => {
-            currentExerciseIndex++;
-            loadExercise(currentExerciseIndex);
-        });
-    }
-
-    function handleWordClick(wordElement) {
-        if (wordElement.classList.contains('used') || checked) return;
-
-        const emptyGap = gapElements.find(g => !g.classList.contains('filled'));
-        if (!emptyGap) return;
-
-        emptyGap.textContent = wordElement.dataset.word;
-        emptyGap.classList.add('filled');
-        emptyGap.dataset.wordIndex = wordElement.dataset.index;
-        emptyGap.dataset.word = wordElement.dataset.word;
-        wordElement.classList.add('used');
-    }
-
-    function handleGapClick(gap) {
-        if (checked || !gap.classList.contains('filled')) return;
-
-        const wordIndex = gap.dataset.wordIndex;
-        const wordElement = wordElements.find(w => w.dataset.index === wordIndex);
-
-        gap.textContent = '';
-        gap.classList.remove('filled');
-        delete gap.dataset.wordIndex;
-        delete gap.dataset.word;
-
-        if (wordElement) wordElement.classList.remove('used');
-    }
-
-    function checkAnswers(exercise, feedback, nextBtn, checkBtn) {
-        checked = true;
-        let correct = 0;
-        const total = Object.keys(exercise.correctAnswers).length;
-
-        gapElements.forEach(gap => {
-            const n = parseInt(gap.dataset.gap, 10);
-            const user = gap.dataset.word;
-            const right = exercise.correctAnswers[n];
-
-            if (user === right) {
-                gap.classList.add('correct');
-                correct++;
-            } else {
-                gap.classList.add('incorrect');
-            }
-        });
-
-        feedback.textContent = `Risultato: ${correct}/${total}`;
-        feedback.style.color = correct === total ? '#15803d' : '#b91c1c';
-
-        checkBtn.style.display = 'none';
-        nextBtn.style.display = 'inline-block';
-    }
-
-    function showCompletion() {
-        exerciseContainer.style.display = 'none';
-        completionScreen.style.display = 'block';
-
-   completionScreen.innerHTML = `
+        completionScreen.innerHTML = `
     <h2 style="color:#3b82f6;margin-bottom:20px;">Complimenti!</h2>
     <p style="font-size:1.2rem;color:#4b5563;">
         Hai completato tutti i ${exercises.length} esercizi.
@@ -696,8 +503,9 @@
         Ricomincia
     </button>
 `;
-}
-loadExercise(currentExerciseIndex);
+    }
+
+    loadExercise(currentExerciseIndex);
 })();
 </script>
 </div> 
