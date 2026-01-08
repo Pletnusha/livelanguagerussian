@@ -523,15 +523,8 @@
                 const root = document.getElementById(rootID);
                 if (!root) return;
 
-                const exerciseContainer = root.querySelector(`#${rootID}-container`);
+                root.querySelector(`#${rootID}-container`);
                 root.querySelector(`#${rootID}-completion`);
-
-                // === FUTURE CONTENT DATA (KEEP EMPTY FOR NOW) ===
-                const exercises = [
-                    // TODO: add exercise data objects here
-                ];
-
-                if (!exerciseContainer || exercises.length === 0) return;
             })();
             </script>
         </div>
