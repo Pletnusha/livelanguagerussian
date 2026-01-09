@@ -1363,26 +1363,26 @@
                     <button class="fca01-mode-btn" data-mode="match">MATCH</button>
                 </div>
 
-                <div id="ex-flashcards-acc-02-section-study" class="fca01-section visible">
-                    <div id="ex-flashcards-acc-03-learning-area-study"></div>
+                <div id="ex-flashcards-acc-08-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-acc-08-learning-area-study"></div>
                     <div class="fca01-nav">
-                        <button id="ex-flashcards-acc-03-prev-btn" class="fca01-btn-nav">← Назад</button>
-                        <span id="ex-flashcards-acc-03-counter" class="fca01-counter">1 / 7</span>
-                        <button id="ex-flashcards-acc-03-next-btn" class="btn btn-primary">Вперед →</button>
+                        <button id="ex-flashcards-acc-08-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-acc-08-counter" class="fca01-counter">1 / 7</span>
+                        <button id="ex-flashcards-acc-08-next-btn" class="btn btn-primary">Вперед →</button>
                     </div>
                 </div>
 
-                <div id="ex-flashcards-acc-03-section-quiz" class="fca01-section">
-                    <div id="ex-flashcards-acc-03-learning-area-quiz"></div>
+                <div id="ex-flashcards-acc-08-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-acc-08-learning-area-quiz"></div>
                     <div class="fca01-center-btn">
-                        <button id="ex-flashcards-acc-03-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                        <button id="ex-flashcards-acc-08-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
                     </div>
                 </div>
 
-                <div id="ex-flashcards-acc-03-section-match" class="fca01-section">
-                    <div id="ex-flashcards-acc-03-learning-area-match"></div>
+                <div id="ex-flashcards-acc-08-section-match" class="fca01-section">
+                    <div id="ex-flashcards-acc-08-learning-area-match"></div>
                     <div class="fca01-center-btn">
-                        <button id="ex-flashcards-acc-02-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                        <button id="ex-flashcards-acc-08-reset-match-btn" class="btn btn-secondary">Начать заново</button>
                     </div>
                 </div>
             </section>
@@ -1441,17 +1441,17 @@
             currentMode = mode;
             root.querySelectorAll('.fca01-mode-btn').forEach(btn => btn.classList.remove('active'));
             root.querySelectorAll('.fca01-section').forEach(sec => sec.classList.remove('visible'));
-            root.querySelector(`#ex-flashcards-acc-02-section-${mode}`).classList.add('visible');
+            root.querySelector(`#ex-flashcards-acc-08-section-${mode}`).classList.add('visible');
             root.querySelector(`[data-mode="${mode}"]`).classList.add('active');
 
             if (mode === 'study') { currentIndex = 0; renderCard(); }
-            else if (mode === 'quiz') { renderQuiz(); root.querySelector('#ex-flashcards-acc-02-start-quiz-btn').classList.add('hidden'); }
+            else if (mode === 'quiz') { renderQuiz(); root.querySelector('#ex-flashcards-acc-08-start-quiz-btn').classList.add('hidden'); }
             else if (mode === 'match') { initMatchGame(); }
         }
 
         function renderCard() {
-            const area = root.querySelector('#ex-flashcards-acc-02-learning-area-study');
-            const counter = root.querySelector('#ex-flashcards-acc-02-counter');
+            const area = root.querySelector('#ex-flashcards-acc-08-learning-area-study');
+            const counter = root.querySelector('#ex-flashcards-acc-08-counter');
             const cardData = flashcardsData[currentIndex];
 
             counter.textContent = `${currentIndex + 1} / ${flashcardsData.length}`;
@@ -1491,8 +1491,8 @@
         }
 
         function renderQuiz() {
-            const area = root.querySelector('#ex-flashcards-acc-02-learning-area-quiz');
-            root.querySelector('#ex-flashcards-acc-02-start-quiz-btn').classList.add('hidden');
+            const area = root.querySelector('#ex-flashcards-acc-08-learning-area-quiz');
+            root.querySelector('#ex-flashcards-acc-08-start-quiz-btn').classList.add('hidden');
 
             const randomIndex = Math.floor(Math.random() * flashcardsData.length);
             const correctCard = flashcardsData[randomIndex];
@@ -1527,7 +1527,7 @@
 
         function checkQuizAnswer(selected, correct, btnElement) {
             const feedback = root.querySelector('.fca01-quiz-feedback');
-            const nextBtn = root.querySelector('#ex-flashcards-acc-02-start-quiz-btn');
+            const nextBtn = root.querySelector('#ex-flashcards-acc-08-start-quiz-btn');
 
             root.querySelectorAll('.fca01-quiz-option').forEach(btn => {
                 btn.style.pointerEvents = 'none';
@@ -1546,7 +1546,7 @@
         }
 
         function initMatchGame() {
-            const area = root.querySelector('#ex-flashcards-acc-02-learning-area-match');
+            const area = root.querySelector('#ex-flashcards-acc-08-learning-area-match');
             selectedMatchCard = null;
             isProcessingMatch = false;
 
@@ -1566,8 +1566,8 @@
                 </div>
             `;
 
-            const colFronts = root.querySelector('<div id="ex-flashcards-acc-08"></div>-match-col-fronts');
-            const colBacks = root.querySelector('<div id="ex-flashcards-acc-08"></div>-match-col-backs');
+            const colFronts = root.querySelector('#ex-flashcards-acc-08-match-col-fronts');
+            const colBacks = root.querySelector('#ex-flashcards-acc-08-match-col-backs');
 
             function createMatchElement(item) {
                 const div = document.createElement('div');
@@ -1646,15 +1646,15 @@
             btn.addEventListener('click', () => switchMode(btn.dataset.mode));
         });
 
-        root.querySelector('#ex-flashcards-acc-02-next-btn').addEventListener('click', nextCard);
-        root.querySelector('#ex-flashcards-acc-02-prev-btn').addEventListener('click', prevCard);
-        root.querySelector('#ex-flashcards-acc-02-start-quiz-btn').addEventListener('click', renderQuiz);
-        root.querySelector('#ex-flashcards-acc-02-reset-match-btn').addEventListener('click', initMatchGame);
+        root.querySelector('#ex-flashcards-acc-08-next-btn').addEventListener('click', nextCard);
+        root.querySelector('#ex-flashcards-acc-08-prev-btn').addEventListener('click', prevCard);
+        root.querySelector('#ex-flashcards-acc-08-start-quiz-btn').addEventListener('click', renderQuiz);
+        root.querySelector('#ex-flashcards-acc-08-reset-match-btn').addEventListener('click', initMatchGame);
 
         switchMode('study');
     }
 
-    initFlashcardsAcc02(rootEl);
+    initFlashcardsAcc08(rootEl);
 })();
             </script>
         </div>
