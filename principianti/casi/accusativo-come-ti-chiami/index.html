@@ -1350,8 +1350,8 @@
             <span class="card-subtitle">Nomi · 1  declinazioni e aggettivi</span>
         </article>
 
-        <div class="exercise-panel" id="panel-acc-open-3" data-access="public" hidden>
-            <section id="ex-flashcards-acc-02">
+        <div class="exercise-panel" id="panel-acc-open-8" data-access="public" hidden>
+            <section id="ex-flashcards-acc-08">
                 <div class="fca01-header">
                     <h2>Il verbo Звать: L'accusativo (II &amp; III decl.)</h2>
                     <p>Scegliere modalità</p>
@@ -1364,23 +1364,23 @@
                 </div>
 
                 <div id="ex-flashcards-acc-02-section-study" class="fca01-section visible">
-                    <div id="ex-flashcards-acc-02-learning-area-study"></div>
+                    <div id="ex-flashcards-acc-03-learning-area-study"></div>
                     <div class="fca01-nav">
-                        <button id="ex-flashcards-acc-02-prev-btn" class="fca01-btn-nav">← Назад</button>
-                        <span id="ex-flashcards-acc-02-counter" class="fca01-counter">1 / 7</span>
-                        <button id="ex-flashcards-acc-02-next-btn" class="btn btn-primary">Вперед →</button>
+                        <button id="ex-flashcards-acc-03-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-acc-03-counter" class="fca01-counter">1 / 7</span>
+                        <button id="ex-flashcards-acc-03-next-btn" class="btn btn-primary">Вперед →</button>
                     </div>
                 </div>
 
-                <div id="ex-flashcards-acc-02-section-quiz" class="fca01-section">
-                    <div id="ex-flashcards-acc-02-learning-area-quiz"></div>
+                <div id="ex-flashcards-acc-03-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-acc-03-learning-area-quiz"></div>
                     <div class="fca01-center-btn">
-                        <button id="ex-flashcards-acc-02-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                        <button id="ex-flashcards-acc-03-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
                     </div>
                 </div>
 
-                <div id="ex-flashcards-acc-02-section-match" class="fca01-section">
-                    <div id="ex-flashcards-acc-02-learning-area-match"></div>
+                <div id="ex-flashcards-acc-03-section-match" class="fca01-section">
+                    <div id="ex-flashcards-acc-03-learning-area-match"></div>
                     <div class="fca01-center-btn">
                         <button id="ex-flashcards-acc-02-reset-match-btn" class="btn btn-secondary">Начать заново</button>
                     </div>
@@ -1388,15 +1388,15 @@
             </section>
 
             <!-- ✅ ВАЖНО: скрипт теперь привязан к panel-acc-open-3 -->
-            <script type="text/plain" data-lazy-script="panel-acc-open-3">
+            <script type="text/plain" data-lazy-script="panel-acc-open-8">
 (() => {
-    const rootEl = document.getElementById('ex-flashcards-acc-02');
+    const rootEl = document.getElementById('ex-flashcards-acc-08');
     if (!rootEl) {
-        console.warn('⚠️ Flashcards: Container #ex-flashcards-acc-02 NOT FOUND');
+        console.warn('⚠️ Flashcards: Container <div id="ex-flashcards-acc-08"></div> NOT FOUND');
         return;
     }
 
-    function initFlashcardsAcc02(root) {
+    function initFlashcardsAcc08(root) {
         const flashcardsData = [
             { front: "Моя старшая сестра Катя.", back: "Мою старшую сестру зовут Катя." },
             { front: "Моя лучшая подруга Анна.", back: "Мою лучшую подругу зовут Анна." },
@@ -1560,14 +1560,14 @@
                 <div class="fca01-match-container">
                     <p class="fca01-match-feedback"></p>
                     <div class="fca01-match-grid">
-                        <div class="fca01-match-col" id="ex-flashcards-acc-02-match-col-fronts"></div>
-                        <div class="fca01-match-col" id="ex-flashcards-acc-02-match-col-backs"></div>
+                        <div class="fca01-match-col" id="ex-flashcards-acc-08-match-col-fronts"></div>
+                        <div class="fca01-match-col" id="ex-flashcards-acc-08-match-col-backs"></div>
                     </div>
                 </div>
             `;
 
-            const colFronts = root.querySelector('#ex-flashcards-acc-02-match-col-fronts');
-            const colBacks = root.querySelector('#ex-flashcards-acc-02-match-col-backs');
+            const colFronts = root.querySelector('<div id="ex-flashcards-acc-08"></div>-match-col-fronts');
+            const colBacks = root.querySelector('<div id="ex-flashcards-acc-08"></div>-match-col-backs');
 
             function createMatchElement(item) {
                 const div = document.createElement('div');
