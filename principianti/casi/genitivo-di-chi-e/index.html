@@ -506,7 +506,7 @@
         <!-- Panel 6 (paid) -->
         <article class="exercise-card" data-status="open" data-target="panel-acc-open-6">
             <span class="exercise-type">Drag &amp; Drop</span>
-            <h3 class="exercise-title">МОЕГО ДРУГА ЗОВУТ АЛЕКСЕЙ</h3>
+            <h3 class="exercise-title">СЕМЬЯ АЛЬБЕРТА</h3>
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-6" data-access="paid" hidden>
@@ -522,46 +522,82 @@
     const completionScreen = root && root.querySelector(`#${rootID}-completion`);
     const exercises = [
      {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
-            text: "{{1}} (друг) зовут Виктор, а {{2}}(брат) зовут Борис.", 
-            words: ["моего друг", "моего друга", "его брату", "его брата"], 
-            correctAnswers: { 1: "Моего друга", 2: "его брата" } 
+            instruction: "Completa la frase scegliendo due forme corrette 
+            text: "(сестра) {{1}}  {{2}}(Альберт) зовут Линда.", 
+            words: ["Сестру", "Сестры", "Альберту", "Альберта"], 
+            correctAnswers: { 1: "Сестру", 2: "Альберта" } 
         },
          {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
-            text: "{{1}} (сосед) зовут Барсик, а {{2}} (кот) зовут Мурка.", 
-            words: ["нашего соседу", "нашего соседа", "его кота", "его кот"], 
-            correctAnswers: { 1: "мою подругу", 2: "её кошку" } 
+            instruction: "Completa la frase scegliendo due forme corrette", 
+            text: "{(брат) {1}} (Линда) {{2}} зовут Альберт.", 
+            words: ["Брату", "Брата", "Линду", "Линды"], 
+            correctAnswers: { 1: "Брата", 2: "Линды" } 
         },
          {
-            instruction: "Completa la frase scegliendo 2 espressionи", 
-            text: "{{1}} (брат) зовут Владислав, а {{2}} (друг) зовут Анатолий.", 
-            words: ["их брата", "их брату", "его друг", "их друга"], 
-            correctAnswers: { 1: "их брата", 2: "его друга" } 
+            instruction: "Completa la frase scegliendo due forme corrette, 
+            text: "{(жена) {1}} (Владислав) {{2}} зовут Линда.", 
+            words: ["Жену", "Жены", "Владислав", "Владислава"], 
+            correctAnswers: { 1: "Жену", 2: "Владислава" } 
         },
          {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
-            text: "{{1}} (сын) зовут Денис, а {{2}} (сосед) зовут Андрей.", 
-            words: ["их сыну", "их сына", "его соседа", "её соседа"], 
-            correctAnswers: { 1: "их сына", 2: "его соседа" } 
+            instruction: "Completa la frase scegliendo due forme corrette", 
+            text: "(Муж){{1}} (Линда) {{2}} зовут Владислав.", 
+            words: ["Мужу", "Мужа", "Линды", "Линду"], 
+            correctAnswers: { 1: "Мужа", 2: "Линды" } 
         },
          {
-            instruction: "Completa la frase scegliendo 2 espressionи", 
-            text: "{{1}} (племянник) зовут Анатолий, а {{2}} (сын) зовут Тимур.", 
-            words: ["наш племянник", "нашего племянника", "его сына", "её сына"], 
-            correctAnswers: { 1: "мою подругу", 2: "её кошку" } 
+            instruction: "Completa la frase scegliendo due forme corrette", 
+            text: "(Брат){{1}} (Елена) {{2}} зовут Владислав.", 
+            words: ["Брат", "Брата", "Елену", "Елены"], 
+            correctAnswers: { 1: "Брата", 2: "Елены" } 
         },
          {
-            instruction: "Completa la frase scegliendo 2 espressionи", 
-            text: "{{1}} (муж) зовут Владислав, а {{2}} (сын) зовут Анатолий.", 
-            words: ["её мужу", "её мужа", "её сын", "его сына"], 
-            correctAnswers: { 1: "её мужа", 2: "его сына" } 
+            instruction: "Completa la frase scegliendo due forme corrette", 
+            text: "(Сестра){{1}} (Владислав) {{2}} зовут Елена.", 
+            words: ["Сестры", "Сестру", "Владиславу", "Владислава"], 
+            correctAnswers: { 1: "Сестру", 2: "Владислава" } 
         },
          {
-            instruction: "Completa la frase scegliendo 2 espressionи", 
-            text: "{{1}} (сосед) зовут Петр, а {{2}} (отец) зовут Дмитрий.", 
-            words: ["нашу соседа", "нашего соседа", "его отеца", "его отца"], 
-            correctAnswers: { 1: "нашего соседа", 2: "его отца" } 
+            instruction: "Completa la frase scegliendo due forme corrette", 
+            text: " (Тётя) {{1}} (Александра) {{2}} зовут Елена.", 
+            words: ["Тёти", "Тётю", "Александру", "Александры"], 
+            correctAnswers: { 1: "Тётю", 2: "Александры" } 
+        },
+        {
+            instruction: "Completa la farse scegliendo due forme corrette",
+            text: "(Племянница) {{1}} (Елена) {{2}} зовут Александра.",
+            words:["Племянницу", "Племянницы", "Елены", "Елену"],
+            corrrectAnswers: { 1: "Племянницу", 2: "Елены"}
+        },
+        {
+            instruction: "Completa la farse scegliendo due forme corrette",
+            text: "(Дочь) {{1}} (Владислав) {{2}} зовут Александра.",
+            words:["Дочу", "Дочь", "Владислава", "Владиславы"],
+            corrrectAnswers: { 1: "Дочь", 2: "Владислава"}
+        },
+        {
+            instruction: "Completa la farse scegliendo due forme corrette",
+            text: "(Отец) {{1}} (Александра) {{2}} зовут Владислав.",
+            words:["Отеца", "Отца", "Александруу", "Александры"],
+            corrrectAnswers: { 1: "Отца", 2: "Александры"}
+        },
+        {
+            instruction: "Completa la farse scegliendo due forme corrette",
+            text: "(Сын) {{1}} (Линда) {{2}} зовут Анатолий.",
+            words:["Сына", "Сыну", "Линду", "Линды"],
+            corrrectAnswers: { 1: "Сына", 2: "Линды"}
+        },
+        {
+            instruction: "Completa la farse scegliendo due forme corrette",
+            text: "(Дочь) {{1}} (Владислав) {{2}} зовут Александра.",
+            words:["Дочь", "Дочи", "Владиславы", "Владислава],
+            corrrectAnswers: { 1: "Дочь", 2: "Владислава"}
+        },
+        {
+            instruction: "Completa la farse scegliendo due forme corrette",
+            text: "(племянник) {{1}} (Альберт) {{2}} зовут Анатолий.",
+            words:["Племянника", "Племянники", "Альберту", "Альберта"],
+            corrrectAnswers: { 1: "Племянника", 2: "Альберта"}
         },
         ];
 
