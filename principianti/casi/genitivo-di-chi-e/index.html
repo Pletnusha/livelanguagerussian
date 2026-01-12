@@ -288,7 +288,7 @@
         <!-- Panel 5 (student) -->
         <article class="exercise-card" data-status="open" data-target="panel-acc-open-5">
             <span class="exercise-type">Drag &amp; Drop</span>
-            <h3 class="exercise-title">КАК ЗОВУТ ТВОЮ ДЕВУШКУ? </h3>
+            <h3 class="exercise-title"> ПОДРУГА МОЕЙ ДЕВУШКИ </h3>
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-5" data-access="student" hidden>
@@ -304,58 +304,58 @@
     const completionScreen = root && root.querySelector(`#${rootID}-completion`);
     const exercises = [
         {
-            instruction: "Completa la frase scegliendo 2 espressioni",
-            text: "{{1}} зовут Юрий, {{2}} зовут Елена.", 
-            words: ["мою бабушка", "мою бабушку", "моего дедушку", "мою дедушку"],  
-            correctAnswers: { 1: "моего дедушку", 2: "мою бабушку" }
+            instruction: "Completa la frase scegliendo la forma corretta",
+            text: "Соседка {{1}}.", 
+            words: ["мою подругу", "моей подруга", "мою подруги", "моей подруги"],  
+            correctAnswers: { 1: "моей подруги" }
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressioni", 
-            text: "{{1}} зовут Светлана, а  {{2}} зовут Анатолий.",
-            words: ["Мою тётю", "мою дядя", "моего дядю", "Моего тётю"],   
-            correctAnswers: { 1: "Мою тётю", 2: "моего дядю" }  
+            instruction: "Completa la frase scegliendo la forma corretta", 
+            text: "Брат{{1}}.",
+            words: ["моя девушки", "мою девушку", "моей девушки", "моей девушку"],   
+            correctAnswers: { 1: "моей девушки" }  
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressionи", 
-            text: "{{1}} (сестра) зовут Линда, а {{2}} (жена) зовут Елена.",  
-            words: ["мою жена", "мою жену", "мою сестру", "моя сестру"],  
-            correctAnswers: { 1: "мою сестру", 2: "мою жену" }  
+            instruction: "Completa la frase scegliendo la forma corretta", 
+            text: "Родители {{1}}.",  
+            words: ["мою жена", "мою жену", "моей жена", "моей жены"],  
+            correctAnswers: { 1: "моей жены" }  
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressionи", 
-            text: "Как зовут {{1}} (жена)? Как зовут {{2}} (сестра)?", 
-            words: ["Твоя жена", "Твою сестра", "Твою жену", "Твою сестру"], 
-            correctAnswers: { 1: "Твою жену", 2: "Твою сестру" } 
+            instruction: "Completa la frase scegliendo la forma corretta", 
+            text: "Кот {{1}}", 
+            words: ["нашу бабушку", "нашей бабушка", "нашу бабушки", "нашей бабушки"], 
+            correctAnswers: { 1: "нашей бабушки" } 
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressionи", 
-            text: "{{1}} зовут Николай, а {{2}} зовут Катя.",
-            words: ["Их дядю", "его жена", "его жену", "Их дядя"], 
-            correctAnswers: { 1: "Их дядю", 2: "его жену" }
+            instruction: "Completa la frase scegliendo la forma corretta", 
+            text: "Брат {{1}}.",
+            words: ["Александру", "Александра", "Александры"], 
+            correctAnswers: { 1: "Александры" }
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressioni",
-            text: "{{1}} (подруга) зовут Лена, а {{2}}(сестра) зовут Анна.", 
-            words: ["Наша подругу", "Нашу подругу", "её сестру", "её сестра"],   
-            correctAnswers: { 1: "Нашу подругу", 2: "её сестру" } 
+            instruction: "Completa la frase scegliendo la forma corretta",
+            text: "Кот {{1}}."
+            words: ["их соседку", "их соседки", "мх соседка"],   
+            correctAnswers: { 1: "их соседки" } 
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressionи", 
-            text: "{{1}} (соседка) зовут Светлана, а {{2}} (подруга) зовут Ольга.", 
-            words: ["Мою соседка", "Мою соседку", "её подругу", "его подругу"], 
-            correctAnswers: { 1: "Мою соседку", 2: "её подругу" }  
+            instruction: "Completa la frase scegliendo la forma corretta", 
+            text: "Парень {{1}}.", 
+            words: ["вашего племянница", "вашу племянницу", "вашей племянницы"], 
+            correctAnswers: { 1: "вашей племянницы" }  
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressionи", 
-            text: "{{1}} (подруга) зовут Виктория, а {{2}} (кошка)зовут Мурка.", 
-            words: ["её кошка", "моего подругу", "мою подругу", "её кошку"], 
-            correctAnswers: { 1: "мою подругу", 2: "её кошку" } 
+            instruction: "Completa la frase scegliendo la forma corretta", 
+            text: "Собака {{1}}.", 
+            words: ["его девушку", "его девушки", "его девушка"], 
+            correctAnswers: { 1: "его девушки" } 
         },
         {
-            instruction: "Completa la frase scegliendo 2 espressionи", 
-            text: "{{1}} (собака) зовут Белка, а {{2}} (кошка)зовут Мурка.", 
-            words: ["нашего собаку", "нашу кошку", "нашу собаку", "нашего кота"],
-            correctAnswers: { 1: "нашу собаку", 2: "нашу кошку" }
+            instruction: "Completa la frase scegliendo la forma corretta", 
+            text: "Миска {{1}}", 
+            words: ["нашего кошку", "нашу кошку", "нашей кошки"],
+            correctAnswers: { 1: "нашей кошки" }
         }
     ];
 
