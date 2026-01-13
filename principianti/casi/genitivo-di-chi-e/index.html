@@ -2337,6 +2337,12 @@
 
         <div class="exercise-panel" id="panel-acc-open-4" data-access="public" hidden>
             <h2 class="quiz-title"></h2>
+            <h3 class="quiz-title">Scelta multipla</h3>
+            <div id="acc-04-mc-area"></div>
+            <button id="acc-04-mc-next-btn" class="btn btn-primary hidden">Новый вопрос</button>
+            <h3 class="quiz-title">Сопоставьте пары</h3>
+            <div id="acc-04-match-area"></div>
+            <button id="acc-04-match-reset-btn" class="btn btn-secondary">Начать заново</button>
             <p class="quiz-instruction">Scrivete la forma corretta</p>
             <ol class="quiz-list" id="panel-acc-open-4-quiz-list"></ol>
             <script type="text/plain" data-lazy-script="panel-acc-open-4">
@@ -2360,6 +2366,10 @@
 
     function initQuiz(panelEl) {
         const quizListEl = panelEl.querySelector('#panel-acc-open-4-quiz-list');
+        const mcArea = panelEl.querySelector('#acc-04-mc-area');
+        const mcNextBtn = panelEl.querySelector('#acc-04-mc-next-btn');
+        const matchArea = panelEl.querySelector('#acc-04-match-area');
+        const matchResetBtn = panelEl.querySelector('#acc-04-match-reset-btn');
 
         const quizData = [
             {
@@ -2424,8 +2434,172 @@
             }
         ];
 
+        const multipleChoiceData = [
+            {
+                question: "Как зовут (мой брат) ?",
+                options: ["Моего брата", "Мой брат", "Моему брату", "Моим братом"],
+                answer: "Моего брата"
+            },
+            {
+                question: "Как зовут (наша сестра) ?",
+                options: ["Нашу сестру", "Наша сестра", "Нашей сестре"],
+                answer: "Нашу сестру"
+            },
+            {
+                question: "Как зовут (их подруга) ?",
+                options: ["Их подругу", "Их подруга", "Их подругой"],
+                answer: "Их подругу"
+            },
+            {
+                question: "Как зовут (ваш отец) ?",
+                options: ["Вашего отца", "Ваш отец", "Вашему отцу"],
+                answer: "Вашего отца"
+            },
+            {
+                question: "Как зовут (твоя мама) ?",
+                options: ["Твою маму", "Твоя мама", "Твоей маме"],
+                answer: "Твою маму"
+            }
+        ];
+
+        const matchPairs = [
+            { left: "мама", right: "маму" },
+            { left: "брат", right: "брата" },
+            { left: "дедушка", right: "дедушку" },
+            { left: "подруга", right: "подругу" },
+            { left: "сын", right: "сына" },
+            { left: "тётя", right: "тётю" }
+        ];
+
         function normalizeInput(str) {
             return str.trim().replace(/\s+/g, ' ');
+        }
+
+        let mcIndex = 0;
+
+        function renderMultipleChoice() {
+            if (!mcArea) return;
+            const item = multipleChoiceData[mcIndex];
+            const buttonsHTML = item.options.map(option =>
+                `<button class="fca01-quiz-option" data-answer="${option}" data-correct="${item.answer}">${option}</button>`
+            ).join('');
+
+            mcArea.innerHTML = `
+                <div class="fca01-quiz-area">
+                    <h3 class="fca01-quiz-question">${item.question}</h3>
+                    <div class="fca01-quiz-options">${buttonsHTML}</div>
+                    <p class="fca01-quiz-feedback"></p>
+                </div>
+            `;
+
+            const feedback = mcArea.querySelector('.fca01-quiz-feedback');
+            mcArea.querySelectorAll('.fca01-quiz-option').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    mcArea.querySelectorAll('.fca01-quiz-option').forEach(optionBtn => {
+                        optionBtn.style.pointerEvents = 'none';
+                        if (optionBtn.dataset.answer === item.answer) optionBtn.classList.add('correct');
+                    });
+                    if (btn.dataset.answer === item.answer) {
+                        feedback.textContent = "✅ Правильно!";
+                        feedback.className = "fca01-quiz-feedback correct";
+                    } else {
+                        btn.classList.add('wrong');
+                        feedback.textContent = "❌ Ошибка!";
+                        feedback.className = "fca01-quiz-feedback wrong";
+                    }
+                    if (mcNextBtn) mcNextBtn.classList.remove('hidden');
+                });
+            });
+        }
+
+        function handleMcNext() {
+            mcIndex = (mcIndex + 1) % multipleChoiceData.length;
+            if (mcNextBtn) mcNextBtn.classList.add('hidden');
+            renderMultipleChoice();
+        }
+
+        let selectedMatchCard = null;
+        let isProcessingMatch = false;
+
+        function initMatchGame() {
+            if (!matchArea) return;
+            selectedMatchCard = null;
+            isProcessingMatch = false;
+
+            let fronts = matchPairs.map((pair, index) => ({ text: pair.left, type: 'front', id: index }));
+            let backs = matchPairs.map((pair, index) => ({ text: pair.right, type: 'back', id: index }));
+
+            fronts.sort(() => Math.random() - 0.5);
+            backs.sort(() => Math.random() - 0.5);
+
+            matchArea.innerHTML = `
+                <div class="fca01-match-container">
+                    <p class="fca01-match-feedback"></p>
+                    <div class="fca01-match-grid">
+                        <div class="fca01-match-col" id="acc-04-match-col-fronts"></div>
+                        <div class="fca01-match-col" id="acc-04-match-col-backs"></div>
+                    </div>
+                </div>
+            `;
+
+            const colFronts = matchArea.querySelector('#acc-04-match-col-fronts');
+            const colBacks = matchArea.querySelector('#acc-04-match-col-backs');
+
+            function createMatchElement(item) {
+                const div = document.createElement('div');
+                div.className = 'fca01-match-card';
+                div.textContent = item.text;
+                div.dataset.id = item.id;
+                div.dataset.type = item.type;
+                div.addEventListener('click', () => handleMatchClick(div));
+                return div;
+            }
+
+            fronts.forEach(item => colFronts.appendChild(createMatchElement(item)));
+            backs.forEach(item => colBacks.appendChild(createMatchElement(item)));
+        }
+
+        function handleMatchClick(clickedCard) {
+            if (isProcessingMatch || clickedCard.classList.contains('matched')) return;
+            if (clickedCard === selectedMatchCard) return;
+
+            const feedbackEl = matchArea.querySelector('.fca01-match-feedback');
+
+            if (!selectedMatchCard) {
+                selectedMatchCard = clickedCard;
+                clickedCard.classList.add('selected');
+                return;
+            }
+
+            if (selectedMatchCard.dataset.type === clickedCard.dataset.type) {
+                selectedMatchCard.classList.remove('selected');
+                selectedMatchCard = clickedCard;
+                clickedCard.classList.add('selected');
+                return;
+            }
+
+            isProcessingMatch = true;
+
+            const isMatch = selectedMatchCard.dataset.id === clickedCard.dataset.id;
+
+            if (isMatch) {
+                selectedMatchCard.classList.add('matched');
+                clickedCard.classList.add('matched');
+                feedbackEl.textContent = '✅ Правильно!';
+                feedbackEl.className = 'fca01-match-feedback correct';
+                selectedMatchCard.classList.remove('selected');
+                selectedMatchCard = null;
+                isProcessingMatch = false;
+            } else {
+                feedbackEl.textContent = '❌ Ошибка!';
+                feedbackEl.className = 'fca01-match-feedback wrong';
+                setTimeout(() => {
+                    selectedMatchCard.classList.remove('selected');
+                    clickedCard.classList.remove('selected');
+                    selectedMatchCard = null;
+                    isProcessingMatch = false;
+                }, 600);
+            }
         }
 
         function renderQuiz() {
@@ -2493,6 +2667,17 @@
             }
         }
 
+        if (mcNextBtn) {
+            mcNextBtn.addEventListener('click', handleMcNext);
+            mcNextBtn.classList.add('hidden');
+        }
+
+        if (matchResetBtn) {
+            matchResetBtn.addEventListener('click', initMatchGame);
+        }
+
+        renderMultipleChoice();
+        initMatchGame();
         renderQuiz();
     }
 })();
