@@ -2011,13 +2011,317 @@
         </div>
 
         <!-- Panel 10 (paid) -->
-       <article class="exercise-card" data-status="open" data-target="panel-acc-open-10">
+        <article class="exercise-card" data-status="open" data-target="panel-acc-open-10">
             <span class="exercise-type">Flashcards</span>
-            <h3 class="exercise-title">Rispondi alle domande</h3>
+            <h3 class="exercise-title">СЕМЬЯ АЛЬБЕРТА</h3>
+            <span class="card-subtitle">Il genitivo</span>
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-10" data-access="paid" hidden>
+            <section id="ex-flashcards-acc-10">
+                <div class="fca01-header">
+                    <h2>Il genitivo: Di chi è?</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+
+                <div id="ex-flashcards-acc-10-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-acc-10-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-acc-10-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-acc-10-counter" class="fca01-counter">1 / 8</span>
+                        <button id="ex-flashcards-acc-10-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-acc-10-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-acc-10-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-acc-10-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-acc-10-section-match" class="fca01-section">
+                    <div id="ex-flashcards-acc-10-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-acc-10-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+
             <script type="text/plain" data-lazy-script="panel-acc-open-10">
+(() => {
+    const rootEl = document.getElementById('ex-flashcards-acc-10');
+    if (!rootEl) {
+        console.warn('⚠️ Flashcards: Container #ex-flashcards-acc-10 NOT FOUND');
+        return;
+    }
+
+    function initFlashcardsAcc10(root) {
+        const flashcardsData = [
+            { front: "Чья это книга?", back: "Это книга брата." },
+            { front: "Чей это телефон?", back: "Это телефон сестры." },
+            { front: "Чья это машина?", back: "Это машина отца." },
+            { front: "Чей это дом?", back: "Это дом бабушки." },
+            { front: "Чья это сумка?", back: "Это сумка мамы." },
+            { front: "Чей это компьютер?", back: "Это компьютер друга." },
+            { front: "Чья это кошка?", back: "Это кошка соседа." },
+            { front: "Чей это велосипед?", back: "Это велосипед дедушки." }
+        ];
+
+        let currentMode = 'study';
+        let currentIndex = 0;
+        let selectedMatchCard = null;
+        let isProcessingMatch = false;
+        let cachedRuVoice = null;
+
+        function pickRuVoice() {
+            const voices = window.speechSynthesis.getVoices();
+            const ruVoice = voices.find(v => v.lang.includes('ru'));
+            if (ruVoice) cachedRuVoice = ruVoice;
+        }
+
+        function textToSpeech(text, lang = 'ru-RU') {
+            if (!('speechSynthesis' in window)) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang;
+            utterance.rate = 0.9;
+            utterance.pitch = 1;
+            utterance.volume = 1;
+            if (cachedRuVoice) utterance.voice = cachedRuVoice;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function playAudio(text, event) {
+            event.stopPropagation();
+            textToSpeech(text);
+        }
+
+        function switchMode(mode) {
+            currentMode = mode;
+            root.querySelectorAll('.fca01-mode-btn').forEach(btn => btn.classList.remove('active'));
+            root.querySelectorAll('.fca01-section').forEach(sec => sec.classList.remove('visible'));
+            root.querySelector(`#ex-flashcards-acc-10-section-${mode}`).classList.add('visible');
+            root.querySelector(`[data-mode="${mode}"]`).classList.add('active');
+
+            if (mode === 'study') { currentIndex = 0; renderCard(); }
+            else if (mode === 'quiz') { renderQuiz(); root.querySelector('#ex-flashcards-acc-10-start-quiz-btn').classList.add('hidden'); }
+            else if (mode === 'match') { initMatchGame(); }
+        }
+
+        function renderCard() {
+            const area = root.querySelector('#ex-flashcards-acc-10-learning-area-study');
+            const counter = root.querySelector('#ex-flashcards-acc-10-counter');
+            const cardData = flashcardsData[currentIndex];
+
+            counter.textContent = `${currentIndex + 1} / ${flashcardsData.length}`;
+            area.innerHTML = `
+                <div class="fca01-card-container">
+                    <div class="fca01-card">
+                        <div class="fca01-card-face fca01-card-front">
+                            <button class="fca01-audio-btn" data-text="${cardData.front}">🔊</button>
+                            ${cardData.front}
+                        </div>
+                        <div class="fca01-card-face fca01-card-back">
+                            <button class="fca01-audio-btn" data-text="${cardData.back}">🔊</button>
+                            ${cardData.back}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            const card = area.querySelector('.fca01-card');
+            card.addEventListener('click', function() {
+                this.classList.toggle('is-flipped');
+            });
+
+            area.querySelectorAll('.fca01-audio-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => playAudio(btn.dataset.text, e));
+            });
+        }
+
+        function nextCard() {
+            currentIndex = (currentIndex + 1) % flashcardsData.length;
+            renderCard();
+        }
+
+        function prevCard() {
+            currentIndex = currentIndex > 0 ? currentIndex - 1 : flashcardsData.length - 1;
+            renderCard();
+        }
+
+        function renderQuiz() {
+            const area = root.querySelector('#ex-flashcards-acc-10-learning-area-quiz');
+            root.querySelector('#ex-flashcards-acc-10-start-quiz-btn').classList.add('hidden');
+
+            const randomIndex = Math.floor(Math.random() * flashcardsData.length);
+            const correctCard = flashcardsData[randomIndex];
+
+            let options = [correctCard];
+            while (options.length < 3 && options.length < flashcardsData.length) {
+                const randomWrong = flashcardsData[Math.floor(Math.random() * flashcardsData.length)];
+                if (!options.some(opt => opt.back === randomWrong.back)) options.push(randomWrong);
+            }
+            options.sort(() => Math.random() - 0.5);
+
+            const buttonsHTML = options.map(opt =>
+                `<button class="fca01-quiz-option" data-answer="${opt.back}" data-correct="${correctCard.back}">
+                    ${opt.back}
+                </button>`
+            ).join('');
+
+            area.innerHTML = `
+                <div class="fca01-quiz-area">
+                    <h3 class="fca01-quiz-question">Найди вторую часть: <br><span class="highlight">"${correctCard.front}"</span></h3>
+                    <div class="fca01-quiz-options">${buttonsHTML}</div>
+                    <p class="fca01-quiz-feedback"></p>
+                </div>
+            `;
+
+            area.querySelectorAll('.fca01-quiz-option').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    checkQuizAnswer(this.dataset.answer, this.dataset.correct, this);
+                });
+            });
+        }
+
+        function checkQuizAnswer(selected, correct, btnElement) {
+            const feedback = root.querySelector('.fca01-quiz-feedback');
+            const nextBtn = root.querySelector('#ex-flashcards-acc-10-start-quiz-btn');
+
+            root.querySelectorAll('.fca01-quiz-option').forEach(btn => {
+                btn.style.pointerEvents = 'none';
+                if (btn.dataset.answer === correct) btn.classList.add('correct');
+            });
+
+            if (selected === correct) {
+                feedback.textContent = "✅ Правильно!";
+                feedback.className = "fca01-quiz-feedback correct";
+            } else {
+                btnElement.classList.add('wrong');
+                feedback.textContent = "❌ Ошибка!";
+                feedback.className = "fca01-quiz-feedback wrong";
+            }
+            nextBtn.classList.remove('hidden');
+        }
+
+        function initMatchGame() {
+            const area = root.querySelector('#ex-flashcards-acc-10-learning-area-match');
+            selectedMatchCard = null;
+            isProcessingMatch = false;
+
+            let fronts = flashcardsData.map((card, index) => ({ text: card.front, type: 'front', id: index }));
+            let backs = flashcardsData.map((card, index) => ({ text: card.back, type: 'back', id: index }));
+
+            fronts.sort(() => Math.random() - 0.5);
+            backs.sort(() => Math.random() - 0.5);
+
+            area.innerHTML = `
+                <div class="fca01-match-container">
+                    <p class="fca01-match-feedback"></p>
+                    <div class="fca01-match-grid">
+                        <div class="fca01-match-col" id="ex-flashcards-acc-10-match-col-fronts"></div>
+                        <div class="fca01-match-col" id="ex-flashcards-acc-10-match-col-backs"></div>
+                    </div>
+                </div>
+            `;
+
+            const colFronts = root.querySelector('#ex-flashcards-acc-10-match-col-fronts');
+            const colBacks = root.querySelector('#ex-flashcards-acc-10-match-col-backs');
+
+            function createMatchElement(item) {
+                const div = document.createElement('div');
+                div.className = 'fca01-match-card';
+                div.textContent = item.text;
+                div.dataset.id = item.id;
+                div.dataset.type = item.type;
+                div.addEventListener('click', () => handleMatchClick(div));
+                return div;
+            }
+
+            fronts.forEach(item => colFronts.appendChild(createMatchElement(item)));
+            backs.forEach(item => colBacks.appendChild(createMatchElement(item)));
+        }
+
+        function handleMatchClick(clickedCard) {
+            if (isProcessingMatch || clickedCard.classList.contains('matched')) return;
+            if (clickedCard === selectedMatchCard) return;
+
+            const feedbackEl = root.querySelector('.fca01-match-feedback');
+
+            if (!selectedMatchCard) {
+                selectedMatchCard = clickedCard;
+                clickedCard.classList.add('selected');
+                return;
+            }
+
+            if (selectedMatchCard.dataset.type === clickedCard.dataset.type) {
+                selectedMatchCard.classList.remove('selected');
+                selectedMatchCard = clickedCard;
+                clickedCard.classList.add('selected');
+                return;
+            }
+
+            const firstId = selectedMatchCard.dataset.id;
+            const secondId = clickedCard.dataset.id;
+            const previousCard = selectedMatchCard;
+
+            if (firstId === secondId) {
+                previousCard.classList.add('matched');
+                clickedCard.classList.add('matched');
+                feedbackEl.textContent = "✨ Отлично!";
+                feedbackEl.className = "fca01-match-feedback correct";
+                selectedMatchCard = null;
+                setTimeout(() => { feedbackEl.textContent = ""; }, 1000);
+
+                const remaining = root.querySelectorAll('.fca01-match-card:not(.matched)').length;
+                if (remaining === 0) feedbackEl.textContent = "🎉 ПОБЕДА! 🎉";
+            } else {
+                isProcessingMatch = true;
+                clickedCard.classList.add('wrong');
+                previousCard.classList.add('wrong');
+                feedbackEl.textContent = "Неверно";
+                feedbackEl.className = "fca01-match-feedback wrong";
+
+                setTimeout(() => {
+                    clickedCard.classList.remove('selected', 'wrong');
+                    previousCard.classList.remove('selected', 'wrong');
+                    feedbackEl.textContent = "";
+                    isProcessingMatch = false;
+                }, 800);
+
+                selectedMatchCard = null;
+            }
+        }
+
+        pickRuVoice();
+        if (!cachedRuVoice) {
+            window.speechSynthesis.onvoiceschanged = () => {
+                pickRuVoice();
+                window.speechSynthesis.onvoiceschanged = null;
+            };
+        }
+
+        root.querySelectorAll('.fca01-mode-btn').forEach(btn => {
+            btn.addEventListener('click', () => switchMode(btn.dataset.mode));
+        });
+
+        root.querySelector('#ex-flashcards-acc-10-next-btn').addEventListener('click', nextCard);
+        root.querySelector('#ex-flashcards-acc-10-prev-btn').addEventListener('click', prevCard);
+        root.querySelector('#ex-flashcards-acc-10-start-quiz-btn').addEventListener('click', renderQuiz);
+        root.querySelector('#ex-flashcards-acc-10-reset-match-btn').addEventListener('click', initMatchGame);
+
+        switchMode('study');
+    }
+
+    initFlashcardsAcc10(rootEl);
+})();
             </script>
         </div>
 
