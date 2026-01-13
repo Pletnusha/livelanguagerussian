@@ -803,22 +803,6 @@ h1, h2, h3 {
   .page-accusativo-come-ti-chiami .exercise-card-section { padding: 1.5rem 1.25rem; }
   .exercise-panel:not([hidden]) { padding: 1.5rem; }
 
-  /* MOBILE FIX: disable 3D flip (prevents 2 sides visible) */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-card {
-    transform: none !important;
-    transition: none !important;
-  }
-
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-card-back {
-    display: none !important;
-  }
-
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-card-front {
-    position: relative !important;
-    transform: none !important;
-    backface-visibility: visible !important;
-    -webkit-backface-visibility: visible !important;
-  }
 }
 
 @media (max-width: 600px) {
@@ -1702,22 +1686,6 @@ h1, h2, h3 {
   .page-accusativo-come-ti-chiami .exercise-card-section { padding: 1.5rem 1.25rem; }
   .exercise-panel:not([hidden]) { padding: 1.5rem; }
 
-  /* MOBILE FIX: disable 3D flip (prevents 2 sides visible) */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-card {
-    transform: none !important;
-    transition: none !important;
-  }
-
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-card-back {
-    display: none !important;
-  }
-
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-card-front {
-    position: relative !important;
-    transform: none !important;
-    backface-visibility: visible !important;
-    -webkit-backface-visibility: visible !important;
-  }
 }
 
 @media (max-width: 600px) {
