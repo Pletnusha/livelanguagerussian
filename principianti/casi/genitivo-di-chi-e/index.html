@@ -2468,9 +2468,69 @@
     }
 
     function attachHandlers() {
+        let draggedOption = null;
+
+        container.querySelectorAll('.acc-04-card').forEach(card => {
+            if (parseInt(card.dataset.index, 10) >= 10) return;
+            card.querySelectorAll('.word-option').forEach(option => {
+                option.setAttribute('draggable', 'true');
+            });
+        });
+
+        container.querySelectorAll('.word-option[draggable="true"]').forEach(option => {
+            option.addEventListener('dragstart', function(e) {
+                draggedOption = this;
+                e.dataTransfer.setData('text/plain', this.dataset.answer || this.textContent.trim());
+                e.dataTransfer.effectAllowed = 'move';
+            });
+        });
+
+        container.querySelectorAll('.drop-zone').forEach(dropZone => {
+            dropZone.addEventListener('dragover', function(e) {
+                e.preventDefault();
+            });
+
+            dropZone.addEventListener('dragleave', function() {
+                return;
+            });
+
+            dropZone.addEventListener('drop', function(e) {
+                e.preventDefault();
+                if (!draggedOption || this.dataset.filled === 'true') return;
+                const card = this.closest('.acc-04-card');
+                if (!card || parseInt(card.dataset.index, 10) >= 10) return;
+
+                const correctAnswer = this.dataset.correct;
+                const answer = draggedOption.dataset.answer || draggedOption.textContent.trim();
+                this.textContent = draggedOption.textContent.trim();
+                this.dataset.filled = 'true';
+
+                card.querySelectorAll('.word-option').forEach(option => {
+                    option.setAttribute('draggable', 'false');
+                });
+
+                const fb = card.querySelector('.fca01-quiz-feedback');
+                if (answer === correctAnswer) {
+                    this.classList.add('correct');
+                    if (fb) {
+                        fb.textContent = '✅ Правильно!';
+                        fb.className = 'fca01-quiz-feedback correct';
+                    }
+                } else {
+                    this.classList.add('wrong');
+                    if (fb) {
+                        fb.textContent = '❌ Ошибка!';
+                        fb.className = 'fca01-quiz-feedback wrong';
+                    }
+                }
+            });
+        });
+
         container.querySelectorAll('.fca01-quiz-option').forEach(btn => {
             btn.addEventListener('click', function() {
                 const card = this.closest('.acc-04-card');
+                if (!card) return;
+                if (parseInt(card.dataset.index, 10) < 10) return;
                 const correct = this.dataset.correct;
                 card.querySelectorAll('.fca01-quiz-option').forEach(b => {
                     b.style.pointerEvents = 'none';
