@@ -2336,405 +2336,192 @@
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-4" data-access="public" hidden>
-            <section id="acc-04-quiz-deck">
-                <!-- Step 1: Multiple Choice -->
-                <div class="fca01-section visible" id="acc-04-step-1">
-                    <div class="fca01-card-container">
-                        <h3 class="quiz-title">Scelta multipla</h3>
-                        <div id="acc-04-mc-area"></div>
-                        <button id="acc-04-mc-next-btn" class="btn btn-primary hidden">Новый вопрос</button>
-                    </div>
-                </div>
-
-                <!-- Step 2: Match -->
-                <div class="fca01-section" id="acc-04-step-2">
-                    <div class="fca01-card-container">
-                        <h3 class="quiz-title">Сопоставьте пары</h3>
-                        <div id="acc-04-match-area"></div>
-                        <button id="acc-04-match-reset-btn" class="btn btn-secondary">Начать заново</button>
-                    </div>
-                </div>
-
-                <!-- Step 3: Input -->
-                <div class="fca01-section" id="acc-04-step-3">
-                    <div class="fca01-card-container">
-                        <p class="quiz-instruction">Scrivete la forma corretta</p>
-                        <ol class="quiz-list" id="panel-acc-open-4-quiz-list"></ol>
-                    </div>
-                </div>
-
-                <!-- Navigation -->
+            <section id="acc-04-deck">
+                <div id="acc-04-cards-container"></div>
                 <div class="fca01-nav">
-                    <button id="acc-04-prev-btn" class="fca01-btn-nav" disabled>← Назад</button>
-                    <span id="acc-04-counter" class="fca01-counter">1 / 3</span>
-                    <button id="acc-04-next-btn" class="btn btn-primary">Вперед →</button>
+                    <button id="acc-04-deck-prev" class="fca01-btn-nav" disabled>← Назад</button>
+                    <span id="acc-04-deck-counter" class="fca01-counter">1 / 30</span>
+                    <button id="acc-04-deck-next" class="btn btn-primary">Вперед →</button>
                 </div>
             </section>
             <script type="text/plain" data-lazy-script="panel-acc-open-4">
 (() => {
-
     const panel = document.getElementById('panel-acc-open-4');
-     if (!panel) return;
-    const quizList = panel.querySelector('#panel-acc-open-4-quiz-list');
+    if (!panel) return;
 
-        if (!quizList) {
-        requestAnimationFrame(() => {
-            const panel2 = document.getElementById('panel-acc-open-4');
-            const quizList2 = panel2 && panel2.querySelector('#panel-acc-open-4-quiz-list');
-            if (!quizList2) return;
-            initQuiz(panel2);
-        });
-        return;
+    const container = panel.querySelector('#acc-04-cards-container');
+    const prevBtn = panel.querySelector('#acc-04-deck-prev');
+    const nextBtn = panel.querySelector('#acc-04-deck-next');
+    const counterEl = panel.querySelector('#acc-04-deck-counter');
+
+    const TOTAL_CARDS = 30;
+    let currentCard = 0;
+
+    const ddData = [
+        { question: "Как зовут (мой брат) ?", options: ["Моего брата", "Мой брат", "Моему брату", "Моим братом"], answer: "Моего брата" },
+        { question: "Как зовут (наша сестра) ?", options: ["Нашу сестру", "Наша сестра", "Нашей сестре"], answer: "Нашу сестру" },
+        { question: "Как зовут (их подруга) ?", options: ["Их подругу", "Их подруга", "Их подругой"], answer: "Их подругу" },
+        { question: "Как зовут (ваш отец) ?", options: ["Вашего отца", "Ваш отец", "Вашему отцу"], answer: "Вашего отца" },
+        { question: "Как зовут (твоя мама) ?", options: ["Твою маму", "Твоя мама", "Твоей маме"], answer: "Твою маму" },
+        { question: "Как зовут (его друг) ?", options: ["Его друга", "Его друг", "Его другу"], answer: "Его друга" },
+        { question: "Как зовут (её дочь) ?", options: ["Её дочь", "Её дочери", "Её дочерью"], answer: "Её дочь" },
+        { question: "Как зовут (наш дедушка) ?", options: ["Нашего дедушку", "Наш дедушка", "Нашему дедушке"], answer: "Нашего дедушку" },
+        { question: "Как зовут (твой сын) ?", options: ["Твоего сына", "Твой сын", "Твоему сыну"], answer: "Твоего сына" },
+        { question: "Как зовут (ваша тётя) ?", options: ["Вашу тётю", "Ваша тётя", "Вашей тёте"], answer: "Вашу тётю" }
+    ];
+
+    const matchData = [
+        { left: "мама", right: "маму" },
+        { left: "брат", right: "брата" },
+        { left: "дедушка", right: "дедушку" },
+        { left: "подруга", right: "подругу" },
+        { left: "сын", right: "сына" },
+        { left: "тётя", right: "тётю" },
+        { left: "сестра", right: "сестру" },
+        { left: "друг", right: "друга" },
+        { left: "бабушка", right: "бабушку" },
+        { left: "дочь", right: "дочь" }
+    ];
+
+    const writeData = [
+        { id: "fam-001", promptPrefix: "Моя мама ", promptSuffix: " зовут Анна.", answers: ["Мою маму"] },
+        { id: "fam-002", promptPrefix: "Мой брат ", promptSuffix: " зовут Александр.", answers: ["Моего брата"] },
+        { id: "fam-003", promptPrefix: "Его девушка ", promptSuffix: " зовут Елена.", answers: ["Его девушку"] },
+        { id: "fam-004", promptPrefix: "Наш дедушка ", promptSuffix: " зовут Владислав.", answers: ["Нашего дедушку"] },
+        { id: "fam-005", promptPrefix: "Её подруга ", promptSuffix: " зовут Наталья.", answers: ["Её подругу"] },
+        { id: "fam-006", promptPrefix: "Как зовут твой друг ", promptSuffix: " ?", answers: ["твоего друга"] },
+        { id: "fam-007", promptPrefix: "Их дочь ", promptSuffix: " зовут Катя.", answers: ["Их дочь"] },
+        { id: "fam-008", promptPrefix: "Наш сын ", promptSuffix: " зовут Анатолий.", answers: ["нашего сына"] },
+        { id: "fam-009", promptPrefix: "Как зовут ваша тётя ", promptSuffix: " ?", answers: ["вашу тётю"] },
+        { id: "fam-010", promptPrefix: "Твой дядя ", promptSuffix: " - зовут Альберт?!", answers: ["твоего дядю"] }
+    ];
+
+    function normalizeInput(str) {
+        return str.trim().replace(/\s+/g, ' ');
     }
 
-    initQuiz(panel);
+    function buildCards() {
+        container.innerHTML = '';
+        for (let i = 0; i < TOTAL_CARDS; i++) {
+            const card = document.createElement('div');
+            card.className = 'fca01-card-container acc-04-card';
+            card.dataset.index = i;
+            if (i === 0) card.classList.add('visible');
 
-    function initQuiz(panelEl) {
-        const quizListEl = panelEl.querySelector('#panel-acc-open-4-quiz-list');
-
-        // Step navigation
-        const totalSteps = 3;
-        let currentStep = 1;
-        const prevBtn = panelEl.querySelector('#acc-04-prev-btn');
-        const nextBtn = panelEl.querySelector('#acc-04-next-btn');
-        const counterEl = panelEl.querySelector('#acc-04-counter');
-
-        function showStep(step) {
-            currentStep = step;
-            for (let i = 1; i <= totalSteps; i++) {
-                const stepEl = panelEl.querySelector('#acc-04-step-' + i);
-                if (stepEl) {
-                    stepEl.classList.toggle('visible', i === step);
-                }
-            }
-            counterEl.textContent = step + ' / ' + totalSteps;
-            prevBtn.disabled = (step === 1);
-            nextBtn.disabled = (step === totalSteps);
-        }
-
-        prevBtn.addEventListener('click', function() {
-            if (currentStep > 1) showStep(currentStep - 1);
-        });
-
-        nextBtn.addEventListener('click', function() {
-            if (currentStep < totalSteps) showStep(currentStep + 1);
-        });
-
-        showStep(1);
-        const mcArea = panelEl.querySelector('#acc-04-mc-area');
-        const mcNextBtn = panelEl.querySelector('#acc-04-mc-next-btn');
-        const matchArea = panelEl.querySelector('#acc-04-match-area');
-        const matchResetBtn = panelEl.querySelector('#acc-04-match-reset-btn');
-
-        const quizData = [
-            {
-                id: "fam-001",
-                promptPrefix: "Моя мама ",
-                promptSuffix: " зовут Анна.",
-                answers: ["Мою маму"]
-            },
-            {
-                id: "fam-002",
-                promptPrefix: "Мой брат ",
-                promptSuffix: " зовут Александр.",
-                answers: ["Моего брата"]
-            },
-            {
-                id: "fam-003",
-                promptPrefix: "Его девушка ",
-                promptSuffix: " зовут Елена.",
-                answers: ["Его девушку"]
-            },
-            {
-                id: "fam-004",
-                promptPrefix: "Наш дедушка ",
-                promptSuffix: " зовут Владислав.",
-                answers: ["Нашего дедушку"]
-            },
-            {
-                id: "fam-005",
-                promptPrefix: "Её подруга ",
-                promptSuffix: " зовут Наталья.",
-                answers: ["Её подругу"]
-            },
-            {
-                id: "fam-006",
-                promptPrefix: "Как зовут твой друг ",
-                promptSuffix: " ?",
-                answers: ["твоего друга"]
-            },
-            {
-                id: "fam-007",
-                promptPrefix: "Их дочь ",
-                promptSuffix: " зовут Катя.",
-                answers: ["Их дочь"]
-            },
-            {
-                id: "fam-008",
-                promptPrefix: "Наш сын ",
-                promptSuffix: " зовут Анатолий.",
-                answers: ["нашего сына"]
-            },
-            {
-                id: "fam-009",
-                promptPrefix: "Как зовут ваша тётя ",
-                promptSuffix: " ?",
-                answers: ["вашу тётю"]
-            },
-            {
-                id: "fam-010",
-                promptPrefix: "Твой дядя ",
-                promptSuffix: " - зовут Альберт?!",
-                answers: ["твоего дядю"]
-            }
-        ];
-
-        const multipleChoiceData = [
-            {
-                question: "Как зовут (мой брат) ?",
-                options: ["Моего брата", "Мой брат", "Моему брату", "Моим братом"],
-                answer: "Моего брата"
-            },
-            {
-                question: "Как зовут (наша сестра) ?",
-                options: ["Нашу сестру", "Наша сестра", "Нашей сестре"],
-                answer: "Нашу сестру"
-            },
-            {
-                question: "Как зовут (их подруга) ?",
-                options: ["Их подругу", "Их подруга", "Их подругой"],
-                answer: "Их подругу"
-            },
-            {
-                question: "Как зовут (ваш отец) ?",
-                options: ["Вашего отца", "Ваш отец", "Вашему отцу"],
-                answer: "Вашего отца"
-            },
-            {
-                question: "Как зовут (твоя мама) ?",
-                options: ["Твою маму", "Твоя мама", "Твоей маме"],
-                answer: "Твою маму"
-            }
-        ];
-
-        const matchPairs = [
-            { left: "мама", right: "маму" },
-            { left: "брат", right: "брата" },
-            { left: "дедушка", right: "дедушку" },
-            { left: "подруга", right: "подругу" },
-            { left: "сын", right: "сына" },
-            { left: "тётя", right: "тётю" }
-        ];
-
-        function normalizeInput(str) {
-            return str.trim().replace(/\s+/g, ' ');
-        }
-
-        let mcIndex = 0;
-
-        function renderMultipleChoice() {
-            if (!mcArea) return;
-            const item = multipleChoiceData[mcIndex];
-            const buttonsHTML = item.options.map(option =>
-                `<button class="fca01-quiz-option" data-answer="${option}" data-correct="${item.answer}">${option}</button>`
-            ).join('');
-
-            mcArea.innerHTML = `
-                <div class="fca01-quiz-area">
-                    <h3 class="fca01-quiz-question">${item.question}</h3>
-                    <div class="fca01-quiz-options">${buttonsHTML}</div>
-                    <p class="fca01-quiz-feedback"></p>
-                </div>
-            `;
-
-            const feedback = mcArea.querySelector('.fca01-quiz-feedback');
-            mcArea.querySelectorAll('.fca01-quiz-option').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    mcArea.querySelectorAll('.fca01-quiz-option').forEach(optionBtn => {
-                        optionBtn.style.pointerEvents = 'none';
-                        if (optionBtn.dataset.answer === item.answer) optionBtn.classList.add('correct');
-                    });
-                    if (btn.dataset.answer === item.answer) {
-                        feedback.textContent = "✅ Правильно!";
-                        feedback.className = "fca01-quiz-feedback correct";
-                    } else {
-                        btn.classList.add('wrong');
-                        feedback.textContent = "❌ Ошибка!";
-                        feedback.className = "fca01-quiz-feedback wrong";
-                    }
-                    if (mcNextBtn) mcNextBtn.classList.remove('hidden');
-                });
-            });
-        }
-
-        function handleMcNext() {
-            mcIndex = (mcIndex + 1) % multipleChoiceData.length;
-            if (mcNextBtn) mcNextBtn.classList.add('hidden');
-            renderMultipleChoice();
-        }
-
-        let selectedMatchCard = null;
-        let isProcessingMatch = false;
-
-        function initMatchGame() {
-            if (!matchArea) return;
-            selectedMatchCard = null;
-            isProcessingMatch = false;
-
-            let fronts = matchPairs.map((pair, index) => ({ text: pair.left, type: 'front', id: index }));
-            let backs = matchPairs.map((pair, index) => ({ text: pair.right, type: 'back', id: index }));
-
-            fronts.sort(() => Math.random() - 0.5);
-            backs.sort(() => Math.random() - 0.5);
-
-            matchArea.innerHTML = `
-                <div class="fca01-match-container">
-                    <p class="fca01-match-feedback"></p>
-                    <div class="fca01-match-grid">
-                        <div class="fca01-match-col" id="acc-04-match-col-fronts"></div>
-                        <div class="fca01-match-col" id="acc-04-match-col-backs"></div>
+            if (i < 10) {
+                const item = ddData[i];
+                const opts = item.options.map(o => `<button class="fca01-quiz-option" data-answer="${o}" data-correct="${item.answer}">${o}</button>`).join('');
+                card.innerHTML = `
+                    <h3 class="quiz-title">Drag & Drop</h3>
+                    <p class="quiz-instruction">Выберите правильный ответ</p>
+                    <div class="fca01-quiz-area">
+                        <p class="fca01-quiz-question">${item.question}</p>
+                        <div class="fca01-quiz-options">${opts}</div>
+                        <p class="fca01-quiz-feedback"></p>
                     </div>
-                </div>
-            `;
-
-            const colFronts = matchArea.querySelector('#acc-04-match-col-fronts');
-            const colBacks = matchArea.querySelector('#acc-04-match-col-backs');
-
-            function createMatchElement(item) {
-                const div = document.createElement('div');
-                div.className = 'fca01-match-card';
-                div.textContent = item.text;
-                div.dataset.id = item.id;
-                div.dataset.type = item.type;
-                div.addEventListener('click', () => handleMatchClick(div));
-                return div;
-            }
-
-            fronts.forEach(item => colFronts.appendChild(createMatchElement(item)));
-            backs.forEach(item => colBacks.appendChild(createMatchElement(item)));
-        }
-
-        function handleMatchClick(clickedCard) {
-            if (isProcessingMatch || clickedCard.classList.contains('matched')) return;
-            if (clickedCard === selectedMatchCard) return;
-
-            const feedbackEl = matchArea.querySelector('.fca01-match-feedback');
-
-            if (!selectedMatchCard) {
-                selectedMatchCard = clickedCard;
-                clickedCard.classList.add('selected');
-                return;
-            }
-
-            if (selectedMatchCard.dataset.type === clickedCard.dataset.type) {
-                selectedMatchCard.classList.remove('selected');
-                selectedMatchCard = clickedCard;
-                clickedCard.classList.add('selected');
-                return;
-            }
-
-            isProcessingMatch = true;
-
-            const isMatch = selectedMatchCard.dataset.id === clickedCard.dataset.id;
-
-            if (isMatch) {
-                selectedMatchCard.classList.add('matched');
-                clickedCard.classList.add('matched');
-                feedbackEl.textContent = '✅ Правильно!';
-                feedbackEl.className = 'fca01-match-feedback correct';
-                selectedMatchCard.classList.remove('selected');
-                selectedMatchCard = null;
-                isProcessingMatch = false;
+                `;
+            } else if (i < 20) {
+                const item = matchData[i - 10];
+                const wrongOptions = matchData.filter((_, idx) => idx !== (i - 10)).map(m => m.right).sort(() => Math.random() - 0.5).slice(0, 2);
+                const allOpts = [item.right, ...wrongOptions].sort(() => Math.random() - 0.5);
+                const opts = allOpts.map(o => `<button class="fca01-quiz-option" data-answer="${o}" data-correct="${item.right}">${o}</button>`).join('');
+                card.innerHTML = `
+                    <h3 class="quiz-title">Match</h3>
+                    <p class="quiz-instruction">Сопоставьте слово с правильной формой</p>
+                    <div class="fca01-quiz-area">
+                        <p class="fca01-quiz-question">${item.left} → ?</p>
+                        <div class="fca01-quiz-options">${opts}</div>
+                        <p class="fca01-quiz-feedback"></p>
+                    </div>
+                `;
             } else {
-                feedbackEl.textContent = '❌ Ошибка!';
-                feedbackEl.className = 'fca01-match-feedback wrong';
-                setTimeout(() => {
-                    selectedMatchCard.classList.remove('selected');
-                    clickedCard.classList.remove('selected');
-                    selectedMatchCard = null;
-                    isProcessingMatch = false;
-                }, 600);
+                const item = writeData[i - 20];
+                card.innerHTML = `
+                    <h3 class="quiz-title">Write</h3>
+                    <p class="quiz-instruction">Scrivete la forma corretta</p>
+                    <div class="quiz-item" data-id="${item.id}">
+                        <div class="quiz-prompt">${item.promptPrefix}<input type="text" class="quiz-input" data-index="${i - 20}">${item.promptSuffix}</div>
+                        <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">Проверить</button></div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                `;
             }
+            container.appendChild(card);
         }
-
-        function renderQuiz() {
-            quizListEl.innerHTML = '';
-
-            quizData.forEach((item, index) => {
-                const li = document.createElement('li');
-                li.className = 'quiz-item';
-                li.dataset.id = item.id;
-
-                const promptDiv = document.createElement('div');
-                promptDiv.className = 'quiz-prompt';
-               promptDiv.innerHTML = `${item.promptPrefix}<input type="text" class="quiz-input" data-index="${index}">${item.promptSuffix}`;
-                const controlsDiv = document.createElement('div');
-                controlsDiv.className = 'quiz-controls';
-
-                const checkBtn = document.createElement('button');
-                checkBtn.className = 'btn btn-primary quiz-check-btn';
-                checkBtn.textContent = 'Проверить';
-                checkBtn.dataset.index = index;
-
-                const feedbackDiv = document.createElement('div');
-                feedbackDiv.className = 'quiz-feedback';
-                feedbackDiv.dataset.index = index;
-
-                controlsDiv.appendChild(checkBtn);
-
-                li.appendChild(promptDiv);
-                li.appendChild(controlsDiv);
-                li.appendChild(feedbackDiv);
-
-                quizListEl.appendChild(li);
-
-                const input = li.querySelector('.quiz-input');
-
-                checkBtn.addEventListener('click', () => {
-                    checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
-                });
-
-                input.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' && !checkBtn.disabled) {
-                        checkAnswer(index, input, checkBtn, feedbackDiv, item.answers);
-                    }
-                });
-            });
-        }
-
-        function checkAnswer(index, input, button, feedback, correctAnswers) {
-            const userAnswer = normalizeInput(input.value);
-
-            const isCorrect = correctAnswers.some(ans => userAnswer === ans);
-
-            if (isCorrect) {
-                input.classList.remove('incorrect');
-                input.classList.add('correct');
-                input.disabled = true;
-                button.disabled = true;
-                feedback.textContent = 'Правильно!';
-                feedback.className = 'quiz-feedback correct';
-            } else {
-                input.classList.remove('correct');
-                input.classList.add('incorrect');
-                feedback.textContent = 'Неправильно. Попробуйте ещё раз.';
-                feedback.className = 'quiz-feedback incorrect';
-            }
-        }
-
-        if (mcNextBtn) {
-            mcNextBtn.addEventListener('click', handleMcNext);
-            mcNextBtn.classList.add('hidden');
-        }
-
-        if (matchResetBtn) {
-            matchResetBtn.addEventListener('click', initMatchGame);
-        }
-
-        renderMultipleChoice();
-        initMatchGame();
-        renderQuiz();
+        attachHandlers();
     }
+
+    function attachHandlers() {
+        container.querySelectorAll('.fca01-quiz-option').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.acc-04-card');
+                const correct = this.dataset.correct;
+                card.querySelectorAll('.fca01-quiz-option').forEach(b => {
+                    b.style.pointerEvents = 'none';
+                    if (b.dataset.answer === correct) b.classList.add('correct');
+                });
+                const fb = card.querySelector('.fca01-quiz-feedback');
+                if (this.dataset.answer === correct) {
+                    fb.textContent = '✅ Правильно!';
+                    fb.className = 'fca01-quiz-feedback correct';
+                } else {
+                    this.classList.add('wrong');
+                    fb.textContent = '❌ Ошибка!';
+                    fb.className = 'fca01-quiz-feedback wrong';
+                }
+            });
+        });
+
+        container.querySelectorAll('.quiz-check-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.acc-04-card');
+                const idx = parseInt(card.dataset.index) - 20;
+                const item = writeData[idx];
+                const input = card.querySelector('.quiz-input');
+                const fb = card.querySelector('.quiz-feedback');
+                const userAnswer = normalizeInput(input.value);
+                const isCorrect = item.answers.some(ans => userAnswer === ans);
+                if (isCorrect) {
+                    input.classList.remove('incorrect');
+                    input.classList.add('correct');
+                    input.disabled = true;
+                    this.disabled = true;
+                    fb.textContent = 'Правильно!';
+                    fb.className = 'quiz-feedback correct';
+                } else {
+                    input.classList.remove('correct');
+                    input.classList.add('incorrect');
+                    fb.textContent = 'Неправильно. Попробуйте ещё раз.';
+                    fb.className = 'quiz-feedback incorrect';
+                }
+            });
+        });
+
+        container.querySelectorAll('.quiz-input').forEach(input => {
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    const btn = this.closest('.quiz-item').querySelector('.quiz-check-btn');
+                    if (btn && !btn.disabled) btn.click();
+                }
+            });
+        });
+    }
+
+    function showCard(idx) {
+        currentCard = idx;
+        container.querySelectorAll('.acc-04-card').forEach((c, i) => {
+            c.classList.toggle('visible', i === idx);
+        });
+        counterEl.textContent = (idx + 1) + ' / ' + TOTAL_CARDS;
+        prevBtn.disabled = (idx === 0);
+        nextBtn.disabled = (idx === TOTAL_CARDS - 1);
+    }
+
+    prevBtn.addEventListener('click', () => { if (currentCard > 0) showCard(currentCard - 1); });
+    nextBtn.addEventListener('click', () => { if (currentCard < TOTAL_CARDS - 1) showCard(currentCard + 1); });
+
+    buildCards();
+    showCard(0);
 })();
             </script>
         </div>
