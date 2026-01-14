@@ -2357,7 +2357,7 @@
     const TOTAL_CARDS = 30;
     let currentCard = 0;
 
-    const ddData = [
+    const multipleChoiceData = [
         { question: "Как зовут (мой брат) ?", options: ["Моего брата", "Мой брат", "Моему брату", "Моим братом"], answer: "Моего брата" },
         { question: "Как зовут (наша сестра) ?", options: ["Нашу сестру", "Наша сестра", "Нашей сестре"], answer: "Нашу сестру" },
         { question: "Как зовут (их подруга) ?", options: ["Их подругу", "Их подруга", "Их подругой"], answer: "Их подругу" },
@@ -2370,7 +2370,7 @@
         { question: "Как зовут (ваша тётя) ?", options: ["Вашу тётю", "Ваша тётя", "Вашей тёте"], answer: "Вашу тётю" }
     ];
 
-    const matchData = [
+    const matchPairs = [
         { left: "мама", right: "маму" },
         { left: "брат", right: "брата" },
         { left: "дедушка", right: "дедушку" },
@@ -2383,7 +2383,7 @@
         { left: "дочь", right: "дочь" }
     ];
 
-    const writeData = [
+    const quizData = [
         { id: "fam-001", promptPrefix: "Моя мама ", promptSuffix: " зовут Анна.", answers: ["Мою маму"] },
         { id: "fam-002", promptPrefix: "Мой брат ", promptSuffix: " зовут Александр.", answers: ["Моего брата"] },
         { id: "fam-003", promptPrefix: "Его девушка ", promptSuffix: " зовут Елена.", answers: ["Его девушку"] },
@@ -2402,6 +2402,7 @@
 
     function buildCards() {
         container.innerHTML = '';
+
         for (let i = 0; i < TOTAL_CARDS; i++) {
             const card = document.createElement('div');
             card.className = 'fca01-card-container acc-04-card';
@@ -2409,7 +2410,7 @@
             if (i === 0) card.classList.add('visible');
 
             if (i < 10) {
-                const item = ddData[i];
+                const item = multipleChoiceData[i];
                 const opts = item.options.map(o => `<button class="fca01-quiz-option" data-answer="${o}" data-correct="${item.answer}">${o}</button>`).join('');
                 card.innerHTML = `
                     <h3 class="quiz-title">Drag & Drop</h3>
@@ -2421,21 +2422,33 @@
                     </div>
                 `;
             } else if (i < 20) {
-                const item = matchData[i - 10];
-                const wrongOptions = matchData.filter((_, idx) => idx !== (i - 10)).map(m => m.right).sort(() => Math.random() - 0.5).slice(0, 2);
-                const allOpts = [item.right, ...wrongOptions].sort(() => Math.random() - 0.5);
-                const opts = allOpts.map(o => `<button class="fca01-quiz-option" data-answer="${o}" data-correct="${item.right}">${o}</button>`).join('');
+                const pairIdx = i - 10;
+                const pair = matchPairs[pairIdx];
+                const otherPairs = matchPairs.filter((_, idx) => idx !== pairIdx);
+                const shuffledOthers = otherPairs.sort(() => Math.random() - 0.5).slice(0, 2);
+                const allPairs = [pair, ...shuffledOthers].sort(() => Math.random() - 0.5);
+
+                let fronts = allPairs.map((p, idx) => ({ text: p.left, id: idx }));
+                let backs = allPairs.map((p, idx) => ({ text: p.right, id: idx }));
+                fronts.sort(() => Math.random() - 0.5);
+                backs.sort(() => Math.random() - 0.5);
+
+                const frontDivs = fronts.map(f => `<div class="fca01-match-card" data-id="${f.id}" data-type="front">${f.text}</div>`).join('');
+                const backDivs = backs.map(b => `<div class="fca01-match-card" data-id="${b.id}" data-type="back">${b.text}</div>`).join('');
+
                 card.innerHTML = `
                     <h3 class="quiz-title">Match</h3>
-                    <p class="quiz-instruction">Сопоставьте слово с правильной формой</p>
-                    <div class="fca01-quiz-area">
-                        <p class="fca01-quiz-question">${item.left} → ?</p>
-                        <div class="fca01-quiz-options">${opts}</div>
-                        <p class="fca01-quiz-feedback"></p>
+                    <p class="quiz-instruction">Сопоставьте пары</p>
+                    <div class="fca01-match-container">
+                        <p class="fca01-match-feedback"></p>
+                        <div class="fca01-match-grid">
+                            <div class="fca01-match-col">${frontDivs}</div>
+                            <div class="fca01-match-col">${backDivs}</div>
+                        </div>
                     </div>
                 `;
             } else {
-                const item = writeData[i - 20];
+                const item = quizData[i - 20];
                 card.innerHTML = `
                     <h3 class="quiz-title">Write</h3>
                     <p class="quiz-instruction">Scrivete la forma corretta</p>
@@ -2472,11 +2485,67 @@
             });
         });
 
+        container.querySelectorAll('.fca01-match-container').forEach(matchContainer => {
+            let selectedCard = null;
+            let isProcessing = false;
+
+            matchContainer.querySelectorAll('.fca01-match-card').forEach(matchCard => {
+                matchCard.addEventListener('click', function() {
+                    if (isProcessing || this.classList.contains('matched')) return;
+                    if (this === selectedCard) return;
+
+                    const feedbackEl = matchContainer.querySelector('.fca01-match-feedback');
+
+                    if (!selectedCard) {
+                        selectedCard = this;
+                        this.classList.add('selected');
+                        return;
+                    }
+
+                    if (selectedCard.dataset.type === this.dataset.type) {
+                        selectedCard.classList.remove('selected');
+                        selectedCard = this;
+                        this.classList.add('selected');
+                        return;
+                    }
+
+                    isProcessing = true;
+                    const isMatch = selectedCard.dataset.id === this.dataset.id;
+
+                    if (isMatch) {
+                        selectedCard.classList.add('matched');
+                        this.classList.add('matched');
+                        feedbackEl.textContent = '✅ Правильно!';
+                        feedbackEl.className = 'fca01-match-feedback correct';
+                        selectedCard.classList.remove('selected');
+                        selectedCard = null;
+                        isProcessing = false;
+
+                        const remaining = matchContainer.querySelectorAll('.fca01-match-card:not(.matched)').length;
+                        if (remaining === 0) {
+                            feedbackEl.textContent = '🎉 Отлично!';
+                        }
+                    } else {
+                        feedbackEl.textContent = '❌ Ошибка!';
+                        feedbackEl.className = 'fca01-match-feedback wrong';
+                        const prevSelected = selectedCard;
+                        const currClicked = this;
+                        setTimeout(() => {
+                            prevSelected.classList.remove('selected');
+                            currClicked.classList.remove('selected');
+                            selectedCard = null;
+                            isProcessing = false;
+                        }, 600);
+                    }
+                });
+            });
+        });
+
         container.querySelectorAll('.quiz-check-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 const card = this.closest('.acc-04-card');
                 const idx = parseInt(card.dataset.index) - 20;
-                const item = writeData[idx];
+                const item = quizData[idx];
                 const input = card.querySelector('.quiz-input');
                 const fb = card.querySelector('.quiz-feedback');
                 const userAnswer = normalizeInput(input.value);
