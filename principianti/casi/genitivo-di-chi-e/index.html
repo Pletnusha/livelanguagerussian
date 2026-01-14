@@ -2408,6 +2408,7 @@
             card.className = 'fca01-card-container acc-04-card';
             card.dataset.index = i;
             if (i === 0) card.classList.add('visible');
+            card.hidden = (i !== 0);
 
             if (i < 10) {
                 const item = multipleChoiceData[i];
@@ -2580,6 +2581,7 @@
         currentCard = idx;
         container.querySelectorAll('.acc-04-card').forEach((c, i) => {
             c.classList.toggle('visible', i === idx);
+            c.hidden = (i !== idx);
         });
         counterEl.textContent = (idx + 1) + ' / ' + TOTAL_CARDS;
         prevBtn.disabled = (idx === 0);
