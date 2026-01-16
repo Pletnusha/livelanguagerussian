@@ -2414,7 +2414,7 @@
             if (i < 10) {
                 const item = multipleChoiceData[i];
                 const opts = item.options.map((o, idx) => `<div class="word-option" data-word="${o}" data-index="${idx}">${o}</div>`).join('');
-                const questionText = item.question.replace(/\(([^)]+)\)/, `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`);
+                const questionText = item.question.replace(/\(([^)]+)\)/, `<span class="gap" data-gap="1"></span>`);
                 card.innerHTML = `
                     <div class="header">
                         <div class="exercise-counter">Esercizio ${i + 1} di 10</div>
