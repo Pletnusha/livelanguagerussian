@@ -2412,16 +2412,19 @@
 
             if (i < 10) {
                 const item = multipleChoiceData[i];
-                const opts = item.options.map(o => `<div class="word-option fca01-quiz-option" data-answer="${o}" data-correct="${item.answer}">${o}</div>`).join('');
+                const opts = item.options.map(o => `<div class="word-option" data-answer="${o}">${o}</div>`).join('');
+                const questionText = item.question.replace(/\(([^)]+)\)/, `<span class="gap" data-gap="1"></span>`);
                 card.innerHTML = `
                     <div class="header">
-                        <div class="exercise-counter">Scelta multipla ${i + 1} di 10</div>
+                        <div class="exercise-counter">Esercizio ${i + 1} di 10</div>
                     </div>
-                    <div class="instruction">Выберите правильный ответ</div>
-                    <div class="exercise-text">${item.question}</div>
-                    <div class="word-options fca01-quiz-options">${opts}</div>
+                    <div class="instruction">Completa la frase scegliendo la forma corretta</div>
+                    <div class="exercise-text" id="ex-accusativo-trascina-01-text">${questionText}</div>
+                    <div class="word-options" id="ex-accusativo-trascina-01-options">${opts}</div>
                     <div class="controls">
-                        <div class="feedback fca01-quiz-feedback"></div>
+                        <button class="btn btn-primary" id="ex-accusativo-trascina-01-check">Verifica</button>
+                        <button class="btn btn-secondary" id="ex-accusativo-trascina-01-next" style="display:none;">Prossimo</button>
+                        <div class="feedback" id="ex-accusativo-trascina-01-feedback"></div>
                     </div>
                 `;
             } else if (i < 20) {
@@ -2485,7 +2488,7 @@
             });
         });
 
-        container.querySelectorAll('.drop-zone').forEach(dropZone => {
+        container.querySelectorAll('.gap').forEach(dropZone => {
             dropZone.addEventListener('dragover', function(e) {
                 e.preventDefault();
             });
@@ -2496,31 +2499,32 @@
 
             dropZone.addEventListener('drop', function(e) {
                 e.preventDefault();
-                if (!draggedOption || this.dataset.filled === 'true') return;
+                if (!draggedOption || this.classList.contains('filled')) return;
                 const card = this.closest('.acc-04-card');
                 if (!card || parseInt(card.dataset.index, 10) >= 10) return;
 
-                const correctAnswer = this.dataset.correct;
                 const answer = draggedOption.dataset.answer || draggedOption.textContent.trim();
                 this.textContent = draggedOption.textContent.trim();
-                this.dataset.filled = 'true';
+                this.classList.add('filled');
 
                 card.querySelectorAll('.word-option').forEach(option => {
                     option.setAttribute('draggable', 'false');
+                    option.classList.add('used');
                 });
 
-                const fb = card.querySelector('.fca01-quiz-feedback');
+                const fb = card.querySelector('.feedback');
+                const correctAnswer = multipleChoiceData[parseInt(card.dataset.index, 10)].answer;
                 if (answer === correctAnswer) {
                     this.classList.add('correct');
                     if (fb) {
                         fb.textContent = '✅ Правильно!';
-                        fb.className = 'fca01-quiz-feedback correct';
+                        fb.classList.add('correct');
                     }
                 } else {
-                    this.classList.add('wrong');
+                    this.classList.add('incorrect');
                     if (fb) {
                         fb.textContent = '❌ Ошибка!';
-                        fb.className = 'fca01-quiz-feedback wrong';
+                        fb.classList.add('incorrect');
                     }
                 }
             });
