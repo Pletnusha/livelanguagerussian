@@ -2422,7 +2422,9 @@
                     <div class="exercise-text">${questionText}</div>
                     <div class="word-options">${opts}</div>
                     <div class="controls">
-                        <div class="feedback fca01-quiz-feedback"></div>
+                        <button class="btn btn-primary" id="ex-accusativo-trascina-01-check">Verifica</button>
+                        <button class="btn btn-secondary" id="ex-accusativo-trascina-01-next" style="display:none;">Prossimo</button>
+                        <div class="feedback" id="ex-accusativo-trascina-01-feedback"></div>
                     </div>
                 `;
             } else if (i < 20) {
@@ -2486,7 +2488,7 @@
             });
         });
 
-        container.querySelectorAll('.drop-zone').forEach(dropZone => {
+        container.querySelectorAll('.gap').forEach(dropZone => {
             dropZone.addEventListener('dragover', function(e) {
                 e.preventDefault();
             });
@@ -2497,31 +2499,32 @@
 
             dropZone.addEventListener('drop', function(e) {
                 e.preventDefault();
-                if (!draggedOption || this.dataset.filled === 'true') return;
+                if (!draggedOption || this.classList.contains('filled')) return;
                 const card = this.closest('.acc-04-card');
                 if (!card || parseInt(card.dataset.index, 10) >= 10) return;
 
-                const correctAnswer = this.dataset.correct;
                 const answer = draggedOption.dataset.answer || draggedOption.textContent.trim();
                 this.textContent = draggedOption.textContent.trim();
-                this.dataset.filled = 'true';
+                this.classList.add('filled');
 
                 card.querySelectorAll('.word-option').forEach(option => {
                     option.setAttribute('draggable', 'false');
+                    option.classList.add('used');
                 });
 
-                const fb = card.querySelector('.fca01-quiz-feedback');
+                const fb = card.querySelector('.feedback');
+                const correctAnswer = multipleChoiceData[parseInt(card.dataset.index, 10)].answer;
                 if (answer === correctAnswer) {
                     this.classList.add('correct');
                     if (fb) {
                         fb.textContent = '✅ Правильно!';
-                        fb.className = 'fca01-quiz-feedback correct';
+                        fb.classList.add('correct');
                     }
                 } else {
-                    this.classList.add('wrong');
+                    this.classList.add('incorrect');
                     if (fb) {
                         fb.textContent = '❌ Ошибка!';
-                        fb.className = 'fca01-quiz-feedback wrong';
+                        fb.classList.add('incorrect');
                     }
                 }
             });
