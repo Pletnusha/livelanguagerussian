@@ -2143,10 +2143,11 @@ article.exercise-card[data-target="panel-acc-open-10"],
 #acc-04-deck-prev {
   min-width: 140px;
   padding: 0.7rem 1.5rem;
+  border-radius: 8px;
 }
 
 #acc-04-deck-next {
-  min-width: 100px;
-  padding: 0.7rem 0.75rem;
+  min-width: 140px;
+  padding: 0.7rem 1.5rem;
   border-radius: 8px;
 }
