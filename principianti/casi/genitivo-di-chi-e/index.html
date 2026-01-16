@@ -2413,14 +2413,14 @@
             if (i < 10) {
                 const item = multipleChoiceData[i];
                 const opts = item.options.map(o => `<div class="word-option" data-answer="${o}">${o}</div>`).join('');
-                const questionText = item.question.replace(/\(([^)]+)\)/, `<span class="gap" data-gap="1"></span>`);
+                const questionText = item.question.replace(/\(([^)]+)\)/, `<span class="gap drop-zone" data-correct="${item.answer}"></span>`);
                 card.innerHTML = `
                     <div class="header">
                         <div class="exercise-counter">Esercizio ${i + 1} di 10</div>
                     </div>
                     <div class="instruction">Completa la frase scegliendo la forma corretta</div>
-                    <div class="exercise-text" id="ex-accusativo-trascina-01-text">${questionText}</div>
-                    <div class="word-options" id="ex-accusativo-trascina-01-options">${opts}</div>
+                    <div class="exercise-text">${questionText}</div>
+                    <div class="word-options">${opts}</div>
                     <div class="controls">
                         <button class="btn btn-primary" id="ex-accusativo-trascina-01-check">Verifica</button>
                         <button class="btn btn-secondary" id="ex-accusativo-trascina-01-next" style="display:none;">Prossimo</button>
