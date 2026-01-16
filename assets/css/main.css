@@ -2140,13 +2140,33 @@ article.exercise-card[data-target="panel-acc-open-10"],
   height: 44px;
 }
 
+#acc-04-deck-prev,
+#acc-04-deck-next {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1;
+}
+
 #acc-04-deck-prev {
   min-width: 140px;
-  padding: 0.7rem 1.5rem;
 }
 
 #acc-04-deck-next {
   min-width: 100px;
-  padding: 0.7rem 0.75rem;
-  border-radius: 8px;
+}
+
+#acc-04-deck-prev:hover,
+#acc-04-deck-next:hover {
+  background: #f8f8f8;
+  border-color: #2a5bd7;
 }
