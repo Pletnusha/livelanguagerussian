@@ -2412,8 +2412,8 @@
 
             if (i < 10) {
                 const item = multipleChoiceData[i];
-                const opts = item.options.map(o => `<div class="word-option" data-answer="${o}">${o}</div>`).join('');
-                const questionText = item.question.replace(/\(([^)]+)\)/, `<span class="gap drop-zone" data-correct="${item.answer}"></span>`);
+                const opts = item.options.map((o, idx) => `<div class="word-option" data-word="${o}" data-index="${idx}">${o}</div>`).join('');
+                const questionText = item.question.replace(/\(([^)]+)\)/, `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`);
                 card.innerHTML = `
                     <div class="header">
                         <div class="exercise-counter">Esercizio ${i + 1} di 10</div>
@@ -2422,7 +2422,9 @@
                     <div class="exercise-text">${questionText}</div>
                     <div class="word-options">${opts}</div>
                     <div class="controls">
-                        <div class="feedback fca01-quiz-feedback"></div>
+                        <button class="btn btn-primary verify-btn">Verifica</button>
+                        <button class="btn btn-secondary next-btn" style="display:none;">Prossimo</button>
+                        <div class="feedback"></div>
                     </div>
                 `;
             } else if (i < 20) {
@@ -2469,61 +2471,77 @@
     }
 
     function attachHandlers() {
-        let draggedOption = null;
-
+        // Cards 0-9: click-to-fill behavior (etalon Panel 1)
         container.querySelectorAll('.acc-04-card').forEach(card => {
-            if (parseInt(card.dataset.index, 10) >= 10) return;
-            card.querySelectorAll('.word-option').forEach(option => {
-                option.setAttribute('draggable', 'true');
+            const cardIndex = parseInt(card.dataset.index, 10);
+            if (cardIndex >= 10) return;
+
+            let checked = false;
+            const gapElements = Array.from(card.querySelectorAll('.gap'));
+            const wordElements = Array.from(card.querySelectorAll('.word-option'));
+            const verifyBtn = card.querySelector('.verify-btn');
+            const nextBtn = card.querySelector('.next-btn');
+            const feedback = card.querySelector('.feedback');
+
+            wordElements.forEach(wordElement => {
+                wordElement.addEventListener('click', function() {
+                    if (this.classList.contains('used') || checked) return;
+
+                    const emptyGap = gapElements.find(gap => !gap.classList.contains('filled'));
+                    if (!emptyGap) return;
+
+                    const word = this.dataset.word;
+                    emptyGap.textContent = word;
+                    emptyGap.classList.add('filled');
+                    emptyGap.dataset.word = word;
+                    emptyGap.dataset.wordIndex = this.dataset.index;
+                    this.classList.add('used');
+                });
             });
-        });
 
-        container.querySelectorAll('.word-option[draggable="true"]').forEach(option => {
-            option.addEventListener('dragstart', function(e) {
-                draggedOption = this;
-                e.dataTransfer.setData('text/plain', this.dataset.answer || this.textContent.trim());
-                e.dataTransfer.effectAllowed = 'move';
+            gapElements.forEach(gap => {
+                gap.addEventListener('click', function() {
+                    if (checked) return;
+                    if (!this.classList.contains('filled')) return;
+
+                    const wordIndex = this.dataset.wordIndex;
+                    const wordElement = wordElements.find(w => w.dataset.index === wordIndex);
+
+                    this.textContent = '';
+                    this.classList.remove('filled');
+                    delete this.dataset.word;
+                    delete this.dataset.wordIndex;
+
+                    if (wordElement) {
+                        wordElement.classList.remove('used');
+                    }
+                });
             });
-        });
 
-        container.querySelectorAll('.drop-zone').forEach(dropZone => {
-            dropZone.addEventListener('dragover', function(e) {
-                e.preventDefault();
-            });
+            verifyBtn.addEventListener('click', function() {
+                checked = true;
+                const correctAnswer = multipleChoiceData[cardIndex].answer;
+                let correct = 0;
 
-            dropZone.addEventListener('dragleave', function() {
-                return;
-            });
+                gapElements.forEach(gap => {
+                    const userAnswer = gap.dataset.word;
 
-            dropZone.addEventListener('drop', function(e) {
-                e.preventDefault();
-                if (!draggedOption || this.dataset.filled === 'true') return;
-                const card = this.closest('.acc-04-card');
-                if (!card || parseInt(card.dataset.index, 10) >= 10) return;
-
-                const correctAnswer = this.dataset.correct;
-                const answer = draggedOption.dataset.answer || draggedOption.textContent.trim();
-                this.textContent = draggedOption.textContent.trim();
-                this.dataset.filled = 'true';
-
-                card.querySelectorAll('.word-option').forEach(option => {
-                    option.setAttribute('draggable', 'false');
+                    if (userAnswer === correctAnswer) {
+                        gap.classList.remove('filled');
+                        gap.classList.add('correct');
+                        correct = 1;
+                    } else {
+                        gap.classList.add('incorrect');
+                    }
                 });
 
-                const fb = card.querySelector('.fca01-quiz-feedback');
-                if (answer === correctAnswer) {
-                    this.classList.add('correct');
-                    if (fb) {
-                        fb.textContent = '✅ Правильно!';
-                        fb.className = 'fca01-quiz-feedback correct';
-                    }
-                } else {
-                    this.classList.add('wrong');
-                    if (fb) {
-                        fb.textContent = '❌ Ошибка!';
-                        fb.className = 'fca01-quiz-feedback wrong';
-                    }
-                }
+                feedback.textContent = `Corretto: ${correct} / 1`;
+                verifyBtn.style.display = 'none';
+                nextBtn.style.display = 'inline-block';
+            });
+
+            nextBtn.addEventListener('click', function() {
+                // Do nothing - deck navigation via Prev/Next buttons only
             });
         });
 
