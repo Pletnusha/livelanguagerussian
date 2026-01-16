@@ -2407,6 +2407,7 @@
             const card = document.createElement('div');
             card.className = 'fca01-card-container acc-04-card';
             card.dataset.index = i;
+            if (i < 10) card.classList.add('universal-dd');
             if (i === 0) card.classList.add('visible');
             card.hidden = (i !== 0);
 
