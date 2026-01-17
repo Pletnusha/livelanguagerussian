@@ -2151,3 +2151,13 @@ article.exercise-card[data-target="panel-acc-open-10"],
   padding: 0.7rem 1.5rem;
   border-radius: 8px;
 }
+
+/* Panel 4 Navigation - Force horizontal layout */
+#acc-04-deck .fca01-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
