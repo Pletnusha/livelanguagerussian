@@ -2133,3 +2133,52 @@ article.exercise-card[data-target="panel-acc-open-10"],
     font-weight: bold; 
     margin-left: auto; 
 }
+
+/* Panel 4 Deck Navigation - Different sizes for Prev and Next */
+#acc-04-deck .fca01-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
+#acc-04-deck .fca01-nav .fca01-counter {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+#acc-04-deck .fca01-nav .fca01-btn-nav,
+#acc-04-deck .fca01-nav .btn.btn-primary {
+  height: 44px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#acc-04-deck .fca01-nav .btn.btn-primary {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+#acc-04-deck .fca01-nav .btn.btn-primary:hover {
+  background: #f8f8f8;
+  border-color: #2a5bd7;
+  transform: none;
+}
+
+#acc-04-deck-prev {
+  min-width: 140px;
+}
+
+#acc-04-deck-next {
+  min-width: 100px;
+}
