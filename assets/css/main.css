@@ -2190,3 +2190,11 @@ article.exercise-card[data-target="panel-acc-open-10"],
 #panel-acc-open-4 #acc-04-deck .fca01-nav{
   margin-top: 1.25rem !important;
 }
+#panel-acc-open-4 .acc-04-card > h1 {
+  margin-bottom: 0.75rem;
+}
+
+#panel-acc-open-4 .acc-04-card > h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
