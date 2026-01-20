@@ -637,13 +637,13 @@ h1, h2, h3 {
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-quiz-feedback.correct { color: #22c55e; }
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-quiz-feedback.wrong   { color: #ef4444; }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-container {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-container {
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-feedback {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-feedback {
   text-align: center;
   font-size: 1.1rem;
   font-weight: 700;
@@ -652,22 +652,22 @@ h1, h2, h3 {
   color: #999;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-feedback.correct { color: #22c55e; }
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-feedback.wrong   { color: #ef4444; }
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-feedback.correct { color: #22c55e; }
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-feedback.wrong   { color: #ef4444; }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-grid {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-col {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-col {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card {
   padding: 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -682,24 +682,24 @@ h1, h2, h3 {
   font-size: 0.95rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card:hover {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card:hover {
   background: rgba(255, 255, 255, 1);
   border-color: #2a5bd7;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card.selected {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card.selected {
   background: #fff3cd;
   border-color: #fbbf24;
   transform: scale(1.02);
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card.wrong {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card.wrong {
   background: #fee2e2;
   border-color: #ef4444;
   animation: fca01Shake 0.4s;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card.matched {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card.matched {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -849,11 +849,11 @@ h1, h2, h3 {
   }
 
   /* Flashcards: Match mode adjustments */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-grid {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-grid {
     gap: 0.65rem;
   }
 
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card {
     padding: 0.75rem;
     font-size: 0.9rem;
   }
@@ -1520,13 +1520,13 @@ h1, h2, h3 {
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-quiz-feedback.correct { color: #22c55e; }
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-quiz-feedback.wrong   { color: #ef4444; }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-container {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-container {
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-feedback {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-feedback {
   text-align: center;
   font-size: 1.1rem;
   font-weight: 700;
@@ -1535,22 +1535,22 @@ h1, h2, h3 {
   color: #999;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-feedback.correct { color: #22c55e; }
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-feedback.wrong   { color: #ef4444; }
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-feedback.correct { color: #22c55e; }
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-feedback.wrong   { color: #ef4444; }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-grid {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-col {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-col {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card {
   padding: 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -1565,24 +1565,24 @@ h1, h2, h3 {
   font-size: 0.95rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card:hover {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card:hover {
   background: rgba(255, 255, 255, 1);
   border-color: #2a5bd7;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card.selected {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card.selected {
   background: #fff3cd;
   border-color: #fbbf24;
   transform: scale(1.02);
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card.wrong {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card.wrong {
   background: #fee2e2;
   border-color: #ef4444;
   animation: fca01Shake 0.4s;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card.matched {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card.matched {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -1732,11 +1732,11 @@ h1, h2, h3 {
   }
 
   /* Flashcards: Match mode adjustments */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-grid {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-grid {
     gap: 0.65rem;
   }
 
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-match-card {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], #acc-04-cards-container) .fca01-match-card {
     padding: 0.75rem;
     font-size: 0.9rem;
   }
@@ -2132,22 +2132,4 @@ article.exercise-card[data-target="panel-acc-open-10"],
 .universal-dd .feedback { 
     font-weight: bold; 
     margin-left: auto; 
-}
-
-/* Panel 4 Deck Navigation - Different sizes for Prev and Next */
-#acc-04-deck .fca01-nav .fca01-btn-nav,
-#acc-04-deck .fca01-nav .btn.btn-primary {
-  height: 44px;
-}
-
-#acc-04-deck-prev {
-  min-width: 140px;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
-}
-
-#acc-04-deck-next {
-  min-width: 140px;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
 }
