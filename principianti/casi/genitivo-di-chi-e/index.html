@@ -2435,23 +2435,96 @@
                 const shuffledOthers = otherPairs.sort(() => Math.random() - 0.5).slice(0, 2);
                 const allPairs = [pair, ...shuffledOthers].sort(() => Math.random() - 0.5);
 
-                let fronts = allPairs.map((p, idx) => ({ text: p.left, id: idx }));
-                let backs = allPairs.map((p, idx) => ({ text: p.right, id: idx }));
+                let fronts = allPairs.map((p, idx) => ({ text: p.left, type: 'front', id: idx }));
+                let backs = allPairs.map((p, idx) => ({ text: p.right, type: 'back', id: idx }));
                 fronts.sort(() => Math.random() - 0.5);
                 backs.sort(() => Math.random() - 0.5);
 
-                const frontDivs = fronts.map(f => `<div class="fca01-match-card" data-id="${f.id}" data-type="front">${f.text}</div>`).join('');
-                const backDivs = backs.map(b => `<div class="fca01-match-card" data-id="${b.id}" data-type="back">${b.text}</div>`).join('');
+                let selectedMatchCard = null;
+                let isProcessingMatch = false;
 
-                card.innerHTML = `
-                    <div class="fca01-match-container">
-                        <p class="fca01-match-feedback"></p>
-                        <div class="fca01-match-grid">
-                            <div class="fca01-match-col">${frontDivs}</div>
-                            <div class="fca01-match-col">${backDivs}</div>
-                        </div>
-                    </div>
-                `;
+                const matchContainer = document.createElement('div');
+                matchContainer.className = 'fca01-match-container';
+
+                const feedbackEl = document.createElement('p');
+                feedbackEl.className = 'fca01-match-feedback';
+
+                const matchGrid = document.createElement('div');
+                matchGrid.className = 'fca01-match-grid';
+
+                const colFronts = document.createElement('div');
+                colFronts.className = 'fca01-match-col';
+
+                const colBacks = document.createElement('div');
+                colBacks.className = 'fca01-match-col';
+
+                matchGrid.appendChild(colFronts);
+                matchGrid.appendChild(colBacks);
+                matchContainer.appendChild(feedbackEl);
+                matchContainer.appendChild(matchGrid);
+                card.appendChild(matchContainer);
+
+                function handleMatchClick(clickedCard) {
+                    if (isProcessingMatch || clickedCard.classList.contains('matched')) return;
+                    if (clickedCard === selectedMatchCard) return;
+
+                    if (!selectedMatchCard) {
+                        selectedMatchCard = clickedCard;
+                        clickedCard.classList.add('selected');
+                        return;
+                    }
+
+                    if (selectedMatchCard.dataset.type === clickedCard.dataset.type) {
+                        selectedMatchCard.classList.remove('selected');
+                        selectedMatchCard = clickedCard;
+                        clickedCard.classList.add('selected');
+                        return;
+                    }
+
+                    const firstId = selectedMatchCard.dataset.id;
+                    const secondId = clickedCard.dataset.id;
+                    const previousCard = selectedMatchCard;
+
+                    if (firstId === secondId) {
+                        previousCard.classList.add('matched');
+                        clickedCard.classList.add('matched');
+                        feedbackEl.textContent = "✨ Отлично!";
+                        feedbackEl.className = "fca01-match-feedback correct";
+                        selectedMatchCard = null;
+                        setTimeout(() => { feedbackEl.textContent = ""; }, 1000);
+
+                        const remaining = matchContainer.querySelectorAll('.fca01-match-card:not(.matched)').length;
+                        if (remaining === 0) feedbackEl.textContent = "🎉 ПОБЕДА! 🎉";
+                    } else {
+                        isProcessingMatch = true;
+                        clickedCard.classList.add('wrong');
+                        previousCard.classList.add('wrong');
+                        feedbackEl.textContent = "Неверно";
+                        feedbackEl.className = "fca01-match-feedback wrong";
+
+                        setTimeout(() => {
+                            clickedCard.classList.remove('selected', 'wrong');
+                            previousCard.classList.remove('selected', 'wrong');
+                            feedbackEl.textContent = "";
+                            isProcessingMatch = false;
+                        }, 800);
+
+                        selectedMatchCard = null;
+                    }
+                }
+
+                function createMatchElement(item) {
+                    const div = document.createElement('div');
+                    div.className = 'fca01-match-card';
+                    div.textContent = item.text;
+                    div.dataset.id = item.id;
+                    div.dataset.type = item.type;
+                    div.addEventListener('click', () => handleMatchClick(div));
+                    return div;
+                }
+
+                fronts.forEach(item => colFronts.appendChild(createMatchElement(item)));
+                backs.forEach(item => colBacks.appendChild(createMatchElement(item)));
             } else {
                 const item = quizData[i - 20];
                 card.innerHTML = `
@@ -2563,62 +2636,6 @@
                     fb.textContent = '❌ Ошибка!';
                     fb.className = 'fca01-quiz-feedback wrong';
                 }
-            });
-        });
-
-        container.querySelectorAll('.fca01-match-container').forEach(matchContainer => {
-            let selectedCard = null;
-            let isProcessing = false;
-
-            matchContainer.querySelectorAll('.fca01-match-card').forEach(matchCard => {
-                matchCard.addEventListener('click', function() {
-                    if (isProcessing || this.classList.contains('matched')) return;
-                    if (this === selectedCard) return;
-
-                    const feedbackEl = matchContainer.querySelector('.fca01-match-feedback');
-
-                    if (!selectedCard) {
-                        selectedCard = this;
-                        this.classList.add('selected');
-                        return;
-                    }
-
-                    if (selectedCard.dataset.type === this.dataset.type) {
-                        selectedCard.classList.remove('selected');
-                        selectedCard = this;
-                        this.classList.add('selected');
-                        return;
-                    }
-
-                    isProcessing = true;
-                    const isMatch = selectedCard.dataset.id === this.dataset.id;
-
-                    if (isMatch) {
-                        selectedCard.classList.add('matched');
-                        this.classList.add('matched');
-                        feedbackEl.textContent = '✅ Правильно!';
-                        feedbackEl.className = 'fca01-match-feedback correct';
-                        selectedCard.classList.remove('selected');
-                        selectedCard = null;
-                        isProcessing = false;
-
-                        const remaining = matchContainer.querySelectorAll('.fca01-match-card:not(.matched)').length;
-                        if (remaining === 0) {
-                            feedbackEl.textContent = '🎉 Отлично!';
-                        }
-                    } else {
-                        feedbackEl.textContent = '❌ Ошибка!';
-                        feedbackEl.className = 'fca01-match-feedback wrong';
-                        const prevSelected = selectedCard;
-                        const currClicked = this;
-                        setTimeout(() => {
-                            prevSelected.classList.remove('selected');
-                            currClicked.classList.remove('selected');
-                            selectedCard = null;
-                            isProcessing = false;
-                        }, 600);
-                    }
-                });
             });
         });
 
