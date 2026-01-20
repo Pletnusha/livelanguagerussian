@@ -2182,3 +2182,11 @@ article.exercise-card[data-target="panel-acc-open-10"],
 #acc-04-deck-next {
   min-width: 100px;
 }
+/* Panel 4: guaranteed visible gap above Prev/Next */
+#panel-acc-open-4 #acc-04-deck .fca01-nav{
+  margin-top: 1.25rem !important;
+}
+/* Panel 4: guaranteed visible gap above Prev/Next */
+#panel-acc-open-4 #acc-04-deck .fca01-nav{
+  margin-top: 1.25rem !important;
+}
