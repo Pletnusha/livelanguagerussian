@@ -2400,6 +2400,19 @@
         return str.trim().replace(/\s+/g, ' ');
     }
 
+    function ensureCardTitle(card, index) {
+        const existingTitle = Array.from(card.children).find(child => child.tagName === 'H1');
+        if (existingTitle) {
+            if (card.firstElementChild !== existingTitle) {
+                card.insertBefore(existingTitle, card.firstElementChild);
+            }
+            return;
+        }
+        const title = document.createElement('h1');
+        title.textContent = `Exercise ${index + 1} of ${TOTAL_CARDS}`;
+        card.insertBefore(title, card.firstElementChild);
+    }
+
     function buildCards() {
         container.innerHTML = '';
 
@@ -2428,6 +2441,7 @@
                         <div class="feedback"></div>
                     </div>
                 `;
+                ensureCardTitle(card, i);
             } else if (i < 20) {
                 const pairIdx = i - 10;
                 const pair = matchPairs[pairIdx];
@@ -2525,6 +2539,7 @@
 
                 fronts.forEach(item => colFronts.appendChild(createMatchElement(item)));
                 backs.forEach(item => colBacks.appendChild(createMatchElement(item)));
+                ensureCardTitle(card, i);
             } else {
                 const item = quizData[i - 20];
                 card.innerHTML = `
@@ -2536,6 +2551,7 @@
                         <div class="quiz-feedback"></div>
                     </div>
                 `;
+                ensureCardTitle(card, i);
             }
             container.appendChild(card);
         }
