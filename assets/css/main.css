@@ -1249,7 +1249,7 @@ h1, h2, h3 {
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"]) .fca01-header h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
   color: #1a1a1a;
 }
 
