@@ -2046,6 +2046,25 @@ article.exercise-card[data-target="panel-acc-open-10"],
     color: #1d4ed8; 
 }
 
+/* Panel 4 deck counter placement */
+#panel-acc-open-4 #acc-04-deck {
+    position: relative;
+}
+
+#panel-acc-open-4 #acc-04-cards-container {
+    padding-top: 24px;
+}
+
+#panel-acc-open-4 #acc-04-deck-counter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #9ca3af;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .universal-dd .gap.correct { 
     background-color: #dcfce7; 
     color: #15803d; 
