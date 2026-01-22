@@ -2411,8 +2411,6 @@
         if (existingTitle) {
             if (index < 10) {
                 existingTitle.classList.add('exercise-counter');
-            } else {
-                existingTitle.classList.remove('exercise-counter');
             }
             if (card.firstElementChild !== existingTitle) {
                 card.insertBefore(existingTitle, card.firstElementChild);
