@@ -45,6 +45,11 @@
             cursor: not-allowed;
         }
 
+        #panel-acc-open-4 .acc-04-card h1.exercise-counter {
+            font-weight: 400;
+            margin: 0 0 10px;
+        }
+
     </style>
     <!-- END: Hide paid/locked UI elements -->
 
@@ -2341,7 +2346,7 @@
                 <div id="acc-04-cards-container"></div>
                 <div class="fca01-nav">
                     <button id="acc-04-deck-prev" class="fca01-btn-nav" disabled>← Назад</button>
-                    <span id="acc-04-deck-counter" class="fca01-counter exercise-counter">1 / 30</span>
+                    <span id="acc-04-deck-counter" class="fca01-counter exercise-counter" style="display:none !important;">1 / 30</span>
                     <button id="acc-04-deck-next" class="btn btn-primary">Вперед →</button>
                 </div>
             </section>
@@ -2404,6 +2409,11 @@
     function ensureCardTitle(card, index) {
         const existingTitle = Array.from(card.children).find(child => child.tagName === 'H1');
         if (existingTitle) {
+            if (index < 10) {
+                existingTitle.classList.add('exercise-counter');
+            } else {
+                existingTitle.classList.remove('exercise-counter');
+            }
             if (card.firstElementChild !== existingTitle) {
                 card.insertBefore(existingTitle, card.firstElementChild);
             }
@@ -2411,6 +2421,9 @@
         }
         const title = document.createElement('h1');
         title.textContent = `Exercise ${index + 1} of ${TOTAL_CARDS}`;
+        if (index < 10) {
+            title.classList.add('exercise-counter');
+        }
         card.insertBefore(title, card.firstElementChild);
     }
 
@@ -2430,9 +2443,6 @@
                 const opts = item.options.map((o, idx) => `<div class="word-option" data-word="${o}" data-index="${idx}">${o}</div>`).join('');
                 const questionText = item.question.replace(/\(([^)]+)\)/, `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`);
                 card.innerHTML = `
-                    <div class="header">
-                        <div class="exercise-counter">Esercizio ${i + 1} di 10</div>
-                    </div>
                     <div class="instruction">Completa la frase scegliendo la forma corretta</div>
                     <div class="exercise-text">${questionText}</div>
                     <div class="word-options">${opts}</div>
