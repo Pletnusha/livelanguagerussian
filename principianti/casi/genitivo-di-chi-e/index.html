@@ -44,6 +44,15 @@
             opacity: 0.6;
             cursor: not-allowed;
         }
+
+        #panel-acc-open-4 .fca01-nav {
+            display: none;
+        }
+
+        #panel-acc-open-4 .fca01-counter {
+            display: none;
+        }
+
     </style>
     <!-- END: Hide paid/locked UI elements -->
 
@@ -2336,11 +2345,11 @@
         </article>
 
         <div class="exercise-panel" id="panel-acc-open-4" data-access="public" hidden>
-            <section id="acc-04-deck">
+            <section id="acc-04-deck" class="universal-dd">
                 <div id="acc-04-cards-container"></div>
                 <div class="fca01-nav">
                     <button id="acc-04-deck-prev" class="fca01-btn-nav" disabled>← Назад</button>
-                    <span id="acc-04-deck-counter" class="fca01-counter">1 / 30</span>
+                    <span id="acc-04-deck-counter" class="fca01-counter exercise-counter">1 / 30</span>
                     <button id="acc-04-deck-next" class="btn btn-primary">Вперед →</button>
                 </div>
             </section>
@@ -2403,6 +2412,9 @@
     function ensureCardTitle(card, index) {
         const existingTitle = Array.from(card.children).find(child => child.tagName === 'H1');
         if (existingTitle) {
+            if (index < 10) {
+                existingTitle.classList.add('exercise-counter');
+            }
             if (card.firstElementChild !== existingTitle) {
                 card.insertBefore(existingTitle, card.firstElementChild);
             }
@@ -2410,6 +2422,9 @@
         }
         const title = document.createElement('h1');
         title.textContent = `Exercise ${index + 1} of ${TOTAL_CARDS}`;
+        if (index < 10) {
+            title.classList.add('exercise-counter');
+        }
         card.insertBefore(title, card.firstElementChild);
     }
 
