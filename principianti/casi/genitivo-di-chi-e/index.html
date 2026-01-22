@@ -50,14 +50,6 @@
             margin: 0 0 10px;
         }
 
-        #panel-acc-open-4 .acc-04-card.universal-dd,
-        #panel-acc-open-4 .acc-04-card.universal-dd::before,
-        #panel-acc-open-4 .acc-04-card.universal-dd::after {
-            border: none !important;
-            outline: none !important;
-            box-shadow: none !important;
-        }
-
     </style>
     <!-- END: Hide paid/locked UI elements -->
 
@@ -2419,8 +2411,6 @@
         if (existingTitle) {
             if (index < 10) {
                 existingTitle.classList.add('exercise-counter');
-            } else {
-                existingTitle.classList.remove('exercise-counter');
             }
             if (card.firstElementChild !== existingTitle) {
                 card.insertBefore(existingTitle, card.firstElementChild);
