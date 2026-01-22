@@ -2404,6 +2404,9 @@
     function ensureCardTitle(card, index) {
         const existingTitle = Array.from(card.children).find(child => child.tagName === 'H1');
         if (existingTitle) {
+            if (index < 10) {
+                existingTitle.classList.add('exercise-counter');
+            }
             if (card.firstElementChild !== existingTitle) {
                 card.insertBefore(existingTitle, card.firstElementChild);
             }
@@ -2411,6 +2414,9 @@
         }
         const title = document.createElement('h1');
         title.textContent = `Exercise ${index + 1} of ${TOTAL_CARDS}`;
+        if (index < 10) {
+            title.classList.add('exercise-counter');
+        }
         card.insertBefore(title, card.firstElementChild);
     }
 
