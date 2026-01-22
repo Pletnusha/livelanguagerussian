@@ -2441,9 +2441,6 @@
                 const opts = item.options.map((o, idx) => `<div class="word-option" data-word="${o}" data-index="${idx}">${o}</div>`).join('');
                 const questionText = item.question.replace(/\(([^)]+)\)/, `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`);
                 card.innerHTML = `
-                    <div class="header">
-                        <div class="exercise-counter">Esercizio ${i + 1} di 10</div>
-                    </div>
                     <div class="instruction">Completa la frase scegliendo la forma corretta</div>
                     <div class="exercise-text">${questionText}</div>
                     <div class="word-options">${opts}</div>
