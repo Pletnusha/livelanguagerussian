@@ -2561,6 +2561,11 @@
                 `;
                 ensureCardTitle(card, i);
             }
+            if (i >= 10) {
+                const instructionEl = document.createElement('div');
+                instructionEl.className = 'instruction';
+                card.insertBefore(instructionEl, card.firstElementChild);
+            }
             container.appendChild(card);
         }
         attachHandlers();
