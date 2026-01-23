@@ -2427,6 +2427,7 @@
 
     function buildCards() {
         container.innerHTML = '';
+        let instructionTemplate = null;
 
         for (let i = 0; i < TOTAL_CARDS; i++) {
             const card = document.createElement('div');
@@ -2450,6 +2451,9 @@
                     </div>
                 `;
                 ensureCardTitle(card, i);
+                if (!instructionTemplate) {
+                    instructionTemplate = card.querySelector('.instruction');
+                }
             } else if (i < 20) {
                 const pairIdx = i - 10;
                 const pair = matchPairs[pairIdx];
