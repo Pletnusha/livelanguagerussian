@@ -45,11 +45,6 @@
             cursor: not-allowed;
         }
 
-        #panel-acc-open-4 .acc-04-card h1.exercise-counter {
-            font-weight: 400;
-            margin: 0 0 10px;
-        }
-
     </style>
     <!-- END: Hide paid/locked UI elements -->
 
@@ -775,7 +770,7 @@
                 <div id="ex-flashcards-acc-03-section-study" class="fca01-section visible">
                     <div id="ex-flashcards-acc-03-learning-area-study"></div>
                     <div class="fca01-nav">
-                        <button id="ex-flashcards-acc-03-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <button id="ex-flashcards-acc-03-prev-btn" class="btn btn-primary">← Назад</button>
                         <span id="ex-flashcards-acc-03-counter" class="fca01-counter">1 / 7</span>
                         <button id="ex-flashcards-acc-03-next-btn" class="btn btn-primary">Вперед →</button>
                     </div>
@@ -2337,7 +2332,7 @@
         <!-- Panel 4 (public) -->
         <article class="exercise-card" data-status="open" data-target="panel-acc-open-4">
             <span class="exercise-type">Quiz</span>
-            <h3 class="exercise-title">QUIZ</h3>
+            <h3 class="exercise-title">TEST</h3>
             <span class="card-subtitle"></span>
         </article>
 
@@ -2346,7 +2341,7 @@
                 <div id="acc-04-cards-container"></div>
                 <div class="fca01-nav">
                     <button id="acc-04-deck-prev" class="fca01-btn-nav" disabled>← Назад</button>
-                    <span id="acc-04-deck-counter" class="fca01-counter exercise-counter" style="display:none !important;">1 / 30</span>
+                    <span id="acc-04-deck-counter" class="fca01-counter exercise-counter">1 / 30</span>
                     <button id="acc-04-deck-next" class="btn btn-primary">Вперед →</button>
                 </div>
             </section>
@@ -2427,20 +2422,23 @@
 
     function buildCards() {
         container.innerHTML = '';
-        let instructionTemplate = null;
 
         for (let i = 0; i < TOTAL_CARDS; i++) {
             const card = document.createElement('div');
             card.className = 'fca01-card-container acc-04-card';
             card.dataset.index = i;
+            if (i < 10) card.classList.add('universal-dd');
             if (i === 0) card.classList.add('visible');
             card.hidden = (i !== 0);
 
             if (i < 10) {
                 const item = multipleChoiceData[i];
                 const opts = item.options.map((o, idx) => `<div class="word-option" data-word="${o}" data-index="${idx}">${o}</div>`).join('');
-                const questionText = item.question.replace(/\(([^)]+)\)/, `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`);
+                const questionText = item.question.replace(/\(([^)]+)\)/, `<span class="gap" data-gap="1" data-correct="$`{item.answer}"></span>`);
                 card.innerHTML = `
+                    <div class="header">
+                        <div class="exercise-counter">Esercizio ${i + 1} di 10</div>
+                    </div>
                     <div class="instruction">Completa la frase scegliendo la forma corretta</div>
                     <div class="exercise-text">${questionText}</div>
                     <div class="word-options">${opts}</div>
@@ -2451,9 +2449,6 @@
                     </div>
                 `;
                 ensureCardTitle(card, i);
-                if (!instructionTemplate) {
-                    instructionTemplate = card.querySelector('.instruction');
-                }
             } else if (i < 20) {
                 const pairIdx = i - 10;
                 const pair = matchPairs[pairIdx];
@@ -2555,8 +2550,8 @@
             } else {
                 const item = quizData[i - 20];
                 card.innerHTML = `
-                    <h3 class="quiz-title">Write</h3>
-                    <p class="quiz-instruction">Scrivete la forma corretta</p>
+                    <h3 class="quiz-title">WRIGHT</h3>
+                    <p class="quiz-instruction">Scrivi la forma corretta</p>
                     <div class="quiz-item" data-id="${item.id}">
                         <div class="quiz-prompt">${item.promptPrefix}<input type="text" class="quiz-input" data-index="${i - 20}">${item.promptSuffix}</div>
                         <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">Проверить</button></div>
@@ -2564,11 +2559,6 @@
                     </div>
                 `;
                 ensureCardTitle(card, i);
-            }
-            if (i >= 10) {
-                const instructionEl = document.createElement('div');
-                instructionEl.className = 'instruction';
-                card.insertBefore(instructionEl, card.firstElementChild);
             }
             container.appendChild(card);
         }
