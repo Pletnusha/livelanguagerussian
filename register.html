@@ -1,4 +1,4 @@
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <!-- Supabase JS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     
-    <!-- Google reCAPTCHA -->
+    <!-- Google reCAPTCHA v3 -->
     <script src="https://www.google.com/recaptcha/api.js?render=6LecDGcsAAAAAKhBMlFk7ihhOZknno66lgb7uSGU"></script>
     
     <style>
@@ -131,6 +131,12 @@
         
         .required {
             color: red;
+        }
+        
+        .recaptcha-badge {
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -259,11 +265,11 @@
             </div>
         </div>
         
-        <!-- reCAPTCHA -->
-        <div class="form-group" style="margin-top: 20px;">
-
-            <div class="g-recaptcha" data-sitekey="6LfYEGcsAAAAAPyXNBwyYDsozFk7OMK6e2P_eqDW"></div>
-            <div id="recaptchaError" class="error"></div>
+        <!-- reCAPTCHA v3 badge notice -->
+        <div class="recaptcha-badge">
+            This site is protected by reCAPTCHA and the Google
+            <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+            <a href="https://policies.google.com/terms">Terms of Service</a> apply.
         </div>
         
         <!-- Submit Button -->
@@ -281,9 +287,12 @@
         // SUPABASE CONFIGURATION
         // ============================================
         const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
-        const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEYeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc'; // Replace with your actual anon key
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5McY'; // Replace with your actual anon key
         
         const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        
+        // reCAPTCHA v3 site key
+        const RECAPTCHA_SITE_KEY = '6LecDGcsAAAAAKhBMlFk7ihhOZknno66lgb7uSGU';
         
         // ============================================
         // PASSWORD GENERATOR
@@ -355,13 +364,6 @@
                 isValid = false;
             }
             
-            // Validate reCAPTCHA
-            const recaptchaResponse = grecaptcha.getResponse();
-            if (!recaptchaResponse) {
-                document.getElementById('recaptchaError').textContent = 'Completa il reCAPTCHA';
-                isValid = false;
-            }
-            
             return isValid;
         }
         
@@ -380,24 +382,31 @@
             document.getElementById('loadingMessage').style.display = 'block';
             document.getElementById('submitBtn').disabled = true;
             
-            // Collect form data
-            const firstName = document.getElementById('firstName').value.trim();
-            const lastName = document.getElementById('lastName').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const countryCode = document.getElementById('countryCode').value;
-            const whatsappPhone = countryCode + document.getElementById('whatsappPhone').value.trim();
-            const trackLevel = document.getElementById('trackLevel').value;
-            const marketingConsent = document.getElementById('marketingConsent').checked;
-            const dataConsent = document.getElementById('dataConsent').checked;
-            
-            // Collect selected courses
-            const courses = Array.from(document.querySelectorAll('input[name="courses"]:checked'))
-                .map(cb => cb.value);
-            
-            // Generate password
-            const generatedPassword = generatePassword();
-            
             try {
+                // Get reCAPTCHA v3 token
+                const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, {action: 'register'});
+                
+                if (!recaptchaToken) {
+                    throw new Error('reCAPTCHA verification failed');
+                }
+                
+                // Collect form data
+                const firstName = document.getElementById('firstName').value.trim();
+                const lastName = document.getElementById('lastName').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const countryCode = document.getElementById('countryCode').value;
+                const whatsappPhone = countryCode + document.getElementById('whatsappPhone').value.trim();
+                const trackLevel = document.getElementById('trackLevel').value;
+                const marketingConsent = document.getElementById('marketingConsent').checked;
+                const dataConsent = document.getElementById('dataConsent').checked;
+                
+                // Collect selected courses
+                const courses = Array.from(document.querySelectorAll('input[name="courses"]:checked'))
+                    .map(cb => cb.value);
+                
+                // Generate password
+                const generatedPassword = generatePassword();
+                
                 // Sign up with Supabase Auth
                 const { data, error } = await supabase.auth.signUp({
                     email: email,
@@ -411,7 +420,8 @@
                             courses: courses,
                             marketing_consent: marketingConsent,
                             data_processing_consent: dataConsent,
-                            generated_password: generatedPassword
+                            generated_password: generatedPassword,
+                            recaptcha_token: recaptchaToken
                         }
                     }
                 });
