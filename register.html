@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrazione - Livelanguage Russian</title>
     
-    <!-- Supabase JS SDK -->
-   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0"></script>
+    <!-- Supabase JS SDK - specific version -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js"></script>
     
     <!-- Google reCAPTCHA v3 -->
     <script src="https://www.google.com/recaptcha/api.js?render=6LecDGcsAAAAAKhBMIFk7ihhOZknno66lgb7uSGU"></script>
@@ -287,9 +287,11 @@
         // SUPABASE CONFIGURATION
         // ============================================
         const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5McY'; // Replace with your actual anon key
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5McY';
         
-       const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        // Create Supabase client using the global supabase object
+        const { createClient } = supabase;
+        const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         
         // reCAPTCHA v3 site key
         const RECAPTCHA_SITE_KEY = '6LecDGcsAAAAAKhBMIFk7ihhOZknno66lgb7uSGU';
@@ -407,8 +409,12 @@
                 // Generate password
                 const generatedPassword = generatePassword();
                 
+                console.log('Attempting signup with Supabase...');
+                console.log('Client exists:', !!supabaseClient);
+                console.log('Client.auth exists:', !!supabaseClient.auth);
+                
                 // Sign up with Supabase Auth
-                const { data, error } = await supabase.auth.signUp({
+                const { data, error } = await supabaseClient.auth.signUp({
                     email: email,
                     password: generatedPassword,
                     options: {
