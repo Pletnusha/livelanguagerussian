@@ -1,0 +1,29 @@
+/* Hide the unlock CTA section */
+.cta-section {
+    display: none !important;
+}
+
+/* Blocked panel state - visible but non-interactive */
+.exercise-panel[data-state="blocked"] {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.5;
+    filter: grayscale(0.3);
+}
+
+.exercise-panel[data-state="blocked"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 100;
+}
+
+/* Exercise card blocked state indicator */
+.exercise-card[data-card-state="blocked"] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
