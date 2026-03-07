@@ -149,7 +149,13 @@
                 }
                 
                 console.log('Login successful:', data);
-                
+
+                // Update last_login in profiles
+                await supabaseClient
+                    .from('profiles')
+                    .update({ last_login: new Date().toISOString() })
+                    .eq('user_id', data.user.id);
+
                 // Show success
                 document.getElementById('loginForm').style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';

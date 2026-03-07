@@ -1,6 +1,5 @@
 import DragDropExercise from '/assets/js/engines/DragDropExercise.js';
 import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
-import QuizExercise from '/assets/js/engines/QuizExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
@@ -8,6 +7,99 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // Page: accusativo-come-ti-chiami
 // ============================================================
 
+// ============================================================
+// PANEL 4 — public · Quiz deck (come ti chiami / accusativo)
+// ============================================================
+function initPanel4Acc() {
+    const questions = [
+        // Блок 1
+        { sentence: "___ зовут Александр.", correct: "Моего брата",    options: ["Мой брат",     "Моего брата",    "Моему брату"] },
+        { sentence: "___ зовут Артём.",     correct: "Его",            options: ["Он",            "Его",            "Ему"] },
+        { sentence: "___ зовут Анна.",      correct: "Мою маму",       options: ["Моя мама",      "Мою маму",       "Моей маме"] },
+        { sentence: "___ зовут Иван.",      correct: "Меня",           options: ["Я",             "Меня",           "Мне"] },
+        { sentence: "___ зовут Владислав.", correct: "Нашего дедушку", options: ["Наш дедушка",   "Нашего дедушку", "Нашему дедушке"] },
+        { sentence: "___ зовут Наталья.",   correct: "Её подругу",     options: ["Её подруга",    "Её подругу",     "Её подруге"] },
+        { sentence: "Как ___ зовут?",       correct: "тебя",           options: ["ты",            "тебя",           "тебе"] },
+        { sentence: "___ зовут Андрей.",    correct: "Её мужа",        options: ["Её муж",        "Её мужа",        "Её мужу"] },
+        { sentence: "___ зовут Елена.",     correct: "Его девушку",    options: ["Его девушка",   "Его девушку",    "Его девушке"] },
+        { sentence: "___ зовут Анатолий.",  correct: "Нашего сына",    options: ["Наш сын",       "Нашего сына",    "Нашему сыну"] },
+        // Блок 2
+        { sentence: "___ зовут Ирина.",          correct: "Нашу сестру",   options: ["Наша сестра",   "Нашу сестру",    "Нашей сестре"] },
+        { sentence: "___ зовут Антон и Лена.",   correct: "Их",            options: ["Они",           "Их",             "Им"] },
+        { sentence: "Как зовут ___?",            correct: "твоего друга",  options: ["твой друг",     "твоего друга",   "твоему другу"] },
+        { sentence: "___ зовут Анастасия.",      correct: "Её",            options: ["Она",           "Её",             "Ей"] },
+        { sentence: "___ зовут Виктория.",       correct: "Нашу соседку",  options: ["Наша соседка",  "Нашу соседку",   "Нашей соседке"] },
+        { sentence: "___ зовут Дмитрий.",        correct: "Их соседа",     options: ["Их сосед",      "Их соседа",      "Их соседу"] },
+        { sentence: "___ зовут Игорь и Соня.",   correct: "Нас",           options: ["Мы",            "Нас",            "Нам"] },
+        { sentence: "Как зовут ___?",            correct: "вашу тётю",     options: ["ваша тётя",     "вашу тётю",      "вашей тёте"] },
+        { sentence: "___ зовут Альберт.",        correct: "Твоего дядю",   options: ["Твой дядя",     "Твоего дядю",    "Твоему дяде"] },
+        { sentence: "___ зовут Людмила.",        correct: "Твою бабушку",  options: ["Твоя бабушка",  "Твою бабушку",   "Твоей бабушке"] },
+        // Блок 3
+        { sentence: "___ зовут Николай.",   correct: "Нашего папу",    options: ["Наш папа",      "Нашего папу",    "Нашему папе"] },
+        { sentence: "___ зовут Юлия.",      correct: "Её",             options: ["Она",           "Её",             "Ей"] },
+        { sentence: "Как ___ зовут?",       correct: "вас",            options: ["вы",            "вас",            "вам"] },
+        { sentence: "___ зовут Светлана.",  correct: "Мою коллегу",    options: ["Моя коллега",   "Мою коллегу",    "Моей коллеге"] },
+        { sentence: "___ зовут Евгений.",   correct: "Его",            options: ["Он",            "Его",            "Ему"] },
+        { sentence: "Как зовут ___?",       correct: "вашего коллегу", options: ["ваш коллега",   "вашего коллегу", "вашему коллеге"] },
+        { sentence: "___ зовут Паша и Маша.",  correct: "Их",          options: ["Они",           "Их",             "Им"] },
+        { sentence: "___ зовут Михаил.",    correct: "Моего племянника",options: ["Мой племянник", "Моего племянника","Моему племяннику"] },
+        { sentence: "___ зовут Татьяна.",   correct: "Его жену",       options: ["Его жена",      "Его жену",       "Его жене"] },
+        { sentence: "Как зовут ___?",       correct: "твою подругу",   options: ["твоя подруга",  "твою подругу",   "твоей подруге"] },
+    ];
+
+    const shuffled = [...questions].sort(() => Math.random() - 0.5);
+    let current = 0;
+
+    const container = document.getElementById('acc-ctc-04-cards-container');
+    const prevBtn   = document.getElementById('acc-ctc-04-deck-prev');
+    const nextBtn   = document.getElementById('acc-ctc-04-deck-next');
+    const counterEl = document.getElementById('acc-ctc-04-deck-counter');
+
+    function render(index) {
+        const q = shuffled[index];
+        container.innerHTML = `
+            <div class="acc04-card">
+                <p class="acc04-sentence">${q.sentence.replace('___', '<span class="acc04-blank">___</span>')}</p>
+                <div class="acc04-options">
+                    ${q.options.map(opt => `<button class="acc04-opt" data-value="${opt}">${opt}</button>`).join('')}
+                </div>
+                <div class="acc04-feedback"></div>
+            </div>
+        `;
+        container.querySelectorAll('.acc04-opt').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const sel = btn.getAttribute('data-value');
+                const fb  = container.querySelector('.acc04-feedback');
+                container.querySelectorAll('.acc04-opt').forEach(b => b.disabled = true);
+                if (sel === q.correct) {
+                    btn.classList.add('correct');
+                    fb.textContent = '✓ Правильно!';
+                    fb.className = 'acc04-feedback correct';
+                } else {
+                    btn.classList.add('wrong');
+                    fb.textContent = `✗ Правильно: ${q.correct}`;
+                    fb.className = 'acc04-feedback wrong';
+                    container.querySelectorAll('.acc04-opt').forEach(b => {
+                        if (b.getAttribute('data-value') === q.correct) b.classList.add('correct');
+                    });
+                }
+            });
+        });
+        counterEl.textContent = `${index + 1} / ${shuffled.length}`;
+        prevBtn.disabled = index === 0;
+        nextBtn.disabled = index === shuffled.length - 1;
+    }
+
+    prevBtn.addEventListener('click', () => { if (current > 0)                   { current--; render(current); } });
+    nextBtn.addEventListener('click', () => { if (current < shuffled.length - 1) { current++; render(current); } });
+
+    render(0);
+}
+
+// ============================================================
+// EXERCISE DATA & INITIALIZERS
+// Page: accusativo-come-ti-chiami
+// ============================================================
 const panelInitializers = {
 
     // --- Panel 1 (public) - Drag & Drop ---
@@ -152,7 +244,7 @@ const panelInitializers = {
                 instruction: "Completa la frase scegliendo 2 espressioni",
                 text: "{{1}} (сосед) зовут Барсик, а {{2}} (кот) зовут Мурка.",
                 words: ["нашего соседу", "нашего соседа", "его кота", "его кот"],
-                correctAnswers: { 1: "мою подругу", 2: "её кошку" }
+                correctAnswers: { 1: "нашего соседа", 2: "его кота" }
             },
             {
                 instruction: "Completa la frase scegliendo 2 espressionи",
@@ -170,7 +262,7 @@ const panelInitializers = {
                 instruction: "Completa la frase scegliendo 2 espressionи",
                 text: "{{1}} (племянник) зовут Анатолий, а {{2}} (сын) зовут Тимур.",
                 words: ["наш племянник", "нашего племянника", "его сына", "её сына"],
-                correctAnswers: { 1: "мою подругу", 2: "её кошку" }
+                correctAnswers: { 1: "нашего племянника", 2: "его сына" }
             },
             {
                 instruction: "Completa la frase scegliendo 2 espressionи",
@@ -189,7 +281,7 @@ const panelInitializers = {
 
     // --- Panel 2 (public) - Flashcards ---
     'panel-acc-open-2': () => new FlashcardExercise({
-        rootId: 'ex-flashcards-acc-03',
+        rootId: 'ex-flashcards-acc-02',
         cards: [
             { front: "Моя сестра Катя.", back: "Мою сестру зовут Катя." },
             { front: "Моя мама Анна.", back: "Мою маму зовут Анна." },
@@ -221,20 +313,21 @@ const panelInitializers = {
     'panel-acc-open-8': () => new FlashcardExercise({
         rootId: 'ex-flashcards-acc-08',
         cards: [
-            { front: "Моя сестра Катя.", back: "Мою сестру зовут Катя." },
-            { front: "Моя мама Анна.", back: "Мою маму зовут Анна." },
-            { front: "Твоя кошка Мурка.", back: "Твою кошку зовут Мурка." },
-            { front: "Наша подруга Наташа.", back: "Нашу подругу зовут Наташа." },
-            { front: "Её племянница Александра.", back: "Её племянницу зовут Александра." },
-            { front: "Его девушка Мария.", back: "Как зовут его девушку?" },
-            { front: "Твоя жена Светлана.", back: "Твою жену зовут Светлана?" },
-            { front: "Моя бабушка Нина.", back: "Мою бабушку зовут Нина." }
+            { front: "Моя соседка Виктория.",  back: "Мою соседку зовут Виктория." },
+            { front: "Наша подруга Ирина.",    back: "Нашу подругу зовут Ирина." },
+            { front: "Его собака Стрелка.",    back: "Его собаку зовут Стрелка." },
+            { front: "Моя тётя Анна.",         back: "Мою тётю зовут Анна." },
+            { front: "Ваша коллега Светлана.", back: "Вашу коллегу зовут Светлана." },
+            { front: "Его жена Александра.",   back: "Его жену зовут Александра." },
+            { front: "Его девушка Катя.",      back: "Его девушку зовут Катя." },
+            { front: "Наша студентка Вера.",   back: "Нашу студентку зовут Вера." },
+            { front: "Ваша дочь Елена.",       back: "Вашу дочь зовут Елена." },
         ]
     }),
 
     // --- Panel 3 (public) - Flashcards ---
     'panel-acc-open-3': () => new FlashcardExercise({
-        rootId: 'ex-flashcards-acc-02',
+        rootId: 'ex-flashcards-acc-03',
         cards: [
             { front: "Мой отец Александр.", back: "Моего отца зовут Александр." },
             { front: "Твой брат Андрей.", back: "Твоего брата зовут Андрей." },
@@ -246,25 +339,43 @@ const panelInitializers = {
         ]
     }),
 
-    // --- Panel 4 (public) - Quiz ---
-    'panel-acc-open-4': () => new QuizExercise({
-        panelId: 'panel-acc-open-4',
-        listId: 'panel-acc-open-4-quiz-list',
-        questions: [
-            { id: "fam-001", promptPrefix: "Моя мама ", promptSuffix: " зовут Анна.", answers: ["Мою маму"] },
-            { id: "fam-002", promptPrefix: "Мой брат ", promptSuffix: " зовут Александр.", answers: ["Моего брата"] },
-            { id: "fam-003", promptPrefix: "Его девушка ", promptSuffix: " зовут Елена.", answers: ["Его девушку"] },
-            { id: "fam-004", promptPrefix: "Наш дедушка ", promptSuffix: " зовут Владислав.", answers: ["Нашего дедушку"] },
-            { id: "fam-005", promptPrefix: "Её подруга ", promptSuffix: " зовут Наталья.", answers: ["Её подругу"] },
-            { id: "fam-006", promptPrefix: "Как зовут твой друг ", promptSuffix: " ?", answers: ["твоего друга"] },
-            { id: "fam-007", promptPrefix: "Их дочь ", promptSuffix: " зовут Катя.", answers: ["Их дочь"] },
-            { id: "fam-008", promptPrefix: "Наш сын ", promptSuffix: " зовут Анатолий.", answers: ["нашего сына"] },
-            { id: "fam-009", promptPrefix: "Как зовут ваша тётя ", promptSuffix: " ?", answers: ["вашу тётю"] },
-            { id: "fam-010", promptPrefix: "Твой дядя ", promptSuffix: " - зовут Альберт?!", answers: ["твоего дядю"] }
+    // --- Panel 4 (public) - Quiz deck ---
+    'panel-acc-open-4': () => initPanel4Acc(),
+
+    // --- Panel 9 (paid) - Flashcards (personal pronouns singular: я/ты/он/она) ---
+    'panel-acc-open-9': () => new FlashcardExercise({
+        rootId: 'ex-flashcards-acc-09',
+        cards: [
+            { front: "Он — Дмитрий.",    back: "Его зовут Дмитрий." },
+            { front: "Она — Наташа.",    back: "Её зовут Наташа." },
+            { front: "Я — Александр.",   back: "Меня зовут Александр." },
+            { front: "Ты — Ирина?",      back: "Тебя зовут Ирина?" },
+            { front: "Он — Артём.",      back: "Его зовут Артём." },
+            { front: "Она — Валерия.",   back: "Её зовут Валерия." },
+            { front: "Я — Николай.",     back: "Меня зовут Николай." },
+            { front: "Ты — Людмила?",    back: "Тебя зовут Людмила?" },
+            { front: "Она — Виктория.",  back: "Её зовут Виктория." },
+            { front: "Он — Евгений.",    back: "Его зовут Евгений." },
+        ]
+    }),
+
+    // --- Panel 10 (paid) - Flashcards (personal pronouns mixed: он/она/они/мы/вы) ---
+    'panel-acc-open-10': () => new FlashcardExercise({
+        rootId: 'ex-flashcards-acc-10',
+        cards: [
+            { front: "Они — Антон и Лена.",   back: "Их зовут Антон и Лена." },
+            { front: "Он — Кирилл.",          back: "Его зовут Кирилл." },
+            { front: "Она — Анастасия.",      back: "Её зовут Анастасия." },
+            { front: "Мы — Игорь и Соня.",    back: "Нас зовут Игорь и Соня." },
+            { front: "Они — Паша и Маша.",    back: "Их зовут Паша и Маша." },
+            { front: "Вы — Михаил?",          back: "Вас зовут Михаил?" },
+            { front: "Он — Степан.",          back: "Его зовут Степан." },
+            { front: "Она — Юлия.",           back: "Её зовут Юлия." },
+            { front: "Они — Серёжа и Вика.",  back: "Их зовут Серёжа и Вика." },
+            { front: "Мы — Андрей и Таня.",   back: "Нас зовут Андрей и Таня." },
         ]
     })
 
-    // Panel 9 and 10 are empty (paid, no data yet)
 };
 
 // Initialize

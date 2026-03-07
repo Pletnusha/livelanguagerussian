@@ -86,10 +86,148 @@ h1 {
     background: #ff7e1f;
 }
 
-/* === HUBSPOT FORM === */
-.form-container {
+/* === REGISTRATION FORM === */
+.reg-form {
     margin-top: 2rem;
     width: 100%;
+    text-align: left;
+}
+
+.reg-group {
+    margin-bottom: 1rem;
+}
+
+.reg-group input[type="text"],
+.reg-group input[type="email"],
+.reg-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    background: #fff;
+    transition: border-color 0.2s;
+}
+
+.reg-group input:focus,
+.reg-group select:focus {
+    outline: none;
+    border-color: #6B1D36;
+}
+
+.reg-phone {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.reg-phone select {
+    width: 110px;
+    flex-shrink: 0;
+    padding: 0.75rem 0.5rem;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #000;
+    background: #fff;
+}
+
+.reg-phone input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.reg-error {
+    color: #c0392b;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    min-height: 1rem;
+}
+
+.reg-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6B1D36;
+    margin-bottom: 0.5rem;
+}
+
+.reg-courses {
+    background: #f9f5f6;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.reg-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.reg-check-item input[type="checkbox"] {
+    margin-top: 2px;
+    accent-color: #6B1D36;
+    flex-shrink: 0;
+}
+
+.reg-privacy {
+    background: #f9f5f6;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.reg-privacy-text {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.reg-privacy-text a {
+    color: #6B1D36;
+}
+
+.reg-recaptcha {
+    font-size: 0.75rem;
+    color: #999;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+}
+
+.reg-recaptcha a {
+    color: #999;
+}
+
+.reg-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.reg-success p {
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.reg-loading {
+    text-align: center;
+    padding: 1rem;
+    color: #6B1D36;
+    font-weight: 600;
 }
 
 @media (min-width: 768px) {

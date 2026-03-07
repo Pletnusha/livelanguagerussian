@@ -10,10 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/css/landing.css">
-    <script src="https://js-eu1.hsforms.net/forms/embed/144461606.js" defer></script>
-</head>
 
+    <!-- Supabase JS SDK -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js"></script>
+    <!-- Google reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LecDGcsAAAAAKhBMIFk7ihhOZknno66lgb7uSGU"></script>
+</head>
 <body>
+
     <div class="page">
 
         <h1>
@@ -36,10 +40,233 @@
             che cosa aspetti?
         </div>
 
-        <div class="form-container">
-            <div class="hs-form-frame" data-region="eu1" data-form-id="4fea9336-822f-4468-b513-4b61822c4ea1" data-portal-id="144461606"></div>
+        <!-- Messaggio di successo -->
+        <div id="successMessage" class="reg-success" style="display:none;">
+            <strong>Registrazione completata!</strong>
+            <p>Controlla la tua email per le credenziali di accesso.</p>
+        </div>
+
+        <!-- Form di registrazione Supabase -->
+        <form id="registrationForm" class="reg-form">
+
+            <div class="reg-group">
+                <input type="text" id="firstName" placeholder="Nome *" required>
+                <div id="firstNameError" class="reg-error"></div>
+            </div>
+
+            <div class="reg-group">
+                <input type="text" id="lastName" placeholder="Cognome *" required>
+                <div id="lastNameError" class="reg-error"></div>
+            </div>
+
+            <div class="reg-group">
+                <input type="email" id="email" placeholder="E-mail *" required>
+                <div id="emailError" class="reg-error"></div>
+            </div>
+
+            <div class="reg-group">
+                <div class="reg-phone">
+                    <select id="countryCode">
+                        <option value="+39" selected>IT +39</option>
+                        <option value="+1">US +1</option>
+                        <option value="+44">UK +44</option>
+                        <option value="+33">FR +33</option>
+                        <option value="+49">DE +49</option>
+                        <option value="+7">RU +7</option>
+                    </select>
+                    <input type="text" id="whatsappPhone" placeholder="WhatsApp *" required>
+                </div>
+                <div id="phoneError" class="reg-error"></div>
+            </div>
+
+            <div class="reg-group">
+                <select id="trackLevel" required>
+                    <option value="">-- Seleziona il tuo livello --</option>
+                    <option value="principianti">Principianti</option>
+                    <option value="livello_elementare">Livello elementare</option>
+                    <option value="livello_di_base">Livello di base</option>
+                </select>
+                <div id="levelError" class="reg-error"></div>
+            </div>
+
+            <div class="reg-group reg-courses">
+                <p class="reg-label">Sarei interessato/interessata *</p>
+                <label class="reg-check-item"><input type="checkbox" name="courses" value="Verbi di moto"> Verbi di moto</label>
+                <label class="reg-check-item"><input type="checkbox" name="courses" value="Date e gli orari"> Date e gli orari</label>
+                <label class="reg-check-item"><input type="checkbox" name="courses" value="Verbi di moto con prefissi"> Verbi di moto con prefissi</label>
+                <label class="reg-check-item"><input type="checkbox" name="courses" value="Casi e complementi"> Casi e complementi</label>
+                <label class="reg-check-item"><input type="checkbox" name="courses" value="Lezioni individuali"> Lezioni individuali</label>
+                <div id="coursesError" class="reg-error"></div>
+            </div>
+
+            <div class="reg-privacy">
+                <p class="reg-privacy-text">
+                    Livelanguage_russian is committed to protecting and respecting your privacy,
+                    and we'll only use your personal information to administer your account and to
+                    provide the products and services you requested from us.
+                </p>
+                <label class="reg-check-item">
+                    <input type="checkbox" id="marketingConsent" required>
+                    I agree to receive other communications from Livelanguage_russian. *
+                </label>
+                <label class="reg-check-item">
+                    <input type="checkbox" id="dataConsent" required>
+                    I agree to allow Livelanguage_russian to store and process my personal data. *
+                </label>
+                <p class="reg-privacy-text" style="margin-top: 0.8rem;">
+                    For more information, please review our
+                    <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>.
+                </p>
+            </div>
+
+            <p class="reg-recaptcha">
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
+                <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
+            </p>
+
+            <button type="submit" id="submitBtn" class="cta" style="width:100%; border:none; cursor:pointer;">
+                Registrati
+            </button>
+
+        </form>
+
+        <div id="loadingMessage" class="reg-loading" style="display:none;">
+            Registrazione in corso...
         </div>
 
     </div>
+
+    <script>
+        // ============================================================
+        // CONFIGURAZIONE SUPABASE
+        // ============================================================
+        const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
+        const RECAPTCHA_SITE_KEY = '6LecDGcsAAAAAKhBMIFk7ihhOZknno66lgb7uSGU';
+
+        const { createClient } = supabase;
+        const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const topicPath = urlParams.get('topic') || '';
+
+        // ============================================================
+        // GENERATORE PASSWORD
+        // ============================================================
+        function generatePassword(length = 12) {
+            const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let password = '';
+            for (let i = 0; i < length; i++) {
+                password += charset[Math.floor(Math.random() * charset.length)];
+            }
+            return password;
+        }
+
+        // ============================================================
+        // VALIDAZIONE
+        // ============================================================
+        function clearErrors() {
+            document.querySelectorAll('.reg-error').forEach(el => el.textContent = '');
+        }
+
+        function validateForm() {
+            clearErrors();
+            let isValid = true;
+
+            if (!document.getElementById('firstName').value.trim()) {
+                document.getElementById('firstNameError').textContent = 'Il nome è obbligatorio';
+                isValid = false;
+            }
+            if (!document.getElementById('lastName').value.trim()) {
+                document.getElementById('lastNameError').textContent = 'Il cognome è obbligatorio';
+                isValid = false;
+            }
+
+            const email = document.getElementById('email').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email) {
+                document.getElementById('emailError').textContent = "L'email è obbligatoria";
+                isValid = false;
+            } else if (!emailRegex.test(email)) {
+                document.getElementById('emailError').textContent = 'Email non valida';
+                isValid = false;
+            }
+
+            if (!document.getElementById('whatsappPhone').value.trim()) {
+                document.getElementById('phoneError').textContent = 'Il numero WhatsApp è obbligatorio';
+                isValid = false;
+            }
+            if (!document.getElementById('trackLevel').value) {
+                document.getElementById('levelError').textContent = 'Seleziona un livello';
+                isValid = false;
+            }
+            if (document.querySelectorAll('input[name="courses"]:checked').length === 0) {
+                document.getElementById('coursesError').textContent = 'Seleziona almeno un corso';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // ============================================================
+        // SUBMIT
+        // ============================================================
+        document.getElementById('registrationForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            if (!validateForm()) return;
+
+            document.getElementById('loadingMessage').style.display = 'block';
+            document.getElementById('submitBtn').disabled = true;
+
+            try {
+                const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'register' });
+                if (!recaptchaToken) throw new Error('reCAPTCHA verification failed');
+
+                const firstName     = document.getElementById('firstName').value.trim();
+                const lastName      = document.getElementById('lastName').value.trim();
+                const email         = document.getElementById('email').value.trim();
+                const countryCode   = document.getElementById('countryCode').value;
+                const whatsappPhone = countryCode + document.getElementById('whatsappPhone').value.trim();
+                const trackLevel    = document.getElementById('trackLevel').value;
+                const marketingConsent = document.getElementById('marketingConsent').checked;
+                const dataConsent      = document.getElementById('dataConsent').checked;
+                const courses = Array.from(document.querySelectorAll('input[name="courses"]:checked')).map(cb => cb.value);
+                const generatedPassword = generatePassword();
+
+                const { data, error } = await supabaseClient.auth.signUp({
+                    email,
+                    password: generatedPassword,
+                    options: {
+                        data: {
+                            first_name:               firstName,
+                            last_name:                lastName,
+                            whatsapp_phone:           whatsappPhone,
+                            track_level:              trackLevel,
+                            courses:                  courses,
+                            marketing_consent:        marketingConsent,
+                            data_processing_consent:  dataConsent,
+                            generated_password:       generatedPassword,
+                            recaptcha_token:          recaptchaToken,
+                            topic_path:               topicPath
+                        }
+                    }
+                });
+
+                if (error) throw error;
+
+                document.getElementById('registrationForm').style.display = 'none';
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+
+            } catch (err) {
+                alert('Errore durante la registrazione: ' + err.message);
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('submitBtn').disabled = false;
+            }
+        });
+    </script>
+
 </body>
 </html>

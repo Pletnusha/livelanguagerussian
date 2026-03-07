@@ -297,11 +297,29 @@
         const RECAPTCHA_SITE_KEY = '6LecDGcsAAAAAKhBMIFk7ihhOZknno66lgb7uSGU';
         
         // ============================================
-        // READ TOPIC FROM URL
+        // STRIPE PAYMENT LINKS
+        // ============================================
+        const STRIPE_LINKS = {
+            gruppo: 'https://buy.stripe.com/fZu4gz0I0593cbo4i93ZK09',
+            light:  'https://buy.stripe.com/cNi00j3Uc593b7kaGx3ZK03',
+            base:   'https://buy.stripe.com/5kQ4gzduMcBv6R42a13ZK02',
+        };
+
+        // ============================================
+        // READ PARAMS FROM URL
         // ============================================
         const urlParams = new URLSearchParams(window.location.search);
         const topicPath = urlParams.get('topic') || '';
-        console.log('Topic from URL:', topicPath);
+        const plan = urlParams.get('plan') || '';
+
+        // Show selected plan at top of form
+        if (plan && STRIPE_LINKS[plan]) {
+            const planNames = { gruppo: 'Gruppo — €100/mese', light: 'Light — €130/mese', base: 'Base — €180/mese' };
+            const banner = document.createElement('div');
+            banner.style.cssText = 'background:#f0f4ff;border:2px solid #2a5bd7;border-radius:8px;padding:0.8rem 1rem;margin-bottom:1.2rem;font-family:Montserrat,sans-serif;font-size:0.95rem;font-weight:600;color:#2a5bd7;text-align:center;';
+            banner.textContent = '📋 Piano selezionato: ' + planNames[plan];
+            document.getElementById('registrationForm').prepend(banner);
+        }
         
         // ============================================
         // PASSWORD GENERATOR
@@ -444,17 +462,46 @@
                 if (error) {
                     throw error;
                 }
-                
-                // Success!
+
+                // Save all form data to profiles table
+                if (data.user) {
+                    await supabaseClient.from('profiles').upsert({
+                        user_id:                  data.user.id,
+                        first_name:               firstName,
+                        last_name:                lastName,
+                        email:                    email,
+                        whatsapp_phone_number:    whatsappPhone,
+                        track_level:              trackLevel,
+                        courses:                  courses,
+                        marketing_consent:        marketingConsent,
+                        data_processing_consent:  dataConsent,
+                        generated_password:       generatedPassword,
+                        topic_pass:               topicPath || null,
+                        plan:                     plan || null,
+                        login:                    true,
+                        lessonpaid:               false,
+                        exercisepaid:             false,
+                        registration_status:      'registered',
+                        n8n_stage:                'new',
+                    });
+                }
+
                 console.log('User registered:', data);
-                
-                // Show success message
+
+                // Redirect to Stripe if plan selected
+                if (plan && STRIPE_LINKS[plan]) {
+                    const userId = data.user?.id || '';
+                    const stripeUrl = STRIPE_LINKS[plan]
+                        + '?prefilled_email=' + encodeURIComponent(email)
+                        + (userId ? '&client_reference_id=' + userId : '');
+                    window.location.href = stripeUrl;
+                    return;
+                }
+
+                // No plan — show success message
                 document.getElementById('registrationForm').style.display = 'none';
                 document.getElementById('loadingMessage').style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
-                
-                // n8n will receive the webhook and send email with credentials
-                // The trigger function in Supabase will create the profile automatically
                 
             } catch (error) {
                 console.error('Registration error:', error);
