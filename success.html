@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento confermato - Livelanguage Russian</title>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-bottom: 12px;
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        .box {
+            background: #f0f7ff;
+            border: 1px solid #c8e0ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .box p {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .box p:last-child {
+            margin-bottom: 0;
+        }
+
+        a.btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        a.btn:hover {
+            background: #0056b3;
+        }
+
+        .loading {
+            color: #888;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon">&#10003;</div>
+    <h1>Pagamento confermato!</h1>
+    <p>Grazie per esserti iscritto a Livelanguage Russian.</p>
+
+    <div class="box">
+        <p><strong>Cosa succede ora:</strong></p>
+        <p>Riceverai a breve una email di conferma con le tue credenziali di accesso.</p>
+        <p>Se hai già ricevuto le credenziali durante la registrazione, puoi accedere subito.</p>
+    </div>
+
+    <div id="ctaLoggedIn" style="display:none;">
+        <p>Sei già autenticato. Puoi accedere direttamente ai tuoi contenuti.</p>
+        <a href="/" class="btn">Vai ai contenuti</a>
+    </div>
+
+    <div id="ctaLoggedOut" style="display:none;">
+        <a href="/login.html" class="btn">Accedi ora</a>
+    </div>
+
+    <p class="loading" id="loadingText">Verifica sessione in corso...</p>
+
+    <script>
+        const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
+
+        const { createClient } = supabase;
+        const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        (async () => {
+            const { data: { session } } = await supabaseClient.auth.getSession();
+            document.getElementById('loadingText').style.display = 'none';
+
+            if (session) {
+                document.getElementById('ctaLoggedIn').style.display = 'block';
+            } else {
+                document.getElementById('ctaLoggedOut').style.display = 'block';
+            }
+        })();
+    </script>
+</body>
+</html>

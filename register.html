@@ -288,6 +288,7 @@
         // ============================================
         const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
+        const N8N_WEBHOOK_URL = 'https://n8n.pletnusha.xyz/webhook/new-user';
         
         // Create Supabase client using the global supabase object
         const { createClient } = supabase;
@@ -465,7 +466,7 @@
 
                 // Save all form data to profiles table
                 if (data.user) {
-                    await supabaseClient.from('profiles').upsert({
+                    const { data: profileData } = await supabaseClient.from('profiles').upsert({
                         user_id:                  data.user.id,
                         first_name:               firstName,
                         last_name:                lastName,
@@ -483,6 +484,31 @@
                         exercisepaid:             false,
                         registration_status:      'registered',
                         n8n_stage:                'new',
+                    }, { onConflict: 'user_id' }).select('id');
+
+                    // Notifica n8n direttamente con tutti i dati (inclusa la password)
+                    // Il payload replica la struttura del Supabase DB Webhook così n8n non richiede modifiche
+                    await fetch(N8N_WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            type: 'INSERT',
+                            table: 'profiles',
+                            record: {
+                                id:                       profileData?.[0]?.id || null,
+                                user_id:                  data.user.id,
+                                first_name:               firstName,
+                                last_name:                lastName,
+                                email:                    email,
+                                generated_password:       generatedPassword,
+                                topic_pass:               topicPath || null,
+                                plan:                     plan || null,
+                                n8n_stage:                'new',
+                                registration_status:      'registered',
+                            },
+                            schema: 'public',
+                            old_record: null,
+                        }),
                     });
                 }
 

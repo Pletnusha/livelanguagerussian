@@ -3,174 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Livelanguage Russian</title>
-    
-    <!-- Supabase JS SDK -->
+    <title>Accedi - Live Language Russian</title>
+
     <script src="https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js"></script>
-    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .login-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
         }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 400px;
-            margin: 0 auto;
-            margin-top: 60px;
+
+        .login-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1.2rem;
         }
-        
-        h1 {
-            margin-bottom: 20px;
+
+        .login-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.3);
         }
-        
+
+        .login-title {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin: 0 0 0.3rem;
+        }
+
+        .login-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            color: #555;
+            text-align: center;
+            margin: 0 0 2rem;
+        }
+
+        .login-card {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(200, 200, 200, 0.35);
+            border-radius: 16px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
+            padding: 2rem 2rem;
+            width: 100%;
+            max-width: 380px;
+        }
+
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 1.2rem;
         }
-        
+
         label {
             display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
         }
-        
+
         input[type="email"],
         input[type="password"] {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
+            padding: 11px 14px;
+            border: 1px solid #dde1ea;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            color: #1a1a1a;
+            background: #fff;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+            outline: none;
         }
-        
-        button {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            border-radius: 4px;
-            cursor: pointer;
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #2a5bd7;
+        }
+
+        .btn-login {
+            display: block;
             width: 100%;
+            padding: 0.9rem;
+            background: #2a5bd7;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 0.4rem;
         }
-        
-        button:hover {
-            background: #0056b3;
+
+        .btn-login:hover {
+            background: #1a3ea0;
         }
-        
-        button:disabled {
-            background: #ccc;
+
+        .btn-login:disabled {
+            background: #a0b0d8;
             cursor: not-allowed;
         }
-        
-        .error {
-            color: red;
-            font-size: 14px;
-            margin-top: 10px;
+
+        .error-msg {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: #c0392b;
+            background: #fdf0ee;
+            border: 1px solid #f5c6c0;
+            border-radius: 6px;
+            padding: 9px 12px;
+            margin-top: 1rem;
             display: none;
         }
-        
-        .success {
-            background: #d4edda;
+
+        .success-msg {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem;
             color: #155724;
-            padding: 15px;
-            border-radius: 4px;
-            margin-bottom: 20px;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 6px;
+            padding: 9px 12px;
+            margin-top: 1rem;
             display: none;
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 1.4rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem;
+            color: #666;
+        }
+
+        .login-footer a {
+            color: #2a5bd7;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Accedi</h1>
-    
-    <div id="successMessage" class="success">
-        <p>Login effettuato! Reindirizzamento in corso...</p>
+
+    <div class="login-wrapper">
+
+        <div class="login-logo">
+            <img src="/assets/logog%20scuola%20finfin.png" alt="Live Language Russian">
+        </div>
+
+        <h1 class="login-title">ACCEDI</h1>
+        <p class="login-subtitle">Live Language Russian</p>
+
+        <div class="login-card">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="nome@esempio.it" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" id="loginBtn" class="btn-login">Accedi</button>
+
+                <div id="errorMessage" class="error-msg"></div>
+                <div id="successMessage" class="success-msg">Login effettuato! Reindirizzamento in corso...</div>
+            </form>
+        </div>
+
+        <div class="login-footer">
+            Non hai un account? <a href="/register.html">Registrati gratis</a>
+        </div>
+
     </div>
-    
-    <form id="loginForm">
-        <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" required>
-        </div>
-        
-        <div class="form-group">
-            <button type="submit" id="loginBtn">Accedi</button>
-        </div>
-        
-        <div id="errorMessage" class="error"></div>
-    </form>
-    
+
     <script>
-        // ============================================
-        // SUPABASE CONFIGURATION
-        // ============================================
         const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
-        
+
         const { createClient } = supabase;
         const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        
-        // ============================================
-        // READ REDIRECT FROM URL
-        // ============================================
+
         const urlParams = new URLSearchParams(window.location.search);
         const redirectPath = urlParams.get('redirect') || '';
-        console.log('Redirect path:', redirectPath);
-        
-        // ============================================
-        // LOGIN
-        // ============================================
+
         document.getElementById('loginForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             document.getElementById('errorMessage').style.display = 'none';
             document.getElementById('loginBtn').disabled = true;
-            
+
             const email = document.getElementById('email').value.trim();
             const password = document.getElementById('password').value;
-            
-            try {
-                const { data, error } = await supabaseClient.auth.signInWithPassword({
-                    email: email,
-                    password: password
-                });
-                
-                if (error) {
-                    throw error;
-                }
-                
-                console.log('Login successful:', data);
 
-                // Update last_login in profiles
+            try {
+                const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+
+                if (error) throw error;
+
                 await supabaseClient
                     .from('profiles')
                     .update({ last_login: new Date().toISOString() })
                     .eq('user_id', data.user.id);
 
-                // Show success
-                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('loginForm').querySelector('.btn-login').style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
-                
-                // Redirect
-                if (redirectPath) {
-                    window.location.href = '/' + redirectPath + '/';
-                } else {
-                    window.location.href = '/';
-                }
-                
+
+                setTimeout(() => {
+                    if (redirectPath) {
+                        window.location.href = '/' + redirectPath + '/';
+                    } else {
+                        window.location.href = '/';
+                    }
+                }, 800);
+
             } catch (error) {
-                console.error('Login error:', error);
-                document.getElementById('errorMessage').textContent = 'Email o password non validi';
-                document.getElementById('errorMessage').style.display = 'block';
+                const msg = document.getElementById('errorMessage');
+                msg.textContent = 'Email o password non validi. Riprova.';
+                msg.style.display = 'block';
                 document.getElementById('loginBtn').disabled = false;
             }
         });
