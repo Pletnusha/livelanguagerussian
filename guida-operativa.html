@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { font-family: Calibri, sans-serif; font-size: 11pt; max-width: 750px; margin: 40px auto; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 22pt; color: #1a3a6b; border-bottom: 2px solid #1a3a6b; padding-bottom: 8px; margin-top: 0; }
+  h2 { font-size: 14pt; color: #1a3a6b; margin-top: 28px; border-bottom: 1px solid #ccd6e8; padding-bottom: 4px; }
+  h3 { font-size: 11pt; color: #2a5bd7; margin-top: 18px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+  th { background: #1a3a6b; color: white; padding: 8px 12px; text-align: left; font-size: 10pt; }
+  td { border: 1px solid #ccd6e8; padding: 7px 12px; font-size: 10pt; }
+  tr:nth-child(even) td { background: #f4f7fc; }
+  code, pre { background: #f4f4f4; border: 1px solid #ddd; border-radius: 4px; font-family: Consolas, monospace; font-size: 10pt; }
+  code { padding: 1px 5px; }
+  pre { padding: 12px 16px; margin: 8px 0; white-space: pre-wrap; }
+  .step { background: #f0f4ff; border-left: 4px solid #2a5bd7; padding: 10px 14px; margin: 8px 0; border-radius: 0 6px 6px 0; }
+  .note { background: #fff8e1; border-left: 4px solid #f59e0b; padding: 10px 14px; margin: 8px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  .subtitle { color: #555; font-size: 10pt; margin-top: -6px; margin-bottom: 20px; }
+</style>
+</head>
+<body>
+
+<h1>Live Language Russian — Guida operativa</h1>
+<p class="subtitle">Versione 1.0 · Marzo 2026</p>
+
+<h2>1. Come funziona il sistema</h2>
+
+<h3>Flusso A: Registrazione gratuita</h3>
+<ol>
+  <li>L'utente va su <code>/register.html</code> e compila il form</li>
+  <li>Riceve una <strong>email automatica</strong> con username, password e link diretto agli esercizi</li>
+  <li>Può accedere agli esercizi gratuiti</li>
+</ol>
+
+<h3>Flusso B: Abbonamento (Gruppo / Light / Base)</h3>
+<ol>
+  <li>L'utente va su <code>/courses.html</code> e sceglie il piano</li>
+  <li>Compila il form di registrazione</li>
+  <li>Viene reindirizzato su <strong>Stripe</strong> per il pagamento</li>
+  <li>Dopo la conferma del pagamento riceve una <strong>email</strong> con le credenziali</li>
+  <li>Il profilo viene aggiornato automaticamente: accesso completo a esercizi e lezioni</li>
+</ol>
+
+<h2>2. Gestione utenti</h2>
+
+<p>Tutti gli utenti si trovano in <strong>Supabase → Table Editor → profiles</strong>.</p>
+<p>Per accedere: <a href="https://supabase.com">supabase.com</a> → progetto <em>livelanguagerussian</em> → Table Editor → profiles.</p>
+
+<table>
+  <tr><th>Campo</th><th>Significato</th></tr>
+  <tr><td><code>exercisepaid</code></td><td><code>true</code> = accesso agli esercizi premium</td></tr>
+  <tr><td><code>lessonpaid</code></td><td><code>true</code> = abbonamento lezioni attivo</td></tr>
+  <tr><td><code>plan</code></td><td><code>gruppo</code> / <code>light</code> / <code>base</code></td></tr>
+  <tr><td><code>n8n_stage</code></td><td>Stato automazione email (es. <code>email_sent</code>)</td></tr>
+  <tr><td><code>registration_status</code></td><td><code>registered</code> / <code>paid</code></td></tr>
+  <tr><td><code>generated_password</code></td><td>Password inviata all'utente via email</td></tr>
+</table>
+
+<div class="note">
+  <strong>Nota:</strong> non modificare manualmente <code>exercisepaid</code> o <code>lessonpaid</code> se non necessario. Questi campi vengono aggiornati automaticamente dopo il pagamento Stripe.
+</div>
+
+<h2>3. Creare nuovi esercizi</h2>
+
+<h3>Struttura delle cartelle</h3>
+<p>Gli esercizi seguono questa struttura:</p>
+<pre>/livello/argomento/nome-esercizio/index.html</pre>
+
+<p>Esempi esistenti:</p>
+<ul>
+  <li><code>/principianti/casi/genitivo-di-chi-e/index.html</code></li>
+  <li><code>/livello_elementare/verbi-di-moto/index.html</code></li>
+</ul>
+
+<h3>Passaggi per aggiungere un nuovo esercizio</h3>
+
+<div class="step"><strong>1.</strong> Crea la cartella nella posizione giusta, es. <code>/principianti/casi/nuovo-argomento/</code></div>
+<div class="step"><strong>2.</strong> Copia un <code>index.html</code> esistente dalla stessa sezione come punto di partenza</div>
+<div class="step"><strong>3.</strong> Modifica titolo, testo introduttivo e contenuti dell'esercizio</div>
+<div class="step"><strong>4.</strong> Imposta il livello di accesso su ogni pannello esercizio (vedi sotto)</div>
+<div class="step"><strong>5.</strong> Assegna ID univoci a ogni pannello ed esercizio</div>
+<div class="step"><strong>6.</strong> Aggiungi il link nella pagina indice del livello (<code>/principianti/index.html</code> ecc.)</div>
+
+<h3>Livelli di accesso</h3>
+<p>Ogni pannello esercizio ha un attributo <code>data-access</code> che determina chi può vederlo:</p>
+
+<table>
+  <tr><th>data-access</th><th>Chi può vederlo</th></tr>
+  <tr><td><code>public</code></td><td>Tutti gli utenti registrati (gratuiti e paganti)</td></tr>
+  <tr><td><code>paid</code></td><td>Solo utenti con abbonamento (<code>exercisepaid = true</code>)</td></tr>
+</table>
+
+<p>Esempio nel codice HTML:</p>
+<pre>&lt;!-- Esercizio gratuito --&gt;
+&lt;div class="exercise-panel" id="panel-nome-1" data-access="public" hidden&gt;
+    ...
+&lt;/div&gt;
+
+&lt;!-- Esercizio solo abbonati --&gt;
+&lt;div class="exercise-panel" id="panel-nome-2" data-access="paid" hidden&gt;
+    ...
+&lt;/div&gt;</pre>
+
+<div class="note">
+  <strong>Importante:</strong> ogni pannello deve avere un <code>id</code> univoco in tutto il sito. Usa una convenzione chiara, es. <code>panel-genitivo2-01</code>, <code>panel-genitivo2-02</code>, ecc.
+</div>
+
+<h2>4. Pubblicare le modifiche (deploy)</h2>
+
+
+</body>
+</html>
