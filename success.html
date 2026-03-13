@@ -3,121 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento confermato - Livelanguage Russian</title>
-
+    <title>Pagamento confermato - Live Language Russian</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js"></script>
-
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .success-hero {
+            text-align: center;
+            padding: 2.5rem 1rem 1rem;
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 500px;
-            margin: 0 auto;
-            margin-top: 60px;
+        .photo-frame {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transform: scale(1.3);
+        }
+        .success-box {
+            max-width: 520px;
+            margin: 0 auto 3rem;
+            padding: 0 1.5rem;
             text-align: center;
         }
-
-        .icon {
-            font-size: 64px;
-            margin-bottom: 20px;
+        .success-icon {
+            width: 72px;
+            height: 72px;
+            background: #f0f9f4;
+            border: 3px solid #22c55e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: #22c55e;
+            font-weight: 700;
         }
-
-        h1 {
-            margin-bottom: 12px;
-            font-size: 1.8rem;
+        .success-title {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
         }
-
-        p {
+        .success-message {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
             color: #555;
-            margin-bottom: 16px;
+            line-height: 1.7;
+            margin-bottom: 2rem;
         }
-
-        .box {
-            background: #f0f7ff;
-            border: 1px solid #c8e0ff;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 24px 0;
-            text-align: left;
+        .success-message strong {
+            color: #1a1a1a;
         }
-
-        .box p {
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .box p:last-child {
-            margin-bottom: 0;
-        }
-
-        a.btn {
+        .plan-badge {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #2a5bd7;
+            background: #f0f4ff;
+            border-radius: 20px;
+            padding: 0.4rem 1.1rem;
             display: inline-block;
-            background: #007bff;
-            color: white;
+            margin-bottom: 1.5rem;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: #2a5bd7;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.9rem 2.5rem;
+            border-radius: 8px;
             text-decoration: none;
-            padding: 12px 28px;
-            border-radius: 4px;
-            font-size: 16px;
-            margin-top: 8px;
+            transition: background 0.2s;
         }
-
-        a.btn:hover {
-            background: #0056b3;
+        .btn-primary:hover {
+            background: #1a3ea0;
         }
-
-        .loading {
+        .divider {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 2rem 0;
+        }
+        .help-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
             color: #888;
-            font-size: 14px;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="icon">&#10003;</div>
-    <h1>Pagamento confermato!</h1>
-    <p>Grazie per esserti iscritto a Livelanguage Russian.</p>
 
-    <div class="box">
-        <p><strong>Cosa succede ora:</strong></p>
-        <p>Riceverai a breve una email di conferma con le tue credenziali di accesso.</p>
-        <p>Se hai già ricevuto le credenziali durante la registrazione, puoi accedere subito.</p>
+    <header class="level-header">
+        <div class="success-hero">
+            <div class="photo-frame">
+                <img src="/assets/logog%20scuola%20finfin.png" alt="Live Language Russian">
+            </div>
+        </div>
+        <h1>PAGAMENTO CONFERMATO</h1>
+        <p class="level-description">Benvenuto/a in Live Language Russian</p>
+    </header>
+
+    <div class="success-box">
+
+        <div class="success-icon">&#10003;</div>
+
+        <div id="planBadge"></div>
+
+        <div class="success-title">Tutto pronto!</div>
+
+        <p class="success-message">
+            Il tuo pagamento è stato elaborato con successo.<br><br>
+            <strong>Controlla la tua email</strong> — riceverai a breve le credenziali
+            per accedere alle lezioni e agli esercizi del tuo piano.
+        </p>
+
+        <div id="ctaArea">
+            <a href="/login.html" class="btn-primary">Accedi ora</a>
+        </div>
+
+        <hr class="divider">
+
+        <p class="help-text">
+            Non hai ricevuto l'email? Controlla la cartella spam o
+            <a href="mailto:info@livelanguagerussian.com" style="color:#2a5bd7;">contattaci</a>.
+        </p>
+
     </div>
 
-    <div id="ctaLoggedIn" style="display:none;">
-        <p>Sei già autenticato. Puoi accedere direttamente ai tuoi contenuti.</p>
-        <a href="/" class="btn">Vai ai contenuti</a>
-    </div>
-
-    <div id="ctaLoggedOut" style="display:none;">
-        <a href="/login.html" class="btn">Accedi ora</a>
-    </div>
-
-    <p class="loading" id="loadingText">Verifica sessione in corso...</p>
+    <footer class="level-footer">
+        <a href="/index.html" class="back-link">Torna alla home</a>
+    </footer>
 
     <script>
+        // Mostra il badge del piano se presente nell'URL
+        const plan = new URLSearchParams(window.location.search).get('plan');
+        if (plan) {
+            const names = { gruppo: 'Piano Gruppo', light: 'Piano Light', base: 'Piano Base' };
+            const badge = document.getElementById('planBadge');
+            badge.innerHTML = '<span class="plan-badge">' + (names[plan] || plan) + '</span>';
+        }
+
+        // Se l'utente è già loggato, mostra il link diretto ai contenuti
         const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
-
         const { createClient } = supabase;
         const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
         (async () => {
             const { data: { session } } = await supabaseClient.auth.getSession();
-            document.getElementById('loadingText').style.display = 'none';
-
             if (session) {
-                document.getElementById('ctaLoggedIn').style.display = 'block';
-            } else {
-                document.getElementById('ctaLoggedOut').style.display = 'block';
+                document.getElementById('ctaArea').innerHTML =
+                    '<a href="/" class="btn-primary">Vai ai contenuti</a>';
             }
         })();
     </script>
+
 </body>
 </html>
