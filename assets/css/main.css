@@ -1700,6 +1700,164 @@ article.exercise-card[data-target="panel-acc-open-10"],
 #panel-mal-open-4 .mal04-feedback.correct { color: #22c55e; }
 #panel-mal-open-4 .mal04-feedback.wrong   { color: #ef4444; }
 
+/* ===== PANEL 4 MAL — Mixed Quiz (MC + Match + Write) ===== */
+
+#panel-mal-open-4 .mal-04-card {
+  padding: 0.5rem 0;
+}
+
+#panel-mal-open-4 h1.exercise-counter {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9ca3af;
+  margin: 0 0 1rem;
+}
+
+#panel-mal-open-4 .instruction {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+#panel-mal-open-4 .exercise-text {
+  font-size: 1.15rem;
+  line-height: 2.4;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+#panel-mal-open-4 .gap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 34px;
+  margin: 0 5px;
+  padding: 0 10px;
+  border-bottom: 2px solid #bbb;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #2a5bd7;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+#panel-mal-open-4 .gap.filled   { background-color: #eff6ff; border-bottom-color: #2a5bd7; border-radius: 6px; }
+#panel-mal-open-4 .gap.correct  { background-color: #dcfce7; color: #166534; border: 1px solid #22c55e; border-bottom: none; border-radius: 6px; }
+#panel-mal-open-4 .gap.incorrect{ background-color: #fee2e2; color: #991b1b; border: 1px solid #ef4444; border-bottom: none; border-radius: 6px; }
+
+#panel-mal-open-4 .word-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 1.25rem;
+  border-top: 1px solid #eee;
+  margin-top: 1rem;
+}
+
+#panel-mal-open-4 .word-option {
+  background: #eef4ff;
+  border: 1px solid #2a5bd7;
+  color: #2a5bd7;
+  padding: 7px 18px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+#panel-mal-open-4 .word-option:hover  { background: #2a5bd7; color: #fff; transform: translateY(-1px); }
+#panel-mal-open-4 .word-option.used   { opacity: 0.45; background: #f3f4f6; border-color: #e5e7eb; color: #9ca3af; pointer-events: none; transform: none; }
+
+#panel-mal-open-4 .controls {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1.25rem;
+}
+
+#panel-mal-open-4 .feedback {
+  font-weight: 700;
+  margin-left: auto;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+#panel-mal-open-4 .fca01-match-container { width: 100%; max-width: 650px; margin: 0 auto; }
+
+#panel-mal-open-4 .fca01-match-feedback {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-height: 1.75rem;
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+#panel-mal-open-4 .fca01-match-feedback.correct { color: #22c55e; }
+#panel-mal-open-4 .fca01-match-feedback.wrong   { color: #ef4444; }
+
+#panel-mal-open-4 .fca01-match-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+#panel-mal-open-4 .fca01-match-col  { display: flex; flex-direction: column; gap: 0.75rem; }
+
+#panel-mal-open-4 .fca01-match-card {
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.8);
+  border: 2px solid #e0e0e0;
+  transition: all 0.2s;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.95rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#panel-mal-open-4 .fca01-match-card:hover    { background: #fff; border-color: #2a5bd7; }
+#panel-mal-open-4 .fca01-match-card.selected { background: #fff3cd; border-color: #fbbf24; transform: scale(1.02); }
+#panel-mal-open-4 .fca01-match-card.wrong    { background: #fee2e2; border-color: #ef4444; animation: fca01Shake 0.4s; }
+#panel-mal-open-4 .fca01-match-card.matched  { visibility: hidden; opacity: 0; pointer-events: none; transition: visibility 0s 0.3s, opacity 0.3s linear; }
+
+#panel-mal-open-4 .quiz-title       { font-size: 1rem; font-weight: 700; margin: 0 0 0.5rem; color: #555; }
+#panel-mal-open-4 .quiz-instruction { font-size: 0.85rem; color: #888; margin: 0 0 1.5rem; }
+#panel-mal-open-4 .quiz-prompt      { font-size: 1.1rem; line-height: 2.4; color: #1a1a1a; text-align: center; }
+
+#panel-mal-open-4 .quiz-input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 4px 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  width: 80px;
+  margin: 0 6px;
+  vertical-align: middle;
+  transition: border-color 0.2s;
+}
+
+#panel-mal-open-4 .quiz-input:focus     { outline: none; border-color: #2a5bd7; }
+#panel-mal-open-4 .quiz-input.correct   { border-color: #22c55e; background: #dcfce7; color: #166534; }
+#panel-mal-open-4 .quiz-input.incorrect { border-color: #ef4444; background: #fee2e2; color: #991b1b; }
+
+#panel-mal-open-4 .quiz-controls { margin-top: 1.5rem; text-align: center; }
+
+#panel-mal-open-4 .quiz-feedback { margin-top: 0.75rem; font-weight: 700; text-align: center; min-height: 1.5rem; font-size: 0.9rem; }
+#panel-mal-open-4 .quiz-feedback.correct   { color: #22c55e; }
+#panel-mal-open-4 .quiz-feedback.incorrect { color: #ef4444; }
+
 #panel-acc-open-4 .acc04-card {
   text-align: center;
   padding: 1.5rem 1rem;

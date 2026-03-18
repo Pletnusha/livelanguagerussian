@@ -1,9 +1,10 @@
 import { initSpeech, playAudio } from '../utils/speech.js';
 
 export default class FlashcardExercise {
-    constructor({ rootId, cards }) {
+    constructor({ rootId, cards, quizByPrep = false }) {
         this.rootId = rootId;
         this.cards = cards;
+        this.quizByPrep = quizByPrep;
         this.currentMode = 'study';
         this.currentIndex = 0;
         this.selectedMatchCard = null;
@@ -125,10 +126,40 @@ export default class FlashcardExercise {
         const correctCard = this.cards[randomIndex];
 
         let options = [correctCard];
-        while (options.length < 3 && options.length < this.cards.length) {
-            const randomWrong = this.cards[Math.floor(Math.random() * this.cards.length)];
-            if (!options.some(opt => opt.back === randomWrong.back)) options.push(randomWrong);
+
+        if (this.quizByPrep) {
+            const getPrep = (card) => card.front.trim().split(' ').pop().toLowerCase();
+            const correctPrep = getPrep(correctCard);
+
+            const byPrep = {};
+            this.cards.forEach(card => {
+                if (card.back === correctCard.back) return;
+                const prep = getPrep(card);
+                if (!byPrep[prep]) byPrep[prep] = [];
+                byPrep[prep].push(card);
+            });
+
+            const otherGroups = Object.entries(byPrep)
+                .filter(([prep]) => prep !== correctPrep)
+                .sort(() => Math.random() - 0.5);
+
+            for (const [, group] of otherGroups) {
+                if (options.length >= 3) break;
+                const pick = group[Math.floor(Math.random() * group.length)];
+                if (!options.some(o => o.back === pick.back)) options.push(pick);
+            }
+
+            if (options.length < 3 && byPrep[correctPrep]) {
+                const sameGroup = byPrep[correctPrep].filter(c => !options.some(o => o.back === c.back));
+                if (sameGroup.length > 0) options.push(sameGroup[Math.floor(Math.random() * sameGroup.length)]);
+            }
+        } else {
+            while (options.length < 3 && options.length < this.cards.length) {
+                const randomWrong = this.cards[Math.floor(Math.random() * this.cards.length)];
+                if (!options.some(opt => opt.back === randomWrong.back)) options.push(randomWrong);
+            }
         }
+
         options.sort(() => Math.random() - 0.5);
 
         const buttonsHTML = options.map(opt =>
