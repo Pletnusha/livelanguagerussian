@@ -9,17 +9,361 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="level-header">
-        <h1>VERBI DI MOTO SPECIFICI</h1>
-        <p class="level-description">Impara i verbi che esprimono modi specifici di movimento.</p>
+<body class="page-verbi-di-moto-specifici">
+
+    <header class="page-header">
+        <a href="/livello_elementare/verbi-di-moto/index.html" class="back-link">← Torna indietro</a>
     </header>
-    <main class="level-content">
-        <section class="macro-area">
-        </section>
+
+    <section class="argomento-header">
+        <h1 class="argomento-title">VERBI DI MOTO SPECIFICI</h1>
+        <p class="argomento-focus">impari a usare бегать/бежать, плавать/плыть e летать/лететь</p>
+    </section>
+
+    <section class="argomento-intro">
+        <p><!-- TODO: Intro text --></p>
+    </section>
+
+    <main class="exercises-section">
+
+        <!-- ============================================================ -->
+        <!-- Panel 1 — DragDrop · public · Misto tutti e tre i verbi -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-spec-01">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Бегает, плывёт или летит? Scegli la forma giusta</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-spec-01" data-access="public" hidden>
+            <div id="ex-dragdrop-spec-01" class="universal-dd">
+                <div id="ex-dragdrop-spec-01-container"></div>
+                <div id="ex-dragdrop-spec-01-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 5 — DragDrop · paid · Спряжение бегать / бежать -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-spec-05">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Спряжение: бегать e бежать</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-spec-05" data-access="paid" hidden>
+            <div id="ex-dragdrop-spec-05" class="universal-dd">
+                <div id="ex-dragdrop-spec-05-container"></div>
+                <div id="ex-dragdrop-spec-05-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 6 — DragDrop · paid · Спряжение плавать / плыть -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-spec-06">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Спряжение: плавать e плыть</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-spec-06" data-access="paid" hidden>
+            <div id="ex-dragdrop-spec-06" class="universal-dd">
+                <div id="ex-dragdrop-spec-06-container"></div>
+                <div id="ex-dragdrop-spec-06-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 11 — DragDrop · paid · летать / лететь -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-spec-11">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Летает или летит? Scegli la forma giusta</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-spec-11" data-access="paid" hidden>
+            <div id="ex-dragdrop-spec-11" class="universal-dd">
+                <div id="ex-dragdrop-spec-11-container"></div>
+                <div id="ex-dragdrop-spec-11-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 2 — Flashcard · public · Misto 10 frasi -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-spec-02">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Flashcard: misto</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-spec-02" data-access="public" hidden>
+            <section id="ex-flashcards-spec-02">
+                <div class="fca01-header">
+                    <h2>Бегать / плавать / летать: misto</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-spec-02-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-spec-02-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-spec-02-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-spec-02-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-spec-02-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-02-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-spec-02-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-02-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-02-section-match" class="fca01-section">
+                    <div id="ex-flashcards-spec-02-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-02-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 7 — Flashcard · paid · Misto 10 frasi -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-spec-07">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Flashcard: misto (avanzato)</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-spec-07" data-access="paid" hidden>
+            <section id="ex-flashcards-spec-07">
+                <div class="fca01-header">
+                    <h2>Verbi di moto: misto avanzato</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-spec-07-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-spec-07-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-spec-07-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-spec-07-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-spec-07-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-07-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-spec-07-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-07-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-07-section-match" class="fca01-section">
+                    <div id="ex-flashcards-spec-07-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-07-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 8 — Flashcard · paid · Misto 10 frasi -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-spec-08">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Flashcard: misto</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-spec-08" data-access="paid" hidden>
+            <section id="ex-flashcards-spec-08">
+                <div class="fca01-header">
+                    <h2>Verbi di moto: misto</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-spec-08-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-spec-08-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-spec-08-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-spec-08-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-spec-08-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-08-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-spec-08-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-08-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-08-section-match" class="fca01-section">
+                    <div id="ex-flashcards-spec-08-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-08-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 — Flashcard · public · Misto 10 frasi -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-spec-03">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Flashcard: misto</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-spec-03" data-access="public" hidden>
+            <section id="ex-flashcards-spec-03">
+                <div class="fca01-header">
+                    <h2>Verbi di moto: misto</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-spec-03-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-spec-03-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-spec-03-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-spec-03-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-spec-03-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-03-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-spec-03-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-03-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-03-section-match" class="fca01-section">
+                    <div id="ex-flashcards-spec-03-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-03-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 9 — Flashcard · paid · Misto 10 frasi -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-spec-09">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Flashcard: misto (avanzato)</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-spec-09" data-access="paid" hidden>
+            <section id="ex-flashcards-spec-09">
+                <div class="fca01-header">
+                    <h2>Verbi di moto: misto avanzato</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-spec-09-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-spec-09-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-spec-09-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-spec-09-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-spec-09-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-09-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-spec-09-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-09-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-09-section-match" class="fca01-section">
+                    <div id="ex-flashcards-spec-09-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-09-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 10 — Flashcard · paid · Misto 10 frasi -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-spec-10">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Flashcard: misto</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-spec-10" data-access="paid" hidden>
+            <section id="ex-flashcards-spec-10">
+                <div class="fca01-header">
+                    <h2>Verbi di moto: misto</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-spec-10-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-spec-10-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-spec-10-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-spec-10-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-spec-10-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-10-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-spec-10-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-10-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-spec-10-section-match" class="fca01-section">
+                    <div id="ex-flashcards-spec-10-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-spec-10-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 4 — Quiz · public -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-spec-04">
+            <span class="exercise-type">Quiz</span>
+            <h3 class="exercise-title">Quiz: бегать/бежать, плавать/плыть, летать/лететь</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-spec-04" data-access="public" hidden>
+            <section id="spec-04-deck" class="universal-dd">
+                <div id="spec-04-cards-container"></div>
+                <div class="fca01-nav">
+                    <button id="spec-04-deck-prev" class="fca01-btn-nav" disabled>← Назад</button>
+                    <span id="spec-04-deck-counter" class="fca01-counter">1 / 30</span>
+                    <button id="spec-04-deck-next" class="btn btn-primary">Вперед →</button>
+                </div>
+            </section>
+        </div>
+
     </main>
+
     <footer class="level-footer">
-        <a href="/index.html" class="back-link">Torna alla home</a>
+        <a href="/livello_elementare/verbi-di-moto/index.html" class="back-link">← Torna indietro</a>
     </footer>
+
+    <script type="module" src="exercises.js"></script>
+
 </body>
 </html>
