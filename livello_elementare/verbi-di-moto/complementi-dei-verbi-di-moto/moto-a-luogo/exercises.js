@@ -29,7 +29,7 @@ const p5exercises = [
     { instruction: "Completa la frase scegliendo la forma corretta", text: "В понедельник мы идём {{1}}.", words: ["к презентации", "в презентацию", "на презентацию"], correctAnswers: { 1: "на презентацию" } },
     { instruction: "Completa la frase scegliendo la forma corretta", text: "Он всегда ходит {{1}}.", words: ["на лекции", "в лекции", "к лекциям"], correctAnswers: { 1: "на лекции" } },
     { instruction: "Completa la frase scegliendo la forma corretta", text: "Я хожу {{1}} два-три раза в неделю.", words: ["к тренировке", "на тренировку", "в тренировку"], correctAnswers: { 1: "на тренировку" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы идёте {{1}}?", words: ["на день рождения", "к Кате в день рождения", "к дню рождения"], correctAnswers: { 1: "на день рождения" } },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы идёте {{1}}?", words: ["на день рождения", "к дню рождения"], correctAnswers: { 1: "на день рождения" } },
     { instruction: "Completa la frase scegliendo la forma corretta", text: "Они идут в субботу {{1}}.", words: ["в концерт", "на концерт", "к концерту"], correctAnswers: { 1: "на концерт" } },
     { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы всегда ходите {{1}} по пятницам?", words: ["в йогу", "к йоге", "на йогу"], correctAnswers: { 1: "на йогу" } },
 ];
@@ -101,7 +101,7 @@ const p8cards = [
 ];
 
 // ============================================================
-// PANEL 3 — student · Flashcard
+// PANEL 3 — public · Flashcard
 // ============================================================
 const p3cards = [
     { front: "Она ходит на", back: "выставки" },
@@ -117,7 +117,7 @@ const p3cards = [
 ];
 
 // ============================================================
-// PANEL 9 — student · Flashcard
+// PANEL 9 — paid · Flashcard
 // ============================================================
 const p9cards = [
     { front: "Мы идём на", back: "концерт" },
@@ -133,14 +133,14 @@ const p9cards = [
 ];
 
 // ============================================================
-// PANEL 10 — student · Flashcard
+// PANEL 10 — paid · Flashcard
 // ============================================================
 const p10cards = [
     { front: "Я иду на", back: "работу" },
     { front: "Вы идёте утром на", back: "пляж" },
     { front: "Ты идёшь на", back: "концерт" },
     { front: "Он всегда ходит на", back: "лекции" },
-    { front: "Мы едем", back: "в гости к друзьям" },
+    { front: "Мы едем в", back: "гости к друзьям" },
     { front: "Он всегда ходит выпить кофе в", back: "этот бар" },
     { front: "Они идут в", back: "аптеку" },
     { front: "После лекций я иду к", back: "профессору" },
@@ -149,94 +149,302 @@ const p10cards = [
 ];
 
 // ============================================================
-// PANEL 4 — public · Quiz (в / на / к)
+// PANEL 4 — public · Mixed (MC + Match + Write)
 // ============================================================
 function initPanel4Mal() {
-    const questions = [
-        // на (10)
-        { sentence: "Я иду ___ работу.", correct: "на" },
-        { sentence: "Вы идёте утром ___ пляж.", correct: "на" },
-        { sentence: "Ты идёшь ___ концерт.", correct: "на" },
-        { sentence: "Она ходит ___ выставки.", correct: "на" },
-        { sentence: "Они всегда по утрам ходят ___ пробежку.", correct: "на" },
-        { sentence: "В понедельник мы идём ___ презентацию.", correct: "на" },
-        { sentence: "Он всегда ходит ___ лекции.", correct: "на" },
-        { sentence: "Два-три раза в неделю хожу ___ тренировку.", correct: "на" },
-        { sentence: "Вы идёте ___ день рождения?", correct: "на" },
-        { sentence: "В выходные мы едем ___ дачу.", correct: "на" },
-        // в (10)
-        { sentence: "Андрей ходит ___ спортзал.", correct: "в" },
-        { sentence: "Тебе купить что-нибудь? Я иду ___ магазин.", correct: "в" },
-        { sentence: "Я всегда хожу с бабушкой ___ банк.", correct: "в" },
-        { sentence: "В субботу идём с друзьями ___ ресторан.", correct: "в" },
-        { sentence: "Весной они летят ___ Египет.", correct: "в" },
-        { sentence: "По воскресеньям мы ездим ___ баню.", correct: "в" },
-        { sentence: "Он всегда ходит выпить кофе ___ этот бар.", correct: "в" },
-        { sentence: "Они идут ___ аптеку.", correct: "в" },
-        { sentence: "Вы часто ходите ___ кино?", correct: "в" },
-        { sentence: "Ты идёшь вечером гулять ___ центр?", correct: "в" },
-        // к (10)
-        { sentence: "Ты идёшь сегодня вечером ___ Кате.", correct: "к" },
-        { sentence: "В воскресенье едем ___ родителям.", correct: "к" },
-        { sentence: "Мы в пятницу идём в гости ___ друзьям.", correct: "к" },
-        { sentence: "Кот заболел, мы едем ___ ветеринару.", correct: "к" },
-        { sentence: "Когда ты идёшь ___ врачу?", correct: "к" },
-        { sentence: "Когда ты идёшь ___ стоматологу?", correct: "к" },
-        { sentence: "Мы едем в гости ___ друзьям.", correct: "к" },
-        { sentence: "После лекций я иду ___ профессору.", correct: "к" },
-        { sentence: "Мы летим в Париж ___ родственникам.", correct: "к" },
-        { sentence: "Ты уже едешь ___ нам?", correct: "к" },
+    const panel = document.getElementById('panel-mal-open-4');
+    if (!panel) return;
+
+    const container = panel.querySelector('#mal-04-cards-container');
+    const prevBtn   = panel.querySelector('#mal-04-deck-prev');
+    const nextBtn   = panel.querySelector('#mal-04-deck-next');
+    const counterEl = panel.querySelector('#mal-04-deck-counter');
+
+    let currentCard = 0;
+
+    const multipleChoiceData = [
+        { question: "Я иду ___ работу.",                          options: ["в", "на", "к"], answer: "на" },
+        { question: "Ты идёшь ___ концерт.",                      options: ["в", "на", "к"], answer: "на" },
+        { question: "Они всегда по утрам ходят ___ пробежку.",    options: ["в", "на", "к"], answer: "на" },
+        { question: "В выходные мы едем ___ дачу.",               options: ["в", "на", "к"], answer: "на" },
+        { question: "Андрей ходит ___ спортзал.",                 options: ["в", "на", "к"], answer: "в" },
+        { question: "Они идут ___ аптеку.",                       options: ["в", "на", "к"], answer: "в" },
+        { question: "Вы часто ходите ___ кино?",                  options: ["в", "на", "к"], answer: "в" },
+        { question: "Ты идёшь сегодня вечером ___ Кате.",         options: ["в", "на", "к"], answer: "к" },
+        { question: "В воскресенье едем ___ родителям.",          options: ["в", "на", "к"], answer: "к" },
+        { question: "Кот заболел, мы едем ___ ветеринару.",       options: ["в", "на", "к"], answer: "к" },
     ];
 
-    const shuffled = [...questions].sort(() => Math.random() - 0.5);
-    let current = 0;
-    const OPTIONS = ['в', 'на', 'к'];
+    const matchPairs = [
+        { left: "Вы идёте утром на",               right: "пляж" },
+        { left: "Она ходит на",                    right: "выставки" },
+        { left: "В понедельник мы идём на",         right: "презентацию" },
+        { left: "Два-три раза в неделю хожу на",   right: "тренировку" },
+        { left: "Тебе купить что-нибудь? Я иду в", right: "магазин" },
+        { left: "В субботу идём в",                right: "ресторан" },
+        { left: "Весной они летят в",              right: "Египет" },
+        { left: "Мы в пятницу идём в гости к",     right: "друзьям" },
+        { left: "Когда ты идёшь к",               right: "врачу" },
+        { left: "После лекций я иду к",            right: "профессору" },
+    ];
 
-    const container = document.getElementById('mal-04-cards-container');
-    const prevBtn   = document.getElementById('mal-04-deck-prev');
-    const nextBtn   = document.getElementById('mal-04-deck-next');
-    const counter   = document.getElementById('mal-04-deck-counter');
-    counter.removeAttribute('style');
+    const quizData = [
+        { id: "mal-001", promptPrefix: "Он всегда ходит",              promptSuffix: "лекции.",         answers: ["на"] },
+        { id: "mal-002", promptPrefix: "Вы идёте",                     promptSuffix: "день рождения?",  answers: ["на"] },
+        { id: "mal-003", promptPrefix: "Я всегда хожу с бабушкой",     promptSuffix: "банк.",           answers: ["в"] },
+        { id: "mal-004", promptPrefix: "По воскресеньям мы ездим",     promptSuffix: "баню.",           answers: ["в"] },
+        { id: "mal-005", promptPrefix: "Он всегда ходит выпить кофе",  promptSuffix: "этот бар.",       answers: ["в"] },
+        { id: "mal-006", promptPrefix: "Ты идёшь вечером гулять",      promptSuffix: "центр?",          answers: ["в"] },
+        { id: "mal-007", promptPrefix: "Мы летим в Париж",             promptSuffix: "родственникам.",  answers: ["к"] },
+        { id: "mal-008", promptPrefix: "Ты уже едешь",                 promptSuffix: "нам?",            answers: ["к"] },
+        { id: "mal-009", promptPrefix: "Мы едем в гости",              promptSuffix: "друзьям.",        answers: ["к"] },
+        { id: "mal-010", promptPrefix: "Когда ты идёшь",               promptSuffix: "стоматологу?",    answers: ["к"] },
+    ];
 
-    function render(index) {
-        const q = shuffled[index];
-        container.innerHTML = `
-            <div class="mal04-card">
-                <p class="mal04-sentence">${q.sentence.replace('___', '<span class="mal04-blank">___</span>')}</p>
-                <div class="mal04-options">
-                    ${OPTIONS.map(opt => `<button class="mal04-opt" data-value="${opt}">${opt}</button>`).join('')}
-                </div>
-                <div class="mal04-feedback"></div>
-            </div>
-        `;
-        container.querySelectorAll('.mal04-opt').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const sel = btn.getAttribute('data-value');
-                const fb  = container.querySelector('.mal04-feedback');
-                container.querySelectorAll('.mal04-opt').forEach(b => b.disabled = true);
-                if (sel === q.correct) {
-                    btn.classList.add('correct');
-                    fb.textContent = '✓ Правильно!';
-                    fb.className = 'mal04-feedback correct';
+    const MC_END    = multipleChoiceData.length;
+    const MATCH_END = MC_END + matchPairs.length;
+    const TOTAL     = MATCH_END + quizData.length;
+
+    function normalizeInput(str) { return str.trim().replace(/\s+/g, ' '); }
+
+    function ensureCardTitle(card, index) {
+        const existing = Array.from(card.children).find(c => c.tagName === 'H1');
+        if (existing) {
+            if (index < MC_END) existing.classList.add('exercise-counter');
+            if (card.firstElementChild !== existing) card.insertBefore(existing, card.firstElementChild);
+            return;
+        }
+        const title = document.createElement('h1');
+        title.textContent = `Exercise ${index + 1} of ${TOTAL}`;
+        if (index < MC_END) title.classList.add('exercise-counter');
+        card.insertBefore(title, card.firstElementChild);
+    }
+
+    function buildCards() {
+        container.innerHTML = '';
+
+        for (let i = 0; i < TOTAL; i++) {
+            const card = document.createElement('div');
+            card.className = 'fca01-card-container mal-04-card';
+            card.dataset.index = i;
+            card.hidden = (i !== 0);
+            if (i === 0) card.classList.add('visible');
+
+            if (i < MC_END) {
+                const item = multipleChoiceData[i];
+                const opts = item.options.map((o, idx) =>
+                    `<div class="word-option" data-word="${o}" data-index="${idx}">${o}</div>`
+                ).join('');
+                const questionText = item.question.replace('___',
+                    `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`
+                );
+                card.innerHTML = `
+                    <div class="instruction">Scegli la preposizione corretta</div>
+                    <div class="exercise-text">${questionText}</div>
+                    <div class="word-options">${opts}</div>
+                    <div class="controls">
+                        <button class="btn btn-primary verify-btn">Verifica</button>
+                        <button class="btn btn-secondary next-btn" style="display:none;">Prossimo</button>
+                        <div class="feedback"></div>
+                    </div>
+                `;
+                ensureCardTitle(card, i);
+
+            } else if (i < MATCH_END) {
+                const pairIdx = i - MC_END;
+                const pair = matchPairs[pairIdx];
+                const others = matchPairs.filter((_, idx) => idx !== pairIdx)
+                    .sort(() => Math.random() - 0.5).slice(0, 2);
+                const allPairs = [pair, ...others].sort(() => Math.random() - 0.5);
+
+                let fronts = allPairs.map((p, idx) => ({ text: p.left,  type: 'front', id: idx }));
+                let backs  = allPairs.map((p, idx) => ({ text: p.right, type: 'back',  id: idx }));
+                fronts.sort(() => Math.random() - 0.5);
+                backs.sort(() => Math.random() - 0.5);
+
+                let selCard = null;
+                let processing = false;
+
+                const matchContainer = document.createElement('div');
+                matchContainer.className = 'fca01-match-container';
+                const feedbackEl = document.createElement('p');
+                feedbackEl.className = 'fca01-match-feedback';
+                const matchGrid = document.createElement('div');
+                matchGrid.className = 'fca01-match-grid';
+                const colF = document.createElement('div'); colF.className = 'fca01-match-col';
+                const colB = document.createElement('div'); colB.className = 'fca01-match-col';
+                matchGrid.appendChild(colF);
+                matchGrid.appendChild(colB);
+                matchContainer.appendChild(feedbackEl);
+                matchContainer.appendChild(matchGrid);
+                card.appendChild(matchContainer);
+
+                function handleMatch(clicked) {
+                    if (processing || clicked.classList.contains('matched')) return;
+                    if (clicked === selCard) return;
+                    if (!selCard) { selCard = clicked; clicked.classList.add('selected'); return; }
+                    if (selCard.dataset.type === clicked.dataset.type) {
+                        selCard.classList.remove('selected');
+                        selCard = clicked; clicked.classList.add('selected'); return;
+                    }
+                    const prev = selCard;
+                    if (prev.dataset.id === clicked.dataset.id) {
+                        prev.classList.add('matched'); clicked.classList.add('matched');
+                        feedbackEl.textContent = '✨ Отлично!'; feedbackEl.className = 'fca01-match-feedback correct';
+                        selCard = null;
+                        setTimeout(() => { feedbackEl.textContent = ''; }, 1000);
+                        if (matchContainer.querySelectorAll('.fca01-match-card:not(.matched)').length === 0)
+                            feedbackEl.textContent = '🎉 ПОБЕДА! 🎉';
+                    } else {
+                        processing = true;
+                        clicked.classList.add('wrong'); prev.classList.add('wrong');
+                        feedbackEl.textContent = 'Неверно'; feedbackEl.className = 'fca01-match-feedback wrong';
+                        setTimeout(() => {
+                            clicked.classList.remove('selected', 'wrong');
+                            prev.classList.remove('selected', 'wrong');
+                            feedbackEl.textContent = ''; processing = false;
+                        }, 800);
+                        selCard = null;
+                    }
+                }
+
+                function makeMatchEl(item) {
+                    const div = document.createElement('div');
+                    div.className = 'fca01-match-card';
+                    div.textContent = item.text;
+                    div.dataset.id   = item.id;
+                    div.dataset.type = item.type;
+                    div.addEventListener('click', () => handleMatch(div));
+                    return div;
+                }
+
+                fronts.forEach(item => colF.appendChild(makeMatchEl(item)));
+                backs.forEach(item  => colB.appendChild(makeMatchEl(item)));
+                ensureCardTitle(card, i);
+                const instrEl = document.createElement('div');
+                instrEl.className = 'instruction';
+                card.insertBefore(instrEl, card.firstElementChild);
+
+            } else {
+                const item = quizData[i - MATCH_END];
+                card.innerHTML = `
+                    <h3 class="quiz-title">Scrivi</h3>
+                    <p class="quiz-instruction">Scrivete la preposizione corretta: в / на / к</p>
+                    <div class="quiz-item" data-id="${item.id}">
+                        <div class="quiz-prompt">${item.promptPrefix} <input type="text" class="quiz-input" data-index="${i - MATCH_END}"> ${item.promptSuffix}</div>
+                        <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">Проверить</button></div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                `;
+                ensureCardTitle(card, i);
+                const instrEl = document.createElement('div');
+                instrEl.className = 'instruction';
+                card.insertBefore(instrEl, card.firstElementChild);
+            }
+
+            container.appendChild(card);
+        }
+
+        attachHandlers();
+    }
+
+    function attachHandlers() {
+        container.querySelectorAll('.mal-04-card').forEach(card => {
+            const idx = parseInt(card.dataset.index, 10);
+            if (idx >= MC_END) return;
+
+            let checked = false;
+            const gaps  = Array.from(card.querySelectorAll('.gap'));
+            const words = Array.from(card.querySelectorAll('.word-option'));
+            const verifyBtn = card.querySelector('.verify-btn');
+            const nBtn      = card.querySelector('.next-btn');
+            const feedback  = card.querySelector('.feedback');
+
+            words.forEach(w => {
+                w.addEventListener('click', function() {
+                    if (this.classList.contains('used') || checked) return;
+                    const gap = gaps.find(g => !g.classList.contains('filled'));
+                    if (!gap) return;
+                    gap.textContent = this.dataset.word;
+                    gap.classList.add('filled');
+                    gap.dataset.word      = this.dataset.word;
+                    gap.dataset.wordIndex = this.dataset.index;
+                    this.classList.add('used');
+                });
+            });
+
+            gaps.forEach(gap => {
+                gap.addEventListener('click', function() {
+                    if (checked || !this.classList.contains('filled')) return;
+                    const w = words.find(x => x.dataset.index === this.dataset.wordIndex);
+                    this.textContent = ''; this.classList.remove('filled');
+                    delete this.dataset.word; delete this.dataset.wordIndex;
+                    if (w) w.classList.remove('used');
+                });
+            });
+
+            if (nBtn) nBtn.addEventListener('click', () => showCard(currentCard + 1));
+
+            verifyBtn.addEventListener('click', function() {
+                checked = true;
+                const correct = multipleChoiceData[idx].answer;
+                let ok = 0;
+                gaps.forEach(gap => {
+                    if (gap.dataset.word === correct) { gap.classList.remove('filled'); gap.classList.add('correct'); ok = 1; }
+                    else gap.classList.add('incorrect');
+                });
+                feedback.textContent = ok ? '✓ Правильно!' : `✗ Правильный предлог: ${correct}`;
+                feedback.className = `feedback ${ok ? 'correct' : 'wrong'}`;
+                verifyBtn.style.display = 'none';
+                nBtn.style.display = 'inline-block';
+            });
+        });
+
+        container.querySelectorAll('.quiz-check-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card  = this.closest('.mal-04-card');
+                const idx   = parseInt(card.dataset.index) - MATCH_END;
+                const item  = quizData[idx];
+                const input = card.querySelector('.quiz-input');
+                const fb    = card.querySelector('.quiz-feedback');
+                const ok    = item.answers.some(a => normalizeInput(input.value) === a);
+                if (ok) {
+                    input.classList.replace('incorrect', 'correct') || input.classList.add('correct');
+                    input.disabled = true; this.disabled = true;
+                    fb.textContent = 'Правильно!'; fb.className = 'quiz-feedback correct';
                 } else {
-                    btn.classList.add('wrong');
-                    fb.textContent = `✗ Правильный предлог: ${q.correct}`;
-                    fb.className = 'mal04-feedback wrong';
-                    container.querySelectorAll('.mal04-opt').forEach(b => {
-                        if (b.getAttribute('data-value') === q.correct) b.classList.add('correct');
-                    });
+                    input.classList.replace('correct', 'incorrect') || input.classList.add('incorrect');
+                    fb.textContent = 'Неправильно. Попробуйте ещё раз.'; fb.className = 'quiz-feedback incorrect';
                 }
             });
         });
-        counter.textContent = `${index + 1} / ${shuffled.length}`;
-        prevBtn.disabled = index === 0;
-        nextBtn.disabled = index === shuffled.length - 1;
+
+        container.querySelectorAll('.quiz-input').forEach(input => {
+            input.addEventListener('keydown', e => {
+                if (e.key === 'Enter') {
+                    const btn = input.closest('.quiz-item').querySelector('.quiz-check-btn');
+                    if (btn && !btn.disabled) btn.click();
+                }
+            });
+        });
     }
 
-    prevBtn.addEventListener('click', () => { if (current > 0)                   { current--; render(current); } });
-    nextBtn.addEventListener('click', () => { if (current < shuffled.length - 1) { current++; render(current); } });
+    function showCard(idx) {
+        currentCard = idx;
+        container.querySelectorAll('.mal-04-card').forEach((c, i) => {
+            c.classList.toggle('visible', i === idx);
+            c.hidden = (i !== idx);
+        });
+        counterEl.textContent = `${idx + 1} / ${TOTAL}`;
+        prevBtn.disabled = (idx === 0);
+        nextBtn.disabled = (idx === TOTAL - 1);
+    }
 
-    render(0);
+    prevBtn.addEventListener('click', () => { if (currentCard > 0)         showCard(currentCard - 1); });
+    nextBtn.addEventListener('click', () => { if (currentCard < TOTAL - 1) showCard(currentCard + 1); });
+
+    buildCards();
+    showCard(0);
 }
 
 // ============================================================
@@ -247,12 +455,12 @@ initPanelManager({
         'panel-mal-open-1':  () => new DragDropExercise({ rootId: 'ex-dragdrop-mal-01',    exercises: p1exercises }),
         'panel-mal-open-5':  () => new DragDropExercise({ rootId: 'ex-dragdrop-mal-05',    exercises: p5exercises }),
         'panel-mal-open-6':  () => new DragDropExercise({ rootId: 'ex-dragdrop-mal-06',    exercises: p6exercises }),
-        'panel-mal-open-2':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-02', cards: p2cards }),
-        'panel-mal-open-7':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-07', cards: p7cards }),
-        'panel-mal-open-8':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-08', cards: p8cards }),
-        'panel-mal-open-3':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-03', cards: p3cards }),
-        'panel-mal-open-9':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-09', cards: p9cards }),
-        'panel-mal-open-10': () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-10', cards: p10cards }),
+        'panel-mal-open-2':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-02', cards: p2cards, quizByPrep: true }),
+        'panel-mal-open-7':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-07', cards: p7cards, quizByPrep: true }),
+        'panel-mal-open-8':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-08', cards: p8cards, quizByPrep: true }),
+        'panel-mal-open-3':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-03', cards: p3cards, quizByPrep: true }),
+        'panel-mal-open-9':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-09', cards: p9cards, quizByPrep: true }),
+        'panel-mal-open-10': () => new FlashcardExercise({ rootId: 'ex-flashcards-mal-10', cards: p10cards, quizByPrep: true }),
         'panel-mal-open-4':  () => initPanel4Mal(),
     },
     enableAccessControl: true,
