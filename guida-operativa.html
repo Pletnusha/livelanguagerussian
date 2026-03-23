@@ -108,7 +108,68 @@
   <strong>Importante:</strong> ogni pannello deve avere un <code>id</code> univoco in tutto il sito. Usa una convenzione chiara, es. <code>panel-genitivo2-01</code>, <code>panel-genitivo2-02</code>, ecc.
 </div>
 
-<h2>4. Pubblicare le modifiche (deploy)</h2>
+<h2>4. Struttura dei Verbi di Moto al Passato</h2>
+
+<p>La sezione del passato è organizzata sotto <code>/livello_elementare/verbi-di-moto/passato/</code> e segue lo stesso pattern del presente.</p>
+
+<h3>Struttura cartelle</h3>
+<pre>/livello_elementare/verbi-di-moto/passato/
+├── index.html                          ← hub passato
+├── idti-xodit-passato/
+│   ├── index.html
+│   └── exercises.js
+├── exat-ezdit-passato/
+│   ├── index.html
+│   └── exercises.js
+└── specifici-passato/
+    ├── index.html
+    └── exercises.js</pre>
+
+<h3>Pannelli per sezione (schema standard)</h3>
+<table>
+  <tr><th>Panel</th><th>Tipo</th><th>data-access</th><th>Contenuto</th></tr>
+  <tr><td>1</td><td>DragDrop</td><td><code>public</code></td><td>Mix monodir. vs pluridir. al passato</td></tr>
+  <tr><td>2</td><td>Flashcard</td><td><code>public</code></td><td>Frasi contestuali al passato</td></tr>
+  <tr><td>3</td><td>Flashcard</td><td><code>public</code></td><td>Ulteriori contesti d'uso</td></tr>
+  <tr><td>4</td><td>Quiz misto</td><td><code>public</code></td><td>MC + Match + Write (10+10+10)</td></tr>
+  <tr><td>5</td><td>DragDrop</td><td><code>paid</code></td><td>Solo forme monodirezionale</td></tr>
+  <tr><td>6</td><td>DragDrop</td><td><code>paid</code></td><td>Solo forme pluridirezionale</td></tr>
+  <tr><td>7</td><td>Flashcard</td><td><code>student</code></td><td>Flashcard avanzate</td></tr>
+  <tr><td>8</td><td>Flashcard</td><td><code>paid</code></td><td>Flashcard contesti avanzati</td></tr>
+  <tr><td>9</td><td>Flashcard</td><td><code>student</code></td><td>Flashcard genere e accordo</td></tr>
+  <tr><td>10</td><td>Flashcard</td><td><code>paid</code></td><td>Flashcard mix tematico</td></tr>
+  <tr><td>11*</td><td>DragDrop</td><td><code>paid</code></td><td>Solo per specifici: terza coppia (ЛЕТЕТЬ/ЛЕТАТЬ)</td></tr>
+</table>
+<p>* Il panel 11 è presente solo in <code>specifici-passato</code> per coprire ЛЕТЕТЬ / ЛЕТАТЬ.</p>
+
+<h3>Convenzione ID pannelli passato</h3>
+<table>
+  <tr><th>Sezione</th><th>Prefisso panel</th><th>Prefisso rootId</th></tr>
+  <tr><td>idti-xodit-passato</td><td><code>panel-past-ix-NN</code></td><td><code>ex-dragdrop-past-ix-NN</code> / <code>ex-flashcards-past-ix-NN</code></td></tr>
+  <tr><td>exat-ezdit-passato</td><td><code>panel-past-ez-NN</code></td><td><code>ex-dragdrop-past-ez-NN</code> / <code>ex-flashcards-past-ez-NN</code></td></tr>
+  <tr><td>specifici-passato</td><td><code>panel-past-sp-NN</code></td><td><code>ex-dragdrop-past-sp-NN</code> / <code>ex-flashcards-past-sp-NN</code></td></tr>
+</table>
+
+<h3>Forme del passato coperte</h3>
+<table>
+  <tr><th>Verbo</th><th>м</th><th>ж</th><th>н</th><th>мн</th></tr>
+  <tr><td>ИДТИ (monodir.)</td><td>шёл</td><td>шла</td><td>шло</td><td>шли</td></tr>
+  <tr><td>ХОДИТЬ (pluridir.)</td><td>ходил</td><td>ходила</td><td>ходило</td><td>ходили</td></tr>
+  <tr><td>ЕХАТЬ (monodir.)</td><td>ехал</td><td>ехала</td><td>ехало</td><td>ехали</td></tr>
+  <tr><td>ЕЗДИТЬ (pluridir.)</td><td>ездил</td><td>ездила</td><td>ездило</td><td>ездили</td></tr>
+  <tr><td>БЕЖАТЬ (monodir.)</td><td>бежал</td><td>бежала</td><td>бежало</td><td>бежали</td></tr>
+  <tr><td>БЕГАТЬ (pluridir.)</td><td>бегал</td><td>бегала</td><td>бегало</td><td>бегали</td></tr>
+  <tr><td>ПЛЫТЬ (monodir.)</td><td>плыл</td><td>плыла</td><td>плыло</td><td>плыли</td></tr>
+  <tr><td>ПЛАВАТЬ (pluridir.)</td><td>плавал</td><td>плавала</td><td>плавало</td><td>плавали</td></tr>
+  <tr><td>ЛЕТЕТЬ (monodir.)</td><td>летел</td><td>летела</td><td>летело</td><td>летели</td></tr>
+  <tr><td>ЛЕТАТЬ (pluridir.)</td><td>летал</td><td>летала</td><td>летало</td><td>летали</td></tr>
+</table>
+
+<div class="note">
+  <strong>Nota:</strong> tutti i file <code>exercises.js</code> del passato contengono dati di esempio (scaffold). I contenuti vanno revisionati e completati prima di mettere online gli esercizi. Cercare i commenti <code>// TODO</code> per i punti da aggiornare.
+</div>
+
+<h2>5. Pubblicare le modifiche (deploy)</h2>
 
 
 </body>
