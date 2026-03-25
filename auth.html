@@ -350,6 +350,7 @@
         const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
         const RECAPTCHA_SITE_KEY = '6LecDGcsAAAAAKhBMIFk7ihhOZknno66lgb7uSGU';
+        const N8N_WEBHOOK_URL = 'https://n8n.pletnusha.xyz/webhook/new-user';
 
         const { createClient } = supabase;
         const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -389,11 +390,16 @@
 
                     if (error) throw error;
 
+                    await supabaseClient
+                        .from('profiles')
+                        .update({ last_login: new Date().toISOString() })
+                        .eq('user_id', data.user.id);
+
                     loginForm.style.display = 'none';
                     document.getElementById('loginSuccess').style.display = 'block';
 
                     setTimeout(() => {
-                        window.location.href = redirectPath ? '/' + redirectPath + '/' : '/';
+                        window.location.href = redirectPath ? '/' + redirectPath + '/' : '/livello_elementare/';
                     }, 1000);
 
                 } catch (err) {
@@ -505,6 +511,51 @@
                     });
 
                     if (error) throw error;
+
+                    if (data.user) {
+                        const { data: profileData } = await supabaseClient.from('profiles').upsert({
+                            user_id:                 data.user.id,
+                            first_name:              firstName,
+                            last_name:               lastName,
+                            email:                   email,
+                            whatsapp_phone_number:   whatsappPhone,
+                            track_level:             trackLevel,
+                            courses:                 courses,
+                            marketing_consent:       marketingConsent,
+                            data_processing_consent: dataConsent,
+                            generated_password:      generatedPassword,
+                            topic_pass:              topicPath || null,
+                            plan:                    null,
+                            login:                   true,
+                            lessonpaid:              false,
+                            exercisepaid:            false,
+                            registration_status:     'registered',
+                            n8n_stage:               'new',
+                        }, { onConflict: 'user_id' }).select('id');
+
+                        await fetch(N8N_WEBHOOK_URL, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                type: 'INSERT',
+                                table: 'profiles',
+                                record: {
+                                    id:                  profileData?.[0]?.id || null,
+                                    user_id:             data.user.id,
+                                    first_name:          firstName,
+                                    last_name:           lastName,
+                                    email:               email,
+                                    generated_password:  generatedPassword,
+                                    topic_pass:          topicPath || null,
+                                    plan:                null,
+                                    n8n_stage:           'new',
+                                    registration_status: 'registered',
+                                },
+                                schema: 'public',
+                                old_record: null,
+                            }),
+                        });
+                    }
 
                     registrationForm.style.display = 'none';
                     document.getElementById('loadingMessage').style.display = 'none';

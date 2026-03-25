@@ -24,25 +24,35 @@
 <body>
 
 <h1>Live Language Russian — Guida operativa</h1>
-<p class="subtitle">Versione 1.0 · Marzo 2026</p>
+<p class="subtitle">Versione 1.1 · Marzo 2026</p>
 
 <h2>1. Come funziona il sistema</h2>
 
 <h3>Flusso A: Registrazione gratuita</h3>
 <ol>
-  <li>L'utente va su <code>/register.html</code> e compila il form</li>
-  <li>Riceve una <strong>email automatica</strong> con username, password e link diretto agli esercizi</li>
-  <li>Può accedere agli esercizi gratuiti</li>
+  <li>L'utente va su <code>/register.html</code> (o <code>/auth.html?mode=register</code>) e compila il form</li>
+  <li>Il sistema crea l'account in Supabase Auth, scrive il profilo nella tabella <code>profiles</code> e chiama il webhook n8n</li>
+  <li>L'utente riceve una <strong>email automatica</strong> con username, password e link diretto agli esercizi</li>
+  <li>Può accedere agli esercizi con <code>data-access="public"</code></li>
+  <li>Dopo il login viene reindirizzato a <code>/livello_elementare/</code> (o alla pagina di origine se presente il parametro <code>?redirect=</code>)</li>
 </ol>
 
 <h3>Flusso B: Abbonamento (Gruppo / Light / Base)</h3>
 <ol>
   <li>L'utente va su <code>/courses.html</code> e sceglie il piano</li>
-  <li>Compila il form di registrazione</li>
-  <li>Viene reindirizzato su <strong>Stripe</strong> per il pagamento</li>
-  <li>Dopo la conferma del pagamento riceve una <strong>email</strong> con le credenziali</li>
-  <li>Il profilo viene aggiornato automaticamente: accesso completo a esercizi e lezioni</li>
+  <li>Compila il form di registrazione su <code>/register.html?plan=gruppo</code> (o light / base)</li>
+  <li>Viene reindirizzato su <strong>Stripe</strong> per il pagamento (con <code>client_reference_id = user_id</code>)</li>
+  <li>Stripe notifica il backend → n8n aggiorna <code>exercisepaid = true</code> e <code>registration_status = paid</code></li>
+  <li>L'utente riceve email con le credenziali e accesso completo agli esercizi <code>data-access="paid"</code></li>
 </ol>
+
+<h3>Pagine di autenticazione</h3>
+<table>
+  <tr><th>Pagina</th><th>Uso</th><th>Note</th></tr>
+  <tr><td><code>/login.html</code></td><td>Login dedicato</td><td>Aggiorna <code>last_login</code>; redirect a <code>/livello_elementare/</code> se manca <code>?redirect=</code></td></tr>
+  <tr><td><code>/register.html</code></td><td>Registrazione principale</td><td>Scrive profiles + chiama n8n; supporta piani Stripe via <code>?plan=</code></td></tr>
+  <tr><td><code>/auth.html</code></td><td>Login + registrazione unificati</td><td>Usa <code>?mode=login</code> o <code>?mode=register</code>; comportamento identico a login.html e register.html</td></tr>
+</table>
 
 <h2>2. Gestione utenti</h2>
 
@@ -88,10 +98,14 @@
 <p>Ogni pannello esercizio ha un attributo <code>data-access</code> che determina chi può vederlo:</p>
 
 <table>
-  <tr><th>data-access</th><th>Chi può vederlo</th></tr>
-  <tr><td><code>public</code></td><td>Tutti gli utenti registrati (gratuiti e paganti)</td></tr>
-  <tr><td><code>paid</code></td><td>Solo utenti con abbonamento (<code>exercisepaid = true</code>)</td></tr>
+  <tr><th>data-access</th><th>Chi può vederlo</th><th>Corrisponde a</th></tr>
+  <tr><td><code>public</code></td><td>Tutti gli utenti registrati (gratuiti e paganti)</td><td>Utente loggato = "studente"</td></tr>
+  <tr><td><code>paid</code></td><td>Solo utenti con abbonamento (<code>exercisepaid = true</code>)</td><td>Abbonato</td></tr>
 </table>
+
+<div class="note">
+  <strong>Nota:</strong> il livello <code>student</code> è definito nel codice ma non attualmente attivo. Per semplicità, "studente" = qualsiasi utente loggato = <code>data-access="public"</code>. I pannelli marcati <code>data-access="student"</code> negli scaffold del passato vanno considerati equivalenti a <code>public</code> finché non viene attivato il livello student nel backend.
+</div>
 
 <p>Esempio nel codice HTML:</p>
 <pre>&lt;!-- Esercizio gratuito --&gt;
@@ -108,7 +122,23 @@
   <strong>Importante:</strong> ogni pannello deve avere un <code>id</code> univoco in tutto il sito. Usa una convenzione chiara, es. <code>panel-genitivo2-01</code>, <code>panel-genitivo2-02</code>, ecc.
 </div>
 
-<h2>4. Struttura dei Verbi di Moto al Passato</h2>
+<h2>4. Pagine di tipo Guida (contenuto teorico)</h2>
+
+<p>Oltre alle pagine di esercizi interattivi, esistono pagine di <strong>guida teorica</strong> con tabelle di riferimento. Seguono la stessa struttura pannello-card ma il tipo è <code>Guida</code> e il contenuto è testuale.</p>
+
+<h3>Esempio: ИДТИ — Usi speciali</h3>
+<pre>/livello_elementare/verbi-di-moto/idti-usi-speciali/
+├── index.html     ← 7 pannelli collassabili (meteo, tempo, processi...)
+└── exercises.js   ← solo initPanelManager({ enableAccessControl: true })</pre>
+
+<p>Tutti i pannelli usano <code>data-access="public"</code> (visibili a qualsiasi utente loggato). Il tipo mostrato nella card è <code>Guida</code> anziché <code>Drag &amp; Drop</code> / <code>Flashcard</code>.</p>
+
+<div class="note">
+  <strong>Struttura CSS aggiuntiva:</strong> le pagine guida aggiungono un <code>&lt;style&gt;</code> inline con le classi <code>.guida-table</code>, <code>.guida-regola-oro</code> e <code>.guida-nota</code> — non fanno parte di main.css e sono locali alla pagina.
+</div>
+
+<h2>5. Struttura dei Verbi di Moto al Passato</h2>
+
 
 <p>La sezione del passato è organizzata sotto <code>/livello_elementare/verbi-di-moto/passato/</code> e segue lo stesso pattern del presente.</p>
 
@@ -169,8 +199,25 @@
   <strong>Nota:</strong> tutti i file <code>exercises.js</code> del passato contengono dati di esempio (scaffold). I contenuti vanno revisionati e completati prima di mettere online gli esercizi. Cercare i commenti <code>// TODO</code> per i punti da aggiornare.
 </div>
 
-<h2>5. Pubblicare le modifiche (deploy)</h2>
+<h2>6. Pubblicare le modifiche (deploy)</h2>
 
+<p>Il sito è su GitHub (<code>Pletnusha/livelanguagerussian</code>) e viene servito staticamente. Il processo è:</p>
+
+<div class="step"><strong>1.</strong> Verifica lo stato locale con <code>git status</code></div>
+<div class="step"><strong>2.</strong> Se ci sono branch divergenti (es. dopo modifiche remote), allinea con <code>git pull --rebase origin main</code></div>
+<div class="step"><strong>3.</strong> Aggiungi i file modificati: <code>git add &lt;file&gt;</code> (evita <code>git add -A</code> per non includere file sensibili)</div>
+<div class="step"><strong>4.</strong> Crea il commit: <code>git commit -m "Descrizione delle modifiche"</code></div>
+<div class="step"><strong>5.</strong> Pubblica: <code>git push origin main</code></div>
+
+<div class="note">
+  <strong>Attenzione:</strong> non fare mai <code>git push --force</code> su main. Se il push viene rifiutato, fare prima <code>git pull --rebase origin main</code> e poi riprovare.
+</div>
+
+<h3>Anteprima locale</h3>
+<p>Per vedere le modifiche in locale prima di pubblicarle:</p>
+<pre>cd /percorso/del/sito
+python3 -m http.server 8080</pre>
+<p>Poi aprire <code>http://localhost:8080</code> nel browser. Il controllo accessi Supabase non funzionerà in locale (tutti i pannelli saranno visibili), ma la struttura e il layout sono verificabili.</p>
 
 </body>
 </html>
