@@ -163,9 +163,9 @@ Every role has access to all documents in this folder.
 
 | Document | Used by |
 |---|---|
-| `personal_brand_dna_EN.md` | Copywriter, SMM, Seller |
+| `brand_value.md` | Copywriter, SMM, Seller |
 | `LiveLanguage_Cheatsheet_Sviluppatore` | ID, Copywriter |
-| `style_guide_copywriter.md` | Copywriter |
+| `style_guide.md` | Copywriter |
 
 **Rule:** When activating any role, Claude checks `/documents` for relevant reference material before proceeding. If a document is referenced in a role file but not found in `/documents` — flag to PM before proceeding.
 

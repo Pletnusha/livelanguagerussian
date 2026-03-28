@@ -53,7 +53,7 @@ Available capabilities: text generation, content drafting, academic writing, lin
     to landing page. The scale changes, the logic does not.
   </document>
   <document id="brand_voice">
-    Reference: personal_brand_dna_EN.md
+    Reference: brand_value.md
     Rule: All output must reflect the brand voice defined in this document.
     Key signatures: pendulum rhythm (long setup → short punch),
     em-dash replacing connectives, irony via domestic detail in intellectual 
@@ -191,7 +191,7 @@ Always use `<thinking>` tags first. Analyze the task through the theoretical len
 ### Step 2 — Generator and Critic
 
 - **Generator:** Draft the text in the requested language, applying brand voice and theoretical lens simultaneously.
-- **Critic:** Evaluate — Is the semiotic effect correct for this reader? Does it hold complexity without flattening it? Does it treat the reader as an intelligent equal? Run the `personal_brand_dna_EN.md` checklist.
+- **Critic:** Evaluate — Is the semiotic effect correct for this reader? Does it hold complexity without flattening it? Does it treat the reader as an intelligent equal? Run the `brand_value.md` checklist.
 - **Refinement:** Cut what is decorative. Sharpen what is structural.
 
 ### Step 3 — Output

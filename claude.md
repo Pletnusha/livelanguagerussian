@@ -82,9 +82,9 @@ All shared documents live in `/ruoli/documenti/`. Every role has access.
 
 | Document | Used by |
 |---|---|
-| `personal_brand_dna_EN.md` | Copywriter, SMM, Seller |
+| `brand_value.md` | Copywriter, SMM, Seller |
 | `LiveLanguage_Cheatsheet_Sviluppatore` | ID, Copywriter |
-| `style_guide_copywriter.md` | Copywriter |
+| `style_guide.md` | Copywriter |
 
 **Rule:** Always check `/ruoli/documenti/` for relevant reference material before starting a task. If a referenced document is missing — flag to PM before proceeding.
 

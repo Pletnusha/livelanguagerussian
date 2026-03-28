@@ -1,0 +1,123 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "1dacef1a-5493-4a63-a310-a32da8c71995",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "b16e7763-35d6-43d5-99fe-3a6ac5191caa",
+      "name": "Webhook",
+      "webhookId": "1dacef1a-5493-4a63-a310-a32da8c71995"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "workshop_registrations",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "email",
+              "condition": "eq",
+              "keyValue": "={{ $json.body.data.object.customer_details.email }}"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "status",
+              "fieldValue": "paid "
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "21ba4f27-e5f5-455f-9617-5e933d6ef2b7",
+      "name": "Update a row",
+      "credentials": {
+        "supabaseApi": {
+          "id": "G01pQlPX8kX3kuz1",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "workshop_registrations",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "email",
+              "condition": "eq",
+              "keyValue": "={{ $json.body.data.object.customer_details.email }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "b7f65d52-1ac1-48a4-8371-b93bae63468c",
+      "name": "Get many rows",
+      "credentials": {
+        "supabaseApi": {
+          "id": "G01pQlPX8kX3kuz1",
+          "name": "Supabase account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Update a row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update a row": {
+      "main": [
+        [
+          {
+            "node": "Get many rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "f765a278-1255-4a53-9701-ed4ff9af068c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "df60330ab8971016a83cc2f699521d8623afa0297c05f495845bb89c142eec1c"
+  },
+  "id": "8geDDkCCDHBBqQFUsKy8z",
+  "tags": []
+}
