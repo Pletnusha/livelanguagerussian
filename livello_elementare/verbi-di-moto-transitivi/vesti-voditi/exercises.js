@@ -1,4 +1,5 @@
 import DragDropExercise from '/assets/js/engines/DragDropExercise.js';
+import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
@@ -79,7 +80,7 @@ const p5exercises = [
     },
     {
         instruction: "Выбери правильную форму глагола ВЕСТИ.",
-        text: "Ты {{1}} эту колонку уже год?",
+        text: "Ты {{1}} колонку в газете уже год?",
         words: ["ведёшь", "ведут", "ведём"],
         correctAnswers: { 1: "ведёшь" }
     },
@@ -97,7 +98,7 @@ const p5exercises = [
     },
     {
         instruction: "Выбери правильную форму глагола ВЕСТИ.",
-        text: "Вы {{1}} приём каждый день?",
+        text: "Вы {{1}} приём пациентов каждый день?",
         words: ["ведёте", "ведёшь", "ведут"],
         correctAnswers: { 1: "ведёте" }
     },
@@ -110,11 +111,71 @@ const p5exercises = [
 ];
 
 // ============================================================
+// PANEL 6 — DragDrop · paid · Спряжение ВОДИТЬ (только формы ВОДИТЬ)
+// ============================================================
+const p6exercises = [
+    {
+        instruction: "Выбери правильную форму глагола ВОДИТЬ.",
+        text: "Я {{1}} детей на тренировку по средам.",
+        words: ["водим", "водит", "вожу"],
+        correctAnswers: { 1: "вожу" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ВОДИТЬ.",
+        text: "Они {{1}} экскурсии по старому городу.",
+        words: ["водят", "водим", "водите"],
+        correctAnswers: { 1: "водят" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ВОДИТЬ.",
+        text: "Ты {{1}} машину уже десять лет?",
+        words: ["водит", "водишь", "вожу"],
+        correctAnswers: { 1: "водишь" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ВОДИТЬ.",
+        text: "Вы {{1}} детей в школу сами?",
+        words: ["водим", "водят", "водите"],
+        correctAnswers: { 1: "водите" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ВОДИТЬ.",
+        text: "Она {{1}} его за нос уже месяц.",
+        words: ["водит", "вожу", "водишь"],
+        correctAnswers: { 1: "водит" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ВОДИТЬ.",
+        text: "Мы не {{1}} с ними дружбу.",
+        words: ["водите", "водим", "водят"],
+        correctAnswers: { 1: "водим" }
+    },
+];
+
+// ============================================================
+// PANEL 2 — Flashcard · public · Mix вести + водить
+// ============================================================
+const p2cards = [
+    { front: "Он ведёт колонку в газете", back: "уже три года" },
+    { front: "Каждое утро она", back: "водит сына в садик" },
+    { front: "Расследование ведут", back: "лучшие следователи города" },
+    { front: "Раньше мы не водили", back: "дружбу с соседями" },
+    { front: "Доктор ведёт", back: "приём с девяти до часу" },
+    { front: "Она водит", back: "машину спокойно, даже в пробках" },
+    { front: "Девушка ведёт его", back: "на поводке — он кот" },
+    { front: "Ты водишь дочь", back: "на французский каждый вторник?" },
+    { front: "Она вела", back: "дневник и прятала под матрас" },
+    { front: "Ты водишь его", back: "за нос — он же всё понимает" },
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-vv-01': () => new DragDropExercise({ rootId: 'ex-dragdrop-vv-01', exercises: p1exercises }),
     'panel-vv-05': () => new DragDropExercise({ rootId: 'ex-dragdrop-vv-05', exercises: p5exercises }),
+    'panel-vv-06': () => new DragDropExercise({ rootId: 'ex-dragdrop-vv-06', exercises: p6exercises }),
+    'panel-vv-02': () => new FlashcardExercise({ rootId: 'ex-flashcards-vv-02', cards: p2cards }),
 };
 
 initPanelManager({ initializers, enableAccessControl: false });
