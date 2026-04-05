@@ -1,5 +1,8 @@
+import { logAnswer, updatePanelStatus } from '../tracker.js';
+
 export default class QuizExercise {
     constructor({ panelId, listId, questions }) {
+        this.panelId   = panelId;
         this.questions = questions;
 
         const panel = document.getElementById(panelId);
@@ -52,33 +55,47 @@ export default class QuizExercise {
             const input = li.querySelector('.quiz-input');
 
             checkBtn.addEventListener('click', () => {
-                this.checkAnswer(input, checkBtn, feedbackDiv, item.answers);
+                this.checkAnswer(input, checkBtn, feedbackDiv, item.answers, item.id);
             });
 
             input.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' && !checkBtn.disabled) {
-                    this.checkAnswer(input, checkBtn, feedbackDiv, item.answers);
+                    this.checkAnswer(input, checkBtn, feedbackDiv, item.answers, item.id);
                 }
             });
         });
     }
 
-    checkAnswer(input, button, feedback, correctAnswers) {
+    checkAnswer(input, button, feedback, correctAnswers, questionId) {
         const userAnswer = this.normalizeInput(input.value);
-        const isCorrect = correctAnswers.some(ans => userAnswer === ans);
+        const isCorrect  = correctAnswers.some(ans => userAnswer === ans);
 
         if (isCorrect) {
             input.classList.remove('incorrect');
             input.classList.add('correct');
-            input.disabled = true;
+            input.disabled  = true;
             button.disabled = true;
             feedback.textContent = 'Правильно!';
-            feedback.className = 'quiz-feedback correct';
+            feedback.className   = 'quiz-feedback correct';
         } else {
             input.classList.remove('correct');
             input.classList.add('incorrect');
             feedback.textContent = 'Неправильно. Попробуйте ещё раз.';
-            feedback.className = 'quiz-feedback incorrect';
+            feedback.className   = 'quiz-feedback incorrect';
         }
+
+        logAnswer({
+            panelId:       this.panelId,
+            questionId:    questionId ?? input.dataset.index,
+            userAnswer,
+            correctAnswer: correctAnswers[0],
+            isCorrect
+        });
+        updatePanelStatus({
+            panelId:      this.panelId,
+            status:       'in_progress',
+            correctDelta: isCorrect ? 1 : 0,
+            errorDelta:   isCorrect ? 0 : 1
+        });
     }
 }

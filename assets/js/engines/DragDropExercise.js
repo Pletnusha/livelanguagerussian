@@ -1,3 +1,5 @@
+import { logAnswer, updatePanelStatus } from '../tracker.js';
+
 export default class DragDropExercise {
     constructor({ rootId, exercises }) {
         this.rootId = rootId;
@@ -9,6 +11,8 @@ export default class DragDropExercise {
 
         this.root = document.getElementById(rootId);
         if (!this.root) return;
+
+        this.panelId = this.root.closest('.exercise-panel')?.id ?? rootId;
 
         this.exerciseContainer = this.root.querySelector(`#${rootId}-container`);
         this.completionScreen = this.root.querySelector(`#${rootId}-completion`);
@@ -115,21 +119,36 @@ export default class DragDropExercise {
     checkAnswers(exercise, feedback, nextBtn, checkBtn) {
         this.checked = true;
         let correct = 0;
+        let errors = 0;
         const total = Object.keys(exercise.correctAnswers).length;
+        const exerciseIdx = this.currentExerciseIndex;
+        const panelId = this.panelId;
 
         this.gapElements.forEach(gap => {
             const gapNum = parseInt(gap.dataset.gap, 10);
-            const userAnswer = gap.dataset.word;
+            const userAnswer = gap.dataset.word ?? '';
             const correctAnswer = exercise.correctAnswers[gapNum];
+            const isCorrect = userAnswer === correctAnswer;
 
-            if (userAnswer === correctAnswer) {
+            if (isCorrect) {
                 gap.classList.remove('filled');
                 gap.classList.add('correct');
                 correct++;
             } else {
                 gap.classList.add('incorrect');
+                errors++;
             }
+
+            logAnswer({
+                panelId,
+                questionId: `ex${exerciseIdx}-gap${gapNum}`,
+                userAnswer,
+                correctAnswer,
+                isCorrect
+            });
         });
+
+        updatePanelStatus({ panelId, status: 'in_progress', correctDelta: correct, errorDelta: errors });
 
         feedback.textContent = `Risultato: ${correct}/${total}`;
         feedback.style.color = correct === total ? '#15803d' : '#b91c1c';
@@ -138,6 +157,7 @@ export default class DragDropExercise {
     }
 
     showCompletion() {
+        updatePanelStatus({ panelId: this.panelId, status: 'completed' });
         this.exerciseContainer.style.display = 'none';
         if (this.completionScreen) {
             this.completionScreen.style.display = 'block';

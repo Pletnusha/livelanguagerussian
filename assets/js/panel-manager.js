@@ -22,9 +22,10 @@ async function loadSupabase() {
 
 // ============================================================
 // GET USER ACCESS LEVEL FROM SUPABASE
-// - any logged-in user  → 'public'  (data-access="public")
-// - exercisepaid=true   → 'paid'    (data-access="paid")
-// - not logged in       → 'none'
+// - not logged in           → 'none'
+// - logged in               → 'public'
+// - access_level='student'  → 'student'  (data-access="student")
+// - access_level='paid'     → 'paid'     (data-access="paid")
 // ============================================================
 async function getUserLevel() {
     try {
@@ -36,12 +37,11 @@ async function getUserLevel() {
 
         const { data: profile } = await client
             .from('profiles')
-            .select('exercisepaid')
+            .select('access_level')
             .eq('user_id', session.user.id)
             .single();
 
-        if (profile?.exercisepaid) return 'paid';
-        return 'public';
+        return profile?.access_level ?? 'public';
 
     } catch (e) {
         console.error('Access control error:', e);
