@@ -1,4 +1,5 @@
 import { initSpeech, playAudio } from '../utils/speech.js';
+import { logAnswer, updatePanelStatus } from '../tracker.js';
 
 export default class FlashcardExercise {
     constructor({ rootId, cards, quizByPrep = false }) {
@@ -15,6 +16,8 @@ export default class FlashcardExercise {
             console.warn(`FlashcardExercise: Container #${rootId} NOT FOUND`);
             return;
         }
+
+        this.panelId = this.root.closest('.exercise-panel')?.id ?? rootId;
 
         if (!this.cards || this.cards.length === 0) {
             console.warn(`FlashcardExercise: No cards data for #${rootId}`);
@@ -179,23 +182,24 @@ export default class FlashcardExercise {
 
             area.querySelectorAll('.fca01-quiz-option').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    this.checkQuizAnswer(btn.dataset.answer, btn.dataset.correct, btn);
+                    this.checkQuizAnswer(btn.dataset.answer, btn.dataset.correct, btn, correctCard.front);
                 });
             });
         }
     }
 
-    checkQuizAnswer(selected, correct, btnElement) {
+    checkQuizAnswer(selected, correct, btnElement, questionFront) {
         const id = this.rootId;
         const feedback = this.root.querySelector('.fca01-quiz-feedback');
         const nextBtn = this.root.querySelector(`#${id}-start-quiz-btn`);
+        const isCorrect = selected === correct;
 
         this.root.querySelectorAll('.fca01-quiz-option').forEach(btn => {
             btn.style.pointerEvents = 'none';
             if (btn.dataset.answer === correct) btn.classList.add('correct');
         });
 
-        if (selected === correct) {
+        if (isCorrect) {
             feedback.textContent = "✅ Правильно!";
             feedback.className = "fca01-quiz-feedback correct";
         } else {
@@ -204,6 +208,20 @@ export default class FlashcardExercise {
             feedback.className = "fca01-quiz-feedback wrong";
         }
         if (nextBtn) nextBtn.classList.remove('hidden');
+
+        logAnswer({
+            panelId:       this.panelId,
+            questionId:    `quiz-${questionFront ?? correct}`,
+            userAnswer:    selected,
+            correctAnswer: correct,
+            isCorrect
+        });
+        updatePanelStatus({
+            panelId:      this.panelId,
+            status:       'in_progress',
+            correctDelta: isCorrect ? 1 : 0,
+            errorDelta:   isCorrect ? 0 : 1
+        });
     }
 
     initMatchGame() {
@@ -278,14 +296,45 @@ export default class FlashcardExercise {
             this.selectedMatchCard = null;
             setTimeout(() => { feedbackEl.textContent = ""; }, 1000);
 
+            const matchedFront = previousCard.dataset.type === 'front'
+                ? previousCard.textContent.trim()
+                : clickedCard.textContent.trim();
+            logAnswer({
+                panelId:       this.panelId,
+                questionId:    `match-${firstId}`,
+                userAnswer:    matchedFront,
+                correctAnswer: matchedFront,
+                isCorrect:     true
+            });
+
             const remaining = this.root.querySelectorAll('.fca01-match-card:not(.matched)').length;
-            if (remaining === 0) feedbackEl.textContent = "🎉 ПОБЕДА! 🎉";
+            if (remaining === 0) {
+                feedbackEl.textContent = "🎉 ПОБЕДА! 🎉";
+                updatePanelStatus({ panelId: this.panelId, status: 'completed', correctDelta: 1 });
+            } else {
+                updatePanelStatus({ panelId: this.panelId, status: 'in_progress', correctDelta: 1 });
+            }
         } else {
             this.isProcessingMatch = true;
             clickedCard.classList.add('wrong');
             previousCard.classList.add('wrong');
             feedbackEl.textContent = "Неверно";
             feedbackEl.className = "fca01-match-feedback wrong";
+
+            const wrongFront = previousCard.dataset.type === 'front'
+                ? previousCard.textContent.trim()
+                : clickedCard.textContent.trim();
+            const wrongBack = previousCard.dataset.type === 'back'
+                ? previousCard.textContent.trim()
+                : clickedCard.textContent.trim();
+            logAnswer({
+                panelId:       this.panelId,
+                questionId:    `match-${firstId}`,
+                userAnswer:    wrongBack,
+                correctAnswer: this.cards[parseInt(firstId, 10)]?.back ?? '',
+                isCorrect:     false
+            });
+            updatePanelStatus({ panelId: this.panelId, status: 'in_progress', errorDelta: 1 });
 
             setTimeout(() => {
                 clickedCard.classList.remove('selected', 'wrong');
