@@ -73,10 +73,27 @@ function applyAccessControl(userLevel) {
 // ============================================================
 // INIT PANEL MANAGER
 // ============================================================
-export async function initPanelManager({ initializers = {}, enableAccessControl = false } = {}) {
+export async function initPanelManager({ initializers = {}, enableAccessControl = false, ctaAfterPanel2 = null } = {}) {
     if (enableAccessControl) {
         const userLevel = await getUserLevel();
         applyAccessControl(userLevel);
+    }
+
+    function injectCta() {
+        if (!ctaAfterPanel2) return;
+        const sessionKey = `cta_panel2_shown_${ctaAfterPanel2.panelId}`;
+        if (sessionStorage.getItem(sessionKey)) return;
+
+        const panel = document.getElementById(ctaAfterPanel2.panelId);
+        if (!panel) return;
+
+        const cta = document.createElement('section');
+        cta.className = 'cta-section';
+        cta.setAttribute('data-cta-inline', 'true');
+        cta.innerHTML = ctaAfterPanel2.html;
+        panel.insertAdjacentElement('afterend', cta);
+
+        sessionStorage.setItem(sessionKey, '1');
     }
 
     document.querySelectorAll('.exercise-card[data-status]').forEach(card => {
@@ -107,6 +124,9 @@ export async function initPanelManager({ initializers = {}, enableAccessControl 
                 if (!panel.hasAttribute('data-initialized') && initializers[targetId]) {
                     initializers[targetId]();
                     panel.setAttribute('data-initialized', 'true');
+                }
+                if (ctaAfterPanel2 && targetId === ctaAfterPanel2.panelId) {
+                    injectCta();
                 }
             }
         });

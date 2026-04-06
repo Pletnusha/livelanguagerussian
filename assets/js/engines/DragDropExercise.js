@@ -150,8 +150,20 @@ export default class DragDropExercise {
 
         updatePanelStatus({ panelId, status: 'in_progress', correctDelta: correct, errorDelta: errors });
 
-        feedback.textContent = `Risultato: ${correct}/${total}`;
-        feedback.style.color = correct === total ? '#15803d' : '#b91c1c';
+        if (correct === total) {
+            feedback.textContent = '✓ Corretto!';
+            feedback.style.color = '#15803d';
+        } else if (exercise.explanation) {
+            const wrongCorrects = this.gapElements
+                .filter(g => g.classList.contains('incorrect'))
+                .map(g => exercise.correctAnswers[parseInt(g.dataset.gap, 10)])
+                .join(', ');
+            feedback.innerHTML = `✗ ${wrongCorrects}<br>${exercise.explanation}`;
+            feedback.style.color = '#b91c1c';
+        } else {
+            feedback.textContent = `Risultato: ${correct}/${total}`;
+            feedback.style.color = '#b91c1c';
+        }
         checkBtn.style.display = 'none';
         nextBtn.style.display = 'inline-block';
     }
