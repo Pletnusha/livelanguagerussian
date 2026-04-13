@@ -3,6 +3,11 @@
     display: none !important;
 }
 
+/* Exception: inline CTA injected dynamically after Panel 2 */
+.cta-section[data-cta-inline] {
+    display: block !important;
+}
+
 /* Blocked panel state - visible but non-interactive */
 .exercise-panel[data-state="blocked"] {
     position: relative;

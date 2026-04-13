@@ -24,7 +24,7 @@
 <body>
 
 <h1>Live Language Russian — Guida operativa</h1>
-<p class="subtitle">Versione 1.1 · Marzo 2026</p>
+<p class="subtitle">Versione 1.2 · Aprile 2026</p>
 
 <h2>1. Come funziona il sistema</h2>
 
@@ -199,7 +199,78 @@
   <strong>Nota:</strong> tutti i file <code>exercises.js</code> del passato contengono dati di esempio (scaffold). I contenuti vanno revisionati e completati prima di mettere online gli esercizi. Cercare i commenti <code>// TODO</code> per i punti da aggiornare.
 </div>
 
-<h2>6. Pubblicare le modifiche (deploy)</h2>
+<h2>6. Funzionalità per il Copywriter</h2>
+
+<h3>6.1 Spiegazione dell'errore negli esercizi Drag &amp; Drop</h3>
+
+<p>Ogni esercizio nell'array di un <strong>DragDropExercise</strong> accetta un campo opzionale <code>explanation</code>. Se presente, viene mostrato all'utente quando risponde in modo errato, con la forma corretta e la spiegazione grammaticale.</p>
+
+<p>Comportamento del feedback:</p>
+<table>
+  <tr><th>Situazione</th><th>Messaggio visualizzato</th></tr>
+  <tr><td>Risposta corretta</td><td><code>✓ Corretto!</code></td></tr>
+  <tr><td>Risposta errata <em>con</em> <code>explanation</code></td><td><code>✗ [forma corretta]</code> + spiegazione sulla riga sotto</td></tr>
+  <tr><td>Risposta errata <em>senza</em> <code>explanation</code></td><td><code>Risultato: X/Y</code> (comportamento invariato)</td></tr>
+</table>
+
+<div class="note">
+  <strong>Nota:</strong> il campo è completamente opzionale. Gli esercizi già esistenti senza <code>explanation</code> continuano a funzionare esattamente come prima.
+</div>
+
+<p>Formato dell'oggetto esercizio con il nuovo campo:</p>
+<pre>{
+  instruction: "Completa la frase scegliendo la forma corretta",
+  text: "Я иду {{1}}, нужно купить хлеб.",
+  words: ["магазине", "магазина", "магазин"],
+  correctAnswers: { 1: "магазин" },
+  explanation: "в + accusativo → магазин (movimento verso un luogo)"
+}</pre>
+
+<p>La spiegazione appare sotto la riga <code>✗ магазин</code>, nello stesso stile visivo rosso del feedback di errore. Non è necessario modificare nessun file HTML.</p>
+
+<h3>6.2 CTA dopo il Panel 2 (blocco promozionale inline)</h3>
+
+<p>È possibile mostrare un blocco CTA (call to action) tra la card del Panel 2 e la card del Panel 3, <strong>solo dopo che l'utente ha aperto il Panel 2</strong>. Appare una sola volta per sessione.</p>
+
+<p>La CTA si configura passando il parametro <code>ctaAfterPanel2</code> a <code>initPanelManager</code> nel file <code>exercises.js</code> della pagina. Il Copywriter fornisce il testo HTML; il Tech Specialist aggiorna il file.</p>
+
+<p>Struttura del parametro:</p>
+<pre>ctaAfterPanel2: {
+  panelId: 'panel-mal-open-2',   // ID del pannello Panel 2 di questa pagina
+  html:    '...'                 // contenuto HTML della CTA (testo del Copywriter)
+}</pre>
+
+<p>Esempio completo in <code>exercises.js</code>:</p>
+<pre>initPanelManager({
+  initializers: {
+    'panel-mal-open-1': () => new DragDropExercise({ ... }),
+    'panel-mal-open-2': () => new FlashcardExercise({ ... }),
+    // ...
+  },
+  enableAccessControl: true,
+  ctaAfterPanel2: {
+    panelId: 'panel-mal-open-2',
+    html: `
+      &lt;h2 class="cta-title"&gt;Vuoi sbloccare tutti gli esercizi?&lt;/h2&gt;
+      &lt;p class="cta-text"&gt;Testo fornito dal Copywriter per questa sezione.&lt;/p&gt;
+      &lt;a href="/courses.html" class="cta-button"&gt;Scopri il corso&lt;/a&gt;
+    `
+  }
+});</pre>
+
+<p>Regole operative:</p>
+<ul>
+  <li>Il <code>panelId</code> deve corrispondere all'<code>id</code> esatto del pannello Panel 2 di quella pagina</li>
+  <li>Il parametro <code>ctaAfterPanel2</code> è opzionale — se omesso, nessuna CTA viene iniettata</li>
+  <li>Nessuna modifica ai file HTML è necessaria: il blocco viene inserito nel DOM in automatico</li>
+  <li>La sessione viene tracciata separatamente per ogni pagina (una CTA per pagina per sessione)</li>
+</ul>
+
+<div class="note">
+  <strong>Workflow consigliato:</strong> il Copywriter scrive i testi CTA per ogni sezione e li consegna al Tech Specialist, che aggiorna i rispettivi file <code>exercises.js</code> aggiungendo il parametro <code>ctaAfterPanel2</code>.
+</div>
+
+<h2>7. Pubblicare le modifiche (deploy)</h2>
 
 <p>Il sito è su GitHub (<code>Pletnusha/livelanguagerussian</code>) e viene servito staticamente. Il processo è:</p>
 
