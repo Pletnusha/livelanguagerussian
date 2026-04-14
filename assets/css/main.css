@@ -168,30 +168,15 @@ h1, h2, h3 {
 }
 
 .argomento-card--parent {
-  cursor: default;
+  cursor: pointer;
   padding-bottom: 1rem;
-}
-
-.argomento-card--parent:hover {
-  transform: none;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  border-color: rgba(200, 200, 200, 0.3);
-}
-
-.argomento-parent-header {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  margin-bottom: 1.25rem;
 }
 
 .argomento-children {
   display: flex;
   flex-direction: column;
   gap: 0;
+  margin-top: 1.25rem;
 }
 
 .argomento-children .argomento-card {
