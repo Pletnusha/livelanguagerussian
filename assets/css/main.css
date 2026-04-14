@@ -167,6 +167,41 @@ h1, h2, h3 {
   color: #666;
 }
 
+.argomento-card--parent {
+  cursor: default;
+  padding-bottom: 1rem;
+}
+
+.argomento-card--parent:hover {
+  transform: none;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-color: rgba(200, 200, 200, 0.3);
+}
+
+.argomento-parent-header {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1.25rem;
+}
+
+.argomento-children {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.argomento-children .argomento-card {
+  margin-bottom: 0.75rem;
+}
+
+.argomento-children .argomento-card:last-child {
+  margin-bottom: 0;
+}
+
 .level-header {
   max-width: 720px;
   margin: 0 auto;
