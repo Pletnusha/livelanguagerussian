@@ -167,6 +167,26 @@ h1, h2, h3 {
   color: #666;
 }
 
+.argomento-card--parent {
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+
+.argomento-children {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 1.25rem;
+}
+
+.argomento-children .argomento-card {
+  margin-bottom: 0.75rem;
+}
+
+.argomento-children .argomento-card:last-child {
+  margin-bottom: 0;
+}
+
 .level-header {
   max-width: 720px;
   margin: 0 auto;
