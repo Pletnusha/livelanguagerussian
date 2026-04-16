@@ -173,10 +173,36 @@ h1, h2, h3 {
 }
 
 .argomento-children {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0;
   margin-top: 1.25rem;
+}
+
+.argomento-card--parent.expanded .argomento-children {
+  display: flex;
+}
+
+.argomento-toggle {
+  display: block;
+  text-align: center;
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.argomento-card--parent.expanded .argomento-toggle {
+  transform: rotate(180deg);
+}
+
+.argomento-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.argomento-title-link:hover .argomento-title {
+  text-decoration: underline;
 }
 
 .argomento-children .argomento-card {
