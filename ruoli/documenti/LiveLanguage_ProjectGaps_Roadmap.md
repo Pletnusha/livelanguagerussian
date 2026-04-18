@@ -135,6 +135,16 @@ Public panels + Доп. материалы (бесплатно после рег
 - ❌ Post-marathon upsell offer: how is platform presented to marathon students?
 - ❌ Student onboarding sequence (post-purchase): email flow defined?
 
+#### **🔴 INVESTOR TRACK — URGENTE:**
+- ❌ Pitch deck: **scadenza 20 aprile 2026** (4 giorni)
+  - Problema da risolvere + mercato
+  - Prodotto + funnel (public → webinar → maratona → paid)
+  - Traction attuale (piattaforma pronta, contenuti, architettura)
+  - Modello di revenue + proiezioni
+  - Ask: quanto, per cosa, con quale ritorno
+- ❌ Tipo di investitore target: angel? grant edtech? acceleratore?
+- ❌ Lista contatti investitori: da compilare
+
 ---
 
 ### **5. SMM**
@@ -152,7 +162,12 @@ Public panels + Доп. материалы (бесплатно после рег
 ## 🗺️ UPDATED ROADMAP
 
 ### **FASE 0 — IMMEDIATA (aprile 2026)**
-**Obiettivo:** Attivare la funnel — dal traffico alla registrazione al webinar
+**Obiettivo:** Attivare la funnel + pitch deck investitori
+
+**🔴 INVESTOR TRACK (scadenza 20 aprile 2026):**
+- [ ] Pitch deck completo — Seller
+- [ ] Definire tipo investitore target — PM
+- [ ] Compilare lista primi contatti — PM
 
 **Instructional Designer:**
 - [ ] Confermare la struttura della maratona (settimane, sessioni, durata)
@@ -184,7 +199,12 @@ Public panels + Доп. материалы (бесплатно после рег
 ---
 
 ### **FASE 1 — MAGGIO 2026**
-**Obiettivo:** Webinar #1 → Maratona #1 → prime testimonianze
+**Obiettivo:** Webinar #1 → Maratona #1 → prime testimonianze + outreach investitori
+
+**🔴 INVESTOR TRACK:**
+- [ ] Primi outreach inviati (min. 5 contatti)
+- [ ] Feedback raccolto sul pitch deck
+- [ ] Pitch deck aggiornato con dati reali (iscritti webinar, partecipanti maratona)
 
 **Milestones:**
 - [ ] Webinar #1 erogato (min. 10 iscritti)
