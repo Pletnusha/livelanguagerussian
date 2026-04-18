@@ -54,10 +54,23 @@ Public panels + Доп. материалы (бесплатно после рег
 
 #### **RESOLVED:**
 - ✅ Marathon curriculum: documented (verbi di moto)
-- ✅ Exercise content: built for verbi di moto, transitivi, complementi, passato, aspetto, падежи
 - ✅ 3 access tiers defined (public / student / paid)
+- ✅ Tier assignment: mappato nel codice a livello di pannello
+
+#### **CONTENT STATUS — esercizi esistenti (exercises.js presente):**
+- ✅ verbi di moto: pluridirezionali-vs-monodirezionali, verbi-di-moto-specifici, andare-con-un-mezzo, idti-usi-speciali
+- ✅ verbi di moto: passato (idti-xodit, exat-ezdit, specifici)
+- ✅ verbi di moto: complementi-dei-verbi-di-moto, moto-a-luogo
+- ✅ verbi di moto transitivi: nesti-nositi, vesti-voditi, vezti-voziti
+- ✅ principianti / casi: accusativo, genitivo
 
 #### **OPEN GAPS:**
+
+**Webinar (nuovo step — blocca il lancio della maratona):**
+- ❌ Piattaforma webinar scelta: Zoom? StreamYard? Google Meet?
+- ❌ Data webinar fissata
+- ❌ Contenuto webinar: struttura, durata, pitch finale per la maratona
+- ❌ Soglia minima iscritti webinar per procedere
 
 **Marathon:**
 - ❌ Session 1 materials: slides, handouts ready?
@@ -66,7 +79,7 @@ Public panels + Доп. материалы (бесплатно после рег
 - ❌ Platform: Zoom / Google Meet?
 
 **Platform content:**
-- ❌ Which exercises are assigned to which tier (public / student / paid)? Not fully mapped.
+- ✅ Tier assignment: mappato nel codice a livello di pannello (exercises.js)
 - ❌ Difficulty progression between blocks: defined?
 - ❌ Assessment / milestone tests: planned?
 
@@ -99,11 +112,14 @@ Public panels + Доп. материалы (бесплатно после рег
 #### **RESOLVED:**
 - ✅ Role documentation: written
 
+#### **RESOLVED:**
+- ✅ Email funnel Day 0–16: scritto
+
 #### **OPEN GAPS (blocking launch):**
+- ❌ Marathon promotional emails: da verificare (annuncio / countdown / last chance)
+- ❌ Webinar landing page: titolo, benefici, form iscrizione
+- ❌ Webinar script / presentazione: struttura + pitch finale maratona
 - ❌ Marathon landing page copy: headline, benefits, CTA
-- ❌ Marathon promotional emails: launch announcement, countdown, last chance
-- ❌ Welcome email (Day 0): written?
-- ❌ Email funnel Day 1–16: not written
 - ❌ Brand positioning statement: not defined
 - ❌ Student personas: not documented
 - ❌ Exercise feedback messages (correct / incorrect): tone defined?
@@ -136,56 +152,60 @@ Public panels + Доп. материалы (бесплатно после рег
 ## 🗺️ UPDATED ROADMAP
 
 ### **FASE 0 — IMMEDIATA (aprile 2026)**
-**Obiettivo:** Preparare il lancio del Maratona #1
+**Obiettivo:** Attivare la funnel — dal traffico alla registrazione al webinar
 
 **Instructional Designer:**
 - [ ] Confermare la struttura della maratona (settimane, sessioni, durata)
 - [ ] Preparare i materiali della Sessione 1 (slide, handout)
 - [ ] Definire il minimo di partecipanti (soglia go/no-go)
+- [ ] Strutturare il contenuto del webinar gratuito (argomento, durata, pitch finale)
 
 **Tech Specialist:**
 - [ ] Testare il flusso completo: Stripe pagamento → Supabase → accesso contenuto
-- [ ] Verificare il form di acquisizione email (dove vanno i subscriber in n8n?)
+- [ ] Verificare il form di registrazione (dove vanno i subscriber in n8n?)
 - [ ] Test mobile su esercizi principali
 
 **Copywriter:**
-- [ ] Landing page maratona: headline + benefits + CTA
-- [ ] Email di lancio maratona (3 email: annuncio / countdown / last chance)
-- [ ] Email Day 0 (benvenuto all'iscrizione alla lista)
+- [ ] Welcome email (Day 0): benvenuto dopo registrazione
+- [ ] Email invito webinar: da inviare agli iscritti
+- [ ] Landing page webinar: titolo + benefici + form iscrizione
+- [ ] Landing page maratona: headline + benefits + CTA + link Stripe
 
 **SMM:**
 - [ ] Scegliere piattaforma primaria
 - [ ] Creare 3 Canva template base
-- [ ] Pubblicare primo post (presentazione / teaser maratona)
+- [ ] Pubblicare primo post (presentazione / teaser contenuto gratuito)
 
 **Seller:**
 - [ ] Confermare pricing maratona
 - [ ] Definire la policy di rimborso
-- [ ] Preparare il pitch upsell piattaforma (da usare alla fine della maratona)
+- [ ] Preparare il pitch upsell paid panels (da usare alla fine della maratona)
 
 ---
 
 ### **FASE 1 — MAGGIO 2026**
-**Obiettivo:** Maratona #1 → prima lista email → prime testimonianze
+**Obiettivo:** Webinar #1 → Maratona #1 → prime testimonianze
 
 **Milestones:**
-- [ ] Maratona #1 erogata (min. 3 partecipanti)
+- [ ] Webinar #1 erogato (min. 10 iscritti)
+- [ ] Maratona #1 venduta dal webinar (min. 3 partecipanti)
+- [ ] Maratona #1 erogata
 - [ ] Testimonianze raccolte (almeno 2 scritte, 1 video se possibile)
-- [ ] Lista email: primi iscritti dalla promozione maratona
-- [ ] Offerta upsell piattaforma presentata ai partecipanti maratona
+- [ ] Offerta upsell paid panels presentata ai partecipanti maratona
 
 **Instructional Designer:**
+- [ ] Erogare il webinar gratuito
 - [ ] Erogare tutte le sessioni maratona
 - [ ] Raccogliere feedback strutturato dai partecipanti
-- [ ] Definire Macro-tema #1 prioritario per la piattaforma
+- [ ] Definire Macro-tema #1 prioritario per i paid panels
 
 **Copywriter:**
 - [ ] Scrivere email funnel Day 0–16 (completo)
-- [ ] Creare 2 student personas dalla feedback della maratona
+- [ ] Creare 2 student personas dal feedback del webinar e della maratona
 
 **SMM:**
-- [ ] Postare 3x/settimana durante la maratona
-- [ ] Publicare le testimonianze dei partecipanti
+- [ ] Postare 3x/settimana (promozione webinar + maratona)
+- [ ] Pubblicare le testimonianze dei partecipanti
 - [ ] Crescita follower: obiettivo 50
 
 ---
