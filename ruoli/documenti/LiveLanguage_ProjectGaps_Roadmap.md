@@ -3,8 +3,86 @@
 **Document Purpose:** Comprehensive analysis of missing information across all project roles, with prioritized roadmap for filling gaps.
 
 **Date Created:** March 15, 2026  
-**Last Updated:** April 19, 2026  
+**Last Updated:** April 21, 2026  
 **Project Status:** Pre-launch (Marathon March 20, Platform Q2-Q3 2026)
+
+---
+
+## 🆕 UPDATE — APRILE 21, 2026 — Business Model Canvas + Canali
+
+### ✅ CHIUSO in questa sessione
+
+**Investor:**
+- 🔄 Pitch email AETOS — in fase di doработка (non ancora inviata, deadline 20 aprile superata)
+
+**SMM — Canali Awareness (decisione finale):**
+- ✅ Piattaforme selezionate e classificate per pull/earned/paid
+- ✅ Slide Canali approvato per pitch deck
+- ✅ Descrizione business Google Ads approvata
+- ✅ Dati Superprof verificati direttamente (1.200–2.340 ricerche/mese per russo)
+
+**Business Model Canvas — analisi lacune completata:**
+- ✅ Confronto pitch deck vs 9 blocchi BMC (Strategyzer)
+- ✅ Blocchi presenti: Customer Segments, Value Propositions, Revenue Streams (completi)
+- ✅ Blocchi parziali: Cost Structure (generico), Key Activities (non formalizzato)
+- ✅ Blocchi mancanti identificati: Channels (lavorato), Customer Relationships, Key Resources, Key Partners
+
+**Email funnel:**
+- ✅ Email Day 0–16 pronte
+
+**Dev tasks:**
+- ✅ LLR-T01 – T04 + T09–T12: assegnati a Frank
+
+---
+
+### 📅 TASK APERTI — 21 aprile 2026
+
+**Investor:**
+- [ ] Finalizzare e inviare pitch email AETOS (⚠️ scaduta il 20 aprile — urgente)
+
+**BMC — blocchi da sviluppare (Seller + ID):**
+- [ ] Customer Relationships — AI retention, supervisore umano, community
+- [ ] Key Resources — metodologia, AI system, insegnanti, fondatori
+- [ ] Key Partners — insegnanti madrelingua, tech partner, fondi interprofessionali
+- [ ] Cost Structure — dettaglio completo voci di costo
+- [ ] Key Activities — attività principali per generare valore
+
+**SMM — Dati da raccogliere:**
+- [ ] Google Keyword Planner — volume ricerche "imparare russo" / "corso russo" in Italia
+- [ ] Dati traffico italki, Quora, Tandem per segmento russo
+
+**SMM — primo action step su piattaforme selezionate:**
+- [ ] Definire primo contenuto/post per canale primario
+
+---
+
+### 📊 DATI VERIFICATI — Aprile 2026
+
+**Diretti (fonte: esperienza diretta):**
+- Superprof: 1.200–1.500 ricerche/mese (bassa stagione) · 2.340/mese (alta stagione)
+- Instagram: account russo più seguito 118.000 follower · media like 2.300–13.200
+
+**Fonti terze verificate:**
+- Studocu: 60M utenti mensili globali · Italia 3° mercato (SEMrush, tech.eu 2026)
+- YouTube Italia: 37,1M utenti mensili · prima piattaforma social (Audicom-Audiweb 2024)
+- Instagram Italia: 32,9M utenti mensili (Audicom-Audiweb 2024)
+- TikTok Italia: 22,4M utenti mensili · 30 ore/mese tempo medio (Audicom-Audiweb 2024)
+
+---
+
+### 🗂 CANALI — Classificazione approvata
+
+| Tipo | Canale | Note |
+|---|---|---|
+| Pull attivo | Superprof, Studocu, Quora, italki, Tandem | Lungo termine · stabile |
+| Pull passivo | Instagram Reels, TikTok, YouTube Shorts | Veloce · instabile |
+| Earned | Recensioni, passaparola, condivisioni studenti | Lungo termine · crescente |
+| Paid | Google Ads, Meta Ads | Da ottobre 2026 — dopo validazione organica |
+
+**Lacune canali residue:**
+- ❌ Nessun canale B2B definito (LinkedIn, associazioni di categoria)
+- ❌ SEO non presente come canale pull attivo
+- ❌ Community studenti ancora da costruire
 
 ---
 
@@ -28,10 +106,10 @@
 ### 📅 TASK — 19 aprile 2026
 
 **SMM:**
-- [ ] Scegliere piattaforme per distribuzione organica PDF e video (candidati: Studocu, Scribd, Telegram, Discord, Quora, italki, Tandem)
+- ✅ Piattaforme selezionate (decisione presa il 21 aprile)
 
 **Investor:**
-- [ ] Finalizzare e inviare pitch email AETOS (deadline: 20 aprile)
+- 🔄 Pitch email AETOS — in doработка (vedi update 21 aprile)
 
 ---
 
