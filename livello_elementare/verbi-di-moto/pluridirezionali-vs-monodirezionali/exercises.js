@@ -650,4 +650,4 @@ const initializers = {
     'panel-acc-open-4':  () => initPanel4()
 };
 
-initPanelManager({ initializers, enableAccessControl: false });
+initPanelManager({ initializers, enableAccessControl: true });

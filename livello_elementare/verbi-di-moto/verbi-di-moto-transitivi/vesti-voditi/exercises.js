@@ -597,4 +597,4 @@ const initializers = {
     'panel-vv-10': () => new FlashcardExercise({ rootId: 'ex-flashcards-vv-10', cards: p10cards }),
 };
 
-initPanelManager({ initializers, enableAccessControl: false });
+initPanelManager({ initializers, enableAccessControl: true });

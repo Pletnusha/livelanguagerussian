@@ -617,10 +617,10 @@ h1, h2, h3 {
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"]) .fca01-counter {
   color: #999;
   font-family: monospace;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   flex: 0 0 auto;
   text-align: center;
-  transform: scale(0.5);
 }
 
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"]) .fca01-quiz-area {
@@ -765,6 +765,12 @@ h1, h2, h3 {
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"]) .fca01-center-btn {
   text-align: center;
   margin-top: 1.5rem;
+}
+
+/* Rimuove il bordo esterno del contenitore quando la modalità Match è attiva */
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"]):has([id$="-section-match"].visible) {
+  border: none;
+  box-shadow: none;
 }
 
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"]) .hidden {
