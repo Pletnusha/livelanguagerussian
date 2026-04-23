@@ -23,9 +23,321 @@
 
     <main class="exercises-section">
 
-        <!-- Aggiungere qui le exercise-card e i pannelli -->
+        <!-- ============================================================ -->
+        <!-- Panel 1 · public · Drag & Drop · Mix ИЗ / С / ОТ -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-mdl-01">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Из магазина, с работы, от врача — scegli la preposizione</h3>
+        </article>
+        <div class="exercise-panel" id="panel-mdl-01" data-access="public" hidden>
+            <div id="ex-dragdrop-mdl-01" class="universal-dd">
+                <div id="ex-dragdrop-mdl-01-container"></div>
+                <div id="ex-dragdrop-mdl-01-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 5 · student · Drag & Drop · Solo ИЗ -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-mdl-05">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Из университета, из России — solo ИЗ con spazi chiusi</h3>
+        </article>
+        <div class="exercise-panel" id="panel-mdl-05" data-access="student" hidden>
+            <div id="ex-dragdrop-mdl-05" class="universal-dd">
+                <div id="ex-dragdrop-mdl-05-container"></div>
+                <div id="ex-dragdrop-mdl-05-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 6 · paid · Drag & Drop · С vs ОТ -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-mdl-06">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">С работы o от врача? — distingui С da ОТ</h3>
+        </article>
+        <div class="exercise-panel" id="panel-mdl-06" data-access="paid" hidden>
+            <div id="ex-dragdrop-mdl-06" class="universal-dd">
+                <div id="ex-dragdrop-mdl-06-container"></div>
+                <div id="ex-dragdrop-mdl-06-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 2 · public · Flashcard · Mix ИЗ / С / ОТ -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-mdl-02">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Из университета, с работы, от врача — le basi</h3>
+        </article>
+        <div class="exercise-panel" id="panel-mdl-02" data-access="public" hidden>
+            <section id="ex-flashcards-mdl-02">
+                <div class="fca01-header">
+                    <h2>ИЗ / С / ОТ: le basi</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-mdl-02-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-mdl-02-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-mdl-02-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-mdl-02-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-mdl-02-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-02-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-mdl-02-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-02-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-02-section-match" class="fca01-section">
+                    <div id="ex-flashcards-mdl-02-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-02-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 · public · Flashcard · Regola В→ИЗ / НА→С -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-mdl-03">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">В → ИЗ, НА → С: la regola delle coppie</h3>
+        </article>
+        <div class="exercise-panel" id="panel-mdl-03" data-access="public" hidden>
+            <section id="ex-flashcards-mdl-03">
+                <div class="fca01-header">
+                    <h2>La regola: В → ИЗ · НА → С</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-mdl-03-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-mdl-03-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-mdl-03-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-mdl-03-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-mdl-03-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-03-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-mdl-03-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-03-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-03-section-match" class="fca01-section">
+                    <div id="ex-flashcards-mdl-03-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-03-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 7 · student · Flashcard · ИЗ + genitivo -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-mdl-07">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">ИЗ + genitivo: forma il caso corretto</h3>
+        </article>
+        <div class="exercise-panel" id="panel-mdl-07" data-access="student" hidden>
+            <section id="ex-flashcards-mdl-07">
+                <div class="fca01-header">
+                    <h2>ИЗ + genitivo</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-mdl-07-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-mdl-07-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-mdl-07-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-mdl-07-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-mdl-07-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-07-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-mdl-07-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-07-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-07-section-match" class="fca01-section">
+                    <div id="ex-flashcards-mdl-07-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-07-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 8 · paid · Flashcard · С + genitivo -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-mdl-08">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">С + genitivo: attività, eventi, superfici aperte</h3>
+        </article>
+        <div class="exercise-panel" id="panel-mdl-08" data-access="paid" hidden>
+            <section id="ex-flashcards-mdl-08">
+                <div class="fca01-header">
+                    <h2>С + genitivo</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-mdl-08-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-mdl-08-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-mdl-08-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-mdl-08-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-mdl-08-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-08-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-mdl-08-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-08-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-08-section-match" class="fca01-section">
+                    <div id="ex-flashcards-mdl-08-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-08-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 9 · student · Flashcard · ОТ + genitivo -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-mdl-09">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">ОТ + genitivo: persone e punti specifici</h3>
+        </article>
+        <div class="exercise-panel" id="panel-mdl-09" data-access="student" hidden>
+            <section id="ex-flashcards-mdl-09">
+                <div class="fca01-header">
+                    <h2>ОТ + genitivo</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-mdl-09-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-mdl-09-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-mdl-09-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-mdl-09-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-mdl-09-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-09-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-mdl-09-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-09-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-09-section-match" class="fca01-section">
+                    <div id="ex-flashcards-mdl-09-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-09-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 10 · paid · Flashcard · Consolidamento -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-mdl-10">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Consolidamento: ИЗ, С, ОТ — tutto insieme</h3>
+        </article>
+        <div class="exercise-panel" id="panel-mdl-10" data-access="paid" hidden>
+            <section id="ex-flashcards-mdl-10">
+                <div class="fca01-header">
+                    <h2>ИЗ / С / ОТ: consolidamento</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-mdl-10-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-mdl-10-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-mdl-10-prev-btn" class="fca01-btn-nav">← Назад</button>
+                        <span id="ex-flashcards-mdl-10-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-mdl-10-next-btn" class="btn btn-primary">Вперед →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-10-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-mdl-10-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-10-start-quiz-btn" class="btn btn-primary hidden">Новый вопрос</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-mdl-10-section-match" class="fca01-section">
+                    <div id="ex-flashcards-mdl-10-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-mdl-10-reset-match-btn" class="btn btn-secondary">Начать заново</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 4 · public · Quiz misto -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-mdl-04">
+            <span class="exercise-type">Quiz</span>
+            <h3 class="exercise-title">ТЕСТ — ИЗ, С o ОТ?</h3>
+        </article>
+        <div class="exercise-panel" id="panel-mdl-04" data-access="public" hidden>
+            <section id="mdl-04-deck" class="universal-dd">
+                <div id="mdl-04-cards-container"></div>
+                <div class="fca01-nav">
+                    <button id="mdl-04-deck-prev" class="fca01-btn-nav" disabled>← Назад</button>
+                    <span id="mdl-04-deck-counter" class="fca01-counter">1 / 30</span>
+                    <button id="mdl-04-deck-next" class="btn btn-primary">Вперед →</button>
+                </div>
+            </section>
+        </div>
 
     </main>
+
+    <section class="unlock-cta">
+        <a href="#" class="unlock-cta-btn">Sblocca tutti gli esercizi</a>
+    </section>
+
+    <footer class="level-footer">
+        <a href="/livello_elementare/verbi-di-moto/complementi-dei-verbi-di-moto/" class="back-link">← Torna ai Complementi</a>
+    </footer>
 
     <script type="module" src="exercises.js"></script>
 

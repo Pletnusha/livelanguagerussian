@@ -391,7 +391,7 @@ h1, h2, h3 {
 
 /* ===== FLASHCARDS (acc-*) ===== */
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) {
   font-family: 'Montserrat', sans-serif;
   width: 100%;
   max-width: 900px;
@@ -404,24 +404,24 @@ h1, h2, h3 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-header {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-header {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-header h2 {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-header h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #1a1a1a;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-header p {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-header p {
   color: #666;
   font-size: 0.95rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-mode-buttons {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-mode-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -429,7 +429,7 @@ h1, h2, h3 {
   margin-bottom: 2.5rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-mode-btn {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-mode-btn {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
@@ -442,24 +442,24 @@ h1, h2, h3 {
   transition: all 0.2s ease;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-mode-btn:hover {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-mode-btn:hover {
   background: rgba(255, 255, 255, 1);
   border-color: #2a5bd7;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-mode-btn.active {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-mode-btn.active {
   background: #2a5bd7;
   color: #fff;
   border-color: #2a5bd7;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-section {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-section {
   display: none;
   width: 100%;
   box-sizing: border-box;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-section.visible {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-section.visible {
   display: block;
   animation: fca01FadeIn 0.4s;
 }
@@ -469,7 +469,7 @@ h1, h2, h3 {
   to { opacity: 1; }
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card-container {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card-container {
   perspective: 1000px;
   width: 100%;
   max-width: 320px;
@@ -477,7 +477,7 @@ h1, h2, h3 {
   box-sizing: border-box;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card {
   width: 100%;
   min-height: 160px;
   height: 160px;
@@ -488,11 +488,11 @@ h1, h2, h3 {
   box-sizing: border-box;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card.is-flipped {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card.is-flipped {
   transform: rotateY(180deg);
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card-face {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card-face {
   position: absolute;
   top: 0;
   left: 0;
@@ -512,19 +512,19 @@ h1, h2, h3 {
   box-sizing: border-box;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card-front {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card-front {
   background-color: #ffffff;
   color: #1a1a1a;
   position: relative;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card-back {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card-back {
   background-color: #2a5bd7;
   color: #ffffff;
   transform: rotateY(180deg);
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-audio-btn {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-audio-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -542,12 +542,12 @@ h1, h2, h3 {
   transition: all 0.2s;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-audio-btn:hover {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-audio-btn:hover {
   background: #fff;
   transform: scale(1.1);
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-nav {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -556,8 +556,8 @@ h1, h2, h3 {
   margin: 0 auto;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .btn.btn-primary,
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .btn.btn-secondary {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .btn.btn-primary,
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .btn.btn-secondary {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -576,20 +576,20 @@ h1, h2, h3 {
   line-height: 1;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .btn.btn-primary:hover,
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .btn.btn-secondary:hover {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .btn.btn-primary:hover,
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .btn.btn-secondary:hover {
   background: #1e4bb8;
   transform: translateY(-1px);
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .btn.btn-primary:focus,
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .btn.btn-secondary:focus {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .btn.btn-primary:focus,
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .btn.btn-secondary:focus {
   outline: 2px solid rgba(42, 91, 215, 0.4);
   outline-offset: 2px;
 }
 
 /* если у тебя реально используются отдельные классы навигации */
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-btn-nav {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-btn-nav {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -609,12 +609,12 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-btn-nav:hover {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-btn-nav:hover {
   background: #f8f8f8;
   border-color: #2a5bd7;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-nav .btn.btn-primary {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-nav .btn.btn-primary {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -634,13 +634,13 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-nav .btn.btn-primary:hover {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-nav .btn.btn-primary:hover {
   background: #f8f8f8;
   border-color: #2a5bd7;
   transform: none;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-counter {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-counter {
   color: #999;
   font-family: monospace;
   font-size: 1.5rem;
@@ -649,13 +649,13 @@ h1, h2, h3 {
   text-align: center;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-area {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-area {
   width: 100%;
   max-width: 550px;
   margin: 0 auto;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-question {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-question {
   font-size: 1.25rem;
   font-weight: 700;
   text-align: center;
@@ -663,18 +663,18 @@ h1, h2, h3 {
   line-height: 1.5;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-question .highlight {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-question .highlight {
   color: #2a5bd7;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-options {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-options {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   margin-bottom: 1rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-option {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-option {
   width: 100%;
   text-align: left;
   padding: 1rem 1.25rem;
@@ -686,40 +686,40 @@ h1, h2, h3 {
   font-size: 1rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-option:hover {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-option:hover {
   background: rgba(42, 91, 215, 0.05);
   border-color: #2a5bd7;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-option.correct {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-option.correct {
   background: rgba(34, 197, 94, 0.1);
   border-color: #22c55e;
   color: #166534;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-option.wrong {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-option.wrong {
   background: rgba(239, 68, 68, 0.1);
   border-color: #ef4444;
   color: #991b1b;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-feedback {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-feedback {
   text-align: center;
   font-weight: 700;
   min-height: 1.5rem;
   margin-top: 1rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-feedback.correct { color: #22c55e; }
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-feedback.wrong   { color: #ef4444; }
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-feedback.correct { color: #22c55e; }
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-feedback.wrong   { color: #ef4444; }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-container {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-container {
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-feedback {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-feedback {
   text-align: center;
   font-size: 1.1rem;
   font-weight: 700;
@@ -728,22 +728,22 @@ h1, h2, h3 {
   color: #999;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-feedback.correct { color: #22c55e; }
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-feedback.wrong   { color: #ef4444; }
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-feedback.correct { color: #22c55e; }
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-feedback.wrong   { color: #ef4444; }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-grid {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-col {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-col {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-card {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-card {
   padding: 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -758,24 +758,24 @@ h1, h2, h3 {
   font-size: 0.95rem;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-card:hover {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-card:hover {
   background: rgba(255, 255, 255, 1);
   border-color: #2a5bd7;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-card.selected {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-card.selected {
   background: #fff3cd;
   border-color: #fbbf24;
   transform: scale(1.02);
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-card.wrong {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-card.wrong {
   background: #fee2e2;
   border-color: #ef4444;
   animation: fca01Shake 0.4s;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-card.matched {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-card.matched {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -788,18 +788,18 @@ h1, h2, h3 {
   75% { transform: translateX(5px); }
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-center-btn {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-center-btn {
   text-align: center;
   margin-top: 1.5rem;
 }
 
 /* Rimuove il bordo esterno del contenitore quando la modalità Match è attiva */
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]):has([id$="-section-match"].visible) {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]):has([id$="-section-match"].visible) {
   border: none;
   box-shadow: none;
 }
 
-:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .hidden {
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .hidden {
   display: none;
 }
 
@@ -886,16 +886,16 @@ h1, h2, h3 {
   .exercise-panel:not([hidden]) { padding: 1.5rem; }
 
   /* MOBILE FIX: disable 3D flip (prevents 2 sides visible) */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card {
     transform: none !important;
     transition: none !important;
   }
 
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card-back {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card-back {
     display: none !important;
   }
 
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card-front {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card-front {
     position: relative !important;
     transform: none !important;
     backface-visibility: visible !important;
@@ -905,23 +905,23 @@ h1, h2, h3 {
 
 @media (max-width: 600px) {
   /* Flashcards: add vertical padding to prevent overlap */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) {
     padding: 1rem 0;
   }
 
   /* Flashcards: reduce card width and height for mobile */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card-container {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card-container {
     max-width: 280px;
     margin: 0 auto 2.5rem;
     box-sizing: border-box;
   }
 
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card {
     height: 135px;
     min-height: 135px;
   }
 
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card-face {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card-face {
     font-size: 1.05rem;
     padding: 0.9rem;
     -webkit-backface-visibility: hidden;
@@ -930,14 +930,14 @@ h1, h2, h3 {
   }
 
   /* Flashcards: ensure navigation has clear separation */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-nav {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-nav {
     margin-top: 1.5rem;
     gap: 0.5rem;
   }
 
   /* Flashcards: nav buttons - unified size for Back and Next */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-btn-nav,
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-nav .btn.btn-primary {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-btn-nav,
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-nav .btn.btn-primary {
     font-size: 0.95rem;
     font-weight: 600;
     padding: 0.7rem 1rem;
@@ -947,22 +947,22 @@ h1, h2, h3 {
   }
 
   /* Flashcards: Match mode adjustments */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-grid {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-grid {
     gap: 0.65rem;
   }
 
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-match-card {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-match-card {
     padding: 0.75rem;
     font-size: 0.9rem;
   }
 
   /* Flashcards: Quiz mode adjustments */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-quiz-area {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-quiz-area {
     padding: 0 0.5rem;
   }
 
   /* Card container centering fix */
-  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-card-container {
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-card-container {
     margin-left: auto;
     margin-right: auto;
   }
