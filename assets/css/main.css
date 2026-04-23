@@ -333,13 +333,13 @@ h1, h2, h3 {
   padding: 2rem 1.5rem;
 }
 
-.page-moto-a-luogo .unlock-cta {
+.unlock-cta {
   text-align: center;
   margin: 3rem auto 2rem;
   padding: 2rem 1.5rem;
 }
 
-.page-moto-a-luogo .unlock-cta-btn {
+.unlock-cta-btn {
   display: inline-block;
   background: #333;
   color: #fff;
@@ -353,7 +353,7 @@ h1, h2, h3 {
   cursor: pointer;
 }
 
-.page-moto-a-luogo .unlock-cta-btn:hover {
+.unlock-cta-btn:hover {
   background: #555;
 }
 
@@ -612,6 +612,32 @@ h1, h2, h3 {
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-btn-nav:hover {
   background: #f8f8f8;
   border-color: #2a5bd7;
+}
+
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-nav .btn.btn-primary {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  min-width: 120px;
+  width: 120px;
+  flex: 0 0 120px;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+:is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-nav .btn.btn-primary:hover {
+  background: #f8f8f8;
+  border-color: #2a5bd7;
+  transform: none;
 }
 
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"]) .fca01-counter {
