@@ -622,9 +622,9 @@ h1, h2, h3 {
   min-width: 120px;
   width: 120px;
   flex: 0 0 120px;
-  background: #fff;
-  color: #333;
-  border: 1px solid #ddd;
+  background: #2a5bd7;
+  color: #fff;
+  border: 1px solid transparent;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
@@ -635,9 +635,9 @@ h1, h2, h3 {
 }
 
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-nav .btn.btn-primary:hover {
-  background: #f8f8f8;
-  border-color: #2a5bd7;
-  transform: none;
+  background: #1e4bb8;
+  border-color: transparent;
+  transform: translateY(-1px);
 }
 
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-counter {
