@@ -645,4 +645,4 @@ const initializers = {
     'panel-nn-04': () => initPanel4NN(),
 };
 
-initPanelManager({ initializers, enableAccessControl: false });
+initPanelManager({ initializers, enableAccessControl: true });

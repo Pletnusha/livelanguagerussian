@@ -645,4 +645,4 @@ const initializers = {
     'panel-vz-04': () => initPanel4VZ(),
 };
 
-initPanelManager({ initializers, enableAccessControl: false });
+initPanelManager({ initializers, enableAccessControl: true });
