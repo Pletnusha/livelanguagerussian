@@ -398,10 +398,10 @@ h1, h2, h3 {
   margin: 0 auto;
   padding: 2rem;
   box-sizing: border-box;
-  border: 1px solid rgba(42, 91, 215, 0.2);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-header {
@@ -505,7 +505,7 @@ h1, h2, h3 {
   justify-content: center;
   padding: 1.5rem;
   border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: none;
   text-align: center;
   font-size: 1.25rem;
   font-weight: 600;
@@ -929,20 +929,36 @@ h1, h2, h3 {
     box-sizing: border-box;
   }
 
+  /* Flashcards: mode buttons - all 3 on one row on mobile */
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-mode-buttons {
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+  }
+
+  :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-mode-btn {
+    font-size: 0.8rem;
+    padding: 0.55rem 0.75rem;
+    flex: 1;
+  }
+
   /* Flashcards: ensure navigation has clear separation */
   :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-nav {
     margin-top: 1.5rem;
     gap: 0.5rem;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  /* Flashcards: nav buttons - unified size for Back and Next */
+  /* Flashcards: nav buttons - override flex-basis from desktop */
   :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-btn-nav,
   :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-nav .btn.btn-primary {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    padding: 0.7rem 1rem;
-    width: 90px;
-    min-width: 80px;
+    padding: 0.65rem 0.75rem;
+    width: 80px;
+    min-width: 70px;
+    flex: 0 0 80px;
     box-sizing: border-box;
   }
 
