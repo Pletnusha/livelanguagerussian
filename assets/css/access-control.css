@@ -29,6 +29,8 @@
 
 /* Exercise card blocked state indicator */
 .exercise-card[data-card-state="blocked"] {
-    opacity: 0.6;
+    opacity: 0.5;
     cursor: not-allowed;
+    filter: grayscale(1);
+    pointer-events: none;
 }
