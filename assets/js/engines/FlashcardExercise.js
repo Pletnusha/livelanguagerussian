@@ -182,13 +182,13 @@ export default class FlashcardExercise {
 
             area.querySelectorAll('.fca01-quiz-option').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    this.checkQuizAnswer(btn.dataset.answer, btn.dataset.correct, btn, correctCard.front);
+                    this.checkQuizAnswer(btn.dataset.answer, btn.dataset.correct, btn, correctCard.front, correctCard.explanation);
                 });
             });
         }
     }
 
-    checkQuizAnswer(selected, correct, btnElement, questionFront) {
+    checkQuizAnswer(selected, correct, btnElement, questionFront, explanation) {
         const id = this.rootId;
         const feedback = this.root.querySelector('.fca01-quiz-feedback');
         const nextBtn = this.root.querySelector(`#${id}-start-quiz-btn`);
@@ -204,7 +204,7 @@ export default class FlashcardExercise {
             feedback.className = "fca01-quiz-feedback correct";
         } else {
             btnElement.classList.add('wrong');
-            feedback.textContent = "❌ Ошибка!";
+            feedback.innerHTML = explanation ? `❌ Ошибка!<br><small>${explanation}</small>` : "❌ Ошибка!";
             feedback.className = "fca01-quiz-feedback wrong";
         }
         if (nextBtn) nextBtn.classList.remove('hidden');

@@ -6,66 +6,66 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // PANEL 1 — public · Drag & Drop
 // ============================================================
 const p1exercises = [
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду {{1}}.", words: ["на работу", "на работе", "в работу"], correctAnswers: { 1: "на работу" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы идёте утром {{1}}.", words: ["на пляж", "в пляж", "к пляжу"], correctAnswers: { 1: "на пляж" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты идёшь {{1}}.", words: ["на концерт", "на концерте", "в концерт"], correctAnswers: { 1: "на концерт" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты идёшь сегодня вечером {{1}}.", words: ["к Кате", "в Катю", "на Катю"], correctAnswers: { 1: "к Кате" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Андрей ходит {{1}}.", words: ["на спортзал", "в спортзал", "к спортзалу"], correctAnswers: { 1: "в спортзал" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду {{1}}, тебе купить что-нибудь?", words: ["на магазин", "в магазин", "к магазину"], correctAnswers: { 1: "в магазин" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "В воскресенье едем {{1}}.", words: ["к родителям", "на родителей", "в родителей"], correctAnswers: { 1: "к родителям" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я всегда хожу с бабушкой {{1}}.", words: ["в банк", "на банк", "к банку"], correctAnswers: { 1: "в банк" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "В субботу идём с друзьями {{1}}.", words: ["в ресторан", "к ресторану", "на ресторан"], correctAnswers: { 1: "в ресторан" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы в пятницу идём {{1}}.", words: ["к друзьям в гости", "на друзей в гости", "в друзей в гости"], correctAnswers: { 1: "к друзьям в гости" } },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду {{1}}.", words: ["на работу", "на работе", "в работу"], correctAnswers: { 1: "на работу" }, explanation: "Il lavoro si riconosce come un evento, quindi la preposizione è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы идёте утром {{1}}.", words: ["на пляж", "в пляж", "к пляжу"], correctAnswers: { 1: "на пляж" }, explanation: "La spiaggia si riconosce come una superficie, quindi la preposizione è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты идёшь {{1}}.", words: ["на концерт", "на концерте", "в концерт"], correctAnswers: { 1: "на концерт" }, explanation: "Un concerto è un evento, quindi la preposizione che viene applicata è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты идёшь сегодня вечером {{1}}.", words: ["к Кате", "в Катю", "на Катю"], correctAnswers: { 1: "к Кате" }, explanation: "Katya è una persona, quindi non è una superficie e non ha un confine: dobbiamo avvicinarci, quindi la preposizione è «к»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Андрей ходит {{1}}.", words: ["на спортзал", "в спортзал", "к спортзалу"], correctAnswers: { 1: "в спортзал" }, explanation: "La palestra è un edificio, quindi bisogna entrare dentro: la preposizione è «в»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду {{1}}, тебе купить что-нибудь?", words: ["на магазин", "в магазин", "к магазину"], correctAnswers: { 1: "в магазин" }, explanation: "Seguiamo la stessa logica: un supermercato o un negozio sono sempre un edificio dentro cui bisogna entrare, quindi la preposizione è «в»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "В воскресенье едем {{1}}.", words: ["к родителям", "на родителей", "в родителей"], correctAnswers: { 1: "к родителям" }, explanation: "Dobbiamo avvicinarci, non entrare e non stare su una superficie, quindi la preposizione è «к»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я всегда хожу с бабушкой {{1}}.", words: ["в банк", "на банк", "к банку"], correctAnswers: { 1: "в банк" }, explanation: "La banca si trova dentro un palazzo e bisogna entrare dentro, quindi la preposizione è «в»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "В субботу идём с друзьями {{1}}.", words: ["в ресторан", "к ресторану", "на ресторан"], correctAnswers: { 1: "в ресторан" }, explanation: "Il ristorante è un edificio: dobbiamo entrare dentro, quindi la preposizione è «в»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы в пятницу идём {{1}}.", words: ["к друзьям в гости", "на друзей в гости", "в друзей в гости"], correctAnswers: { 1: "к друзьям в гости" }, explanation: "Non si entra dentro, non si passa sopra una superficie: la preposizione è «к»." },
 ];
 
 // ============================================================
 // PANEL 5 — paid · Drag & Drop
 // ============================================================
 const p5exercises = [
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы идём {{1}}.", words: ["на концерт", "в концерт", "к концерту"], correctAnswers: { 1: "на концерт" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Она ходит {{1}}.", words: ["к выставкам", "на выставки", "в выставки"], correctAnswers: { 1: "на выставки" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Завтра утром мы идём {{1}}.", words: ["в пляж", "к пляжу", "на пляж"], correctAnswers: { 1: "на пляж" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Они всегда по утрам ходят {{1}}.", words: ["на пробежку", "в пробежку", "к пробежке"], correctAnswers: { 1: "на пробежку" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "В понедельник мы идём {{1}}.", words: ["к презентации", "в презентацию", "на презентацию"], correctAnswers: { 1: "на презентацию" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Он всегда ходит {{1}}.", words: ["на лекции", "в лекции", "к лекциям"], correctAnswers: { 1: "на лекции" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я хожу {{1}} два-три раза в неделю.", words: ["к тренировке", "на тренировку", "в тренировку"], correctAnswers: { 1: "на тренировку" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы идёте {{1}}?", words: ["на день рождения", "к дню рождения"], correctAnswers: { 1: "на день рождения" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Они идут в субботу {{1}}.", words: ["в концерт", "на концерт", "к концерту"], correctAnswers: { 1: "на концерт" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы всегда ходите {{1}} по пятницам?", words: ["в йогу", "к йоге", "на йогу"], correctAnswers: { 1: "на йогу" } },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы идём {{1}}.", words: ["на концерт", "в концерт", "к концерту"], correctAnswers: { 1: "на концерт" }, explanation: "Un concerto è un evento, quindi la preposizione che viene applicata è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Она ходит {{1}}.", words: ["к выставкам", "на выставки", "в выставки"], correctAnswers: { 1: "на выставки" }, explanation: "La mostra è un evento, quindi si applica la preposizione «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Завтра утром мы идём {{1}}.", words: ["в пляж", "к пляжу", "на пляж"], correctAnswers: { 1: "на пляж" }, explanation: "La spiaggia si riconosce come una superficie, quindi la preposizione è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Они всегда по утрам ходят {{1}}.", words: ["на пробежку", "в пробежку", "к пробежке"], correctAnswers: { 1: "на пробежку" }, explanation: "\"Fare una corsa\" in russo è letteralmente \"andare alla corsa\": la corsa è un evento, quindi la preposizione è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "В понедельник мы идём {{1}}.", words: ["к презентации", "в презентацию", "на презентацию"], correctAnswers: { 1: "на презентацию" }, explanation: "Una presentazione è un evento, quindi la preposizione è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Он всегда ходит {{1}}.", words: ["на лекции", "в лекции", "к лекциям"], correctAnswers: { 1: "на лекции" }, explanation: "Le lezioni sono un grandissimo evento universitario 😄, quindi la preposizione è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я хожу {{1}} два-три раза в неделю.", words: ["к тренировке", "на тренировку", "в тренировку"], correctAnswers: { 1: "на тренировку" }, explanation: "L'allenamento è un evento, quindi la preposizione è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы идёте {{1}}?", words: ["на день рождения", "к дню рождения"], correctAnswers: { 1: "на день рождения" }, explanation: "Un compleanno è sempre un evento, quindi la preposizione è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Они идут в субботу {{1}}.", words: ["в концерт", "на концерт", "к концерту"], correctAnswers: { 1: "на концерт" }, explanation: "Un concerto è un evento, quindi la preposizione che viene applicata è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы всегда ходите {{1}} по пятницам?", words: ["в йогу", "к йоге", "на йогу"], correctAnswers: { 1: "на йогу" }, explanation: "Si tratta di lezioni di yoga: sappiamo che una lezione è un evento, quindi la preposizione è «на»." },
 ];
 
 // ============================================================
 // PANEL 6 — paid · Drag & Drop
 // ============================================================
 const p6exercises = [
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты идёшь сегодня вечером {{1}}.", words: ["в Катю", "к Кате", "на Катю"], correctAnswers: { 1: "к Кате" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Андрей ходит {{1}}.", words: ["в спортзал", "на спортзал", "к спортзалу"], correctAnswers: { 1: "в спортзал" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду {{1}}.", words: ["к работе", "в работу", "на работу"], correctAnswers: { 1: "на работу" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы едем {{1}}, кот заболел.", words: ["на ветеринара", "к ветеринару", "в ветеринара"], correctAnswers: { 1: "к ветеринару" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я всегда хожу с бабушкой {{1}}.", words: ["к банку", "на банк", "в банк"], correctAnswers: { 1: "в банк" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Они всегда по утрам ходят {{1}}.", words: ["в пробежку", "на пробежку", "к пробежке"], correctAnswers: { 1: "на пробежку" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "В воскресенье едем {{1}}.", words: ["на родителей", "в родителей", "к родителям"], correctAnswers: { 1: "к родителям" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду {{1}}, тебе купить что-нибудь?", words: ["на магазин", "в магазин", "к магазину"], correctAnswers: { 1: "в магазин" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты идёшь {{1}}.", words: ["к концерту", "в концерт", "на концерт"], correctAnswers: { 1: "на концерт" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы в пятницу идём {{1}}.", words: ["в друзей в гости", "на друзей в гости", "к друзьям в гости"], correctAnswers: { 1: "к друзьям в гости" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "В субботу идём с друзьями {{1}}.", words: ["к ресторану", "в ресторан", "на ресторан"], correctAnswers: { 1: "в ресторан" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы всегда ходите {{1}} по пятницам?", words: ["к йоге", "в йогу", "на йогу"], correctAnswers: { 1: "на йогу" } },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты идёшь сегодня вечером {{1}}.", words: ["в Катю", "к Кате", "на Катю"], correctAnswers: { 1: "к Кате" }, explanation: "Katya è una persona, quindi non è una superficie e non ha un confine: dobbiamo avvicinarci, quindi la preposizione è «к»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Андрей ходит {{1}}.", words: ["в спортзал", "на спортзал", "к спортзалу"], correctAnswers: { 1: "в спортзал" }, explanation: "La palestra è un edificio, quindi bisogna entrare dentro: la preposizione è «в»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду {{1}}.", words: ["к работе", "в работу", "на работу"], correctAnswers: { 1: "на работу" }, explanation: "Il lavoro si riconosce come un evento, quindi la preposizione è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы едем {{1}}, кот заболел.", words: ["на ветеринара", "к ветеринару", "в ветеринара"], correctAnswers: { 1: "к ветеринару" }, explanation: "Si parla di una persona, un professionista: il veterinario non è un edificio né una superficie, dobbiamo avvicinarci, quindi la preposizione è «к»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я всегда хожу с бабушкой {{1}}.", words: ["к банку", "на банк", "в банк"], correctAnswers: { 1: "в банк" }, explanation: "La banca si trova dentro un palazzo e bisogna entrare dentro, quindi la preposizione è «в»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Они всегда по утрам ходят {{1}}.", words: ["в пробежку", "на пробежку", "к пробежке"], correctAnswers: { 1: "на пробежку" }, explanation: "\"Fare una corsa\" in russo è letteralmente \"andare alla corsa\": la corsa è un evento, quindi la preposizione è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "В воскресенье едем {{1}}.", words: ["на родителей", "в родителей", "к родителям"], correctAnswers: { 1: "к родителям" }, explanation: "Dobbiamo avvicinarci, non entrare e non stare su una superficie, quindi la preposizione è «к»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду {{1}}, тебе купить что-нибудь?", words: ["на магазин", "в магазин", "к магазину"], correctAnswers: { 1: "в магазин" }, explanation: "Seguiamo la stessa logica: un supermercato o un negozio sono sempre un edificio dentro cui bisogna entrare, quindi la preposizione è «в»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты идёшь {{1}}.", words: ["к концерту", "в концерт", "на концерт"], correctAnswers: { 1: "на концерт" }, explanation: "Un concerto è un evento, quindi la preposizione che viene applicata è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы в пятницу идём {{1}}.", words: ["в друзей в гости", "на друзей в гости", "к друзьям в гости"], correctAnswers: { 1: "к друзьям в гости" }, explanation: "Non si entra dentro, non si passa sopra una superficie: la preposizione è «к»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "В субботу идём с друзьями {{1}}.", words: ["к ресторану", "в ресторан", "на ресторан"], correctAnswers: { 1: "в ресторан" }, explanation: "Il ristorante è un edificio: dobbiamo entrare dentro, quindi la preposizione è «в»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы всегда ходите {{1}} по пятницам?", words: ["к йоге", "в йогу", "на йогу"], correctAnswers: { 1: "на йогу" }, explanation: "Si tratta di lezioni di yoga: sappiamo che una lezione è un evento, quindi la preposizione è «на»." },
 ];
 
 // ============================================================
 // PANEL 2 — public · Flashcard — misto (в / на / к)
 // ============================================================
 const p2cards = [
-    { front: "Я иду на", back: "работу" },
-    { front: "Вы идёте утром на", back: "пляж" },
-    { front: "Ты идёшь на", back: "концерт" },
-    { front: "Ты идёшь сегодня вечером к", back: "Кате" },
-    { front: "Андрей ходит в", back: "спортзал" },
-    { front: "Тебе купить что-нибудь? Я иду в", back: "магазин" },
-    { front: "В воскресенье едем к", back: "родителям" },
-    { front: "Я всегда хожу с бабушкой в", back: "банк" },
-    { front: "В субботу идём с друзьями в", back: "ресторан" },
-    { front: "Мы в пятницу идём в гости к", back: "друзьям" },
+    { front: "Я иду на", back: "работу", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "Вы идёте утром на", back: "пляж", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "Ты идёшь на", back: "концерт", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "Ты идёшь сегодня вечером к", back: "Кате", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: Катя → Кате." },
+    { front: "Андрей ходит в", back: "спортзал", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "Тебе купить что-нибудь? Я иду в", back: "магазин", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "В воскресенье едем к", back: "родителям", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: родители → родителям." },
+    { front: "Я всегда хожу с бабушкой в", back: "банк", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "В субботу идём с друзьями в", back: "ресторан", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "Мы в пятницу идём в гости к", back: "друзьям", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: друзья → друзьям." },
 ];
 
 // ============================================================
@@ -104,16 +104,16 @@ const p8cards = [
 // PANEL 3 — public · Flashcard
 // ============================================================
 const p3cards = [
-    { front: "Она ходит на", back: "выставки" },
-    { front: "Да, два-три раза в неделю хожу на", back: "тренировку" },
-    { front: "В понедельник мы идём на", back: "презентацию" },
-    { front: "В субботу идём с друзьями в", back: "ресторан" },
-    { front: "Я всегда хожу с бабушкой в", back: "банк" },
-    { front: "Кот заболел, мы едем к", back: "ветеринару" },
-    { front: "Мы в пятницу идём в гости к", back: "друзьям" },
-    { front: "Когда ты идёшь к", back: "врачу" },
-    { front: "Весной они летят в", back: "Египет" },
-    { front: "Куда вы едете на", back: "Пасху" },
+    { front: "Она ходит на", back: "выставки", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "Да, два-три раза в неделю хожу на", back: "тренировку", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "В понедельник мы идём на", back: "презентацию", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "В субботу идём с друзьями в", back: "ресторан", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "Я всегда хожу с бабушкой в", back: "банк", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "Кот заболел, мы едем к", back: "ветеринару", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: ветеринар → ветеринару." },
+    { front: "Мы в пятницу идём в гости к", back: "друзьям", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: друзья → друзьям." },
+    { front: "Когда ты идёшь к", back: "врачу", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: врач → врачу." },
+    { front: "Весной они летят в", back: "Египет", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "Куда вы едете на", back: "Пасху", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
 ];
 
 // ============================================================
