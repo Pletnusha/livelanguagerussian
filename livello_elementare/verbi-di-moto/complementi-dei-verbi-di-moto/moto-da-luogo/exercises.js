@@ -13,63 +13,73 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 const p1exercises = [
     {
         instruction: "Scegli la preposizione corretta.",
-        text: "Он вернулся {{1}} университета.",
+        text: "Он идёт {{1}} университета домой.",
         words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
+        correctAnswers: { 1: "из" },
+        explanation: "L'università è un edificio (spazio chiuso): si esce da uno spazio chiuso con «из»."
     },
     {
         instruction: "Scegli la preposizione corretta.",
-        text: "Она пришла {{1}} работы поздно вечером.",
+        text: "Она возвращается {{1}} работы поздно.",
         words: ["с", "из", "от"],
-        correctAnswers: { 1: "с" }
+        correctAnswers: { 1: "с" },
+        explanation: "Il lavoro è un'attività: si va «на» работу, quindi si torna «с» работы."
     },
     {
         instruction: "Scegli la preposizione corretta.",
-        text: "Я получил посылку {{1}} брата.",
+        text: "Я иду {{1}} брата.",
         words: ["от", "из", "с"],
-        correctAnswers: { 1: "от" }
+        correctAnswers: { 1: "от" },
+        explanation: "Il fratello è una persona: ci si allontana da una persona con «от»."
     },
     {
         instruction: "Scegli la preposizione corretta.",
-        text: "Мы вернулись {{1}} Москвы вчера вечером.",
+        text: "Мы возвращаемся {{1}} Москвы сегодня вечером.",
         words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
+        correctAnswers: { 1: "из" },
+        explanation: "Mosca è una città (spazio chiuso): si usa «из» per indicare da dove si viene."
     },
     {
         instruction: "Scegli la preposizione corretta.",
-        text: "Дети пришли {{1}} школы в три часа.",
+        text: "Дети возвращаются {{1}} школы в три часа.",
         words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
+        correctAnswers: { 1: "из" },
+        explanation: "La scuola è un edificio (spazio chiuso): si usa «из» per indicare da dove si viene."
     },
     {
         instruction: "Scegli la preposizione corretta.",
-        text: "Они ушли {{1}} концерта в середине.",
+        text: "Они возвращаются {{1}} концерта.",
         words: ["с", "из", "от"],
-        correctAnswers: { 1: "с" }
+        correctAnswers: { 1: "с" },
+        explanation: "Il concerto è un evento: si va «на» концерт, quindi si torna «с» концерта."
     },
     {
         instruction: "Scegli la preposizione corretta.",
-        text: "Она отошла {{1}} окна и присела на диван.",
+        text: "Он идёт {{1}} врача — чувствует себя лучше.",
         words: ["от", "из", "с"],
-        correctAnswers: { 1: "от" }
+        correctAnswers: { 1: "от" },
+        explanation: "Il medico è una persona: ci si allontana da una persona con «от»."
     },
     {
         instruction: "Scegli la preposizione corretta.",
-        text: "Он пришёл {{1}} врача и чувствует себя лучше.",
-        words: ["от", "из", "с"],
-        correctAnswers: { 1: "от" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta.",
-        text: "Студенты вышли {{1}} аудитории после лекции.",
+        text: "Мы идём {{1}} театра — спектакль только что закончился.",
         words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
+        correctAnswers: { 1: "из" },
+        explanation: "Il teatro è un edificio (spazio chiuso): si usa «из» per indicare da dove si viene."
     },
     {
         instruction: "Scegli la preposizione corretta.",
-        text: "Он вернулся {{1}} стадиона усталый.",
+        text: "Она возвращается {{1}} рынка с тяжёлыми сумками.",
+        words: ["с", "из", "от"],
+        correctAnswers: { 1: "с" },
+        explanation: "Il mercato è un luogo aperto: si va «на» рынок, quindi si torna «с» рынка."
+    },
+    {
+        instruction: "Scegli la preposizione corretta.",
+        text: "Он идёт {{1}} стадиона усталый.",
         words: ["со", "из", "от"],
-        correctAnswers: { 1: "со" }
+        correctAnswers: { 1: "со" },
+        explanation: "Lo stadio è un luogo aperto: si va «на» стадион, quindi si torna «со» стадиона."
     },
 ];
 
@@ -77,228 +87,133 @@ const p1exercises = [
 // PANEL 5 — student · Drag & Drop · Solo ИЗ
 // ============================================================
 const p5exercises = [
-    {
-        instruction: "Scegli la preposizione corretta (spazio chiuso → ИЗ).",
-        text: "Мама вышла {{1}} магазина с тяжёлыми сумками.",
-        words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (spazio chiuso → ИЗ).",
-        text: "Он уехал {{1}} Санкт-Петербурга на следующий день.",
-        words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (spazio chiuso → ИЗ).",
-        text: "Она вышла {{1}} комнаты, не сказав ни слова.",
-        words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (spazio chiuso → ИЗ).",
-        text: "Туристы приехали {{1}} Италии.",
-        words: ["из", "от", "с"],
-        correctAnswers: { 1: "из" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (spazio chiuso → ИЗ).",
-        text: "Он вышел {{1}} театра после спектакля.",
-        words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (spazio chiuso → ИЗ).",
-        text: "Врач вышел {{1}} больницы и сел в машину.",
-        words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (spazio chiuso → ИЗ).",
-        text: "Студенты вышли {{1}} библиотеки поздно вечером.",
-        words: ["из", "от", "с"],
-        correctAnswers: { 1: "из" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (spazio chiuso → ИЗ).",
-        text: "Мы приехали {{1}} Японии две недели назад.",
-        words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (spazio chiuso → ИЗ).",
-        text: "Кот выскочил {{1}} шкафа и потянулся.",
-        words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (spazio chiuso → ИЗ).",
-        text: "Он ушёл {{1}} офиса в полдень.",
-        words: ["из", "с", "от"],
-        correctAnswers: { 1: "из" }
-    },
+    // 5 из panel 1
+    { instruction: "Scegli la preposizione corretta.", text: "Он идёт {{1}} университета домой.", words: ["из", "с"], correctAnswers: { 1: "из" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она возвращается {{1}} работы поздно.", words: ["с", "из"], correctAnswers: { 1: "с" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Дети возвращаются {{1}} школы в три часа.", words: ["из", "с"], correctAnswers: { 1: "из" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Они возвращаются {{1}} концерта.", words: ["с", "из"], correctAnswers: { 1: "с" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Мы идём {{1}} театра — спектакль только что закончился.", words: ["из", "с"], correctAnswers: { 1: "из" } },
+    // 5 новых (solo ИЗ/С)
+    { instruction: "Scegli la preposizione corretta.", text: "Мы идём {{1}} бассейна.", words: ["из", "с"], correctAnswers: { 1: "из" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} дискотеки — уже светло.", words: ["с", "из"], correctAnswers: { 1: "с" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Он возвращается {{1}} спортзала.", words: ["из", "с"], correctAnswers: { 1: "из" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} вокзала.", words: ["с", "из"], correctAnswers: { 1: "с" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Мы возвращаемся {{1}} ночного клуба уставшие.", words: ["из", "с"], correctAnswers: { 1: "из" } },
 ];
 
 // ============================================================
-// PANEL 6 — paid · Drag & Drop · С vs ОТ
+// PANEL 6 — paid · Drag & Drop · ИЗ / С / ОТ
+// 10 repeated from p5 + 5 new ОТ
 // ============================================================
 const p6exercises = [
-    {
-        instruction: "С (superficie/evento) o ОТ (persona/punto specifico)?",
-        text: "Она вернулась {{1}} работы очень усталой.",
-        words: ["с", "от", "из"],
-        correctAnswers: { 1: "с" }
-    },
-    {
-        instruction: "С (superficie/evento) o ОТ (persona/punto specifico)?",
-        text: "Он отошёл {{1}} двери и сел на диван.",
-        words: ["от", "с", "из"],
-        correctAnswers: { 1: "от" }
-    },
-    {
-        instruction: "С (superficie/evento) o ОТ (persona/punto specifico)?",
-        text: "Мы вернулись {{1}} концерта в полночь.",
-        words: ["с", "от", "из"],
-        correctAnswers: { 1: "с" }
-    },
-    {
-        instruction: "С (superficie/evento) o ОТ (persona/punto specifico)?",
-        text: "Я иду {{1}} врача — всё в порядке.",
-        words: ["от", "с", "из"],
-        correctAnswers: { 1: "от" }
-    },
-    {
-        instruction: "С (superficie/evento) o ОТ (persona/punto specifico)?",
-        text: "Они вернулись {{1}} вокзала без билетов.",
-        words: ["с", "от", "из"],
-        correctAnswers: { 1: "с" }
-    },
-    {
-        instruction: "С (superficie/evento) o ОТ (persona/punto specifico)?",
-        text: "Он отошёл {{1}} остановки и позвонил.",
-        words: ["от", "с", "из"],
-        correctAnswers: { 1: "от" }
-    },
-    {
-        instruction: "С (superficie/evento) o ОТ (persona/punto specifico)?",
-        text: "Студенты пришли {{1}} лекции голодными.",
-        words: ["с", "от", "из"],
-        correctAnswers: { 1: "с" }
-    },
-    {
-        instruction: "С (superficie/evento) o ОТ (persona/punto specifico)?",
-        text: "Я только что {{1}} подруги — она передаёт привет.",
-        words: ["от", "с", "из"],
-        correctAnswers: { 1: "от" }
-    },
-    {
-        instruction: "С (superficie/evento) o ОТ (persona/punto specifico)?",
-        text: "Они вернулись {{1}} рынка с овощами.",
-        words: ["с", "от", "из"],
-        correctAnswers: { 1: "с" }
-    },
-    {
-        instruction: "С (superficie/evento) o ОТ (persona/punto specifico)?",
-        text: "Отойди {{1}} плиты — она горячая!",
-        words: ["от", "с", "из"],
-        correctAnswers: { 1: "от" }
-    },
+    // 5 new from p5 (with all three options)
+    { instruction: "Scegli la preposizione corretta.", text: "Мы идём {{1}} бассейна.", words: ["из", "от", "с"], correctAnswers: { 1: "из" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} дискотеки — уже светло.", words: ["с", "из", "от"], correctAnswers: { 1: "с" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Он возвращается {{1}} спортзала.", words: ["из", "с", "от"], correctAnswers: { 1: "из" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} вокзала.", words: ["с", "от", "из"], correctAnswers: { 1: "с" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Мы возвращаемся {{1}} ночного клуба уставшие.", words: ["из", "с", "от"], correctAnswers: { 1: "из" } },
+    // 5 new — ОТ focus
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} сестры с подарком.", words: ["от", "из", "с"], correctAnswers: { 1: "от" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Он идёт {{1}} родителей.", words: ["от", "с", "из"], correctAnswers: { 1: "от" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Они идут {{1}} друзей.", words: ["от", "из", "с"], correctAnswers: { 1: "от" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она возвращается {{1}} подруги.", words: ["от", "с", "из"], correctAnswers: { 1: "от" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Он возвращается {{1}} бара после встречи с друзьями.", words: ["из", "от", "с"], correctAnswers: { 1: "из" } },
 ];
 
 // ============================================================
 // PANEL 2 — public · Flashcard · Mix ИЗ / С / ОТ
 // ============================================================
 const p2cards = [
-    { front: "из университета", back: "dall'università (edificio = spazio chiuso)" },
-    { front: "с работы", back: "dal lavoro (attività — НА работу → С работы)" },
-    { front: "от врача", back: "dal dottore (persona)" },
-    { front: "из Москвы", back: "da Mosca (città = spazio chiuso)" },
-    { front: "с концерта", back: "dal concerto (evento — НА концерт → С концерта)" },
-    { front: "от друга", back: "dall'amico (persona)" },
-    { front: "из комнаты", back: "dalla stanza (spazio chiuso)" },
-    { front: "с вокзала", back: "dalla stazione (НА вокзал → С вокзала)" },
-    { front: "от остановки", back: "dalla fermata (punto specifico)" },
-    { front: "из театра", back: "dal teatro (edificio = spazio chiuso)" },
+    { front: "из + университет", back: "из университета", explanation: "2a declinazione" },
+    { front: "с + работа", back: "с работы", explanation: "1a declinazione" },
+    { front: "от + врач", back: "от врача", explanation: "2a declinazione" },
+    { front: "из + школа", back: "из школы", explanation: "1a declinazione" },
+    { front: "с + концерт", back: "с концерта", explanation: "2a declinazione" },
+    { front: "из + театр", back: "из театра", explanation: "2a declinazione" },
+    { front: "с + вокзал", back: "с вокзала", explanation: "2a declinazione" },
+    { front: "от + друзья", back: "от друзей", explanation: "plurale" },
+    { front: "из + дом", back: "из дома", explanation: "2a declinazione" },
+    { front: "с + остановка", back: "с остановки", explanation: "1a declinazione" },
 ];
 
 // ============================================================
 // PANEL 3 — public · Flashcard · Regola В→ИЗ / НА→С
 // ============================================================
 const p3cards = [
-    { front: "В/НА → regola del ritorno", back: "В → ИЗ | НА → С" },
-    { front: "Он идёт В магазин", back: "→ возвращается ИЗ магазина" },
-    { front: "Она идёт НА работу", back: "→ возвращается С работы" },
-    { front: "Они идут В театр", back: "→ возвращаются ИЗ театра" },
-    { front: "Мы идём НА стадион", back: "→ возвращаемся СО стадиона" },
-    { front: "Он идёт В университет", back: "→ возвращается ИЗ университета" },
-    { front: "Она идёт НА урок", back: "→ возвращается С урока" },
-    { front: "ОТ — quando si usa?", back: "da una persona o da un punto fisico specifico" },
-    { front: "от мамы", back: "dalla mamma (persona → ОТ)" },
-    { front: "от входа", back: "dall'ingresso (punto specifico → ОТ)" },
+    { front: "Анна идёт в магазин", back: "Анна идёт из магазина", explanation: "В → ИЗ" },
+    { front: "Друзья идут в театр", back: "Друзья идут из театра", explanation: "В → ИЗ" },
+    { front: "Мой парень идёт в бассейн", back: "Мой парень идёт из бассейна", explanation: "В → ИЗ" },
+    { front: "Он идёт в университет", back: "Он идёт из университета", explanation: "В → ИЗ" },
+    { front: "Анна идёт на работу", back: "Анна идёт с работы", explanation: "НА → С" },
+    { front: "Мой парень идёт на концерт", back: "Мой парень идёт с концерта", explanation: "НА → С" },
+    { front: "Друзья идут на рынок", back: "Друзья идут с рынка", explanation: "НА → С" },
+    { front: "Она идёт на урок", back: "Она идёт с урока", explanation: "НА → С" },
+    { front: "Он идёт к врачу", back: "Он идёт от врача", explanation: "К → ОТ" },
+    { front: "Анна идёт к сестре", back: "Анна идёт от сестры", explanation: "К → ОТ" },
 ];
 
 // ============================================================
 // PANEL 7 — student · Flashcard · ИЗ + genitivo
 // ============================================================
 const p7cards = [
-    { front: "из + комната", back: "из комнаты" },
-    { front: "из + Россия", back: "из России" },
     { front: "из + университет", back: "из университета" },
-    { front: "из + магазин", back: "из магазина" },
-    { front: "из + библиотека", back: "из библиотеки" },
-    { front: "из + Италия", back: "из Италии" },
-    { front: "из + больница", back: "из больницы" },
+    { front: "из + Москва", back: "из Москвы" },
+    { front: "из + школа", back: "из школы" },
     { front: "из + театр", back: "из театра" },
-    { front: "из + офис", back: "из офиса" },
-    { front: "из + Япония", back: "из Японии" },
+    { front: "из + бассейн", back: "из бассейна" },
+    { front: "из + спортзал", back: "из спортзала" },
+    { front: "из + ночной клуб", back: "из ночного клуба" },
+    { front: "из + бар", back: "из бара" },
+    { front: "из + дом", back: "из дома" },
+    { front: "из + ресторан", back: "из ресторана" },
 ];
 
 // ============================================================
 // PANEL 8 — paid · Flashcard · С + genitivo
 // ============================================================
 const p8cards = [
+    { front: "из + университет", back: "из университета" },
+    { front: "из + школа", back: "из школы" },
+    { front: "из + бассейн", back: "из бассейна" },
     { front: "с + работа", back: "с работы" },
-    { front: "с + урок", back: "с урока" },
     { front: "с + концерт", back: "с концерта" },
-    { front: "с + вокзал", back: "с вокзала" },
     { front: "с + рынок", back: "с рынка" },
-    { front: "с + стадион", back: "со стадиона" },
-    { front: "с + собрание", back: "с собрания" },
-    { front: "с + лекция", back: "с лекции" },
-    { front: "с + юг", back: "с юга" },
-    { front: "с + север", back: "с севера" },
+    { front: "с + дискотека", back: "с дискотеки" },
+    { front: "от + врач", back: "от врача" },
+    { front: "от + сестра", back: "от сестры" },
+    { front: "с + почта", back: "с почты" },
 ];
 
 // ============================================================
 // PANEL 9 — student · Flashcard · ОТ + genitivo
 // ============================================================
 const p9cards = [
-    { front: "от + врач", back: "от врача" },
-    { front: "от + друг", back: "от друга" },
-    { front: "от + дверь", back: "от двери" },
-    { front: "от + стол", back: "от стола" },
-    { front: "от + окно", back: "от окна" },
-    { front: "от + остановка", back: "от остановки" },
-    { front: "от + банк", back: "от банка" },
-    { front: "от + вход", back: "от входа" },
-    { front: "от + выход", back: "от выхода" },
-    { front: "от + мама", back: "от мамы" },
+    { front: "Дети идут в школу", back: "Дети идут из школы" },
+    { front: "Саша идёт в ресторан", back: "Саша идёт из ресторана" },
+    { front: "Она идёт в спортзал", back: "Она идёт из спортзала" },
+    { front: "Он идёт в ночной клуб", back: "Он идёт из ночного клуба" },
+    { front: "Она идёт на дискотеку", back: "Она идёт с дискотеки" },
+    { front: "Саша идёт на вокзал", back: "Саша идёт с вокзала" },
+    { front: "Он идёт к родителям", back: "Он идёт от родителей" },
+    { front: "Она идёт к подруге", back: "Она идёт от подруги" },
+    { front: "Он идёт в офис", back: "Он идёт из офиса" },
+    { front: "Она идёт в больницу", back: "Она идёт из больницы" },
 ];
 
 // ============================================================
 // PANEL 10 — paid · Flashcard · Consolidamento mix
 // ============================================================
 const p10cards = [
-    { front: "Вернулся из России", back: "из (paese = spazio chiuso)" },
-    { front: "Пришёл с работы", back: "с (attività — НА работу → С работы)" },
-    { front: "Пришёл от врача", back: "от (persona)" },
-    { front: "Вышла из библиотеки", back: "из (edificio = spazio chiuso)" },
-    { front: "Вернулась с концерта", back: "с (evento — НА концерт → С концерта)" },
-    { front: "Отошёл от двери", back: "от (punto fisico specifico)" },
-    { front: "Приехали из Японии", back: "из (paese = spazio chiuso)" },
-    { front: "Вернулись со стадиона", back: "со (НА стадион → СО стадиона)" },
-    { front: "Получил письмо от друга", back: "от (persona)" },
-    { front: "Вышел из офиса", back: "из (edificio = spazio chiuso)" },
+    { front: "Коля идёт в бар", back: "Коля идёт из бара" },
+    { front: "Лена идёт в театр", back: "Лена идёт из театра" },
+    { front: "Болельщики идут на стадион", back: "Болельщики идут со стадиона" },
+    { front: "Папа идёт на почту", back: "Папа идёт с почты" },
+    { front: "Наш сосед идёт на остановку", back: "Наш сосед идёт с остановки" },
+    { front: "Бабушка идёт к друзьям", back: "Бабушка идёт от друзей" },
+    { front: "Дима идёт к брату", back: "Дима идёт от брата" },
+    { front: "Моя подруга идёт на работу", back: "Моя подруга идёт с работы" },
+    { front: "Лена идёт в кино", back: "Лена идёт из кино" },
+    { front: "Коля идёт в гости", back: "Коля идёт из гостей" },
 ];
 
 // ============================================================
@@ -316,42 +231,42 @@ function initPanel4Mdl() {
     let currentCard = 0;
 
     const multipleChoiceData = [
-        { question: "Он вернулся ___ университета.", options: ["из", "с", "от"], answer: "из" },
-        { question: "Она пришла ___ работы поздно.", options: ["с", "из", "от"], answer: "с" },
-        { question: "Я получил письмо ___ друга.", options: ["от", "из", "с"], answer: "от" },
-        { question: "Мы вернулись ___ Москвы вчера.", options: ["из", "с", "от"], answer: "из" },
-        { question: "Дети пришли ___ школы в три часа.", options: ["из", "с", "от"], answer: "из" },
-        { question: "Они ушли ___ концерта в середине.", options: ["с", "из", "от"], answer: "с" },
-        { question: "Она отошла ___ окна и присела.", options: ["от", "из", "с"], answer: "от" },
-        { question: "Он пришёл ___ врача и чувствует себя лучше.", options: ["от", "из", "с"], answer: "от" },
-        { question: "Студенты вышли ___ аудитории.", options: ["из", "с", "от"], answer: "из" },
-        { question: "Он вернулся ___ стадиона усталый.", options: ["со", "из", "от"], answer: "со" },
+        { question: "Он идёт ___ университета домой.", options: ["из", "с", "от"], answer: "из" },
+        { question: "Она возвращается ___ работы поздно.", options: ["с", "из", "от"], answer: "с" },
+        { question: "Я иду ___ брата.", options: ["от", "из", "с"], answer: "от" },
+        { question: "Мы возвращаемся ___ Москвы сегодня вечером.", options: ["из", "с", "от"], answer: "из" },
+        { question: "Дети возвращаются ___ школы в три часа.", options: ["из", "с", "от"], answer: "из" },
+        { question: "Они возвращаются ___ концерта.", options: ["с", "из", "от"], answer: "с" },
+        { question: "Он идёт ___ врача — чувствует себя лучше.", options: ["от", "из", "с"], answer: "от" },
+        { question: "Мы идём ___ театра — спектакль только что закончился.", options: ["из", "с", "от"], answer: "из" },
+        { question: "Она возвращается ___ рынка с тяжёлыми сумками.", options: ["с", "из", "от"], answer: "с" },
+        { question: "Он идёт ___ стадиона усталый.", options: ["со", "из", "от"], answer: "со" },
     ];
 
     const matchPairs = [
-        { left: "В магазин →", right: "из магазина" },
-        { left: "НА работу →", right: "с работы" },
-        { left: "К врачу →", right: "от врача" },
-        { left: "В Москву →", right: "из Москвы" },
-        { left: "НА концерт →", right: "с концерта" },
-        { left: "К другу →", right: "от друга" },
-        { left: "В театр →", right: "из театра" },
-        { left: "НА стадион →", right: "со стадиона" },
-        { left: "К остановке →", right: "от остановки" },
-        { left: "В библиотеку →", right: "из библиотеки" },
+        { left: "В бассейн →", right: "из бассейна" },
+        { left: "На дискотеку →", right: "с дискотеки" },
+        { left: "В спортзал →", right: "из спортзала" },
+        { left: "На вокзал →", right: "с вокзала" },
+        { left: "В ночной клуб →", right: "из ночного клуба" },
+        { left: "К сестре →", right: "от сестры" },
+        { left: "К родителям →", right: "от родителей" },
+        { left: "К друзьям →", right: "от друзей" },
+        { left: "К подруге →", right: "от подруги" },
+        { left: "В бар →", right: "из бара" },
     ];
 
     const quizData = [
-        { id: "mdl-001", promptPrefix: "Мама вышла", promptSuffix: "магазина с тяжёлыми сумками.", answers: ["из"] },
-        { id: "mdl-002", promptPrefix: "Она вернулась", promptSuffix: "работы очень усталой.", answers: ["с"] },
-        { id: "mdl-003", promptPrefix: "Он отошёл", promptSuffix: "двери и сел на диван.", answers: ["от"] },
-        { id: "mdl-004", promptPrefix: "Туристы приехали", promptSuffix: "Италии.", answers: ["из"] },
-        { id: "mdl-005", promptPrefix: "Мы вернулись", promptSuffix: "концерта в полночь.", answers: ["с"] },
-        { id: "mdl-006", promptPrefix: "Я иду", promptSuffix: "врача — всё в порядке.", answers: ["от"] },
-        { id: "mdl-007", promptPrefix: "Они вернулись", promptSuffix: "вокзала без билетов.", answers: ["с"] },
-        { id: "mdl-008", promptPrefix: "Студенты вышли", promptSuffix: "библиотеки поздно.", answers: ["из"] },
-        { id: "mdl-009", promptPrefix: "Отойди", promptSuffix: "плиты — она горячая!", answers: ["от"] },
-        { id: "mdl-010", promptPrefix: "Он ушёл", promptSuffix: "офиса в полдень.", answers: ["из"] },
+        { id: "mdl-021", promptPrefix: "Дима идёт", promptSuffix: "(дом)", answers: ["из дома"] },
+        { id: "mdl-022", promptPrefix: "Наш сосед идёт", promptSuffix: "(остановка)", answers: ["с остановки"] },
+        { id: "mdl-023", promptPrefix: "Саша идёт", promptSuffix: "(ресторан)", answers: ["из ресторана"] },
+        { id: "mdl-024", promptPrefix: "Папа идёт", promptSuffix: "(почта)", answers: ["с почты"] },
+        { id: "mdl-025", promptPrefix: "Анна идёт", promptSuffix: "(магазин)", answers: ["из магазина"] },
+        { id: "mdl-026", promptPrefix: "Она идёт", promptSuffix: "(урок)", answers: ["с урока"] },
+        { id: "mdl-027", promptPrefix: "Он идёт", promptSuffix: "(офис)", answers: ["из офиса"] },
+        { id: "mdl-028", promptPrefix: "Моя подруга идёт", promptSuffix: "(больница)", answers: ["из больницы"] },
+        { id: "mdl-029", promptPrefix: "Лена идёт", promptSuffix: "(кино)", answers: ["из кино"] },
+        { id: "mdl-030", promptPrefix: "Коля идёт", promptSuffix: "(гости)", answers: ["из гостей"] },
     ];
 
     const MC_END      = multipleChoiceData.length;
@@ -573,8 +488,8 @@ function initPanel4Mdl() {
 initPanelManager({
     initializers: {
         'panel-mdl-01':  () => new DragDropExercise({ rootId: 'ex-dragdrop-mdl-01',    exercises: p1exercises }),
-        'panel-mdl-05':  () => new DragDropExercise({ rootId: 'ex-dragdrop-mdl-05',    exercises: p5exercises }),
-        'panel-mdl-06':  () => new DragDropExercise({ rootId: 'ex-dragdrop-mdl-06',    exercises: p6exercises }),
+        'panel-mdl-05':  () => new DragDropExercise({ rootId: 'ex-dragdrop-mdl-05',    exercises: [...p5exercises].sort(() => Math.random() - 0.5) }),
+        'panel-mdl-06':  () => new DragDropExercise({ rootId: 'ex-dragdrop-mdl-06',    exercises: [...p6exercises].sort(() => Math.random() - 0.5) }),
         'panel-mdl-02':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mdl-02', cards: p2cards }),
         'panel-mdl-03':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mdl-03', cards: p3cards }),
         'panel-mdl-07':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mdl-07', cards: p7cards }),
