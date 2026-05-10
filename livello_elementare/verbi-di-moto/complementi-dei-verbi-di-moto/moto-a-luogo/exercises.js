@@ -6,7 +6,7 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // PANEL 1 — public · Drag & Drop
 // ============================================================
 const p1exercises = [
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду {{1}}.", words: ["на работу", "на работе", "в работу"], correctAnswers: { 1: "на работу" }, explanation: "Il lavoro si riconosce come un evento, quindi la preposizione è «на»." },
+    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду {{1}}.", words: ["на работу", "на работе", "в работу"], correctAnswers: { 1: "на работу" }, explanation: "Moto a luogo → accusativo. «Работа» è femminile in -а: accusativo → «работу» → «на работу», non «на работе» (locativo)." },
     { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы идёте утром {{1}}.", words: ["на пляж", "в пляж", "к пляжу"], correctAnswers: { 1: "на пляж" }, explanation: "La spiaggia si riconosce come una superficie, quindi la preposizione è «на»." },
     { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты идёшь {{1}}.", words: ["на концерт", "на концерте", "в концерт"], correctAnswers: { 1: "на концерт" }, explanation: "Moto a luogo → accusativo. «Концерт» è maschile inanimato: accusativo = nominativo → «на концерт», non «на концерте» (locativo)." },
     { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты идёшь сегодня вечером {{1}}.", words: ["к Кате", "в Катю", "на Катю"], correctAnswers: { 1: "к Кате" }, explanation: "Katya è una persona, quindi non è una superficie e non ha un confine: dobbiamo avvicinarci, quindi la preposizione è «к»." },
@@ -56,96 +56,96 @@ const p6exercises = [
 // PANEL 2 — public · Flashcard — misto (в / на / к)
 // ============================================================
 const p2cards = [
-    { front: "Я иду на", back: "работу", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "Вы идёте утром на", back: "пляж", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "Ты идёшь на", back: "концерт", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "Ты идёшь сегодня вечером к", back: "Кате", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: Катя → Кате." },
-    { front: "Андрей ходит в", back: "спортзал", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "Тебе купить что-нибудь? Я иду в", back: "магазин", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "В воскресенье едем к", back: "родителям", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: родители → родителям." },
-    { front: "Я всегда хожу с бабушкой в", back: "банк", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "В субботу идём с друзьями в", back: "ресторан", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "Мы в пятницу идём в гости к", back: "друзьям", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: друзья → друзьям." },
+    { front: "Я иду на", back: "работу", explanation: "«Работа» = lavoro. «Идти на работу» — andare al lavoro (accusativo: работа → работу)." },
+    { front: "Вы идёте утром на", back: "пляж", explanation: "«Пляж» = spiaggia. «Идти на пляж» — andare in spiaggia." },
+    { front: "Ты идёшь на", back: "концерт", explanation: "«Концерт» = concerto. «Идти на концерт» — andare al concerto." },
+    { front: "Ты идёшь сегодня вечером к", back: "Кате", explanation: "«Катя» è un nome proprio. «Идти к Кате» — andare da Katya (dativo: Катя → Кате)." },
+    { front: "Андрей ходит в", back: "спортзал", explanation: "«Спортзал» = palestra. «Ходить в спортзал» — andare in palestra." },
+    { front: "Тебе купить что-нибудь? Я иду в", back: "магазин", explanation: "«Магазин» = negozio. «Идти в магазин» — andare al negozio." },
+    { front: "В воскресенье едем к", back: "родителям", explanation: "«Родители» = genitori. «Ехать к родителям» — andare dai genitori (dativo: родители → родителям)." },
+    { front: "Я всегда хожу с бабушкой в", back: "банк", explanation: "«Банк» = banca. «Ходить в банк» — andare in banca." },
+    { front: "В субботу идём с друзьями в", back: "ресторан", explanation: "«Ресторан» = ristorante. «Идти в ресторан» — andare al ristorante." },
+    { front: "Мы в пятницу идём в гости к", back: "друзьям", explanation: "«Друзья» = amici. «Идти в гости к друзьям» — andare dagli amici (dativo: друзья → друзьям)." },
 ];
 
 // ============================================================
 // PANEL 7 — paid · Flashcard — solo на
 // ============================================================
 const p7cards = [
-    { front: "Мы идём на", back: "концерт" },
-    { front: "Она ходит на", back: "выставки" },
-    { front: "Завтра утром мы идём на", back: "пляж" },
-    { front: "Они всегда по утрам ходят на", back: "пробежку" },
-    { front: "В понедельник мы идём на", back: "презентацию" },
-    { front: "Он всегда ходит на", back: "лекции" },
-    { front: "Да, два-три раза в неделю хожу на", back: "тренировку" },
-    { front: "Вы идёте на", back: "день рождения" },
-    { front: "Они идут в субботу на", back: "концерт" },
-    { front: "Вы всегда по пятницам ходите на", back: "йогу" },
+    { front: "в + университет", back: "в университет" },
+    { front: "на + работа", back: "на работу" },
+    { front: "в + школа", back: "в школу" },
+    { front: "на + концерт", back: "на концерт" },
+    { front: "в + театр", back: "в театр" },
+    { front: "на + рынок", back: "на рынок" },
+    { front: "в + бассейн", back: "в бассейн" },
+    { front: "на + стадион", back: "на стадион" },
+    { front: "в + спортзал", back: "в спортзал" },
+    { front: "на + дискотека", back: "на дискотеку" },
 ];
 
 // ============================================================
 // PANEL 8 — paid · Flashcard — misto (в / на / к)
 // ============================================================
 const p8cards = [
-    { front: "Ты идёшь сегодня вечером к", back: "Кате" },
-    { front: "Андрей ходит в", back: "спортзал" },
-    { front: "Я иду на", back: "работу" },
-    { front: "Кот заболел, мы едем к", back: "ветеринару" },
-    { front: "Я всегда хожу с бабушкой в", back: "банк" },
-    { front: "Они всегда по утрам ходят на", back: "пробежку" },
-    { front: "В воскресенье едем к", back: "родителям" },
-    { front: "Тебе купить что-нибудь? Я иду в", back: "магазин" },
-    { front: "Ты идёшь на", back: "концерт" },
-    { front: "Вы всегда по пятницам ходите на", back: "йогу" },
+    { front: "в + университет", back: "в университет" },
+    { front: "на + работа", back: "на работу" },
+    { front: "в + бассейн", back: "в бассейн" },
+    { front: "на + концерт", back: "на концерт" },
+    { front: "в + спортзал", back: "в спортзал" },
+    { front: "к + врач", back: "к врачу" },
+    { front: "к + сестра", back: "к сестре" },
+    { front: "на + вокзал", back: "на вокзал" },
+    { front: "к + родители", back: "к родителям" },
+    { front: "к + друзья", back: "к друзьям" },
 ];
 
 // ============================================================
 // PANEL 3 — public · Flashcard
 // ============================================================
 const p3cards = [
-    { front: "Она ходит на", back: "выставки", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "Да, два-три раза в неделю хожу на", back: "тренировку", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "В понедельник мы идём на", back: "презентацию", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "В субботу идём с друзьями в", back: "ресторан", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "Я всегда хожу с бабушкой в", back: "банк", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "Кот заболел, мы едем к", back: "ветеринару", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: ветеринар → ветеринару." },
-    { front: "Мы в пятницу идём в гости к", back: "друзьям", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: друзья → друзьям." },
-    { front: "Когда ты идёшь к", back: "врачу", explanation: "Il complemento moto a luogo indica avvicinarsi a una persona: si applica il dativo: врач → врачу." },
-    { front: "Весной они летят в", back: "Египет", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
-    { front: "Куда вы едете на", back: "Пасху", explanation: "Il complemento moto a luogo indica la direzione verso un luogo: si applica l'accusativo." },
+    { front: "Она ходит на", back: "выставки", explanation: "«Выставки» = mostre. «Ходить на выставки» — andare alle mostre." },
+    { front: "Да, два-три раза в неделю хожу на", back: "тренировку", explanation: "«Тренировка» = allenamento. «Ходить на тренировку» — andare all'allenamento." },
+    { front: "В понедельник мы идём на", back: "презентацию", explanation: "«Презентация» = presentazione. «Идти на презентацию» — andare alla presentazione." },
+    { front: "В субботу идём с друзьями в", back: "ресторан", explanation: "«Ресторан» = ristorante. «Идти в ресторан» — andare al ristorante." },
+    { front: "Я всегда хожу с бабушкой в", back: "банк", explanation: "«Банк» = banca. «Ходить в банк» — andare in banca." },
+    { front: "Кот заболел, мы едем к", back: "ветеринару", explanation: "«Ветеринар» = veterinario. «Ехать к ветеринару» — andare dal veterinario." },
+    { front: "Мы в пятницу идём в гости к", back: "друзьям", explanation: "«Друзья» = amici. «Идти в гости к друзьям» — andare dagli amici." },
+    { front: "Когда ты идёшь к", back: "врачу", explanation: "«Врач» = medico. «Идти к врачу» — andare dal medico." },
+    { front: "Весной они летят в", back: "Египет", explanation: "«Египет» = Egitto. «Лететь в Египет» — volare in Egitto." },
+    { front: "Куда вы едете на", back: "Пасху", explanation: "«Пасха» = Pasqua. «Ехать на Пасху» — andare per Pasqua." },
 ];
 
 // ============================================================
-// PANEL 9 — paid · Flashcard
+// PANEL 9 — paid · Flashcard — в / на / к (5 repeat p7+p8 + 5 new)
 // ============================================================
 const p9cards = [
-    { front: "Мы идём на", back: "концерт" },
-    { front: "Они всегда по утрам ходят на", back: "пробежку" },
-    { front: "Вы всегда по пятницам ходите на", back: "йогу" },
-    { front: "Андрей ходит в", back: "спортзал" },
-    { front: "Тебе купить что-нибудь? Я иду в", back: "магазин" },
-    { front: "Ты идёшь сегодня вечером к", back: "Кате" },
-    { front: "В воскресенье едем к", back: "родителям" },
-    { front: "В выходные мы едем на", back: "дачу" },
-    { front: "Когда ты идёшь к", back: "стоматологу" },
-    { front: "По воскресеньям мы ездим в", back: "баню" },
+    { front: "в + театр",     back: "в театр" },
+    { front: "на + рынок",    back: "на рынок" },
+    { front: "на + стадион",  back: "на стадион" },
+    { front: "к + сестра",    back: "к сестре" },
+    { front: "на + вокзал",   back: "на вокзал" },
+    { front: "к + подруга",   back: "к подруге" },
+    { front: "в + больница",  back: "в больницу" },
+    { front: "в + кино",      back: "в кино" },
+    { front: "на + пляж",     back: "на пляж" },
+    { front: "в + банк",      back: "в банк" },
 ];
 
 // ============================================================
-// PANEL 10 — paid · Flashcard
+// PANEL 10 — paid · Flashcard — в / на / к (5 repeat p7+p8+p9 + 5 new)
 // ============================================================
 const p10cards = [
-    { front: "Я иду на", back: "работу" },
-    { front: "Вы идёте утром на", back: "пляж" },
-    { front: "Ты идёшь на", back: "концерт" },
-    { front: "Он всегда ходит на", back: "лекции" },
-    { front: "Мы едем в", back: "гости к друзьям" },
-    { front: "Он всегда ходит выпить кофе в", back: "этот бар" },
-    { front: "Они идут в", back: "аптеку" },
-    { front: "После лекций я иду к", back: "профессору" },
-    { front: "Вы часто ходите в", back: "кино" },
-    { front: "Ты идёшь вечером гулять в", back: "центр" },
+    { front: "на + дискотека",   back: "на дискотеку" },
+    { front: "к + врач",         back: "к врачу" },
+    { front: "к + родители",     back: "к родителям" },
+    { front: "к + друзья",       back: "к друзьям" },
+    { front: "в + кино",         back: "в кино" },
+    { front: "в + офис",         back: "в офис" },
+    { front: "в + магазин",      back: "в магазин" },
+    { front: "на + пляж",         back: "на пляж" },
+    { front: "на + почта",       back: "на почту" },
+    { front: "к + бабушка",      back: "к бабушке" },
 ];
 
 // ============================================================
