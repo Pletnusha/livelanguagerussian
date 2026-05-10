@@ -6,64 +6,64 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // PANEL 1 — public · D&D · mix tutti e tre i tipi
 // ============================================================
 const p1exercises = [
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы ходим {{1}}, ищем свежий мёд.", words: ["по рынка", "по рынком", "по рынку"], correctAnswers: { 1: "по рынку" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду {{1}}, меня ждут.", words: ["на работе", "в работу", "на работу"], correctAnswers: { 1: "на работу" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы едем {{1}}, там всё купили.", words: ["в магазин", "из магазин", "из магазина"], correctAnswers: { 1: "из магазина" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Она идёт {{1}} и слушает музыку.", words: ["по улицу", "в улицу", "по улице"], correctAnswers: { 1: "по улице" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "В субботу едем {{1}}.", words: ["к родителей", "к родителям", "на родителей"], correctAnswers: { 1: "к родителям" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Они вернулись {{1}}, очень устали.", words: ["из гостях", "из гостям", "из гостей"], correctAnswers: { 1: "из гостей" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Она идёт {{1}}, там хорошие цены.", words: ["в магазине", "на магазин", "в магазин"], correctAnswers: { 1: "в магазин" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Иду {{1}}, мы с ней поговорили.", words: ["от подругой", "к подруге", "от подруги"], correctAnswers: { 1: "от подруги" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Дети бегают {{1}} — никак не остановить.", words: ["в двор", "по двору", "по двор"], correctAnswers: { 1: "по двору" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Он идёт {{1}}, очень устал.", words: ["на работу", "с работы", "с работе"], correctAnswers: { 1: "с работы" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Каждое утро он ходит гулять {{1}} реки.",                                          words: ["через", "по", "вдоль"], correctAnswers: { 1: "вдоль" }, explanation: "«Вдоль» indica movimento lungo il bordo di un elemento naturale. «Вдоль» + genitivo: река → реки." },
+    { instruction: "Scegli la preposizione corretta.", text: "Ходим {{1}} магазинам, уже полдня ходим, мне надоело.",                           words: ["через", "по", "вдоль"], correctAnswers: { 1: "по" },    explanation: "«По» indica movimento all'interno di uno spazio o tra più luoghi. «По» + dativo plurale: магазины → магазинам." },
+    { instruction: "Scegli la preposizione corretta.", text: "Друзья идут {{1}} дороги — машин нет, тихо.",                                      words: ["через", "по", "вдоль"], correctAnswers: { 1: "вдоль" }, explanation: "«Вдоль» indica movimento parallelo al bordo di qualcosa. «Вдоль» + genitivo: дорога → дороги." },
+    { instruction: "Scegli la preposizione corretta.", text: "Туристы идут {{1}} центру и ищут кафе.",                                           words: ["через", "по", "вдоль"], correctAnswers: { 1: "по" },    explanation: "«По» indica movimento all'interno di un'area. «По» + dativo: центр → центру." },
+    { instruction: "Scegli la preposizione corretta.", text: "Мы ходим {{1}} рынку, ищем липовый мёд.",                                          words: ["через", "по", "вдоль"], correctAnswers: { 1: "по" },    explanation: "«По» indica movimento all'interno di uno spazio. «По» + dativo: рынок → рынку." },
+    { instruction: "Scegli la preposizione corretta.", text: "Иди {{1}} синего здания до перекрёстка.",                                          words: ["через", "по", "вдоль"], correctAnswers: { 1: "вдоль" }, explanation: "«Вдоль» indica movimento parallelo a un edificio. «Вдоль» + genitivo: синее здание → синего здания." },
+    { instruction: "Scegli la preposizione corretta.", text: "Она ходит {{1}} пляжу и плачет, потому что они с Димой поругались.",               words: ["через", "по", "вдоль"], correctAnswers: { 1: "по" },    explanation: "«По» indica movimento su una superficie aperta. «По» + dativo: пляж → пляжу." },
+    { instruction: "Scegli la preposizione corretta.", text: "Дима ходит {{1}} супермаркету и покупает продукты по списку.",                     words: ["через", "по", "вдоль"], correctAnswers: { 1: "по" },    explanation: "«По» indica movimento all'interno di uno spazio chiuso. «По» + dativo: супермаркет → супермаркету." },
+    { instruction: "Scegli la preposizione corretta.", text: "Иди {{1}} улицы до светофора, там повернёшь.",                                     words: ["через", "по", "вдоль"], correctAnswers: { 1: "вдоль" }, explanation: "«Вдоль» indica movimento lungo il bordo di una strada. «Вдоль» + genitivo: улица → улицы." },
+    { instruction: "Scegli la preposizione corretta.", text: "Идёт {{1}} моря и любуется закатом.",                                              words: ["через", "по", "вдоль"], correctAnswers: { 1: "вдоль" }, explanation: "«Вдоль» indica movimento lungo il bordo del mare. «Вдоль» + genitivo: море → моря." },
 ];
 
 // ============================================================
 // PANEL 5 — paid · D&D · solo moto a luogo
 // ============================================================
 const p5exercises = [
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы идём {{1}} сегодня вечером.", words: ["на концерта", "на концерте", "на концерт"], correctAnswers: { 1: "на концерт" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Она ходит {{1}} каждую неделю.", words: ["на выставки", "на выставках", "на выставкам"], correctAnswers: { 1: "на выставки" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Завтра утром мы идём {{1}}.", words: ["на пляже", "на пляж", "на пляжа"], correctAnswers: { 1: "на пляж" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Они всегда по утрам ходят {{1}}.", words: ["на пробежки", "на пробежку", "на пробежке"], correctAnswers: { 1: "на пробежку" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "В понедельник мы идём {{1}}.", words: ["на презентацией", "на презентации", "на презентацию"], correctAnswers: { 1: "на презентацию" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Он всегда ходит {{1}} по вторникам.", words: ["на лекциях", "на лекций", "на лекции"], correctAnswers: { 1: "на лекции" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Иду {{1}}, увидимся позже.", words: ["на тренировкой", "на тренировке", "на тренировку"], correctAnswers: { 1: "на тренировку" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вы идёте {{1}}?", words: ["на дня рождения", "на день рождения", "на дне рождения"], correctAnswers: { 1: "на день рождения" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "В воскресенье едем {{1}}.", words: ["к родителях", "к родителей", "к родителям"], correctAnswers: { 1: "к родителям" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты уже едешь {{1}}?", words: ["к нами", "к нам", "к нас"], correctAnswers: { 1: "к нам" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Ходим {{1}} магазинам, уже полдня ходим, мне надоело.",       words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Туристы идут {{1}} центру и ищут кафе.",                      words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Мы ходим {{1}} рынку, ищем липовый мёд.",                     words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Каждое утро он ходит гулять {{1}} реки.",                     words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Иди {{1}} улицы до светофора, там повернёшь.",                words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Они идут {{1}} тропинке к озеру.",                            words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} парку и слушает музыку.",                      words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Иди {{1}} двору до второго подъезда.",                        words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Катя и Дима ходят гулять {{1}} набережной каждый вечер.",    words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Лена идёт {{1}} моря и любуется закатом.",                   words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
 ];
 
 // ============================================================
 // PANEL 6 — paid · D&D · solo moto per luogo
 // ============================================================
 const p6exercises = [
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Гуляем {{1}} — красиво, тихо.", words: ["по центра", "по центром", "по центру"], correctAnswers: { 1: "по центру" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Он шёл {{1}} и думал о своём.", words: ["по дорогу", "по дороге", "по дорогой"], correctAnswers: { 1: "по дороге" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы весь день ходили {{1}} — ноги устали.", words: ["по города", "по городом", "по городу"], correctAnswers: { 1: "по городу" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Они шли {{1}} молча, час, не меньше.", words: ["по лесу", "по леса", "по лесом"], correctAnswers: { 1: "по лесу" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Она ходит {{1}} каждое утро.", words: ["по пляжем", "по пляжа", "по пляжу"], correctAnswers: { 1: "по пляжу" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Дети бегали {{1}} — не догнать.", words: ["по парка", "по парком", "по парку"], correctAnswers: { 1: "по парку" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы ходим {{1}} уже полчаса — ничего не купили.", words: ["по магазинам", "по магазинов", "по магазинах"], correctAnswers: { 1: "по магазинам" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Она толкает тележку {{1}} и смотрит в список.", words: ["по гипермаркетом", "по гипермаркету", "по гипермаркета"], correctAnswers: { 1: "по гипермаркету" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Иди {{1}} — там меньше машин.", words: ["по улицей", "по улице", "по улицу"], correctAnswers: { 1: "по улице" } },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Ходим {{1}} — нигде нет липового мёда.", words: ["по рынком", "по рынка", "по рынку"], correctAnswers: { 1: "по рынку" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Мы идём {{1}} городу и ищем где пообедать.",                   words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Каждое утро он ходит гулять {{1}} реки.",                      words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Группа туристов идёт {{1}} площади.",                          words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Они идут {{1}} тропинке к озеру.",                             words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Коля идёт {{1}} дороге домой и заходит купить продукты.",      words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Мы идём {{1}} канала в сторону Петроградки.",                  words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} берега и собирает ракушки.",                    words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Туристы ходят {{1}} центру в поисках скамейки и тени.",        words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Катя и Дима ходят гулять {{1}} набережной каждый вечер.",      words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Я никогда не хожу {{1}} кладбища.",                            words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
 ];
 
 // ============================================================
-// PANEL 2 — public · D&D · moto a luogo — forma del caso
+// PANEL 2 — public · Flashcard · moto per luogo — forma del caso
 // ============================================================
-const p2exercises = [
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Я иду в {{1}}, нужно купить хлеб.", words: ["магазине", "магазина", "магазин"], correctAnswers: { 1: "магазин" }, explanation: "в + accusativo → магазин (movimento verso un luogo)" },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Вечером едем к {{1}}.", words: ["другу", "друга", "другом"], correctAnswers: { 1: "другу" }, explanation: "к + dativo → другу" },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Она идёт на {{1}} в восемь утра.", words: ["работой", "работе", "работу"], correctAnswers: { 1: "работу" }, explanation: "на + accusativo → работу (movimento verso un luogo)" },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Она идёт к {{1}}, плохо себя чувствует.", words: ["врача", "врачу", "врачом"], correctAnswers: { 1: "врачу" }, explanation: "к + dativo → врачу" },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы идём в {{1}} сегодня вечером.", words: ["ресторан", "ресторане", "ресторана"], correctAnswers: { 1: "ресторан" }, explanation: "в + accusativo → ресторан (movimento verso un luogo)" },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Мы едем на {{1}} в выходные.", words: ["даче", "дачей", "дачу"], correctAnswers: { 1: "дачу" }, explanation: "на + accusativo → дачу (movimento verso un luogo)" },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "В воскресенье едем к {{1}}.", words: ["бабушки", "бабушке", "бабушкой"], correctAnswers: { 1: "бабушке" }, explanation: "к + dativo → бабушке" },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Они летят в {{1}} на каникулы.", words: ["Италии", "Италией", "Италию"], correctAnswers: { 1: "Италию" }, explanation: "в + accusativo → Италию (movimento verso un luogo)" },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Ты идёшь на {{1}} сегодня?", words: ["концерта", "концерт", "концерте"], correctAnswers: { 1: "концерт" }, explanation: "на + accusativo → концерт (movimento verso un luogo)" },
-    { instruction: "Completa la frase scegliendo la forma corretta", text: "Завтра едем к {{1}} на день рождения.", words: ["подругой", "подруги", "подруге"], correctAnswers: { 1: "подруге" }, explanation: "к + dativo → подруге" },
+const p2cards = [
+    { front: "по + рынок",          back: "по рынку",           explanation: "«Рынок» = mercato. «По» + dativo, 2a decl.: рынок → рынку." },
+    { front: "вдоль + река",        back: "вдоль реки",         explanation: "«Река» = fiume. «Вдоль» + genitivo, 1a decl.: река → реки." },
+    { front: "по + магазины",       back: "по магазинам",       explanation: "«Магазины» = negozi. «По» + dativo plurale: магазины → магазинам." },
+    { front: "вдоль + канал",       back: "вдоль канала",       explanation: "«Канал» = canale. «Вдоль» + genitivo, 2a decl.: канал → канала." },
+    { front: "по + тропинка",       back: "по тропинке",        explanation: "«Тропинка» = sentiero. «По» + dativo, 1a decl.: тропинка → тропинке." },
+    { front: "по + дом",            back: "по дому",            explanation: "«Дом» = casa. «По» + dativo, 2a decl.: дом → дому. Ходить по дому = camminare per casa (essere in ansia)." },
+    { front: "вдоль + озеро",       back: "вдоль озера",        explanation: "«Озеро» = lago. «Вдоль» + genitivo, 2a decl. neutro: озеро → озера." },
+    { front: "по + аллея",          back: "по аллее",           explanation: "«Аллея» = viale alberato. «По» + dativo, 1a decl.: аллея → аллее." },
+    { front: "вдоль + магазины",    back: "вдоль магазинов",    explanation: "«Магазины» = negozi. «Вдоль» + genitivo plurale: магазины → магазинов." },
+    { front: "вдоль + набережная",  back: "вдоль набережной",   explanation: "«Набережная» = lungofiume. «Вдоль» + genitivo, decl. aggettivale femm.: набережная → набережной." },
 ];
 
 // ============================================================
@@ -453,7 +453,7 @@ initPanelManager({
         'panel-cdm-01': () => new DragDropExercise({ rootId: 'ex-dragdrop-cdm-01', exercises: p1exercises }),
         'panel-cdm-05': () => new DragDropExercise({ rootId: 'ex-dragdrop-cdm-05', exercises: p5exercises }),
         'panel-cdm-06': () => new DragDropExercise({ rootId: 'ex-dragdrop-cdm-06', exercises: p6exercises }),
-        'panel-cdm-02': () => new DragDropExercise({ rootId: 'ex-dragdrop-cdm-02', exercises: p2exercises }),
+        'panel-cdm-02': () => new FlashcardExercise({ rootId: 'ex-flashcards-cdm-02', cards: p2cards }),
         'panel-cdm-07': () => new FlashcardExercise({ rootId: 'ex-flashcards-cdm-07', cards: p7cards, quizByPrep: true }),
         'panel-cdm-08': () => new FlashcardExercise({ rootId: 'ex-flashcards-cdm-08', cards: p8cards, quizByPrep: true }),
         'panel-cdm-03': () => new FlashcardExercise({ rootId: 'ex-flashcards-cdm-03', cards: p3cards, quizByPrep: true }),
