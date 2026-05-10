@@ -124,16 +124,16 @@ const p6exercises = [
 // PANEL 2 — public · Flashcard · Mix ИЗ / С / ОТ
 // ============================================================
 const p2cards = [
-    { front: "из + университет", back: "из университета", explanation: "2a declinazione" },
-    { front: "с + работа", back: "с работы", explanation: "1a declinazione" },
-    { front: "от + врач", back: "от врача", explanation: "2a declinazione" },
-    { front: "из + школа", back: "из школы", explanation: "1a declinazione" },
-    { front: "с + концерт", back: "с концерта", explanation: "2a declinazione" },
-    { front: "из + театр", back: "из театра", explanation: "2a declinazione" },
-    { front: "с + вокзал", back: "с вокзала", explanation: "2a declinazione" },
-    { front: "от + друзья", back: "от друзей", explanation: "plurale" },
-    { front: "из + дом", back: "из дома", explanation: "2a declinazione" },
-    { front: "с + остановка", back: "с остановки", explanation: "1a declinazione" },
+    { front: "из + университет", back: "из университета", explanation: "«Университет» = università. 2a declinazione → genitivo: университет → университета." },
+    { front: "с + работа",       back: "с работы",        explanation: "«Работа» = lavoro. 1a declinazione → genitivo: работа → работы." },
+    { front: "от + врач",        back: "от врача",         explanation: "«Врач» = medico. 2a declinazione → genitivo: врач → врача." },
+    { front: "из + школа",       back: "из школы",         explanation: "«Школа» = scuola. 1a declinazione → genitivo: школа → школы." },
+    { front: "с + концерт",      back: "с концерта",       explanation: "«Концерт» = concerto. 2a declinazione → genitivo: концерт → концерта." },
+    { front: "из + театр",       back: "из театра",        explanation: "«Театр» = teatro. 2a declinazione → genitivo: театр → театра." },
+    { front: "с + вокзал",       back: "с вокзала",        explanation: "«Вокзал» = stazione. 2a declinazione → genitivo: вокзал → вокзала." },
+    { front: "от + друзья",      back: "от друзей",        explanation: "«Друзья» = amici. Plurale → genitivo plurale: друзья → друзей." },
+    { front: "из + дом",         back: "из дома",          explanation: "«Дом» = casa. 2a declinazione → genitivo: дом → дома." },
+    { front: "с + остановка",    back: "с остановки",      explanation: "«Остановка» = fermata. 1a declinazione → genitivo: остановка → остановки." },
 ];
 
 // ============================================================
