@@ -163,42 +163,42 @@ function initPanel4Mal() {
     let currentCard = 0;
 
     const multipleChoiceData = [
-        { question: "Я иду ___ работу.",                          options: ["в", "на", "к"], answer: "на" },
-        { question: "Ты идёшь ___ концерт.",                      options: ["в", "на", "к"], answer: "на" },
-        { question: "Они всегда по утрам ходят ___ пробежку.",    options: ["в", "на", "к"], answer: "на" },
-        { question: "В выходные мы едем ___ дачу.",               options: ["в", "на", "к"], answer: "на" },
-        { question: "Андрей ходит ___ спортзал.",                 options: ["в", "на", "к"], answer: "в" },
-        { question: "Они идут ___ аптеку.",                       options: ["в", "на", "к"], answer: "в" },
-        { question: "Вы часто ходите ___ кино?",                  options: ["в", "на", "к"], answer: "в" },
-        { question: "Ты идёшь сегодня вечером ___ Кате.",         options: ["в", "на", "к"], answer: "к" },
-        { question: "В воскресенье едем ___ родителям.",          options: ["в", "на", "к"], answer: "к" },
-        { question: "Кот заболел, мы едем ___ ветеринару.",       options: ["в", "на", "к"], answer: "к" },
+        { question: "Я иду ___ работу.",                        options: ["в", "на", "к"], answer: "на" },
+        { question: "Ты идёшь ___ концерт.",                    options: ["в", "на", "к"], answer: "на" },
+        { question: "Они по утрам ходят ___ пробежку.",         options: ["в", "на", "к"], answer: "на" },
+        { question: "Он идёт ___ университет.",                 options: ["в", "на", "к"], answer: "в" },
+        { question: "Андрей ходит ___ спортзал.",               options: ["в", "на", "к"], answer: "в" },
+        { question: "Вы часто ходите ___ кино?",                options: ["в", "на", "к"], answer: "в" },
+        { question: "Мы едем ___ вокзал.",                      options: ["в", "на", "к"], answer: "на" },
+        { question: "Ты идёшь сегодня вечером ___ Кате.",       options: ["в", "на", "к"], answer: "к" },
+        { question: "В воскресенье едем ___ родителям.",        options: ["в", "на", "к"], answer: "к" },
+        { question: "Кот заболел, мы едем ___ ветеринару.",     options: ["в", "на", "к"], answer: "к" },
     ];
 
     const matchPairs = [
         { left: "Вы идёте утром на",               right: "пляж" },
         { left: "Она ходит на",                    right: "выставки" },
-        { left: "В понедельник мы идём на",         right: "презентацию" },
+        { left: "В понедельник мы идём на",        right: "презентацию" },
         { left: "Два-три раза в неделю хожу на",   right: "тренировку" },
         { left: "Тебе купить что-нибудь? Я иду в", right: "магазин" },
         { left: "В субботу идём в",                right: "ресторан" },
         { left: "Весной они летят в",              right: "Египет" },
-        { left: "Мы в пятницу идём в гости к",     right: "друзьям" },
+        { left: "Мы в пятницу идём в гости к",    right: "друзьям" },
         { left: "Когда ты идёшь к",               right: "врачу" },
-        { left: "После лекций я иду к",            right: "профессору" },
+        { left: "Коля едет к",                    right: "сестре" },
     ];
 
     const quizData = [
-        { id: "mal-001", promptPrefix: "Он всегда ходит",              promptSuffix: "лекции.",         answers: ["на"] },
-        { id: "mal-002", promptPrefix: "Вы идёте",                     promptSuffix: "день рождения?",  answers: ["на"] },
-        { id: "mal-003", promptPrefix: "Я всегда хожу с бабушкой",     promptSuffix: "банк.",           answers: ["в"] },
-        { id: "mal-004", promptPrefix: "По воскресеньям мы ездим",     promptSuffix: "баню.",           answers: ["в"] },
-        { id: "mal-005", promptPrefix: "Он всегда ходит выпить кофе",  promptSuffix: "этот бар.",       answers: ["в"] },
-        { id: "mal-006", promptPrefix: "Ты идёшь вечером гулять",      promptSuffix: "центр?",          answers: ["в"] },
-        { id: "mal-007", promptPrefix: "Мы летим в Париж",             promptSuffix: "родственникам.",  answers: ["к"] },
-        { id: "mal-008", promptPrefix: "Ты уже едешь",                 promptSuffix: "нам?",            answers: ["к"] },
-        { id: "mal-009", promptPrefix: "Мы едем в гости",              promptSuffix: "друзьям.",        answers: ["к"] },
-        { id: "mal-010", promptPrefix: "Когда ты идёшь",               promptSuffix: "стоматологу?",    answers: ["к"] },
+        { id: "mal-001", promptPrefix: "Он всегда ходит",            promptSuffix: "(лекция).",        answers: ["на лекции"] },
+        { id: "mal-002", promptPrefix: "Вы идёте",                   promptSuffix: "(день рождения)?", answers: ["на день рождения"] },
+        { id: "mal-003", promptPrefix: "Я всегда хожу с бабушкой",   promptSuffix: "(банк).",          answers: ["в банк"] },
+        { id: "mal-004", promptPrefix: "Он ходит три раза в неделю", promptSuffix: "(бассейн).",       answers: ["в бассейн"] },
+        { id: "mal-005", promptPrefix: "Дети идут",                  promptSuffix: "(школа).",         answers: ["в школу"] },
+        { id: "mal-006", promptPrefix: "Мы идём",                    promptSuffix: "(театр).",         answers: ["в театр"] },
+        { id: "mal-007", promptPrefix: "По пятницам они ходят",      promptSuffix: "(йога).",          answers: ["на йогу"] },
+        { id: "mal-008", promptPrefix: "Ты идёшь",                   promptSuffix: "(рынок)?",         answers: ["на рынок"] },
+        { id: "mal-009", promptPrefix: "Болельщики идут",            promptSuffix: "(стадион).",       answers: ["на стадион"] },
+        { id: "mal-010", promptPrefix: "Она всегда ходит",           promptSuffix: "(дискотека).",     answers: ["на дискотеку"] },
     ];
 
     const MC_END    = multipleChoiceData.length;
@@ -329,7 +329,7 @@ function initPanel4Mal() {
                 const item = quizData[i - MATCH_END];
                 card.innerHTML = `
                     <h3 class="quiz-title">Scrivi</h3>
-                    <p class="quiz-instruction">Scrivete la preposizione corretta: в / на / к</p>
+                    <p class="quiz-instruction">Scrivi la forma corretta: preposizione + caso (es. в школу)</p>
                     <div class="quiz-item" data-id="${item.id}">
                         <div class="quiz-prompt">${item.promptPrefix} <input type="text" class="quiz-input" data-index="${i - MATCH_END}"> ${item.promptSuffix}</div>
                         <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">Проверить</button></div>
