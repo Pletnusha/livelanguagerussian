@@ -3,308 +3,156 @@ import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// MOTO PER LUOGO — ЧЕРЕЗ + accusativo · ПО + dativo
+// MOTO PER LUOGO — ПО + dativo · ВДОЛЬ + genitivo
 // Panel prefix: mpl
 // ============================================================
 
 // ============================================================
-// PANEL 1 — public · Drag & Drop · Mix ЧЕРЕЗ / ПО
+// PANEL 1 — public · D&D · mix ПО / ВДОЛЬ
 // ============================================================
 const p1exercises = [
-    {
-        instruction: "Scegli la preposizione corretta.",
-        text: "Мы шли {{1}} лесу три часа — дороги не было.",
-        words: ["по", "через", "в"],
-        correctAnswers: { 1: "по" }
-        // по лесу = camminare nel bosco (movimento interno/diffuso)
-    },
-    {
-        instruction: "Scegli la preposizione corretta.",
-        text: "Мы прошли {{1}} лес за час и вышли на другую сторону.",
-        words: ["через", "по", "в"],
-        correctAnswers: { 1: "через" }
-        // через лес = attraversare il bosco (da un lato all'altro)
-    },
-    {
-        instruction: "Scegli la preposizione corretta.",
-        text: "Она гуляла {{1}} парку и слушала музыку.",
-        words: ["по", "через", "в"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta.",
-        text: "Он перебежал {{1}} дорогу на красный свет.",
-        words: ["через", "по", "на"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta.",
-        text: "Мы ехали {{1}} городу два часа в пробке.",
-        words: ["по", "через", "в"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta.",
-        text: "Поезд прошёл {{1}} тоннель за три минуты.",
-        words: ["через", "по", "в"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta.",
-        text: "Они шли {{1}} берегу реки и разговаривали.",
-        words: ["по", "через", "у"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta.",
-        text: "Мы пересекли {{1}} границу ночью.",
-        words: ["через", "по", "на"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta.",
-        text: "Он шёл {{1}} коридору к выходу.",
-        words: ["по", "через", "в"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta.",
-        text: "Машина медленно проехала {{1}} мост.",
-        words: ["через", "по", "на"],
-        correctAnswers: { 1: "через" }
-    },
+    { instruction: "Scegli la preposizione corretta.", text: "Каждое утро он ходит гулять {{1}} реки.",                                          words: ["через", "по", "вдоль"], correctAnswers: { 1: "вдоль" }, explanation: "«Вдоль» indica movimento lungo il bordo di un elemento naturale. «Вдоль» + genitivo: река → реки." },
+    { instruction: "Scegli la preposizione corretta.", text: "Ходим {{1}} магазинам, уже полдня ходим, мне надоело.",                           words: ["через", "по", "вдоль"], correctAnswers: { 1: "по" },    explanation: "«По» indica movimento all'interno di uno spazio o tra più luoghi. «По» + dativo plurale: магазины → магазинам." },
+    { instruction: "Scegli la preposizione corretta.", text: "Друзья идут {{1}} дороги — машин нет, тихо.",                                      words: ["через", "по", "вдоль"], correctAnswers: { 1: "вдоль" }, explanation: "«Вдоль» indica movimento parallelo al bordo di qualcosa. «Вдоль» + genitivo: дорога → дороги." },
+    { instruction: "Scegli la preposizione corretta.", text: "Туристы идут {{1}} центру и ищут кафе.",                                           words: ["через", "по", "вдоль"], correctAnswers: { 1: "по" },    explanation: "«По» indica movimento all'interno di un'area. «По» + dativo: центр → центру." },
+    { instruction: "Scegli la preposizione corretta.", text: "Мы ходим {{1}} рынку, ищем липовый мёд.",                                          words: ["через", "по", "вдоль"], correctAnswers: { 1: "по" },    explanation: "«По» indica movimento all'interno di uno spazio. «По» + dativo: рынок → рынку." },
+    { instruction: "Scegli la preposizione corretta.", text: "Иди {{1}} синего здания до перекрёстка.",                                          words: ["через", "по", "вдоль"], correctAnswers: { 1: "вдоль" }, explanation: "«Вдоль» indica movimento parallelo a un edificio. «Вдоль» + genitivo: синее здание → синего здания." },
+    { instruction: "Scegli la preposizione corretta.", text: "Она ходит {{1}} пляжу и плачет, потому что они с Димой поругались.",               words: ["через", "по", "вдоль"], correctAnswers: { 1: "по" },    explanation: "«По» indica movimento su una superficie aperta. «По» + dativo: пляж → пляжу." },
+    { instruction: "Scegli la preposizione corretta.", text: "Дима ходит {{1}} супермаркету и покупает продукты по списку.",                     words: ["через", "по", "вдоль"], correctAnswers: { 1: "по" },    explanation: "«По» indica movimento all'interno di uno spazio chiuso. «По» + dativo: супермаркет → супермаркету." },
+    { instruction: "Scegli la preposizione corretta.", text: "Иди {{1}} улицы до светофора, там повернёшь.",                                     words: ["через", "по", "вдоль"], correctAnswers: { 1: "вдоль" }, explanation: "«Вдоль» indica movimento lungo il bordo di una strada. «Вдоль» + genitivo: улица → улицы." },
+    { instruction: "Scegli la preposizione corretta.", text: "Идёт {{1}} моря и любуется закатом.",                                              words: ["через", "по", "вдоль"], correctAnswers: { 1: "вдоль" }, explanation: "«Вдоль» indica movimento lungo il bordo del mare. «Вдоль» + genitivo: море → моря." },
 ];
 
 // ============================================================
-// PANEL 5 — student · Drag & Drop · Solo ЧЕРЕЗ
+// PANEL 5 — paid · D&D · solo по
 // ============================================================
 const p5exercises = [
-    {
-        instruction: "Scegli la preposizione corretta (attraversare → ЧЕРЕЗ).",
-        text: "Мы прошли {{1}} весь парк насквозь.",
-        words: ["через", "по", "в"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (attraversare → ЧЕРЕЗ).",
-        text: "Он перешёл {{1}} дорогу у светофора.",
-        words: ["через", "по", "на"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (attraversare → ЧЕРЕЗ).",
-        text: "Поезд едет {{1}} горы в длинном тоннеле.",
-        words: ["через", "по", "в"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (attraversare → ЧЕРЕЗ).",
-        text: "Мы переплыли {{1}} реку за двадцать минут.",
-        words: ["через", "по", "на"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (attraversare → ЧЕРЕЗ).",
-        text: "Она прошла {{1}} толпу и добралась до выхода.",
-        words: ["через", "по", "в"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (attraversare → ЧЕРЕЗ).",
-        text: "Мы въехали {{1}} открытые ворота во двор.",
-        words: ["через", "по", "на"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (attraversare → ЧЕРЕЗ).",
-        text: "Они пересекли {{1}} границу ночью без остановок.",
-        words: ["через", "по", "на"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (attraversare → ЧЕРЕЗ).",
-        text: "Свет проходит {{1}} стекло и освещает комнату.",
-        words: ["через", "по", "в"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (attraversare → ЧЕРЕЗ).",
-        text: "Мы прошли {{1}} весь город пешком.",
-        words: ["через", "по", "в"],
-        correctAnswers: { 1: "через" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (attraversare → ЧЕРЕЗ).",
-        text: "Он перепрыгнул {{1}} забор одним прыжком.",
-        words: ["через", "по", "над"],
-        correctAnswers: { 1: "через" }
-    },
+    { instruction: "Scegli la preposizione corretta.", text: "Ходим {{1}} магазинам, уже полдня ходим, мне надоело.",       words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Туристы идут {{1}} центру и ищут кафе.",                      words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Мы ходим {{1}} рынку, ищем липовый мёд.",                     words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Каждое утро он ходит гулять {{1}} реки.",                     words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Иди {{1}} улицы до светофора, там повернёшь.",                words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Они идут {{1}} тропинке к озеру.",                            words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} парку и слушает музыку.",                      words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Иди {{1}} двору до второго подъезда.",                        words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Катя и Дима ходят гулять {{1}} набережной каждый вечер.",    words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Лена идёт {{1}} моря и любуется закатом.",                   words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
 ];
 
 // ============================================================
-// PANEL 6 — paid · Drag & Drop · Solo ПО
+// PANEL 6 — paid · D&D · solo вдоль
 // ============================================================
 const p6exercises = [
-    {
-        instruction: "Scegli la preposizione corretta (lungo/dentro → ПО).",
-        text: "Мы гуляли {{1}} парку весь вечер.",
-        words: ["по", "через", "в"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (lungo/dentro → ПО).",
-        text: "Они шли {{1}} улице и громко смеялись.",
-        words: ["по", "через", "на"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (lungo/dentro → ПО).",
-        text: "Дети бегали {{1}} всему двору.",
-        words: ["по", "через", "в"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (lungo/dentro → ПО).",
-        text: "Мы ехали {{1}} набережной и любовались закатом.",
-        words: ["по", "через", "на"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (lungo/dentro → ПО).",
-        text: "Он медленно шёл {{1}} коридору.",
-        words: ["по", "через", "в"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (lungo/dentro → ПО).",
-        text: "Туристы ходили {{1}} музею три часа.",
-        words: ["по", "через", "в"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (lungo/dentro → ПО).",
-        text: "Мы плыли {{1}} реке на лодке.",
-        words: ["по", "через", "на"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (lungo/dentro → ПО).",
-        text: "Она прогуливалась {{1}} берегу моря.",
-        words: ["по", "через", "у"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (lungo/dentro → ПО).",
-        text: "Мы ехали {{1}} шоссе без остановок.",
-        words: ["по", "через", "на"],
-        correctAnswers: { 1: "по" }
-    },
-    {
-        instruction: "Scegli la preposizione corretta (lungo/dentro → ПО).",
-        text: "Дети ходят {{1}} всему дому и ищут кота.",
-        words: ["по", "через", "в"],
-        correctAnswers: { 1: "по" }
-    },
+    { instruction: "Scegli la preposizione corretta.", text: "Мы идём {{1}} городу и ищем где пообедать.",                   words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Каждое утро он ходит гулять {{1}} реки.",                      words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Группа туристов идёт {{1}} площади.",                          words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Они идут {{1}} тропинке к озеру.",                             words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Коля идёт {{1}} дороге домой и заходит купить продукты.",      words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Мы идём {{1}} канала в сторону Петроградки.",                  words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} берега и собирает ракушки.",                    words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Туристы ходят {{1}} центру в поисках скамейки и тени.",        words: ["по", "вдоль"], correctAnswers: { 1: "по" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Катя и Дима ходят гулять {{1}} набережной каждый вечер.",      words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Я никогда не хожу {{1}} кладбища.",                            words: ["по", "вдоль"], correctAnswers: { 1: "вдоль" } },
 ];
 
 // ============================================================
-// PANEL 2 — public · Flashcard · Mix ЧЕРЕЗ / ПО
+// PANEL 2 — public · Flashcard · forma del caso
 // ============================================================
 const p2cards = [
-    { front: "через мост", back: "attraverso il ponte (ЧЕРЕЗ + accusativo)" },
-    { front: "по улице", back: "lungo la strada (ПО + dativo)" },
-    { front: "через лес", back: "attraversare il bosco da parte a parte" },
-    { front: "по лесу", back: "camminare nel bosco (senza meta precisa)" },
-    { front: "через границу", back: "attraversare il confine" },
-    { front: "по берегу", back: "lungo la riva" },
-    { front: "через тоннель", back: "attraverso il tunnel" },
-    { front: "по коридору", back: "lungo il corridoio" },
-    { front: "через дорогу", back: "attraversare la strada" },
-    { front: "по городу", back: "per la città (girare, spostarsi)" },
+    { front: "по + рынок",          back: "по рынку",           explanation: "«Рынок» = mercato. «По» + dativo, 2a decl.: рынок → рынку." },
+    { front: "вдоль + река",        back: "вдоль реки",         explanation: "«Река» = fiume. «Вдоль» + genitivo, 1a decl.: река → реки." },
+    { front: "по + магазины",       back: "по магазинам",       explanation: "«Магазины» = negozi. «По» + dativo plurale: магазины → магазинам." },
+    { front: "вдоль + канал",       back: "вдоль канала",       explanation: "«Канал» = canale. «Вдоль» + genitivo, 2a decl.: канал → канала." },
+    { front: "по + тропинка",       back: "по тропинке",        explanation: "«Тропинка» = sentiero. «По» + dativo, 1a decl.: тропинка → тропинке." },
+    { front: "по + дом",            back: "по дому",            explanation: "«Дом» = casa. «По» + dativo, 2a decl.: дом → дому. Ходить по дому = camminare per casa (essere in ansia)." },
+    { front: "вдоль + озеро",       back: "вдоль озера",        explanation: "«Озеро» = lago. «Вдоль» + genitivo, 2a decl. neutro: озеро → озера." },
+    { front: "по + аллея",          back: "по аллее",           explanation: "«Аллея» = viale alberato. «По» + dativo, 1a decl.: аллея → аллее." },
+    { front: "вдоль + магазины",    back: "вдоль магазинов",    explanation: "«Магазины» = negozi. «Вдоль» + genitivo plurale: магазины → магазинов." },
+    { front: "вдоль + набережная",  back: "вдоль набережной",   explanation: "«Набережная» = lungofiume. «Вдоль» + genitivo, decl. aggettivale femm.: набережная → набережной." },
 ];
 
 // ============================================================
-// PANEL 3 — public · Flashcard · Contrasto ЧЕРЕЗ vs ПО
+// PANEL 3 — public · Flashcard · con spiegazioni
 // ============================================================
 const p3cards = [
-    { front: "ЧЕРЕЗ = ?", back: "attraversare da un lato all'altro (+ accusativo)" },
-    { front: "ПО = ?", back: "muoversi lungo o all'interno di (+ dativo)" },
-    { front: "через лес", back: "attraversare il bosco (entrare da un lato, uscire dall'altro)" },
-    { front: "по лесу", back: "passeggiare nel bosco (movimento interno, non direzionale)" },
-    { front: "через парк", back: "tagliare il parco (percorso diretto da A a B)" },
-    { front: "по парку", back: "girare per il parco (passeggio, esplorazione)" },
-    { front: "через реку", back: "attraversare il fiume (da sponda a sponda)" },
-    { front: "по реке", back: "lungo il fiume (navigare, camminare sulla riva)" },
-    { front: "через город", back: "attraversare la città (da un capo all'altro)" },
-    { front: "по городу", back: "per la città (girare, spostarsi senza meta fissa)" },
+    { front: "Мы ходим ___ (рынок), ищем липовый мёд.",                                          back: "Мы ходим по рынку, ищем липовый мёд.",                                          explanation: "«Рынок» = mercato. «По» + dativo, 2a decl.: рынок → рынку." },
+    { front: "Друзья идут ___ (дорога) — машин нет, тихо.",                                      back: "Друзья идут вдоль дороги — машин нет, тихо.",                                      explanation: "«Дорога» = strada. «Вдоль» + genitivo, 1a decl.: дорога → дороги." },
+    { front: "Лена и Антон идут ___ (тропинка) к озеру.",                                        back: "Лена и Антон идут по тропинке к озеру.",                                        explanation: "«Тропинка» = sentiero. «По» + dativo, 1a decl.: тропинка → тропинке." },
+    { front: "Туристы идут ___ (канал) в сторону центра.",                                       back: "Туристы идут вдоль канала в сторону центра.",                                       explanation: "«Канал» = canale. «Вдоль» + genitivo, 2a decl.: канал → канала." },
+    { front: "Лена идёт ___ (море) и любуется закатом.",                                         back: "Лена идёт вдоль моря и любуется закатом.",                                         explanation: "«Море» = mare. «Вдоль» + genitivo, 2a decl. neutro: море → моря." },
+    { front: "Подруги ходят ___ (магазины) каждые выходные.",                                    back: "Подруги ходят по магазинам каждые выходные.",                                    explanation: "«Магазины» = negozi. «По» + dativo plurale: магазины → магазинам." },
+    { front: "Дети с родителями идут ___ (набережная) и едят мороженое.",                        back: "Дети с родителями идут по набережной и едят мороженое.",                        explanation: "«Набережная» = lungofiume/lungomare. «По» + dativo, decl. aggettivale femm.: набережная → набережной." },
+    { front: "Посетители ботанического сада ходят ___ (оранжерея) и любуются орхидеями.",       back: "Посетители ботанического сада ходят по оранжерее и любуются орхидеями.",       explanation: "«Оранжерея» = serra. «По» + dativo, 1a decl.: оранжерея → оранжерее." },
+    { front: "Саша любит ходить летом ___ (ручей).",                                             back: "Саша любит ходить летом вдоль ручья.",                                             explanation: "«Ручей» = ruscello. «Вдоль» + genitivo, 2a decl.: ручей → ручья." },
+    { front: "Старик ходит ___ (пруд) и проверяет удочки.",                                      back: "Старик ходит вдоль пруда и проверяет удочки.",                                      explanation: "«Пруд» = stagno/laghetto. «Вдоль» + genitivo, 2a decl.: пруд → пруда." },
 ];
 
 // ============================================================
-// PANEL 7 — student · Flashcard · ЧЕРЕЗ + accusativo
+// PANEL 7 — paid · Flashcard · по/вдоль
 // ============================================================
 const p7cards = [
-    { front: "через + лес", back: "через лес" },
-    { front: "через + мост", back: "через мост" },
-    { front: "через + дорога", back: "через дорогу" },
-    { front: "через + площадь", back: "через площадь" },
-    { front: "через + тоннель", back: "через тоннель" },
-    { front: "через + граница", back: "через границу" },
-    { front: "через + река", back: "через реку" },
-    { front: "через + двор", back: "через двор" },
-    { front: "через + город", back: "через город" },
-    { front: "через + парк", back: "через парк" },
+    { front: "Она идёт ___ (парк) и слушает музыку.",                    back: "Она идёт по парку и слушает музыку." },
+    { front: "Дима ходит ___ (супермаркет) и покупает продукты.",        back: "Дима ходит по супермаркету и покупает продукты." },
+    { front: "Группа туристов идёт ___ (площадь).",                      back: "Группа туристов идёт по площади." },
+    { front: "Она идёт ___ (берег) и собирает ракушки.",                 back: "Она идёт вдоль берега и собирает ракушки." },
+    { front: "Друзья идут ___ (дорога) — машин нет, тихо.",              back: "Друзья идут вдоль дороги — машин нет, тихо." },
+    { front: "Они идут ___ (набережная).",                               back: "Они идут вдоль набережной." },
+    { front: "Катя ходит ___ (квартира), не может успокоиться.",         back: "Катя ходит по квартире, не может успокоиться." },
+    { front: "Он идёт ___ (коридор) в конец здания.",                   back: "Он идёт по коридору в конец здания." },
+    { front: "Мы идём ___ (поезд) и ищем свой вагон.",                  back: "Мы идём вдоль поезда и ищем свой вагон." },
+    { front: "Они идут ___ (аллея) старинного парка.",                   back: "Они идут вдоль аллеи старинного парка." },
 ];
 
 // ============================================================
-// PANEL 8 — paid · Flashcard · ПО + dativo
+// PANEL 8 — paid · Flashcard · по/вдоль
 // ============================================================
 const p8cards = [
-    { front: "по + улица", back: "по улице" },
-    { front: "по + парк", back: "по парку" },
-    { front: "по + лес", back: "по лесу" },
-    { front: "по + берег", back: "по берегу" },
-    { front: "по + город", back: "по городу" },
-    { front: "по + коридор", back: "по коридору" },
-    { front: "по + набережная", back: "по набережной" },
-    { front: "по + горы", back: "по горам" },
-    { front: "по + дорога", back: "по дороге" },
-    { front: "по + поле", back: "по полю" },
+    { front: "Иди ___ (двор) до второго подъезда.",                          back: "Иди по двору до второго подъезда." },
+    { front: "Лена и Миша идут ___ (тропинка) к озеру.",                     back: "Лена и Миша идут по тропинке к озеру." },
+    { front: "Мы идём ___ (канал) в сторону Петроградки.",                   back: "Мы идём вдоль канала в сторону Петроградки." },
+    { front: "Иди ___ (улица) до светофора, там повернёшь.",                 back: "Иди вдоль улицы до светофора, там повернёшь." },
+    { front: "Я никогда не хожу ___ (кладбище).",                            back: "Я никогда не хожу вдоль кладбища." },
+    { front: "Маша и Коля ходят ___ (ярмарка) и ищут подарки.",              back: "Маша и Коля ходят по ярмарке и ищут подарки." },
+    { front: "Нужно подняться ___ (лестница) на третий этаж.",               back: "Нужно подняться по лестнице на третий этаж." },
+    { front: "Школьники ходят ___ (музей) и слушают экскурсовода.",          back: "Школьники ходят по музею и слушают экскурсовода." },
+    { front: "Антон идёт ___ (стена) к выходу.",                             back: "Антон идёт вдоль стены к выходу." },
+    { front: "Она идёт ___ (забор) и ищет вход.",                            back: "Она идёт вдоль забора и ищет вход." },
 ];
 
 // ============================================================
-// PANEL 9 — student · Flashcard · Consolidamento mix
+// PANEL 9 — paid · Flashcard · по/вдоль
 // ============================================================
 const p9cards = [
-    { front: "Он прошёл через мост", back: "attraversare il ponte (ЧЕРЕЗ)" },
-    { front: "Мы шли по мосту", back: "camminare sul ponte (ПО)" },
-    { front: "Прошли через лес", back: "traversato il bosco (da parte a parte)" },
-    { front: "Гуляли по лесу", back: "passeggiato nel bosco (wandering)" },
-    { front: "Проехали через город", back: "attraversato la città (in transito)" },
-    { front: "Ехали по городу", back: "girato per la città (spostandosi)" },
-    { front: "Переплыли через реку", back: "attraversato il fiume a nuoto" },
-    { front: "Плыли по реке", back: "navigato lungo il fiume" },
-    { front: "Перебежал через дорогу", back: "attraversato di corsa la strada" },
-    { front: "Бежал по дороге", back: "correva lungo la strada" },
+    { front: "Нина каждое утро ходит ___ (парк), выгуливает собаку (portare a spasso il cane).",                       back: "Нина каждое утро ходит по парку, выгуливает собаку." },
+    { front: "Маша и Коля ходят ___ (рождественский базар), ищут подарки родителям (mercatino di Natale).",            back: "Маша и Коля ходят по рождественскому базару, ищут подарки родителям." },
+    { front: "Алина идёт ___ (берег моря) и собирает ракушки.",                                                         back: "Алина идёт вдоль берега моря и собирает ракушки." },
+    { front: "Саша никогда не ходит ___ (кладбище).",                                                                   back: "Саша никогда не ходит вдоль кладбища." },
+    { front: "Они идут ___ (аллея) старинного парка.",                                                                  back: "Они идут вдоль аллеи старинного парка." },
+    { front: "Студенты художественного училища ходят ___ (галерея) и делают наброски с картин (наброски = schizzi).",  back: "Студенты художественного училища ходят по галерее и делают наброски с картин." },
+    { front: "Лена ходит домой ___ (маршрут).",                                                                         back: "Лена ходит домой по одному и тому же маршруту." },
+    { front: "Они ходят уже час ___ (район), не могут найти дом Кати (район = quartiere).",                            back: "Они ходят уже час по району, не могут найти дом Кати." },
+    { front: "Миша и Катя идут ___ (поле) и смотрят на подсолнухи.",                                                   back: "Миша и Катя идут вдоль поля и смотрят на подсолнухи." },
+    { front: "Кот ходит ___ (изгородь), хочет залезть в сад соседа (изгородь = siepe).",                              back: "Кот ходит вдоль изгороди, хочет залезть в сад соседа." },
 ];
 
 // ============================================================
-// PANEL 10 — paid · Flashcard · Consolidamento avanzato
+// PANEL 10 — paid · Flashcard · по/вдоль
 // ============================================================
 const p10cards = [
-    { front: "Поезд едет через тоннель", back: "ЧЕРЕЗ: passa attraverso il tunnel" },
-    { front: "Едем по шоссе", back: "ПО: viaggiamo lungo l'autostrada" },
-    { front: "Мы прошли через границу", back: "ЧЕРЕЗ: abbiamo attraversato il confine" },
-    { front: "Туристы ходили по музею", back: "ПО: i turisti giravano per il museo" },
-    { front: "Перепрыгнул через забор", back: "ЧЕРЕЗ: saltato oltre la recinzione" },
-    { front: "Дети бегают по двору", back: "ПО: i bambini corrono nel cortile" },
-    { front: "Свет идёт через стекло", back: "ЧЕРЕЗ: la luce passa attraverso il vetro" },
-    { front: "Мы плыли по озеру", back: "ПО: navigavamo sul lago" },
-    { front: "Прошли через весь парк", back: "ЧЕРЕЗ: attraversato tutto il parco" },
-    { front: "Гуляли по набережной", back: "ПО: passeggiata lungo il lungofiume" },
+    { front: "Нужно подняться ___ (лестница) на третий этаж.",                                                    back: "Нужно подняться по лестнице на третий этаж." },
+    { front: "Группа туристов идёт ___ (площадь).",                                                               back: "Группа туристов идёт по площади." },
+    { front: "Она идёт ___ (забор) и ищет вход.",                                                                 back: "Она идёт вдоль забора и ищет вход." },
+    { front: "Они идут ___ (аллея) старинного парка.",                                                            back: "Они идут вдоль аллеи старинного парка." },
+    { front: "Лена ходит домой ___ (маршрут).",                                                                   back: "Лена ходит домой по одному и тому же маршруту." },
+    { front: "Гости ходят ___ (зал) и пытаются найти знакомых (зал = sala).",                                    back: "Гости ходят по залу и пытаются найти знакомых." },
+    { front: "Мы ходили ___ (музеи) целый день.",                                                                 back: "Мы ходили по музеям целый день." },
+    { front: "Гостям можно ходить ___ (виноградники), любоваться природой (виноградники = vigneti).",            back: "Гостям можно ходить вдоль виноградников, любоваться природой." },
+    { front: "Лена и Антон идут ___ (пристань), любуются яхтами (пристань = molo).",                             back: "Лена и Антон идут вдоль пристани, любуются яхтами." },
+    { front: "Рыбаки ходят ___ (пристань) туда-сюда, переносят свежую рыбу к машинам (пристань = molo).",       back: "Рыбаки ходят по пристани туда-сюда, переносят свежую рыбу к машинам." },
 ];
 
 // ============================================================
-// PANEL 4 — public · Mixed Quiz (MC + Match + Write)
+// PANEL 4 — public · Quiz · MC + Match + Write
 // ============================================================
 function initPanel4Mpl() {
     const panel = document.getElementById('panel-mpl-04');
@@ -318,78 +166,82 @@ function initPanel4Mpl() {
     let currentCard = 0;
 
     const multipleChoiceData = [
-        { question: "Мы шли ___ лесу три часа — дороги не было.", options: ["по", "через", "в"], answer: "по" },
-        { question: "Мы прошли ___ лес за час и вышли на другую сторону.", options: ["через", "по", "в"], answer: "через" },
-        { question: "Она гуляла ___ парку и слушала музыку.", options: ["по", "через", "в"], answer: "по" },
-        { question: "Он перебежал ___ дорогу на красный свет.", options: ["через", "по", "на"], answer: "через" },
-        { question: "Мы ехали ___ городу два часа в пробке.", options: ["по", "через", "в"], answer: "по" },
-        { question: "Поезд прошёл ___ тоннель за три минуты.", options: ["через", "по", "в"], answer: "через" },
-        { question: "Они шли ___ берегу реки и разговаривали.", options: ["по", "через", "у"], answer: "по" },
-        { question: "Мы пересекли ___ границу ночью.", options: ["через", "по", "на"], answer: "через" },
-        { question: "Он шёл ___ коридору к выходу.", options: ["по", "через", "в"], answer: "по" },
-        { question: "Машина медленно проехала ___ мост.", options: ["через", "по", "на"], answer: "через" },
+        { question: "Нина ходит ___ парку и выгуливает собаку.",              options: ["по", "вдоль"], answer: "по" },
+        { question: "Алина идёт ___ берега моря и собирает ракушки.",         options: ["по", "вдоль"], answer: "вдоль" },
+        { question: "Школьники ходят ___ музею и слушают экскурсовода.",      options: ["по", "вдоль"], answer: "по" },
+        { question: "Старик ходит ___ пруда и проверяет удочки.",             options: ["по", "вдоль"], answer: "вдоль" },
+        { question: "Подруги ходят ___ магазинам каждые выходные.",           options: ["по", "вдоль"], answer: "по" },
+        { question: "Мы идём ___ канала в сторону Петроградки.",              options: ["по", "вдоль"], answer: "вдоль" },
+        { question: "Гости ходят ___ залу и пытаются найти знакомых.",        options: ["по", "вдоль"], answer: "по" },
+        { question: "Туристы идут ___ виноградников и фотографируют пейзаж.", options: ["по", "вдоль"], answer: "вдоль" },
+        { question: "Катя ходит ___ квартире, не может успокоиться.",         options: ["по", "вдоль"], answer: "по" },
+        { question: "Рыбаки ходят ___ пристани и проверяют лодки.",           options: ["по", "вдоль"], answer: "вдоль" },
     ];
 
     const matchPairs = [
-        { left: "через мост", right: "attraversare il ponte" },
-        { left: "по улице", right: "lungo la strada" },
-        { left: "через лес", right: "da un lato all'altro del bosco" },
-        { left: "по лесу", right: "passeggiare nel bosco" },
-        { left: "через границу", right: "attraversare il confine" },
-        { left: "по берегу", right: "lungo la riva" },
-        { left: "через тоннель", right: "attraverso il tunnel" },
-        { left: "по коридору", right: "lungo il corridoio" },
-        { left: "через дорогу", right: "attraversare la strada" },
-        { left: "по городу", right: "girare per la città" },
+        { left: "Туристы ходят",          right: "по центру и ищут кафе" },
+        { left: "Они идут",               right: "вдоль набережной" },
+        { left: "Дима ходит",             right: "по супермаркету и покупает продукты" },
+        { left: "Прохожие идут",          right: "вдоль аллеи старинного парка" },
+        { left: "Группа туристов идёт",   right: "по площади" },
+        { left: "Мы идём",                right: "вдоль поезда и ищем свой вагон" },
+        { left: "Дети с родителями идут", right: "по набережной и едят мороженое" },
+        { left: "Саша никогда не ходит",  right: "вдоль кладбища" },
+        { left: "Лена ходит домой",       right: "по одному и тому же маршруту" },
+        { left: "Кот ходит",              right: "вдоль изгороди" },
     ];
 
     const quizData = [
-        { id: "mpl-001", promptPrefix: "Мы прошли", promptSuffix: "весь парк насквозь.", answers: ["через"] },
-        { id: "mpl-002", promptPrefix: "Она гуляла", promptSuffix: "парку весь вечер.", answers: ["по"] },
-        { id: "mpl-003", promptPrefix: "Он перешёл", promptSuffix: "дорогу у светофора.", answers: ["через"] },
-        { id: "mpl-004", promptPrefix: "Дети бегали", promptSuffix: "всему двору.", answers: ["по"] },
-        { id: "mpl-005", promptPrefix: "Поезд едет", promptSuffix: "горы в тоннеле.", answers: ["через"] },
-        { id: "mpl-006", promptPrefix: "Мы плыли", promptSuffix: "реке на лодке.", answers: ["по"] },
-        { id: "mpl-007", promptPrefix: "Они пересекли", promptSuffix: "границу ночью.", answers: ["через"] },
-        { id: "mpl-008", promptPrefix: "Туристы ходили", promptSuffix: "музею три часа.", answers: ["по"] },
-        { id: "mpl-009", promptPrefix: "Свет проходит", promptSuffix: "стекло.", answers: ["через"] },
-        { id: "mpl-010", promptPrefix: "Мы ехали", promptSuffix: "набережной и смотрели на закат.", answers: ["по"] },
+        { id: "mpl-021", promptPrefix: "Иди",                        promptSuffix: "(двор) до второго подъезда.",                  answers: ["по двору"] },
+        { id: "mpl-022", promptPrefix: "Друзья идут",                promptSuffix: "(дорога) — машин нет, тихо.",                  answers: ["вдоль дороги"] },
+        { id: "mpl-023", promptPrefix: "Маша и Коля ходят",          promptSuffix: "(рождественский базар).",                      answers: ["по рождественскому базару"] },
+        { id: "mpl-024", promptPrefix: "Саша любит ходить летом",    promptSuffix: "(ручей).",                                     answers: ["вдоль ручья"] },
+        { id: "mpl-025", promptPrefix: "Нужно подняться",            promptSuffix: "(лестница) на третий этаж.",                   answers: ["по лестнице"] },
+        { id: "mpl-026", promptPrefix: "Студенты ходят",             promptSuffix: "(галерея) и делают наброски с картин.",        answers: ["по галерее"] },
+        { id: "mpl-027", promptPrefix: "Лена и Антон идут",          promptSuffix: "(пристань), любуются яхтами.",                 answers: ["вдоль пристани"] },
+        { id: "mpl-028", promptPrefix: "Посетители ходят",           promptSuffix: "(оранжерея) и любуются орхидеями.",            answers: ["по оранжерее"] },
+        { id: "mpl-029", promptPrefix: "Она идёт",                   promptSuffix: "(забор) и ищет вход.",                        answers: ["вдоль забора"] },
+        { id: "mpl-030", promptPrefix: "Они идут",                   promptSuffix: "(аллея) старинного парка.",                   answers: ["вдоль аллеи"] },
     ];
 
-    const MC_END      = multipleChoiceData.length;
-    const MATCH_END   = MC_END + matchPairs.length;
-    const TOTAL_CARDS = MATCH_END + quizData.length;
+    const MC_END    = multipleChoiceData.length;
+    const MATCH_END = MC_END + matchPairs.length;
+    const TOTAL     = MATCH_END + quizData.length;
 
     function normalizeInput(str) { return str.trim().replace(/\s+/g, ' '); }
 
     function ensureCardTitle(card, index) {
-        const existingTitle = Array.from(card.children).find(child => child.tagName === 'H1');
-        if (existingTitle) {
-            if (index < MC_END) existingTitle.classList.add('exercise-counter');
-            if (card.firstElementChild !== existingTitle) card.insertBefore(existingTitle, card.firstElementChild);
+        const existing = Array.from(card.children).find(c => c.tagName === 'H1');
+        if (existing) {
+            if (index < MC_END) existing.classList.add('exercise-counter');
+            if (card.firstElementChild !== existing) card.insertBefore(existing, card.firstElementChild);
             return;
         }
         const title = document.createElement('h1');
-        title.textContent = `Exercise ${index + 1} of ${TOTAL_CARDS}`;
+        title.textContent = `Exercise ${index + 1} of ${TOTAL}`;
         if (index < MC_END) title.classList.add('exercise-counter');
         card.insertBefore(title, card.firstElementChild);
     }
 
     function buildCards() {
         container.innerHTML = '';
-        for (let i = 0; i < TOTAL_CARDS; i++) {
+        for (let i = 0; i < TOTAL; i++) {
             const card = document.createElement('div');
             card.className = 'fca01-card-container mpl-04-card';
             card.dataset.index = i;
-            if (i === 0) card.classList.add('visible');
             card.hidden = (i !== 0);
+            if (i === 0) card.classList.add('visible');
 
             if (i < MC_END) {
                 const item = multipleChoiceData[i];
-                const opts = item.options.map((o, idx) => `<div class="word-option" data-word="${o}" data-index="${idx}">${o}</div>`).join('');
-                const questionText = item.question.replace('___', `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`);
+                const opts = item.options.map((o, idx) =>
+                    `<div class="word-option" data-word="${o}" data-index="${idx}">${o}</div>`
+                ).join('');
+                const questionText = item.question.replace('___',
+                    `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`
+                );
                 card.innerHTML = `
-                    <div class="instruction">Completa la frase scegliendo la preposizione corretta</div>
+                    <div class="instruction">Scegli la preposizione corretta</div>
                     <div class="exercise-text">${questionText}</div>
                     <div class="word-options">${opts}</div>
                     <div class="controls">
@@ -403,72 +255,69 @@ function initPanel4Mpl() {
             } else if (i < MATCH_END) {
                 const pairIdx = i - MC_END;
                 const pair = matchPairs[pairIdx];
-                const otherPairs = matchPairs.filter((_, idx) => idx !== pairIdx);
-                const shuffledOthers = otherPairs.sort(() => Math.random() - 0.5).slice(0, 2);
-                const allPairs = [pair, ...shuffledOthers].sort(() => Math.random() - 0.5);
+                const others = matchPairs.filter((_, idx) => idx !== pairIdx)
+                    .sort(() => Math.random() - 0.5).slice(0, 2);
+                const allPairs = [pair, ...others].sort(() => Math.random() - 0.5);
                 let fronts = allPairs.map((p, idx) => ({ text: p.left,  type: 'front', id: idx }));
                 let backs  = allPairs.map((p, idx) => ({ text: p.right, type: 'back',  id: idx }));
                 fronts.sort(() => Math.random() - 0.5);
                 backs.sort(() => Math.random() - 0.5);
-                let selectedMatchCard = null;
-                let isProcessingMatch = false;
+                let selCard = null;
+                let processing = false;
                 const matchContainer = document.createElement('div');
                 matchContainer.className = 'fca01-match-container';
                 const feedbackEl = document.createElement('p');
                 feedbackEl.className = 'fca01-match-feedback';
                 const matchGrid = document.createElement('div');
                 matchGrid.className = 'fca01-match-grid';
-                const colFronts = document.createElement('div');
-                colFronts.className = 'fca01-match-col';
-                const colBacks = document.createElement('div');
-                colBacks.className = 'fca01-match-col';
-                matchGrid.appendChild(colFronts);
-                matchGrid.appendChild(colBacks);
+                const colF = document.createElement('div'); colF.className = 'fca01-match-col';
+                const colB = document.createElement('div'); colB.className = 'fca01-match-col';
+                matchGrid.appendChild(colF);
+                matchGrid.appendChild(colB);
                 matchContainer.appendChild(feedbackEl);
                 matchContainer.appendChild(matchGrid);
                 card.appendChild(matchContainer);
-                function handleMatchClick(clickedCard) {
-                    if (isProcessingMatch || clickedCard.classList.contains('matched')) return;
-                    if (clickedCard === selectedMatchCard) return;
-                    if (!selectedMatchCard) { selectedMatchCard = clickedCard; clickedCard.classList.add('selected'); return; }
-                    if (selectedMatchCard.dataset.type === clickedCard.dataset.type) {
-                        selectedMatchCard.classList.remove('selected'); selectedMatchCard = clickedCard; clickedCard.classList.add('selected'); return;
+                function handleMatch(clicked) {
+                    if (processing || clicked.classList.contains('matched')) return;
+                    if (clicked === selCard) return;
+                    if (!selCard) { selCard = clicked; clicked.classList.add('selected'); return; }
+                    if (selCard.dataset.type === clicked.dataset.type) {
+                        selCard.classList.remove('selected'); selCard = clicked; clicked.classList.add('selected'); return;
                     }
-                    const firstId = selectedMatchCard.dataset.id;
-                    const secondId = clickedCard.dataset.id;
-                    const previousCard = selectedMatchCard;
-                    if (firstId === secondId) {
-                        previousCard.classList.add('matched'); clickedCard.classList.add('matched');
+                    const prev = selCard;
+                    if (prev.dataset.id === clicked.dataset.id) {
+                        prev.classList.add('matched'); clicked.classList.add('matched');
                         feedbackEl.textContent = '✨ Отлично!'; feedbackEl.className = 'fca01-match-feedback correct';
-                        selectedMatchCard = null;
+                        selCard = null;
                         setTimeout(() => { feedbackEl.textContent = ''; }, 1000);
-                        const remaining = matchContainer.querySelectorAll('.fca01-match-card:not(.matched)').length;
-                        if (remaining === 0) feedbackEl.textContent = '🎉 ПОБЕДА! 🎉';
+                        if (matchContainer.querySelectorAll('.fca01-match-card:not(.matched)').length === 0)
+                            feedbackEl.textContent = '🎉 ПОБЕДА! 🎉';
                     } else {
-                        isProcessingMatch = true; clickedCard.classList.add('wrong'); previousCard.classList.add('wrong');
+                        processing = true;
+                        clicked.classList.add('wrong'); prev.classList.add('wrong');
                         feedbackEl.textContent = 'Неверно'; feedbackEl.className = 'fca01-match-feedback wrong';
-                        setTimeout(() => { clickedCard.classList.remove('selected', 'wrong'); previousCard.classList.remove('selected', 'wrong'); feedbackEl.textContent = ''; isProcessingMatch = false; }, 800);
-                        selectedMatchCard = null;
+                        setTimeout(() => { clicked.classList.remove('selected', 'wrong'); prev.classList.remove('selected', 'wrong'); feedbackEl.textContent = ''; processing = false; }, 800);
+                        selCard = null;
                     }
                 }
-                function createMatchElement(item) {
+                function makeMatchEl(item) {
                     const div = document.createElement('div');
                     div.className = 'fca01-match-card'; div.textContent = item.text;
                     div.dataset.id = item.id; div.dataset.type = item.type;
-                    div.addEventListener('click', () => handleMatchClick(div)); return div;
+                    div.addEventListener('click', () => handleMatch(div)); return div;
                 }
-                fronts.forEach(item => colFronts.appendChild(createMatchElement(item)));
-                backs.forEach(item  => colBacks.appendChild(createMatchElement(item)));
+                fronts.forEach(item => colF.appendChild(makeMatchEl(item)));
+                backs.forEach(item  => colB.appendChild(makeMatchEl(item)));
                 ensureCardTitle(card, i);
-                const instructionEl = document.createElement('div');
-                instructionEl.className = 'instruction';
-                card.insertBefore(instructionEl, card.firstElementChild);
+                const instrEl = document.createElement('div');
+                instrEl.className = 'instruction';
+                card.insertBefore(instrEl, card.firstElementChild);
 
             } else {
                 const item = quizData[i - MATCH_END];
                 card.innerHTML = `
                     <h3 class="quiz-title">Scrivi</h3>
-                    <p class="quiz-instruction">Scrivi la preposizione corretta (через o по)</p>
+                    <p class="quiz-instruction">Scrivete la parola nella forma corretta</p>
                     <div class="quiz-item" data-id="${item.id}">
                         <div class="quiz-prompt">${item.promptPrefix} <input type="text" class="quiz-input" data-index="${i - MATCH_END}"> ${item.promptSuffix}</div>
                         <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">Проверить</button></div>
@@ -476,9 +325,9 @@ function initPanel4Mpl() {
                     </div>
                 `;
                 ensureCardTitle(card, i);
-                const instructionEl = document.createElement('div');
-                instructionEl.className = 'instruction';
-                card.insertBefore(instructionEl, card.firstElementChild);
+                const instrEl = document.createElement('div');
+                instrEl.className = 'instruction';
+                card.insertBefore(instrEl, card.firstElementChild);
             }
             container.appendChild(card);
         }
@@ -487,84 +336,87 @@ function initPanel4Mpl() {
 
     function attachHandlers() {
         container.querySelectorAll('.mpl-04-card').forEach(card => {
-            const cardIndex = parseInt(card.dataset.index, 10);
-            if (cardIndex >= MC_END) return;
+            const idx = parseInt(card.dataset.index, 10);
+            if (idx >= MC_END) return;
             let checked = false;
-            const gapElements  = Array.from(card.querySelectorAll('.gap'));
-            const wordElements = Array.from(card.querySelectorAll('.word-option'));
-            const verifyBtn    = card.querySelector('.verify-btn');
-            const nextBtn      = card.querySelector('.next-btn');
-            const feedback     = card.querySelector('.feedback');
-            wordElements.forEach(wordElement => {
-                wordElement.addEventListener('click', function() {
+            const gaps  = Array.from(card.querySelectorAll('.gap'));
+            const words = Array.from(card.querySelectorAll('.word-option'));
+            const verifyBtn = card.querySelector('.verify-btn');
+            const nBtn      = card.querySelector('.next-btn');
+            const feedback  = card.querySelector('.feedback');
+            words.forEach(w => {
+                w.addEventListener('click', function() {
                     if (this.classList.contains('used') || checked) return;
-                    const emptyGap = gapElements.find(gap => !gap.classList.contains('filled'));
-                    if (!emptyGap) return;
-                    const word = this.dataset.word;
-                    emptyGap.textContent = word; emptyGap.classList.add('filled');
-                    emptyGap.dataset.word = word; emptyGap.dataset.wordIndex = this.dataset.index;
+                    const gap = gaps.find(g => !g.classList.contains('filled'));
+                    if (!gap) return;
+                    gap.textContent = this.dataset.word; gap.classList.add('filled');
+                    gap.dataset.word = this.dataset.word; gap.dataset.wordIndex = this.dataset.index;
                     this.classList.add('used');
                 });
             });
-            gapElements.forEach(gap => {
+            gaps.forEach(gap => {
                 gap.addEventListener('click', function() {
                     if (checked || !this.classList.contains('filled')) return;
-                    const wordIndex = this.dataset.wordIndex;
-                    const wordElement = wordElements.find(w => w.dataset.index === wordIndex);
+                    const w = words.find(x => x.dataset.index === this.dataset.wordIndex);
                     this.textContent = ''; this.classList.remove('filled');
                     delete this.dataset.word; delete this.dataset.wordIndex;
-                    if (wordElement) wordElement.classList.remove('used');
+                    if (w) w.classList.remove('used');
                 });
             });
-            if (nextBtn) nextBtn.addEventListener('click', () => showCard(currentCard + 1));
+            if (nBtn) nBtn.addEventListener('click', () => showCard(currentCard + 1));
             verifyBtn.addEventListener('click', function() {
                 checked = true;
-                const correctAnswer = multipleChoiceData[cardIndex].answer;
-                let correct = 0;
-                gapElements.forEach(gap => {
-                    if (gap.dataset.word === correctAnswer) { gap.classList.remove('filled'); gap.classList.add('correct'); correct = 1; }
-                    else { gap.classList.add('incorrect'); }
+                const correct = multipleChoiceData[idx].answer;
+                let ok = 0;
+                gaps.forEach(gap => {
+                    if (gap.dataset.word === correct) { gap.classList.remove('filled'); gap.classList.add('correct'); ok = 1; }
+                    else gap.classList.add('incorrect');
                 });
-                feedback.textContent = `Corretto: ${correct} / 1`;
-                verifyBtn.style.display = 'none'; nextBtn.style.display = 'inline-block';
+                feedback.textContent = ok ? '✓ Правильно!' : `✗ Правильный предлог: ${correct}`;
+                feedback.className = `feedback ${ok ? 'correct' : 'wrong'}`;
+                verifyBtn.style.display = 'none'; nBtn.style.display = 'inline-block';
             });
         });
         container.querySelectorAll('.quiz-check-btn').forEach(btn => {
             btn.addEventListener('click', function() {
-                const card = this.closest('.mpl-04-card');
-                const idx = parseInt(card.dataset.index) - MATCH_END;
-                const item = quizData[idx];
+                const card  = this.closest('.mpl-04-card');
+                const idx   = parseInt(card.dataset.index) - MATCH_END;
+                const item  = quizData[idx];
                 const input = card.querySelector('.quiz-input');
-                const fb = card.querySelector('.quiz-feedback');
-                const userAnswer = normalizeInput(input.value);
-                const isCorrect = item.answers.some(ans => userAnswer.toLowerCase() === ans.toLowerCase());
-                if (isCorrect) {
-                    input.classList.remove('incorrect'); input.classList.add('correct');
+                const fb    = card.querySelector('.quiz-feedback');
+                const ok    = item.answers.some(a => normalizeInput(input.value) === a);
+                if (ok) {
+                    input.classList.replace('incorrect', 'correct') || input.classList.add('correct');
                     input.disabled = true; this.disabled = true;
                     fb.textContent = 'Правильно!'; fb.className = 'quiz-feedback correct';
                 } else {
-                    input.classList.remove('correct'); input.classList.add('incorrect');
-                    fb.textContent = `Неправильно. Risposta: ${item.answers[0]}`; fb.className = 'quiz-feedback incorrect';
+                    input.classList.replace('correct', 'incorrect') || input.classList.add('incorrect');
+                    fb.textContent = 'Неправильно. Попробуйте ещё раз.'; fb.className = 'quiz-feedback incorrect';
                 }
             });
         });
         container.querySelectorAll('.quiz-input').forEach(input => {
-            input.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter') { const btn = this.closest('.quiz-item').querySelector('.quiz-check-btn'); if (btn && !btn.disabled) btn.click(); }
+            input.addEventListener('keydown', e => {
+                if (e.key === 'Enter') {
+                    const btn = input.closest('.quiz-item').querySelector('.quiz-check-btn');
+                    if (btn && !btn.disabled) btn.click();
+                }
             });
         });
     }
 
     function showCard(idx) {
         currentCard = idx;
-        container.querySelectorAll('.mpl-04-card').forEach((c, i) => { c.classList.toggle('visible', i === idx); c.hidden = (i !== idx); });
-        counterEl.textContent = (idx + 1) + ' / ' + TOTAL_CARDS;
+        container.querySelectorAll('.mpl-04-card').forEach((c, i) => {
+            c.classList.toggle('visible', i === idx); c.hidden = (i !== idx);
+        });
+        counterEl.textContent = `${idx + 1} / ${TOTAL}`;
         prevBtn.disabled = (idx === 0);
-        nextBtn.disabled = (idx === TOTAL_CARDS - 1);
+        nextBtn.disabled = (idx === TOTAL - 1);
     }
 
-    prevBtn.addEventListener('click', () => { if (currentCard > 0)               showCard(currentCard - 1); });
-    nextBtn.addEventListener('click', () => { if (currentCard < TOTAL_CARDS - 1) showCard(currentCard + 1); });
+    prevBtn.addEventListener('click', () => { if (currentCard > 0)         showCard(currentCard - 1); });
+    nextBtn.addEventListener('click', () => { if (currentCard < TOTAL - 1) showCard(currentCard + 1); });
     buildCards();
     showCard(0);
 }
@@ -574,16 +426,16 @@ function initPanel4Mpl() {
 // ============================================================
 initPanelManager({
     initializers: {
-        'panel-mpl-01':  () => new DragDropExercise({ rootId: 'ex-dragdrop-mpl-01',    exercises: p1exercises }),
-        'panel-mpl-05':  () => new DragDropExercise({ rootId: 'ex-dragdrop-mpl-05',    exercises: p5exercises }),
-        'panel-mpl-06':  () => new DragDropExercise({ rootId: 'ex-dragdrop-mpl-06',    exercises: p6exercises }),
-        'panel-mpl-02':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-02', cards: p2cards }),
-        'panel-mpl-03':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-03', cards: p3cards }),
-        'panel-mpl-07':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-07', cards: p7cards }),
-        'panel-mpl-08':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-08', cards: p8cards }),
-        'panel-mpl-09':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-09', cards: p9cards }),
-        'panel-mpl-10':  () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-10', cards: p10cards }),
-        'panel-mpl-04':  () => initPanel4Mpl(),
+        'panel-mpl-01': () => new DragDropExercise({ rootId: 'ex-dragdrop-mpl-01', exercises: p1exercises }),
+        'panel-mpl-05': () => new DragDropExercise({ rootId: 'ex-dragdrop-mpl-05', exercises: p5exercises }),
+        'panel-mpl-06': () => new DragDropExercise({ rootId: 'ex-dragdrop-mpl-06', exercises: p6exercises }),
+        'panel-mpl-02': () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-02', cards: p2cards }),
+        'panel-mpl-07': () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-07', cards: p7cards, quizByPrep: true }),
+        'panel-mpl-08': () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-08', cards: p8cards, quizByPrep: true }),
+        'panel-mpl-03': () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-03', cards: p3cards, quizByPrep: true }),
+        'panel-mpl-09': () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-09', cards: p9cards, quizByPrep: true }),
+        'panel-mpl-10': () => new FlashcardExercise({ rootId: 'ex-flashcards-mpl-10', cards: p10cards, quizByPrep: true }),
+        'panel-mpl-04': () => initPanel4Mpl(),
     },
     enableAccessControl: true,
 });
