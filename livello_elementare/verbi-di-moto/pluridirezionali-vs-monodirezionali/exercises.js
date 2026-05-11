@@ -10,66 +10,76 @@ const p1exercises = [
         instruction: "Выбери правильную форму глагола.",
         text: "Она {{1}} гулять три раза в день.",
         words: ["ходит", "идёт", "идут"],
-        correctAnswers: { 1: "ходит" }
+        correctAnswers: { 1: "ходит" },
+        explanation: "Azione ripetuta: «tre volte al giorno» indica frequenza → ходить."
     },
     {
         instruction: "Выбери правильную форму глагола.",
         text: "Когда она {{1}} гулять, она звонит подруге.",
         words: ["идёт", "ходит", "ходят"],
-        correctAnswers: { 1: "идёт" }
+        correctAnswers: { 1: "идёт" },
+        explanation: "Movimento in corso in un momento specifico → идти."
     },
     {
         instruction: "Выбери правильную форму глагола.",
         text: "Ты {{1}} в банк? — Да, уже {{2}}!",
         words: ["идёшь", "ходишь", "иду", "хожу"],
-        correctAnswers: { 1: "идёшь", 2: "иду" }
+        correctAnswers: { 1: "идёшь", 2: "иду" },
+        explanation: "L'azione è già avviata: «уже иду» (sto già andando) — ci sono elementi in moto → идти."
     },
     {
         instruction: "Выбери правильную форму глагола.",
         text: "Я редко {{1}} в аптеку.",
         words: ["хожу", "иду", "идёт"],
-        correctAnswers: { 1: "хожу" }
+        correctAnswers: { 1: "хожу" },
+        explanation: "«Редко» è un avverbio di frequenza → ходить."
     },
     {
         instruction: "Выбери правильную форму глагола.",
         text: "Ты {{1}} смотреть кино сегодня вечером?",
         words: ["идёшь", "ходишь", "идут"],
-        correctAnswers: { 1: "идёшь" }
+        correctAnswers: { 1: "идёшь" },
+        explanation: "L'azione è già avviata: ci sono elementi in moto (accordo preso, biglietti, ecc.). Non è un piano vago → идти."
     },
     {
         instruction: "Выбери правильную форму глагола.",
         text: "Ты же знаешь, я не {{1}} в кинотеатры.",
         words: ["хожу", "иду", "идёт"],
-        correctAnswers: { 1: "хожу" }
+        correctAnswers: { 1: "хожу" },
+        explanation: "Caratteristica generale, abitudine → ходить."
     },
     {
         instruction: "Выбери правильную форму глагола.",
         text: "Ты опять {{1}} в салон красоты?!",
         words: ["идёшь", "ходишь", "ходят"],
-        correctAnswers: { 1: "идёшь" }
+        correctAnswers: { 1: "идёшь" },
+        explanation: "Movimento diretto in questo momento → идти."
     },
     {
         instruction: "Выбери правильную форму глагола.",
         text: "Мне нравится {{1}} на работу пешком.",
         words: ["ходить", "идти", "ходит"],
-        correctAnswers: { 1: "ходить" }
+        correctAnswers: { 1: "ходить" },
+        explanation: "Dopo нравиться si usa l'infinito di ходить: azione ripetuta."
     },
     {
         instruction: "Выбери правильную форму глагола.",
         text: "Она любит {{1}} на рынок.",
         words: ["ходить", "идти", "ходит"],
-        correctAnswers: { 1: "ходить" }
+        correctAnswers: { 1: "ходить" },
+        explanation: "Dopo любить si usa l'infinito di ходить: abitudine."
     },
     {
         instruction: "Выбери правильную форму глагола.",
         text: "Ненавижу {{1}} на групповые экскурсии!",
         words: ["ходить", "идти", "идёт"],
-        correctAnswers: { 1: "ходить" }
+        correctAnswers: { 1: "ходить" },
+        explanation: "Dopo verbi di emozione (любить, ненавидеть, нравиться) → infinito ходить."
     },
 ];
 
 // ============================================================
-// PANEL 5 — DragDrop · public · Я хожу по магазинам / Она идет за покупками
+// PANEL 5 — DragDrop · public · Спряжение идти
 // ============================================================
 const p5exercises = [
     {
@@ -204,96 +214,96 @@ const p6exercises = [
 // PANEL 2 — Flashcard · public
 // ============================================================
 const p2cards = [
-    { front: "Нам нравится",                        back: "много ходить" },
-    { front: "Мы всегда по воскресеньям",           back: "ходим на рынок" },
-    { front: "Ты часто",                            back: "ходишь в спортзал?" },
-    { front: "Если я",                              back: "иду на работу пешком" },
-    { front: "Мы",                                  back: "идём гулять в парк или в центр" },
-    { front: "Хорошая погода или плохая — Женя",    back: "идёт на улицу" },
-    { front: "По пятницам вы",                      back: "ходите в спортзал" },
-    { front: "Сейчас он",                           back: "идёт в банк" },
-    { front: "Ты куда",                             back: "идёшь?" },
-    { front: "Зачем так много",                     back: "ходить в спортзал?" },
+    { front: "Нам нравится",      back: "много ходить",                                  explanation: "Dopo нравиться → infinito di ходить: azione ripetuta." },
+    { front: "Они",               back: "ходят в одни и те же рестораны",               explanation: "Abitudine consolidata → ходить." },
+    { front: "Ненавижу",          back: "ходить на групповые экскурсии!",                explanation: "Dopo verbi di emozione (ненавидеть, любить, нравиться) → infinito ходить." },
+    { front: "Лена",              back: "ходит только на распродажи",                   explanation: "Caratteristica personale, abitudine → ходить." },
+    { front: "Мы обычно",         back: "ходим завтракать в бар рядом с домом",         explanation: "«Обычно» indica frequenza → ходить." },
+    { front: "Я",                 back: "иду к врачу в понедельник",                    explanation: "L'azione è già avviata: l'appuntamento è fissato, ci sono elementi in moto → идти." },
+    { front: "Мы",                back: "идём гулять в парк или в центр",               explanation: "Decisione in azione, ci sono elementi in moto: stiamo già andando, dobbiamo ancora decidere dove di preciso → идти." },
+    { front: "Ты опять",          back: "идёшь в салон красоты?!",                      explanation: "Movimento diretto in questo momento → идти." },
+    { front: "Она",               back: "идёт по берегу моря и слушает звуки его волн", explanation: "Movimento in corso in un momento specifico → идти." },
+    { front: "Сейчас он",         back: "идёт в банк",                                  explanation: "«Сейчас» (adesso) = movimento in corso → идти." },
 ];
 
 // ============================================================
 // PANEL 3 — Flashcard · public
 // ============================================================
 const p3cards = [
-    { front: "Ты же ненавидишь",       back: "ходить к стоматологам!" },
-    { front: "Анна ненавидит",         back: "ходить" },
-    { front: "Лена предпочитает",      back: "ходить в спортзал" },
-    { front: "Ты ходишь в магазин",    back: "как на работу!" },
-    { front: "Я",                      back: "хожу в спортзал" },
-    { front: "Мы",                     back: "идём к Кате смотреть фильм" },
-    { front: "Куда вы",                back: "идёте в субботу вечером?" },
-    { front: "Сегодня вечером она",    back: "идёт на лекцию по истории искусства" },
-    { front: "Когда я иду в гости",    back: "всегда покупаю что-нибудь к чаю" },
-    { front: "Ходить пешком",          back: "очень полезно" },
+    { front: "По понедельникам Катя ходит на йогу.",       back: "В понедельник Катя идёт на йогу.",                          explanation: "«По понедельникам» = Complemento di tempo Frequenza → ходить. «В понедельник» = Complemento di tempo Determinato → идти." },
+    { front: "Мы часто ходим в этот ресторан.",            back: "Сегодня вечером мы идём в этот ресторан.",                   explanation: "«Часто» = Complemento di tempo Frequenza → ходить. «Сегодня вечером» = Complemento di tempo Determinato → идти." },
+    { front: "Лена обычно ходит на работу пешком.",        back: "Сегодня Лена идёт на работу пешком.",                        explanation: "«Обычно» = Complemento di tempo Frequenza → ходить. «Сегодня» = Complemento di tempo Determinato → идти." },
+    { front: "По пятницам они ходят в кино.",              back: "В эту пятницу они идут в кино.",                             explanation: "«По пятницам» = Complemento di tempo Frequenza → ходить. «В эту пятницу» = Complemento di tempo Determinato → идти." },
+    { front: "Андрей иногда ходит на концерты.",           back: "В субботу вечером Андрей идёт на концерт.",                  explanation: "«Иногда» = Complemento di tempo Frequenza → ходить. «В субботу вечером» = Complemento di tempo Determinato → идти." },
+    { front: "Бабушка каждую неделю ходит к врачу.",       back: "Завтра бабушка идёт к врачу.",                               explanation: "«Каждую неделю» = Complemento di tempo Frequenza → ходить. «Завтра» = Complemento di tempo Determinato → идти." },
+    { front: "Мы с Катей иногда ходим в театр.",           back: "Завтра вечером мы с Катей идём в театр.",                    explanation: "«Иногда» = Complemento di tempo Frequenza → ходить. «Завтра вечером» = Complemento di tempo Determinato → идти." },
+    { front: "По воскресеньям они ходят гулять в парк.",   back: "В воскресенье они идут гулять в парк.",                      explanation: "«По воскресеньям» = Complemento di tempo Frequenza → ходить. «В воскресенье» = Complemento di tempo Determinato → идти." },
+    { front: "Ты часто ходишь на рынок?",                  back: "Ты идёшь на рынок прямо сейчас?",                            explanation: "«Часто» = Complemento di tempo Frequenza → ходить. «Прямо сейчас» = Complemento di tempo Determinato → идти." },
+    { front: "Они иногда ходят на выставки.",              back: "В четверг они идут на выставку современного искусства.",      explanation: "«Иногда» = Complemento di tempo Frequenza → ходить. «В четверг» = Complemento di tempo Determinato → идти." },
 ];
 
 // ============================================================
 // PANEL 7 — Flashcard · student
 // ============================================================
 const p7cards = [
-    { front: "Андрею очень нравится",      back: "ходить пешком" },
-    { front: "Сегодня вечером мы",         back: "идём в кино" },
-    { front: "Ты же обычно по понедельникам", back: "ходишь в спортзал" },
-    { front: "Сейчас я",                   back: "иду в гости к Кате" },
-    { front: "По пятницам мы",             back: "ходим в спортзал" },
-    { front: "В субботу они",              back: "идут на день рождения к родителям" },
-    { front: "Он очень любит",             back: "ходить пешком" },
-    { front: "Завтра вечером вы",          back: "идёте куда-нибудь" },
-    { front: "Анна редко",                 back: "ходит пешком" },
-    { front: "Женя",                       back: "идёт на улицу" },
+    { front: "Она",                    back: "идёт по берегу моря и слушает звуки его волн" },
+    { front: "Куда ты каждый вечер",   back: "ходишь, тебя дома не застать?" },
+    { front: "Завтра вечером вы",      back: "идёте куда-нибудь?" },
+    { front: "Мы с друзьями иногда",   back: "ходим на джазовые концерты" },
+    { front: "Ты",                     back: "идёшь смотреть кино сегодня вечером?" },
+    { front: "Андрей по утрам",        back: "ходит на йогу" },
+    { front: "Сегодня вечером они",    back: "идут к Рудневым" },
+    { front: "Они редко",              back: "ходят в кино вместе" },
+    { front: "Вы",                     back: "идёте в понедельник на презентацию нашего проекта?" },
+    { front: "Ты же знаешь, я не",    back: "хожу в кинотеатры" },
 ];
 
 // ============================================================
 // PANEL 8 — Flashcard · paid
 // ============================================================
 const p8cards = [
-    { front: "Мы по утрам всегда",              back: "ходим на пробежку" },
-    { front: "Женя",                            back: "идёт на улицу" },
-    { front: "Я уже час",                       back: "хожу по магазинам" },
-    { front: "Когда на улице солнце, мы",       back: "всегда идём на пляж" },
-    { front: "Андрей",                          back: "ходит на работу пешком" },
-    { front: "Прямо сейчас они",               back: "идут в спортзал" },
-    { front: "Вы каждые выходные",             back: "ходите в этот ресторан?" },
-    { front: "Иду",                             back: "Катю встречать" },
-    { front: "Тимур практически никогда не",   back: "ходит пешком" },
-    { front: "Они часто",                       back: "ходят в лес за грибами" },
+    { front: "Бабушка",                  back: "ходит к врачу каждую неделю" },
+    { front: "Лена",                     back: "идёт на собеседование — очень волнуется" },
+    { front: "Мы по утрам всегда",       back: "ходим на пробежку" },
+    { front: "Ты",                       back: "идёшь или нет?!" },
+    { front: "Нина по вторникам",        back: "ходит на курсы итальянского" },
+    { front: "Когда на улице солнце, мы", back: "всегда идём на пляж" },
+    { front: "Я уже час",                back: "хожу по магазинам" },
+    { front: "В субботу вечером они",    back: "идут на свадьбу к другу" },
+    { front: "Вы каждые выходные",       back: "ходите в этот ресторан?" },
+    { front: "Иду",                      back: "Катю встречать" },
 ];
 
 // ============================================================
 // PANEL 9 — Flashcard · student
 // ============================================================
 const p9cards = [
-    { front: "Мне не нравится",         back: "ходить за продуктами" },
-    { front: "Если регулярно",          back: "ходить на танцы — меняется всё" },
+    { front: "Лена",                    back: "идёт на собеседование — очень волнуется" },
     { front: "Мы с Катей договорились", back: "вместе ходить по пятницам" },
+    { front: "Я",                       back: "иду к врачу в понедельник" },
     { front: "Ты что каждый день",      back: "ходишь в бассейн?" },
-    { front: "Я уже пять лет",          back: "хожу на рынок к одной и той же женщине" },
-    { front: "Идёшь на обед? — Да",     back: "иду с коллегами пообедать" },
-    { front: "Женю не заставить",       back: "ни ходить пешком, ни ездить на велосипеде" },
-    { front: "Андрей",                  back: "ходит на работу пешком" },
-    { front: "Мы",                      back: "идём на рынок, покупать липовый мед" },
     { front: "Когда она идёт в библиотеку", back: "всегда заходит к бабушке на чай" },
+    { front: "Мне не нравится",         back: "ходить за продуктами" },
+    { front: "В субботу вечером они",   back: "идут на свадьбу к другу" },
+    { front: "Нина по вторникам",       back: "ходит на курсы итальянского" },
+    { front: "Идёшь на обед? — Да",     back: "иду с коллегами пообедать" },
+    { front: "Если регулярно",          back: "ходить на танцы — меняется всё" },
 ];
 
 // ============================================================
 // PANEL 10 — Flashcard · paid
 // ============================================================
 const p10cards = [
-    { front: "Мне нравится",                            back: "ходить пешком" },
-    { front: "Ходить на танцы",                         back: "гораздо полезнее" },
-    { front: "Из бассейна",                             back: "иду" },
-    { front: "Я же не просто",                          back: "хожу по гипермаркету!" },
-    { front: "Тимур практически никогда не",            back: "ходит пешком" },
-    { front: "Женя",                                    back: "идёт на улицу" },
-    { front: "Зачем так много",                         back: "ходить в спортзал?" },
-    { front: "В какую сторону",                         back: "ты идёшь?" },
-    { front: "Обычно она в кино",                       back: "не ходит" },
+    { front: "Завтра вечером вы",                         back: "идёте куда-нибудь?" },
+    { front: "Я же не просто",                            back: "хожу по гипермаркету!" },
+    { front: "В четверг они",                             back: "идут на выставку современного искусства" },
+    { front: "Обычно она в кино",                         back: "не ходит" },
+    { front: "В это воскресенье я",                       back: "иду в спортзал" },
+    { front: "Мы с друзьями иногда",                      back: "ходим на джазовые концерты" },
+    { front: "В какую сторону",                           back: "ты идёшь?" },
+    { front: "Маша по средам",                            back: "ходит на курсы вождения" },
     { front: "Когда мы собираемся с друзьями, мы всегда", back: "идём гулять в центр" },
+    { front: "Вы каждые выходные",                        back: "ходите в этот ресторан?" },
 ];
 
 
@@ -315,42 +325,42 @@ function initPanel4() {
     let currentCard = 0;
 
     const multipleChoiceData = [
-        { question: "Нам нравится много ___ пешком.",                       options: ["ходить", "идти", "ездить"],  answer: "ходить" },
-        { question: "Ты ___ в банк? — Да, уже иду!",                       options: ["идёшь", "ходишь", "идут"],   answer: "идёшь" },
-        { question: "Мне нравится ___ на работу пешком.",                   options: ["ходить", "идти", "ездить"],  answer: "ходить" },
-        { question: "Мы ___ гулять в парк или в центр.",                    options: ["идём", "ходим", "идут"],     answer: "идём" },
-        { question: "Тимур практически никогда не ___ пешком.",             options: ["ходит", "идёт", "ходят"],    answer: "ходит" },
-        { question: "Завтра Катя ___ в кино со своим новым парнем.",        options: ["идёт", "ходит", "идут"],     answer: "идёт" },
-        { question: "По пятницам вы ___ в спортзал.",                       options: ["ходите", "идёте", "ходят"],  answer: "ходите" },
-        { question: "Женя ___ на улицу — погода неважна.",                  options: ["идёт", "ходит", "идут"],     answer: "идёт" },
-        { question: "Ты же ненавидишь ___ к стоматологам!",                options: ["ходить", "идти", "ездить"],  answer: "ходить" },
-        { question: "Когда она ___ в библиотеку, всегда заходит к бабушке.", options: ["идёт", "ходит", "идут"],   answer: "идёт" },
+        { question: "По понедельникам Катя ___ на йогу.",          options: ["ходит", "идёт"],    answer: "ходит" },
+        { question: "В понедельник Катя ___ на йогу.",             options: ["идёт", "ходит"],    answer: "идёт" },
+        { question: "Я редко ___ в аптеку.",                       options: ["хожу", "иду"],      answer: "хожу" },
+        { question: "Ты ___ или нет?!",                            options: ["идёшь", "ходишь"],  answer: "идёшь" },
+        { question: "Мне нравится ___ на работу пешком.",          options: ["ходить", "идти"],   answer: "ходить" },
+        { question: "Сегодня вечером мы ___ в этот ресторан.",     options: ["идём", "ходим"],    answer: "идём" },
+        { question: "Вы часто сюда ___?",                          options: ["ходите", "идёте"],  answer: "ходите" },
+        { question: "Завтра бабушка ___ к врачу.",                 options: ["идёт", "ходит"],    answer: "идёт" },
+        { question: "Они иногда ___ на выставки.",                 options: ["ходят", "идут"],    answer: "ходят" },
+        { question: "Ненавижу ___ на групповые экскурсии!",        options: ["ходить", "идти"],   answer: "ходить" },
     ];
 
     const matchPairs = [
-        { left: "Мне нравится",             right: "ходить на работу пешком" },
-        { left: "Женя",                     right: "идёт на улицу" },
-        { left: "Анна ненавидит",           right: "ходить" },
-        { left: "Мы",                       right: "идём гулять в парк или в центр" },
-        { left: "Ты часто",                 right: "ходишь в спортзал?" },
+        { left: "Лена обычно",              right: "ходит на работу пешком" },
+        { left: "Сегодня Лена",             right: "идёт на работу пешком" },
+        { left: "Мы с друзьями иногда",     right: "ходим на джазовые концерты" },
+        { left: "Когда на улице солнце, мы", right: "всегда идём на пляж" },
+        { left: "Ты же знаешь, я не",       right: "хожу в кинотеатры" },
         { left: "Иду",                      right: "Катю встречать" },
-        { left: "Андрею очень нравится",    right: "ходить пешком" },
-        { left: "В субботу они",            right: "идут на день рождения к родителям" },
-        { left: "Боюсь",                    right: "ходить к стоматологу" },
-        { left: "Куда вы",                  right: "идёте в субботу вечером?" },
+        { left: "Бабушка каждую неделю",    right: "ходит к врачу" },
+        { left: "В субботу вечером они",    right: "идут на свадьбу к другу" },
+        { left: "Мы с Катей договорились",  right: "вместе ходить по пятницам" },
+        { left: "Сейчас он",                right: "идёт в банк" },
     ];
 
     const quizData = [
-        { id: "plur-001", promptPrefix: "Андрей",                       promptSuffix: "на работу пешком.",                              answers: ["ходит"] },
-        { id: "plur-002", promptPrefix: "Я",                            promptSuffix: "в спортзал.",                                     answers: ["хожу"] },
-        { id: "plur-003", promptPrefix: "Зачем так много",              promptSuffix: "в спортзал?",                                     answers: ["ходить"] },
-        { id: "plur-004", promptPrefix: "Тимур практически никогда не", promptSuffix: "пешком.",                                         answers: ["ходит"] },
-        { id: "plur-005", promptPrefix: "Нам нравится много",           promptSuffix: ".",                                               answers: ["ходить"] },
-        { id: "plur-006", promptPrefix: "Если я",                       promptSuffix: "на работу пешком, я трачу калории.",              answers: ["иду"] },
-        { id: "plur-007", promptPrefix: "Женю не заставить ни",         promptSuffix: "пешком, ни ездить на велосипеде.",                answers: ["ходить"] },
-        { id: "plur-008", promptPrefix: "Когда я",                      promptSuffix: "в гости, всегда покупаю что-нибудь к чаю.",      answers: ["иду"] },
-        { id: "plur-009", promptPrefix: "Анна редко",                   promptSuffix: "пешком.",                                         answers: ["ходит"] },
-        { id: "plur-010", promptPrefix: "Мы",                           promptSuffix: "гулять в парк или в центр.",                     answers: ["идём"] },
+        { id: "plur-001", promptPrefix: "Андрей по утрам",    promptSuffix: "на йогу.",                                              answers: ["ходит"] },
+        { id: "plur-002", promptPrefix: "Я уже час",          promptSuffix: "по магазинам.",                                         answers: ["хожу"] },
+        { id: "plur-003", promptPrefix: "В это воскресенье я", promptSuffix: "в спортзал.",                                           answers: ["иду"] },
+        { id: "plur-004", promptPrefix: "Нина по вторникам",  promptSuffix: "на курсы итальянского.",                                answers: ["ходит"] },
+        { id: "plur-005", promptPrefix: "Когда она",          promptSuffix: "в библиотеку, всегда заходит к бабушке на чай.",       answers: ["идёт"] },
+        { id: "plur-006", promptPrefix: "Ты что каждый день", promptSuffix: "в бассейн?",                                            answers: ["ходишь"] },
+        { id: "plur-007", promptPrefix: "В четверг они",      promptSuffix: "на выставку современного искусства.",                   answers: ["идут"] },
+        { id: "plur-008", promptPrefix: "Лена",               promptSuffix: "на собеседование — очень волнуется.",                   answers: ["идёт"] },
+        { id: "plur-009", promptPrefix: "Мы обычно",          promptSuffix: "завтракать в бар рядом с домом.",                       answers: ["ходим"] },
+        { id: "plur-010", promptPrefix: "Маша по средам",     promptSuffix: "на курсы вождения.",                                    answers: ["ходит"] },
     ];
 
     const MC_END      = multipleChoiceData.length;
