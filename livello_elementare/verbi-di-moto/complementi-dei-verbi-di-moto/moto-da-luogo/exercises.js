@@ -124,16 +124,16 @@ const p6exercises = [
 // PANEL 2 — public · Flashcard · Mix ИЗ / С / ОТ
 // ============================================================
 const p2cards = [
-    { front: "из + университет", back: "из университета", explanation: "«Университет» = università. 2a declinazione → genitivo: университет → университета." },
-    { front: "с + работа",       back: "с работы",        explanation: "«Работа» = lavoro. 1a declinazione → genitivo: работа → работы." },
-    { front: "от + врач",        back: "от врача",         explanation: "«Врач» = medico. 2a declinazione → genitivo: врач → врача." },
-    { front: "из + школа",       back: "из школы",         explanation: "«Школа» = scuola. 1a declinazione → genitivo: школа → школы." },
-    { front: "с + концерт",      back: "с концерта",       explanation: "«Концерт» = concerto. 2a declinazione → genitivo: концерт → концерта." },
-    { front: "из + театр",       back: "из театра",        explanation: "«Театр» = teatro. 2a declinazione → genitivo: театр → театра." },
-    { front: "с + вокзал",       back: "с вокзала",        explanation: "«Вокзал» = stazione. 2a declinazione → genitivo: вокзал → вокзала." },
-    { front: "от + друзья",      back: "от друзей",        explanation: "«Друзья» = amici. Plurale → genitivo plurale: друзья → друзей." },
-    { front: "из + дом",         back: "из дома",          explanation: "«Дом» = casa. 2a declinazione → genitivo: дом → дома." },
-    { front: "с + остановка",    back: "с остановки",      explanation: "«Остановка» = fermata. 1a declinazione → genitivo: остановка → остановки." },
+    { front: "Андрей идёт (университет)",      back: "Андрей идёт из университета",      explanation: "L'università è un edificio (spazio chiuso) → «из»." },
+    { front: "Анна возвращается (работа)",      back: "Анна возвращается с работы",       explanation: "Il lavoro è un'attività: si va «на» работу → si torna «с» работы." },
+    { front: "Он идёт (врач)",                  back: "Он идёт от врача",                 explanation: "Il medico è una persona → «от»." },
+    { front: "Дети возвращаются (школа)",       back: "Дети возвращаются из школы",       explanation: "La scuola è un edificio (spazio chiuso) → «из»." },
+    { front: "Они возвращаются (концерт)",      back: "Они возвращаются с концерта",      explanation: "Il concerto è un evento: si va «на» концерт → si torna «с» концерта." },
+    { front: "Мы идём (театр)",                 back: "Мы идём из театра",                explanation: "Il teatro è un edificio (spazio chiuso) → «из»." },
+    { front: "Она идёт (вокзал)",               back: "Она идёт с вокзала",               explanation: "Il vokzal è un luogo aperto: si va «на» вокзал → si torna «с» вокзала." },
+    { front: "Он идёт (друзья)",                back: "Он идёт от друзей",                explanation: "Gli amici sono persone → «от»." },
+    { front: "Дима идёт (дом)",                 back: "Дима идёт из дома",                explanation: "La casa è uno spazio chiuso → «из»." },
+    { front: "Наш сосед идёт (остановка)",      back: "Наш сосед идёт с остановки",      explanation: "La fermata è un luogo aperto: si va «на» остановку → si torna «с» остановки." },
 ];
 
 // ============================================================
@@ -156,32 +156,32 @@ const p3cards = [
 // PANEL 7 — student · Flashcard · ИЗ + genitivo
 // ============================================================
 const p7cards = [
-    { front: "из + университет", back: "из университета" },
-    { front: "из + Москва", back: "из Москвы" },
-    { front: "из + школа", back: "из школы" },
-    { front: "из + театр", back: "из театра" },
-    { front: "из + бассейн", back: "из бассейна" },
-    { front: "из + спортзал", back: "из спортзала" },
-    { front: "из + ночной клуб", back: "из ночного клуба" },
-    { front: "из + бар", back: "из бара" },
-    { front: "из + дом", back: "из дома" },
-    { front: "из + ресторан", back: "из ресторана" },
+    { front: "Он идёт (университет) домой",          back: "Он идёт из университета домой" },
+    { front: "Анна возвращается (работа)",             back: "Анна возвращается с работы" },
+    { front: "Он идёт (врач)",                         back: "Он идёт от врача" },
+    { front: "Они возвращаются (концерт)",             back: "Они возвращаются с концерта" },
+    { front: "Он идёт (друзья)",                       back: "Он идёт от друзей" },
+    { front: "Она идёт (спортзал)",                    back: "Она идёт из спортзала" },
+    { front: "Мой друг возвращается (дискотека)",      back: "Мой друг возвращается с дискотеки" },
+    { front: "Соня идёт (подруга)",                    back: "Соня идёт от подруги" },
+    { front: "Друзья идут (ночной клуб)",              back: "Друзья идут из ночного клуба" },
+    { front: "Антон идёт (ресторан)",                  back: "Антон идёт из ресторана" },
 ];
 
 // ============================================================
 // PANEL 8 — paid · Flashcard · С + genitivo
 // ============================================================
 const p8cards = [
-    { front: "из + университет", back: "из университета" },
-    { front: "из + школа", back: "из школы" },
-    { front: "из + бассейн", back: "из бассейна" },
-    { front: "с + работа", back: "с работы" },
-    { front: "с + концерт", back: "с концерта" },
-    { front: "с + рынок", back: "с рынка" },
-    { front: "с + дискотека", back: "с дискотеки" },
-    { front: "от + врач", back: "от врача" },
-    { front: "от + сестра", back: "от сестры" },
-    { front: "с + почта", back: "с почты" },
+    { front: "Дети возвращаются (школа) в три часа",          back: "Дети возвращаются из школы в три часа" },
+    { front: "Она возвращается (рынок) с тяжёлыми сумками",   back: "Она возвращается с рынка с тяжёлыми сумками" },
+    { front: "Я иду (брат)",                                   back: "Я иду от брата" },
+    { front: "Она идёт (вокзал)",                              back: "Она идёт с вокзала" },
+    { front: "Дима идёт (дом)",                                back: "Дима идёт из дома" },
+    { front: "Мы идём (бассейн)",                              back: "Мы идём из бассейна" },
+    { front: "Папа идёт (почта)",                              back: "Папа идёт с почты" },
+    { front: "Она идёт (сестра)",                              back: "Она идёт от сестры" },
+    { front: "Антон идёт (родители)",                          back: "Антон идёт от родителей" },
+    { front: "Коля идёт (бар)",                                back: "Коля идёт из бара" },
 ];
 
 // ============================================================
