@@ -174,7 +174,7 @@ export default class FlashcardExercise {
         if (area) {
             area.innerHTML = `
                 <div class="fca01-quiz-area">
-                    <h3 class="fca01-quiz-question">Найди вторую часть: <br><span class="highlight">"${correctCard.front}"</span></h3>
+                    <h3 class="fca01-quiz-question">TROVA LA SECONDA PARTE: <br><span class="highlight">"${correctCard.front}"</span></h3>
                     <div class="fca01-quiz-options">${buttonsHTML}</div>
                     <p class="fca01-quiz-feedback"></p>
                 </div>
@@ -200,11 +200,11 @@ export default class FlashcardExercise {
         });
 
         if (isCorrect) {
-            feedback.textContent = "✅ Правильно!";
+            feedback.textContent = "✅ CORRETTO!";
             feedback.className = "fca01-quiz-feedback correct";
         } else {
             btnElement.classList.add('wrong');
-            feedback.innerHTML = explanation ? `❌ Ошибка!<br><small>${explanation}</small>` : "❌ Ошибка!";
+            feedback.innerHTML = explanation ? `❌ ERRORE!<br><small>${explanation}</small>` : "❌ ERRORE!";
             feedback.className = "fca01-quiz-feedback wrong";
         }
         if (nextBtn) nextBtn.classList.remove('hidden');
@@ -291,7 +291,7 @@ export default class FlashcardExercise {
         if (firstId === secondId) {
             previousCard.classList.add('matched');
             clickedCard.classList.add('matched');
-            feedbackEl.textContent = "✨ Отлично!";
+            feedbackEl.textContent = "✨ OTTIMO!";
             feedbackEl.className = "fca01-match-feedback correct";
             this.selectedMatchCard = null;
             setTimeout(() => { feedbackEl.textContent = ""; }, 1000);
@@ -318,7 +318,7 @@ export default class FlashcardExercise {
             this.isProcessingMatch = true;
             clickedCard.classList.add('wrong');
             previousCard.classList.add('wrong');
-            feedbackEl.textContent = "Неверно";
+            feedbackEl.textContent = "ERRATO";
             feedbackEl.className = "fca01-match-feedback wrong";
 
             const wrongFront = previousCard.dataset.type === 'front'
