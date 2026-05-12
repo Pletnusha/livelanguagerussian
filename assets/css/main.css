@@ -75,6 +75,7 @@ h1, h2, h3 {
 .exercise-title {
   font-size: 1.05rem;
   margin: 0.3rem 0 0.9rem;
+  text-transform: uppercase;
 }
 
 .exercise-meta {
@@ -222,6 +223,12 @@ h1, h2, h3 {
 
 .back-link:hover {
   text-decoration: underline;
+}
+
+/* ===== PAGE-SPECIFIC: MOTO A LUOGO ===== */
+
+.page-moto-a-luogo .argomento-header {
+  padding-top: 2.5rem;
 }
 
 /* ===== PAGE-SPECIFIC: ACCUSATIVO COME TI CHIAMI ===== */
@@ -1036,6 +1043,7 @@ article.exercise-card[data-target="panel-acc-open-10"],
     font-weight: 600;
     margin-bottom: 1.5rem;
     color: #555;
+    text-transform: uppercase;
 }
 
 .universal-dd .exercise-text {
