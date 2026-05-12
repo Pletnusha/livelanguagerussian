@@ -1340,12 +1340,13 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 
 /* 7. Панель кнопок (Внизу) */
-.universal-dd .controls { 
-    display: flex; 
-    align-items: center; 
-    gap: 15px; 
-    border-top: 1px solid #f3f4f6; 
-    padding-top: 20px; 
+.universal-dd .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 20px;
 }
 
 /* Кнопки (Проверить / Далее) */
@@ -1376,7 +1377,7 @@ article.exercise-card[data-target="panel-acc-open-10"],
 /* Текст результата (Справа) */
 .universal-dd .feedback {
     font-weight: bold;
-    margin-left: auto;
+    text-align: center;
 }
 
 /* ===== PANEL 4 — Mixed Quiz (plur-04) ===== */
