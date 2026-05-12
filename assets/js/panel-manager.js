@@ -121,6 +121,13 @@ export async function initPanelManager({ initializers = {}, enableAccessControl 
             } else {
                 panel.hidden = false;
                 card.setAttribute('data-status', 'open');
+
+                const cardTitle = card.querySelector('.exercise-title');
+                const flashcardHeader = panel.querySelector('.fca01-header h2');
+                if (cardTitle && flashcardHeader) {
+                    flashcardHeader.textContent = cardTitle.textContent;
+                }
+
                 if (!panel.hasAttribute('data-initialized') && initializers[targetId]) {
                     initializers[targetId]();
                     panel.setAttribute('data-initialized', 'true');
