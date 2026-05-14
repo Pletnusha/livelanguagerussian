@@ -229,7 +229,9 @@ h1, h2, h3 {
 
 /* ===== PAGE-SPECIFIC: MOTO A LUOGO ===== */
 
-.page-moto-a-luogo .argomento-header {
+.page-moto-a-luogo .argomento-header,
+.page-moto-da-luogo .argomento-header,
+.page-moto-per-luogo .argomento-header {
   padding-top: 2.5rem;
 }
 
