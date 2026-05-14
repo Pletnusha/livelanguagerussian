@@ -158,7 +158,7 @@ export default class DragDropExercise {
                 .filter(g => g.classList.contains('incorrect'))
                 .map(g => exercise.correctAnswers[parseInt(g.dataset.gap, 10)])
                 .join(', ');
-            feedback.innerHTML = `✗ ${wrongCorrects}<br>${exercise.explanation}`;
+            feedback.innerHTML = `ERRORE: ${wrongCorrects}<br>${exercise.explanation}`;
             feedback.style.color = '#b91c1c';
         } else {
             feedback.textContent = `Risultato: ${correct}/${total}`;

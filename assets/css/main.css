@@ -990,13 +990,12 @@ h1, h2, h3 {
     margin-right: auto;
   }
 }
-.quiz-check-btn.btn.btn-primary{
-    font-size: 0.75rem;
-  padding: 0.5rem 0.9rem;
-  min-width: 90px;
-  width: 90px;
-  flex: 0 0 90px;
-
+.quiz-check-btn.btn.btn-primary {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  min-width: 160px;
+  width: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;

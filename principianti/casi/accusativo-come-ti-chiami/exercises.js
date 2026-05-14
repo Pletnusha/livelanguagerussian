@@ -77,7 +77,7 @@ function initPanel4Acc() {
                     fb.className = 'acc04-feedback correct';
                 } else {
                     btn.classList.add('wrong');
-                    fb.textContent = `✗ Правильно: ${q.correct}`;
+                    fb.textContent = `ERRORE — risposta: ${q.correct}`;
                     fb.className = 'acc04-feedback wrong';
                     container.querySelectorAll('.acc04-opt').forEach(b => {
                         if (b.getAttribute('data-value') === q.correct) b.classList.add('correct');

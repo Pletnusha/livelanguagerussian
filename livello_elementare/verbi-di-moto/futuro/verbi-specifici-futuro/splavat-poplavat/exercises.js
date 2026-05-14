@@ -466,11 +466,10 @@ function initPanel4() {
             } else {
                 const item = quizData[i - MATCH_END];
                 card.innerHTML = `
-                    <h3 class="quiz-title">Scrivi</h3>
                     <p class="quiz-instruction">Scrivi la forma corretta del futuro</p>
                     <div class="quiz-item" data-id="${item.id}">
                         <div class="quiz-prompt">${item.promptPrefix} <input type="text" class="quiz-input" data-index="${i - MATCH_END}"> ${item.promptSuffix}</div>
-                        <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">Проверить</button></div>
+                        <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">VERIFICA</button></div>
                         <div class="quiz-feedback"></div>
                     </div>
                 `;

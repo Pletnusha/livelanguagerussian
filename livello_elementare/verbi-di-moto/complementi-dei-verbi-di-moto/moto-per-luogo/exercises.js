@@ -316,11 +316,10 @@ function initPanel4Mpl() {
             } else {
                 const item = quizData[i - MATCH_END];
                 card.innerHTML = `
-                    <h3 class="quiz-title">Scrivi</h3>
                     <p class="quiz-instruction">Scrivete la parola nella forma corretta</p>
                     <div class="quiz-item" data-id="${item.id}">
                         <div class="quiz-prompt">${item.promptPrefix} <input type="text" class="quiz-input" data-index="${i - MATCH_END}"> ${item.promptSuffix}</div>
-                        <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">Проверить</button></div>
+                        <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">VERIFICA</button></div>
                         <div class="quiz-feedback"></div>
                     </div>
                 `;
@@ -372,7 +371,7 @@ function initPanel4Mpl() {
                     if (gap.dataset.word === correct) { gap.classList.remove('filled'); gap.classList.add('correct'); ok = 1; }
                     else gap.classList.add('incorrect');
                 });
-                feedback.textContent = ok ? '✓ Правильно!' : `✗ Правильный предлог: ${correct}`;
+                feedback.textContent = ok ? '✓ Правильно!' : `ERRORE — risposta: ${correct}`;
                 feedback.className = `feedback ${ok ? 'correct' : 'wrong'}`;
                 verifyBtn.style.display = 'none'; nBtn.style.display = 'inline-block';
             });
