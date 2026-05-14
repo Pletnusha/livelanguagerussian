@@ -317,7 +317,7 @@ function initPanel4VV() {
             return;
         }
         const title = document.createElement('h1');
-        title.textContent = `Exercise ${index + 1} of ${TOTAL_CARDS}`;
+        title.textContent = `Esercizio ${index + 1} di ${TOTAL_CARDS}`;
         if (index < MC_END) title.classList.add('exercise-counter');
         card.insertBefore(title, card.firstElementChild);
     }

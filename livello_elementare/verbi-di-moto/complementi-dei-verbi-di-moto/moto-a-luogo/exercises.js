@@ -215,7 +215,7 @@ function initPanel4Mal() {
             return;
         }
         const title = document.createElement('h1');
-        title.textContent = `Exercise ${index + 1} of ${TOTAL}`;
+        title.textContent = `Esercizio ${index + 1} di ${TOTAL}`;
         if (index < MC_END) title.classList.add('exercise-counter');
         card.insertBefore(title, card.firstElementChild);
     }

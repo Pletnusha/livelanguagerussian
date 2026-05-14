@@ -648,10 +648,10 @@ h1, h2, h3 {
 }
 
 :is([id^="ex-flashcards-acc-"], [id^="ex-flashcards-plur-"], [id^="ex-flashcards-mal-"], [id^="ex-flashcards-mezzo-"], [id^="ex-flashcards-spec-"], [id^="ex-flashcards-past-"], [id^="ex-flashcards-fut-"], [id^="ex-flashcards-mdl-"], [id^="ex-flashcards-mpl-"]) .fca01-counter {
-  color: #999;
+  color: #333;
   font-family: monospace;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   flex: 0 0 auto;
   text-align: center;
 }
@@ -1252,12 +1252,13 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 
 /* 4. Счётчик (1 из 10) */
-.universal-dd .exercise-counter { 
-    color: #9ca3af; 
-    font-size: 0.85rem; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
-    margin-bottom: 10px; 
+.universal-dd .exercise-counter {
+    color: #555;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 /* 5. Пропуски в тексте (Gaps) */
@@ -1545,9 +1546,10 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 
 #panel-acc-open-4 .fca01-counter {
-  color: #999;
+  color: #333;
   font-family: monospace;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 700;
   flex: 1;
   text-align: center;
 }
@@ -1720,11 +1722,11 @@ article.exercise-card[data-target="panel-acc-open-10"],
 #panel-mal-open-4 .fca01-btn-nav:disabled { opacity: 0.4; cursor: not-allowed; }
 
 #panel-mal-open-4 .fca01-counter {
-  color: #999;
+  color: #333;
   font-family: monospace;
-  font-size: 1.125rem;
+  font-size: 1rem;
+  font-weight: 700;
   text-align: center;
-  transform: scale(0.5);
 }
 
 #panel-mal-open-4 .mal04-card {
