@@ -153,15 +153,20 @@ export default class DragDropExercise {
         if (correct === total) {
             feedback.textContent = '✓ Corretto!';
             feedback.style.color = '#15803d';
-        } else if (exercise.explanation) {
-            const wrongCorrects = this.gapElements
-                .filter(g => g.classList.contains('incorrect'))
-                .map(g => exercise.correctAnswers[parseInt(g.dataset.gap, 10)])
-                .join(', ');
-            feedback.innerHTML = `ERRORE: ${wrongCorrects}<br>${exercise.explanation}`;
-            feedback.style.color = '#b91c1c';
         } else {
-            feedback.textContent = `Risultato: ${correct}/${total}`;
+            const wrongGaps = this.gapElements.filter(g => g.classList.contains('incorrect'));
+            const wrongWord = wrongGaps[0]?.dataset.word ?? '';
+            const specificFeedback = exercise.wrongFeedback?.[wrongWord];
+            if (specificFeedback) {
+                feedback.innerHTML = `✗ ${specificFeedback}`;
+            } else if (exercise.explanation) {
+                const wrongCorrects = wrongGaps
+                    .map(g => exercise.correctAnswers[parseInt(g.dataset.gap, 10)])
+                    .join(', ');
+                feedback.innerHTML = `✗ ${wrongCorrects}<br>${exercise.explanation}`;
+            } else {
+                feedback.textContent = `Risultato: ${correct}/${total}`;
+            }
             feedback.style.color = '#b91c1c';
         }
         checkBtn.style.display = 'none';

@@ -8,122 +8,168 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 const p1exercises = [
     {
         instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Сейчас я {{1}} на работу на метро.",
-        words: ["еду", "езжу", "едет"],
-        correctAnswers: { 1: "еду" }
+        text: "Машина сломалась, вот я {{1}} на метро!",
+        words: ["едет", "езжу", "еду"],
+        correctAnswers: { 1: "еду" },
+        wrongFeedback: {
+            "едет": "Verbo giusto, ma persona sbagliata: chi parla è «я» → 1ª pers. sg., non 3ª.",
+            "езжу": "La macchina è rotta — è un viaggio specifico di adesso, non un'abitudine → ехать."
+        }
     },
     {
         instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "На работу она {{1}} на машине.",
-        words: ["ездит", "едет", "ездишь"],
-        correctAnswers: { 1: "ездит" }
+        text: "Она {{1}} в Верону на поезде — сейчас уже в поезде.",
+        words: ["едет", "едем", "ездит"],
+        correctAnswers: { 1: "едет" },
+        wrongFeedback: {
+            "едем": "Verbo giusto, ma persona sbagliata: soggetto «она» → 3ª pers. sg., non 1ª pl.",
+            "ездит": "«Сейчас уже в поезде» — è in viaggio adesso, destinazione precisa → ехать."
+        }
     },
     {
         instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Ему нравится {{1}} на велике.",
-        words: ["ездить", "ехать", "ездит"],
-        correctAnswers: { 1: "ездить" }
+        text: "Мы на выходные {{1}} к родителям.",
+        words: ["едут", "едем", "ездим"],
+        correctAnswers: { 1: "едем" },
+        wrongFeedback: {
+            "едут": "Verbo giusto, ma persona sbagliata: soggetto «мы» → 1ª pers. pl., non 3ª pl.",
+            "ездим": "«На выходные» — viaggio specifico programmato, non un'abitudine → ехать."
+        }
     },
     {
         instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "По выходным он обычно {{1}} кататься в парк.",
-        words: ["ездит", "едет", "ездишь"],
-        correctAnswers: { 1: "ездит" }
-    },
-    {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Зимой он {{1}} на лыжах два-три раза в неделю.",
-        words: ["ездит", "едет", "ездят"],
-        correctAnswers: { 1: "ездит" }
-    },
-    {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "На эту сумму можно {{1}} в Мексику два раза в год!",
-        words: ["ездить", "ехать", "ездит"],
-        correctAnswers: { 1: "ездить" }
-    },
-    {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Мы {{1}} каждые выходные.",
-        words: ["ездим", "едем", "ездят"],
-        correctAnswers: { 1: "ездим" }
+        text: "Ты только сейчас {{1}} в супермаркет?!",
+        words: ["еду", "ездишь", "едешь"],
+        correctAnswers: { 1: "едешь" },
+        wrongFeedback: {
+            "еду": "Verbo giusto, ma persona sbagliata: soggetto «ты» → 2ª pers. sg., non 1ª sg.",
+            "ездишь": "«Только сейчас» — sta andando al supermercato in questo momento → ехать."
+        }
     },
     {
         instruction: "Выбери правильную форму глагола движения с транспортом.",
         text: "Мне до офиса {{1}} 25 минут.",
-        words: ["ехать", "ездить", "едет"],
-        correctAnswers: { 1: "ехать" }
+        words: ["едем", "ехать", "ездить"],
+        correctAnswers: { 1: "ехать" },
+        wrongFeedback: {
+            "едем": "Verbo giusto, ma «мне... минут» esprime durata: serve l'infinito, non la forma personale.",
+            "ездить": "Si tratta del tempo di un singolo tragitto verso l'ufficio → ехать."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения с транспортом.",
+        text: "Ты же на машине {{1}} на работу — что ты здесь делаешь?",
+        words: ["ездишь", "ездит", "едешь"],
+        correctAnswers: { 1: "ездишь" },
+        wrongFeedback: {
+            "ездит": "Verbo giusto, ma persona sbagliata: soggetto «ты» → 2ª pers. sg., non 3ª sg.",
+            "едешь": "«Же» — è la tua abitudine consolidata, non un viaggio specifico → ездить."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения с транспортом.",
+        text: "Наш сын научился {{1}} на велосипеде.",
+        words: ["ездит", "ехать", "ездить"],
+        correctAnswers: { 1: "ездить" },
+        wrongFeedback: {
+            "ездит": "Verbo giusto, ma dopo «научиться» serve l'infinito, non la forma personale.",
+            "ехать": "«Научился» — ha imparato un'abilità per uso ripetuto → ездить."
+        }
     },
     {
         instruction: "Выбери правильную форму глагола движения с транспортом.",
         text: "Ненавижу {{1}} на метро — там постоянно толпа!",
-        words: ["ездить", "ехать", "ездит"],
-        correctAnswers: { 1: "ездить" }
+        words: ["ездишь", "ездить", "ехать"],
+        correctAnswers: { 1: "ездить" },
+        wrongFeedback: {
+            "ездишь": "Verbo giusto, ma dopo «ненавижу» serve l'infinito, non la forma personale.",
+            "ехать": "«Ненавижу» + «постоянно» — odio abituale per la metro → ездить."
+        }
     },
     {
         instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Мне очень нравится {{1}} на самокате.",
-        words: ["ездить", "ехать", "ездит"],
-        correctAnswers: { 1: "ездить" }
+        text: "Я обычно в городе на машине не {{1}} — постоянно пробки!",
+        words: ["езжу", "ездит", "еду"],
+        correctAnswers: { 1: "езжу" },
+        wrongFeedback: {
+            "ездит": "Verbo giusto, ma soggetto «я» → 1ª pers. sg.: езжу (forma irregolare!), non ездит.",
+            "еду": "«Обычно» — non guida mai in città per abitudine, non un caso specifico → ездить."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения с транспортом.",
+        text: "Обычно ты {{1}} на трамвае?",
+        words: ["ездит", "едешь", "ездишь"],
+        correctAnswers: { 1: "ездишь" },
+        wrongFeedback: {
+            "ездит": "Verbo giusto, ma soggetto «ты» → 2ª pers. sg., non 3ª sg.",
+            "едешь": "«Обычно» — si chiede un'abitudine regolare, non un viaggio specifico → ездить."
+        }
     },
 ];
 
 // ============================================================
-// PANEL 5 — DragDrop · paid · Ехать (viaggio specifico)
+// PANEL 5 — DragDrop · student · Спряжение ЕХАТЬ
 // ============================================================
 const p5exercises = [
     {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Сейчас она {{1}} в аэропорт на такси.",
-        words: ["едет", "ездит", "едут"],
-        correctAnswers: { 1: "едет" }
-    },
-    {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Завтра утром мы {{1}} на море на машине.",
-        words: ["едем", "ездим", "едет"],
-        correctAnswers: { 1: "едем" }
-    },
-    {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Ты сегодня {{1}} на работу на метро?",
-        words: ["едешь", "ездишь", "едет"],
-        correctAnswers: { 1: "едешь" }
-    },
-    {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "В эту субботу они {{1}} к бабушке на электричке.",
-        words: ["едут", "ездят", "едем"],
-        correctAnswers: { 1: "едут" }
-    },
-    {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Я прямо сейчас {{1}} домой на автобусе.",
-        words: ["еду", "езжу", "едет"],
+        instruction: "Выбери правильную форму глагола ЕХАТЬ.",
+        text: "Машина сломалась, вот я {{1}} на метро!",
+        words: ["едет", "езжу", "еду"],
         correctAnswers: { 1: "еду" }
     },
     {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Вы завтра {{1}} на конференцию на поезде?",
-        words: ["едете", "ездите", "едем"],
-        correctAnswers: { 1: "едете" }
+        instruction: "Выбери правильную форму глагола ЕХАТЬ.",
+        text: "Ты только сейчас {{1}} в супермаркет?!",
+        words: ["едешь", "еду", "ездишь"],
+        correctAnswers: { 1: "едешь" }
     },
     {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "В понедельник он {{1}} в Рим на машине.",
-        words: ["едет", "ездит", "едут"],
+        instruction: "Выбери правильную форму глагола ЕХАТЬ.",
+        text: "Она {{1}} в Верону на поезде — сейчас уже в поезде.",
+        words: ["едем", "едет", "ездит"],
         correctAnswers: { 1: "едет" }
     },
     {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Мы сейчас {{1}} по шоссе.",
-        words: ["едем", "ездим", "едут"],
+        instruction: "Выбери правильную форму глагола ЕХАТЬ.",
+        text: "Он после обеда {{1}} в ИКЕА.",
+        words: ["едут", "ездит", "едет"],
+        correctAnswers: { 1: "едет" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ.",
+        text: "Мы на выходные {{1}} к родителям.",
+        words: ["едут", "едем", "ездим"],
         correctAnswers: { 1: "едем" }
     },
     {
-        instruction: "Выбери правильную форму глагола движения с транспортом.",
-        text: "Она сегодня вечером {{1}} к подруге на такси.",
-        words: ["едет", "ездит", "едем"],
+        instruction: "Выбери правильную форму глагола ЕХАТЬ.",
+        text: "Куда вы {{1}} в отпуск в этом году?",
+        words: ["едете", "едем", "ездите"],
+        correctAnswers: { 1: "едете" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ.",
+        text: "В субботу они {{1}} к бабушке на электричке.",
+        words: ["едем", "ездят", "едут"],
+        correctAnswers: { 1: "едут" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ.",
+        text: "На работу {{1}} на метро или на велике — зависит от погоды.",
+        words: ["едет", "еду", "езжу"],
+        correctAnswers: { 1: "еду" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ.",
+        text: "— Куда в этом году? — Как обычно, {{1}} на Бали на пару месяцев.",
+        words: ["едут", "ездим", "едем"],
+        correctAnswers: { 1: "едем" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ.",
+        text: "Женя уже {{1}} за мной.",
+        words: ["едет", "едешь", "ездит"],
         correctAnswers: { 1: "едет" }
     }
 ];
@@ -134,112 +180,112 @@ const p5exercises = [
 const p6exercises = [
     {
         instruction: "Выбери правильную форму глагола ЕЗДИТЬ.",
-        text: "Я каждый день {{1}} на работу на метро.",
-        words: ["еду", "езжу", "ездит"],
+        text: "По воскресеньям я {{1}} на рынок на велосипеде.",
+        words: ["ездит", "езжу", "еду"],
         correctAnswers: { 1: "езжу" }
     },
     {
         instruction: "Выбери правильную форму глагола ЕЗДИТЬ.",
-        text: "Ты часто {{1}} в центр на велосипеде?",
-        words: ["едешь", "ездишь", "ездит"],
+        text: "Как часто ты {{1}} в гости к бабушке?",
+        words: ["ездишь", "ездит", "едешь"],
         correctAnswers: { 1: "ездишь" }
     },
     {
         instruction: "Выбери правильную форму глагола ЕЗДИТЬ.",
-        text: "Она всегда {{1}} на работу на автобусе.",
-        words: ["едет", "ездит", "ездишь"],
+        text: "Каждое утро он {{1}} на работу на велосипеде.",
+        words: ["ездим", "ездит", "едет"],
         correctAnswers: { 1: "ездит" }
     },
     {
         instruction: "Выбери правильную форму глагола ЕЗДИТЬ.",
-        text: "Мы обычно {{1}} на дачу на машине.",
-        words: ["едем", "ездим", "ездят"],
+        text: "Лена {{1}} только на такси — не любит метро.",
+        words: ["едет", "ездим", "ездит"],
+        correctAnswers: { 1: "ездит" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕЗДИТЬ.",
+        text: "Мы с друзьями иногда {{1}} за город на шашлыки.",
+        words: ["ездим", "ездят", "едем"],
         correctAnswers: { 1: "ездим" }
     },
     {
         instruction: "Выбери правильную форму глагола ЕЗДИТЬ.",
-        text: "Вы всегда {{1}} домой на метро?",
-        words: ["едете", "ездите", "ездим"],
+        text: "Вы часто {{1}} на дачу в выходные?",
+        words: ["ездим", "едете", "ездите"],
         correctAnswers: { 1: "ездите" }
     },
     {
         instruction: "Выбери правильную форму глагола ЕЗДИТЬ.",
-        text: "Они каждое лето {{1}} на море на поезде.",
-        words: ["едут", "ездят", "ездим"],
+        text: "Дети каждый день {{1}} в школу на автобусе.",
+        words: ["ездит", "ездят", "едут"],
         correctAnswers: { 1: "ездят" }
     },
     {
         instruction: "Выбери правильную форму глагола ЕЗДИТЬ.",
-        text: "Раз в месяц он {{1}} к бабушке на электричке.",
-        words: ["едет", "ездит", "езжу"],
-        correctAnswers: { 1: "ездит" }
-    },
-    {
-        instruction: "Выбери правильную форму глагола ЕЗДИТЬ.",
-        text: "По воскресеньям я {{1}} на рынок на велосипеде.",
-        words: ["еду", "езжу", "ездит"],
+        text: "Я редко {{1}} на такси — дорого!",
+        words: ["езжу", "ездит", "еду"],
         correctAnswers: { 1: "езжу" }
     },
     {
         instruction: "Выбери правильную форму глагола ЕЗДИТЬ.",
-        text: "Мы иногда {{1}} в соседний город на поезде.",
-        words: ["едем", "ездим", "едут"],
-        correctAnswers: { 1: "ездим" }
+        text: "Катя {{1}} к нам раз в месяц — всегда с подарками.",
+        words: ["едет", "ездишь", "ездит"],
+        correctAnswers: { 1: "ездит" }
     },
     {
         instruction: "Выбери правильную форму глагола ЕЗДИТЬ.",
-        text: "По субботам они {{1}} на рынок на велосипедах.",
-        words: ["едут", "ездят", "ездим"],
-        correctAnswers: { 1: "ездят" }
+        text: "Каждое лето {{1}} к морю на машине — уже традиция.",
+        words: ["ездят", "ездим", "едем"],
+        correctAnswers: { 1: "ездим" }
     }
 ];
 
 // ============================================================
-// PANEL 2 — Flashcard · public · Mix panel 5 + panel 6
+// PANEL 2 — Flashcard · public · Mix ехать + ездить
 // ============================================================
 const p2cards = [
-    { front: "Каждый день я",           back: "езжу на работу на метро" },
-    { front: "Как часто ты",            back: "ездишь в горы?" },
-    { front: "На работу она",           back: "ездит на машине" },
-    { front: "Мы",                      back: "ездим каждые выходные" },
-    { front: "Зимой они",               back: "ездят на лыжах два-три раза в неделю" },
-    { front: "Сейчас я",                back: "еду на работу на метро" },
-    { front: "Ты",                      back: "едешь с нами на озеро?" },
-    { front: "Сегодня она",             back: "едет в Верону на поезде" },
-    { front: "Мы на выходные",          back: "едем к родителям" },
-    { front: "Они",                     back: "едут в парк кататься на великах" },
+    { front: "Сейчас он",              back: "едет в банк — срочные дела",                        explanation: "«Сейчас» + destinazione precisa in questo momento → ехать." },
+    { front: "По воскресеньям я",      back: "езжу на рынок на велосипеде",                       explanation: "«По воскресеньям» — complemento di tempo frequenziale → ездить." },
+    { front: "Зимой мы",               back: "ездим на горнолыжный курорт каждый год",            explanation: "«Каждый год» — azione ripetuta con frequenza regolare → ездить." },
+    { front: "Женя уже",               back: "едет за мной",                                       explanation: "«Уже» — movimento in corso adesso, direzione precisa → ехать." },
+    { front: "Ненавижу",               back: "ездить на метро — там постоянно толпа!",            explanation: "Dopo «ненавидеть» → infinito: odio per un'azione abituale → ездить." },
+    { front: "Завтра мы",              back: "едем на море — уже взяли билеты!",                  explanation: "«Уже взяли билеты» — viaggio specifico con azione già avviata → ехать." },
+    { front: "Куда вы",                back: "едете в отпуск в этом году?",                       explanation: "«В этом году» — viaggio specifico verso una destinazione precisa → ехать." },
+    { front: "Мне нравится",           back: "ездить на электричке — читаю книги",                explanation: "Dopo «нравиться» → infinito ездить: piacere per un'azione ripetuta → ездить." },
+    { front: "Мы на выходные",         back: "едем к родителям",                                  explanation: "«На выходные» — viaggio specifico programmato verso una destinazione → ехать." },
+    { front: "Раз в полгода он",       back: "ездит к другу в Рим",                               explanation: "«Раз в полгода» — complemento di tempo frequenziale → ездить." },
 ];
 
 // ============================================================
-// PANEL 7 — Flashcard · paid · Mix panel 5 + panel 6 (остатки)
+// PANEL 7 — Flashcard · student · Mix ехать + ездить
 // ============================================================
 const p7cards = [
-    { front: "Ему",                    back: "нравится ездить на велике" },
-    { front: "Раз в месяц он",         back: "ездит к бабушке на электричке" },
-    { front: "Она",                    back: "едет в Верону на поезде" },
-    { front: "Тимур предпочитает",     back: "ездить на велосипеде" },
+    { front: "После обеда он",         back: "едет в ИКЕА" },
+    { front: "Как часто ты",           back: "ездишь в гости к бабушке?" },
+    { front: "В субботу они",          back: "едут к бабушке на электричке" },
+    { front: "Вы часто",               back: "ездите на дачу в выходные?" },
     { front: "Мне до офиса",           back: "ехать 25 минут" },
-    { front: "В понедельник он",       back: "едет в Рим на машине" },
-    { front: "Ты только сейчас",       back: "едешь в супермаркет?!" },
-    { front: "Мы на выходные",         back: "едем к родителям" },
-    { front: "На работу",              back: "еду на метро или на велике" },
-    { front: "Моя дочь боится",        back: "ездить на велосипеде" },
+    { front: "Сегодня вечером мы",     back: "едем в ресторан — заказали столик" },
+    { front: "Каждое воскресенье они", back: "ездят на рыбалку" },
+    { front: "Уже завтра мы",          back: "едем в Венецию!" },
+    { front: "Каждый день Тимур",      back: "ездит на работу на велосипеде" },
+    { front: "Я не люблю",             back: "ездить в час пик — в метро невозможно!" },
 ];
 
 // ============================================================
-// PANEL 8 — Flashcard · paid
+// PANEL 8 — Flashcard · paid · Mix ехать + ездить
 // ============================================================
 const p8cards = [
-    { front: "Сейчас я",            back: "еду на работу на метро" },
-    { front: "По выходным он",      back: "обычно ездит кататься в парк" },
-    { front: "Зимой он",            back: "ездит на лыжах два-три раза в неделю" },
-    { front: "Мне нравится",        back: "ездить в горы" },
-    { front: "На работу она",       back: "ездит на машине" },
-    { front: "На чём она",          back: "едет в Москву?" },
-    { front: "Ненавижу",            back: "ездить на метро" },
-    { front: "На эту сумму можно",  back: "ездить в Мексику два раза в год!" },
-    { front: "Во сколько они",      back: "едут в парк кататься на великах?" },
-    { front: "Ты",                  back: "едешь с нами на озеро в выходные?" },
+    { front: "Каждое утро он",           back: "ездит на работу на велосипеде" },
+    { front: "Машина сломалась, вот я",  back: "еду на метро!" },
+    { front: "Раз в неделю мы",          back: "ездим в бассейн вместе" },
+    { front: "Сегодня к нам",            back: "едет Маша — она впервые в Италии!" },
+    { front: "Я обычно",                 back: "в городе на машине не езжу — постоянно пробки!" },
+    { front: "Ты только сейчас",         back: "едешь в супермаркет?!" },
+    { front: "В пять часов",             back: "они едут в Москву на поезде" },
+    { front: "Никогда на такси —",       back: "езжу только на велосипеде или пешком" },
+    { front: "Иногда мы с друзьями",     back: "ездим за город на шашлыки" },
+    { front: "Я сейчас",                 back: "еду на интервью — очень волнуюсь!" },
 ];
 
 // ============================================================
@@ -259,19 +305,19 @@ const p3cards = [
 ];
 
 // ============================================================
-// PANEL 9 — Flashcard · paid · Mix panel 8 + panel 3
+// PANEL 9 — Flashcard · student · Mix ехать + ездить
 // ============================================================
 const p9cards = [
-    { front: "По выходным он",      back: "обычно ездит кататься в парк" },
-    { front: "Мы на выходные",      back: "едем к родителям" },
-    { front: "На работу она",       back: "ездит на машине" },
-    { front: "Сегодня она",         back: "едет в Верону на поезде" },
-    { front: "На чём она",          back: "едет в Москву?" },
-    { front: "Ненавижу",            back: "ездить на метро" },
-    { front: "На эту сумму можно",  back: "ездить в Мексику два раза в год!" },
-    { front: "Ему",                 back: "нравится ездить на велике" },
-    { front: "Наш сын научился",    back: "ездить на велосипеде" },
-    { front: "Ты",                  back: "едешь с нами на озеро в выходные?" },
+    { front: "Каждые выходные бабушка",    back: "ездит к внукам на автобусе" },
+    { front: "В субботу они",              back: "едут к бабушке на электричке" },
+    { front: "Иногда мы с друзьями",       back: "ездим за город на шашлыки" },
+    { front: "Послезавтра она",            back: "едет в Берлин на конференцию" },
+    { front: "Раз в неделю мы",            back: "ездим в бассейн вместе" },
+    { front: "Прямо сейчас они",           back: "едут на стадион — большой матч!" },
+    { front: "Каждое воскресенье они",     back: "ездят на рыбалку" },
+    { front: "Уже завтра утром он",        back: "едет в командировку в Москву" },
+    { front: "Летом мы обычно",            back: "ездим на дачу" },
+    { front: "Сегодня к нам",              back: "едет Маша — она впервые в Италии!" },
 ];
 
 // ============================================================
@@ -449,17 +495,17 @@ function initPanel4() {
                     if (firstId === secondId) {
                         previousCard.classList.add('matched');
                         clickedCard.classList.add('matched');
-                        feedbackEl.textContent = "\u2728 \u041e\u0442\u043b\u0438\u0447\u043d\u043e!";
+                        feedbackEl.textContent = "✨ Отлично!";
                         feedbackEl.className = "fca01-match-feedback correct";
                         selectedMatchCard = null;
                         setTimeout(() => { feedbackEl.textContent = ""; }, 1000);
                         const remaining = matchContainer.querySelectorAll('.fca01-match-card:not(.matched)').length;
-                        if (remaining === 0) feedbackEl.textContent = "\ud83c\udf89 \u041f\u041e\u0411\u0415\u0414\u0410! \ud83c\udf89";
+                        if (remaining === 0) feedbackEl.textContent = "🎉 ПОБЕДА! 🎉";
                     } else {
                         isProcessingMatch = true;
                         clickedCard.classList.add('wrong');
                         previousCard.classList.add('wrong');
-                        feedbackEl.textContent = "\u041d\u0435\u0432\u0435\u0440\u043d\u043e";
+                        feedbackEl.textContent = "Неверно";
                         feedbackEl.className = "fca01-match-feedback wrong";
                         setTimeout(() => {
                             clickedCard.classList.remove('selected', 'wrong');
@@ -496,7 +542,7 @@ function initPanel4() {
                     <p class="quiz-instruction">Scrivete la forma corretta</p>
                     <div class="quiz-item" data-id="${item.id}">
                         <div class="quiz-prompt">${item.promptPrefix}<input type="text" class="quiz-input" data-index="${i - MATCH_END}">${item.promptSuffix}</div>
-                        <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">\u041f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c</button></div>
+                        <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">Проверить</button></div>
                         <div class="quiz-feedback"></div>
                     </div>
                 `;
@@ -587,12 +633,12 @@ function initPanel4() {
                     input.classList.add('correct');
                     input.disabled = true;
                     this.disabled  = true;
-                    fb.textContent = '\u041f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e!';
+                    fb.textContent = 'Правильно!';
                     fb.className   = 'quiz-feedback correct';
                 } else {
                     input.classList.remove('correct');
                     input.classList.add('incorrect');
-                    fb.textContent = '\u041d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e. \u041f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0435\u0449\u0451 \u0440\u0430\u0437.';
+                    fb.textContent = 'Неправильно. Попробуйте ещё раз.';
                     fb.className   = 'quiz-feedback incorrect';
                 }
             });
