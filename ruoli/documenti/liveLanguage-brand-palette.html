@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LiveLanguage Russian — Brand Color System</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Mono:wght@300;400;500&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;900&family=Comfortaa:wght@300;400;700&family=PT+Mono&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --rosso:   #C0282D;
+    --rosa:    #F554A3;
+    --verde:   #49A056;
+    --turchese:#0E94C9;
+    --giallo:  #E8C13A;
+    --crema:   #F0EEF7;
+    --bruno:   #2C2016;
+    --black:   #1A1A1A;
+    --mid:     #555555;
+    --white:   #FFFFFF;
+    --light:   #F0EEF7;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+  }
+
+  /* COVER */
+  .cover {
+    background: var(--black);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover-stripe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 6px;
+    display: flex;
+  }
+  .cover-stripe span { flex: 1; }
+
+  .cover-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 3rem;
+  }
+
+  .cover-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 2rem;
+  }
+
+  .cover-title {
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 300;
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+
+  .cover-title em {
+    
+    color: var(--rosso);
+  }
+
+  .cover-sub {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.01em;
+  }
+
+  .cover-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+  }
+
+  /* CONTENT PAGES */
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5rem 4rem;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #E8E4DF;
+  }
+
+  /* ANCHOR COLOR */
+  .anchor-block {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    align-items: start;
+  }
+
+  .anchor-swatch {
+    aspect-ratio: 1;
+    background: var(--rosso);
+    border-radius: 16px;
+  }
+
+  .anchor-info { padding-top: 1rem; }
+
+  .anchor-name {
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .anchor-role {
+    font-size: 1rem;
+    font-weight: 300;
+    
+    color: var(--mid);
+    margin-bottom: 2rem;
+  }
+
+  .anchor-hex {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--mid);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .anchor-desc {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--mid);
+    max-width: 380px;
+  }
+
+  /* NEUTRAL COLORS */
+  .neutral-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .neutral-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #E8E4DF;
+  }
+
+  .nc-swatch { height: 100px; }
+
+  .nc-info { padding: 0.9rem 1rem; }
+
+  .nc-name {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+  }
+
+  .nc-hex {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--mid);
+  }
+
+  /* DIVIDER PAGE */
+  .divider-page {
+    background: var(--rosso);
+    padding: 5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+  }
+
+  .divider-text {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 300;
+    
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.4;
+  }
+
+  /* ACCENT GRID */
+  .accent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5px;
+    background: #E8E4DF;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 5rem;
+  }
+
+  .accent-card {
+    background: var(--white);
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .ac-swatch {
+    height: 160px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.2rem;
+  }
+
+  .ac-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--rosso);
+    border: 2px solid rgba(255,255,255,0.4);
+    flex-shrink: 0;
+  }
+
+  .ac-info { padding: 1.2rem 1.4rem 1.5rem; }
+
+  .ac-name {
+    font-size: 1.05rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+  }
+
+  .ac-colorname {
+    font-size: 0.85rem;
+    font-weight: 300;
+    
+    color: var(--mid);
+    margin-bottom: 0.5rem;
+  }
+
+  .ac-hex {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--mid);
+    letter-spacing: 0.05em;
+  }
+
+  /* GRADIENT STRIP */
+  .strip-section { margin-bottom: 5rem; }
+
+  .gradient-strip {
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+
+  .gs { flex: 1; }
+
+  .strip-labels {
+    display: flex;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.05em;
+    color: var(--mid);
+  }
+
+  .strip-labels span { flex: 1; text-align: center; }
+
+  /* PAIRING GRID */
+  .pairing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .pair-card {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .pair-half { height: 60px; }
+
+  /* USAGE SECTION */
+  .usage-section {
+    background: var(--light);
+    border-radius: 16px;
+    padding: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  .usage-title {
+    font-size: 1.4rem;
+    font-weight: 300;
+    
+    margin-bottom: 2rem;
+    color: var(--black);
+  }
+
+  .usage-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #DDD9D4;
+  }
+
+  .usage-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .usage-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .usage-text {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--black);
+  }
+
+  .usage-text strong { font-weight: 600; }
+
+  /* REFERENCE TABLE */
+  .ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5rem;
+  }
+
+  .ref-table th {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid);
+    text-align: left;
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #E8E4DF;
+    font-weight: 400;
+  }
+
+  .ref-table td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid #F0EDE8;
+    font-size: 0.95rem;
+    font-weight: 300;
+    vertical-align: middle;
+  }
+
+  .ref-table tr:last-child td { border-bottom: none; }
+
+  .rt-swatch {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .rt-hex {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--mid);
+  }
+
+  .rt-name-it {
+    
+    color: var(--mid);
+    font-size: 0.85rem;
+  }
+
+  /* TYPOGRAPHY SECTION */
+  .type-context-badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+  }
+  .badge-platform { background: #2C2016; color: #F0EEF7; }
+  .badge-visual   { background: #C0282D; color: #FFFFFF; }
+  .badge-collage  { background: #1A1A1A; color: #F0EEF7; }
+
+  .font-block {
+    border: 1px solid #E8E4DF;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .font-preview {
+    padding: 2.5rem 3rem;
+    background: var(--light);
+    border-bottom: 1px solid #E8E4DF;
+  }
+
+  .font-preview-dark {
+    background: #1A1A1A;
+    border-bottom: 1px solid #333;
+  }
+
+  .font-preview-cream {
+    background: #F0EEF7;
+  }
+
+  .font-meta {
+    padding: 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    background: var(--white);
+  }
+
+  .fm-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .fm-value {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--black);
+  }
+
+  .font-role-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+    display: block;
+    margin-bottom: 0.8rem;
+  }
+
+  .type-divider {
+    height: 1px;
+    background: #E8E4DF;
+    margin: 3rem 0;
+  }
+
+  .type-pairing-demo {
+    background: #1A1A1A;
+    border-radius: 16px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .type-pairing-demo-light {
+    background: #F0EEF7;
+  }
+
+  .collage-demo {
+    background: #e8e4df;
+    border-radius: 16px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .collage-strip {
+    display: inline-block;
+    padding: 4px 12px 6px;
+    color: #fff;
+    position: relative;
+    margin: 4px 0;
+  }
+
+  .collage-strip::after {
+    content: '';
+    position: absolute;
+    top: -5px; right: 8px;
+    width: 22px; height: 8px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 1px;
+  }
+
+  .type-rules {
+    background: var(--light);
+    border-radius: 16px;
+    padding: 2.5rem 3rem;
+    margin-bottom: 5rem;
+  }
+
+  .type-rule-row {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #DDD9D4;
+  }
+
+  .type-rule-row:last-child { border-bottom: none; }
+
+  .tr-context {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+    min-width: 120px;
+    padding-top: 3px;
+  }
+
+  .tr-text {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--black);
+  }
+
+  .tr-text strong { font-weight: 600; }
+
+  @media print {
+    .cover { min-height: 100vh; page-break-after: always; }
+    .page { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-stripe">
+    <span style="background:#C0282D;"></span>
+    <span style="background:#F554A3;"></span>
+    <span style="background:#49A056;"></span>
+    <span style="background:#0E94C9;"></span>
+    <span style="background:#F0EEF7;"></span>
+    <span style="background:#2C2016;"></span>
+  </div>
+
+  <div></div>
+
+  <div class="cover-content">
+    <p class="cover-label">Brand Identity · Color System · 2025</p>
+    <h1 class="cover-title">Live<em>Language</em><br>Russian</h1>
+    <p class="cover-sub">Sistema cromatico — Brand Color Guide</p>
+  </div>
+
+  <div class="cover-footer">
+    <span>LiveLanguage Russian · Nadezhda Pletneva</span>
+    <span>Ispirato a Sanzo Wada · A Dictionary of Color Combinations</span>
+    <span>v1.0 · 2025</span>
+  </div>
+</div>
+
+
+<!-- SECTION 01: ANCHOR -->
+<div class="page">
+  <p class="section-label">01 — Colore unificante</p>
+
+  <div class="anchor-block">
+    <div class="anchor-swatch"></div>
+    <div class="anchor-info">
+      <h2 class="anchor-name">LiveLanguage<br>Rosso</h2>
+      <p class="anchor-role">Il colore che definisce il brand</p>
+      <span class="anchor-hex">HEX · #C0282D</span>
+      <span class="anchor-hex">RGB · 192 · 40 · 45</span>
+      <span class="anchor-hex">CMYK · 0 · 79 · 77 · 25</span>
+      <p class="anchor-desc">Estratto dal corpo della matryoshka — il simbolo del brand. Presente in ogni materiale: header, bottoni CTA, titoli principali, copertine. È il punto fermo attorno a cui ruotano tutti gli accenti.</p>
+    </div>
+  </div>
+
+  <!-- NEUTRAL COLORS -->
+  <p class="section-label">02 — Colori neutri</p>
+  <div class="neutral-row">
+    <div class="neutral-card">
+      <div class="nc-swatch" style="background:#2C2016;"></div>
+      <div class="nc-info">
+        <p class="nc-name">Bruno Profondo</p>
+        <span class="nc-hex">HEX · #2C2016</span>
+      </div>
+    </div>
+    <div class="neutral-card">
+      <div class="nc-swatch" style="background:#555555;"></div>
+      <div class="nc-info">
+        <p class="nc-name">Mid Grey</p>
+        <span class="nc-hex">HEX · #555555</span>
+      </div>
+    </div>
+    <div class="neutral-card">
+      <div class="nc-swatch" style="background:#F0EEF7; border: 1px solid #E8E4DF;"></div>
+      <div class="nc-info">
+        <p class="nc-name">Crema Freddo</p>
+        <span class="nc-hex">HEX · #F0EEF7</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- DIVIDER -->
+<div class="divider-page">
+  <p class="divider-text">Un colore per ogni emozione.<br>Un rosso per tutto il brand.</p>
+</div>
+
+
+<!-- SECTION 03: ACCENT COLORS -->
+<div class="page">
+  <p class="section-label">03 — Accenti cromatici</p>
+
+  <div class="accent-grid">
+
+    <div class="accent-card">
+      <div class="ac-swatch" style="background:#F554A3;">
+        <div class="ac-dot"></div>
+      </div>
+      <div class="ac-info">
+        <p class="ac-name">Freddo — accento malva</p>
+        <p class="ac-colorname">Rosa Freddo</p>
+        <p class="ac-hex">HEX · #F554A3</p>
+      </div>
+    </div>
+
+    <div class="accent-card">
+      <div class="ac-swatch" style="background:#49A056;">
+        <div class="ac-dot"></div>
+      </div>
+      <div class="ac-info">
+        <p class="ac-name">Foglie — successo e progresso</p>
+        <p class="ac-colorname">Verde Foglia</p>
+        <p class="ac-hex">HEX · #49A056</p>
+      </div>
+    </div>
+
+    <div class="accent-card">
+      <div class="ac-swatch" style="background:#0E94C9;">
+        <div class="ac-dot"></div>
+      </div>
+      <div class="ac-info">
+        <p class="ac-name">Sfondo — link e interazione</p>
+        <p class="ac-colorname">Turchese Sfondo</p>
+        <p class="ac-hex">HEX · #0E94C9</p>
+      </div>
+    </div>
+
+    <div class="accent-card">
+      <div class="ac-swatch" style="background:#C0282D;">
+        <div class="ac-dot" style="background:#F554A3;"></div>
+      </div>
+      <div class="ac-info">
+        <p class="ac-name">CTA primario — azione principale</p>
+        <p class="ac-colorname">Rosso Matryoshka</p>
+        <p class="ac-hex">HEX · #C0282D</p>
+      </div>
+    </div>
+
+    <div class="accent-card">
+      <div class="ac-swatch" style="background:#E8C13A;">
+        <div class="ac-dot" style="background:#2C2016;"></div>
+      </div>
+      <div class="ac-info">
+        <p class="ac-name">Energia — highlight e navigazione</p>
+        <p class="ac-colorname">Giallo Caldo</p>
+        <p class="ac-hex">HEX · #E8C13A</p>
+      </div>
+    </div>
+
+    <div class="accent-card">
+      <div class="ac-swatch" style="background:#2C2016;">
+        <div class="ac-dot" style="background:#E8C13A;"></div>
+      </div>
+      <div class="ac-info">
+        <p class="ac-name">Base scura — testo e footer</p>
+        <p class="ac-colorname">Bruno Profondo</p>
+        <p class="ac-hex">HEX · #2C2016</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- GRADIENT STRIP -->
+  <p class="section-label">04 — Spettro cromatico</p>
+  <div class="strip-section">
+    <div class="gradient-strip">
+      <div class="gs" style="background:#C0282D;"></div>
+      <div class="gs" style="background:#F554A3;"></div>
+      <div class="gs" style="background:#49A056;"></div>
+      <div class="gs" style="background:#0E94C9;"></div>
+      <div class="gs" style="background:#E8C13A;"></div>
+      <div class="gs" style="background:#F0EEF7;"></div>
+      <div class="gs" style="background:#2C2016;"></div>
+    </div>
+    <div class="strip-labels">
+      <span>Rosso</span>
+      <span>Rosa</span>
+      <span>Verde</span>
+      <span>Turchese</span>
+      <span>Giallo</span>
+      <span>Crema</span>
+      <span>Bruno</span>
+    </div>
+  </div>
+
+
+  <!-- PAIRINGS -->
+  <p class="section-label">05 — Abbinamenti Rosso + accento</p>
+  <div class="pairing-grid">
+    <div class="pair-card">
+      <div class="pair-half" style="background:#C0282D;"></div>
+      <div class="pair-half" style="background:#F0EEF7;"></div>
+    </div>
+    <div class="pair-card">
+      <div class="pair-half" style="background:#C0282D;"></div>
+      <div class="pair-half" style="background:#F554A3;"></div>
+    </div>
+    <div class="pair-card">
+      <div class="pair-half" style="background:#C0282D;"></div>
+      <div class="pair-half" style="background:#49A056;"></div>
+    </div>
+    <div class="pair-card">
+      <div class="pair-half" style="background:#C0282D;"></div>
+      <div class="pair-half" style="background:#0E94C9;"></div>
+    </div>
+    <div class="pair-card">
+      <div class="pair-half" style="background:#C0282D;"></div>
+      <div class="pair-half" style="background:#E8C13A;"></div>
+    </div>
+    <div class="pair-card">
+      <div class="pair-half" style="background:#C0282D;"></div>
+      <div class="pair-half" style="background:#2C2016;"></div>
+    </div>
+    <div class="pair-card">
+      <div class="pair-half" style="background:#C0282D;"></div>
+      <div class="pair-half" style="background:#555555;"></div>
+    </div>
+  </div>
+
+
+  <!-- USAGE -->
+  <p class="section-label">06 — Regole d'uso</p>
+  <div class="usage-section">
+    <p class="usage-title">Come applicare il sistema</p>
+
+    <div class="usage-row">
+      <div class="usage-dot" style="background:#C0282D;"></div>
+      <p class="usage-text"><strong>Rosso Matryoshka #C0282D</strong> — presente in ogni materiale del brand. Header, bottoni CTA, titoli principali, copertine corsi e marathon. Non è mai assente.</p>
+    </div>
+    <div class="usage-row">
+      <div class="usage-dot" style="background:#F554A3;"></div>
+      <p class="usage-text"><strong>Rosa Freddo #F554A3</strong> — accento malva-magenta per icone, badge, highlight di sezione. Raffredda la palette mantenendo carattere e contrasto con il Rosso.</p>
+    </div>
+    <div class="usage-row">
+      <div class="usage-dot" style="background:#49A056;"></div>
+      <p class="usage-text"><strong>Verde Foglia #49A056</strong> — stati di successo, completamento esercizi, tag di livello (A1, A2). Mai come colore dominante di pagina.</p>
+    </div>
+    <div class="usage-row">
+      <div class="usage-dot" style="background:#0E94C9;"></div>
+      <p class="usage-text"><strong>Turchese Sfondo #0E94C9</strong> — link, elementi interattivi, hover state. Richiama il bokeh turchese del logo originale.</p>
+    </div>
+    <div class="usage-row">
+      <div class="usage-dot" style="background:#E8C13A;"></div>
+      <p class="usage-text"><strong>Giallo Caldo #E8C13A</strong> — highlight energico, numeri di lezione, etichette di navigazione. Usato con parsimonia come punto luce nella composizione.</p>
+    </div>
+    <div class="usage-row">
+      <div class="usage-dot" style="background:#F0EEF7; border: 1px solid #DDD9D4;"></div>
+      <p class="usage-text"><strong>Crema Freddo #F0EEF7</strong> — sfondo alternativo di pagina, card in sezioni chiare. Sottotono lavanda che raffredda senza perdere luminosità.</p>
+    </div>
+    <div class="usage-row">
+      <div class="usage-dot" style="background:#2C2016;"></div>
+      <p class="usage-text"><strong>Bruno Profondo #2C2016</strong> — testo corpo, titoli su sfondo chiaro, footer. Sostituisce il nero puro per mantenere calore cromatico.</p>
+    </div>
+  </div>
+
+
+  <!-- REFERENCE TABLE -->
+  <p class="section-label">07 — Tavola di riferimento</p>
+  <table class="ref-table">
+    <thead>
+      <tr>
+        <th>—</th>
+        <th>Uso</th>
+        <th>Nome colore</th>
+        <th>HEX</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rt-swatch" style="background:#C0282D;"></span></td>
+        <td>Colore unificante — CTA, titoli, header</td>
+        <td class="rt-name-it">Rosso Matryoshka</td>
+        <td class="rt-hex">#C0282D</td>
+      </tr>
+      <tr>
+        <td><span class="rt-swatch" style="background:#F554A3;"></span></td>
+        <td>Accento freddo — icone, badge, highlight</td>
+        <td class="rt-name-it">Rosa Freddo</td>
+        <td class="rt-hex">#F554A3</td>
+      </tr>
+      <tr>
+        <td><span class="rt-swatch" style="background:#49A056;"></span></td>
+        <td>Successo — completamento, livelli</td>
+        <td class="rt-name-it">Verde Foglia</td>
+        <td class="rt-hex">#49A056</td>
+      </tr>
+      <tr>
+        <td><span class="rt-swatch" style="background:#0E94C9;"></span></td>
+        <td>Link e interazione</td>
+        <td class="rt-name-it">Turchese Sfondo</td>
+        <td class="rt-hex">#0E94C9</td>
+      </tr>
+      <tr>
+        <td><span class="rt-swatch" style="background:#E8C13A;"></span></td>
+        <td>Highlight energico — lezioni, navigazione</td>
+        <td class="rt-name-it">Giallo Caldo</td>
+        <td class="rt-hex">#E8C13A</td>
+      </tr>
+      <tr>
+        <td><span class="rt-swatch" style="background:#F0EEF7; border:1px solid #E8E4DF;"></span></td>
+        <td>Sfondo alternativo, card chiare</td>
+        <td class="rt-name-it">Crema Freddo</td>
+        <td class="rt-hex">#F0EEF7</td>
+      </tr>
+      <tr>
+        <td><span class="rt-swatch" style="background:#2C2016;"></span></td>
+        <td>Testo principale, footer</td>
+        <td class="rt-name-it">Bruno Profondo</td>
+        <td class="rt-hex">#2C2016</td>
+      </tr>
+      <tr>
+        <td><span class="rt-swatch" style="background:#555555;"></span></td>
+        <td>Testo secondario, note, caption</td>
+        <td class="rt-name-it">Mid Grey</td>
+        <td class="rt-hex">#555555</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- DIVIDER TYPOGRAPHY -->
+<div class="divider-page" style="background: #2C2016;">
+  <p class="divider-text">Un font per ogni contesto.<br>Un sistema per tutto il brand.</p>
+</div>
+
+
+<!-- SECTION 08-10: TYPOGRAPHY -->
+<div class="page">
+  <p class="section-label">08 — Sistema Tipografico</p>
+
+
+  <!-- PLATFORM -->
+  <span class="type-context-badge badge-platform">Piattaforma · UI</span>
+
+  <div class="font-block">
+    <div class="font-preview font-preview-dark">
+      <span class="font-role-tag" style="color:rgba(255,255,255,0.3);">Interfaccia — navigazione, bottoni, body text</span>
+      <div style="font-family:'Montserrat',sans-serif; font-size:clamp(2rem,5vw,4rem); font-weight:700; color:#FFFFFF; line-height:1; letter-spacing:-0.01em; margin-bottom:0.6rem;">
+        Montserrat
+      </div>
+      <div style="font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:300; color:rgba(255,255,255,0.5); margin-bottom:1.5rem;">
+        Impara il russo. Cambia il modo di pensare.
+      </div>
+      <div style="display:flex; gap:2rem; flex-wrap:wrap;">
+        <span style="font-family:'Montserrat',sans-serif; font-size:0.85rem; font-weight:300; color:rgba(255,255,255,0.4);">Light 300</span>
+        <span style="font-family:'Montserrat',sans-serif; font-size:0.85rem; font-weight:400; color:rgba(255,255,255,0.6);">Regular 400</span>
+        <span style="font-family:'Montserrat',sans-serif; font-size:0.85rem; font-weight:600; color:rgba(255,255,255,0.8);">SemiBold 600</span>
+        <span style="font-family:'Montserrat',sans-serif; font-size:0.85rem; font-weight:700; color:#FFFFFF;">Bold 700</span>
+        <span style="font-family:'Montserrat',sans-serif; font-size:0.85rem; font-weight:400;  color:rgba(255,255,255,0.5);">Italic</span>
+      </div>
+    </div>
+    <div class="font-meta">
+      <div><span class="fm-label">Nome</span><span class="fm-value">Montserrat</span></div>
+      <div><span class="fm-label">Contesto</span><span class="fm-value">Piattaforma MVP</span></div>
+      <div><span class="fm-label">Fonte</span><span class="fm-value">Google Fonts · free</span></div>
+    </div>
+  </div>
+
+
+  <div class="type-divider"></div>
+
+
+  <!-- VISUAL CONTENT -->
+  <span class="type-context-badge badge-visual">Contenuto Visivo · YouTube · Instagram</span>
+
+  <!-- Playfair Display -->
+  <div class="font-block">
+    <div class="font-preview font-preview-dark">
+      <span class="font-role-tag" style="color:rgba(255,255,255,0.3);">Titolo — profondità intellettuale · testata culturale</span>
+      <div style="font-family:'Playfair Display',serif; font-size:clamp(2.2rem,6vw,4.5rem); font-weight:900;  color:#FFFFFF; line-height:0.95; letter-spacing:-0.01em; margin-bottom:0.8rem;">
+        Идёт o <span style="color:#C0282D;">Ходить?</span>
+      </div>
+      <div style="font-family:'Playfair Display',serif; font-size:1rem; font-weight:400; color:rgba(255,255,255,0.45);">
+        La lezione che nessuno ti ha spiegato davvero
+      </div>
+    </div>
+    <div class="font-meta">
+      <div><span class="fm-label">Nome</span><span class="fm-value">Playfair Display</span></div>
+      <div><span class="fm-label">Ruolo</span><span class="fm-value">Titolo principale</span></div>
+      <div><span class="fm-label">Valore</span><span class="fm-value">Profondità intellettuale</span></div>
+    </div>
+  </div>
+
+  <!-- Comfortaa -->
+  <div class="font-block">
+    <div class="font-preview" style="background:#F0EEF7;">
+      <span class="font-role-tag">Sottotitolo — calore · gioia · accessibilità</span>
+      <div style="font-family:'Comfortaa',sans-serif; font-size:clamp(1.8rem,4.5vw,3.5rem); font-weight:700; color:#2C2016; line-height:1; margin-bottom:0.8rem;">
+        Russo per chi <span style="color:#C0282D;">ama</span> le sfide
+      </div>
+      <div style="display:flex; gap:2rem; flex-wrap:wrap; margin-top:1rem;">
+        <span style="font-family:'Comfortaa',sans-serif; font-size:0.85rem; font-weight:300; color:#555;">Light</span>
+        <span style="font-family:'Comfortaa',sans-serif; font-size:0.85rem; font-weight:400; color:#2C2016;">Regular</span>
+        <span style="font-family:'Comfortaa',sans-serif; font-size:0.85rem; font-weight:700; color:#1A1A1A;">Bold</span>
+      </div>
+    </div>
+    <div class="font-meta">
+      <div><span class="fm-label">Nome</span><span class="fm-value">Comfortaa</span></div>
+      <div><span class="fm-label">Ruolo</span><span class="fm-value">Sottotitolo · caption</span></div>
+      <div><span class="fm-label">Valore</span><span class="fm-value">Gioia · calore umano</span></div>
+    </div>
+  </div>
+
+  <!-- PT Mono -->
+  <div class="font-block">
+    <div class="font-preview" style="background:#1A1A1A;">
+      <span class="font-role-tag" style="color:rgba(255,255,255,0.3);">Etichetta — precisione · linguistica · ParaType</span>
+      <div style="font-family:'PT Mono',monospace; font-size:clamp(1.2rem,3vw,2rem); color:#FFFFFF; line-height:1.3; margin-bottom:0.8rem;">
+        [ A1 · Глагол движения · Lezione 01 ]
+      </div>
+      <div style="font-family:'PT Mono',monospace; font-size:0.8rem; color:rgba(255,255,255,0.3); margin-top:0.5rem; letter-spacing:0.05em;">
+        HEX · #C0282D · Rosso Matryoshka · LiveLanguage Russian
+      </div>
+    </div>
+    <div class="font-meta">
+      <div><span class="fm-label">Nome</span><span class="fm-value">PT Mono</span></div>
+      <div><span class="fm-label">Ruolo</span><span class="fm-value">Label · livello · codice</span></div>
+      <div><span class="fm-label">Origine</span><span class="fm-value">ParaType · russo nativo</span></div>
+    </div>
+  </div>
+
+
+  <!-- Demo composizione visiva -->
+  <p class="section-label" style="margin-top:4rem;">09 — Composizione visiva · YouTube cover</p>
+  <div class="type-pairing-demo">
+    <div style="font-family:'PT Mono',monospace; font-size:0.65rem; letter-spacing:0.18em; color:rgba(255,255,255,0.3); text-transform:uppercase; margin-bottom:1.5rem;">Verbi di Moto · A1 · Lezione 01</div>
+    <div style="font-family:'Playfair Display',serif; font-size:clamp(2.5rem,7vw,5.5rem); font-weight:900;  color:#FFFFFF; line-height:0.9; letter-spacing:-0.01em; margin-bottom:1rem;">
+      Идёт,<br><span style="color:#C0282D;">Ходить</span><br>o Идти?
+    </div>
+    <div style="font-family:'Comfortaa',sans-serif; font-size:clamp(0.85rem,2vw,1.1rem); font-weight:300; color:rgba(255,255,255,0.4); letter-spacing:0.02em;">
+      Il russo che nessuno ti ha spiegato davvero
+    </div>
+    <div style="font-family:'PT Mono',monospace; font-size:0.6rem; color:rgba(255,255,255,0.15); letter-spacing:0.12em; text-transform:uppercase; margin-top:2rem;">LiveLanguage Russian</div>
+  </div>
+
+  <!-- TYPE RULES -->
+  <p class="section-label">11 — Regole tipografiche</p>
+  <div class="type-rules">
+    <p class="usage-title">Come applicare il sistema</p>
+
+    <div class="type-rule-row">
+      <span class="tr-context">Piattaforma</span>
+      <p class="tr-text"><strong>Montserrat</strong> — unico font dell'interfaccia MVP. Navigazione, bottoni CTA, body text, titoli di pagina. Non viene mescolato con altri font nella piattaforma.</p>
+    </div>
+    <div class="type-rule-row">
+      <span class="tr-context">Titolo cover</span>
+      <p class="tr-text"><strong>Playfair Display Bold/Black Italic</strong> — per il titolo principale di ogni cover YouTube e Instagram. Trasmette profondità intellettuale e carattere editoriale.</p>
+    </div>
+    <div class="type-rule-row">
+      <span class="tr-context">Sottotitolo</span>
+      <p class="tr-text"><strong>Comfortaa Light/Regular</strong> — per sottotitoli e caption nelle cover. Abbassa la barriera cognitiva, trasmette calore e accessibilità.</p>
+    </div>
+    <div class="type-rule-row">
+      <span class="tr-context">Label · codice</span>
+      <p class="tr-text"><strong>PT Mono</strong> — per etichette di livello (A1, A2), numeri di lezione, signature del brand. Font russo nativo di ParaType — connessione autentica con la lingua.</p>
+    </div>
+  </div>
+
+
+  <!-- FONT REFERENCE TABLE -->
+  <p class="section-label">12 — Tavola tipografica di riferimento</p>
+  <table class="ref-table" style="margin-bottom:5rem;">
+    <thead>
+      <tr>
+        <th>Font</th>
+        <th>Contesto</th>
+        <th>Ruolo</th>
+        <th>Fonte</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem;">Montserrat</td>
+        <td>Piattaforma MVP</td>
+        <td class="rt-name-it">UI, navigazione, body</td>
+        <td class="rt-hex">Google Fonts</td>
+      </tr>
+      <tr>
+        <td style="font-family:'Playfair Display',serif;  font-weight:900; font-size:1.05rem;">Playfair Display</td>
+        <td>YouTube · Instagram</td>
+        <td class="rt-name-it">Titolo principale</td>
+        <td class="rt-hex">Google Fonts</td>
+      </tr>
+      <tr>
+        <td style="font-family:'Comfortaa',sans-serif; font-weight:700; font-size:1rem;">Comfortaa</td>
+        <td>YouTube · Instagram</td>
+        <td class="rt-name-it">Sottotitolo · caption</td>
+        <td class="rt-hex">Google Fonts</td>
+      </tr>
+      <tr>
+        <td style="font-family:'PT Mono',monospace; font-size:0.9rem;">PT Mono</td>
+        <td>YouTube · Instagram · UI</td>
+        <td class="rt-name-it">Label · livello · firma</td>
+        <td class="rt-hex">Google Fonts · ParaType</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<!-- BACK COVER -->
+<div class="cover" style="min-height: 40vh; justify-content: flex-end;">
+  <div class="cover-footer">
+    <span>LiveLanguage Russian © 2025</span>
+    <span>Palette ispirata a Sanzo Wada</span>
+    <span>Documento riservato — uso interno</span>
+  </div>
+</div>
+
+</body>
+</html>
