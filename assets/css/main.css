@@ -240,7 +240,10 @@ h1, h2, h3 {
 .page-moto-per-luogo .argomento-header,
 .page-pluridirezionali-vs-monodirezionali .argomento-header,
 .page-andare-con-un-mezzo .argomento-header,
-.page-verbi-di-moto-specifici .argomento-header {
+.page-verbi-di-moto-specifici .argomento-header,
+.page-nesti-nositi .argomento-header,
+.page-vezti-voziti .argomento-header,
+.page-vesti-voditi .argomento-header {
   padding-top: 2.5rem;
 }
 
