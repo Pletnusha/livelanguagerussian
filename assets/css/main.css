@@ -238,7 +238,9 @@ h1, h2, h3 {
 .page-moto-a-luogo .argomento-header,
 .page-moto-da-luogo .argomento-header,
 .page-moto-per-luogo .argomento-header,
-.page-pluridirezionali-vs-monodirezionali .argomento-header {
+.page-pluridirezionali-vs-monodirezionali .argomento-header,
+.page-andare-con-un-mezzo .argomento-header,
+.page-verbi-di-moto-specifici .argomento-header {
   padding-top: 2.5rem;
 }
 
