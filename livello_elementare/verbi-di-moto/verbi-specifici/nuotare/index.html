@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUOTARE - LIVE LANGUAGE_RUSSIAN</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-nuotare">
+
+    <section class="argomento-header">
+        <h1 class="argomento-title">NUOTARE</h1>
+        <p class="argomento-focus">impari a usare плавать e плыть</p>
+    </section>
+
+    <section class="argomento-intro">
+        <p><!-- TODO: Intro text --></p>
+    </section>
+
+    <main class="exercises-section">
+
+        <!-- ============================================================ -->
+        <!-- Panel 1 — DragDrop · public · Misto (плавать/плыть) -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-nuot-01">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title"><!-- TODO: titolo --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nuot-01" data-access="public" hidden>
+            <div id="ex-dragdrop-nuot-01" class="universal-dd">
+                <div id="ex-dragdrop-nuot-01-container"></div>
+                <div id="ex-dragdrop-nuot-01-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 5 — DragDrop · student · Спряжение плавать -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-nuot-05">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title"><!-- TODO: titolo --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nuot-05" data-access="student" hidden>
+            <div id="ex-dragdrop-nuot-05" class="universal-dd">
+                <div id="ex-dragdrop-nuot-05-container"></div>
+                <div id="ex-dragdrop-nuot-05-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 6 — DragDrop · paid · Спряжение плыть -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-nuot-06">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title"><!-- TODO: titolo --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nuot-06" data-access="paid" hidden>
+            <div id="ex-dragdrop-nuot-06" class="universal-dd">
+                <div id="ex-dragdrop-nuot-06-container"></div>
+                <div id="ex-dragdrop-nuot-06-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 2 — Flashcard · public · Frasi a coppie плавать/плыть -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-nuot-02">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title"><!-- TODO: titolo --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nuot-02" data-access="public" hidden>
+            <section id="ex-flashcards-nuot-02">
+                <div class="fca01-header">
+                    <h2><!-- TODO: header --></h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-nuot-02-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-nuot-02-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-nuot-02-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-nuot-02-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-nuot-02-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-02-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-nuot-02-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-02-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-02-section-match" class="fca01-section">
+                    <div id="ex-flashcards-nuot-02-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-02-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 7 — Flashcard · student · Frasi a coppie — misto -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-nuot-07">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title"><!-- TODO: titolo --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nuot-07" data-access="student" hidden>
+            <section id="ex-flashcards-nuot-07">
+                <div class="fca01-header">
+                    <h2><!-- TODO: header --></h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-nuot-07-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-nuot-07-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-nuot-07-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-nuot-07-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-nuot-07-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-07-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-nuot-07-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-07-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-07-section-match" class="fca01-section">
+                    <div id="ex-flashcards-nuot-07-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-07-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 8 — Flashcard · paid · Frasi a coppie — misto (II) -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-nuot-08">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title"><!-- TODO: titolo --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nuot-08" data-access="paid" hidden>
+            <section id="ex-flashcards-nuot-08">
+                <div class="fca01-header">
+                    <h2><!-- TODO: header --></h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-nuot-08-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-nuot-08-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-nuot-08-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-nuot-08-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-nuot-08-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-08-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-nuot-08-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-08-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-08-section-match" class="fca01-section">
+                    <div id="ex-flashcards-nuot-08-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-08-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 — Flashcard · public · Frasi singole плавать/плыть -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-nuot-03">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title"><!-- TODO: titolo --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nuot-03" data-access="public" hidden>
+            <section id="ex-flashcards-nuot-03">
+                <div class="fca01-header">
+                    <h2><!-- TODO: header --></h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-nuot-03-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-nuot-03-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-nuot-03-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-nuot-03-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-nuot-03-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-03-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-nuot-03-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-03-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-03-section-match" class="fca01-section">
+                    <div id="ex-flashcards-nuot-03-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-03-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 9 — Flashcard · student · Frasi a coppie — misto (avanzato) -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-nuot-09">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title"><!-- TODO: titolo --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nuot-09" data-access="student" hidden>
+            <section id="ex-flashcards-nuot-09">
+                <div class="fca01-header">
+                    <h2><!-- TODO: header --></h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-nuot-09-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-nuot-09-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-nuot-09-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-nuot-09-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-nuot-09-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-09-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-nuot-09-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-09-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-09-section-match" class="fca01-section">
+                    <div id="ex-flashcards-nuot-09-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-09-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 10 — Flashcard · paid · Frasi singole — misto -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-nuot-10">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title"><!-- TODO: titolo --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nuot-10" data-access="paid" hidden>
+            <section id="ex-flashcards-nuot-10">
+                <div class="fca01-header">
+                    <h2><!-- TODO: header --></h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-nuot-10-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-nuot-10-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-nuot-10-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-nuot-10-counter" class="fca01-counter">1 / 10</span>
+                        <button id="ex-flashcards-nuot-10-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-10-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-nuot-10-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-10-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-nuot-10-section-match" class="fca01-section">
+                    <div id="ex-flashcards-nuot-10-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-nuot-10-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 4 — Quiz · public -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-nuot-04">
+            <span class="exercise-type">Quiz</span>
+            <h3 class="exercise-title"><!-- TODO: titolo --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nuot-04" data-access="public" hidden>
+            <section id="nuot-04-deck" class="universal-dd">
+                <div id="nuot-04-cards-container"></div>
+                <div class="fca01-nav">
+                    <button id="nuot-04-deck-prev" class="fca01-btn-nav" disabled>← INDIETRO</button>
+                    <span id="nuot-04-deck-counter" class="fca01-counter">1 / 30</span>
+                    <button id="nuot-04-deck-next" class="btn btn-primary">AVANTI →</button>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="level-footer">
+        <a href="/livello_elementare/verbi-di-moto/verbi-specifici/" class="back-link">← TORNA AI VERBI SPECIFICI</a>
+    </footer>
+
+    <script type="module" src="exercises.js"></script>
+
+</body>
+</html>
