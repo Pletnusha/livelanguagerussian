@@ -3,49 +3,324 @@ import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public · Misto (плавать/плыть)
+// PANEL 1 — DragDrop · public · Misto (плавать/плыть + ехать/ездить + идти/ходить + бежать/бегать)
 // ============================================================
-const p1exercises = [/* TODO */];
+const p1exercises = [
+    {
+        instruction: "Выбери правильную форму глагола движения.",
+        text: "Я не люблю {{1}} в бассейне.",
+        words: ["плавать", "плыть", "ходить"],
+        correctAnswers: { 1: "плавать" },
+        wrongFeedback: {
+            "плыть":   "Verbo: «не люблю» = atteggiamento generale verso l'azione → плавать (senza direzione). Forma: infinito dopo «не люблю» → плавать.",
+            "ходить":  "Verbo: azione in acqua, non a piedi → плавать. Forma: infinito dopo «не люблю» → плавать."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения.",
+        text: "Андрей {{1}} часами в бассейне — готовится к соревнованиям.",
+        words: ["плывёт", "плавает", "бегает"],
+        correctAnswers: { 1: "плавает" },
+        wrongFeedback: {
+            "плывёт":  "Verbo: «часами» = azione abituale senza percorso specifico → плавать. Forma: Андрей = lui → 3ª pers. sing. → плавает.",
+            "бегает":  "Verbo: movimento in acqua → плавать. Forma: lui → плавает."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения.",
+        text: "Тихо — учитель уже {{1}}!",
+        words: ["идёт", "ходит", "едет"],
+        correctAnswers: { 1: "идёт" },
+        wrongFeedback: {
+            "ходит":   "Verbo: «уже» = movimento percepibile adesso, diretto → идти. Forma: учитель = lui → идёт.",
+            "едет":    "Verbo: si sposta a piedi, senza mezzo → идти. Forma: lui → идёт."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения.",
+        text: "Мы {{1}} вокруг Сицилии на яхте.",
+        words: ["плывём", "плаваем", "едем"],
+        correctAnswers: { 1: "плывём" },
+        wrongFeedback: {
+            "плаваем": "Verbo: «вокруг Сицилии» + «на яхте» = percorso preciso + mezzo → плыть. Forma: мы → плывём.",
+            "едем":    "Verbo: movimento sull'acqua → плыть. Forma: мы → плывём."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения.",
+        text: "Ты же на машине {{1}} на работу — что ты здесь делаешь?",
+        words: ["ездишь", "едешь", "ходишь"],
+        correctAnswers: { 1: "ездишь" },
+        wrongFeedback: {
+            "едешь":   "Verbo: «же» = abitudine consolidata → ездить. Forma: ты → ездишь.",
+            "ходишь":  "Verbo: «на машине» = mezzo di trasporto → ездить. Forma: ты → ездишь."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения.",
+        text: "Я {{1}} на работу, опаздываю!",
+        words: ["бегу", "бегаю", "еду"],
+        correctAnswers: { 1: "бегу" },
+        wrongFeedback: {
+            "бегаю":   "Verbo: «опаздываю» = movimento urgente adesso → бежать. Forma: я → бегу.",
+            "еду":     "Verbo: si muove a piedi di corsa, senza mezzo → бежать. Forma: я → бегу."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения.",
+        text: "Вы {{1}} на пароме?",
+        words: ["плывёте", "плаваете", "едете"],
+        correctAnswers: { 1: "плывёте" },
+        wrongFeedback: {
+            "плаваете": "Verbo: «на пароме» = mezzo preciso + direzione implicita → плыть. Forma: вы → плывёте.",
+            "едете":    "Verbo: movimento sull'acqua → плыть. Forma: вы → плывёте."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения.",
+        text: "По пятницам они вместе {{1}} в спортзал.",
+        words: ["ходят", "идут", "ездят"],
+        correctAnswers: { 1: "ходят" },
+        wrongFeedback: {
+            "идут":    "Verbo: «по пятницам» = abitudine settimanale → ходить. Forma: они → ходят.",
+            "ездят":   "Verbo: si spostano a piedi, senza mezzo → ходить. Forma: они → ходят."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения.",
+        text: "Мы взяли за привычку — теперь каждое утро {{1}} по пляжу.",
+        words: ["бегаем", "бежим", "ходим"],
+        correctAnswers: { 1: "бегаем" },
+        wrongFeedback: {
+            "бежим":   "Verbo: «взяли за привычку» + «каждое утро» = abitudine acquisita → бегать. Forma: мы → бегаем.",
+            "ходим":   "Verbo: si corre, non si cammina → бегать. Forma: мы → бегаем."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола движения.",
+        text: "Машина сломалась, вот я {{1}} на метро!",
+        words: ["еду", "езжу", "иду"],
+        correctAnswers: { 1: "еду" },
+        wrongFeedback: {
+            "езжу":    "Verbo: «машина сломалась» = viaggio singolo forzato, non abitudine → ехать. Forma: я → еду.",
+            "иду":     "Verbo: «на метро» = mezzo di trasporto → ехать. Forma: я → еду."
+        }
+    },
+];
 
 // ============================================================
 // PANEL 5 — DragDrop · student · Спряжение ПЛАВАТЬ
 // ============================================================
-const p5exercises = [/* TODO */];
+const p5exercises = [
+    {
+        instruction: "Выбери правильную форму глагола ПЛЫТЬ.",
+        text: "Я {{1}} на яхте вдоль Амальфитанского побережья.",
+        words: ["плыву", "плывём", "плывут"],
+        correctAnswers: { 1: "плыву" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛЫТЬ.",
+        text: "Ты {{1}} на лодке?!",
+        words: ["плывёшь", "плыву", "плывёт"],
+        correctAnswers: { 1: "плывёшь" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛЫТЬ.",
+        text: "Всё {{1}} перед глазами.",
+        words: ["плывёт", "плывёшь", "плывём"],
+        correctAnswers: { 1: "плывёт" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛЫТЬ.",
+        text: "Мы {{1}} с Мальты на Сицилию.",
+        words: ["плывём", "плывут", "плывёт"],
+        correctAnswers: { 1: "плывём" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛЫТЬ.",
+        text: "Вы {{1}} на пароме?",
+        words: ["плывёте", "плывём", "плывут"],
+        correctAnswers: { 1: "плывёте" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛЫТЬ.",
+        text: "Они {{1}} на другой берег.",
+        words: ["плывут", "плывёт", "плывёте"],
+        correctAnswers: { 1: "плывут" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛЫТЬ.",
+        text: "Мы {{1}} в круиз по Средиземному морю.",
+        words: ["плывём", "плыву", "плывёте"],
+        correctAnswers: { 1: "плывём" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛЫТЬ.",
+        text: "{{1}} картинка на мониторе.",
+        words: ["Плывёт", "Плывут", "Плывём"],
+        correctAnswers: { 1: "Плывёт" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛЫТЬ.",
+        text: "Мы {{1}} в кругосветное путешествие!",
+        words: ["плывём", "плывут", "плывёшь"],
+        correctAnswers: { 1: "плывём" }
+    },
+];
 
 // ============================================================
-// PANEL 6 — DragDrop · paid · Спряжение ПЛЫТЬ
+// PANEL 6 — DragDrop · paid · Спряжение ПЛАВАТЬ
 // ============================================================
-const p6exercises = [/* TODO */];
+const p6exercises = [
+    {
+        instruction: "Выбери правильную форму глагола ПЛАВАТЬ.",
+        text: "Я очень плохо {{1}}.",
+        words: ["плаваю", "плаваешь", "плавают"],
+        correctAnswers: { 1: "плаваю" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛАВАТЬ.",
+        text: "Ты хорошо {{1}}?",
+        words: ["плаваешь", "плаваю", "плавает"],
+        correctAnswers: { 1: "плаваешь" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛАВАТЬ.",
+        text: "Рыбка {{1}} в пруду.",
+        words: ["плавает", "плаваем", "плавают"],
+        correctAnswers: { 1: "плавает" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛАВАТЬ.",
+        text: "Андрей {{1}} часами в бассейне.",
+        words: ["плавает", "плаваешь", "плаваете"],
+        correctAnswers: { 1: "плавает" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛАВАТЬ.",
+        text: "Когда мы готовимся к соревнованиям, мы {{1}} несколько часов в день.",
+        words: ["плаваем", "плавают", "плаваете"],
+        correctAnswers: { 1: "плаваем" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛАВАТЬ.",
+        text: "Вы уже {{1}}?! Море ещё холодное!",
+        words: ["плаваете", "плаваем", "плавают"],
+        correctAnswers: { 1: "плаваете" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛАВАТЬ.",
+        text: "Утки {{1}} в озере.",
+        words: ["плавают", "плавает", "плаваем"],
+        correctAnswers: { 1: "плавают" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ПЛАВАТЬ.",
+        text: "Он {{1}} в этой теме.",
+        words: ["плавает", "плаваю", "плаваешь"],
+        correctAnswers: { 1: "плавает" }
+    },
+];
 
 // ============================================================
 // PANEL 2 — Flashcard · public
 // ============================================================
-const p2cards = [/* TODO */];
+const p2cards = [
+    { front: "Мы плывём с Мальты на Сицилию.",                   back: "Мы обычно на яхте плаваем по Средиземному морю.",    explanation: "Percorso specifico da A a B → плыть. Abitudine senza direzione precisa → плавать." },
+    { front: "Вы плывёте на пароме?",                             back: "Я боюсь плавать на пароме.",                          explanation: "Viaggio in corso su un traghetto specifico → плыть. Infinito dopo «боюсь» = atteggiamento generale → плавать." },
+    { front: "Ты плывёшь на лодке?!",                             back: "И часто ты плаваешь на лодке?",                       explanation: "Movimento in corso su una barca adesso → плыть. «Часто» = abitudine → плавать." },
+    { front: "Они плывут на другой берег.",                       back: "Они плавают туда-сюда уже час!",                      explanation: "Direzione precisa verso l'altra riva → плыть. «Туда-сюда» = multidirezionale senza meta → плавать." },
+    { front: "Мы плывём в кругосветное путешествие!",             back: "Мы никогда не плаваем в круиз.",                      explanation: "Viaggio specifico in una direzione → плыть. Negazione di un'abitudine → плавать." },
+    { front: "Я плыву на яхте вдоль Амальфитанского побережья.", back: "Я очень плохо плаваю.",                               explanation: "Navigazione lungo un percorso preciso → плыть. Capacità generale in acqua → плавать." },
+];
 
 // ============================================================
 // PANEL 7 — Flashcard · student
 // ============================================================
-const p7cards = [/* TODO */];
+const p7cards = [
+    { front: "Мы плывём с Мальты на Сицилию.",                                              back: "Мы обычно на яхте плаваем по Средиземному морю." },
+    { front: "Вы плывёте на пароме?",                                                        back: "Я боюсь плавать на пароме." },
+    { front: "Ты плывёшь на лодке?!",                                                        back: "И часто ты плаваешь на лодке?" },
+    { front: "Они плывут на другой берег.",                                                  back: "Они плавают туда-сюда уже час!" },
+    { front: "Я плыву на яхте вдоль Амальфитанского побережья.",                            back: "Я очень плохо плаваю." },
+    { front: "Этим летом мы плывём в круиз по Средиземному морю.",                          back: "Мы каждый год плаваем в круиз." },
+    { front: "Всё плывёт перед глазами.",                                                    back: "Он плавает в этой теме." },
+    { front: "Косяк сардин плывёт прямо на юг.",                                            back: "Рыбки плавают в аквариуме." },
+    { front: "Рядом с нами плывут дельфины.",                                               back: "Дети плавают с дельфинами в аквапарке." },
+    { front: "Утки плывут к берегу — какая-то женщина бросает им хлеб.",                   back: "Утки плавают возле берега, ждут, когда прохожие их покормят." },
+];
 
 // ============================================================
 // PANEL 8 — Flashcard · paid
 // ============================================================
-const p8cards = [/* TODO */];
+const p8cards = [
+    { front: "Косяк сардин плывёт прямо на юг.",                                       back: "Рыбки плавают в аквариуме." },
+    { front: "Утки плывут к берегу — какая-то женщина бросает им хлеб.",               back: "Утки плавают возле берега, ждут, когда прохожие их покормят." },
+    { front: "Мы плывём в кругосветное путешествие!",                                   back: "Мы никогда не плаваем в круиз." },
+    { front: "Они плывут на другой берег.",                                             back: "Они плавают туда-сюда уже час!" },
+    { front: "Вы плывёте на пароме?",                                                   back: "Я боюсь плавать на пароме." },
+    { front: "Я плыву на яхте вдоль Амальфитанского побережья.",                       back: "Мы плаваем на яхте вокруг Италии каждый год." },
+    { front: "Мы плывём вокруг Сицилии на яхте.",                                      back: "Мы каждые выходные плаваем на яхте." },
+    { front: "Андрей плавает часами в бассейне — готовится к соревнованиям.",          back: "Андрей плывёт на другой берег." },
+    { front: "Плывёт картинка на мониторе.",                                            back: "Мысли плавали как рыбки в аквариуме." },
+    { front: "Вы уже плаваете?! Море ещё холодное!",                                   back: "О, вы на лодке? Куда плывёте?" },
+];
 
 // ============================================================
 // PANEL 3 — Flashcard · public
 // ============================================================
-const p3cards = [/* TODO */];
+const p3cards = [
+    { front: "Ты куда?",                                    back: "На улице дождь идёт — иду домой.",                       explanation: "«Домой» = destinazione precisa adesso → идти. Nota: anche la pioggia «идёт» in russo — il verbo cattura ogni movimento diretto. Forma: иду = я." },
+    { front: "В субботу идём в ресторан тайской кухни.",    back: "Они всегда в этот ресторан ходят.",                     explanation: "«В субботу» = uscita specifica una volta → идти. «Всегда» = ci vanno regolarmente, è la loro abitudine → ходить. Stesso ristorante, due verbi diversi." },
+    { front: "На чём ты обычно на работу?",                 back: "Езжу на машине.",                                       explanation: "«Обычно» = come vai al lavoro ogni giorno → ездить. Non parla di questo viaggio ma della sua routine. Forma: езжу = я." },
+    { front: "Машина сломалась!",                           back: "Еду на метро!",                                         explanation: "La macchina è rotta → viaggio di emergenza, solo oggi → ехать. Se funzionasse, direbbe «езжу на машине». Forma: еду = я." },
+    { front: "Прости, опаздываю!",                          back: "Бегу на работу!",                                       explanation: "«Опаздываю» = corre verso il lavoro adesso, corsa urgente in una direzione → бежать. Non è la sua abitudine mattutina — è un'emergenza. Forma: бегу = я." },
+    { front: "Есть утренние привычки?",                     back: "Каждое утро бегаем по пляжу.",                          explanation: "«Каждое утро» = corsa quotidiana sul lungomare, senza una meta fissa → бегать. Un'abitudine di gruppo, non una corsa verso qualcosa. Forma: бегаем = мы." },
+    { front: "Ты куда с цветами?",                          back: "Несу цветы Кате.",                                      explanation: "I fiori stanno andando da Katja adesso, in questo momento → нести. «Кате» = destinatario preciso, il movimento ha uno scopo. Forma: несу = я." },
+    { front: "Кто помогает с тяжестями?",                   back: "Андрей. Чемоданы всегда носит он.",                    explanation: "«Всегда» = Andrej porta le valigie per abitudine consolidata, non una volta sola → носить. È il suo ruolo fisso nel gruppo. Forma: носит = он." },
+    { front: "Как доставляете грузы?",                      back: "Обычно возим через Эстонию.",                           explanation: "«Обычно» = è il loro percorso logistico abituale → возить. Non questo trasporto specifico, ma la loro prassi. Forma: возим = мы." },
+    { front: "Что в грузовике?",                            back: "Везёт груз в Эстонию.",                                 explanation: "Questo camion, adesso, sta portando un carico preciso verso l'Estonia → везти. Viaggio specifico in corso con una destinazione. Forma: везёт = он." },
+    { front: "Зачем ты за нос его водишь?",                 back: "К чему это ты ведёшь?",                                 explanation: "«Водить за нос» = girarlo in tondo, ingannarlo — azione ripetuta senza meta (водить). «К чему ведёшь?» = dove stai portando questo discorso — direzione precisa (вести). Stessa metafora, logica opposta." },
+    { front: "Куда плывёте?",                               back: "Плывём с Мальты на Сицилию.",                          explanation: "«Куда?» + «с Мальты на Сицилию» = rotta precisa da A a B → плыть. La domanda stessa rivela che c'è una direzione. Forma: плывём = мы." },
+    { front: "Умеешь плавать?",                             back: "Я очень плохо плаваю.",                                 explanation: "«Умеешь?» = capacità generale, non un percorso → плавать. «Очень плохо» descrive quanto bene nuota, non dove sta andando. Forma: плаваю = я." },
+    { front: "Дочь ведёт дневник.",                         back: "Я каждое утро вожу собаку гулять.",                    explanation: "«Вести дневник» = mantenere un diario nel tempo, azione continua → вести (uso figurato). «Каждое утро» = portare il cane a passeggio per abitudine → водить. Forma: ведёт = она, вожу = я." },
+];
 
 // ============================================================
 // PANEL 9 — Flashcard · student
 // ============================================================
-const p9cards = [/* TODO */];
+const p9cards = [
+    { front: "Машина сломалась!",                           back: "Еду на метро!" },
+    { front: "Ты куда с цветами?",                          back: "Несу цветы Кате." },
+    { front: "В субботу идём в ресторан тайской кухни.",    back: "Они всегда в этот ресторан ходят." },
+    { front: "Что в грузовике?",                            back: "Везёт груз в Эстонию." },
+    { front: "Прости, опаздываю!",                          back: "Бегу на работу!" },
+    { front: "Дочь ведёт дневник.",                         back: "Я каждое утро вожу собаку гулять." },
+    { front: "Куда плывёте?",                               back: "Плывём с Мальты на Сицилию." },
+    { front: "Кто помогает с тяжестями?",                   back: "Андрей. Чемоданы всегда носит он." },
+    { front: "На чём ты обычно ездишь на работу?",          back: "Езжу на машине." },
+    { front: "Зачем ты за нос его водишь?",                 back: "К чему это ты ведёшь?" },
+    { front: "Есть утренние привычки?",                     back: "Каждое утро бегаем по пляжу." },
+    { front: "Умеешь плавать?",                             back: "Я очень плохо плаваю." },
+    { front: "Как доставляете грузы?",                      back: "Обычно возим через Эстонию." },
+    { front: "Ты куда?",                                    back: "На улице дождь идёт — иду домой." },
+];
 
 // ============================================================
 // PANEL 10 — Flashcard · paid
 // ============================================================
-const p10cards = [/* TODO */];
+const p10cards = [
+    { front: "Аня, сделай фото! Рядом с лодкой дельфины —",                    back: "плывут!" },
+    { front: "Машина сломалась, вот я сегодня",                                 back: "еду на метро." },
+    { front: "Куда ты с котом?",                                                back: "Несу к ветеринару." },
+    { front: "Снова в круиз по Средиземному морю —",                            back: "плывёте?" },
+    { front: "Смотрите — гепард",                                               back: "бежит за газелью!" },
+    { front: "По субботам я бабушку —",                                         back: "вожу на рынок." },
+    { front: "Тихо — учитель уже",                                              back: "идёт!" },
+    { front: "Честно говоря, я очень плохо —",                                  back: "плаваю." },
+    { front: "Этот грузовик",                                                   back: "везёт груз в Эстонию." },
+    { front: "Она всегда в Верону",                                             back: "ездит на поезде." },
+];
 
 // ============================================================
 // PANEL 4 — Mixed Quiz · public
@@ -64,9 +339,42 @@ function initPanel4() {
 
     let currentCard = 0;
 
-    const multipleChoiceData = [/* TODO */];
-    const matchPairs         = [/* TODO */];
-    const quizData           = [/* TODO */];
+    const multipleChoiceData = [
+        { question: "Рыбки ___ в аквариуме.",                                                    options: ["плавают",  "плывут",   "плавает"],  answer: "плавают"  },
+        { question: "Мы ___ с Мальты на Сицилию.",                                               options: ["плывём",   "плаваем",  "плывут"],   answer: "плывём"   },
+        { question: "Вы ___ на пароме?",                                                          options: ["плывёте",  "плаваете", "плывут"],   answer: "плывёте"  },
+        { question: "По пятницам они вместе ___ в спортзал.",                                    options: ["ходят",    "идут",     "ходит"],    answer: "ходят"    },
+        { question: "Тихо — учитель уже ___!",                                                   options: ["идёт",     "ходит",    "идут"],     answer: "идёт"     },
+        { question: "Андрей ___ часами в бассейне — готовится к соревнованиям.",                 options: ["плавает",  "плывёт",   "плавают"],  answer: "плавает"  },
+        { question: "Она всегда в Верону ___ на поезде.",                                        options: ["ездит",    "едет",     "ездят"],    answer: "ездит"    },
+        { question: "В субботу ___ в ресторан тайской кухни.",                                   options: ["идём",     "ходим",    "идут"],     answer: "идём"     },
+        { question: "Косяк сардин ___ прямо на юг.",                                             options: ["плывёт",   "плавает",  "плывут"],   answer: "плывёт"   },
+        { question: "Рядом с нами ___ дельфины!",                                                options: ["плывут",   "плавают",  "плывёт"],   answer: "плывут"   },
+    ];
+    const matchPairs = [
+        { left: "Машина сломалась — ___ на работу на метро.", right: "еду"      },
+        { left: "Зачем ты за нос его ___?",                   right: "водишь"   },
+        { left: "Прости, опаздываю — ___ на работу!",         right: "бегу"     },
+        { left: "Везёт тому, кто ___.",                        right: "везёт"    },
+        { left: "Чемоданы всегда ___ он.",                     right: "носит"    },
+        { left: "___ цветы Кате.",                             right: "Несу"     },
+        { left: "Ты ___ на лодке?!",                           right: "плывёшь"  },
+        { left: "Я очень плохо ___.",                          right: "плаваю"   },
+        { left: "Смотрите — гепард ___ за газелью!",           right: "бежит"    },
+        { left: "Этот грузовик ___ груз в Эстонию.",           right: "везёт"    },
+    ];
+    const quizData = [
+        { id: "q01", promptPrefix: "К чему это ты ",                                            promptSuffix: "?",                                          answers: ["ведёшь"]  },
+        { id: "q02", promptPrefix: "Я не ",                                                     promptSuffix: " шорты, ненавижу их.",                       answers: ["ношу"]    },
+        { id: "q03", promptPrefix: "Мы взяли за привычку — теперь каждое утро ",               promptSuffix: " по пляжу.",                                 answers: ["бегаем"]  },
+        { id: "q04", promptPrefix: "На чём ты обычно ",                                         promptSuffix: " на работу?",                                answers: ["ездишь"]  },
+        { id: "q05", promptPrefix: "По субботам я бабушку ",                                    promptSuffix: " на рынок.",                                 answers: ["вожу"]    },
+        { id: "q06", promptPrefix: "На улице дождь идёт — ",                                    promptSuffix: " домой.",                                    answers: ["иду"]     },
+        { id: "q07", promptPrefix: "Я ",                                                        promptSuffix: " на яхте вдоль Амальфитанского побережья.", answers: ["плыву"]   },
+        { id: "q08", promptPrefix: "Когда мы готовимся к соревнованиям, мы ",                  promptSuffix: " несколько часов в день.",                   answers: ["плаваем"] },
+        { id: "q09", promptPrefix: "Обычно ",                                                   promptSuffix: " грузы через Эстонию.",                      answers: ["возим"]   },
+        { id: "q10", promptPrefix: "Дочь ",                                                     promptSuffix: " дневник.",                                  answers: ["ведёт"]   },
+    ];
 
     const MC_END      = multipleChoiceData.length;
     const MATCH_END   = MC_END + matchPairs.length;
