@@ -309,7 +309,7 @@ export default class FlashcardExercise {
 
             const remaining = this.root.querySelectorAll('.fca01-match-card:not(.matched)').length;
             if (remaining === 0) {
-                feedbackEl.textContent = "🎉 ПОБЕДА! 🎉";
+                feedbackEl.textContent = "🎉 Tutto abbinato! 🎉";
                 updatePanelStatus({ panelId: this.panelId, status: 'completed', correctDelta: 1 });
             } else {
                 updatePanelStatus({ panelId: this.panelId, status: 'in_progress', correctDelta: 1 });

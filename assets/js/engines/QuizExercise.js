@@ -75,12 +75,12 @@ export default class QuizExercise {
             input.classList.add('correct');
             input.disabled  = true;
             button.disabled = true;
-            feedback.textContent = 'Правильно!';
+            feedback.textContent = 'Corretto!';
             feedback.className   = 'quiz-feedback correct';
         } else {
             input.classList.remove('correct');
             input.classList.add('incorrect');
-            feedback.textContent = 'Неправильно. Попробуйте ещё раз.';
+            feedback.textContent = 'Sbagliato. Riprova.';
             feedback.className   = 'quiz-feedback incorrect';
         }
 

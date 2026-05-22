@@ -477,17 +477,17 @@ function initPanel4() {
                     if (firstId === secondId) {
                         previousCard.classList.add('matched');
                         clickedCard.classList.add('matched');
-                        feedbackEl.textContent = "✨ Отлично!";
+                        feedbackEl.textContent = "✨ Esatto!";
                         feedbackEl.className = "fca01-match-feedback correct";
                         selectedMatchCard = null;
                         setTimeout(() => { feedbackEl.textContent = ""; }, 1000);
                         const remaining = matchContainer.querySelectorAll('.fca01-match-card:not(.matched)').length;
-                        if (remaining === 0) feedbackEl.textContent = "🎉 ПОБЕДА! 🎉";
+                        if (remaining === 0) feedbackEl.textContent = "🎉 Tutto abbinato! 🎉";
                     } else {
                         isProcessingMatch = true;
                         clickedCard.classList.add('wrong');
                         previousCard.classList.add('wrong');
-                        feedbackEl.textContent = "Неверно";
+                        feedbackEl.textContent = "Sbagliato";
                         feedbackEl.className = "fca01-match-feedback wrong";
                         setTimeout(() => {
                             clickedCard.classList.remove('selected', 'wrong');
@@ -614,12 +614,12 @@ function initPanel4() {
                     input.classList.add('correct');
                     input.disabled = true;
                     this.disabled  = true;
-                    fb.textContent = 'Правильно!';
+                    fb.textContent = 'Corretto!';
                     fb.className   = 'quiz-feedback correct';
                 } else {
                     input.classList.remove('correct');
                     input.classList.add('incorrect');
-                    fb.textContent = 'Неправильно. Попробуйте ещё раз.';
+                    fb.textContent = 'Sbagliato. Riprova.';
                     fb.className   = 'quiz-feedback incorrect';
                 }
             });
