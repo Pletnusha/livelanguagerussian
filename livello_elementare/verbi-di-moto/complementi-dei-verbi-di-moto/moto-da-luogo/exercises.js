@@ -106,18 +106,16 @@ const p5exercises = [
 // 10 repeated from p5 + 5 new ОТ
 // ============================================================
 const p6exercises = [
-    // 5 new from p5 (with all three options)
-    { instruction: "Scegli la preposizione corretta.", text: "Мы идём {{1}} бассейна.", words: ["из", "от", "с"], correctAnswers: { 1: "из" } },
-    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} дискотеки — уже светло.", words: ["с", "из", "от"], correctAnswers: { 1: "с" } },
-    { instruction: "Scegli la preposizione corretta.", text: "Он возвращается {{1}} спортзала.", words: ["из", "с", "от"], correctAnswers: { 1: "из" } },
-    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} вокзала.", words: ["с", "от", "из"], correctAnswers: { 1: "с" } },
-    { instruction: "Scegli la preposizione corretta.", text: "Мы возвращаемся {{1}} ночного клуба уставшие.", words: ["из", "с", "от"], correctAnswers: { 1: "из" } },
-    // 5 new — ОТ focus
-    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} сестры с подарком.", words: ["от", "из", "с"], correctAnswers: { 1: "от" } },
-    { instruction: "Scegli la preposizione corretta.", text: "Он идёт {{1}} родителей.", words: ["от", "с", "из"], correctAnswers: { 1: "от" } },
-    { instruction: "Scegli la preposizione corretta.", text: "Они идут {{1}} друзей.", words: ["от", "из", "с"], correctAnswers: { 1: "от" } },
-    { instruction: "Scegli la preposizione corretta.", text: "Она возвращается {{1}} подруги.", words: ["от", "с", "из"], correctAnswers: { 1: "от" } },
-    { instruction: "Scegli la preposizione corretta.", text: "Он возвращается {{1}} бара после встречи с друзьями.", words: ["из", "от", "с"], correctAnswers: { 1: "из" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она возвращается {{1}} работы поздно.", words: ["с", "от"], correctAnswers: { 1: "с" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Он идёт {{1}} врача — чувствует себя лучше.", words: ["от", "с"], correctAnswers: { 1: "от" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Они возвращаются {{1}} концерта.", words: ["с", "от"], correctAnswers: { 1: "с" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Я иду {{1}} брата.", words: ["от", "с"], correctAnswers: { 1: "от" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} дискотеки — уже светло.", words: ["с", "от"], correctAnswers: { 1: "с" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} сестры с подарком.", words: ["от", "с"], correctAnswers: { 1: "от" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она идёт {{1}} вокзала.", words: ["с", "от"], correctAnswers: { 1: "с" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она возвращается {{1}} подруги.", words: ["от", "с"], correctAnswers: { 1: "от" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Она возвращается {{1}} рынка с тяжёлыми сумками.", words: ["с", "от"], correctAnswers: { 1: "с" } },
+    { instruction: "Scegli la preposizione corretta.", text: "Он идёт {{1}} родителей.", words: ["от", "с"], correctAnswers: { 1: "от" } },
 ];
 
 // ============================================================
@@ -158,12 +156,12 @@ const p3cards = [
 const p7cards = [
     { front: "Он идёт (университет) домой",          back: "Он идёт из университета домой" },
     { front: "Анна возвращается (работа)",             back: "Анна возвращается с работы" },
-    { front: "Он идёт (врач)",                         back: "Он идёт от врача" },
+    { front: "Мы идём (бассейн)",                      back: "Мы идём из бассейна" },
     { front: "Они возвращаются (концерт)",             back: "Они возвращаются с концерта" },
-    { front: "Он идёт (друзья)",                       back: "Он идёт от друзей" },
+    { front: "Она идёт (стадион)",                     back: "Она идёт со стадиона" },
     { front: "Она идёт (спортзал)",                    back: "Она идёт из спортзала" },
     { front: "Мой друг возвращается (дискотека)",      back: "Мой друг возвращается с дискотеки" },
-    { front: "Соня идёт (подруга)",                    back: "Соня идёт от подруги" },
+    { front: "Наш сосед идёт (рынок)",                 back: "Наш сосед идёт с рынка" },
     { front: "Друзья идут (ночной клуб)",              back: "Друзья идут из ночного клуба" },
     { front: "Антон идёт (ресторан)",                  back: "Антон идёт из ресторана" },
 ];
@@ -172,16 +170,16 @@ const p7cards = [
 // PANEL 8 — paid · Flashcard · С + genitivo
 // ============================================================
 const p8cards = [
-    { front: "Дети возвращаются (школа) в три часа",          back: "Дети возвращаются из школы в три часа" },
+    { front: "Они возвращаются (концерт)",                     back: "Они возвращаются с концерта" },
     { front: "Она возвращается (рынок) с тяжёлыми сумками",   back: "Она возвращается с рынка с тяжёлыми сумками" },
     { front: "Я иду (брат)",                                   back: "Я иду от брата" },
     { front: "Она идёт (вокзал)",                              back: "Она идёт с вокзала" },
-    { front: "Дима идёт (дом)",                                back: "Дима идёт из дома" },
-    { front: "Мы идём (бассейн)",                              back: "Мы идём из бассейна" },
+    { front: "Он идёт (врач)",                                 back: "Он идёт от врача" },
+    { front: "Наш сосед идёт (остановка)",                     back: "Наш сосед идёт с остановки" },
     { front: "Папа идёт (почта)",                              back: "Папа идёт с почты" },
     { front: "Она идёт (сестра)",                              back: "Она идёт от сестры" },
     { front: "Антон идёт (родители)",                          back: "Антон идёт от родителей" },
-    { front: "Коля идёт (бар)",                                back: "Коля идёт из бара" },
+    { front: "Он идёт (друзья)",                               back: "Он идёт от друзей" },
 ];
 
 // ============================================================
@@ -192,8 +190,8 @@ const p9cards = [
     { front: "Саша идёт в ресторан", back: "Саша идёт из ресторана" },
     { front: "Она идёт в спортзал", back: "Она идёт из спортзала" },
     { front: "Он идёт в ночной клуб", back: "Он идёт из ночного клуба" },
-    { front: "Она идёт на дискотеку", back: "Она идёт с дискотеки" },
-    { front: "Саша идёт на вокзал", back: "Саша идёт с вокзала" },
+    { front: "Дима идёт к брату", back: "Дима идёт от брата" },
+    { front: "Анна идёт к сестре", back: "Анна идёт от сестры" },
     { front: "Он идёт к родителям", back: "Он идёт от родителей" },
     { front: "Она идёт к подруге", back: "Она идёт от подруги" },
     { front: "Он идёт в офис", back: "Он идёт из офиса" },
