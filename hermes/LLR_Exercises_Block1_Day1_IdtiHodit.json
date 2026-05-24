@@ -1,0 +1,137 @@
+[
+  {
+    "day": 1,
+    "context_it": "Stai uscendo di casa adesso per andare al supermercato. Sei già in movimento.",
+    "logic_arrow": "→ Movimento reale, direzione unica, processo in corso",
+    "question_ru": "Я {{...}} в супермаркет.",
+    "correct_answer": "иду",
+    "explanation_it": "Stai andando adesso, in questo momento, verso una destinazione precisa. La freccia punta in una sola direzione: →. In russo si usa ИДТИ perché il movimento è reale e in corso.",
+    "tier": "PUBLIC"
+  },
+  {
+    "day": 1,
+    "context_it": "Il tuo collega va in palestra tre volte a settimana. È una sua abitudine consolidata.",
+    "logic_arrow": "↔ Abitudine, andata e ritorno impliciti, fatto generale",
+    "question_ru": "Он {{...}} в спортзал три раза в неделю.",
+    "correct_answer": "ходит",
+    "explanation_it": "Va e torna — sempre. Non stiamo descrivendo un momento specifico, ma un'abitudine. La freccia è doppia: ↔. In russo si usa ХОДИТЬ per i fatti generali e le routine.",
+    "tier": "PUBLIC"
+  },
+  {
+    "day": 1,
+    "context_it": "Vedi qualcuno uscire frettolosamente dall'ufficio. Gli chiedi dove sta andando in questo momento.",
+    "logic_arrow": "→ Direzione precisa, movimento in corso proprio adesso",
+    "question_ru": "Куда ты {{...}}?",
+    "correct_answer": "идёшь",
+    "explanation_it": "La domanda è sul presente immediato: stai andando *adesso*, non in generale. È una freccia →. Non si usa ХОДИТЬ perché non si parla di abitudini — si descrive un movimento in corso.",
+    "tier": "PUBLIC"
+  },
+  {
+    "day": 1,
+    "context_it": "Tu e i tuoi amici frequentate abitualmente lo stesso bar ogni weekend. È un rito.",
+    "logic_arrow": "↔ Frequentazione abitudinaria, andata e ritorno, fatto ripetuto",
+    "question_ru": "Мы {{...}} в этот бар каждые выходные.",
+    "correct_answer": "ходим",
+    "explanation_it": "Ogni weekend ci andate e tornate. Non è un viaggio specifico — è un'abitudine. La freccia è ↔. Il marcatore temporale 'каждые выходные' (ogni weekend) è un segnale forte: qui si usa ХОДИТЬ.",
+    "tier": "PUBLIC"
+  },
+  {
+    "day": 1,
+    "context_it": "Dalla finestra del caffè vedi la tua amica che cammina verso l'ufficio proprio adesso.",
+    "logic_arrow": "→ Osservazione in tempo reale, processo visibile, direzione specifica",
+    "question_ru": "Она {{...}} на работу пешком.",
+    "correct_answer": "идёт",
+    "explanation_it": "La stai guardando mentre cammina. Il movimento è reale, osservabile, in corso. La freccia è →. ИДТИ descrive ciò che accade sotto i tuoi occhi in questo momento.",
+    "tier": "PUBLIC"
+  },
+  {
+    "day": 1,
+    "context_it": "I tuoi genitori frequentano la messa ogni domenica mattina. Stai descrivendo la loro routine a un amico.",
+    "logic_arrow": "↔ Routine settimanale, andata e ritorno ripetuti, fatto stabile",
+    "question_ru": "Мои родители {{...}} в церковь каждое воскресенье.",
+    "correct_answer": "ходят",
+    "explanation_it": "Non stai descrivendo una domenica specifica, ma un'abitudine stabile. Vanno, tornano, ogni settimana. ↔. Il verbo ХОДИТЬ descrive questa freccia doppia nel tempo.",
+    "tier": "PUBLIC"
+  },
+  {
+    "day": 1,
+    "context_it": "Hai un appuntamento dal medico tra mezz'ora. Ti stai già preparando per uscire, sei mentalmente in movimento.",
+    "logic_arrow": "→ Intenzione immediata con destinazione precisa, processo imminente",
+    "question_ru": "Я {{...}} к врачу — у меня приём через полчаса.",
+    "correct_answer": "иду",
+    "explanation_it": "La destinazione è concreta (il dottore) e il movimento sta per iniziare. In russo ИДТИ si usa anche per il futuro prossimo certo con destinazione precisa, come in italiano 'vado dal medico tra poco'. Freccia →.",
+    "tier": "PUBLIC"
+  },
+  {
+    "day": 1,
+    "context_it": "Chiedi a un amico se va spesso al cinema — è una curiosità sulle sue abitudini generali.",
+    "logic_arrow": "↔ Domanda su abitudine, frequenza generale, non su un momento specifico",
+    "question_ru": "Ты часто {{...}} в кино?",
+    "correct_answer": "ходишь",
+    "explanation_it": "Stai chiedendo di un'abitudine generale, non di cosa sta facendo adesso. La parola 'часто' (spesso) è un segnale forte di ↔. Si usa ХОДИТЬ, non ИДТИ.",
+    "tier": "PUBLIC"
+  },
+  {
+    "day": 1,
+    "context_it": "Sei già fuori casa, per strada, e stai camminando insieme a degli amici verso la festa di stasera. Siete in movimento adesso.",
+    "logic_arrow": "→ Processo in corso, direzione precisa, movimento collettivo reale",
+    "question_ru": "Мы {{...}} на вечеринку — уже вышли из дома.",
+    "correct_answer": "идём",
+    "explanation_it": "La frase 'уже вышли из дома' (siamo già usciti di casa) conferma che il movimento è reale e in corso. Non è un'abitudine, è questa sera. Freccia →, verbo ИДТИ.",
+    "tier": "PAID"
+  },
+  {
+    "day": 1,
+    "context_it": "Sei alla finestra dell'ufficio. Vedi il tuo capo che attraversa il parcheggio in questo momento, diretto verso l'edificio.",
+    "logic_arrow": "→ Percezione visiva diretta, movimento osservabile in tempo reale",
+    "question_ru": "Он {{...}} к нам в офис — я вижу его из окна.",
+    "correct_answer": "идёт",
+    "explanation_it": "Lo stai guardando muoversi adesso. La prova è 'вижу из окна' (lo vedo dalla finestra). ИДТИ descrive il movimento osservato in tempo reale, non un'abitudine del capo. Freccia →.",
+    "tier": "PAID"
+  },
+  {
+    "day": 1,
+    "context_it": "Il tuo amico ti ha invitato a casa sua. Gli scrivi che stai uscendo adesso. In italiano dici 'vengo da te' — ma in russo il punto di partenza sei TU, non lui.",
+    "logic_arrow": "→ Trappola italiana: 'venire' in italiano = 'идти' in russo (la direzione parte da me)",
+    "question_ru": "Я {{...}} к тебе — уже выхожу!",
+    "correct_answer": "иду",
+    "explanation_it": "Trappola classica per italiani! In italiano diciamo 'vengo da te' usando VENIRE. Ma in russo il verbo dipende da chi parla: tu sei la fonte del movimento. La freccia parte da te → verso di lui. Russo: ИДТИ, non ХОДИТЬ e non ПРИХОДИТЬ.",
+    "tier": "PAID"
+  },
+  {
+    "day": 1,
+    "context_it": "Stai descrivendo i tuoi vicini a un amico: ogni sera tornano a casa tardi. È un'abitudine che conosci bene.",
+    "logic_arrow": "↔ Routine osservata, ciclo andata-ritorno quotidiano, fatto generale",
+    "question_ru": "Мои соседи {{...}} домой поздно каждый вечер.",
+    "correct_answer": "ходят",
+    "explanation_it": "Il ritorno a casa implica che siano usciti prima — andata e ritorno, ogni sera. È un'abitudine osservata nel tempo, non un evento specifico. Freccia ↔, verbo ХОДИТЬ. 'Каждый вечер' (ogni sera) conferma la ripetizione.",
+    "tier": "PAID"
+  },
+  {
+    "day": 1,
+    "context_it": "Sei al telefono con un amico. Lui ti dice che sta arrivando da te in questo momento. Tu vuoi confermare. In italiano diresti 'stai venendo da me?'",
+    "logic_arrow": "→ Trappola italiana: 'venire' dell'interlocutore = 'идти' in russo (movimento in corso verso di te)",
+    "question_ru": "Ты {{...}} ко мне прямо сейчас?",
+    "correct_answer": "идёшь",
+    "explanation_it": "Seconda trappola! In italiano usi 'vieni da me?' (VENIRE). In russo, il verbo dipende da chi si muove e dal processo in corso: lui si sta muovendo adesso → verso te. Freccia →, verbo ИДТИ. 'Прямо сейчас' (proprio adesso) è il segnale decisivo.",
+    "tier": "PAID"
+  },
+  {
+    "day": 1,
+    "context_it": "Ogni sabato mattina tu e tua moglie andate al mercato rionale. È una vostra tradizione da anni.",
+    "logic_arrow": "↔ Tradizione consolidata, azione ripetuta ciclicamente, andata e ritorno impliciti",
+    "question_ru": "Мы {{...}} на рынок каждую субботу — это уже традиция.",
+    "correct_answer": "ходим",
+    "explanation_it": "La parola chiave è 'традиция' (tradizione): qualcosa che si ripete da sempre. Andare e tornare ogni settimana è un ciclo ↔. Nonostante il contesto sembri specifico ('il nostro mercato'), si parla di un'abitudine. Verbo ХОДИТЬ.",
+    "tier": "PAID"
+  },
+  {
+    "day": 1,
+    "context_it": "La tua collega ti manda un messaggio: 'Sto venendo in ufficio, arrivo tra 10 minuti.' Devi capire quale verbo usa lei in russo per descrivere il suo movimento adesso.",
+    "logic_arrow": "→ Trappola tripla: 'venire' italiano + prospettiva in prima persona + movimento in corso",
+    "question_ru": "Она написала: «Я {{...}} в офис — буду через 10 минут».",
+    "correct_answer": "иду",
+    "explanation_it": "La trappola è tripla: (1) In italiano lei 'viene' → tu pensi ПРИХОДИТЬ. (2) Parla di se stessa → il movimento parte da lei. (3) Il processo è in corso adesso. In russo lei dice 'иду' — mi sto muovendo, ora, verso l'ufficio. Freccia →. Né ХОДИТЬ (abitudine) né ПРИХОДИТЬ (arrivo completato).",
+    "tier": "PAID"
+  }
+]
