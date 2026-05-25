@@ -1,0 +1,5693 @@
+[
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Она {{1}} гулять три раза в день.",
+    "options": [
+      "ходит",
+      "идёт",
+      "идут"
+    ],
+    "correct_answer": "ходит",
+    "explanation_it": "Azione ripetuta: «tre volte al giorno» indica frequenza → ходить."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Когда она {{1}} гулять, она звонит подруге.",
+    "options": [
+      "идёт",
+      "ходит",
+      "ходят"
+    ],
+    "correct_answer": "идёт",
+    "explanation_it": "Movimento in corso in un momento specifico → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Ты {{1}} в банк? — Да, уже {{2}}!",
+    "options": [
+      "идёшь",
+      "ходишь",
+      "иду",
+      "хожу"
+    ],
+    "correct_answer": "идёшь\", 2: \"иду",
+    "explanation_it": "L"
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Я редко {{1}} в аптеку.",
+    "options": [
+      "хожу",
+      "иду",
+      "идёт"
+    ],
+    "correct_answer": "хожу",
+    "explanation_it": "«Редко» è un avverbio di frequenza → ходить."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Ты {{1}} смотреть кино сегодня вечером?",
+    "options": [
+      "идёшь",
+      "ходишь",
+      "идут"
+    ],
+    "correct_answer": "идёшь",
+    "explanation_it": "L"
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Ты же знаешь, я не {{1}} в кинотеатры.",
+    "options": [
+      "хожу",
+      "иду",
+      "идёт"
+    ],
+    "correct_answer": "хожу",
+    "explanation_it": "Caratteristica generale, abitudine → ходить."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Ты опять {{1}} в салон красоты?!",
+    "options": [
+      "идёшь",
+      "ходишь",
+      "ходят"
+    ],
+    "correct_answer": "идёшь",
+    "explanation_it": "Movimento diretto in questo momento → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Мне нравится {{1}} на работу пешком.",
+    "options": [
+      "ходить",
+      "идти",
+      "ходит"
+    ],
+    "correct_answer": "ходить",
+    "explanation_it": "Dopo нравиться si usa l"
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Она любит {{1}} на рынок.",
+    "options": [
+      "ходить",
+      "идти",
+      "ходит"
+    ],
+    "correct_answer": "ходить",
+    "explanation_it": "Dopo любить si usa l"
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Ненавижу {{1}} на групповые экскурсии!",
+    "options": [
+      "ходить",
+      "идти",
+      "идёт"
+    ],
+    "correct_answer": "ходить",
+    "explanation_it": "Dopo verbi di emozione (любить, ненавидеть, нравиться) → infinito ходить."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Completa la frase con la forma corretta del verbo ИДТИ (Ходить vs Идти)",
+    "question_ru": "Сегодня вечером мы {{1}} в кино, а вы {{2}} куда-нибудь?",
+    "options": [
+      "идём",
+      "идёте",
+      "иду",
+      "идёт"
+    ],
+    "correct_answer": "идём\", 2: \"идёте",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Completa la frase con la forma corretta del verbo ИДТИ (Ходить vs Идти)",
+    "question_ru": "Ты куда {{1}}? Я {{2}} в гости к Кате, у неё день рождения сегодня.",
+    "options": [
+      "идёшь",
+      "иду",
+      "идёт",
+      "идём"
+    ],
+    "correct_answer": "идёшь\", 2: \"иду",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Completa la frase con la forma corretta del verbo ИДТИ (Ходить vs Идти)",
+    "question_ru": "Она {{1}} по берегу моря и слушает звуки его волн.",
+    "options": [
+      "идёт",
+      "иду",
+      "идёшь",
+      "идём"
+    ],
+    "correct_answer": "идёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Completa la frase con la forma corretta del verbo ИДТИ (Ходить vs Идти)",
+    "question_ru": "Я {{1}} в магазин, тебе купить что-нибудь?",
+    "options": [
+      "иду",
+      "идёт",
+      "идёшь",
+      "идём"
+    ],
+    "correct_answer": "иду",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Completa la frase con la forma corretta del verbo ИДТИ (Ходить vs Идти)",
+    "question_ru": "Вы {{1}} в понедельник на презентацию нашего проекта?",
+    "options": [
+      "идёте",
+      "иду",
+      "идёшь",
+      "идёт"
+    ],
+    "correct_answer": "идёте",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Completa la frase con la forma corretta del verbo ИДТИ (Ходить vs Идти)",
+    "question_ru": "Они {{1}} в субботу вечером на день рождения к родителям.",
+    "options": [
+      "идут",
+      "иду",
+      "идёт",
+      "идём"
+    ],
+    "correct_answer": "идут",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Completa la frase con la forma corretta del verbo ИДТИ (Ходить vs Идти)",
+    "question_ru": "Ты куда {{1}}? {{2}} в спортзал, опаздываю.",
+    "options": [
+      "идёшь",
+      "иду",
+      "идёт",
+      "идём"
+    ],
+    "correct_answer": "идёшь\", 2: \"иду",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Completa la frase con la forma corretta del verbo ИДТИ (Ходить vs Идти)",
+    "question_ru": "Вы {{1}} с нами к Андрею сегодня? А Рудневы {{2}}? Да, они {{3}}. Ну тогда и мы {{4}}.",
+    "options": [
+      "идёте",
+      "идут",
+      "идут",
+      "идём",
+      "иду",
+      "идёшь"
+    ],
+    "correct_answer": "идёте\", 2: \"идут\", 3: \"идут\", 4: \"идём",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Completa la frase con la forma corretta del verbo ИДТИ (Ходить vs Идти)",
+    "question_ru": "Ты {{1}} сегодня вечером на концерт? Нет, я не {{2}}, но Лена {{3}}.",
+    "options": [
+      "идёшь",
+      "иду",
+      "идёт",
+      "идём"
+    ],
+    "correct_answer": "идёшь\", 2: \"иду\", 3: \"идёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Completa la frase con la forma corretta del verbo ИДТИ (Ходить vs Идти)",
+    "question_ru": "Ты {{1}} или нет?!",
+    "options": [
+      "идёшь",
+      "иду",
+      "идёт",
+      "идём"
+    ],
+    "correct_answer": "идёшь",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ.",
+    "question_ru": "Я редко {{1}} в аптеку, не люблю лекарства.",
+    "options": [
+      "хожу",
+      "ходишь",
+      "ходит"
+    ],
+    "correct_answer": "хожу",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ.",
+    "question_ru": "Ты {{1}} в магазин как на работу!",
+    "options": [
+      "ходишь",
+      "хожу",
+      "ходят"
+    ],
+    "correct_answer": "ходишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ.",
+    "question_ru": "Бабушка {{1}} к врачу каждую неделю.",
+    "options": [
+      "ходит",
+      "хожу",
+      "ходим"
+    ],
+    "correct_answer": "ходит",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ.",
+    "question_ru": "Мы обычно {{1}} завтракать в бар рядом с домом.",
+    "options": [
+      "ходим",
+      "ходите",
+      "ходят"
+    ],
+    "correct_answer": "ходим",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ.",
+    "question_ru": "Вы часто сюда {{1}}?",
+    "options": [
+      "ходите",
+      "ходим",
+      "ходят"
+    ],
+    "correct_answer": "ходите",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ.",
+    "question_ru": "Они {{1}} в одни и те же рестораны.",
+    "options": [
+      "ходят",
+      "ходим",
+      "ходите"
+    ],
+    "correct_answer": "ходят",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ.",
+    "question_ru": "Я {{1}} на рынок по воскресеньям.",
+    "options": [
+      "хожу",
+      "ходит",
+      "ходим"
+    ],
+    "correct_answer": "хожу",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ.",
+    "question_ru": "Куда ты {{1}} каждый вечер, тебя дома не застать?",
+    "options": [
+      "ходишь",
+      "хожу",
+      "ходят"
+    ],
+    "correct_answer": "ходишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ.",
+    "question_ru": "Лена {{1}} только на распродажи.",
+    "options": [
+      "ходит",
+      "хожу",
+      "ходишь"
+    ],
+    "correct_answer": "ходит",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ.",
+    "question_ru": "Мы {{1}} в спортзал вместе по пятницам.",
+    "options": [
+      "ходим",
+      "ходите",
+      "ходят"
+    ],
+    "correct_answer": "ходим",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Нам нравится",
+    "back": "много ходить",
+    "explanation_it": "Dopo нравиться → infinito di ходить: azione ripetuta."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Они",
+    "back": "ходят в одни и те же рестораны",
+    "explanation_it": "Abitudine consolidata → ходить."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Ненавижу",
+    "back": "ходить на групповые экскурсии!",
+    "explanation_it": "Dopo verbi di emozione (ненавидеть, любить, нравиться) → infinito ходить."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Лена",
+    "back": "ходит только на распродажи",
+    "explanation_it": "Caratteristica personale, abitudine → ходить."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Мы обычно",
+    "back": "ходим завтракать в бар рядом с домом",
+    "explanation_it": "«Обычно» indica frequenza → ходить."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Я",
+    "back": "иду к врачу в понедельник",
+    "explanation_it": "L'azione è già avviata: l'appuntamento è fissato, ci sono elementi in moto → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Мы",
+    "back": "идём гулять в парк или в центр",
+    "explanation_it": "Decisione in azione, ci sono elementi in moto: stiamo già andando, dobbiamo ancora decidere dove di preciso → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Ты опять",
+    "back": "идёшь в салон красоты?!",
+    "explanation_it": "Movimento diretto in questo momento → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Она",
+    "back": "идёт по берегу моря и слушает звуки его волн",
+    "explanation_it": "Movimento in corso in un momento specifico → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Сейчас он",
+    "back": "идёт в банк",
+    "explanation_it": "«Сейчас» (adesso) = movimento in corso → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "По понедельникам Катя ходит на йогу.",
+    "back": "В понедельник Катя идёт на йогу.",
+    "explanation_it": "«По понедельникам» = Complemento di tempo Frequenza → ходить. «В понедельник» = Complemento di tempo Determinato → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Мы часто ходим в этот ресторан.",
+    "back": "Сегодня вечером мы идём в этот ресторан.",
+    "explanation_it": "«Часто» = Complemento di tempo Frequenza → ходить. «Сегодня вечером» = Complemento di tempo Determinato → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Лена обычно ходит на работу пешком.",
+    "back": "Сегодня Лена идёт на работу пешком.",
+    "explanation_it": "«Обычно» = Complemento di tempo Frequenza → ходить. «Сегодня» = Complemento di tempo Determinato → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "По пятницам они ходят в кино.",
+    "back": "В эту пятницу они идут в кино.",
+    "explanation_it": "«По пятницам» = Complemento di tempo Frequenza → ходить. «В эту пятницу» = Complemento di tempo Determinato → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Андрей иногда ходит на концерты.",
+    "back": "В субботу вечером Андрей идёт на концерт.",
+    "explanation_it": "«Иногда» = Complemento di tempo Frequenza → ходить. «В субботу вечером» = Complemento di tempo Determinato → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Бабушка каждую неделю ходит к врачу.",
+    "back": "Завтра бабушка идёт к врачу.",
+    "explanation_it": "«Каждую неделю» = Complemento di tempo Frequenza → ходить. «Завтра» = Complemento di tempo Determinato → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Мы с Катей иногда ходим в театр.",
+    "back": "Завтра вечером мы с Катей идём в театр.",
+    "explanation_it": "«Иногда» = Complemento di tempo Frequenza → ходить. «Завтра вечером» = Complemento di tempo Determinato → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "По воскресеньям они ходят гулять в парк.",
+    "back": "В воскресенье они идут гулять в парк.",
+    "explanation_it": "«По воскресеньям» = Complemento di tempo Frequenza → ходить. «В воскресенье» = Complemento di tempo Determinato → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Ты часто ходишь на рынок?",
+    "back": "Ты идёшь на рынок прямо сейчас?",
+    "explanation_it": "«Часто» = Complemento di tempo Frequenza → ходить. «Прямо сейчас» = Complemento di tempo Determinato → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Они иногда ходят на выставки.",
+    "back": "В четверг они идут на выставку современного искусства.",
+    "explanation_it": "«Иногда» = Complemento di tempo Frequenza → ходить. «В четверг» = Complemento di tempo Determinato → идти."
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Она",
+    "back": "идёт по берегу моря и слушает звуки его волн",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Куда ты каждый вечер",
+    "back": "ходишь, тебя дома не застать?",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Завтра вечером вы",
+    "back": "идёте куда-нибудь?",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Мы с друзьями иногда",
+    "back": "ходим на джазовые концерты",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Ты",
+    "back": "идёшь смотреть кино сегодня вечером?",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Андрей по утрам",
+    "back": "ходит на йогу",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Сегодня вечером они",
+    "back": "идут к Рудневым",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Они редко",
+    "back": "ходят в кино вместе",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Вы",
+    "back": "идёте в понедельник на презентацию нашего проекта?",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Ты же знаешь, я не",
+    "back": "хожу в кинотеатры",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Бабушка",
+    "back": "ходит к врачу каждую неделю",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Лена",
+    "back": "идёт на собеседование — очень волнуется",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Мы по утрам всегда",
+    "back": "ходим на пробежку",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Ты",
+    "back": "идёшь или нет?!",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Нина по вторникам",
+    "back": "ходит на курсы итальянского",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Когда на улице солнце, мы",
+    "back": "всегда идём на пляж",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Я уже час",
+    "back": "хожу по магазинам",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "В субботу вечером они",
+    "back": "идут на свадьбу к другу",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Вы каждые выходные",
+    "back": "ходите в этот ресторан?",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Иду",
+    "back": "Катю встречать",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Лена",
+    "back": "идёт на собеседование — очень волнуется",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Мы с Катей договорились",
+    "back": "вместе ходить по пятницам",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Я",
+    "back": "иду к врачу в понедельник",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Ты что каждый день",
+    "back": "ходишь в бассейн?",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Когда она идёт в библиотеку",
+    "back": "всегда заходит к бабушке на чай",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Мне не нравится",
+    "back": "ходить за продуктами",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "В субботу вечером они",
+    "back": "идут на свадьбу к другу",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Нина по вторникам",
+    "back": "ходит на курсы итальянского",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Идёшь на обед? — Да",
+    "back": "иду с коллегами пообедать",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Если регулярно",
+    "back": "ходить на танцы — меняется всё",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Завтра вечером вы",
+    "back": "идёте куда-нибудь?",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Я же не просто",
+    "back": "хожу по гипермаркету!",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "В четверг они",
+    "back": "идут на выставку современного искусства",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Обычно она в кино",
+    "back": "не ходит",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "В это воскресенье я",
+    "back": "иду в спортзал",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Мы с друзьями иногда",
+    "back": "ходим на джазовые концерты",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "В какую сторону",
+    "back": "ты идёшь?",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Маша по средам",
+    "back": "ходит на курсы вождения",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Когда мы собираемся с друзьями, мы всегда",
+    "back": "идём гулять в центр",
+    "explanation_it": ""
+  },
+  {
+    "day": 1,
+    "topic": "General",
+    "type": "Flashcard",
+    "front": "Вы каждые выходные",
+    "back": "ходите в этот ресторан?",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола движения с транспортом.",
+    "question_ru": "Машина сломалась, вот я {{1}} на метро!",
+    "options": [
+      "едет",
+      "езжу",
+      "еду"
+    ],
+    "correct_answer": "еду",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола движения с транспортом.",
+    "question_ru": "Она {{1}} в Верону на поезде — сейчас уже в поезде.",
+    "options": [
+      "едет",
+      "едем",
+      "ездит"
+    ],
+    "correct_answer": "едет",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола движения с транспортом.",
+    "question_ru": "Мы на выходные {{1}} к родителям.",
+    "options": [
+      "едут",
+      "едем",
+      "ездим"
+    ],
+    "correct_answer": "едем",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола движения с транспортом.",
+    "question_ru": "Ты только сейчас {{1}} в супермаркет?!",
+    "options": [
+      "еду",
+      "ездишь",
+      "едешь"
+    ],
+    "correct_answer": "едешь",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола движения с транспортом.",
+    "question_ru": "Мне до офиса {{1}} 25 минут.",
+    "options": [
+      "едем",
+      "ехать",
+      "ездить"
+    ],
+    "correct_answer": "ехать",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола движения с транспортом.",
+    "question_ru": "Ты же на машине {{1}} на работу — что ты здесь делаешь?",
+    "options": [
+      "ездишь",
+      "ездит",
+      "едешь"
+    ],
+    "correct_answer": "ездишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола движения с транспортом.",
+    "question_ru": "Наш сын научился {{1}} на велосипеде.",
+    "options": [
+      "ездит",
+      "ехать",
+      "ездить"
+    ],
+    "correct_answer": "ездить",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола движения с транспортом.",
+    "question_ru": "Ненавижу {{1}} на метро — там постоянно толпа!",
+    "options": [
+      "ездишь",
+      "ездить",
+      "ехать"
+    ],
+    "correct_answer": "ездить",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола движения с транспортом.",
+    "question_ru": "Я обычно в городе на машине не {{1}} — постоянно пробки!",
+    "options": [
+      "езжу",
+      "ездит",
+      "еду"
+    ],
+    "correct_answer": "езжу",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола движения с транспортом.",
+    "question_ru": "Обычно ты {{1}} на трамвае?",
+    "options": [
+      "ездит",
+      "едешь",
+      "ездишь"
+    ],
+    "correct_answer": "ездишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕХАТЬ.",
+    "question_ru": "Машина сломалась, вот я {{1}} на метро!",
+    "options": [
+      "едет",
+      "езжу",
+      "еду"
+    ],
+    "correct_answer": "еду",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕХАТЬ.",
+    "question_ru": "Ты только сейчас {{1}} в супермаркет?!",
+    "options": [
+      "едешь",
+      "еду",
+      "ездишь"
+    ],
+    "correct_answer": "едешь",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕХАТЬ.",
+    "question_ru": "Она {{1}} в Верону на поезде — сейчас уже в поезде.",
+    "options": [
+      "едем",
+      "едет",
+      "ездит"
+    ],
+    "correct_answer": "едет",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕХАТЬ.",
+    "question_ru": "Он после обеда {{1}} в ИКЕА.",
+    "options": [
+      "едут",
+      "ездит",
+      "едет"
+    ],
+    "correct_answer": "едет",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕХАТЬ.",
+    "question_ru": "Мы на выходные {{1}} к родителям.",
+    "options": [
+      "едут",
+      "едем",
+      "ездим"
+    ],
+    "correct_answer": "едем",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕХАТЬ.",
+    "question_ru": "Куда вы {{1}} в отпуск в этом году?",
+    "options": [
+      "едете",
+      "едем",
+      "ездите"
+    ],
+    "correct_answer": "едете",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕХАТЬ.",
+    "question_ru": "В субботу они {{1}} к бабушке на электричке.",
+    "options": [
+      "едем",
+      "ездят",
+      "едут"
+    ],
+    "correct_answer": "едут",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕХАТЬ.",
+    "question_ru": "На работу {{1}} на метро или на велике — зависит от погоды.",
+    "options": [
+      "едет",
+      "еду",
+      "езжу"
+    ],
+    "correct_answer": "еду",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕХАТЬ.",
+    "question_ru": "— Куда в этом году? — Как обычно, {{1}} на Бали на пару месяцев.",
+    "options": [
+      "едут",
+      "ездим",
+      "едем"
+    ],
+    "correct_answer": "едем",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕХАТЬ.",
+    "question_ru": "Женя уже {{1}} за мной.",
+    "options": [
+      "едет",
+      "едешь",
+      "ездит"
+    ],
+    "correct_answer": "едет",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕЗДИТЬ.",
+    "question_ru": "Я обычно на машине в городе не {{1}} — постоянно пробки!",
+    "options": [
+      "ездит",
+      "езжу",
+      "еду"
+    ],
+    "correct_answer": "езжу",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕЗДИТЬ.",
+    "question_ru": "Как часто ты {{1}} в гости к бабушке?",
+    "options": [
+      "ездишь",
+      "ездит",
+      "едешь"
+    ],
+    "correct_answer": "ездишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕЗДИТЬ.",
+    "question_ru": "Каждое утро он {{1}} на работу на велосипеде.",
+    "options": [
+      "ездим",
+      "ездит",
+      "едет"
+    ],
+    "correct_answer": "ездит",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕЗДИТЬ.",
+    "question_ru": "Лена {{1}} только на такси — не любит метро.",
+    "options": [
+      "едет",
+      "ездим",
+      "ездит"
+    ],
+    "correct_answer": "ездит",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕЗДИТЬ.",
+    "question_ru": "Мы {{1}} к родителям на машине каждые выходные.",
+    "options": [
+      "ездим",
+      "ездят",
+      "едем"
+    ],
+    "correct_answer": "ездим",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕЗДИТЬ.",
+    "question_ru": "Вы часто {{1}} на дачу в выходные?",
+    "options": [
+      "ездим",
+      "едете",
+      "ездите"
+    ],
+    "correct_answer": "ездите",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕЗДИТЬ.",
+    "question_ru": "Они всегда {{1}} на велосипедах в воскресенье.",
+    "options": [
+      "ездит",
+      "ездят",
+      "едут"
+    ],
+    "correct_answer": "ездят",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕЗДИТЬ.",
+    "question_ru": "Я редко {{1}} на такси — дорого!",
+    "options": [
+      "езжу",
+      "ездит",
+      "еду"
+    ],
+    "correct_answer": "езжу",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕЗДИТЬ.",
+    "question_ru": "Катя {{1}} к нам раз в месяц — всегда с подарками.",
+    "options": [
+      "едет",
+      "ездишь",
+      "ездит"
+    ],
+    "correct_answer": "ездит",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ЕЗДИТЬ.",
+    "question_ru": "Мы обычно {{1}} на дачу, на шашлыки.",
+    "options": [
+      "ездят",
+      "ездим",
+      "едем"
+    ],
+    "correct_answer": "ездим",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Мы на выходные едем к родителям.",
+    "back": "Мы ездим к родителям на машине каждые выходные.",
+    "explanation_it": "Cerca il segnale: «на выходные» = viaggio specifico → ехать. Il suo contrario abituale è «каждые выходные» → ездить."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Куда вы в этом году едете в отпуск?",
+    "back": "Вы каждый год ездите в отпуск на Сардинию?",
+    "explanation_it": "«В этом году» = questo viaggio → ехать. Il contrario abituale usa «каждый год» → ездить. Il segnale temporale cambia tutto."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Сейчас я еду на работу на метро.",
+    "back": "Я обычно на машине в городе не езжу — постоянно пробки!",
+    "explanation_it": "«Сейчас» = adesso, in questo momento → ехать. Il contrario abituale usa «обычно» → ездить."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "В субботу мы едем в горы!",
+    "back": "Мне нравится ездить в горы.",
+    "explanation_it": "«В субботу» = viaggio pianificato → ехать. Il contrario è «нравится ездить»: infinito per un'azione ripetuta → ездить."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Машина сломалась, вот я еду на метро!",
+    "back": "Ненавижу ездить на метро — там постоянно толпа!",
+    "explanation_it": "La macchina è rotta: viaggio forzato adesso → ехать. Il contrario è «ненавижу ездить»: infinito per un'attitudine abituale → ездить."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Я еду в супермаркет за вином.",
+    "back": "Мы ездим в супермаркет по субботам.",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "На работу еду на метро или на велике — смотря какая погода.",
+    "back": "Я никогда не езжу на работу на велике.",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Завтра утром я еду кататься на велике с друзьями.",
+    "back": "Каждое утро мы ездим на велосипедах по парку.",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Она едет в Верону на поезде — сейчас уже в поезде.",
+    "back": "Она всегда ездит в Верону на поезде.",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "На выходные мы едем на шашлыки!",
+    "back": "На выходные мы обычно ездим на дачу.",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Машина сломалась, вот я еду на метро!",
+    "back": "Ненавижу ездить на метро — там постоянно толпа!",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Она едет в Верону на поезде — сейчас уже в поезде.",
+    "back": "Она всегда ездит в Верону на поезде.",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Утром она едет к родителям.",
+    "back": "Как часто ты ездишь в гости к бабушке?",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Он после обеда едет в ИКЕА.",
+    "back": "Обычно мы ездим в ИКЕА, чтобы забрать мебель.",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Женя уже едет за мной.",
+    "back": "Мне очень нравится ездить на самокате.",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Дети сами на автобусе",
+    "back": "ездят в бассейн",
+    "explanation_it": "«Сами» = i bambini lo fanno regolarmente → ездить, non ехать. «На автобусе» = trasporto → ездить, non ходить."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Лена",
+    "back": "идёт в библиотеку",
+    "explanation_it": "Direzione precisa, azione in corso → идти, non ходить. Nessun mezzo di trasporto → идти, non ехать."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "В понедельник мы за город к родителям",
+    "back": "едем",
+    "explanation_it": "«В понедельник» = viaggio specifico → ехать, non ездить. «За город» = distanza implica trasporto → ехать, non идти."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "По пятницам они вместе",
+    "back": "ходят в спортзал",
+    "explanation_it": "«По пятницам» = abitudine settimanale → ходить, non идти. Nessun mezzo di trasporto → ходить, non ездить."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Они взяли такси и",
+    "back": "едут на вокзал",
+    "explanation_it": "«Взяли такси» = azione già avviata, viaggio in corso → ехать, non ездить. «Такси» = trasporto → ехать, non идти."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Тихо — учитель уже",
+    "back": "идёт!",
+    "explanation_it": "«Уже» = movimento diretto percepibile adesso → идти, non ходить. Nessun mezzo → идти, non ехать."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Раз в полгода он в Рим к дедушке —",
+    "back": "ездит",
+    "explanation_it": "«Раз в полгода» = frequenza → ездить, non ехать. Roma è lontana, si usa trasporto → ездить, non ходить."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "По утрам Андрей",
+    "back": "ходит на йогу",
+    "explanation_it": "«По утрам» = abitudine quotidiana → ходить, non идти. Nessun mezzo di trasporto → ходить, non ездить."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Не нужно на лифте",
+    "back": "ехать, он все время застревает",
+    "explanation_it": "«На лифте» = trasporto → ехать, non идти. «Не нужно» + infinito → forma base del verbo di moto con mezzo."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "В пятницу мы на дачу к друзьям",
+    "back": "едем",
+    "explanation_it": "«В пятницу» = viaggio specifico pianificato → ехать, non ездить. La dacia è fuori città → ехать, non идти."
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "По выходным он на велосипеде",
+    "back": "ездит в парк",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Завтра утром она",
+    "back": "идёт к врачу",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Сегодня вечером мы на поезде",
+    "back": "едем в Москву",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "По средам Нина",
+    "back": "ходит на курсы итальянского",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Каждые каникулы она на автобусе",
+    "back": "ездит к родителям",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Уже завтра он на такси",
+    "back": "едет в аэропорт",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Смотри — Вася уже",
+    "back": "идёт сюда!",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Два раза в год они",
+    "back": "ездят к морю",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Иногда по вечерам они",
+    "back": "ходят гулять в парк",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "В воскресенье они",
+    "back": "едут к бабушке в деревню",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "По воскресеньям они всегда на великах",
+    "back": "ездят кататься в парк",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Сегодня вечером они",
+    "back": "идут к Рудневым",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Сейчас я на метро",
+    "back": "еду на работу",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Нина по вторникам",
+    "back": "ходит на курсы итальянского",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Ты же на машине на работу",
+    "back": "ездишь?",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "В понедельник я к врачу",
+    "back": "иду",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Ты часто на трамвае",
+    "back": "ездишь?",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Вы каждые выходные в этот ресторан",
+    "back": "ходите?",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Она в Верону на поезде",
+    "back": "едет?",
+    "explanation_it": ""
+  },
+  {
+    "day": 2,
+    "topic": "Andare con un mezzo (Ехать/Ездить)",
+    "type": "Flashcard",
+    "front": "Куда вы в отпуск",
+    "back": "едете?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Профессор {{1}} лекции по истории экономики.",
+    "options": [
+      "ведёт",
+      "носит",
+      "возит"
+    ],
+    "correct_answer": "ведёт",
+    "explanation_it": "ВЕСТИ per azioni astratte guidate: tenere lezioni, condurre trattative, gestire un progetto. Non è un movimento fisico — è un ruolo."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Андрей, почему ты никогда не {{1}} очки?",
+    "options": [
+      "возишь",
+      "носишь",
+      "водишь"
+    ],
+    "correct_answer": "носишь",
+    "explanation_it": "НОСИТЬ = portare su di sé per abitudine. Gli occhiali non si trasportano da A a B — si indossano ogni giorno."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Тимур, куда ты нас {{1}}?",
+    "options": [
+      "водишь",
+      "везёшь",
+      "носишь"
+    ],
+    "correct_answer": "везёшь",
+    "explanation_it": "ВЕЗТИ = trasportare con un mezzo in questo momento. Sono in macchina adesso — azione in corso, direzione precisa."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Ты часто {{1}} дочь на занятия после школы?",
+    "options": [
+      "носишь",
+      "возишь",
+      "водишь"
+    ],
+    "correct_answer": "водишь",
+    "explanation_it": "ВОДИТЬ = accompagnare qualcuno a piedi in modo abituale. «Часто» conferma la ripetizione: non una volta sola, ma ogni settimana."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Женя {{1}} только костюмы, и часов у него штук десять.",
+    "options": [
+      "носит",
+      "ведёт",
+      "возит"
+    ],
+    "correct_answer": "носит",
+    "explanation_it": "НОСИТЬ = indossare per preferenza o abitudine. Non porta i vestiti da qualche parte — li indossa ogni giorno."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Кто {{1}} расследование этого убийства?",
+    "options": [
+      "возит",
+      "носит",
+      "ведёт"
+    ],
+    "correct_answer": "ведёт",
+    "explanation_it": "«Вести расследование» = condurre un"
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Зачем ты {{1}} его за нос?",
+    "options": [
+      "везёшь",
+      "носишь",
+      "водишь"
+    ],
+    "correct_answer": "водишь",
+    "explanation_it": "«Водить за нос» = «menare per il naso» in italiano — stessa immagine, stesso significato: ingannare qualcuno sistematicamente. ВОДИТЬ perché è un"
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "В какую клинику ты кота {{1}}?",
+    "options": [
+      "ведёшь",
+      "возишь",
+      "носишь"
+    ],
+    "correct_answer": "возишь",
+    "explanation_it": "ВОЗИТЬ = portare qualcuno con un mezzo in modo abituale. Il gatto va in clinica periodicamente, in macchina."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Я не {{1}} часов — смотри на телефоне.",
+    "options": [
+      "везу",
+      "ношу",
+      "вожу"
+    ],
+    "correct_answer": "ношу",
+    "explanation_it": "НОСИТЬ = portare su di sé come abitudine. L"
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Она уже год не {{1}} машину.",
+    "options": [
+      "водит",
+      "носит",
+      "возит"
+    ],
+    "correct_answer": "водит",
+    "explanation_it": "ВОДИТЬ машину = guidare la macchina (capacità o abitudine). «Уже год» indica che l"
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕСТИ.",
+    "question_ru": "— Что я {{1}}? — Мероприятия.",
+    "options": [
+      "веду",
+      "ведёшь",
+      "ведут"
+    ],
+    "correct_answer": "веду",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕСТИ.",
+    "question_ru": "Ты всегда {{1}} себя так, будто всё знаешь.",
+    "options": [
+      "ведёт",
+      "ведёшь",
+      "веду"
+    ],
+    "correct_answer": "ведёшь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕСТИ.",
+    "question_ru": "А кто {{1}} вторую часть презентации?",
+    "options": [
+      "ведём",
+      "ведёт",
+      "ведут"
+    ],
+    "correct_answer": "ведёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕСТИ.",
+    "question_ru": "Три раза в неделю мы {{1}} занятия онлайн.",
+    "options": [
+      "ведём",
+      "ведут",
+      "ведёте"
+    ],
+    "correct_answer": "ведём",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕСТИ.",
+    "question_ru": "Каждый день вы {{1}} приём пациентов?",
+    "options": [
+      "ведём",
+      "ведут",
+      "ведёте"
+    ],
+    "correct_answer": "ведёте",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕСТИ.",
+    "question_ru": "Уже два часа они {{1}} переговоры.",
+    "options": [
+      "ведёт",
+      "ведём",
+      "ведут"
+    ],
+    "correct_answer": "ведут",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕСТИ.",
+    "question_ru": "Расследование {{1}} Шерлок Холмс.",
+    "options": [
+      "ведут",
+      "ведёт",
+      "ведём"
+    ],
+    "correct_answer": "ведёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕСТИ.",
+    "question_ru": "Я {{1}} дневник с детства.",
+    "options": [
+      "ведёт",
+      "ведём",
+      "веду"
+    ],
+    "correct_answer": "веду",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕСТИ.",
+    "question_ru": "Саша и Миша уже два года {{1}} блог о путешествиях.",
+    "options": [
+      "ведёт",
+      "ведут",
+      "ведём"
+    ],
+    "correct_answer": "ведут",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕСТИ.",
+    "question_ru": "К чему ты {{1}}?",
+    "options": [
+      "ведёшь",
+      "ведут",
+      "ведёт"
+    ],
+    "correct_answer": "ведёшь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОДИТЬ.",
+    "question_ru": "По субботам я {{1}} бабушку на рынок.",
+    "options": [
+      "водит",
+      "вожу",
+      "водим"
+    ],
+    "correct_answer": "вожу",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОДИТЬ.",
+    "question_ru": "Ты же отлично {{1}}!",
+    "options": [
+      "водишь",
+      "водит",
+      "вожу"
+    ],
+    "correct_answer": "водишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОДИТЬ.",
+    "question_ru": "Нормально — он и видит, и {{1}}.",
+    "options": [
+      "водит",
+      "водим",
+      "водишь"
+    ],
+    "correct_answer": "водит",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОДИТЬ.",
+    "question_ru": "По вечерам мы {{1}} собаку в парк.",
+    "options": [
+      "водят",
+      "водим",
+      "водите"
+    ],
+    "correct_answer": "водим",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОДИТЬ.",
+    "question_ru": "Вы уже давно {{1}} туристов по этому маршруту?",
+    "options": [
+      "водим",
+      "водят",
+      "водите"
+    ],
+    "correct_answer": "водите",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОДИТЬ.",
+    "question_ru": "Они вообще меня никуда не {{1}}!",
+    "options": [
+      "водят",
+      "водит",
+      "водим"
+    ],
+    "correct_answer": "водят",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОДИТЬ.",
+    "question_ru": "Артём каждое утро {{1}} сына на тренировку по плаванию.",
+    "options": [
+      "водим",
+      "водишь",
+      "водит"
+    ],
+    "correct_answer": "водит",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОДИТЬ.",
+    "question_ru": "С тех пор как получила права, я {{1}} сама — без инструктора.",
+    "options": [
+      "водит",
+      "вожу",
+      "водят"
+    ],
+    "correct_answer": "вожу",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОДИТЬ.",
+    "question_ru": "Молодые родители в нашем районе {{1}} детей в один и тот же садик.",
+    "options": [
+      "водит",
+      "водят",
+      "водите"
+    ],
+    "correct_answer": "водят",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОДИТЬ.",
+    "question_ru": "Ты просто {{1}} его за нос.",
+    "options": [
+      "водит",
+      "вожу",
+      "водишь"
+    ],
+    "correct_answer": "водишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я",
+    "back": "веду дневник с детства",
+    "explanation_it": "«Вести дневник» = tenere un diario. ВЕСТИ per azioni astratte continuate, non per movimento fisico."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "По субботам я",
+    "back": "вожу бабушку на рынок",
+    "explanation_it": "«По субботам» = abitudine ripetuta → ВОДИТЬ: accompagnare qualcuno a piedi in modo regolare."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты всегда",
+    "back": "ведёшь себя так, будто всё знаешь",
+    "explanation_it": "«Вести себя» = comportarsi. Espressione fissa con ВЕСТИ — non esiste «водить себя»."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты просто",
+    "back": "водишь его за нос",
+    "explanation_it": "«Водить за нос» = «menare per il naso»: ingannare qualcuno sistematicamente. ВОДИТЬ perché è un'azione continuata."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Уже два часа они",
+    "back": "ведут переговоры",
+    "explanation_it": "«Вести переговоры» = condurre trattative. Espressione fissa con ВЕСТИ, non ВОДИТЬ."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "С твоими капризами, тебя даже в кино",
+    "back": "вести не хочется!",
+    "explanation_it": "Portare qualcuno da A a B, azione puntuale → ВЕСТИ (infinito). ВОДИТЬ sarebbe un'abitudine — qui è un'occasione specifica."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Лён, ты",
+    "back": "ведёшь себя как ребёнок!",
+    "explanation_it": "«Вести себя» = comportarsi. Sempre ВЕСТИ, mai ВОДИТЬ."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Перед нами идёт девушка и",
+    "back": "ведёт на поводке — кота",
+    "explanation_it": "La ragazza porta il gatto adesso, in una direzione → ВЕСТИ. ВОДИТЬ sarebbe se lo portasse a spasso ogni giorno."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Нашу программу",
+    "back": "ведёт доктор медицинских наук",
+    "explanation_it": "«Вести программу» = condurre/gestire un programma. ВЕСТИ per ruoli e azioni astratte guidate."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты хочешь, чтобы тебя",
+    "back": "водили только по дорогим заведениям!",
+    "explanation_it": "«Водить по заведениям» = portare in giro per locali abitualmente, più volte → ВОДИТЬ."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "С детства я",
+    "back": "веду дневник",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты всегда",
+    "back": "ведёшь себя так, будто всё знаешь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "А кто",
+    "back": "ведёт вторую часть презентации?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Три раза в неделю мы",
+    "back": "ведём занятия онлайн",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Уже два часа они",
+    "back": "ведут переговоры",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Нашу программу",
+    "back": "ведёт доктор медицинских наук",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Счёт в матче",
+    "back": "ведёт команда московского Динамо",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Дочь начала",
+    "back": "вести дневник — прячет под матрас",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Лён, ты",
+    "back": "ведёшь себя как ребёнок!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Вести тебя в ресторан —",
+    "back": "никаких денег не хватит",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "По субботам я",
+    "back": "вожу бабушку на рынок",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты же",
+    "back": "отлично водишь!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "По вечерам мы",
+    "back": "водим собаку в парк",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Они вообще меня",
+    "back": "никуда не водят!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "С тех пор как получила права, я",
+    "back": "вожу сама — без инструктора",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Он водит знакомство",
+    "back": "с нужными людьми",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "После того случая они больше не",
+    "back": "водят дружбу с соседями",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты хочешь, чтобы тебя",
+    "back": "водили только по дорогим заведениям!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты говорила, что знаешь дорогу —",
+    "back": "водишь нас кругами уже целый час",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Говорят, ты отлично",
+    "back": "водишь — ни одной аварии за десять лет",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Дочь начала",
+    "back": "вести дневник — прячет под матрас",
+    "explanation_it": "«Вести дневник» = tenere un diario. ВЕСТИ per azioni astratte continuate, non movimento fisico."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Андрей, почему ты никогда не",
+    "back": "носишь очки?",
+    "explanation_it": "НОСИТЬ = portare su di sé per abitudine. Gli occhiali non si trasportano da A a B — si indossano."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Тимур, куда ты нас",
+    "back": "везёшь?",
+    "explanation_it": "ВЕЗТИ = trasportare con un mezzo in questo momento. Siamo in macchina — azione in corso, direzione precisa."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Уже два часа они",
+    "back": "ведут переговоры",
+    "explanation_it": "«Вести переговоры» = condurre trattative. Espressione fissa con ВЕСТИ, non ВОДИТЬ."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Женя",
+    "back": "носит только костюмы, и часов у него штук десять",
+    "explanation_it": "НОСИТЬ = indossare per preferenza o abitudine. Non porta i vestiti da qualche parte — li indossa ogni giorno."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "После того случая они больше не",
+    "back": "водят дружбу с соседями",
+    "explanation_it": "«Водить дружбу» = coltivare un'amicizia. ВОДИТЬ perché è un processo attivo e ripetuto nel tempo."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "В какую клинику ты кота",
+    "back": "возишь?",
+    "explanation_it": "ВОЗИТЬ = portare qualcuno con un mezzo in modo abituale. Il gatto va in clinica periodicamente, in macchina."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я не",
+    "back": "ношу часов — смотри на телефоне",
+    "explanation_it": "НОСИТЬ = portare su di sé come abitudine. L'orologio non si trasporta — si indossa (o non si indossa)."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты говорила, что знаешь дорогу —",
+    "back": "водишь нас кругами уже целый час",
+    "explanation_it": "«Водить кругами» = girare in tondo, non arrivare da nessuna parte. ВОДИТЬ perché è un'azione continuata."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Вести тебя в ресторан —",
+    "back": "никаких денег не хватит",
+    "explanation_it": "Portare qualcuno una volta in un posto specifico → ВЕСТИ (infinito, azione puntuale, non abituale)."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "С детства я",
+    "back": "веду дневник",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Жень, ты уже",
+    "back": "везёшь проектор?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мне нравится",
+    "back": "носить красивую одежду",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "По субботам я",
+    "back": "вожу бабушку на рынок",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы",
+    "back": "везём воду, салфетки и вино",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Счёт в матче",
+    "back": "ведёт команда московского Динамо",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я не",
+    "back": "ношу шорты, ненавижу их!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Говорят, ты отлично",
+    "back": "водишь — ни одной аварии за десять лет",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Они вообще меня никуда не водят",
+    "back": "и не возят!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Он водит знакомство",
+    "back": "с нужными людьми",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты всегда",
+    "back": "ведёшь себя так, будто всё знаешь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Тимур,",
+    "back": "куда ты нас везёшь?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Вот Андрей не",
+    "back": "носит ни костюмов ни часов",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты же",
+    "back": "отлично водишь!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Костюмы я",
+    "back": "ношу на работу или на рабочие встречи",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Три раза в неделю мы",
+    "back": "ведём занятия онлайн",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Слушай, в какую клинику",
+    "back": "ты кота возишь?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "С детства не",
+    "back": "ношу платья — терпеть не могу!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Каждый день вы",
+    "back": "ведёте приём пациентов?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "С тех пор как получила права, я",
+    "back": "вожу сама — без инструктора",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Я {{1}} детей в школу каждый день.",
+    "options": [
+      "вожу",
+      "везу",
+      "возит"
+    ],
+    "correct_answer": "вожу",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Тимур, куда ты нас {{1}}?",
+    "options": [
+      "везёшь",
+      "возишь",
+      "везут"
+    ],
+    "correct_answer": "везёшь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Не волнуйся — Андрей уже {{1}} вино и торт.",
+    "options": [
+      "везёт",
+      "возит",
+      "везём"
+    ],
+    "correct_answer": "везёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Мы {{1}} воду, салфетки и вино — уже едем!",
+    "options": [
+      "везём",
+      "возим",
+      "везут"
+    ],
+    "correct_answer": "везём",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Таксист нас час кругами по центру {{1}}.",
+    "options": [
+      "возит",
+      "везёт",
+      "возим"
+    ],
+    "correct_answer": "возит",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Подожди — {{1}} кота к ветеринару, он заболел!",
+    "options": [
+      "везу",
+      "вожу",
+      "везёт"
+    ],
+    "correct_answer": "везу",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Димин класс {{1}} на экскурсии каждые выходные.",
+    "options": [
+      "возят",
+      "везут",
+      "возите"
+    ],
+    "correct_answer": "возят",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Тимур {{1}} стенд презентации — уже едет.",
+    "options": [
+      "везёт",
+      "возит",
+      "везут"
+    ],
+    "correct_answer": "везёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "На обиженных воду {{1}}!",
+    "options": [
+      "возят",
+      "везут",
+      "возит"
+    ],
+    "correct_answer": "возят",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Мы {{1}} грузы через Эстонию — так быстрее.",
+    "options": [
+      "возим",
+      "везём",
+      "возят"
+    ],
+    "correct_answer": "возим",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОЗИТЬ.",
+    "question_ru": "Я {{1}} детей в школу каждый день.",
+    "options": [
+      "вожу",
+      "возит",
+      "возим"
+    ],
+    "correct_answer": "вожу",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОЗИТЬ.",
+    "question_ru": "Слушай, в какую клинику ты кота {{1}}?",
+    "options": [
+      "возишь",
+      "возит",
+      "вожу"
+    ],
+    "correct_answer": "возишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОЗИТЬ.",
+    "question_ru": "Мы уже неделю бабушкино варенье в машине {{1}}.",
+    "options": [
+      "возим",
+      "возят",
+      "вожу"
+    ],
+    "correct_answer": "возим",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОЗИТЬ.",
+    "question_ru": "Мы {{1}} грузы через Эстонию — так быстрее.",
+    "options": [
+      "возим",
+      "возят",
+      "возит"
+    ],
+    "correct_answer": "возим",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОЗИТЬ.",
+    "question_ru": "Вы {{1}} туристов этой дорогой?",
+    "options": [
+      "возите",
+      "возим",
+      "возят"
+    ],
+    "correct_answer": "возите",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОЗИТЬ.",
+    "question_ru": "Димин класс {{1}} на экскурсии каждые выходные.",
+    "options": [
+      "возят",
+      "возит",
+      "возите"
+    ],
+    "correct_answer": "возят",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОЗИТЬ.",
+    "question_ru": "Ты {{1}} свои вещи туда-обратно — уже реши, где ты жить хочешь!",
+    "options": [
+      "возишь",
+      "везёшь",
+      "вожу"
+    ],
+    "correct_answer": "возишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОЗИТЬ.",
+    "question_ru": "Таксист нас час кругами по центру {{1}}.",
+    "options": [
+      "возит",
+      "везёт",
+      "возим"
+    ],
+    "correct_answer": "возит",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОЗИТЬ.",
+    "question_ru": "На обиженных воду {{1}}!",
+    "options": [
+      "возят",
+      "везут",
+      "возит"
+    ],
+    "correct_answer": "возят",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВОЗИТЬ.",
+    "question_ru": "Вам хорошо — у вас есть на чём {{1}}!",
+    "options": [
+      "возить",
+      "везти",
+      "возит"
+    ],
+    "correct_answer": "возить",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕЗТИ.",
+    "question_ru": "{{1}} кота к ветеринару — он заболел!",
+    "options": [
+      "везу",
+      "вожу",
+      "везёт"
+    ],
+    "correct_answer": "везу",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕЗТИ.",
+    "question_ru": "Тимур, куда ты нас {{1}}?",
+    "options": [
+      "везёшь",
+      "возишь",
+      "везут"
+    ],
+    "correct_answer": "везёшь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕЗТИ.",
+    "question_ru": "Андрей уже {{1}} вино и торт.",
+    "options": [
+      "везёт",
+      "возит",
+      "везём"
+    ],
+    "correct_answer": "везёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕЗТИ.",
+    "question_ru": "Мы {{1}} воду, салфетки и вино — уже едем!",
+    "options": [
+      "везём",
+      "возим",
+      "везут"
+    ],
+    "correct_answer": "везём",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕЗТИ.",
+    "question_ru": "В следующие выходные {{1}} сына в горы, кататься на лыжах!",
+    "options": [
+      "везу",
+      "вожу",
+      "везёт"
+    ],
+    "correct_answer": "везу",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕЗТИ.",
+    "question_ru": "Жень, ты уже {{1}} проектор?",
+    "options": [
+      "везёшь",
+      "возишь",
+      "везут"
+    ],
+    "correct_answer": "везёшь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕЗТИ.",
+    "question_ru": "Муж {{1}} детей в школу — я опаздываю!",
+    "options": [
+      "везёт",
+      "возит",
+      "везём"
+    ],
+    "correct_answer": "везёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕЗТИ.",
+    "question_ru": "Везёт тому, кто {{1}}!",
+    "options": [
+      "везёт",
+      "возит",
+      "везут"
+    ],
+    "correct_answer": "везёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕЗТИ.",
+    "question_ru": "Они {{1}} мебель на новую квартиру.",
+    "options": [
+      "везут",
+      "везёт",
+      "везём"
+    ],
+    "correct_answer": "везут",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ВЕЗТИ.",
+    "question_ru": "Таксист вздохнул: тяжело {{1}} пассажиров из аэропорта по пробкам.",
+    "options": [
+      "везти",
+      "возить",
+      "везёт"
+    ],
+    "correct_answer": "везти",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я вожу кота к ветеринару два раза в год.",
+    "back": "Кот заболел, ночь, все закрыто. Вот везу его к ветеринару на другой конец города.",
+    "explanation_it": "«Вожу два раза в год» = ci vado abitualmente, fa parte della routine. «Везу» = lo sto portando adesso — è un'emergenza: notte, tutto chiuso."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я вожу детей в школу каждый день.",
+    "back": "Муж заболел, метро встало. Везу детей сама — опаздываю на работу!",
+    "explanation_it": "«Вожу каждый день» = è la mia routine quotidiana. «Везу сама» = lo sto facendo io adesso — situazione eccezionale, il marito è malato."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы уже неделю бабушкино варенье в машине возим.",
+    "back": "Бабушка звонит каждый день — везём варенье наконец. Едем уже.",
+    "explanation_it": "«Возим» = lo trasportiamo da una settimana — l'azione si ripete senza concludersi (abitudine procrastinata). «Везём» = lo stiamo portando adesso — finalmente siamo in viaggio!"
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы возим Петю гулять в парк в центре Питера.",
+    "back": "Везём Петю в парк — сегодня там детский праздник, он не мог пропустить!",
+    "explanation_it": "«Возим гулять» = lo portiamo al parco di solito, è la nostra abitudine. «Везём» = lo stiamo portando adesso — oggi c'è un'occasione speciale."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты возишь свои вещи туда-обратно — уже реши, где жить!",
+    "back": "Всё, решила! Везу последние вещи к маме — переезжаю сегодня.",
+    "explanation_it": "«Возишь туда-обратно» = lo fai continuamente senza decidere (abitudine frustrante). «Везу» = lo sto facendo adesso — ho deciso, azione in corso!"
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я час ношу документы с этажа на этаж, подпишите уже!",
+    "back": "Я везу документы в центральный офис.",
+    "explanation_it": "«Ношу» = lo faccio a piedi, di piano in piano — azione ripetuta senza meta. «Везу» = lo sto portando in auto adesso — viaggio specifico verso una destinazione."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несу цветы домой — сегодня годовщина.",
+    "back": "Везу цветы с рынка — в машине, уже еду!",
+    "explanation_it": "«Несу» = li sto portando a piedi adesso, verso casa. «Везу» = li sto portando in auto adesso — dal mercato, già in viaggio."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Она несёт пакеты из магазина — тяжело, но такси не взяла.",
+    "back": "Андрей везёт вино и торт — он за рулём.",
+    "explanation_it": "«Несёт» = porta a piedi adesso, ha rifiutato il taxi. «Везёт» = trasporta in auto adesso — sta già guidando verso la meta."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несу кота к машине — заболел, едем к ветеринару!",
+    "back": "Я вожу кота к ветеринару два раза в год.",
+    "explanation_it": "«Несу» = lo sto portando a piedi adesso (fino alla macchina). «Вожу» = lo porto abitualmente in auto — fa parte della routine."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Носишь свои вещи туда-обратно пешком — уже реши, где жить!",
+    "back": "Ты возишь свои вещи туда-обратно — уже реши, где ты жить хочешь!",
+    "explanation_it": "«Носишь» = lo fai a piedi, avanti e indietro. «Возишь» = lo stesso comportamento ma in macchina — stessa abitudine frustrante, mezzo diverso."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я час ношу документы с этажа на этаж, подпишите уже!",
+    "back": "Я везу документы в центральный офис.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несу кота к машине — заболел, едем к ветеринару!",
+    "back": "Я вожу кота к ветеринару два раза в год.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Нести осторожнее, свечи на торте могут потухнуть!",
+    "back": "Не волнуйся, торт я купил, уже везу.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я несу твой чемодан, ты что туда положила, его не поднять!",
+    "back": "Папа везёт мой чемодан, я его дома забыла. Ты где?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несут мебель по лестнице — лифт не работает!",
+    "back": "Они везут мебель на новую квартиру.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы уже купили продукты, несём их домой.",
+    "back": "Мы везём воду, салфетки и вино — уже едем!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Муж несёт спящего сына.",
+    "back": "Муж везёт детей в школу — я опаздываю!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несу лыжи к машине — едем в горы!",
+    "back": "В следующие выходные везу сына в горы, кататься на лыжах!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несём коробки со склада — тяжело, но машины нет.",
+    "back": "Мы возим грузы через Эстонию — так быстрее.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Дети несут рюкзаки к автобусу, едут в поход.",
+    "back": "Везут класс сегодня в Эрмитаж — дети в восторге!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я час ношу документы с этажа на этаж, подпишите уже!",
+    "back": "Я везу документы в центральный офис.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несу цветы домой — сегодня годовщина.",
+    "back": "Везу цветы с рынка — в машине, уже еду!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Она несёт пакеты из магазина — тяжело, но такси не взяла.",
+    "back": "Андрей везёт вино и торт — он за рулём.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несу кота к машине — заболел, едем к ветеринару!",
+    "back": "Я вожу кота к ветеринару два раза в год.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Носишь свои вещи туда-обратно пешком — уже реши, где жить!",
+    "back": "Ты возишь свои вещи туда-обратно — уже реши, где ты жить хочешь!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Нести осторожнее, свечи на торте могут потухнуть!",
+    "back": "Не волнуйся, торт я купил, уже везу.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несём стенд по лестнице — лифт сломан!",
+    "back": "Тимур везёт стенд на выставку — уже в пути.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ох, проектор же в другом корпусе, туда ехать час!",
+    "back": "Женя уже везёт его.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я несу твой чемодан, ты что туда положила, его не поднять!",
+    "back": "Папа везёт мой чемодан, я его дома забыла. Ты где?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несут мебель по лестнице — лифт не работает!",
+    "back": "Они везут мебель на новую квартиру.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я вожу детей в школу каждый день.",
+    "back": "Муж заболел, метро встало. Везу детей сама — опаздываю на работу!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы уже неделю бабушкино варенье в машине возим.",
+    "back": "Бабушка звонит каждый день — везём варенье наконец. Едем уже.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы всегда возим туристов этой дорогой.",
+    "back": "Везём туристов — но дорогу закрыли! Едем в объезд.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Таксист нас кругами по центру возит.",
+    "back": "Таксист везёт нас в аэропорт.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Димин класс возят на экскурсии каждые выходные.",
+    "back": "Везут класс сегодня в Эрмитаж — дети в восторге!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Возим оборудование клиентам каждую неделю.",
+    "back": "Везём оборудование на конференцию — уже едем!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Вожу маму в больницу каждую пятницу.",
+    "back": "Везу маму в больницу, ей плохо.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Возим грузы через Эстонию — так быстрее.",
+    "back": "Везём срочный груз в Таллин — клиент ждёт.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Петю возят на занятия три раза в неделю.",
+    "back": "Везём Петю в парк — сегодня там детский праздник!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Тимур возит стенд на все выставки.",
+    "back": "Тимур везёт стенд на выставку — уже в пути.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я вожу кота к ветеринару два раза в год.",
+    "back": "Кот заболел, ночь, все закрыто. Вот везу его к ветеринару на другой конец города.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Ты возишь свои вещи туда-обратно — уже реши, где жить!",
+    "back": "Всё, решила! Везу последние вещи к маме — переезжаю сегодня.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы всегда возим туристов этой дорогой.",
+    "back": "Везём туристов — но дорогу закрыли! Едем в объезд.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Таксист нас кругами по центру возит.",
+    "back": "Таксист везёт нас в аэропорт.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Димин класс возят на экскурсии каждые выходные.",
+    "back": "Везут класс сегодня в Эрмитаж — дети в восторге!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Он её {{1}} на руках — делает всё, что она захочет.",
+    "options": [
+      "носит",
+      "несёт",
+      "носим"
+    ],
+    "correct_answer": "носит",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "У меня компьютер сломался — {{1}} его в ремонт.",
+    "options": [
+      "несу",
+      "ношу",
+      "несёт"
+    ],
+    "correct_answer": "несу",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Она никогда не {{1}} платья.",
+    "options": [
+      "носит",
+      "несёт",
+      "носим"
+    ],
+    "correct_answer": "носит",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Кто будет {{1}} ответственность за этот провал?",
+    "options": [
+      "нести",
+      "носить",
+      "несёт"
+    ],
+    "correct_answer": "нести",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Куда ты {{1}} все эти книги?",
+    "options": [
+      "несёшь",
+      "носишь",
+      "несут"
+    ],
+    "correct_answer": "несёшь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Тебе нужно {{1}} очки — ты ничего не видишь!",
+    "options": [
+      "носить",
+      "нести",
+      "носит"
+    ],
+    "correct_answer": "носить",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Компания {{1}} серьёзные потери из-за кризиса.",
+    "options": [
+      "несёт",
+      "носит",
+      "несут"
+    ],
+    "correct_answer": "несёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Куда ты {{1}} нашего кота? — К ветеринару, он проглотил шарик.",
+    "options": [
+      "несёшь",
+      "носишь",
+      "несут"
+    ],
+    "correct_answer": "несёшь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Хватит {{1}} чушь — говори по делу!",
+    "options": [
+      "нести",
+      "носить",
+      "несёт"
+    ],
+    "correct_answer": "нести",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола.",
+    "question_ru": "Зачем ты {{1}} такие тяжести?!",
+    "options": [
+      "носишь",
+      "несёшь",
+      "носит"
+    ],
+    "correct_answer": "носишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НОСИТЬ.",
+    "question_ru": "Я не {{1}} шорты, ненавижу их!",
+    "options": [
+      "ношу",
+      "носит",
+      "носим"
+    ],
+    "correct_answer": "ношу",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НОСИТЬ.",
+    "question_ru": "Зачем ты {{1}} такие тяжести?!",
+    "options": [
+      "носишь",
+      "носит",
+      "ношу"
+    ],
+    "correct_answer": "носишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НОСИТЬ.",
+    "question_ru": "Он её {{1}} на руках — делает всё, что она захочет.",
+    "options": [
+      "носит",
+      "носим",
+      "носят"
+    ],
+    "correct_answer": "носит",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НОСИТЬ.",
+    "question_ru": "Мы {{1}} бельё стирать в прачечную.",
+    "options": [
+      "носим",
+      "носят",
+      "носите"
+    ],
+    "correct_answer": "носим",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НОСИТЬ.",
+    "question_ru": "Вы {{1}} форму на работе?",
+    "options": [
+      "носите",
+      "носим",
+      "носят"
+    ],
+    "correct_answer": "носите",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НОСИТЬ.",
+    "question_ru": "В Хогвартсе все студенты {{1}} мантии — даже на уроках.",
+    "options": [
+      "носят",
+      "носит",
+      "носите"
+    ],
+    "correct_answer": "носят",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НОСИТЬ.",
+    "question_ru": "Тебе нужно {{1}} очки — ты ничего не видишь!",
+    "options": [
+      "носить",
+      "носит",
+      "носишь"
+    ],
+    "correct_answer": "носить",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НОСИТЬ.",
+    "question_ru": "Вот Андрей не {{1}} ни костюмов, ни часов.",
+    "options": [
+      "носит",
+      "носим",
+      "ношу"
+    ],
+    "correct_answer": "носит",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НОСИТЬ.",
+    "question_ru": "Мне нравится {{1}} красивую одежду.",
+    "options": [
+      "носить",
+      "носит",
+      "ношу"
+    ],
+    "correct_answer": "носить",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НОСИТЬ.",
+    "question_ru": "Почему ты не {{1}} джинсы, которые я тебе купила?",
+    "options": [
+      "носишь",
+      "носит",
+      "носите"
+    ],
+    "correct_answer": "носишь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НЕСТИ.",
+    "question_ru": "У меня компьютер сломался — {{1}} его в ремонт.",
+    "options": [
+      "несу",
+      "несёт",
+      "несём"
+    ],
+    "correct_answer": "несу",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НЕСТИ.",
+    "question_ru": "Зачем ты {{1}} тарелки в комнату?",
+    "options": [
+      "несёшь",
+      "несёт",
+      "несут"
+    ],
+    "correct_answer": "несёшь",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НЕСТИ.",
+    "question_ru": "Она {{1}} горячий суп в комнату.",
+    "options": [
+      "несёт",
+      "несу",
+      "несёшь"
+    ],
+    "correct_answer": "несёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НЕСТИ.",
+    "question_ru": "Мы {{1}} цветы на свадьбу.",
+    "options": [
+      "несём",
+      "несут",
+      "несёте"
+    ],
+    "correct_answer": "несём",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НЕСТИ.",
+    "question_ru": "Куда вы {{1}} эти коробки?",
+    "options": [
+      "несёте",
+      "несём",
+      "несут"
+    ],
+    "correct_answer": "несёте",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НЕСТИ.",
+    "question_ru": "Они {{1}} диван на четвёртый этаж.",
+    "options": [
+      "несут",
+      "несёт",
+      "несёте"
+    ],
+    "correct_answer": "несут",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НЕСТИ.",
+    "question_ru": "Кто будет {{1}} ответственность за этот провал?",
+    "options": [
+      "нести",
+      "несёт",
+      "несу"
+    ],
+    "correct_answer": "нести",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НЕСТИ.",
+    "question_ru": "Компания {{1}} серьёзные потери из-за кризиса.",
+    "options": [
+      "несёт",
+      "несут",
+      "несём"
+    ],
+    "correct_answer": "несёт",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НЕСТИ.",
+    "question_ru": "{{1}} подарок Кате — у неё был день рождения.",
+    "options": [
+      "несу",
+      "несёшь",
+      "несёт"
+    ],
+    "correct_answer": "несу",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола НЕСТИ.",
+    "question_ru": "Хватит {{1}} чушь — говори по делу!",
+    "options": [
+      "нести",
+      "несу",
+      "несёт"
+    ],
+    "correct_answer": "нести",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я ношу джинсы.",
+    "back": "Я несу сдавать джинсы — мне мал мой размер.",
+    "explanation_it": "«Ношу джинсы» = li indosso abitualmente. «Несу сдавать» = li sto portando adesso con una destinazione precisa — cambio taglia."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я не ношу солнечные очки.",
+    "back": "Несу очки в ремонт — они сломались.",
+    "explanation_it": "«Не ношу очки» = non le indosso mai (abitudine). «Несу в ремонт» = le sto portando adesso dal riparatore."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я ненавижу носить часы — есть же телефон!",
+    "back": "Несу часы в ремонт — стекло треснуло.",
+    "explanation_it": "«Ненавижу носить часы» = odio indossarli in generale. «Несу в ремонт» = li sto portando adesso — il vetro si è rotto."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Он носит костюм только на важные встречи.",
+    "back": "Он несёт костюм в химчистку — завтра переговоры.",
+    "explanation_it": "«Носит костюм» = lo indossa in certi contesti (abitudine). «Несёт в химчистку» = lo sta portando adesso — domani ha una riunione."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы два раза в год носим кота к ветеринару.",
+    "back": "Несу к ветеринару — он шарик проглотил.",
+    "explanation_it": "«Носим кота» = lo portiamo abitualmente (due volte all'anno). «Несу» = lo sto portando adesso — ha ingoiato una pallina!"
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Хватит",
+    "back": "нести чушь — говори по делу!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "В Хогвартсе все студенты",
+    "back": "носят мантии — даже на уроках.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы два раза в год",
+    "back": "носим кота к ветеринару.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несу подарок Кате —",
+    "back": "у неё был день рождения.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Компания",
+    "back": "несёт серьёзные потери из-за кризиса.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Зачем ты",
+    "back": "несёшь тарелки в комнату?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Она никогда",
+    "back": "не носит платья.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Бабушка летом всегда",
+    "back": "носит панамку.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мне нравится",
+    "back": "носить красивую одежду.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несу очки в ремонт —",
+    "back": "они сломались.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я не ношу шорты —",
+    "back": "ненавижу их!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Куда ты несёшь нашего кота?",
+    "back": "К ветеринару, он проглотил шарик.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Женя",
+    "back": "носит только костюмы.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несу часы в ремонт —",
+    "back": "стекло треснуло.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы",
+    "back": "несём цветы на свадьбу.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы",
+    "back": "носим бельё стирать в прачечную.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Она юбки не носит —",
+    "back": "думает, что у неё ноги не красивые.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Он носит костюм",
+    "back": "только на важные встречи.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Куда ты",
+    "back": "несёшь все эти книги?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Они",
+    "back": "несут диван на четвёртый этаж.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Он всегда",
+    "back": "носит маску — никто не знает, что думает.",
+    "explanation_it": "«Носить маску» — espressione figurativa: indossare una maschera = nascondere la vera personalità. Носить, non нести — è un'abitudine costante, non un'azione in corso."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Она никогда",
+    "back": "не носит платья.",
+    "explanation_it": "«Никогда не носит» = non indossa mai (abitudine costante) → носить. Нести = portare qualcosa verso una meta in questo momento."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Уговаривать его —",
+    "back": "всё равно что носить воду в решете.",
+    "explanation_it": "«Носить воду в решете» — proverbio: fare qualcosa di completamente inutile. Espressione fissa con носить — non si usa нести."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мы два раза в год",
+    "back": "носим кота к ветеринару.",
+    "explanation_it": "«Два раза в год» = con regolarità → носить. Нести = portare adesso, in questo momento specifico."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Он опять",
+    "back": "несёт бред!",
+    "explanation_it": "«Нести бред» è un'espressione fissa = dire assurdità. Come «нести чушь» — si usa solo нести. Носить non funziona in questo contesto."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несу часы в ремонт —",
+    "back": "стекло треснуло.",
+    "explanation_it": "Destinazione specifica («в ремонт»), azione adesso → нести. Носить = portare abitualmente o indossare."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Он всем кажется таким добрым —",
+    "back": "но носит камень за пазухой.",
+    "explanation_it": "«Носить камень за пазухой» — idiomatico: covare rancore nascosto. Носить = abitudine duratura. Нести non si usa qui."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Хватит",
+    "back": "нести чушь — говори по делу!",
+    "explanation_it": "«Нести чушь» è idiomatico = dire stupidaggini. Espressione fissa — носить non può sostituire нести qui."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Эта улица носит —",
+    "back": "имя Пушкина.",
+    "explanation_it": "«Носить имя» = portare il nome di qualcuno illustre. Espressione fissa con носить — abitudine/identità permanente."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "В Хогвартсе все студенты",
+    "back": "носят мантии — даже на уроках.",
+    "explanation_it": "«Носят мантии» = le indossano abitualmente → носить. Нести = portare qualcosa verso una destinazione adesso."
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "У меня компьютер сломался —",
+    "back": "несу его в ремонт.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Он всегда носит",
+    "back": "маску — никто не знает, что думает.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Вот Андрей не носит",
+    "back": "ни костюмов, ни часов.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я не ношу шорты —",
+    "back": "ненавижу их!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Я несу —",
+    "back": "цветы домой.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Несу подарок Кате —",
+    "back": "у неё был день рождения.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Почему ты не носишь джинсы —",
+    "back": "которые я тебе купила?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Он опять несёт —",
+    "back": "бред!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Она несёт —",
+    "back": "горячий суп в комнату.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Эта улица носит —",
+    "back": "имя Пушкина.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Зачем ты несёшь —",
+    "back": "тарелки в комнату?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Мне нравится носить —",
+    "back": "красивую одежду.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Они несут —",
+    "back": "диван на четвёртый этаж.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Она юбки не носит —",
+    "back": "думает, что у неё ноги не красивые.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Компания несёт —",
+    "back": "серьёзные потери из-за кризиса.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Куда вы несёте —",
+    "back": "эти коробки?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Кто несёт —",
+    "back": "ответственность за этот провал?",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Он её носит —",
+    "back": "на руках — делает всё, что она захочет.",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Тебе нужно носить —",
+    "back": "очки — ты ничего не видишь!",
+    "explanation_it": ""
+  },
+  {
+    "day": 4,
+    "topic": "Transitivi",
+    "type": "Flashcard",
+    "front": "Зачем ты носишь —",
+    "back": "такие тяжести?!",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола (passato).",
+    "question_ru": "Вчера вечером она {{1}} в кино с подругой.",
+    "options": [
+      "ходила",
+      "шла",
+      "ходил"
+    ],
+    "correct_answer": "ходила",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола (passato).",
+    "question_ru": "Я {{1}} по парку, когда начался дождь.",
+    "options": [
+      "шёл",
+      "ходил",
+      "шли"
+    ],
+    "correct_answer": "шёл",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола (passato).",
+    "question_ru": "Раньше мы каждое воскресенье {{1}} на рынок.",
+    "options": [
+      "ходили",
+      "шли",
+      "шёл"
+    ],
+    "correct_answer": "ходили",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола (passato).",
+    "question_ru": "Они {{1}} к нам со стороны парка, когда мы их увидели.",
+    "options": [
+      "шли",
+      "ходили",
+      "шла"
+    ],
+    "correct_answer": "шли",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола (passato).",
+    "question_ru": "Лена {{1}} на йогу каждое утро в прошлом году.",
+    "options": [
+      "ходила",
+      "шла",
+      "ходил"
+    ],
+    "correct_answer": "ходила",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола (passato).",
+    "question_ru": "Он {{1}} молча, ничего не говоря.",
+    "options": [
+      "шёл",
+      "ходил",
+      "шла"
+    ],
+    "correct_answer": "шёл",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола (passato).",
+    "question_ru": "Ты {{1}} вчера к врачу?",
+    "options": [
+      "ходил",
+      "шёл",
+      "шла"
+    ],
+    "correct_answer": "ходил",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола (passato).",
+    "question_ru": "Мы {{1}} по берегу моря и разговаривали.",
+    "options": [
+      "шли",
+      "ходили",
+      "шёл"
+    ],
+    "correct_answer": "шли",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола (passato).",
+    "question_ru": "В детстве я часто {{1}} к бабушке.",
+    "options": [
+      "ходил",
+      "шёл",
+      "шли"
+    ],
+    "correct_answer": "ходил",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола (passato).",
+    "question_ru": "Она {{1}} в магазин и вдруг вспомнила, что забыла деньги.",
+    "options": [
+      "шла",
+      "ходила",
+      "шли"
+    ],
+    "correct_answer": "шла",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Completa con la forma corretta di ИДТИ al passato.",
+    "question_ru": "Я {{1}} в библиотеку, когда встретил Катю.",
+    "options": [
+      "шёл",
+      "шла",
+      "шли"
+    ],
+    "correct_answer": "шёл",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Completa con la forma corretta di ИДТИ al passato.",
+    "question_ru": "Она {{1}} по улице и улыбалась.",
+    "options": [
+      "шла",
+      "шёл",
+      "шли"
+    ],
+    "correct_answer": "шла",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Completa con la forma corretta di ИДТИ al passato.",
+    "question_ru": "Мы {{1}} домой после концерта пешком.",
+    "options": [
+      "шли",
+      "шёл",
+      "шла"
+    ],
+    "correct_answer": "шли",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Completa con la forma corretta di ИДТИ al passato.",
+    "question_ru": "Время {{1}} медленно.",
+    "options": [
+      "шло",
+      "шёл",
+      "шли"
+    ],
+    "correct_answer": "шло",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Completa con la forma corretta di ИДТИ al passato.",
+    "question_ru": "Он {{1}} к выходу, не оглядываясь.",
+    "options": [
+      "шёл",
+      "шла",
+      "шли"
+    ],
+    "correct_answer": "шёл",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Completa con la forma corretta di ИДТИ al passato.",
+    "question_ru": "Она {{1}} в магазин, когда я её заметил.",
+    "options": [
+      "шла",
+      "шёл",
+      "шли"
+    ],
+    "correct_answer": "шла",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Completa con la forma corretta di ИДТИ al passato.",
+    "question_ru": "Они {{1}} на вечеринку вместе.",
+    "options": [
+      "шли",
+      "шёл",
+      "шла"
+    ],
+    "correct_answer": "шли",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Completa con la forma corretta di ИДТИ al passato.",
+    "question_ru": "Собрание {{1}} уже два часа.",
+    "options": [
+      "шло",
+      "шёл",
+      "шли"
+    ],
+    "correct_answer": "шло",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Completa con la forma corretta di ИДТИ al passato.",
+    "question_ru": "Дождь {{1}} всю ночь.",
+    "options": [
+      "шёл",
+      "шла",
+      "шли"
+    ],
+    "correct_answer": "шёл",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Completa con la forma corretta di ИДТИ al passato.",
+    "question_ru": "Они уже {{1}}, когда мы их позвали.",
+    "options": [
+      "шли",
+      "шёл",
+      "шла"
+    ],
+    "correct_answer": "шли",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ (passato).",
+    "question_ru": "Раньше он {{1}} в спортзал три раза в неделю.",
+    "options": [
+      "ходил",
+      "ходила",
+      "ходили"
+    ],
+    "correct_answer": "ходил",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ (passato).",
+    "question_ru": "Она всегда {{1}} на рынок по субботам.",
+    "options": [
+      "ходила",
+      "ходил",
+      "ходили"
+    ],
+    "correct_answer": "ходила",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ (passato).",
+    "question_ru": "В детстве мы часто {{1}} к бабушке.",
+    "options": [
+      "ходили",
+      "ходил",
+      "ходила"
+    ],
+    "correct_answer": "ходили",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ (passato).",
+    "question_ru": "Он никогда не {{1}} к врачу.",
+    "options": [
+      "ходил",
+      "ходила",
+      "ходили"
+    ],
+    "correct_answer": "ходил",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ (passato).",
+    "question_ru": "Лена {{1}} на танцы каждую неделю.",
+    "options": [
+      "ходила",
+      "ходил",
+      "ходили"
+    ],
+    "correct_answer": "ходила",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ (passato).",
+    "question_ru": "Они {{1}} в один и тот же ресторан каждую пятницу.",
+    "options": [
+      "ходили",
+      "ходил",
+      "ходила"
+    ],
+    "correct_answer": "ходили",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ (passato).",
+    "question_ru": "Я {{1}} в театр ещё ребёнком.",
+    "options": [
+      "ходил",
+      "ходила",
+      "ходили"
+    ],
+    "correct_answer": "ходил",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ (passato).",
+    "question_ru": "Бабушка {{1}} к врачу каждую неделю.",
+    "options": [
+      "ходила",
+      "ходил",
+      "ходили"
+    ],
+    "correct_answer": "ходила",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ (passato).",
+    "question_ru": "Дети {{1}} в школу пешком.",
+    "options": [
+      "ходили",
+      "ходил",
+      "ходила"
+    ],
+    "correct_answer": "ходили",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "DragDrop",
+    "instruction": "Выбери правильную форму глагола ХОДИТЬ (passato).",
+    "question_ru": "Он {{1}} на работу каждый день в одно и то же время.",
+    "options": [
+      "ходил",
+      "ходила",
+      "ходили"
+    ],
+    "correct_answer": "ходил",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Вчера вечером он",
+    "back": "ходил в кино",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Она шла по улице",
+    "back": "и думала о нём",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "В детстве мы",
+    "back": "часто ходили к бабушке",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Когда он шёл домой",
+    "back": "встретил старого друга",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Мы шли по парку",
+    "back": "когда начался дождь",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Лена каждую неделю",
+    "back": "ходила на танцы",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Они шли молча",
+    "back": "не глядя друг на друга",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Раньше она никогда не",
+    "back": "ходила к стоматологу",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Я шёл домой после работы",
+    "back": "когда позвонил телефон",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Каждое лето мы",
+    "back": "ходили на море",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Она шла в магазин",
+    "back": "и вдруг вспомнила, что нет денег",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Раньше он",
+    "back": "ходил в спортзал три раза в неделю",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Мы шли по берегу моря",
+    "back": "и разговаривали",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "В прошлом году она",
+    "back": "ходила на йогу каждое утро",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Он шёл к выходу",
+    "back": "не оглядываясь",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Дети каждый день",
+    "back": "ходили в школу пешком",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Дождь",
+    "back": "шёл всю ночь",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Они шли на вечеринку",
+    "back": "вместе",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Бабушка каждую неделю",
+    "back": "ходила к врачу",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Время",
+    "back": "шло медленно",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Я шёл по центру города",
+    "back": "когда увидел её",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Она ходила на курсы русского языка",
+    "back": "три года",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Когда они шли к остановке",
+    "back": "пошёл снег",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Он ходил в библиотеку",
+    "back": "каждые выходные",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Мы шли через парк",
+    "back": "потому что так быстрее",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Лена ходила к подруге",
+    "back": "почти каждый вечер",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Они долго шли",
+    "back": "не зная куда идут",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Раньше я ходил в бассейн",
+    "back": "но потом бросил",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Она шла и пела",
+    "back": "под нос какую-то песню",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Мы ходили в этот кинотеатр",
+    "back": "ещё студентами",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Пока она шла домой",
+    "back": "начался сильный дождь",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Он ходил к Кате",
+    "back": "почти каждый день",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Мы шли так долго",
+    "back": "что устали",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Она ходила на рынок",
+    "back": "как на работу",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Когда я шёл через парк",
+    "back": "было очень тихо",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "В студенчестве они",
+    "back": "ходили в один и тот же бар",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Он шёл первым",
+    "back": "остальные — за ним",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Она никогда не ходила",
+    "back": "на такие мероприятия",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Мы шли пешком",
+    "back": "потому что метро не работало",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Раньше он ходил домой",
+    "back": "через этот переулок",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Вчера она ходила к врачу",
+    "back": "и узнала хорошие новости",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Он шёл так быстро",
+    "back": "что я не успевал",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Мы часто ходили гулять",
+    "back": "в старый квартал",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Пока он шёл к машине",
+    "back": "вспомнил, что ключи дома",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Она ходила в школу",
+    "back": "через этот сквер",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Они шли к нам",
+    "back": "со стороны реки",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "В детстве он ходил",
+    "back": "на рисование и плавание",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Она шла очень медленно",
+    "back": "потому что болела нога",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Мы ходили в кино",
+    "back": "каждое воскресенье",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Он шёл и думал",
+    "back": "что скажет ей",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Она шла по набережной",
+    "back": "и смотрела на закат",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Раньше он ходил за продуктами",
+    "back": "только в этот магазин",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Они шли долго",
+    "back": "почти два часа",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Она ходила на работу пешком",
+    "back": "даже зимой",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Мы шли по лесу",
+    "back": "и слушали птиц",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Он ходил к ней",
+    "back": "много лет",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Пока они шли",
+    "back": "успели поговорить обо всём",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Она ходила в этот театр",
+    "back": "с самого детства",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Он шёл не торопясь",
+    "back": "наслаждаясь тишиной",
+    "explanation_it": ""
+  },
+  {
+    "day": 5,
+    "topic": "Passato",
+    "type": "Flashcard",
+    "front": "Мы ходили на рынок",
+    "back": "каждую субботу утром",
+    "explanation_it": ""
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Во вторник она летит в командировку в Париж.",
+    "logic_arrow": "→ Momento specifico, direzione precisa",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Momento specifico, direzione precisa"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Я лечу в отпуск, наконец-то!",
+    "logic_arrow": "→ Azione imminente/prossima certissima",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Azione imminente/prossima certissima"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Куда ты летишь?",
+    "logic_arrow": "→ In questo momento (direzione)",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: → In questo momento (direzione)"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Через неделю мы летим в Милан.",
+    "logic_arrow": "→ Programma futuro preciso",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: → Programma futuro preciso"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Куда вы летите этим летом?",
+    "logic_arrow": "→ Piano specifico per il futuro",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Piano specifico per il futuro"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Каждую осень птицы летят на юг.",
+    "logic_arrow": "→ Direzione unica costante (stagionale)",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Direzione unica costante (stagionale)"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Лечу — очень хочу уже домой!",
+    "logic_arrow": "→ Processo in corso verso casa",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Processo in corso verso casa"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Смотри — воздушный шар летит прямо над городом!",
+    "logic_arrow": "→ Osservazione in tempo reale",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Osservazione in tempo reale"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Мы летим с пересадкой в Стамбуле.",
+    "logic_arrow": "→ Tratta specifica",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: → Tratta specifica"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Вы летите прямым рейсом или с пересадкой?",
+    "logic_arrow": "→ Dettaglio di un volo specifico",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Dettaglio di un volo specifico"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Когда ты летишь в Германию?",
+    "logic_arrow": "→ Richiesta su data specifica",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: → Richiesta su data specifica"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Вы летите на распродажи в Милан?",
+    "logic_arrow": "→ Scopo/Direzione precisa",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Scopo/Direzione precisa"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Мы берём только рюкзаки, поэтому летим в этот раз лоукостом.",
+    "logic_arrow": "→ Modalità di un volo specifico",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: → Modalità di un volo specifico"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Пчела летит на цветок.",
+    "logic_arrow": "→ Direzione precisa verso un obiettivo",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Direzione precisa verso un obiettivo"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Я смотрю, как чайка летит над морем.",
+    "logic_arrow": "→ Processo osservato",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Processo osservato"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "После трёх недель в командировке, лечу домой.",
+    "logic_arrow": "→ Ritorno specifico",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Ritorno specifico"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Да, да, скоро буду! Уже лечу!",
+    "logic_arrow": "→ Metafora di velocità: sto arrivando subito!",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Metafora di velocità: sto arrivando subito!"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Хотя Анна очень боится самолётов, она летит в Таиланд.",
+    "logic_arrow": "→ Volo specifico",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Volo specifico"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "И в этом году они летят на Мальдивы, как им не надоесть?",
+    "logic_arrow": "→ Piano specifico",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Piano specifico"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Лечу в Нью-Йорк.",
+    "logic_arrow": "→ Destinazione precisa",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Destinazione precisa"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Мы на Новый год летим в Таиланд.",
+    "logic_arrow": "→ Piano festivo specifico",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: → Piano festivo specifico"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Она летит на свидание.",
+    "logic_arrow": "→ Metafora/Scopo preciso",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Metafora/Scopo preciso"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "В Рим я лечу как обычно на самолёте.",
+    "logic_arrow": "→ Tratta specifica (anche se abituale, l'enfasi è sul volo)",
+    "explanation_it": "Uso di ЛЕТЕТЬ basato sulla logica: → Tratta specifica (anche se abituale, l'enfasi è sul volo)"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Они каждый год летают на Мальдивы.",
+    "logic_arrow": "↔ Frequenza (ogni anno)",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Frequenza (ogni anno)"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Эта муха летает по комнате и жужжит.",
+    "logic_arrow": "↔ Movimento a caso nello spazio",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Movimento a caso nello spazio"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Целый день летаю по городу.",
+    "logic_arrow": "↔ Metafora: muoversi freneticamente ovunque",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Metafora: muoversi freneticamente ovunque"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Ты часто по работе летаешь в Германию?",
+    "logic_arrow": "↔ Frequenza/Richiesta abitudine",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Frequenza/Richiesta abitudine"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "На распродажи мы летаем в Милан.",
+    "logic_arrow": "↔ Abitudine ricorrente",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Abitudine ricorrente"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Вы каждую зиму летаете в Таиланд?",
+    "logic_arrow": "↔ Ciclicità stagionale ↔",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Ciclicità stagionale ↔"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "После той новости я просто летаю!",
+    "logic_arrow": "★ Idioma: essere al settimo cielo",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ★ Idioma: essere al settimo cielo"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Он летает — влюбился, не иначе.",
+    "logic_arrow": "★ Idioma: essere sognante/innamorato",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ★ Idioma: essere sognante/innamorato"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Мы летаем только лоукостами — так дешевле.",
+    "logic_arrow": "↔ Regola generale/Abitudine",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Regola generale/Abitudine"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Над морем летают чайки.",
+    "logic_arrow": "↔ Movimento generale degli uccelli nel loro habitat",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Movimento generale degli uccelli nel loro habitat"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Она каждый месяц летает в командировки.",
+    "logic_arrow": "↔ Ciclicità mensile",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Ciclicità mensile"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Вы летаете в Европу с пересадкой в Стамбуле?",
+    "logic_arrow": "↔ Regola/Abitudine generale",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Regola/Abitudine generale"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Вы каждое лето летаете на Мальдивы?",
+    "logic_arrow": "↔ Frequenza",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Frequenza"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Перед дождём птицы летают низко.",
+    "logic_arrow": "↔ Caratteristica/Fatto generale",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Caratteristica/Fatto generale"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Она летает в командировки каждый месяц.",
+    "logic_arrow": "↔ Ripetizione",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Ripetizione"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Я боюсь летать на воздушном шаре.",
+    "logic_arrow": "↔ Capacità/Paura generale di un'azione",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Capacità/Paura generale di un'azione"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Когда ты влюблён — всегда летаешь как на крыльях.",
+    "logic_arrow": "★ Idioma: euforia/innamoramento",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ★ Idioma: euforia/innamoramento"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Анна боится летать.",
+    "logic_arrow": "↔ Atteggiamento verso l'azione in generale",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Atteggiamento verso l'azione in generale"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Пчёлы летают над цветами.",
+    "logic_arrow": "↔ Movimento libero nello spazio",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Movimento libero nello spazio"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Она сегодня прямо летает!",
+    "logic_arrow": "★ Idioma: stato di grazia/entusiasmo",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ★ Idioma: stato di grazia/entusiasmo"
+  },
+  {
+    "day": 3,
+    "topic": "Лететь / Летать",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Я обожаю летать!",
+    "logic_arrow": "↔ Piacere generale dell'azione",
+    "explanation_it": "Uso di ЛЕТАТЬ basato sulla logica: ↔ Piacere generale dell'azione"
+  },
+  {
+    "day": 5,
+    "topic": "ИДТИ — Usi Speciali (Meteo)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Идёт дождь",
+    "correct_answer": "идёт",
+    "explanation_it": "Il meteo non cade, viene a trovarti a piedi."
+  },
+  {
+    "day": 5,
+    "topic": "ИДТИ — Usi Speciali (Meteo)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Идёт снег",
+    "correct_answer": "идёт",
+    "explanation_it": "In russo la neve 'cammina' mentre cade."
+  },
+  {
+    "day": 5,
+    "topic": "ИДТИ — Usi Speciali (Tempo)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Идёт время",
+    "correct_answer": "идёт",
+    "explanation_it": "Il tempo non scorre, cammina."
+  },
+  {
+    "day": 5,
+    "topic": "ИДТИ — Usi Speciali (Tempo)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Идёт третий час",
+    "correct_answer": "идёт",
+    "explanation_it": "Il tempo avanza passo dopo passo."
+  },
+  {
+    "day": 5,
+    "topic": "ИДТИ — Usi Speciali (Processi)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Идёт фильм",
+    "correct_answer": "идёт",
+    "explanation_it": "Film, lezioni, riunioni — tutto 'cammina' mentre accade."
+  },
+  {
+    "day": 5,
+    "topic": "ИДТИ — Usi Speciali (Processi)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Идёт урок",
+    "correct_answer": "идёт",
+    "explanation_it": "La lezione sta 'camminando' verso la fine."
+  },
+  {
+    "day": 5,
+    "topic": "ИДТИ — Usi Speciali (Fisico)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Идёт дым",
+    "correct_answer": "идёт",
+    "explanation_it": "Fumo, sangue, odori — tutto 'cammina' verso di te."
+  },
+  {
+    "day": 5,
+    "topic": "ИДТИ — Usi Speciali (Estetica)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Тебе идёт этот цвет",
+    "correct_answer": "идёт",
+    "explanation_it": "Per dire che qualcosa 'sta bene' a qualcuno si usa ИДТИ con il dativo."
+  },
+  {
+    "day": 5,
+    "topic": "ИДТИ — Usi Speciali (Discorso)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Речь идёт о работе",
+    "correct_answer": "идёт",
+    "explanation_it": "Espressione fissa per introdurre l'argomento."
+  },
+  {
+    "day": 5,
+    "topic": "Прошедшее время: Специальные случаи ИДТИ (Meteo)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Вчера весь день шёл дождь.",
+    "correct_answer": "шёл",
+    "explanation_it": "La pioggia 'camminava' (unidirezionale) nel passato."
+  },
+  {
+    "day": 5,
+    "topic": "Прошедшее время: Специальные случаи ИДТИ (Meteo)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Когда мы вышли, шёл снег.",
+    "correct_answer": "шёл",
+    "explanation_it": "Descrizione di un processo in corso nel passato (freccia →)."
+  },
+  {
+    "day": 5,
+    "topic": "Прошедшее время: Специальные случаи ИДТИ (Tempo)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Шёл третий час собрания, а мы всё ещё спорили.",
+    "correct_answer": "шло",
+    "explanation_it": "Il tempo avanza sempre in una direzione: шёл (unidirezionale)."
+  },
+  {
+    "day": 5,
+    "topic": "Прошедшее время: Специальные случаи ИДТИ (Tempo)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Время шло очень медленно.",
+    "correct_answer": "шло",
+    "explanation_it": "Il tempo è un processo che non torna indietro. No ходить."
+  },
+  {
+    "day": 5,
+    "topic": "Прошедшее время: Специальные случаи ИДТИ (Processi)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Фильм шёл два часа.",
+    "correct_answer": "шёл",
+    "explanation_it": "Un processo (film) che si svolge dall'inizio alla fine: шёл."
+  },
+  {
+    "day": 5,
+    "topic": "Прошедшее время: Специальные случаи ИДТИ (Processi)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Урок уже шёл, когда я пришёл.",
+    "correct_answer": "шёл",
+    "explanation_it": "La lezione 'camminava' verso la sua conclusione."
+  },
+  {
+    "day": 5,
+    "topic": "Прошедшее время: Специальные случаи ИДТИ (Fisico)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Из трубы шёл густой дым.",
+    "correct_answer": "шёл",
+    "explanation_it": "Il fumo si muove verso l'esterno/l'alto: шёл."
+  },
+  {
+    "day": 5,
+    "topic": "Прошедшее время: Специальные случаи ИДТИ (Estetica)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "Тебе очень шёл этот костюм.",
+    "correct_answer": "шёл",
+    "explanation_it": "Uso di ИДТИ (al passato) per dire che qualcosa 'stava bene'."
+  },
+  {
+    "day": 5,
+    "topic": "Прошедшее время: Специальные случаи ИДТИ (Discorso)",
+    "type": "Diagnostic",
+    "tier": "PAID",
+    "question_ru": "В сообщении речь шла о деньгах.",
+    "correct_answer": "шла",
+    "explanation_it": "Espressione fissa: речь шла о... (si trattava di)."
+  }
+]
