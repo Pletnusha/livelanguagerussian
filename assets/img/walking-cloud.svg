@@ -1,0 +1,36 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .sketch { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; filter: url(#roughness); }
+    .raindrop { fill: #3498db; }
+  </style>
+  <defs>
+    <filter id="roughness">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+    </filter>
+  </defs>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -5; 0 0" dur="0.8s" repeatCount="indefinite" />
+    <path class="sketch" d="M50,110 C30,110 20,90 40,75 C20,60 40,40 60,50 C70,20 120,20 130,50 C160,35 180,60 160,85 C180,110 150,135 120,120 C100,140 65,135 50,110 Z" />
+    <circle class="raindrop" cx="70" cy="115" r="2">
+      <animate attributeName="cy" values="115;160" dur="0.6s" repeatCount="indefinite" />
+    </circle>
+    <circle class="raindrop" cx="100" cy="125" r="2">
+      <animate attributeName="cy" values="125;170" dur="0.8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  <g stroke="#333" fill="none" stroke-width="3">
+    <path d="M80,130 Q70,160 60,170">
+       <animate attributeName="d" values="M80,130 Q70,160 60,170; M80,130 Q100,160 110,170; M80,130 Q70,160 60,170" dur="0.9s" repeatCount="indefinite" />
+    </path>
+    <path d="M120,130 Q130,160 140,170">
+       <animate attributeName="d" values="M120,130 Q130,160 140,170; M120,130 Q100,160 90,170; M120,130 Q130,160 140,170" dur="0.9s" repeatCount="indefinite" />
+    </path>
+  </g>
+  <circle cx="60" cy="175" r="6" fill="#333">
+     <animate attributeName="cx" values="60;110;60" dur="0.9s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="140" cy="175" r="6" fill="#333">
+     <animate attributeName="cx" values="140;90;140" dur="0.9s" repeatCount="indefinite" />
+  </circle>
+</svg>
