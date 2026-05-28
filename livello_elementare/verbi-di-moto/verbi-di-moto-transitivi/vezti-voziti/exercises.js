@@ -3,107 +3,107 @@ import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public · Mix везти + возить
+// PANEL 1 — DragDrop · public · Mix нести + носить + везти + возить
 // ============================================================
 const p1exercises = [
     {
         instruction: "Выбери правильную форму глагола.",
-        text: "Я {{1}} детей в школу каждый день.",
-        words: ["вожу", "везу", "возит"],
-        correctAnswers: { 1: "вожу" },
+        text: "Он её {{1}} на руках — делает всё, что она захочет.",
+        words: ["носит", "везёт", "несёт"],
+        correctAnswers: { 1: "носит" },
         wrongFeedback: {
-            "везу": "«Каждый день» = azione abituale → возить, non везти. Везти = trasportare adesso verso una destinazione specifica.",
-            "возит": "Verbo giusto (возить), ma soggetto «я» → 1ª sg.: вожу, non возит."
+            "везёт": "ВЕЗТИ/ВОЗИТЬ = con un mezzo. «Носить на руках» è idioma — nessun mezzo → нести/носить. Abitudine fissa → носит, non несёт.",
+            "несёт": "Coppia giusta (in braccio). Ma «носить на руках» = abitudine idiomatica → носит, non несёт (несёт = azione puntuale adesso)."
         }
     },
     {
         instruction: "Выбери правильную форму глагола.",
-        text: "Тимур, куда ты нас {{1}}?",
-        words: ["везёшь", "возишь", "везут"],
-        correctAnswers: { 1: "везёшь" },
-        wrongFeedback: {
-            "возишь": "«Куда ты нас...» = viaggio specifico adesso → везти, non возить.",
-            "везут": "Verbo giusto (везти), ma soggetto «ты» → 2ª sg.: везёшь, non везут."
-        }
-    },
-    {
-        instruction: "Выбери правильную форму глагола.",
-        text: "Не волнуйся — Андрей уже {{1}} вино и торт.",
-        words: ["везёт", "возит", "везём"],
+        text: "Не волнуйся — Андрей уже едет и {{1}} вино и торт.",
+        words: ["везёт", "несёт", "возит"],
         correctAnswers: { 1: "везёт" },
         wrongFeedback: {
-            "возит": "«Уже едет» = sta portando adesso → везти, non возить.",
-            "везём": "Verbo giusto (везти), ma soggetto «Андрей» → 3ª sg.: везёт, non везём."
+            "несёт": "НЕСТИ/НОСИТЬ = portare in braccio/a mano. «Уже едет» = viene in macchina → везти/возить. In viaggio adesso → везёт, non возит.",
+            "возит": "Coppia giusta (con mezzo). Ma «уже едет» = in viaggio adesso → везти (azione in corso), non возить (abitudine)."
         }
     },
     {
         instruction: "Выбери правильную форму глагола.",
-        text: "Мы {{1}} воду, салфетки и вино — уже едем!",
-        words: ["везём", "возим", "везут"],
-        correctAnswers: { 1: "везём" },
+        text: "Компания {{1}} серьёзные потери из-за кризиса.",
+        words: ["несёт", "возит", "носит"],
+        correctAnswers: { 1: "несёт" },
         wrongFeedback: {
-            "возим": "«Уже едем» = in viaggio adesso → везти, non возить.",
-            "везут": "Verbo giusto (везти), ma soggetto «мы» → 1ª pl.: везём, non везут."
-        }
-    },
-    {
-        instruction: "Выбери правильную форму глагола.",
-        text: "Таксист нас час кругами по центру {{1}}.",
-        words: ["возит", "везёт", "возим"],
-        correctAnswers: { 1: "возит" },
-        wrongFeedback: {
-            "везёт": "Girare in cerchio per un'ora = comportamento abituale del tassista → возить, non везти.",
-            "возим": "Verbo giusto (возить), ma soggetto «таксист» → 3ª sg.: возит, non возим."
+            "возит": "ВЕЗТИ/ВОЗИТЬ = trasportare con un mezzo. «Нести потери» è espressione astratta — nessun mezzo, niente da trasportare fisicamente → нести/носить. Espressione fissa → несёт.",
+            "носит": "Coppia giusta (нести/носить). Ma «нести потери» è espressione fissa del registro formale → несёт. Носить non si combina mai con «потери»."
         }
     },
     {
         instruction: "Выбери правильную форму глагола.",
         text: "Подожди — {{1}} кота к ветеринару, он заболел!",
-        words: ["везу", "вожу", "везёт"],
+        words: ["везу", "несу", "вожу"],
         correctAnswers: { 1: "везу" },
         wrongFeedback: {
-            "вожу": "Emergenza adesso («он заболел») = viaggio specifico → везти, non возить.",
-            "везёт": "Verbo giusto (везти), ma soggetto «я» → 1ª sg.: везу, non везёт."
+            "несу": "НЕСТИ/НОСИТЬ = portare in braccio. Il gatto si porta in macchina → везти/возить. Urgenza adesso → везу, non вожу.",
+            "вожу": "Coppia giusta (con mezzo). Ma «он заболел» = emergenza adesso → везти (azione puntuale), non возить (abitudine regolare)."
         }
     },
     {
         instruction: "Выбери правильную форму глагола.",
-        text: "Димин класс {{1}} на экскурсии каждые выходные.",
-        words: ["возят", "везут", "возите"],
-        correctAnswers: { 1: "возят" },
+        text: "Зачем ты {{1}} такие тяжести?!",
+        words: ["носишь", "возишь", "несёшь"],
+        correctAnswers: { 1: "носишь" },
         wrongFeedback: {
-            "везут": "«Каждые выходные» = azione regolare → возить, non везти.",
-            "возите": "Verbo giusto (возить), ma soggetto «класс» (они) → 3ª pl.: возят, non возите."
+            "возишь": "ВЕЗТИ/ВОЗИТЬ = con un mezzo. I «тяжести» si portano in braccio/a mano → нести/носить. «Зачем ты» = disappunto per un'abitudine → носишь.",
+            "несёшь": "Coppia giusta (in braccio). Ma «зачем ты» = abitudine ripetuta → носить, non нести (нести = adesso, una volta sola)."
         }
     },
     {
         instruction: "Выбери правильную форму глагола.",
-        text: "Тимур {{1}} стенд презентации — уже едет.",
-        words: ["везёт", "возит", "везут"],
-        correctAnswers: { 1: "везёт" },
+        text: "Я {{1}} детей в школу каждый день.",
+        words: ["вожу", "везу", "несу"],
+        correctAnswers: { 1: "вожу" },
         wrongFeedback: {
-            "возит": "«Уже едет» = sta portando adesso → везти, non возить.",
-            "везут": "Verbo giusto (везти), ma soggetto «Тимур» → 3ª sg.: везёт, non везут."
+            "везу": "Coppia giusta (con mezzo). Ma «каждый день» = abitudine → возить, non везти (везти = adesso, una volta).",
+            "несу": "НЕСТИ/НОСИТЬ = portare in braccio. I bambini vanno a scuola in macchina ogni giorno → везти/возить. Abitudine + mezzo → вожу."
         }
     },
     {
         instruction: "Выбери правильную форму глагола.",
-        text: "На обиженных воду {{1}}!",
-        words: ["возят", "везут", "возит"],
-        correctAnswers: { 1: "возят" },
+        text: "У меня компьютер сломался — {{1}} его в ремонт.",
+        words: ["несу", "везу", "ношу"],
+        correctAnswers: { 1: "несу" },
         wrongFeedback: {
-            "везут": "«Возить воду» è un'espressione idiomatica fissa → возят. Везти non funziona in questo idioma.",
-            "возит": "Forma giusta (возить), ma il soggetto implicito è «они» → 3ª pl.: возят, non возит."
+            "везу": "ВЕЗТИ/ВОЗИТЬ = con un mezzo. Il computer si porta in mano al negozio → нести/носить. Destinazione specifica adesso → несу.",
+            "ношу": "Coppia giusta (in braccio). Ma «в ремонт» = destinazione specifica adesso → нести (azione puntuale), non носить (abitudine)."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола.",
+        text: "Таксист нас час кругами по центру {{1}}.",
+        words: ["возит", "носит", "везёт"],
+        correctAnswers: { 1: "возит" },
+        wrongFeedback: {
+            "носит": "НЕСТИ/НОСИТЬ = portare in braccio/a mano. Siamo in taxi → везти/возить. Comportamento ripetuto del tassista → возит.",
+            "везёт": "Coppia giusta (con mezzo). Ma girare in cerchio = azione ripetuta → возить, non везти (везти = viaggio diretto verso una meta)."
+        }
+    },
+    {
+        instruction: "Выбери правильную форму глагола.",
+        text: "Куда ты {{1}} все эти книги?",
+        words: ["несёшь", "везёшь", "носишь"],
+        correctAnswers: { 1: "несёшь" },
+        wrongFeedback: {
+            "везёшь": "ВЕЗТИ/ВОЗИТЬ = con un mezzo. I libri si portano in mano, non in macchina → нести/носить. L'azione è in corso adesso → несёшь.",
+            "носишь": "Coppia giusta (in braccio). Ma il parlante vede l'azione in corso adesso → нести (azione puntuale in corso), non носить (abitudine)."
         }
     },
     {
         instruction: "Выбери правильную форму глагола.",
         text: "Мы {{1}} грузы через Эстонию — так быстрее.",
-        words: ["возим", "везём", "возят"],
+        words: ["возим", "носим", "везём"],
         correctAnswers: { 1: "возим" },
         wrongFeedback: {
-            "везём": "Trasportare merci via Estonia è un'abitudine lavorativa → возить, non везти.",
-            "возят": "Verbo giusto (возить), ma soggetto «мы» → 1ª pl.: возим, non возят."
+            "носим": "НЕСТИ/НОСИТЬ = portare in braccio/a mano. I carichi industriali si trasportano con veicoli → везти/возить. Azione regolare → возим.",
+            "везём": "Coppia giusta (con mezzo). Ma trasportare merci via Estonia = percorso abituale → возить, non везти (везти = un viaggio specifico adesso)."
         }
     },
 ];
@@ -272,33 +272,58 @@ const p2cards = [
 ];
 
 // ============================================================
-// PANEL 3 — Flashcard · public · Контраст НЕСТИ/НОСИТЬ vs ВЕЗТИ/ВОЗИТЬ
+// PANEL 3 — Flashcard · public · НЕСТИ/НОСИТЬ vs ВЕЗТИ/ВОЗИТЬ (карточки отдельные)
 // ============================================================
 const p3cards = [
     {
-        front: "Я час ношу документы с этажа на этаж, подпишите уже!",
-        back: "Я везу документы в центральный офис.",
-        explanation: "«Ношу» = lo faccio a piedi, di piano in piano — azione ripetuta senza meta. «Везу» = lo sto portando in auto adesso — viaggio specifico verso una destinazione."
+        front: "Я уже час —",
+        back: "ношу документы с этажа на этаж, подпишите уже!",
+        explanation: "НОСИТЬ = portare in braccio, azione ripetuta senza meta precisa — da un piano all'altro, ancora e ancora."
     },
     {
-        front: "Несу цветы домой — сегодня годовщина.",
-        back: "Везу цветы с рынка — в машине, уже еду!",
-        explanation: "«Несу» = li sto portando a piedi adesso, verso casa. «Везу» = li sto portando in auto adesso — dal mercato, già in viaggio."
+        front: "Я в такси —",
+        back: "везу документы в центральный офис.",
+        explanation: "ВЕЗТИ = in macchina adesso, verso una destinazione specifica."
     },
     {
-        front: "Она несёт пакеты из магазина — тяжело, но такси не взяла.",
-        back: "Андрей везёт вино и торт — он за рулём.",
-        explanation: "«Несёт» = porta a piedi adesso, ha rifiutato il taxi. «Везёт» = trasporta in auto adesso — sta già guidando verso la meta."
+        front: "Несу цветы домой —",
+        back: "сегодня годовщина.",
+        explanation: "НЕСТИ = portare in mano adesso verso una destinazione — azione puntuale in corso."
     },
     {
-        front: "Несу кота к машине — заболел, едем к ветеринару!",
-        back: "Я вожу кота к ветеринару два раза в год.",
-        explanation: "«Несу» = lo sto portando a piedi adesso (fino alla macchina). «Вожу» = lo porto abitualmente in auto — fa parte della routine."
+        front: "Не волнуйся, уже еду —",
+        back: "везу цветы!",
+        explanation: "ВЕЗТИ = in macchina adesso, già in viaggio verso una meta."
     },
     {
-        front: "Носишь свои вещи туда-обратно пешком — уже реши, где жить!",
-        back: "Ты возишь свои вещи туда-обратно — уже реши, где ты жить хочешь!",
-        explanation: "«Носишь» = lo fai a piedi, avanti e indietro. «Возишь» = lo stesso comportamento ma in macchina — stessa abitudine frustrante, mezzo diverso."
+        front: "Она несёт пакеты из магазина —",
+        back: "тяжело, но такси не взяла.",
+        explanation: "НЕСТИ = portare in braccio adesso. Ha rinunciato al taxi — porta tutto con le braccia."
+    },
+    {
+        front: "Андрей везёт вино и торт —",
+        back: "он за рулём.",
+        explanation: "ВЕЗТИ = in macchina adesso — sta guidando verso la meta."
+    },
+    {
+        front: "Несу кота к машине —",
+        back: "заболел, едем к ветеринару!",
+        explanation: "НЕСТИ = portare in braccio adesso (fino alla macchina) — emergenza, azione puntuale."
+    },
+    {
+        front: "Я вожу кота к ветеринару",
+        back: "два раза в год.",
+        explanation: "ВОЗИТЬ = in macchina, abitudine regolare — due volte l'anno."
+    },
+    {
+        front: "Что ты носишь сумки",
+        back: "туда-обратно! Реши, где жить?",
+        explanation: "НОСИТЬ = portare in braccio, abitudine frustrante ripetuta — avanti e indietro."
+    },
+    {
+        front: "Ты возишь вещи",
+        back: "туда-обратно — уже реши, где ты жить хочешь!",
+        explanation: "ВОЗИТЬ = in macchina, stessa abitudine frustrante — avanti e indietro con un mezzo."
     },
 ];
 
@@ -319,19 +344,19 @@ const p10cards = [
 ];
 
 // ============================================================
-// PANEL 9 — Flashcard · paid · Контраст НЕСТИ/НОСИТЬ vs ВЕЗТИ/ВОЗИТЬ
+// PANEL 9 — Flashcard · paid · НЕСТИ/НОСИТЬ vs ВЕЗТИ/ВОЗИТЬ (карточки отдельные)
 // ============================================================
 const p9cards = [
-    { front: "Я час ношу документы с этажа на этаж, подпишите уже!", back: "Я везу документы в центральный офис." },
-    { front: "Несу цветы домой — сегодня годовщина.", back: "Везу цветы с рынка — в машине, уже еду!" },
-    { front: "Она несёт пакеты из магазина — тяжело, но такси не взяла.", back: "Андрей везёт вино и торт — он за рулём." },
-    { front: "Несу кота к машине — заболел, едем к ветеринару!", back: "Я вожу кота к ветеринару два раза в год." },
-    { front: "Носишь свои вещи туда-обратно пешком — уже реши, где жить!", back: "Ты возишь свои вещи туда-обратно — уже реши, где ты жить хочешь!" },
-    { front: "Нести осторожнее, свечи на торте могут потухнуть!", back: "Не волнуйся, торт я купил, уже везу." },
-    { front: "Несём стенд по лестнице — лифт сломан!", back: "Тимур везёт стенд на выставку — уже в пути." },
-    { front: "Ох, проектор же в другом корпусе, туда ехать час!", back: "Женя уже везёт его." },
-    { front: "Я несу твой чемодан, ты что туда положила, его не поднять!", back: "Папа везёт мой чемодан, я его дома забыла. Ты где?" },
-    { front: "Несут мебель по лестнице — лифт не работает!", back: "Они везут мебель на новую квартиру." },
+    { front: "Я несу твой чемодан —", back: "ты что туда положила, его не поднять!" },
+    { front: "Тимур везёт стенд на выставку —", back: "уже в пути." },
+    { front: "Нести осторожнее —", back: "свечи на торте могут потухнуть!" },
+    { front: "Папа везёт мой чемодан —", back: "я его дома забыла. Ты где?" },
+    { front: "Носишь свои вещи", back: "туда-обратно — уже реши, где жить!" },
+    { front: "Туда ехать час —", back: "Женя уже везёт его." },
+    { front: "Несём стенд по лестнице —", back: "лифт сломан!" },
+    { front: "Не волнуйся, торт я купил —", back: "уже везу." },
+    { front: "Они везут мебель", back: "на новую квартиру." },
+    { front: "Несут мебель по лестнице —", back: "лифт не работает!" },
 ];
 
 // ============================================================
@@ -359,6 +384,11 @@ const p7cards = [
     { front: "Мы всегда возим туристов этой дорогой.", back: "Везём туристов — но дорогу закрыли! Едем в объезд." },
     { front: "Таксист нас кругами по центру возит.", back: "Таксист везёт нас в аэропорт." },
     { front: "Димин класс возят на экскурсии каждые выходные.", back: "Везут класс сегодня в Эрмитаж — дети в восторге!" },
+    { front: "Андрей всегда возит меня на работу.", back: "Сегодня Андрей везёт меня на работу." },
+    { front: "Наша компания возит хлопок из Узбекистана.", back: "Мы были в отпуске в Узбекистане. Везём подарки." },
+    { front: "Ему по жизни везёт!", back: "Куда ты возишь детей отдыхать летом?" },
+    { front: "Мы везём вещи на новую квартиру.", back: "Мы никогда не возим вещи при переезде, всегда заказываем машину." },
+    { front: "Кто везёт нас домой?", back: "Женя возит младшего брата в школу." },
 ];
 
 // ============================================================
