@@ -64,6 +64,9 @@ export default class FlashcardExercise {
             this.currentIndex = 0;
             this.renderCard();
         } else if (mode === 'quiz') {
+            this.quizQueue = [...this.cards].sort(() => Math.random() - 0.5);
+            this.quizTotal = this.quizQueue.length;
+            this.quizCorrect = 0;
             this.renderQuiz();
             const startBtn = this.root.querySelector(`#${id}-start-quiz-btn`);
             if (startBtn) startBtn.classList.add('hidden');
@@ -125,8 +128,12 @@ export default class FlashcardExercise {
         const startBtn = this.root.querySelector(`#${id}-start-quiz-btn`);
         if (startBtn) startBtn.classList.add('hidden');
 
-        const randomIndex = Math.floor(Math.random() * this.cards.length);
-        const correctCard = this.cards[randomIndex];
+        if (!this.quizQueue || this.quizQueue.length === 0) {
+            if (area) area.innerHTML = `<div class="fca01-quiz-area"><h3 class="fca01-quiz-question">🎉 Quiz completato! ${this.quizCorrect} / ${this.quizTotal} corrette.</h3></div>`;
+            return;
+        }
+
+        const correctCard = this.quizQueue.shift();
 
         let options = [correctCard];
 
@@ -157,9 +164,11 @@ export default class FlashcardExercise {
                 if (sameGroup.length > 0) options.push(sameGroup[Math.floor(Math.random() * sameGroup.length)]);
             }
         } else {
-            while (options.length < 3 && options.length < this.cards.length) {
-                const randomWrong = this.cards[Math.floor(Math.random() * this.cards.length)];
-                if (!options.some(opt => opt.back === randomWrong.back)) options.push(randomWrong);
+            const pool = this.cards
+                .filter(c => !options.some(o => o.back === c.back))
+                .sort(() => Math.random() - 0.5);
+            while (options.length < 3 && pool.length > 0) {
+                options.push(pool.shift());
             }
         }
 
@@ -202,6 +211,7 @@ export default class FlashcardExercise {
         if (isCorrect) {
             feedback.textContent = "✅ CORRETTO!";
             feedback.className = "fca01-quiz-feedback correct";
+            if (this.quizCorrect !== undefined) this.quizCorrect++;
         } else {
             btnElement.classList.add('wrong');
             feedback.innerHTML = explanation ? `❌ ERRORE!<br><small>${explanation}</small>` : "❌ ERRORE!";
@@ -225,20 +235,31 @@ export default class FlashcardExercise {
     }
 
     initMatchGame() {
+        const shuffled = [...this.cards].sort(() => Math.random() - 0.5);
+        const mid = Math.ceil(shuffled.length / 2);
+        this.matchRounds = [shuffled.slice(0, mid), shuffled.slice(mid)];
+        this.matchRoundIndex = 0;
+        this.renderMatchRound();
+    }
+
+    renderMatchRound() {
         const id = this.rootId;
         const area = this.root.querySelector(`#${id}-learning-area-match`);
         this.selectedMatchCard = null;
         this.isProcessingMatch = false;
 
-        let fronts = this.cards.map((card, index) => ({ text: card.front, type: 'front', id: index }));
-        let backs = this.cards.map((card, index) => ({ text: card.back, type: 'back', id: index }));
+        const roundCards = this.matchRounds[this.matchRoundIndex];
+        const roundLabel = `Round ${this.matchRoundIndex + 1} / ${this.matchRounds.length}`;
 
+        let fronts = roundCards.map((card, index) => ({ text: card.front, type: 'front', id: index }));
+        let backs  = roundCards.map((card, index) => ({ text: card.back,  type: 'back',  id: index }));
         fronts.sort(() => Math.random() - 0.5);
         backs.sort(() => Math.random() - 0.5);
 
         if (area) {
             area.innerHTML = `
                 <div class="fca01-match-container">
+                    <p class="fca01-match-round-label">${roundLabel}</p>
                     <p class="fca01-match-feedback"></p>
                     <div class="fca01-match-grid">
                         <div class="fca01-match-col" id="${id}-match-col-fronts"></div>
@@ -248,10 +269,9 @@ export default class FlashcardExercise {
             `;
 
             const colFronts = this.root.querySelector(`#${id}-match-col-fronts`);
-            const colBacks = this.root.querySelector(`#${id}-match-col-backs`);
-
+            const colBacks  = this.root.querySelector(`#${id}-match-col-backs`);
             fronts.forEach(item => colFronts.appendChild(this.createMatchElement(item)));
-            backs.forEach(item => colBacks.appendChild(this.createMatchElement(item)));
+            backs.forEach(item  => colBacks.appendChild(this.createMatchElement(item)));
         }
     }
 
@@ -309,8 +329,25 @@ export default class FlashcardExercise {
 
             const remaining = this.root.querySelectorAll('.fca01-match-card:not(.matched)').length;
             if (remaining === 0) {
-                feedbackEl.textContent = "🎉 Tutto abbinato! 🎉";
-                updatePanelStatus({ panelId: this.panelId, status: 'completed', correctDelta: 1 });
+                const isLastRound = this.matchRoundIndex >= this.matchRounds.length - 1;
+                if (isLastRound) {
+                    feedbackEl.textContent = "🎉 Tutto abbinato! 🎉";
+                    feedbackEl.className = "fca01-match-feedback correct";
+                    updatePanelStatus({ panelId: this.panelId, status: 'completed', correctDelta: 1 });
+                } else {
+                    feedbackEl.className = "fca01-match-feedback correct";
+                    feedbackEl.innerHTML = `✅ Round ${this.matchRoundIndex + 1} completato!`;
+                    const nextBtn = document.createElement('button');
+                    nextBtn.className = 'btn btn-primary';
+                    nextBtn.style.marginTop = '0.75rem';
+                    nextBtn.textContent = `Round ${this.matchRoundIndex + 2} →`;
+                    nextBtn.addEventListener('click', () => {
+                        this.matchRoundIndex++;
+                        this.renderMatchRound();
+                    });
+                    feedbackEl.appendChild(nextBtn);
+                    updatePanelStatus({ panelId: this.panelId, status: 'in_progress', correctDelta: 1 });
+                }
             } else {
                 updatePanelStatus({ panelId: this.panelId, status: 'in_progress', correctDelta: 1 });
             }
