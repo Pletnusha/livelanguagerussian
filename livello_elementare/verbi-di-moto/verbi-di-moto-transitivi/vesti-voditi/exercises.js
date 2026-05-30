@@ -211,51 +211,51 @@ const p6exercises = [
 ];
 
 // ============================================================
-// PANEL 2 — Flashcard · public · Mix вести + водить
+// PANEL 2 — Flashcard · public · ВЕСТИ vs ВОДИТЬ (coppie contrasto)
 // ============================================================
 const p2cards = [
-    { front: "Я",                                           back: "веду дневник с детства",                         explanation: "«Вести дневник» = tenere un diario. ВЕСТИ per azioni astratte continuate, non per movimento fisico." },
-    { front: "По субботам я",                              back: "вожу бабушку на рынок",                          explanation: "«По субботам» = abitudine ripetuta → ВОДИТЬ: accompagnare qualcuno a piedi in modo regolare." },
-    { front: "Ты всегда",                                  back: "ведёшь себя так, будто всё знаешь",              explanation: "«Вести себя» = comportarsi. Espressione fissa con ВЕСТИ — non esiste «водить себя»." },
-    { front: "Ты просто",                                  back: "водишь его за нос",                              explanation: "«Водить за нос» = «menare per il naso»: ingannare qualcuno sistematicamente. ВОДИТЬ perché è un'azione continuata." },
-    { front: "Уже два часа они",                           back: "ведут переговоры",                               explanation: "«Вести переговоры» = condurre trattative. Espressione fissa con ВЕСТИ, non ВОДИТЬ." },
-    { front: "С твоими капризами, тебя даже в кино",       back: "вести не хочется!",                              explanation: "Portare qualcuno da A a B, azione puntuale → ВЕСТИ (infinito). ВОДИТЬ sarebbe un'abitudine — qui è un'occasione specifica." },
-    { front: "Лён, ты",                                    back: "ведёшь себя как ребёнок!",                       explanation: "«Вести себя» = comportarsi. Sempre ВЕСТИ, mai ВОДИТЬ." },
-    { front: "Перед нами идёт девушка и",                  back: "ведёт на поводке — кота",                        explanation: "La ragazza porta il gatto adesso, in una direzione → ВЕСТИ. ВОДИТЬ sarebbe se lo portasse a spasso ogni giorno." },
-    { front: "Нашу программу",                             back: "ведёт доктор медицинских наук",                  explanation: "«Вести программу» = condurre/gestire un programma. ВЕСТИ per ruoli e azioni astratte guidate." },
-    { front: "Ты хочешь, чтобы тебя",                     back: "водили только по дорогим заведениям!",           explanation: "«Водить по заведениям» = portare in giro per locali abitualmente, più volte → ВОДИТЬ." },
+    { front: "Я веду дневник с детства.", back: "Я не вожу дружбу с ними.", explanation: "«Вести дневник» = tenere un diario — ВЕСТИ per azioni astratte continuate. «Водить дружбу» = coltivare un'amicizia — ВОДИТЬ per relazioni ripetute nel tempo." },
+    { front: "По субботам я вожу бабушку на рынок.", back: "В субботу я веду бабушку на рынок.", explanation: "«По субботам» = ogni sabato, abitudine ripetuta → ВОДИТЬ. «В субботу» = un sabato specifico, azione puntuale → ВЕСТИ. Stessa nonna, frequenza diversa." },
+    { front: "Ты ведёшь себя так, как будто всё знаешь.", back: "Ты водишь меня по кругу.", explanation: "«Вести себя» = comportarsi — espressione fissa con ВЕСТИ. «Водить по кругу» = girare in tondo — ВОДИТЬ per azione ripetuta e circolare." },
+    { front: "Ты просто водишь его за нос.", back: "К чему ты ведёшь этот разговор?", explanation: "«Водить за нос» = menare per il naso — ВОДИТЬ per inganno sistematico. «Вести разговор» = condurre una conversazione verso uno scopo — ВЕСТИ per azioni astratte guidate." },
+    { front: "Уже два часа они ведут переговоры.", back: "Зачем они эти хороводы водят?", explanation: "«Вести переговоры» = condurre trattative — fissa con ВЕСТИ. «Водить хороводы» = fare la danza rotonda — ВОДИТЬ per movimento circolare e ripetuto." },
+    { front: "С твоими капризами тебя даже в кино вести не хочется.", back: "Он никогда меня не водит в кино!", explanation: "«Вести в кино» = portare una volta, azione puntuale → ВЕСТИ. «Водить в кино» = portare abitualmente → ВОДИТЬ. Stessa situazione, due frequenze diverse." },
+    { front: "Лён, ты ведёшь себя как ребёнок!", back: "Сколько можно водить нас кругами! Что вы хотите сказать?", explanation: "«Вести себя» = comportarsi — sempre ВЕСТИ. «Водить кругами» = girare in tondo senza concludere — ВОДИТЬ per azione ripetuta e circolare." },
+    { front: "Перед нами идёт девушка и ведёт на поводке кота.", back: "Лена всегда своего кота водит гулять на поводке.", explanation: "«Ведёт на поводке» = porta adesso, in questo momento → ВЕСТИ. «Водит гулять» = porta a spasso abitualmente → ВОДИТЬ. Stesso gatto, frequenza diversa." },
+    { front: "Нашу программу ведёт доктор медицинских наук.", back: "Кто водит вашего сына на плавание?", explanation: "«Вести программу» = condurre un programma — ВЕСТИ per ruoli astratti. «Водить на плавание» = accompagnare regolarmente → ВОДИТЬ per abitudine." },
+    { front: "Ты хочешь, чтобы тебя водили только по дорогим заведениям!", back: "Веду Лену сегодня в кино.", explanation: "«Водить по заведениям» = portare in giro più volte → ВОДИТЬ. «Веду сегодня» = porto oggi, una volta sola → ВЕСТИ. «Сегодня» marca l'occasione puntuale." },
 ];
 
 // ============================================================
-// PANEL 7 — Flashcard · paid · Solo ВЕСТИ
+// PANEL 7 — Flashcard · student · ВЕСТИ vs ВОДИТЬ (coppie contrasto)
 // ============================================================
 const p7cards = [
-    { front: "С детства я",                   back: "веду дневник" },
-    { front: "Ты всегда",                     back: "ведёшь себя так, будто всё знаешь" },
-    { front: "А кто",                         back: "ведёт вторую часть презентации?" },
-    { front: "Три раза в неделю мы",          back: "ведём занятия онлайн" },
-    { front: "Уже два часа они",              back: "ведут переговоры" },
-    { front: "Нашу программу",               back: "ведёт доктор медицинских наук" },
-    { front: "Счёт в матче",                  back: "ведёт команда московского Динамо" },
-    { front: "Дочь начала",                   back: "вести дневник — прячет под матрас" },
-    { front: "Лён, ты",                       back: "ведёшь себя как ребёнок!" },
-    { front: "Вести тебя в ресторан —",       back: "никаких денег не хватит" },
+    { front: "Я веду дневник с детства.", back: "Я не вожу дружбу с ними." },
+    { front: "Ты ведёшь себя так, как будто всё знаешь.", back: "Ты водишь меня по кругу." },
+    { front: "Уже два часа они ведут переговоры.", back: "Зачем они эти хороводы водят?" },
+    { front: "Лён, ты ведёшь себя как ребёнок!", back: "Сколько можно водить нас кругами! Что вы хотите сказать?" },
+    { front: "Нашу программу ведёт доктор медицинских наук.", back: "Кто водит вашего сына на плавание?" },
+    { front: "А кто ведёт вторую часть презентации?", back: "Гид водит детей по выставке, они слушают его с открытыми ртами." },
+    { front: "Три раза в неделю мы ведём занятия онлайн.", back: "Профессор водит ручкой по листу, не поднимает глаз. Думаю, что экзамен я провалил." },
+    { front: "Счёт в матче ведёт команда московского Динамо.", back: "Дима никогда не водит меня на футбол." },
+    { front: "Концерт ведёт известный шоумен.", back: "Мы водим детей на музыку и на рисование." },
+    { front: "Я не умею водить машину.", back: "Не могу говорить. Веду машину." },
 ];
 
 // ============================================================
-// PANEL 8 — Flashcard · paid · Solo ВОДИТЬ
+// PANEL 8 — Flashcard · paid · ВЕСТИ vs ВОДИТЬ (coppie contrasto)
 // ============================================================
 const p8cards = [
-    { front: "По субботам я",                       back: "вожу бабушку на рынок" },
-    { front: "Ты же",                               back: "отлично водишь!" },
-    { front: "По вечерам мы",                       back: "водим собаку в парк" },
-    { front: "Они вообще меня",                     back: "никуда не водят!" },
-    { front: "С тех пор как получила права, я",     back: "вожу сама — без инструктора" },
-    { front: "Он водит знакомство",                 back: "с нужными людьми" },
-    { front: "После того случая они больше не",     back: "водят дружбу с соседями" },
-    { front: "Ты хочешь, чтобы тебя",              back: "водили только по дорогим заведениям!" },
-    { front: "Ты говорила, что знаешь дорогу —",   back: "водишь нас кругами уже целый час" },
-    { front: "Говорят, ты отлично",                 back: "водишь — ни одной аварии за десять лет" },
+    { front: "По субботам я вожу бабушку на рынок.", back: "В субботу я веду бабушку на рынок." },
+    { front: "Ты хочешь, чтобы тебя водили только по дорогим заведениям!", back: "Веду Лену сегодня в кино." },
+    { front: "Перед нами идёт девушка и ведёт на поводке кота.", back: "Лена всегда своего кота водит гулять на поводке." },
+    { front: "Три раза в неделю мы ведём занятия онлайн.", back: "Профессор водит ручкой по листу, не поднимает глаз. Думаю, что экзамен я провалил." },
+    { front: "Концерт ведёт известный шоумен.", back: "Мы водим детей на музыку и на рисование." },
+    { front: "Он водит знакомства с нужными людьми.", back: "К чему ты ведёшь этот разговор?" },
+    { front: "Ты водишь нас кругами уже целый час.", back: "Куда ты нас ведёшь?" },
+    { front: "Отлично водишь! За пять лет ни одной аварии.", back: "Он очень аккуратно ведёт машину на горных дорогах." },
+    { front: "Они меня вообще никуда не водят.", back: "Веду родителей в ресторан сегодня." },
+    { front: "По вечерам мы водим собаку в парк.", back: "Ты ведёшь собаку гулять? Уже поздно!" },
 ];
 
 // ============================================================
