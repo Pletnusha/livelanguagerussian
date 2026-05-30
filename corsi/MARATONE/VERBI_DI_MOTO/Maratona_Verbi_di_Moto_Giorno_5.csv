@@ -1,41 +1,41 @@
 ID,Type,Scenario,Sentence,Options,Correct,PHD_Feedback
-1,Shyol (➡️),Shopping,"Женя: Лен, я вчера видел тебя. Я {{1}} в ателье, а ты замерла напротив Prada.",шёл / ходил,шёл,Vettore ➡️: Zhenya aveva una direzione precisa (l'atelier). 'Завис' = blocco/freeze alla vetrina.
-2,Khodil (↔️),Shopping,"Женя: У тебя был такой вид, будто ты там {{2}} целый час и смотрела на ценники.",ходила / шла,ходила,Stasi/Circolarità ↔️: Non vai da nessuna parte. 'Медитировать на ценник' = fissare il prezzo.
-3,Shyol (➡️),Shopping,"Лена: Ой, Женя, не преувеличивай. Я просто {{3}} мимо и увидела надпись «Sale».",шла / ходила,шла,Vettore ➡️: Stava passando. 'Sale' = saldi.
-4,Khodil (↔️),Shopping,"Лена: Хотя признаю: до этого я весь день {{4}} по бутикам, но ничего не купила. Трагедия.",ходила / шла,ходила,Vagabondaggio ↔️: Girare senza meta fissa. 'Трагедия' = tragedia (ironia).
-5,Khodil (↔️),Shopping,"Анна: Трагедия — это когда скидка только на порошок. Я вчера тоже {{5}} за подарком, но всё зря.",ходила / шла,ходила,Fatto compiuto ↔️: Andata e tornata (il risultato è scarso).
-6,Khodil (↔️),Shopping,"Анна: Ты же помнишь, Женя, раньше я {{6}} только на закрытые распродажи для своих.",ходила / шла,ходила,Abitudine ↔️: 'Frequentavo'. 'Закрытые распродажи' = vendite private.
-7,Shyol (➡️),Shopping,"Женя: Я вчера специально {{7}} от парковки так медленно, чтобы не испортить новые туфли.",шёл / ходил,шёл,Processo-perfomance ➡️: Ogni passo è un dramma estetico.
-8,Shyol (➡️),Shopping,"Анна: Женя, хватит позёрства. Пока мы {{8}} вместе мимо той витрины, ты только и делал, что критиковал всех.",шли / ходили,шли,Vettore di coppia ➡️: Movimento lineare a due.
-9,Khodil (↔️),Shopping,"Лена: Слушайте, а вы помните, как мы втроём постоянно {{9}} в «Меркурий» по пятницам?",ходили / шли,ходили,Storia comune ↔️: 'Frequentavamo'.
-10,Shyol (➡️),Shopping,"Женя: Вчера я ждал свой эспрессо и смотрел, как озабоченные люди {{10}} к выходу. Сплошной хаос.",шли / ходили,шли,Flusso ➡️: Persone che si muovono verso l'uscita.
-11,Shyol (➡️),Gastronomia,"Анна: Ну и погода. Пока я {{11}} от мясника, ливень просто уничтожил мой зонт.",шла / ходила,шла,Vettore verso casa ➡️: Stava tornando dal macellaio.
-12,Khodil (↔️),Gastronomia,"Анна: Я {{12}} к нему десять лет, но сегодня упаковка размокла.",ходила / шла,ходила,Abitudine decennale ↔️: 'Frequentavo'.
-13,Shyol (➡️),Gastronomia,"Катя: Баранина? Ужасно. Я как раз {{13}} из магазина здорового питания.",шла / ходила,шла,Vettore lineare ➡️: Camminava verso casa.
-14,Khodil (↔️),Gastronomia,"Катя: Я {{14}} туда специально за Омега-3 и диким лососем.",ходила / шла,ходила,Fatto compiuto ↔️: È andata ed è tornata.
-15,Khodil (↔️),Gastronomia,"Андрей: Девочки, завязывайте. Я сегодня вообще никуда не {{15}}, сижу в тепле.",ходил / шёл,ходил,Assenza di fatto ↔️: Non è proprio uscito.
-16,Shyol (➡️),Gastronomia,"Дима: Врёшь. Я видел, как ты в одних носках {{16}} к курьеру за пиццей.",шёл / ходил,шёл,Micro-vettore ➡️: Tragitto breve verso la porta.
-17,Shyol (➡️),Gastronomia,"Дима: Ровно в ту минуту, когда я сам {{17}} к лифту.",шёл / ходил,шёл,Vettore simultaneo ➡️: Lui andava verso l'ascensore.
-18,Khodil (↔️),Gastronomia,"Дима: Кстати, я целый час {{18}} по супермаркету и в итоге всё равно забыл купить еду для Глюка!",ходил / шёл,ходил,Vagabondaggio ↔️: Cercare tra gli scaffali.
-19,Khodil (↔️),Gastronomia,"Анна: Опять? Мы же три дня назад специально все вместе {{19}} в «Зоомир»!",ходили / шли,ходили,Visita di gruppo ↔️: Siete stati al negozio.
+1,Shyol (➡️),Shopping,"Женя: Лен, я вчера видел тебя. Я {{1}} в ателье за костюмом, а ты замерла напротив Prada.",шёл / ходил,шёл,Vettore ➡️: Direzione precisa (l'atelier).
+2,Khodil (↔️),Shopping,"Женя: Судя по лицу, ты там {{2}} не меньше часа и смотрела на ценники.",ходила / шла,ходила,Stasi/Circolarità ↔️: Girare senza meta.
+3,Shyol (➡️),Shopping,"Лена: Ой, Женя, не преувеличивай. Я просто {{3}} мимо и увидела надпись «Sale».",шла / ходила,шла,Vettore ➡️: Passare linearmente.
+4,Khodil (↔️),Shopping,"Лена: На самом деле я {{4}} по бутикам весь день, но ничего не купила. Трагедия.",ходила / шла,ходила,Vagabondaggio ↔️: Processo di shopping.
+5,Khodil (↔️),Shopping,"Анна: Трагедия — это когда скидка только на порошок. Я вчера тоже {{5}} за подарком, но всё зря.",ходила / шла,ходила,Fatto compiuto ↔️: Andata e tornata.
+6,Khodil (↔️),Shopping,"Анна: Ты же помнишь, Женя, раньше я {{6}} только на закрытые распродажи для своих.",ходила / шла,ходила,Abitudine ↔️: Frequentavo.
+7,Shyol (➡️),Shopping,"Женя: Кстати, я купил новые туфли! Специально {{7}} от парковки так медленно, чтобы их не испортить.",шёл / ходил,шёл,Processo fisico ➡️: Movimento lento.
+8,Shyol (➡️),Shopping,"Анна: Женя, хватит позёрства. Пока мы {{8}} вместе мимо той витрины, ты только и делал, что критиковал всех.",шли / ходили,шли,Vettore di coppia ➡️: Movimento lineare.
+9,Khodil (↔️),Shopping,"Лена: Слушайте, а вы помните, как мы втроём постоянно {{9}} в «Меркурий» по пятницам?",ходили / шли,ходили,Storia comune ↔️: Frequentavamo.
+10,Shyol (➡️),Shopping,"Женя: Я стёр это из памяти. Вчера я ждал эспрессо и смотрел, как озабоченные люди {{10}} к выходу.",шли / ходили,шли,Flusso ➡️: Movimento verso l'uscita.
+11,Shyol (➡️),Gastronomia,"Анна: Ну и погода. Пока я {{11}} от мясника, ливень просто уничтожил мой зонт.",шла / ходила,шла,Vettore ➡️: Ritorno dal macellaio.
+12,Khodil (↔️),Gastronomia,"Анна: Я {{12}} к нему десять лет, он мне всё мясо в пластике отдавал, а сегодня завернул в бумагу.",ходила / шла,ходила,Abitudine ↔️: Frequentavo.
+13,Shyol (➡️),Gastronomia,"Катя: Баранина? Ужасно. Я как раз {{13}} из магазина здорового питания.",шла / ходила,шла,Vettore lineare ➡️: Ritorno a casa.
+14,Khodil (↔️),Gastronomia,"Катя: Я {{14}} туда специально за Омега-3 и диким лососем.",ходила / шла,ходила,Fatto compiuto ↔️: Visita specifica.
+15,Khodil (↔️),Gastronomia,"Андрей: Девочки, завязывайте. Я сегодня вообще никуда не {{15}}, сижу в тепле.",ходил / шёл,ходил,Assenza di fatto ↔️: Non è uscito.
+16,Shyol (➡️),Gastronomia,"Дима: Врёшь. Я видел, как ты в одних носках {{16}} к курьеру за пиццей.",шёл / ходил,шёл,Micro-vettore ➡️: Tragitto breve.
+17,Shyol (➡️),Gastronomia,"Дима: Ровно в ту минуту, когда я сам {{17}} к лифту. Почему курьер не поднялся к тебе?",шёл / ходил,шёл,Vettore simultaneo ➡️.
+18,Khodil (↔️),Gastronomia,"Дима: Кстати, я целый час {{18}} по супермаркету и в итоге всё равно забыл купить корм для Глюка!",ходил / шёл,ходил,Vagabondaggio ↔️: Cercare tra gli scaffali.
+19,Khodil (↔️),Gastronomia,"Анна: Опять? Мы же три дня назад специально все вместе {{19}} в «Зоомир»!",ходили / шли,ходили,Visita di gruppo ↔️.
 20,Shyol (➡️),Gastronomia,"Андрей: Да я на балконе его вчера оставил. Пока {{20}} дождь, корм стоял там, весь намок и разбух.",шёл / ходил,шёл,Processo atmosferico ➡️: 'Pioveva'.
-21,Khodil (↔️),Regalo,"Катя: {{21}} по магазинам и искать подарок в воскресенье — это была гениальная идея!",ходить / идти,ходить,Abitudine/Concetto ↔️: 'Frequentare negozi'.
-22,Khodil (↔️),Regalo,"Тимур: Это был позор. Мы три часа {{22}} по торговому центру!",ходили / шли,ходили,Vagabondaggio prolungato ↔️: Senza una direzione A→B.
-23,Shyol (➡️),Regalo,"Дима: Конечно, нет. Андрей, как только видел цену, сразу {{23}} к выходу.",шёл / ходил,шёл,Vettore repentino ➡️: Puntava dritto all'uscita.
-24,Khodil (↔️),Regalo,"Андрей: Неправда! Я {{24}} за подарками и на Новый год, и на 8 марта, но не было таких цен.",ходил / шёл,ходил,Fatto nel passato/Esperienza ↔️: Sono stato a fare regali.
-25,Khodil (↔️),Regalo,"Дима: Когда во вторник мы {{25}} смотреть приставку для тебя, ты на цены не жаловлся.",ходили / шли,ходили,Visita specifica ↔️: Quando siamo andati a vedere la console.
-26,Shyol (➡️),Regalo,"Андрей: Слушай, пока мы {{26}} домой, я подумал: может, мы просто цветы купим?",шли / ходили,шли,Processo nel tragitto ➡️: Mentre tornavamo a casa.
-27,Shyol (➡️),Regalo,"Тимур: Ну всё, понеслась! А всё так бодро {{27}} к тому, чтобы ты, Катя, купила подарок сама.",шло / ходило,шло,Metafora del processo ➡️: Tutto 'andava bene' (procedeva).
-28,Shyol (➡️),Regalo,"Катя: Либо оставить Аню без подарка, либо {{28}} завтра за ним самой.",идти / ходить,идти,Vettore futuro ➡️: Devo andare (linearmente) a prenderlo domani.
-29,Shyol (➡️),Regalo,"Дима: Время {{29}}, а Глюк голодный. Пойду покормлю его.",шло / ходило,шло,Metafora del tempo ➡️: 'Il tempo passava'.
-30,Khodil (↔️),Regalo,"Андрей: Хорошо, мы {{30}} и искали подарок, но не нашли ничего подходящего.",ходили / шли,ходили,Azione inconcludente ↔️: Abbiamo cercato (andando e tornando) ma invano.
-31,Khodil (↔️),Conjugation,"Я (Катя) вчера долго {{31}} по галерее, искала вдохновение.",ходила / шла,ходила,Girare per il museo ↔️.
-32,Shyol (➡️),Conjugation,"Андрей, ты {{32}} слишком быстро, я не успевала за твоими носками.",шёл / ходил,шёл,Velocità lineare ➡️.
-33,Khodil (↔️),Conjugation,"Анна и Лена {{33}} на распродажу вместе, но поссорились в очереди.",ходили / шли,ходили,Sono state (ed entrambe tornate) ↔️.
-34,Shyol (➡️),Conjugation,"Время {{34}}, а подарок для Анны так и не появлялся на горизонте.",шло / ходило,шло,Metafora neutra ➡️.
-35,Shyol (➡️),Conjugation,"Куда вы {{35}}, когда небо внезапно потемнело?",шли / ходили,шли,Plurale nel momento ➡️.
+21,Shyol (➡️),Apocalisse,"Тимур: Послушайте, мы честно {{21}} сначала в фермерский магазин, а потом на рынок!",шли / ходили,шли,Vettore pianificato ➡️.
+22,Shyol (➡️),Apocalisse,"Андрей: Нет, сначала мы {{22}} на рынок, а потом в фермерский.",шли / ходили,шли,Vettore opposto ➡️.
+23,Shyol (➡️),Apocalisse,"Тимур: Не важно! Короче, пока мы {{23}}, я вспомнил про отдел органики и био-продуктов.",шли / ходили,шли,Processo in corso ➡️.
+24,Khodil (↔️),Apocalisse,"Тимур: Мы даже {{24}} внутри этого магазина, клянусь!",ходили / шли,ходили,Fatto di visita ↔️: Erano dentro.
+25,Khodil (↔️),Apocalisse,"Тимур: Но там была такая толпа, что Андрей просто {{25}} вокруг этого магазина.",ходил / шёл,ходил,Azione circolare ↔️: Non è entrato.
+26,Khodil (↔️),Apocalisse,"Тимур: ...пока я там пытался {{26}} по рядам и хоть что-нибудь купить из списка!",ходить / идти,ходить,Vagabondaggio ↔️: Cerca tra gli scaffali.
+27,Shyol (➡️),Apocalisse,"Андрей: В общем, в фермерском ничего не купили. И пока мы {{27}} на рынок, позвонил Дима.",шли / ходили,шли,Tragitto lineare ➡️.
+28,Shyol (➡️),Apocalisse,"Тимур: Да, но мы уже {{28}} по рынку, когда поняли, что он закрывался.",шли / ходили,шли,Movimento in un luogo ➡️.
+29,Khodil (↔️),Apocalisse,"Тимур: Мы {{29}} по практически пустым рядам и пытались найти что-нибудь из списка.",ходили / шли,ходили,Azione inconcludente ↔️.
+30,Khodil (↔️),Apocalisse,"Анна: Значит, вы целый час просто {{30}} по кругу, пока всё закрывалось?",ходили / шли,ходили,Movimento circolare $\leftrightarrow$.
+31,Khodil (↔️),Conjugation,"Я (Катя) вчера долго {{31}} по галерее, искала вдохновение.",ходила / шла,ходила,Femminile, girare ↔️.
+32,Shyol (➡️),Conjugation,"Андрей, ты {{32}} слишком быстро, я не успевала за твоими носками.",шёл / ходил,шёл,Maschile, velocità ➡️.
+33,Khodil (↔️),Conjugation,"Анна и Лена {{33}} на распродажу вместе, но поссорились в очереди.",ходили / шли,ходили,Plurale, visita ↔️.
+34,Shyol (➡️),Conjugation,"Время {{34}}, а подарок для Анны так и не появлялся на горизонте.",шло / ходило,шло,Neutro, metafora ➡️.
+35,Shyol (➡️),Conjugation,"Куда вы {{35}}, когда небо внезапно потемнело?",шли / ходили,шли,Plurale, direzione ➡️.
 36,Khodil (↔️),Conjugation,"— Где ты был, Дима? — Я {{36}} в супермаркет за кормом.",ходил / шёл,ходил,Maschile, fatto compiuto ↔️.
-37,Shyol (➡️),Conjugation,"Машина стояла в пробке, а люди медленно {{37}} мимо неё.",шли / ходили,шли,Plurale, movimento lineare ➡️ мимо.
-38,Shyol (➡️),Conjugation,"Даша {{38}} из своего бюро с чертежами и очень устала.",шла / ходила,шла,Femminile, vettore da un luogo ➡️.
-39,Shyol (➡️),Conjugation,"— Лена, ты {{39}} в этот бутик? — Нет, я просто {{40}} мимо и смотрела.",ходила / шла,шла,Femminile, passare lineare ➡️.
-40,Khodil (↔️),Conjugation,"Мы вчера весь вечер {{40}} по центру города, обсуждая приставку.",ходили / шли,ходили,Plurale, passeggiata libera ↔️.
+37,Shyol (➡️),Conjugation,"Машина стояла в пробке, а люди медленно {{37}} мимо неё.",шли / ходили,шли,Plurale, lineare ➡️.
+38,Shyol (➡️),Conjugation,"Даша {{38}} из своего бюро с чертежами и очень устала.",шла / ходила,шла,Femminile, vettore ➡️.
+39,Shyol (➡️),Conjugation,"— Лена, ты {{39}} в этот бутик? — Нет, я просто {{40}} мимо и смотрела.",ходила / шла,шла,Femminile, lineare ➡️.
+40,Khodil (↔️),Conjugation,"Мы вчера весь вечер {{40}} по центру города, обсуждая приставку.",ходили / шли,ходили,Plurale, passeggiata ↔️.
