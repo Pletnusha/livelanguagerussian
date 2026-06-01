@@ -140,6 +140,65 @@ Il materiale didattico è inviato il giorno prima. Nella pratica 2 studenti su 1
 
 ## BLOCCO 2 — PASSATO NSV
 
+### Principio pedagogico — Blocco 2
+
+**Formato esercizi piattaforma: mini-storie con fill-in**
+
+Gli esercizi del Blocco 2 non sono drill isolati sul passato. Il formato centrale sono mini-storie narrative in cui lo studente **vписывает la forma corretta** (non sceglie da una lista). Doppio scelta simultaneo:
+
+| Asse 1 | Asse 2 | Risultato |
+|--------|--------|-----------|
+| Presente / Passato | Mono- / Multi-direzionale | Forma corretta del verbo |
+
+Per ogni coppia verbale, quattro forme sono possibili in base ai segnali contestuali:
+
+| | Mono-direzionale | Multi-direzionale |
+|---|---|---|
+| **Presente** | иду / еду / бегу / лечу / плыву / веду / везу / несу | хожу / езжу / бегаю / летаю / плаваю / вожу / вожу / ношу |
+| **Passato NSV** | шёл / ехал / бежал / летел / плыл / вёл / вёз / нёс | ходил / ездил / бегал / летал / плавал / водил / возил / носил |
+
+**Obiettivo:** allenare la produzione attiva dei verbi target. Il fill-in forza il recupero dalla memoria della forma corretta — incluse le forme irregolari (шёл, вёл, вёз, нёс, плыл). La scelta da lista non è sufficiente a questo livello del percorso.
+
+**Segnali disambiguanti obbligatori nelle mini-storie:**
+- Segnale di tempo: сейчас / вчера / каждый день / в тот момент, когда / раньше
+- Segnale di direzionalità: destinazione specifica (в + luogo) / abitudine (каждое утро) / processo in corso (пока / когда) / evento singolo passato (вдруг / и тут)
+
+**Scaffold lessicale — tooltip di traduzione:**
+I testi possono contenere espressioni complesse e vocabulary autentico. Ogni parola o espressione è cliccabile: al tap appare la traduzione. Questo libera lo studente dal blocco lessicale e concentra tutta la sua attenzione cognitiva sul compito grammaticale — la scelta della forma verbale corretta. I testi del Blocco 2 devono essere scritti con questo in mente: linguaggio ricco e naturale, non semplificato artificialmente.
+
+---
+
+### Deliverable format — Copywriter
+
+**Template di riferimento:** `corsi/MARATONE/VERBI_DI_MOTO/Maratona_Verbi_di_Moto_Giorno_5.csv`
+
+Il copywriter consegna un file CSV con le seguenti colonne:
+
+| Colonna | Contenuto |
+|---------|-----------|
+| `ID` | Numero progressivo |
+| `Type` | Forma corretta + icona direzionale: `Shyol (➡️)` oppure `Khodil (↔️)` — o equivalente per altri verbi |
+| `Scenario` | Nome dello scenario narrativo (es. Shopping, Gastronomia, Regalo, Conjugation) |
+| `Sentence` | Frase in russo con gap indicato da `{{numero}}` |
+| `Options` | Le due opzioni separate da `/` — es. `шёл / ходил` |
+| `Correct` | La forma corretta |
+| `PHD_Feedback` | Spiegazione in italiano del perché quella forma è corretta. Include l'icona ➡️ o ↔️ e la categoria cognitiva (es. _Abitudine ↔️: 'frequentavo'_) |
+
+**I 7 personaggi fissi:** Женя · Лена · Анна · Катя · Андрей · Дима · Тимур
+Usare sempre questi nomi. Non inventare nuovi personaggi. Глюк è il gatto di Dima — può apparire come elemento narrativo.
+
+**Scenari per giorno:**
+- G5: già completato (40 item) — template
+- G6: scenari con бежать/бегать + ехать/ездить — proporre 3–4 scenari tematici coerenti
+- G7: scenari con лететь/летать + плыть/плавать — almeno uno scenario dedicato alla discriminazione плыл/плавал
+- G8: scenari con transitivi вести/водить + везти/возить + нести/носить — oggetto e mezzo di trasporto espliciti nel testo
+
+**Volume per giorno:** 30–40 item, distribuiti in 3–4 scenari da 8–10 frasi ciascuno.
+
+**Regola per le opzioni:** le opzioni possono includere forme al presente e al passato nello stesso file — lo studente deve determinare sia il tempo che la direzionalità. Non limitare le opzioni al solo passato NSV.
+
+---
+
 ### Giorno 5 — ШЁЛ / ХОДИЛ · Anchor passato
 
 **Materiale inviato il giorno prima:** PNG идти_прошедшее + PNG ходить_прошедшее + PNG contrastiva
@@ -167,7 +226,7 @@ Estensione del principio шёл → processi unidirezionali: шёл дождь /
 #### Esercizi piattaforma sbloccati
 - ШЁЛ / ХОДИЛ — paradigma + esempi (Flashcard)
 - ШЁЛ vs ХОДИЛ — contrasto in contesto (Quiz)
-- Testi narrativi con шёл/ходил (D&D)
+- Mini-storie: fill-in doppio scelta presente/passato × mono/multi — шёл/ходил/иду/хожу (Fill-in)
 
 ---
 
@@ -194,6 +253,7 @@ Estensione del principio шёл → processi unidirezionali: шёл дождь /
 - БЕЖАЛ / БЕГАЛ — paradigma + esempi (Flashcard)
 - ЕХАЛ / ЕЗДИЛ — paradigma + esempi (Flashcard)
 - Mix шёл/ходил + бежал/бегал + ехал/ездил (Quiz)
+- Mini-storie: fill-in doppio scelta presente/passato × mono/multi — бежал/бегал/бегу/бегаю + ехал/ездил/еду/езжу (Fill-in)
 
 ---
 
@@ -220,6 +280,7 @@ Estensione del principio шёл → processi unidirezionali: шёл дождь /
 - ЛЕТЕЛ / ЛЕТАЛ — paradigma + esempi (Flashcard)
 - ПЛЫЛ / ПЛАВАЛ — paradigma + esempi + ⚠️ discriminazione плыл/плавал (Flashcard)
 - Mix blocco trasporti passato NSV (Quiz)
+- Mini-storie: fill-in doppio scelta presente/passato × mono/multi — летел/летал/лечу/летаю + плыл/плавал/плыву/плаваю (Fill-in)
 
 ---
 
@@ -242,6 +303,12 @@ Estensione del principio шёл → processi unidirezionali: шёл дождь /
 - "Вёл машину o водил машину — вчера?"
 - "Нёс o носил — se l'ho fatto una volta sola?"
 - "Вёз детей в школу каждый день — вёз o возил?"
+
+#### Esercizi piattaforma sbloccati
+- ВЁЛВОДИЛ — paradigma + esempi (Flashcard)
+- ВЁЗВОЗИЛ — paradigma + esempi (Flashcard)
+- НЁСНОСИЛ — paradigma + esempi (Flashcard)
+- Mini-storie: fill-in doppio scelta presente/passato × mono/multi — вёл/водил/веду/вожу + вёз/возил/везу/вожу + нёс/носил/несу/ношу (Fill-in)
 
 #### TEST Blocco 2 — sulla piattaforma
 - Mix tutti i verbi NSV passato (шёл/ходил + ехал/ездил + бежал/бегал + летел/летал + плыл/плавал + вёл/водил + вёз/возил + нёс/носил)
