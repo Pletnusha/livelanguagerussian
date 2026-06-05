@@ -33,13 +33,183 @@ const p1exercises = [
     },
 ];
 
-// ── Panel 2 — public · abitudine e fatto compiuto ───────────────────────────
+// ── Panel 2 — public · БЕЖАТЬ coniugazione ──────────────────────────────────
 const p2exercises = [
+    {
+        instruction: "Scrivi la forma corretta di БЕЖАТЬ al passato.",
+        text: "Вчера я ___ за автобусом.",
+        answers: ["бежал"],
+        explanation: "бежать (разноспр., irreg.): беж- + -а- + -л → бежал (м.р.)",
+        glossary: {}
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕЖАТЬ al passato.",
+        text: "Она ___ по парку и вдруг остановилась.",
+        answers: ["бежала"],
+        explanation: "бежать → бежала (ж.р.): беж- + -а- + -ла",
+        glossary: {}
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕЖАТЬ al passato.",
+        text: "Мы ___ на поезд — чуть не опоздали.",
+        answers: ["бежали"],
+        explanation: "бежать → бежали (мн.ч.): беж- + -а- + -ли",
+        glossary: {
+            "чуть не опоздали": "per poco non facevamo in tempo"
+        }
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕЖАТЬ al passato.",
+        text: "Они ___ за мороженым.",
+        answers: ["бежали"],
+        explanation: "бежать → бежали (мн.ч.)",
+        glossary: {
+            "мороженое": "gelato"
+        }
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕЖАТЬ al passato.",
+        text: "Ты ___ за такси?",
+        answers: ["бежал"],
+        explanation: "бежать → бежал (м.р., ты)",
+        glossary: {}
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕЖАТЬ al passato.",
+        text: "Куда вы ___? — На стадион.",
+        answers: ["бежали"],
+        explanation: "бежать → бежали (мн.ч., вы)",
+        glossary: {}
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕЖАТЬ al passato.",
+        text: "Он ___ стометровку за 11 секунд.",
+        answers: ["бежал"],
+        explanation: "бежать → бежал (м.р., он)",
+        glossary: {
+            "стометровка": "100 metri"
+        }
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕЖАТЬ al passato.",
+        text: "Собака ___ за кошкой.",
+        answers: ["бежала"],
+        explanation: "бежать → бежала (ж.р., собака)",
+        glossary: {}
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕЖАТЬ al passato.",
+        text: "Ребёнок ___ по коридору и упал.",
+        answers: ["бежал"],
+        explanation: "бежать → бежал (м.р., ребёнок)",
+        glossary: {
+            "коридор": "corridoio"
+        }
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕЖАТЬ al passato.",
+        text: "Мы ___ за скидками.",
+        answers: ["бежали"],
+        explanation: "бежать → бежали (мн.ч.)",
+        glossary: {
+            "скидки": "sconti"
+        }
+    },
+];
+
+// ── Panel 3 — public · БЕГАТЬ coniugazione ──────────────────────────────────
+const p3exercises = [
+    {
+        instruction: "Scrivi la forma corretta di БЕГАТЬ al passato.",
+        text: "Раньше я ___ по утрам.",
+        answers: ["бегал"],
+        explanation: "бегать (I, reg.): бег- + -а- + -л → бегал (м.р.)",
+        glossary: {}
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕГАТЬ al passato.",
+        text: "Она никогда не ___ по лестнице.",
+        answers: ["бегала"],
+        explanation: "бегать → бегала (ж.р.): бег- + -а- + -ла",
+        glossary: {
+            "лестница": "scale"
+        }
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕГАТЬ al passato.",
+        text: "Мы ___ в парке каждое воскресенье.",
+        answers: ["бегали"],
+        explanation: "бегать → бегали (мн.ч.): бег- + -а- + -ли",
+        glossary: {}
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕГАТЬ al passato.",
+        text: "Они ___ марафон в прошлом году.",
+        answers: ["бегали"],
+        explanation: "бегать → бегали (мн.ч.)",
+        glossary: {
+            "марафон": "maratona"
+        }
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕГАТЬ al passato.",
+        text: "Ты когда-нибудь ___ по утрам?",
+        answers: ["бегал"],
+        explanation: "бегать → бегал (м.р., ты)",
+        glossary: {}
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕГАТЬ al passato.",
+        text: "Дети ___ во дворе каждый вечер.",
+        answers: ["бегали"],
+        explanation: "бегать → бегали (мн.ч., дети)",
+        glossary: {
+            "двор": "cortile"
+        }
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕГАТЬ al passato.",
+        text: "Раньше он ___ на работу — три километра.",
+        answers: ["бегал"],
+        explanation: "бегать → бегал (м.р., он)",
+        glossary: {}
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕГАТЬ al passato.",
+        text: "Кошка часто ___ по квартире.",
+        answers: ["бегала"],
+        explanation: "бегать → бегала (ж.р., кошка)",
+        glossary: {}
+    },
+    {
+        instruction: "Scrivi la forma corretta di БЕГАТЬ al passato.",
+        text: "В детстве она ___ быстрее всех.",
+        answers: ["бегала"],
+        explanation: "бегать → бегала (ж.р., она)",
+        glossary: {}
+    },
+    {
+        instruction: "Scrivi la forma corrotta di БЕГАТЬ al passato.",
+        text: "Мы ___ кросс в школе каждый год.",
+        answers: ["бегали"],
+        explanation: "бегать → бегали (мн.ч.)",
+        glossary: {
+            "кросс": "corsa campestre"
+        }
+    },
+];
+
+// ── Panel 4 — public · testo (stub) ─────────────────────────────────────────
+const p4exercises = [
+    // TODO: testo con бежал/бегал in contesto narrativo
+];
+
+// ── Panel 5 — student · abitudine e fatto compiuto (no explanation) ─────────
+const p5exercises = [
     {
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— В детстве мы ___ во дворе каждый вечер. — А помнишь, вчера ___ за мороженым — ларёк закрывался?",
         answers: ["бегали", "бежали"],
-        explanation: "бегали каждый вечер → abitudine dell'infanzia. бежали за мороженым → corsa specifica verso obiettivo.",
         glossary: {
             "двор": "cortile",
             "мороженое": "gelato",
@@ -50,7 +220,6 @@ const p2exercises = [
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Она ___ по утрам, когда жила в центре. — А после переезда? — ___ до остановки и на автобусе.",
         answers: ["бегала", "бежала"],
-        explanation: "бегала по утрам → abitudine (fitness quotidiano). бежала до остановки → processo con destinazione, abitudine interrotta.",
         glossary: {
             "переезд": "trasloco",
             "остановка": "fermata"
@@ -60,7 +229,6 @@ const p2exercises = [
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Раньше мы ___ в парке каждое утро. — А в прошлый вторник ___ за троллейбусом — проспали.",
         answers: ["бегали", "бежали"],
-        explanation: "раньше бегали каждое утро → abitudine passata. бежали за троллейбусом → corsa specifica causata da ritardo.",
         glossary: {
             "троллейбус": "filobus",
             "проспали": "abbiamo dormito troppo"
@@ -68,13 +236,12 @@ const p2exercises = [
     },
 ];
 
-// ── Panel 3 — public · processo interrotto e genere ─────────────────────────
-const p3exercises = [
+// ── Panel 6 — student · processo interrotto e genere (no explanation) ───────
+const p6exercises = [
     {
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Я ___ за собакой — она сорвалась с поводка. — И догнал? — Нет. Она ___ быстрее. — А часто она ___? — Каждый день.",
         answers: ["бежал", "бежала", "бегала"],
-        explanation: "бежал за собакой → corsa specifica in inseguimento. она бежала быстрее → processo con confronto. часто бегала → abitudine della cagna.",
         glossary: {
             "сорвалась с поводка": "è scappata dal guinzaglio",
             "поводок": "guinzaglio"
@@ -84,7 +251,6 @@ const p3exercises = [
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Куда ты ___, когда я тебя увидел? — ___ за билетами — касса закрывалась. — И успел? — Успел.",
         answers: ["бежал", "бежал"],
-        explanation: "бежал, когда увидел → processo colto da altro evento. бежал за билетами → corsa specifica con destinazione urgente.",
         glossary: {
             "билеты": "biglietti",
             "касса": "biglietteria",
@@ -95,7 +261,6 @@ const p3exercises = [
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Друзья ___ по пляжу каждое лето. — А в прошлом августе ___ за волной — дурачились.",
         answers: ["бегали", "бежали"],
-        explanation: "бегали каждое лето → abitudine estiva di gruppo. бежали за волной → corsa specifica, momento preciso.",
         glossary: {
             "пляж": "spiaggia",
             "волна": "onda",
@@ -104,13 +269,12 @@ const p3exercises = [
     },
 ];
 
-// ── Panel 4 — student · contesti variati ────────────────────────────────────
-const p4exercises = [
+// ── Panel 7 — paid · contesti variati (no explanation) ──────────────────────
+const p7exercises = [
     {
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Ты сегодня утром ___? — ___ за автобусом — чуть не опоздал. — А обычно ты ___ по утрам? — Раньше ___, а теперь лень.",
         answers: ["бегал", "бежал", "бегал", "бегал"],
-        explanation: "бегал (утром?) → domanda su abitudine. бежал за автобусом → corsa urgente verso mezzo. обычно/раньше бегал → abitudine presente e passata.",
         glossary: {
             "чуть не опоздал": "per poco non facevo in tempo",
             "лень": "pigrizia"
@@ -120,7 +284,6 @@ const p4exercises = [
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Я ___ по лестнице — лифт сломался. — Сколько этажей? — Десять. Ты вообще когда-нибудь ___? — Нет.",
         answers: ["бежал", "бегал"],
-        explanation: "бежал по лестнице → processo in corso (10 piani). когда-нибудь бегал → domanda su abitudine.",
         glossary: {
             "лестница": "scale",
             "лифт сломался": "ascensore rotto",
@@ -131,7 +294,6 @@ const p4exercises = [
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Глюк ___ по квартире как сумасшедший. — Он часто так ___? — Когда видит огурец.",
         answers: ["бежал", "бегал"],
-        explanation: "бежал по квартире → processo specifico in corso. часто бегал → abitudine ricorrente del gatto.",
         glossary: {
             "Глюк": "nome del gatto",
             "сумасшедший": "pazzo",
@@ -140,13 +302,12 @@ const p4exercises = [
     },
 ];
 
-// ── Panel 5 — paid · fatto compiuto e coniugazioni varie ────────────────────
-const p5exercises = [
+// ── Panel 8 — paid · fatto compiuto e coniugazioni varie (no explanation) ───
+const p8exercises = [
     {
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Ты когда-нибудь ___ марафон? — Нет, но однажды ___ за такси. — А часто ты ___? — Раньше ___, каждый день ___.",
         answers: ["бегал", "бежал", "бегал", "бегал", "бегал"],
-        explanation: "бегал марафон → domanda su abitudine/esperienza. бежал за такси → corsa specifica. часто/раньше/каждый день бегал → abitudine presente e passata.",
         glossary: {
             "марафон": "maratona",
             "однажды": "una volta"
@@ -156,7 +317,6 @@ const p5exercises = [
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Он ___ стометровку в школе. Быстро ___? — Очень. Он вообще много ___ в детстве, часто ___ в школе.",
         answers: ["бежал", "бежал", "бегал", "бегал"],
-        explanation: "бежал стометровку → gara specifica. быстро бежал → processo con caratteristica. много/часто бегал → abitudine dell'infanzia.",
         glossary: {
             "стометровка": "100 metri"
         }
@@ -165,7 +325,6 @@ const p5exercises = [
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Мы ___ кросс в школе каждый год. — А в последний ___ изо всех сил — хотел рекорд.",
         answers: ["бегали", "бежал"],
-        explanation: "бегали кросс каждый год → abitudine scolastica. бежал изо всех сил → processo specifico con sforzo massimo.",
         glossary: {
             "кросс": "corsa campestre",
             "изо всех сил": "con tutte le forze"
@@ -173,13 +332,12 @@ const p5exercises = [
     },
 ];
 
-// ── Panel 6 — paid · dialoghi complessi ─────────────────────────────────────
-const p6exercises = [
+// ── Panel 9 — student · dialoghi complessi (no explanation) ─────────────────
+const p9exercises = [
     {
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Я ___ на поезд — опаздывал. — Успел? — Вскочил. Сердце ___ как бешеное. — Часто ___ на поезда? — Когда опаздываю.",
         answers: ["бежал", "бежало", "бегал"],
-        explanation: "бежал на поезд → corsa specifica urgente. сердце бежало → uso metaforico del processo. часто бегал → abitudine condizionale.",
         glossary: {
             "опаздывал": "ero in ritardo",
             "вскочил": "sono saltato su (nel vagone)",
@@ -190,20 +348,18 @@ const p6exercises = [
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Ты когда-нибудь ___ по утрам? — Раньше ___, каждое воскресенье ___. А вчера ___ за мусоровозом.",
         answers: ["бегал", "бегал", "бегал", "бежал"],
-        explanation: "когда-нибудь бегал → domanda su esperienza. раньше/каждое воскресенье бегал → abitudine passata. бежал за мусоровозом → corsa specifica inaspettata.",
         glossary: {
             "мусоровоз": "camion della spazzatura"
         }
     },
 ];
 
-// ── Panel 7 — paid · dialoghi avanzati ──────────────────────────────────────
-const p7exercises = [
+// ── Panel 10 — paid · dialoghi avanzati (no explanation) ────────────────────
+const p10exercises = [
     {
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Я ___ за скидками в чёрную пятницу. — И много народу ___? — Толпа.",
         answers: ["бежала", "бежало"],
-        explanation: "бежала за скидками → corsa specifica verso obiettivo. народу бежало → processo collettivo, soggetto al neutro (народ → бежало).",
         glossary: {
             "скидки": "sconti",
             "чёрная пятница": "Black Friday",
@@ -214,7 +370,6 @@ const p7exercises = [
         instruction: "Scrivi la forma corretta del verbo al passato.",
         text: "— Раньше я ___ на работу — три километра. — А в дождь ___ до метро и на автобусе?",
         answers: ["бегал", "бежал"],
-        explanation: "раньше бегал на работу → abitudine passata (3 km al giorno). бежал до метро → processo con destinazione in condizione difficile.",
         glossary: {
             "километр": "chilometro"
         }
@@ -230,6 +385,9 @@ const initializers = {
     'panel-past-cor-05': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-05', exercises: p5exercises }),
     'panel-past-cor-06': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-06', exercises: p6exercises }),
     'panel-past-cor-07': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-07', exercises: p7exercises }),
+    'panel-past-cor-08': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-08', exercises: p8exercises }),
+    'panel-past-cor-09': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-09', exercises: p9exercises }),
+    'panel-past-cor-10': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-10', exercises: p10exercises }),
 };
 
 initPanelManager({ initializers, enableAccessControl: false });
