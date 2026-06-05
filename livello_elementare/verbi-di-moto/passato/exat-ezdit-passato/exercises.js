@@ -218,6 +218,24 @@ const p6exercises = [
 ];
 
 // ============================================================
+// PANEL 7 — Write · paid · Dialogo misto: passato e presente
+// ============================================================
+const p7exercises = [
+    {
+        instruction: "Scrivi la forma corretta del verbo (идти/ходить/ехать/ездить).",
+        text: "— Слушайте, может все на Жениной машине?\n— Хорошая идея, — Женя кивает.\n— Отлично. Снова на два часа на МКАДе встанем?\n— Поедем в объезд.\n— Ты так говорил в прошлый раз.\n— Пробка была. Случайность.\n— Пробка в субботу утром — случайность?\n\n— Я всё равно ___ пешком до вокзала, — говорит Андрей.\n— Зачем?\n— Свежий воздух. Движение. Голова работает.\n— Где ты нашёл свежий воздух в Москве? В прошлый раз ___ сорок минут и опоздал на электричку.\n— В этот раз пойду по другому маршруту, так быстрее.\n\n— Тимур, ты опять на велике?\n— Конечно. Я каждые выходные ___. Мне нужно тренироваться.\n— В прошлый раз ты ___ и проколол колесо.\n— Ну и что. Зато я не стоял в пробке. Димин дед приехал и меня забрал.\n\n— Дим?\n— Я ___ на автобусе.\n— Автобус сломался в прошлый раз.\n— Так бывает.\n— Логично.\n\nПауза.\n\n— Итого: никто не ___ со мной.\n— Жень, ты два часа по Москве будешь нас собирать — к ужину приедем. Если вообще доедем.\n— Давай ты нас всех на станции встретишь, оттуда все вместе поедем.",
+        answers: ["иду", "шёл", "езжу", "ехал", "еду", "едет"],
+        glossary: {
+            "в объезд": "facendo il giro largo",
+            "МКАД": "anello autostradale di Mosca",
+            "электричка": "treno suburbano",
+            "велик": "bici (colloquiale)",
+            "Димин дед": "il nonno di Dima"
+        }
+    },
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -227,6 +245,7 @@ const initializers = {
     'panel-past-ez-04': () => new WriteDialogueExercise({ rootId: 'ex-write-past-ez-04', exercises: p4exercises }),
     'panel-past-ez-05': () => new WriteDialogueExercise({ rootId: 'ex-write-past-ez-05', exercises: p5exercises }),
     'panel-past-ez-06': () => new WriteDialogueExercise({ rootId: 'ex-write-past-ez-06', exercises: p6exercises }),
+    'panel-past-ez-07': () => new WriteDialogueExercise({ rootId: 'ex-write-past-ez-07', exercises: p7exercises }),
 };
 
 initPanelManager({ initializers, enableAccessControl: false });
