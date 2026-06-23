@@ -761,4 +761,4 @@ const initializers = {
     'panel-vol-04':  () => initPanel4()
 };
 
-initPanelManager({ initializers, enableAccessControl: false });
+initPanelManager({ initializers, enableAccessControl: true });
