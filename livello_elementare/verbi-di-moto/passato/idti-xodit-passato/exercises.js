@@ -192,27 +192,27 @@ const p3paragraphs = [
 
 const p3gaps = {
     1: {
-        answers: ["ходила"], hint: "ходить",
+        answers: ["ходила"],
         explanation: "ходила = andata e tornata dal mercato (viaggio di andata e ritorno completato), non un'azione in corso in un momento preciso.",
     },
     2: {
-        answers: ["ходили"], hint: "ходить",
+        answers: ["ходили"],
         explanation: "ходили = movimento senza una sola direzione, andare avanti e indietro tra le bancarelle per un periodo di tempo (due ore) — non un tragitto singolo.",
     },
     3: {
-        answers: ["шла"], hint: "идти",
+        answers: ["шла"],
         explanation: "шла = movimento in una sola direzione verso il mercato — si chiede quanto tempo ci ha messo per arrivarci (un tragitto specifico, non un'abitudine).",
     },
     4: {
-        answers: ["шёл"], hint: "идти",
+        answers: ["шёл"],
         explanation: "шёл = movimento in corso in un momento preciso, in una sola direzione (stava passando davanti alla pasticceria); forma maschile perché parla Андрей.",
     },
     5: {
-        answers: ["ходили"], hint: "ходить",
+        answers: ["ходили"],
         explanation: "ходили = siete già andati e tornati (viaggio di andata e ritorno completato), non un tragitto in corso in un momento preciso.",
     },
     6: {
-        answers: ["ходила"], hint: "ходить",
+        answers: ["ходила"],
         explanation: "ходила = sono andata e tornata dal negozio (azione completata, andata+ritorno), non un movimento in corso in un momento specifico.",
     },
 };
@@ -676,7 +676,7 @@ const initializers = {
         instruction: p3instruction,
         paragraphs: p3paragraphs,
         gaps: p3gaps,
-        showHints: true,
+        showHints: false,
     }),
     'panel-past-ix-04': () => new GapTextExercise({
         rootId: 'ex-gaptext-past-ix-04',
