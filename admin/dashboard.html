@@ -476,6 +476,92 @@
         }
 
         /* ======================================================
+           EDIT FORM
+        ====================================================== */
+        .edit-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .edit-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            font-size: 0.84rem;
+        }
+
+        .edit-row label { color: #374151; white-space: nowrap; }
+
+        .edit-row select,
+        .edit-row input[type="text"] { min-width: 160px; }
+
+        .toggle-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.2rem 0;
+            font-size: 0.84rem;
+            color: #374151;
+        }
+
+        .toggle {
+            position: relative;
+            width: 40px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        .toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+
+        .toggle-slider {
+            position: absolute;
+            inset: 0;
+            background: #d1d5db;
+            border-radius: 22px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .toggle-slider::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 3px;
+            top: 3px;
+            background: #fff;
+            border-radius: 50%;
+            transition: transform 0.2s;
+        }
+
+        .toggle input:checked + .toggle-slider { background: #2a5bd7; }
+        .toggle input:checked + .toggle-slider::before { transform: translateX(18px); }
+
+        /* ======================================================
+           TOAST
+        ====================================================== */
+        .toast {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 999;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 0.2s, transform 0.2s;
+            pointer-events: none;
+        }
+
+        .toast.show { opacity: 1; transform: translateY(0); }
+        .toast-success { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+        .toast-error   { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; }
+
+        /* ======================================================
            RESPONSIVE
         ====================================================== */
         @media (max-width: 640px) {
@@ -654,10 +740,11 @@ const db = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 // ============================================================
 // STATE
 // ============================================================
-let allProfiles     = [];
-let allPanelResults = [];
+let allProfiles      = [];
+let allPanelResults  = [];
 let allRegistrations = [];
 let filteredProfiles = [];
+let currentEditUserId = null;
 
 // ============================================================
 // INIT
@@ -853,6 +940,8 @@ async function openModal(userId) {
     const profile = allProfiles.find(p => p.user_id === userId);
     if (!profile) return;
 
+    currentEditUserId = userId;
+
     document.getElementById('modalTitle').textContent =
         (profile.first_name ?? '') + ' ' + (profile.last_name ?? '');
     document.getElementById('modalBody').innerHTML =
@@ -958,7 +1047,54 @@ function buildModalHTML(p, panels, answers, registrations, workshops) {
     }
     answersSection += '</div>';
 
-    return profileSection + panelsSection + webinarsSection + answersSection;
+    // Edit section
+    const sel = (id, val) => (val === id) ? 'selected' : '';
+    const editSection = `
+        <div>
+            <div class="modal-section-title">Modifica profilo</div>
+            <div class="edit-form">
+                <div class="edit-row">
+                    <label>Livello accesso</label>
+                    <select id="edit-access-level">
+                        <option value="public"  ${sel('public',  p.access_level)}>Public</option>
+                        <option value="student" ${sel('student', p.access_level)}>Student</option>
+                        <option value="paid"    ${sel('paid',    p.access_level)}>Paid</option>
+                        <option value="admin"   ${sel('admin',   p.access_level)}>Admin</option>
+                    </select>
+                </div>
+                <div class="edit-row">
+                    <label>Stato registrazione</label>
+                    <select id="edit-registration-status">
+                        <option value="non_registered" ${sel('non_registered', p.registration_status)}>non_registered</option>
+                        <option value="registered"     ${sel('registered',     p.registration_status)}>registered</option>
+                        <option value="paid"           ${sel('paid',           p.registration_status)}>paid</option>
+                    </select>
+                </div>
+                <div class="edit-row">
+                    <label>Piano</label>
+                    <input type="text" id="edit-plan" value="${esc(p.plan ?? '')}" placeholder="es. base, premium…">
+                </div>
+                <div class="toggle-row">
+                    <span>Esercizi pagati</span>
+                    <label class="toggle">
+                        <input type="checkbox" id="edit-exercisepaid" ${p.exercisepaid ? 'checked' : ''}>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row">
+                    <span>Lezioni pagate</span>
+                    <label class="toggle">
+                        <input type="checkbox" id="edit-lessonpaid" ${p.lessonpaid ? 'checked' : ''}>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div style="margin-top:0.75rem">
+                    <button class="btn btn-primary" id="saveBtn" onclick="saveProfile()">Salva modifiche</button>
+                </div>
+            </div>
+        </div>`;
+
+    return profileSection + editSection + panelsSection + webinarsSection + answersSection;
 }
 
 // ============================================================
@@ -1005,6 +1141,58 @@ function bindEvents() {
 
 function closeModal() {
     document.getElementById('modalBackdrop').classList.remove('open');
+    currentEditUserId = null;
+}
+
+// ============================================================
+// SAVE PROFILE
+// ============================================================
+async function saveProfile() {
+    if (!currentEditUserId) return;
+
+    const btn = document.getElementById('saveBtn');
+    btn.disabled = true;
+    btn.textContent = 'Salvataggio…';
+
+    const fields = {
+        access_level:        document.getElementById('edit-access-level').value,
+        registration_status: document.getElementById('edit-registration-status').value,
+        plan:                document.getElementById('edit-plan').value.trim() || null,
+        exercisepaid:        document.getElementById('edit-exercisepaid').checked,
+        lessonpaid:          document.getElementById('edit-lessonpaid').checked,
+    };
+
+    const { error } = await db
+        .from('profiles')
+        .update(fields)
+        .eq('user_id', currentEditUserId);
+
+    btn.disabled = false;
+    btn.textContent = 'Salva modifiche';
+
+    if (error) {
+        showToast('Errore: ' + error.message, 'error');
+        return;
+    }
+
+    // Aggiorna il dato in memoria
+    const profile = allProfiles.find(p => p.user_id === currentEditUserId);
+    if (profile) Object.assign(profile, fields);
+
+    applyFilters();
+    renderStats();
+    showToast('Profilo aggiornato con successo', 'success');
+}
+
+// ============================================================
+// TOAST
+// ============================================================
+function showToast(msg, type = 'success') {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.className = `toast toast-${type} show`;
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
 // ============================================================
@@ -1041,6 +1229,8 @@ function yesNo(val) {
         : '<span class="badge badge-no">No</span>';
 }
 </script>
+
+<div id="toast" class="toast"></div>
 
 </body>
 </html>
