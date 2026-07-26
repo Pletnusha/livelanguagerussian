@@ -2009,4 +2009,118 @@ article.exercise-card[data-target="panel-acc-open-10"],
 }
 
 #panel-acc-open-4 .acc04-feedback.correct { color: #22c55e; }
+
+/* =========================================
+   СТИЛИ ДЛЯ УПРАЖНЕНИЙ (GapTextExercise)
+   Связный текст с пропусками + клик-перевод
+   ========================================= */
+
+.gaptext-body {
+    font-size: 1.1rem;
+    line-height: 2.4;
+    color: #1a1a1a;
+    text-align: left;
+}
+
+.gaptext-body p {
+    margin: 0 0 1rem;
+}
+
+.gaptext-gap-wrap {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px;
+    margin: 0 3px;
+    vertical-align: middle;
+}
+
+.gaptext-input {
+    width: 110px;
+    padding: 4px 8px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2a5bd7;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: #F0F7FF;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.gaptext-input:focus {
+    outline: none;
+    border-bottom-color: #2a5bd7;
+}
+
+.gaptext-input.correct {
+    background: #dcfce7;
+    color: #166534;
+    border-bottom-color: #22c55e;
+}
+
+.gaptext-input.incorrect {
+    background: #fee2e2;
+    color: #991b1b;
+    border-bottom-color: #ef4444;
+}
+
+.gaptext-hint {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    font-weight: 400;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.gaptext-explanation {
+    flex-basis: 100%;
+    font-size: 0.85rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+    color: #991b1b;
+    background: #fee2e2;
+    border-left: 3px solid #ef4444;
+    padding: 6px 10px;
+    margin: 4px 0 8px;
+    border-radius: 0 6px 6px 0;
+}
+
+.gaptext-explanation.hidden {
+    display: none;
+}
+
+.glossary-term {
+    position: relative;
+    cursor: pointer;
+    color: #2a5bd7;
+    border-bottom: 1px dotted #2a5bd7;
+}
+
+.glossary-term:hover {
+    background: rgba(42, 91, 215, 0.08);
+}
+
+.glossary-popover {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    margin-bottom: 6px;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+    padding: 8px 12px;
+    border-radius: 6px;
+    white-space: normal;
+    width: max-content;
+    max-width: 260px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
 #panel-acc-open-4 .acc04-feedback.wrong   { color: #ef4444; }
