@@ -138,6 +138,16 @@
             color: #999;
             margin-top: 10px;
         }
+
+        .hp-field {
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
     </style>
 </head>
 <body>
@@ -149,6 +159,12 @@
     </div>
     
     <form id="registrationForm">
+        <!-- Honeypot anti-spam -->
+        <div class="hp-field" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
         <!-- Nome -->
         <div class="form-group">
             <label for="firstName">Nome <span class="required">*</span></label>
@@ -400,7 +416,10 @@
         // ============================================
         document.getElementById('registrationForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
+            // Honeypot check: bots fill hidden fields, humans don't
+            if (document.getElementById('website').value) return;
+
             // Validate form
             if (!validateForm()) {
                 return;
