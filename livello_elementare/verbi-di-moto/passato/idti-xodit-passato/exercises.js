@@ -158,36 +158,36 @@ const p2exercises = [
 
 // ============================================================
 // PANEL 3 — GapText · public · Testo connesso con lacune + glossario
-// Подсказка (public-only): infinitive accanto al gap + traduzione
-// cliccabile delle espressioni idiomatiche/complesse.
-// Тестируются ТОЛЬКО passato-формы (шёл/шла, ходила/ходили) —
-// глаголы в presente (хожу/ходишь/иду/ходит) оставлены как обычный
-// текст, т.к. страница посвящена именно passato.
+// Traduzione cliccabile delle espressioni idiomatiche/complesse
+// (showHints: false — nessun infinito accanto al gap).
+// Тестируются passato (шёл/шла, ходила/ходили), presente
+// (хожу/ходишь/иду/ходит) e infinito (идти/ходить) — тоже часть
+// тренировки, не оставляем как обычный текст.
 // ============================================================
-const p3instruction = "Leggi il racconto e scrivi la forma corretta del verbo al passato (ходил/ходила/ходили oppure шёл/шла). Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
+const p3instruction = "Leggi il racconto e scrivi la forma corretta del verbo, al presente (хожу/ходишь/ходит, иду), al passato (ходил/ходила/ходили, шёл/шла) o all'infinito (идти/ходить). Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
 
 const p3paragraphs = [
     "Суббота, утро. Андрей на кухне с чашкой кофе. Лена [[листает::sfoglia (le ricette)]] рецепты. Завтра день рождения Кати — надо готовить.",
     "— Рынок или гипермаркет? — спросила Лена.",
-    "— Я на рынок хожу только за сыром, — Андрей [[оторвался от чашки::si è staccato dalla tazza per un attimo]]. — К одной женщине. Уже полгода к ней хожу. А так — нет. Я по субботам пешком через [[пол-Москвы::mezza Mosca]] не хочу идти. [[Смысл?::Che senso ha?]]",
+    "— Я на рынок {{7}} только за сыром, — Андрей [[оторвался от чашки::si è staccato dalla tazza per un attimo]]. — К одной женщине. Уже полгода к ней {{8}}. А так — нет. Я по субботам пешком через [[пол-Москвы::mezza Mosca]] не хочу {{15}}. [[Смысл?::Che senso ha?]]",
     "— А я вчера {{1}} на рынок с Аней, — Лена [[отложила::ha messo da parte (il telefono)]] телефон. — Клубника, зелень, помидоры. Мы два часа {{2}} по рядам — и всё. [[Весь стол готов::tutta la tavola è pronta (il cibo è pronto)]].",
-    "— Ты ходишь по рынку два часа, а я иду в гипермаркет. Тридцать минут — и я дома.",
+    "— Ты {{9}} по рынку два часа, а я {{10}} в гипермаркет. Тридцать минут — и я дома.",
     "— И [[продукты пластиковые::i prodotti sono \"di plastica\" (finti, di scarsa qualità)]], — Лена улыбнулась.",
     "— А ты вчера {{3}} до рынка сколько? Полчаса?",
     "<strong>1.2</strong>",
     "Лена и Андрей [[переглянулись::si sono scambiati uno sguardo]].",
     "— Кстати, как думаешь, — Андрей посмотрел в потолок, — тирамису в гипермаркете [[нормальное бывает::capita che sia buono / a volte è buono]]?",
     "— Какое тирамису?! — Лена [[чуть не подавилась::quasi si è strozzata]] кофе. — Для тирамису нужно маскарпоне, а не «[[продукт творожный::\"prodotto a base di cagliata\", come scritto ironicamente su un'etichetta]]».",
-    "— Я просто спросил, — Андрей [[пожал плечами::ha alzato le spalle]]. — В прошлую субботу я {{4}} мимо [[кондитерской::pasticceria]], там [[витрина::vetrina]] — итальянские десерты. Красиво. Но идти до неё сорок минут. А до гипермаркета десять. [[Вот и думаю::Ecco perché ci penso]].",
+    "— Я просто спросил, — Андрей [[пожал плечами::ha alzato le spalle]]. — В прошлую субботу я {{4}} мимо [[кондитерской::pasticceria]], там [[витрина::vetrina]] — итальянские десерты. Красиво. Но {{16}} до неё сорок минут. А до гипермаркета десять. [[Вот и думаю::Ecco perché ci penso]].",
     "<strong>1.3</strong>",
     "Вошла Катя и [[молча::in silenzio]] посмотрела на пустой стол.",
     "— Вы уже {{5}} за продуктами?",
-    "— Нет, — Андрей взял ключи от машины. — Мы [[обсуждаем::discutiamo]], кто куда ходит.",
-    "— Понятно, — Катя открыла холодильник. — Я вчера {{6}} в «Азбуку вкуса». Пармезан, [[рукола::rucola]], хлеб. Десять минут от дома. По субботам я в магазин хожу, а не пешком через весь город — у меня итальянский в девять утра.",
-    "— Ты за сыром в «Азбуку» ходишь?! — Лена не поверила.",
-    "— А что? Пармезан там такой же, как на рынке. И мне не надо идти к нему через пол-Москвы.",
+    "— Нет, — Андрей взял ключи от машины. — Мы [[обсуждаем::discutiamo]], кто куда {{11}}.",
+    "— Понятно, — Катя открыла холодильник. — Я вчера {{6}} в «Азбуку вкуса». Пармезан, [[рукола::rucola]], хлеб. Десять минут от дома. По субботам я в магазин {{12}}, а не пешком через весь город — у меня итальянский в девять утра.",
+    "— Ты за сыром в «Азбуку» {{14}}?! — Лена не поверила.",
+    "— А что? Пармезан там такой же, как на рынке. И мне не надо {{17}} к нему через пол-Москвы.",
     "— [[А душа?::E il piacere del rito? (lett. \"E l'anima?\")]] — Лена посмотрела на Катю.",
-    "— [[Душа в субботу спит::L'anima dorme di sabato — espressione figurata: manca il piacere del rito]]. Как и я, когда в магазин не хожу.",
+    "— [[Душа в субботу спит::L'anima dorme di sabato — espressione figurata: manca il piacere del rito]]. Как и я, когда в магазин не {{13}}.",
 ];
 
 const p3gaps = {
@@ -215,6 +215,50 @@ const p3gaps = {
         answers: ["ходила"],
         explanation: "ходила = sono andata e tornata dal negozio (azione completata, andata+ritorno), non un movimento in corso in un momento specifico.",
     },
+    7: {
+        answers: ["хожу"],
+        explanation: "хожу = abitudine al presente (vado sempre e solo per il formaggio), non un movimento in corso adesso.",
+    },
+    8: {
+        answers: ["хожу"],
+        explanation: "хожу = abitudine ripetuta al presente (da mezzo anno), non un tragitto in corso in questo momento.",
+    },
+    9: {
+        answers: ["ходишь"],
+        explanation: "ходишь = movimento senza una sola direzione al presente (giri tra le bancarelle per due ore), non un tragitto singolo.",
+    },
+    10: {
+        answers: ["иду"],
+        explanation: "иду = movimento in corso adesso, in una sola direzione (verso l'ipermercato).",
+    },
+    11: {
+        answers: ["ходит"],
+        explanation: "ходит = uso generale/abituale al presente (chi va dove abitualmente), non un tragitto in corso.",
+    },
+    12: {
+        answers: ["хожу"],
+        explanation: "хожу = abitudine al presente (ogni sabato vado al negozio), non un movimento in corso in un momento preciso.",
+    },
+    13: {
+        answers: ["хожу"],
+        explanation: "хожу = abitudine al presente (quando non vado al negozio), non un tragitto in corso in questo momento.",
+    },
+    14: {
+        answers: ["ходишь"],
+        explanation: "ходишь = abitudine al presente (vai per il formaggio proprio lì), non un movimento in corso adesso.",
+    },
+    15: {
+        answers: ["идти"],
+        explanation: "идти (infinito) = descrive il tragitto specifico attraverso mezza Mosca in una direzione; resta идти anche parlando in generale del sabato, perché non è la ripetizione dell'abitudine ad essere negata, ma quel percorso preciso.",
+    },
+    16: {
+        answers: ["идти"],
+        explanation: "идти (infinito) = costruzione fissa «идти + tempo» per indicare la durata di un tragitto in una direzione (es. «до работы идти пять минут»), indipendente dall'abitudine.",
+    },
+    17: {
+        answers: ["идти"],
+        explanation: "идти (infinito) = stesso motivo del gap precedente: descrive il tragitto specifico attraverso mezza Mosca, non la ripetizione dell'abitudine.",
+    },
 };
 
 // ============================================================
@@ -224,22 +268,22 @@ const p3gaps = {
 // sbagliato. Solo le forme al passato diventano gap (шёл/шла/ходил);
 // il presente (иду/хожу/идёшь) resta testo fisso.
 // ============================================================
-const p4instruction = "Leggi il racconto e scrivi la forma corretta del verbo al passato (ходил/ходила/ходили oppure шёл/шла). Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
+const p4instruction = "Leggi il racconto e scrivi la forma corretta del verbo, al presente (хожу/ходишь/ходит, иду/идёшь) o al passato (ходил/ходила/ходили, шёл/шла). Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
 
 const p4paragraphs = [
     "Пятница, вечер. Катя, Женя, Андрей, Тимур. Завтра суббота.",
     "Женя и Андрей [[переглянулись::si sono scambiati uno sguardo]].",
     "<strong>1.1 — Женя</strong>",
-    "— Я завтра иду в «Стрелку». По субботам всегда туда хожу — джаз, коктейли, [[правильные люди::la gente giusta (uso colloquiale: persone \"autentiche\", di tendenza)]]. В прошлую субботу тоже {{1}}: квартет из Нового Орлеана, играли до двух ночи. А когда {{2}} обратно через [[Патриаршие::i \"Patriaršie prudy\", un quartiere del centro di Mosca]], {{3}} дождь. Весь город был пустой. Я {{4}} и думал: [[вот бы каждую ночь так::magari fosse così ogni notte (espressione di desiderio/rimpianto)]].",
+    "— Я завтра {{10}} в «Стрелку». По субботам всегда туда {{11}} — джаз, коктейли, [[правильные люди::la gente giusta (uso colloquiale: persone \"autentiche\", di tendenza)]]. В прошлую субботу тоже {{1}}: квартет из Нового Орлеана, играли до двух ночи. А когда {{2}} обратно через [[Патриаршие::i \"Patriaršie prudy\", un quartiere del centro di Mosca]], {{3}} дождь. Весь город был пустой. Я {{4}} и думал: [[вот бы каждую ночь так::magari fosse così ogni notte (espressione di desiderio/rimpianto)]].",
     "<strong>1.2 — Катя</strong>",
-    "— Джаз? В «Стрелке»? Там теперь хипстеры с ноутбуками сидят. Я завтра иду на [[ретроспективу::retrospettiva]] Феллини в «Пионере». На прошлой неделе показывали «8½».",
+    "— Джаз? В «Стрелке»? Там теперь хипстеры с ноутбуками сидят. Я завтра {{12}} на [[ретроспективу::retrospettiva]] Феллини в «Пионере». На прошлой неделе показывали «8½».",
     "— Ты же его сто раз смотрела, — Андрей [[поднял бровь::ha alzato un sopracciglio (gesto di scetticismo)]].",
     "— [[Сто первый будет::Sarà la centounesima (volta) — frase ellittica]]. Когда я {{5}} домой после сеанса, {{6}} снег. Я {{7}} через [[Бульварное кольцо::il \"Bul'varnoe kol'co\", uno dei viali ad anello del centro di Mosca]] и вдруг поняла: Феллини снимал Москву. Не Рим. Москву. Просто никто не заметил.",
     "— [[Ну да::Sì, certo (spesso con una sfumatura ironica/scettica)]], — сказал Андрей. — [[Только ты::Solo tu (potevi accorgertene) — frase ellittica, con ironia]].",
     "<strong>1.3 — Тимур</strong>",
     "— Вы вообще погоду видели? [[Что за романтика::Che romanticismo ci sarebbe...?! (espressione retorica di scetticismo)]] — дождь, Москва — прекрасна! Снег — Феллини, я вот не понял, ты Кать, на «Амаркорд» ходила или на восемь с половиной?",
-    "В прошлую субботу погода была [[премерзкая::orrenda, schifosa (rafforzativo colloquiale di \"мерзкий\")]]: {{8}} снег с дождём. [[Слякоть::nevischio misto a pioggia, fanghiglia per strada]], грязь. Что за романтика — ходить пешком в такую погоду?! Я по субботам хожу в спортзал. Там сухо. [[Тренажёры::attrezzi/macchine da palestra]]. Душ.",
-    "— Андрей, а ты куда идёшь? — Катя повернулась к нему.",
+    "В прошлую субботу погода была [[премерзкая::orrenda, schifosa (rafforzativo colloquiale di \"мерзкий\")]]: {{8}} снег с дождём. [[Слякоть::nevischio misto a pioggia, fanghiglia per strada]], грязь. Что за романтика — ходить пешком в такую погоду?! Я по субботам {{13}} в спортзал. Там сухо. [[Тренажёры::attrezzi/macchine da palestra]]. Душ.",
+    "— Андрей, а ты куда {{14}}? — Катя повернулась к нему.",
     "— Никуда. Раньше я {{9}} в бар по субботам. Теперь у меня PlayStation. В баре PlayStation нет.",
 ];
 
@@ -253,6 +297,11 @@ const p4gaps = {
     7: { answers: ["шла"] },
     8: { answers: ["шёл"] },
     9: { answers: ["ходил"] },
+    10: { answers: ["иду"] },
+    11: { answers: ["хожу"] },
+    12: { answers: ["иду"] },
+    13: { answers: ["хожу"] },
+    14: { answers: ["идёшь"] },
 };
 
 // ============================================================
@@ -260,26 +309,26 @@ const p4gaps = {
 // Stesse regole del Panel 4: nessuna hint, nessuna spiegazione —
 // solo giusto/sbagliato. Solo il passato diventa gap.
 // ============================================================
-const p5instruction = "Leggi il racconto e scrivi la forma corretta del verbo al passato (ходил/ходила/ходили oppure шёл/шла). Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
+const p5instruction = "Leggi il racconto e scrivi la forma corretta del verbo, al presente (хожу/ходишь/ходит, иду) o al passato (ходил/ходила/ходили, шёл/шла). Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
 
 const p5paragraphs = [
     "Пять лет после выпуска.",
     "<strong>1.1</strong>",
     "— А помните, как я {{1}} в библиотеку каждый день? Даже в субботу. Все {{2}} в кино, а я — в [[читальный зал::sala di lettura (in biblioteca)]]. На первую зимнюю сессию всегда {{3}} снег. За окном [[белым-бело::tutto bianco, bianco ovunque — costruzione enfatica per ripetizione]]. Я после последнего экзамена {{4}} домой и вдруг поняла: я абсолютно счастлива.",
     "— И сейчас так же? — спросил Тимур.",
-    "— Сейчас я только в спортзал хожу. По три раза в неделю. [[Привычка осталась — локация сменилась::L'abitudine è rimasta, è cambiato solo il posto — costruzione parallela ellittica]]. А помните, как мы на первом курсе все вместе {{5}} в спортзал? Один раз. Больше — никогда.",
+    "— Сейчас я только в спортзал {{14}}. По три раза в неделю. [[Привычка осталась — локация сменилась::L'abitudine è rimasta, è cambiato solo il posto — costruzione parallela ellittica]]. А помните, как мы на первом курсе все вместе {{5}} в спортзал? Один раз. Больше — никогда.",
     "— Ну конечно, ты вспомнила, — Андрей отложил телефон. — Хорошая привычка — она осталась только у тебя.",
     "<strong>1.2</strong>",
-    "— Я в прошлом месяце {{6}} в универ на встречу выпускников. Ничего не изменилось — даже лампочка в коридоре та же. Я всегда {{7}} в универ пешком, а сейчас на работу хожу, но тоже пешком. Единственное, что изменилось: на лекции больше не хожу. Помню: {{8}} на все, а учить всё равно садился за три дня до экзамена.",
+    "— Я в прошлом месяце {{6}} в универ на встречу выпускников. Ничего не изменилось — даже лампочка в коридоре та же. Я всегда {{7}} в универ пешком, а сейчас на работу {{15}}, но тоже пешком. Единственное, что изменилось: на лекции больше не {{16}}. Помню: {{8}} на все, а учить всё равно садился за три дня до экзамена.",
     "— Андрей бы оценил, — Женя [[кивнул в его сторону::ha fatto un cenno con la testa verso di lui]]. — Человек вообще на лекции не {{9}}. Помните, Лена только родилась — он либо спал на лекциях, либо вообще на них не {{10}}. А потом к Диме переехал.",
-    "— И ничего не изменилось, — Дима пожал плечами. — Я до сих пор никуда не хожу. Разве что до PlayStation иду каждый вечер уверенно.",
+    "— И ничего не изменилось, — Дима пожал плечами. — Я до сих пор никуда не {{17}}. Разве что до PlayStation {{18}} каждый вечер уверенно.",
     "<strong>1.3</strong>",
     "— Кстати, о привычках, — Лена повернулась к Тимуру. — Ты был [[звездой курса::la star/il migliore del corso — uso figurato]]. [[Все на тебя молились::Tutti ti veneravano — in senso figurato: contavano molto su di te]] перед сессией. Конспекты, спокойствие, «Тимур всё знает». Ты как?",
-    "— Я до сих пор никуда пешком не хожу, — Тимур улыбнулся. — Тогда, помню, мода на самокаты появилась: я на нём ездил в универ, сейчас на [[моноколесе::monociclo elettrico]] — в офис. Конспекты больше не пишу, но записи веду. Да, и на следующей неделе иду на конференцию по праву — выступаю. Так что привычка быть звездой — осталась.",
+    "— Я до сих пор никуда пешком не {{19}}, — Тимур улыбнулся. — Тогда, помню, мода на самокаты появилась: я на нём ездил в универ, сейчас на [[моноколесе::monociclo elettrico]] — в офис. Конспекты больше не пишу, но записи веду. Да, и на следующей неделе {{20}} на конференцию по праву — выступаю. Так что привычка быть звездой — осталась.",
     "— [[Скромно::\"Che modestia\" — detto con ironia/sarcasmo]], — заметила Катя.",
     "<strong>1.4</strong>",
     "— А ты? — Тимур посмотрел на Катю. — Ты же на лекции вообще не {{11}}.",
-    "— Я {{12}} по мероприятиям. Показы, закрытые вечеринки, лекции приглашённых режиссёров. На обычные пары — никогда. И знаете что? Ничего не изменилось. Я до сих пор хожу на всё, где есть слово «фестиваль» или «премьера». В субботу иду на ретроспективу Феллини.",
+    "— Я {{12}} по мероприятиям. Показы, закрытые вечеринки, лекции приглашённых режиссёров. На обычные пары — никогда. И знаете что? Ничего не изменилось. Я до сих пор {{21}} на всё, где есть слово «фестиваль» или «премьера». В субботу {{22}} на ретроспективу Феллини.",
     "— [[Вот это я понимаю — стабильность::Questo sì che si chiama stabilità! — espressione di approvazione]], — Лена улыбнулась.",
     "— А помните выпускной? — вдруг сказал Женя. — За неделю до него {{13}} дождь. Все думали — [[никаких прогулок на катере::niente gite in barca a motore]]. И прямо перед выпускным после обеда вышло солнце.",
     "— Лучший день, — сказала Катя.",
@@ -299,6 +348,15 @@ const p5gaps = {
     11: { answers: ["ходила"] },
     12: { answers: ["ходила"] },
     13: { answers: ["шёл"] },
+    14: { answers: ["хожу"] },
+    15: { answers: ["хожу"] },
+    16: { answers: ["хожу"] },
+    17: { answers: ["хожу"] },
+    18: { answers: ["иду"] },
+    19: { answers: ["хожу"] },
+    20: { answers: ["иду"] },
+    21: { answers: ["хожу"] },
+    22: { answers: ["иду"] },
 };
 
 // ============================================================
@@ -306,22 +364,22 @@ const p5gaps = {
 // Stesse regole dei Panel 4-5: nessuna hint, nessuna spiegazione —
 // solo giusto/sbagliato. Solo il passato diventa gap.
 // ============================================================
-const p6instruction = "Leggi il racconto e scrivi la forma corretta del verbo al passato (ходил/ходила/ходили oppure шёл/шла). Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
+const p6instruction = "Leggi il racconto e scrivi la forma corretta del verbo, al presente (хожу, идём) o al passato (ходил/ходила/ходили, шёл/шла). Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
 
 const p6paragraphs = [
     "<strong>В какой ресторан идём сегодня?</strong>",
     "Пятница, вечер. Катя, Андрей, Женя, Лена, Тимур.",
-    "— Ну и куда мы сегодня идём? — Андрей [[откинулся на стуле::si è appoggiato allo schienale della sedia]].",
+    "— Ну и куда мы сегодня {{11}}? — Андрей [[откинулся на стуле::si è appoggiato allo schienale della sedia]].",
     "Женя и Тимур [[переглянулись::si sono scambiati uno sguardo]].",
     "<strong>1.1</strong>",
     "— Я на прошлой неделе {{1}} в «Воронеж». Стейк, пиво. Когда я {{2}} туда по [[Кузнецкому Мосту::via del centro di Mosca (\"Kuznetskij Most\")]], {{3}} снег. Все спешили, а какой-то парень играл на саксофоне. Я стоял пять минут под снегом и слушал.",
     "<strong>1.2</strong>",
-    "— «Воронеж»? — Женя [[поморщился::ha fatto una smorfia (di disappunto)]]. — Я туда {{4}} один раз. Больше не хожу. А вот в «Sage» на патриарших я в среду {{5}}. Маленький зал, тихо. Раньше я туда часто {{6}}. Когда {{7}} оттуда, на [[Бронной::via del centro di Mosca (\"Bronnaja\")]] снимали кино — пришлось обходить.",
+    "— «Воронеж»? — Женя [[поморщился::ha fatto una smorfia (di disappunto)]]. — Я туда {{4}} один раз. Больше не {{12}}. А вот в «Sage» на патриарших я в среду {{5}}. Маленький зал, тихо. Раньше я туда часто {{6}}. Когда {{7}} оттуда, на [[Бронной::via del centro di Mosca (\"Bronnaja\")]] снимали кино — пришлось обходить.",
     "<strong>1.3</strong>",
     "— А я в прошлом месяце {{8}} в «Белую Лошадь», — Лена поправила волосы. — Утка с грушей.",
     "— Я туда {{9}} один раз, — Тимур [[скрестил руки::ha incrociato le braccia]]. — [[Одно веганское блюдо. Одно.::Un solo piatto vegano. Uno solo. — ripetizione enfatica/ironica]]",
     "— Между прочим, раньше мы все вместе {{10}} в «Хачапури». Раз в месяц, — Женя [[примирительно поднял руку::ha alzato una mano in segno di conciliazione]]. — Там и мясо, и сыр, и [[веганские лодочки::\"barchette\" vegane — un tipo di khachapuri a forma di barca]].",
-    "— Пока туда не начали ходить все. Теперь — очередь на улице. Я больше туда не хожу.",
+    "— Пока туда не начали ходить все. Теперь — очередь на улице. Я больше туда не {{13}}.",
 ];
 
 const p6gaps = {
@@ -335,27 +393,46 @@ const p6gaps = {
     8:  { answers: ["ходила"] },
     9:  { answers: ["ходил"] },
     10: { answers: ["ходили"] },
+    11: { answers: ["идём"] },
+    12: { answers: ["хожу"] },
+    13: { answers: ["хожу"] },
 };
 
 // ============================================================
-// PANEL 7 — Mixed Quiz · public — 30 фраз, задания строятся
-// из блоков упражнений страницы:
-// MC       <- p1exercises (ХОДИТЬ, 10)
-// match    <- p2exercises (ИДТИ, 10)
-// write-in <- p7writeInData, selezione di 10 frasi dai testi
-//             con lacune Panel 3-6 (равный баланс ходить/идти)
+// PANEL 7 — Mixed Quiz · public — 30 фраз, passato + presente,
+// задания строятся из блоков упражнений страницы:
+// MC       <- 5 passato (p1exercises, ХОДИТЬ) + 5 presente (nuove)
+// match    <- 5 passato (p2exercises, ИДТИ) + 5 presente (nuove)
+// write-in <- p7writeInData: 7 passato dai testi Panel 3-6
+//             + 3 presente dagli stessi testi
 // ============================================================
+const p7mcPresentData = [
+    { question: "Обычно я ___ на работу пешком.", options: ["хожу", "иду", "ходил"], answer: "хожу" },
+    { question: "Смотри, вот он ___ по улице!", options: ["идёт", "ходит", "шёл"], answer: "идёт" },
+    { question: "Ты часто ___ в бассейн?", options: ["ходишь", "идёшь", "ходил"], answer: "ходишь" },
+    { question: "Куда ты сейчас так быстро ___?", options: ["идёшь", "ходишь", "шёл"], answer: "идёшь" },
+    { question: "По воскресеньям бабушка всегда ___ в церковь.", options: ["ходит", "идёт", "ходила"], answer: "ходит" },
+];
+
+const p7matchPresentData = [
+    { left: "Обычно мы", right: "ходим в кино по пятницам." },
+    { left: "Прямо сейчас я", right: "иду в магазин, перезвоню позже." },
+    { left: "Дети каждое утро", right: "ходят в школу пешком." },
+    { left: "Погоди, куда вы", right: "идёте?" },
+    { left: "Он никогда не", right: "ходит на такие мероприятия." },
+];
+
 const p7writeInData = [
     { id: "past-ix-w01", promptPrefix: "А я вчера", promptSuffix: "на рынок с Аней.", answers: ["ходила"] },
     { id: "past-ix-w02", promptPrefix: "В прошлую субботу я", promptSuffix: "мимо кондитерской.", answers: ["шёл"] },
-    { id: "past-ix-w03", promptPrefix: "Раньше я", promptSuffix: "в бар по субботам.", answers: ["ходил"] },
+    { id: "past-ix-w03", promptPrefix: "Я на рынок", promptSuffix: "только за сыром.", answers: ["хожу"] },
     { id: "past-ix-w04", promptPrefix: "Я", promptSuffix: "через Бульварное кольцо.", answers: ["шла"] },
     { id: "past-ix-w05", promptPrefix: "Я после последнего экзамена", promptSuffix: "домой.", answers: ["шла"] },
-    { id: "past-ix-w06", promptPrefix: "Мы на первом курсе все вместе", promptSuffix: "в спортзал один раз.", answers: ["ходили"] },
+    { id: "past-ix-w06", promptPrefix: "Андрей, а ты куда", promptSuffix: "?", answers: ["идёшь"] },
     { id: "past-ix-w07", promptPrefix: "За неделю до выпускного", promptSuffix: "дождь.", answers: ["шёл"] },
     { id: "past-ix-w08", promptPrefix: "Я на прошлой неделе", promptSuffix: "в «Воронеж».", answers: ["ходил"] },
     { id: "past-ix-w09", promptPrefix: "Когда я", promptSuffix: "туда по Кузнецкому Мосту, начался снег.", answers: ["шёл"] },
-    { id: "past-ix-w10", promptPrefix: "Раньше мы все вместе", promptSuffix: "в «Хачапури» раз в месяц.", answers: ["ходили"] },
+    { id: "past-ix-w10", promptPrefix: "Ну и куда мы сегодня", promptSuffix: "?", answers: ["идём"] },
 ];
 
 function toMultipleChoice(item) {
