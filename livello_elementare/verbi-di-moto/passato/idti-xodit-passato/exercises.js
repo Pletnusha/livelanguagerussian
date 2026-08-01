@@ -265,10 +265,10 @@ const p3gaps = {
 // PANEL 4 — GapText · student · Testo connesso con lacune + glossario
 // Stesse regole del Panel 3, MA: nessuna hint (infinito) accanto ai
 // gap e nessuna spiegazione sulla risposta sbagliata — solo giusto/
-// sbagliato. Solo le forme al passato diventano gap (шёл/шла/ходил);
-// il presente (иду/хожу/идёшь) resta testo fisso.
+// sbagliato. Testate tutte le forme: passato (шёл/шла/ходил),
+// presente (иду/хожу/идёшь) e infinito (идти/ходить).
 // ============================================================
-const p4instruction = "Leggi il racconto e scrivi la forma corretta del verbo, al presente (хожу/ходишь/ходит, иду/идёшь) o al passato (ходил/ходила/ходили, шёл/шла). Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
+const p4instruction = "Leggi il racconto e scrivi la forma corretta del verbo, al presente (хожу/ходишь/ходит, иду/идёшь), al passato (ходил/ходила/ходили, шёл/шла) o all'infinito (идти/ходить). Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
 
 const p4paragraphs = [
     "Пятница, вечер. Катя, Женя, Андрей, Тимур. Завтра суббота.",
@@ -281,8 +281,8 @@ const p4paragraphs = [
     "— [[Сто первый будет::Sarà la centounesima (volta) — frase ellittica]]. Когда я {{5}} домой после сеанса, {{6}} снег. Я {{7}} через [[Бульварное кольцо::il \"Bul'varnoe kol'co\", uno dei viali ad anello del centro di Mosca]] и вдруг поняла: Феллини снимал Москву. Не Рим. Москву. Просто никто не заметил.",
     "— [[Ну да::Sì, certo (spesso con una sfumatura ironica/scettica)]], — сказал Андрей. — [[Только ты::Solo tu (potevi accorgertene) — frase ellittica, con ironia]].",
     "<strong>1.3 — Тимур</strong>",
-    "— Вы вообще погоду видели? [[Что за романтика::Che romanticismo ci sarebbe...?! (espressione retorica di scetticismo)]] — дождь, Москва — прекрасна! Снег — Феллини, я вот не понял, ты Кать, на «Амаркорд» ходила или на восемь с половиной?",
-    "В прошлую субботу погода была [[премерзкая::orrenda, schifosa (rafforzativo colloquiale di \"мерзкий\")]]: {{8}} снег с дождём. [[Слякоть::nevischio misto a pioggia, fanghiglia per strada]], грязь. Что за романтика — ходить пешком в такую погоду?! Я по субботам {{13}} в спортзал. Там сухо. [[Тренажёры::attrezzi/macchine da palestra]]. Душ.",
+    "— Вы вообще погоду видели? [[Что за романтика::Che romanticismo ci sarebbe...?! (espressione retorica di scetticismo)]] — дождь, Москва — прекрасна! Снег — Феллини, я вот не понял, ты Кать, на «Амаркорд» {{15}} или на восемь с половиной?",
+    "В прошлую субботу погода была [[премерзкая::orrenda, schifosa (rafforzativo colloquiale di \"мерзкий\")]]: {{8}} снег с дождём. [[Слякоть::nevischio misto a pioggia, fanghiglia per strada]], грязь. Что за романтика — {{16}} пешком в такую погоду?! Я по субботам {{13}} в спортзал. Там сухо. [[Тренажёры::attrezzi/macchine da palestra]]. Душ.",
     "— Андрей, а ты куда {{14}}? — Катя повернулась к нему.",
     "— Никуда. Раньше я {{9}} в бар по субботам. Теперь у меня PlayStation. В баре PlayStation нет.",
 ];
@@ -302,6 +302,8 @@ const p4gaps = {
     12: { answers: ["иду"] },
     13: { answers: ["хожу"] },
     14: { answers: ["идёшь"] },
+    15: { answers: ["ходила"] },
+    16: { answers: ["ходить"] },
 };
 
 // ============================================================
