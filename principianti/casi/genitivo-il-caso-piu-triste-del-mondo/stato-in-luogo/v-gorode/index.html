@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>В ГОРОДЕ - LIVE LANGUAGE_RUSSIAN</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/access-control.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        document.documentElement.style.visibility = 'hidden';
+        (async () => {
+            const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
+            await new Promise((res, rej) => {
+                const s = document.createElement('script');
+                s.src = 'https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js';
+                s.onload = res; s.onerror = rej;
+                document.head.appendChild(s);
+            });
+            const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            const { data: { session } } = await client.auth.getSession();
+            if (!session) {
+                window.location.href = '/login.html';
+            } else {
+                document.documentElement.style.visibility = '';
+            }
+        })();
+    </script>
+</head>
+<body class="page-genitivo-il-caso-piu-triste-del-mondo">
+
+    <section class="argomento-header">
+        <h1 class="argomento-title">В ГОРОДЕ</h1>
+        <p class="argomento-focus">Stato in luogo (genitivo) — vicino, in città</p>
+    </section>
+
+    <section class="argomento-intro">
+        <p><!-- TODO: Intro text --></p>
+    </section>
+
+    <main class="exercises-section">
+
+        <!-- ============================================================ -->
+        <!-- Panel 1 (student) - Scrivi la risposta -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-vgo-1">
+            <span class="exercise-type">Scrivi</span>
+            <h3 class="exercise-title"><!-- TODO: Title --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-vgo-1" data-access="student" hidden>
+            <div id="ex-gaptext-vgo-1">
+                <div id="ex-gaptext-vgo-1-container"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 2 (paid) - Scrivi la risposta -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-vgo-2">
+            <span class="exercise-type">Scrivi</span>
+            <h3 class="exercise-title"><!-- TODO: Title --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-vgo-2" data-access="paid" hidden>
+            <div id="ex-gaptext-vgo-2">
+                <div id="ex-gaptext-vgo-2-container"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 (student) - Scrivi la risposta -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-vgo-3">
+            <span class="exercise-type">Scrivi</span>
+            <h3 class="exercise-title"><!-- TODO: Title --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-vgo-3" data-access="student" hidden>
+            <div id="ex-gaptext-vgo-3">
+                <div id="ex-gaptext-vgo-3-container"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 4 (paid) - Scrivi la risposta -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-vgo-4">
+            <span class="exercise-type">Scrivi</span>
+            <h3 class="exercise-title"><!-- TODO: Title --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-vgo-4" data-access="paid" hidden>
+            <div id="ex-gaptext-vgo-4">
+                <div id="ex-gaptext-vgo-4-container"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <section class="unlock-cta">
+        <a href="https://buy.stripe.com/00w6oHaiAgRLdfsbKB3ZK0c" class="unlock-cta-btn" target="_blank" rel="noopener noreferrer">Sblocca tutti gli esercizi</a>
+    </section>
+
+    <footer class="level-footer">
+        <a href="/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/" class="back-link">← Torna a Где? Около тебя</a>
+    </footer>
+
+    <script type="module" src="./exercises.js"></script>
+
+</body>
+</html>
