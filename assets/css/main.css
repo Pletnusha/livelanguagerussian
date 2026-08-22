@@ -244,7 +244,8 @@ h1, h2, h3 {
 .page-nesti-nositi .argomento-header,
 .page-vezti-voziti .argomento-header,
 .page-vesti-voditi .argomento-header,
-.page-nuotare .argomento-header {
+.page-nuotare .argomento-header,
+.page-volare .argomento-header {
   padding-top: 2.5rem;
 }
 
