@@ -245,7 +245,8 @@ h1, h2, h3 {
 .page-vezti-voziti .argomento-header,
 .page-vesti-voditi .argomento-header,
 .page-nuotare .argomento-header,
-.page-volare .argomento-header {
+.page-volare .argomento-header,
+.page-idti-xodit-passato .argomento-header {
   padding-top: 2.5rem;
 }
 
