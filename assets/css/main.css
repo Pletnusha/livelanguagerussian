@@ -1743,6 +1743,27 @@ article.exercise-card[data-target="panel-acc-open-10"],
 #panel-mal-open-4 .fca01-btn-nav:hover { background: #f8f8f8; border-color: #2a5bd7; }
 #panel-mal-open-4 .fca01-btn-nav:disabled { opacity: 0.4; cursor: not-allowed; }
 
+#panel-past-ix-07 .fca01-btn-nav {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  min-width: 160px;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1;
+}
+
+#panel-past-ix-07 .fca01-btn-nav:hover { background: #f8f8f8; border-color: #2a5bd7; }
+#panel-past-ix-07 .fca01-btn-nav:disabled { opacity: 0.4; cursor: not-allowed; }
+
 #panel-mal-open-4 .fca01-counter {
   color: #333;
   font-family: monospace;
