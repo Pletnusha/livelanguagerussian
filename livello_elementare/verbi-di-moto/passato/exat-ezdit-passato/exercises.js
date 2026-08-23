@@ -92,7 +92,72 @@ const p1exercises = [
     },
 ];
 
-// TODO: p2exercises (ЕХАТЬ D&D)
+// ============================================================
+// PANEL 2 — DragDrop · student · Spряжение ЕХАТЬ passato
+// (ехал / ехала / ехало / ехали) — durata/sfondo di un movimento
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ (passato).",
+        text: "Вчера Андрей {{1}} на работу два часа.",
+        words: ["ехал", "ехала", "ехало", "ехали"],
+        correctAnswers: { 1: "ехал" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ (passato).",
+        text: "Катя {{1}} домой, когда ей позвонили.",
+        words: ["ехал", "ехала", "ехало", "ехали"],
+        correctAnswers: { 1: "ехала" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ (passato).",
+        text: "Такси {{1}} в пробке очень медленно.",
+        words: ["ехал", "ехала", "ехало", "ехали"],
+        correctAnswers: { 1: "ехало" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ (passato).",
+        text: "Мы {{1}} в Москву, когда сломалась машина.",
+        words: ["ехал", "ехала", "ехало", "ехали"],
+        correctAnswers: { 1: "ехали" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ (passato).",
+        text: "Она первый раз {{1}} из деревни одна.",
+        words: ["ехал", "ехала", "ехало", "ехали"],
+        correctAnswers: { 1: "ехала" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ (passato).",
+        text: "Она {{1}} по парку на велосипеде, когда увидела Андрея.",
+        words: ["ехал", "ехала", "ехало", "ехали"],
+        correctAnswers: { 1: "ехала" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ (passato).",
+        text: "Они {{1}} всю ночь, пока не рассвело.",
+        words: ["ехал", "ехала", "ехало", "ехали"],
+        correctAnswers: { 1: "ехали" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ (passato).",
+        text: "Дима {{1}} на дачу новой дорогой.",
+        words: ["ехал", "ехала", "ехало", "ехали"],
+        correctAnswers: { 1: "ехал" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ (passato).",
+        text: "Машина {{1}} прямо, когда вдруг появился пешеход.",
+        words: ["ехал", "ехала", "ехало", "ехали"],
+        correctAnswers: { 1: "ехала" }
+    },
+    {
+        instruction: "Выбери правильную форму глагола ЕХАТЬ (passato).",
+        text: "Почему вы так долго {{1}}?",
+        words: ["ехал", "ехала", "ехало", "ехали"],
+        correctAnswers: { 1: "ехали" }
+    },
+];
 
 // ============================================================
 // PANEL 3 — GapText · public · Testo connesso con lacune + glossario
@@ -199,7 +264,7 @@ const p3gaps = {
 // ============================================================
 const initializers = {
     'panel-past-ez-01': () => new DragDropExercise({ rootId: 'ex-dragdrop-past-ez-01', exercises: p1exercises }),
-    // 'panel-past-ez-02': () => new DragDropExercise({ rootId: 'ex-dragdrop-past-ez-02', exercises: p2exercises }),
+    'panel-past-ez-02': () => new DragDropExercise({ rootId: 'ex-dragdrop-past-ez-02', exercises: p2exercises }),
     'panel-past-ez-03': () => new GapTextExercise({ rootId: 'ex-gaptext-past-ez-03', instruction: p3instruction, paragraphs: p3paragraphs, gaps: p3gaps, showHints: false }),
     // 'panel-past-ez-04': () => new GapTextExercise({ rootId: 'ex-gaptext-past-ez-04', instruction: p4instruction, paragraphs: p4paragraphs, gaps: p4gaps, showHints: false }),
     // 'panel-past-ez-05': () => new GapTextExercise({ rootId: 'ex-gaptext-past-ez-05', instruction: p5instruction, paragraphs: p5paragraphs, gaps: p5gaps, showHints: false }),
