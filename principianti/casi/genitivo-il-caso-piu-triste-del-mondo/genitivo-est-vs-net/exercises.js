@@ -1,12 +1,83 @@
 import DragDropExercise from '/assets/js/engines/DragDropExercise.js';
-import GapTextExercise from '/assets/js/engines/GapTextExercise.js';
+import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
 // PANEL 1 — DragDrop · public
-// TODO: contenuto in attesa di materiale da PM
+// Местоимения и существительные (все склонения) после "у" + genitivo
 // ============================================================
-const p1exercises = [];
+const p1exercises = [
+    {
+        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        text: "У ___ есть сестра.",
+        words: ["я", "мне", "меня"],
+        correctAnswers: { 1: "меня" },
+        explanation: "Genitivo del pronome personale: я → меня."
+    },
+    {
+        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        text: "У ___ есть друг.",
+        words: ["моя старшая сестра", "моей старшей сестре", "моей старшей сестры"],
+        correctAnswers: { 1: "моей старшей сестры" },
+        explanation: "Genitivo: сестра (femminile) → сестры; l'aggettivo concorda: моя старшая → моей старшей."
+    },
+    {
+        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        text: "У ___ есть машина?",
+        words: ["тебе", "ты", "тебя"],
+        correctAnswers: { 1: "тебя" },
+        explanation: "Genitivo del pronome personale: ты → тебя."
+    },
+    {
+        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        text: "У ___ есть собака.",
+        words: ["наш сосед", "нашему соседу", "нашего соседа"],
+        correctAnswers: { 1: "нашего соседа" },
+        explanation: "Genitivo: сосед (maschile) → соседа; l'aggettivo concorda: наш → нашего."
+    },
+    {
+        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        text: "У ___ есть работа.",
+        words: ["она", "ей", "неё"],
+        correctAnswers: { 1: "неё" },
+        explanation: "Genitivo del pronome personale: она → неё (con -н- dopo la preposizione «у»)."
+    },
+    {
+        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        text: "У ___ есть квартира.",
+        words: ["мать", "матерью", "матери"],
+        correctAnswers: { 1: "матери" },
+        explanation: "Genitivo irregolare di мать (3ª declinazione): мать → матери."
+    },
+    {
+        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        text: "У ___ есть время.",
+        words: ["мы", "нам", "нас"],
+        correctAnswers: { 1: "нас" },
+        explanation: "Genitivo del pronome personale: мы → нас."
+    },
+    {
+        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        text: "У ___ есть велосипед.",
+        words: ["мой младший брат", "моему младшему брату", "моего младшего брата"],
+        correctAnswers: { 1: "моего младшего брата" },
+        explanation: "Genitivo: брат (maschile) → брата; l'aggettivo concorda: мой младший → моего младшего."
+    },
+    {
+        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        text: "У ___ есть дети.",
+        words: ["они", "им", "них"],
+        correctAnswers: { 1: "них" },
+        explanation: "Genitivo del pronome personale: они → них (con -н- dopo la preposizione «у»)."
+    },
+    {
+        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        text: "У ___ есть дача.",
+        words: ["наш дядя", "нашей дяди", "нашего дяди"],
+        correctAnswers: { 1: "нашего дяди" },
+        explanation: "дядя è maschile ma si declina come i sostantivi femminili in -я: genitivo дяди. L'aggettivo concorda però al maschile: наш → нашего."
+    }
+];
 
 // ============================================================
 // PANEL 2 — DragDrop · student
@@ -21,46 +92,40 @@ const p2exercises = [];
 const p3exercises = [];
 
 // ============================================================
-// PANEL 4 — GapText · public
-// TODO: testo in attesa di materiale da PM
+// PANEL 4 — Flashcard · public
+// TODO: contenuto in attesa di materiale da PM
 // ============================================================
-const p4paragraphs = [];
-const p4gaps = {};
+const p4cards = [];
 
 // ============================================================
-// PANEL 5 — GapText · student
-// TODO: testo in attesa di materiale da PM
+// PANEL 5 — Flashcard · student
+// TODO: contenuto in attesa di materiale da PM
 // ============================================================
-const p5paragraphs = [];
-const p5gaps = {};
+const p5cards = [];
 
 // ============================================================
-// PANEL 6 — GapText · paid
-// TODO: testo in attesa di materiale da PM
+// PANEL 6 — Flashcard · paid
+// TODO: contenuto in attesa di materiale da PM
 // ============================================================
-const p6paragraphs = [];
-const p6gaps = {};
+const p6cards = [];
 
 // ============================================================
-// PANEL 7 — GapText · public
-// TODO: testo in attesa di materiale da PM
+// PANEL 7 — Flashcard · public
+// TODO: contenuto in attesa di materiale da PM
 // ============================================================
-const p7paragraphs = [];
-const p7gaps = {};
+const p7cards = [];
 
 // ============================================================
-// PANEL 8 — GapText · student
-// TODO: testo in attesa di materiale da PM
+// PANEL 8 — Flashcard · student
+// TODO: contenuto in attesa di materiale da PM
 // ============================================================
-const p8paragraphs = [];
-const p8gaps = {};
+const p8cards = [];
 
 // ============================================================
-// PANEL 9 — GapText · paid
-// TODO: testo in attesa di materiale da PM
+// PANEL 9 — Flashcard · paid
+// TODO: contenuto in attesa di materiale da PM
 // ============================================================
-const p9paragraphs = [];
-const p9gaps = {};
+const p9cards = [];
 
 // ============================================================
 // PANEL 10 — Quiz misto (multiple choice + match + write) · public
@@ -373,12 +438,12 @@ const initializers = {
     'panel-evn-1':  () => new DragDropExercise({ rootId: 'ex-dragdrop-evn-01', exercises: p1exercises }),
     'panel-evn-2':  () => new DragDropExercise({ rootId: 'ex-dragdrop-evn-02', exercises: p2exercises }),
     'panel-evn-3':  () => new DragDropExercise({ rootId: 'ex-dragdrop-evn-03', exercises: p3exercises }),
-    'panel-evn-4':  () => new GapTextExercise({ rootId: 'ex-gaptext-evn-4', paragraphs: p4paragraphs, gaps: p4gaps, showHints: true }),
-    'panel-evn-5':  () => new GapTextExercise({ rootId: 'ex-gaptext-evn-5', paragraphs: p5paragraphs, gaps: p5gaps, showHints: true }),
-    'panel-evn-6':  () => new GapTextExercise({ rootId: 'ex-gaptext-evn-6', paragraphs: p6paragraphs, gaps: p6gaps, showHints: true }),
-    'panel-evn-7':  () => new GapTextExercise({ rootId: 'ex-gaptext-evn-7', paragraphs: p7paragraphs, gaps: p7gaps, showHints: true }),
-    'panel-evn-8':  () => new GapTextExercise({ rootId: 'ex-gaptext-evn-8', paragraphs: p8paragraphs, gaps: p8gaps, showHints: true }),
-    'panel-evn-9':  () => new GapTextExercise({ rootId: 'ex-gaptext-evn-9', paragraphs: p9paragraphs, gaps: p9gaps, showHints: true }),
+    'panel-evn-4':  () => new FlashcardExercise({ rootId: 'ex-flashcards-evn-04', cards: p4cards }),
+    'panel-evn-5':  () => new FlashcardExercise({ rootId: 'ex-flashcards-evn-05', cards: p5cards }),
+    'panel-evn-6':  () => new FlashcardExercise({ rootId: 'ex-flashcards-evn-06', cards: p6cards }),
+    'panel-evn-7':  () => new FlashcardExercise({ rootId: 'ex-flashcards-evn-07', cards: p7cards }),
+    'panel-evn-8':  () => new FlashcardExercise({ rootId: 'ex-flashcards-evn-08', cards: p8cards }),
+    'panel-evn-9':  () => new FlashcardExercise({ rootId: 'ex-flashcards-evn-09', cards: p9cards }),
     'panel-evn-10': () => initPanelEvn10()
 };
 
