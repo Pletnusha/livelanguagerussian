@@ -1,0 +1,129 @@
+{
+  "nodes": [
+    {
+      "id": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_image",
+      "label": "Прилагательные формы — слайд \"ФОРМА\" (IL RUSSO TRASPARENTE)",
+      "file_type": "image",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\ПРИЛАГАТЕЛЬНЫЕ\\прилагательные_форма.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_krugliy_stol",
+      "label": "Круглый стол (round table — shape adjective example)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\ПРИЛАГАТЕЛЬНЫЕ\\прилагательные_форма.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_treugolnoe_okno",
+      "label": "Треугольное окно (triangular window — shape adjective example)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\ПРИЛАГАТЕЛЬНЫЕ\\прилагательные_форма.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_pryamougolniy_stol",
+      "label": "Прямоугольный стол (rectangular table — shape adjective example)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\ПРИЛАГАТЕЛЬНЫЕ\\прилагательные_форма.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_kvadratnoe_okno",
+      "label": "Квадратное окно (square window — shape adjective example)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\ПРИЛАГАТЕЛЬНЫЕ\\прилагательные_форма.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_image",
+      "target": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_krugliy_stol",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\ПРИЛАГАТЕЛЬНЫЕ\\прилагательные_форма.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_image",
+      "target": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_treugolnoe_okno",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\ПРИЛАГАТЕЛЬНЫЕ\\прилагательные_форма.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_image",
+      "target": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_pryamougolniy_stol",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\ПРИЛАГАТЕЛЬНЫЕ\\прилагательные_форма.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_image",
+      "target": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_kvadratnoe_okno",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\ПРИЛАГАТЕЛЬНЫЕ\\прилагательные_форма.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_pryamougolniy_stol",
+      "target": "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_kvadratnoe_okno",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\ПРИЛАГАТЕЛЬНЫЕ\\прилагательные_форма.png",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "forma_shape_adjectives_matching_set",
+      "label": "Сопоставление прилагательных формы с объектами (круглый/треугольный/прямоугольный/квадратный)",
+      "nodes": [
+        "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_krugliy_stol",
+        "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_treugolnoe_okno",
+        "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_pryamougolniy_stol",
+        "corsi_principianti_modulo_1_prilagatelnye_prilagatelnye_forma_kvadratnoe_okno"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\ПРИЛАГАТЕЛЬНЫЕ\\прилагательные_форма.png"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -1,0 +1,182 @@
+{
+  "nodes": [
+    {
+      "id": "corsi_principianti_modulo_1_semya_antona_semya_antona_exercise",
+      "label": "Семья Антона — Family Description Reading Exercise",
+      "file_type": "image",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "corsi_principianti_modulo_1_semya_antona_semya_antona_anton",
+      "label": "Антон (Anton) — narrator, middle son, dark hair, green eyes like grandfather",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "corsi_principianti_modulo_1_semya_antona_semya_antona_anna",
+      "label": "Анна (Anna) — Anton's mother, tall, slim, blonde hair, blue eyes, serious",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "corsi_principianti_modulo_1_semya_antona_semya_antona_anatolii",
+      "label": "Анатолий (Anatolii) — Anton's father, not very tall, athletic, dark hair, brown eyes, cheerful",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "corsi_principianti_modulo_1_semya_antona_semya_antona_aleksandr",
+      "label": "Александр (Aleksandr) — Anton's older brother, very tall, dark hair like father, blue eyes like mother",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "corsi_principianti_modulo_1_semya_antona_semya_antona_liza",
+      "label": "Лиза (Liza) — Anton's younger sister, not tall, blonde hair like mother, brown eyes like father",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "corsi_principianti_modulo_1_semya_antona_semya_antona_vocabulary_descrizione_fisica",
+      "label": "Vocabulary glossary: physical/character description adjectives (RU-IT) — высокий/невысокий, весёлый/серьёзный, тёмные/светлые волосы, голубые/карие/зелёные глаза, старший/младший",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "corsi_principianti_modulo_1_semya_antona_semya_antona_exercise",
+      "target": "corsi_principianti_modulo_1_semya_antona_semya_antona_anton",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "corsi_principianti_modulo_1_semya_antona_semya_antona_exercise",
+      "target": "corsi_principianti_modulo_1_semya_antona_semya_antona_anna",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "corsi_principianti_modulo_1_semya_antona_semya_antona_exercise",
+      "target": "corsi_principianti_modulo_1_semya_antona_semya_antona_anatolii",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "corsi_principianti_modulo_1_semya_antona_semya_antona_exercise",
+      "target": "corsi_principianti_modulo_1_semya_antona_semya_antona_aleksandr",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "corsi_principianti_modulo_1_semya_antona_semya_antona_exercise",
+      "target": "corsi_principianti_modulo_1_semya_antona_semya_antona_liza",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "corsi_principianti_modulo_1_semya_antona_semya_antona_exercise",
+      "target": "corsi_principianti_modulo_1_semya_antona_semya_antona_vocabulary_descrizione_fisica",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "corsi_principianti_modulo_1_semya_antona_semya_antona_aleksandr",
+      "target": "corsi_principianti_modulo_1_semya_antona_semya_antona_anatolii",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "corsi_principianti_modulo_1_semya_antona_semya_antona_liza",
+      "target": "corsi_principianti_modulo_1_semya_antona_semya_antona_anna",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "semya_antona_family_members",
+      "label": "Anton's Family — all members described in the reading",
+      "nodes": [
+        "corsi_principianti_modulo_1_semya_antona_semya_antona_anton",
+        "corsi_principianti_modulo_1_semya_antona_semya_antona_anna",
+        "corsi_principianti_modulo_1_semya_antona_semya_antona_anatolii",
+        "corsi_principianti_modulo_1_semya_antona_semya_antona_aleksandr",
+        "corsi_principianti_modulo_1_semya_antona_semya_antona_liza"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Administrator\\Documents\\livelanguage 16.03 - Copia\\livelanguagerussian\\corsi\\principianti\\Modulo 1\\СЕМЬЯ АНТОНА\\семья Антона.png"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
