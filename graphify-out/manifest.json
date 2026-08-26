@@ -1,0 +1,2870 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1780486380.5999396,
+    "seen": 1787775475.2096941,
+    "ast_hash": "2b25dd1c9c450f352b7ee675a15b2cc0",
+    "semantic_hash": "2b25dd1c9c450f352b7ee675a15b2cc0"
+  },
+  "assets/js/engines/DragDropExercise.js": {
+    "mtime": 1778793685.0181587,
+    "seen": 1787775475.2096987,
+    "ast_hash": "580be3ee29071fd8326eacd29ec84028",
+    "semantic_hash": "580be3ee29071fd8326eacd29ec84028"
+  },
+  "assets/js/engines/FlashcardExercise.js": {
+    "mtime": 1780059080.0960283,
+    "seen": 1787775475.2097,
+    "ast_hash": "d788ff4f30f7c87d147ba98fbb7d1d5f",
+    "semantic_hash": "d788ff4f30f7c87d147ba98fbb7d1d5f"
+  },
+  "assets/js/engines/GapTextExercise.js": {
+    "mtime": 1783688350.887914,
+    "seen": 1787775475.2097008,
+    "ast_hash": "0d1035b1126e5670146a038e376611e9",
+    "semantic_hash": "0d1035b1126e5670146a038e376611e9"
+  },
+  "assets/js/engines/QuizExercise.js": {
+    "mtime": 1779302130.5789847,
+    "seen": 1787775475.2097018,
+    "ast_hash": "2fd2a2b54e6c3d5e3c18f10b66862ac3",
+    "semantic_hash": "2fd2a2b54e6c3d5e3c18f10b66862ac3"
+  },
+  "assets/js/engines/WriteDialogueExercise.js": {
+    "mtime": 1780660051.1100676,
+    "seen": 1787775475.2097027,
+    "ast_hash": "c401acf1ae750ac20ea1fe7b6af55bb1",
+    "semantic_hash": "c401acf1ae750ac20ea1fe7b6af55bb1"
+  },
+  "assets/js/panel-manager.js": {
+    "mtime": 1782162026.6944523,
+    "seen": 1787775475.2097037,
+    "ast_hash": "452c3cfe118838d00e73d4f3ed544ac9",
+    "semantic_hash": "452c3cfe118838d00e73d4f3ed544ac9"
+  },
+  "assets/js/tracker.js": {
+    "mtime": 1775414203.9580822,
+    "seen": 1787775475.2097044,
+    "ast_hash": "534fa1bf5affd25591dfa8a42c0888e8",
+    "semantic_hash": "534fa1bf5affd25591dfa8a42c0888e8"
+  },
+  "assets/js/utils/speech.js": {
+    "mtime": 1773682009.9155087,
+    "seen": 1787775475.2097049,
+    "ast_hash": "0bcbb050f8d656a607a2fef01dc7d7c0",
+    "semantic_hash": "0bcbb050f8d656a607a2fef01dc7d7c0"
+  },
+  "livello_elementare/hermes/LLR_Exercises_Block1_Day1_IdtiHodit.json": {
+    "mtime": 1779539252.693907,
+    "seen": 1787775475.2097058,
+    "ast_hash": "6e91976ce1c41218d996724f684f52b6",
+    "semantic_hash": "6e91976ce1c41218d996724f684f52b6"
+  },
+  "livello_elementare/verbi-di-moto/complementi-dei-verbi-di-moto/moto-a-luogo/exercises.js": {
+    "mtime": 1778793399.4130087,
+    "seen": 1787775475.2097065,
+    "ast_hash": "344154ef8875d3f1aea2432004583482",
+    "semantic_hash": "344154ef8875d3f1aea2432004583482"
+  },
+  "livello_elementare/verbi-di-moto/complementi-dei-verbi-di-moto/moto-da-luogo/exercises.js": {
+    "mtime": 1779532995.2157533,
+    "seen": 1787775475.2097073,
+    "ast_hash": "cea88acb1b730e3e4a3bd6e31e641521",
+    "semantic_hash": "cea88acb1b730e3e4a3bd6e31e641521"
+  },
+  "livello_elementare/verbi-di-moto/complementi-dei-verbi-di-moto/moto-per-luogo/exercises.js": {
+    "mtime": 1778793399.4159894,
+    "seen": 1787775475.209708,
+    "ast_hash": "f0167a688fd566da4eb02502134213c6",
+    "semantic_hash": "f0167a688fd566da4eb02502134213c6"
+  },
+  "livello_elementare/verbi-di-moto/futuro/poyti-skhodit/exercises.js": {
+    "mtime": 1778793399.4169948,
+    "seen": 1787775475.2097087,
+    "ast_hash": "1c79ff8225a345a73f8ca726c8947a13",
+    "semantic_hash": "1c79ff8225a345a73f8ca726c8947a13"
+  },
+  "livello_elementare/verbi-di-moto/futuro/verbi-specifici-futuro/poekhat-sezdit/exercises.js": {
+    "mtime": 1778793399.4184847,
+    "seen": 1787775475.2097096,
+    "ast_hash": "3efa82d15a84422781671d6edce7ac64",
+    "semantic_hash": "3efa82d15a84422781671d6edce7ac64"
+  },
+  "livello_elementare/verbi-di-moto/futuro/verbi-specifici-futuro/sbegat-pobezhat/exercises.js": {
+    "mtime": 1778793399.4204888,
+    "seen": 1787775475.2097101,
+    "ast_hash": "bdf36ad32c741f6f1a8f6e516ce6c6c7",
+    "semantic_hash": "bdf36ad32c741f6f1a8f6e516ce6c6c7"
+  },
+  "livello_elementare/verbi-di-moto/futuro/verbi-specifici-futuro/splavat-poplavat/exercises.js": {
+    "mtime": 1778793399.4214895,
+    "seen": 1787775475.2097108,
+    "ast_hash": "59ffe13d25693282c49c863031dfe4f4",
+    "semantic_hash": "59ffe13d25693282c49c863031dfe4f4"
+  },
+  "livello_elementare/verbi-di-moto/idti-usi-speciali/exercises.js": {
+    "mtime": 1774458887.2753465,
+    "seen": 1787775475.2097116,
+    "ast_hash": "e020bd3bbb294b1496e5bb613bb67e09",
+    "semantic_hash": "e020bd3bbb294b1496e5bb613bb67e09"
+  },
+  "livello_elementare/verbi-di-moto/passato/exat-ezdit-passato/exercises.js": {
+    "mtime": 1787517046.9176304,
+    "seen": 1787775475.2097123,
+    "ast_hash": "e01e43a66afeb0e8e4a7f7768fe2dc1e",
+    "semantic_hash": "e01e43a66afeb0e8e4a7f7768fe2dc1e"
+  },
+  "livello_elementare/verbi-di-moto/passato/idti-xodit-passato/exercises.js": {
+    "mtime": 1785612482.5367143,
+    "seen": 1787775475.209713,
+    "ast_hash": "95e6e4d9fa79ef1b71fa2f222557dbbb",
+    "semantic_hash": "95e6e4d9fa79ef1b71fa2f222557dbbb"
+  },
+  "livello_elementare/verbi-di-moto/passato/verbi-specifici-passato/correre/exercises.js": {
+    "mtime": 1780679670.3538673,
+    "seen": 1787775475.2097142,
+    "ast_hash": "28605283d8a49fbee06c094613385244",
+    "semantic_hash": "28605283d8a49fbee06c094613385244"
+  },
+  "livello_elementare/verbi-di-moto/passato/verbi-specifici-passato/nuotare/exercises.js": {
+    "mtime": 1780676962.5354235,
+    "seen": 1787775475.2097147,
+    "ast_hash": "af329f344613d36b0b84791c7e0cd4cd",
+    "semantic_hash": "af329f344613d36b0b84791c7e0cd4cd"
+  },
+  "livello_elementare/verbi-di-moto/passato/verbi-specifici-passato/volare/exercises.js": {
+    "mtime": 1780676962.557731,
+    "seen": 1787775475.209716,
+    "ast_hash": "123c96ebefd148962e092d383e93aaa6",
+    "semantic_hash": "123c96ebefd148962e092d383e93aaa6"
+  },
+  "livello_elementare/verbi-di-moto/pluridirezionali-vs-monodirezionali/exercises.js": {
+    "mtime": 1778793399.4274893,
+    "seen": 1787775475.2097166,
+    "ast_hash": "32717f349a82eba0effbcbff7a3f82d2",
+    "semantic_hash": "32717f349a82eba0effbcbff7a3f82d2"
+  },
+  "livello_elementare/verbi-di-moto/verbi-di-moto-transitivi/nesti-nositi/exercises.js": {
+    "mtime": 1779717843.454328,
+    "seen": 1787775475.209717,
+    "ast_hash": "feddd69462c8649e88e2cff84b4f5e82",
+    "semantic_hash": "feddd69462c8649e88e2cff84b4f5e82"
+  },
+  "livello_elementare/verbi-di-moto/verbi-di-moto-transitivi/vesti-voditi/exercises.js": {
+    "mtime": 1779965466.485512,
+    "seen": 1787775475.2097178,
+    "ast_hash": "33353db18db0c5d636aaacfb5b8090c4",
+    "semantic_hash": "33353db18db0c5d636aaacfb5b8090c4"
+  },
+  "livello_elementare/verbi-di-moto/verbi-di-moto-transitivi/vezti-voziti/exercises.js": {
+    "mtime": 1779970117.5593436,
+    "seen": 1787775475.2097185,
+    "ast_hash": "679ea1633d61f5fb9914b6c7aeeaaadb",
+    "semantic_hash": "679ea1633d61f5fb9914b6c7aeeaaadb"
+  },
+  "livello_elementare/verbi-di-moto/verbi-specifici/andare-con-un-mezzo/exercises.js": {
+    "mtime": 1782231512.0611928,
+    "seen": 1787775475.209719,
+    "ast_hash": "e8ab6a1fff5230f286921fa3388546be",
+    "semantic_hash": "e8ab6a1fff5230f286921fa3388546be"
+  },
+  "livello_elementare/verbi-di-moto/verbi-specifici/nuotare/exercises.js": {
+    "mtime": 1782231512.0774362,
+    "seen": 1787775475.20972,
+    "ast_hash": "a9ed329976db796f307c507a9dff4290",
+    "semantic_hash": "a9ed329976db796f307c507a9dff4290"
+  },
+  "livello_elementare/verbi-di-moto/verbi-specifici/verbi-di-moto-specifici/exercises.js": {
+    "mtime": 1782231512.1039188,
+    "seen": 1787775475.2097204,
+    "ast_hash": "862fc4cfd6e364925717095ba1070d4e",
+    "semantic_hash": "862fc4cfd6e364925717095ba1070d4e"
+  },
+  "livello_elementare/verbi-di-moto/verbi-specifici/volare/exercises.js": {
+    "mtime": 1782231512.0907102,
+    "seen": 1787775475.209721,
+    "ast_hash": "631ef03d1a2ddbde779d2b675cc1878c",
+    "semantic_hash": "631ef03d1a2ddbde779d2b675cc1878c"
+  },
+  "principianti/avverbi-vs-aggettivi/che-tempo-fa/exercises.js": {
+    "mtime": 1787400475.9150836,
+    "seen": 1787775475.2097216,
+    "ast_hash": "5315ae958da7ea5a276336a3c22857fd",
+    "semantic_hash": "5315ae958da7ea5a276336a3c22857fd"
+  },
+  "principianti/casi/accusativo-il-caso-di-direzione/come-ti-chiami/exercises.js": {
+    "mtime": 1785948645.9890945,
+    "seen": 1787775475.2097223,
+    "ast_hash": "95599db3ac6cc624d43ada26eb0dd6dc",
+    "semantic_hash": "95599db3ac6cc624d43ada26eb0dd6dc"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-di-appartenenza/exercises.js": {
+    "mtime": 1785956904.293331,
+    "seen": 1787775475.209723,
+    "ast_hash": "a27d2a98c1f175d1943e677738374e5c",
+    "semantic_hash": "a27d2a98c1f175d1943e677738374e5c"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-est-vs-net/exercises.js": {
+    "mtime": 1787569405.1655304,
+    "seen": 1787775475.2097237,
+    "ast_hash": "cb49db5063db93152b03586dd09dcc9d",
+    "semantic_hash": "cb49db5063db93152b03586dd09dcc9d"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/na-vokzale/exercises.js": {
+    "mtime": 1786458776.037424,
+    "seen": 1787775475.2097242,
+    "ast_hash": "c623fa45702e6dfed35a8cb8af8f7d49",
+    "semantic_hash": "c623fa45702e6dfed35a8cb8af8f7d49"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/okolo-tebya/exercises.js": {
+    "mtime": 1786457785.7374632,
+    "seen": 1787775475.209725,
+    "ast_hash": "ac827d8cb2d7f0eecffcc21e47530194",
+    "semantic_hash": "ac827d8cb2d7f0eecffcc21e47530194"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/v-aeroportu/exercises.js": {
+    "mtime": 1786458813.829437,
+    "seen": 1787775475.2097254,
+    "ast_hash": "844f6441f4a0b3811bfd0909a7cc95d7",
+    "semantic_hash": "844f6441f4a0b3811bfd0909a7cc95d7"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/v-gorode/exercises.js": {
+    "mtime": 1786469704.0771024,
+    "seen": 1787775475.209726,
+    "ast_hash": "0c0964d010d3e3116ceb95624a57aecf",
+    "semantic_hash": "0c0964d010d3e3116ceb95624a57aecf"
+  },
+  "principianti/casi/prepositivo-il-caso-di-luogo/doma/exercises.js": {
+    "mtime": 1786294238.4202168,
+    "seen": 1787775475.209727,
+    "ast_hash": "a8ce6cf490b7a20001b5c6eff039820b",
+    "semantic_hash": "a8ce6cf490b7a20001b5c6eff039820b"
+  },
+  "principianti/casi/prepositivo-il-caso-di-luogo/in-citta/exercises.js": {
+    "mtime": 1786303921.628224,
+    "seen": 1787775475.2097275,
+    "ast_hash": "445d7c574ca6da478d7a9b60ddf935cc",
+    "semantic_hash": "445d7c574ca6da478d7a9b60ddf935cc"
+  },
+  "principianti/casi/prepositivo-il-caso-di-luogo/v-magazine/exercises.js": {
+    "mtime": 1786444676.4584103,
+    "seen": 1787775475.2097282,
+    "ast_hash": "9399b0e263dd0fb7ec8f147ed504b9d2",
+    "semantic_hash": "9399b0e263dd0fb7ec8f147ed504b9d2"
+  },
+  "principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/doma/exercises.js": {
+    "mtime": 1786638654.5404558,
+    "seen": 1787775475.2097287,
+    "ast_hash": "fe9fbdae37eaf85f37009cbde3507dab",
+    "semantic_hash": "fe9fbdae37eaf85f37009cbde3507dab"
+  },
+  "principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/na-vokzale/exercises.js": {
+    "mtime": 1786634018.1281626,
+    "seen": 1787775475.20973,
+    "ast_hash": "aa7f9e75deb65678cde330acb663fa4d",
+    "semantic_hash": "aa7f9e75deb65678cde330acb663fa4d"
+  },
+  "principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/v-aeroportu/exercises.js": {
+    "mtime": 1786634065.4997184,
+    "seen": 1787775475.2097304,
+    "ast_hash": "83d1257850ba1655fa5ace3aa91d688a",
+    "semantic_hash": "83d1257850ba1655fa5ace3aa91d688a"
+  },
+  "principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/v-gorode/exercises.js": {
+    "mtime": 1786633859.214471,
+    "seen": 1787775475.209731,
+    "ast_hash": "465a3207b77bbc031e60594e46554c8b",
+    "semantic_hash": "465a3207b77bbc031e60594e46554c8b"
+  },
+  "ruoli/documenti/MASTER_EXERCISES_DB.json": {
+    "mtime": 1779733535.976773,
+    "seen": 1787775475.2097316,
+    "ast_hash": "a4039ef7f7cd4a6157860fb9a8c5f1f8",
+    "semantic_hash": "a4039ef7f7cd4a6157860fb9a8c5f1f8"
+  },
+  "ruoli/documenti/livelenguagerussian.json": {
+    "mtime": 1773815662.7342844,
+    "seen": 1787775475.209732,
+    "ast_hash": "208aaf4c4c9cdcd1da3153690536e57f",
+    "semantic_hash": "208aaf4c4c9cdcd1da3153690536e57f"
+  },
+  "ruoli/documenti/marketing_skills/skills/ab-test-setup/evals/evals.json": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.2097328,
+    "ast_hash": "3c8839ecd7b8926fd559d1359ce2da8f",
+    "semantic_hash": "3c8839ecd7b8926fd559d1359ce2da8f"
+  },
+  "ruoli/documenti/marketing_skills/skills/ad-creative/evals/evals.json": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.2097335,
+    "ast_hash": "5a31b3f1e84b22cf7d7367af42722535",
+    "semantic_hash": "5a31b3f1e84b22cf7d7367af42722535"
+  },
+  "ruoli/documenti/marketing_skills/skills/ai-seo/evals/evals.json": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.209734,
+    "ast_hash": "4779f18bc937057bc97868a71c0694c5",
+    "semantic_hash": "4779f18bc937057bc97868a71c0694c5"
+  },
+  "ruoli/documenti/marketing_skills/skills/analytics-tracking/evals/evals.json": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.2097347,
+    "ast_hash": "fe989376d702dd342fec9d35dad4c320",
+    "semantic_hash": "fe989376d702dd342fec9d35dad4c320"
+  },
+  "ruoli/documenti/marketing_skills/skills/churn-prevention/evals/evals.json": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.2097352,
+    "ast_hash": "7c88c25f1b30bd7d9e7f6d4c43773c3f",
+    "semantic_hash": "7c88c25f1b30bd7d9e7f6d4c43773c3f"
+  },
+  "ruoli/documenti/marketing_skills/skills/cold-email/evals/evals.json": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.2097359,
+    "ast_hash": "8962767252524115fd7c055e8b88a5d4",
+    "semantic_hash": "8962767252524115fd7c055e8b88a5d4"
+  },
+  "ruoli/documenti/marketing_skills/skills/competitor-alternatives/evals/evals.json": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.2097366,
+    "ast_hash": "096a5759fa51d98f15b3aafa3b3d5a82",
+    "semantic_hash": "096a5759fa51d98f15b3aafa3b3d5a82"
+  },
+  "ruoli/documenti/marketing_skills/skills/content-strategy/evals/evals.json": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.2097373,
+    "ast_hash": "95f29e37845a2c61b74ca126260ea1a5",
+    "semantic_hash": "95f29e37845a2c61b74ca126260ea1a5"
+  },
+  "ruoli/documenti/marketing_skills/skills/copy-editing/evals/evals.json": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.2097378,
+    "ast_hash": "62d65b55c0dbac3ead01379eca28218a",
+    "semantic_hash": "62d65b55c0dbac3ead01379eca28218a"
+  },
+  "ruoli/documenti/marketing_skills/skills/copywriting/evals/evals.json": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.2097385,
+    "ast_hash": "743d16377410f79937b8305e10160ec9",
+    "semantic_hash": "743d16377410f79937b8305e10160ec9"
+  },
+  "ruoli/documenti/marketing_skills/skills/customer-research/evals/evals.json": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.209739,
+    "ast_hash": "3f66f9bdef35108e37a3b35595558e56",
+    "semantic_hash": "3f66f9bdef35108e37a3b35595558e56"
+  },
+  "ruoli/documenti/marketing_skills/skills/email-sequence/evals/evals.json": {
+    "mtime": 1774714978.5133579,
+    "seen": 1787775475.2097397,
+    "ast_hash": "406d29b527b1a764b5d6ae4673b3e533",
+    "semantic_hash": "406d29b527b1a764b5d6ae4673b3e533"
+  },
+  "ruoli/documenti/marketing_skills/skills/form-cro/evals/evals.json": {
+    "mtime": 1774714978.517367,
+    "seen": 1787775475.2097404,
+    "ast_hash": "80f406631bf902d68fc803ddafabe12e",
+    "semantic_hash": "80f406631bf902d68fc803ddafabe12e"
+  },
+  "ruoli/documenti/marketing_skills/skills/free-tool-strategy/evals/evals.json": {
+    "mtime": 1774714978.519372,
+    "seen": 1787775475.209741,
+    "ast_hash": "d76bf74a0887a05487db16271fcf3421",
+    "semantic_hash": "d76bf74a0887a05487db16271fcf3421"
+  },
+  "ruoli/documenti/marketing_skills/skills/launch-strategy/evals/evals.json": {
+    "mtime": 1774714978.519372,
+    "seen": 1787775475.2097418,
+    "ast_hash": "a0577cddebd937caa2c68714ba41365d",
+    "semantic_hash": "a0577cddebd937caa2c68714ba41365d"
+  },
+  "ruoli/documenti/marketing_skills/skills/marketing-ideas/evals/evals.json": {
+    "mtime": 1774714978.5213764,
+    "seen": 1787775475.2097425,
+    "ast_hash": "5fd9d4826781cccdb2644f2363f3bcbf",
+    "semantic_hash": "5fd9d4826781cccdb2644f2363f3bcbf"
+  },
+  "ruoli/documenti/marketing_skills/skills/marketing-psychology/evals/evals.json": {
+    "mtime": 1774714978.5213764,
+    "seen": 1787775475.209743,
+    "ast_hash": "45ce5c94617a3661e5664d5a87e0a94e",
+    "semantic_hash": "45ce5c94617a3661e5664d5a87e0a94e"
+  },
+  "ruoli/documenti/marketing_skills/skills/onboarding-cro/evals/evals.json": {
+    "mtime": 1774714978.5255902,
+    "seen": 1787775475.209744,
+    "ast_hash": "b8b9c279eb4e80e57ac89ab3eed3749c",
+    "semantic_hash": "b8b9c279eb4e80e57ac89ab3eed3749c"
+  },
+  "ruoli/documenti/marketing_skills/skills/page-cro/evals/evals.json": {
+    "mtime": 1774714978.5294545,
+    "seen": 1787775475.2097445,
+    "ast_hash": "2ed19dd7c908a61bc6ab4520d0ca1530",
+    "semantic_hash": "2ed19dd7c908a61bc6ab4520d0ca1530"
+  },
+  "ruoli/documenti/marketing_skills/skills/paid-ads/evals/evals.json": {
+    "mtime": 1774714978.5303173,
+    "seen": 1787775475.209745,
+    "ast_hash": "dd979da00889143da7dfdfb89d3d9c38",
+    "semantic_hash": "dd979da00889143da7dfdfb89d3d9c38"
+  },
+  "ruoli/documenti/marketing_skills/skills/paywall-upgrade-cro/evals/evals.json": {
+    "mtime": 1774714978.5303173,
+    "seen": 1787775475.2097456,
+    "ast_hash": "fd82e0b3bb9e9a2dcc5e1a9c6bc58e43",
+    "semantic_hash": "fd82e0b3bb9e9a2dcc5e1a9c6bc58e43"
+  },
+  "ruoli/documenti/marketing_skills/skills/popup-cro/evals/evals.json": {
+    "mtime": 1774714978.5379164,
+    "seen": 1787775475.2097461,
+    "ast_hash": "63244a72abbaee46ac0c903b25898d56",
+    "semantic_hash": "63244a72abbaee46ac0c903b25898d56"
+  },
+  "ruoli/documenti/marketing_skills/skills/pricing-strategy/evals/evals.json": {
+    "mtime": 1774714978.539879,
+    "seen": 1787775475.2097468,
+    "ast_hash": "f3e14e567eccb032bddc39abb36d0108",
+    "semantic_hash": "f3e14e567eccb032bddc39abb36d0108"
+  },
+  "ruoli/documenti/marketing_skills/skills/product-marketing-context/evals/evals.json": {
+    "mtime": 1774714978.5418856,
+    "seen": 1787775475.2097478,
+    "ast_hash": "728ae9dbf46ece0853811ed3551bf112",
+    "semantic_hash": "728ae9dbf46ece0853811ed3551bf112"
+  },
+  "ruoli/documenti/marketing_skills/skills/programmatic-seo/evals/evals.json": {
+    "mtime": 1774714978.5418856,
+    "seen": 1787775475.2097483,
+    "ast_hash": "90e7d267e0328d00b9b45015bb28ed4f",
+    "semantic_hash": "90e7d267e0328d00b9b45015bb28ed4f"
+  },
+  "ruoli/documenti/marketing_skills/skills/referral-program/evals/evals.json": {
+    "mtime": 1774714978.5418856,
+    "seen": 1787775475.2097487,
+    "ast_hash": "1717c62dace138e97fb89d27203492e9",
+    "semantic_hash": "1717c62dace138e97fb89d27203492e9"
+  },
+  "ruoli/documenti/marketing_skills/skills/revops/evals/evals.json": {
+    "mtime": 1774714978.547205,
+    "seen": 1787775475.2097495,
+    "ast_hash": "4520571d56df022ee8ec382022116331",
+    "semantic_hash": "4520571d56df022ee8ec382022116331"
+  },
+  "ruoli/documenti/marketing_skills/skills/sales-enablement/evals/evals.json": {
+    "mtime": 1774714978.5529604,
+    "seen": 1787775475.20975,
+    "ast_hash": "457e0237547e5df124ccd2fe54bbb54e",
+    "semantic_hash": "457e0237547e5df124ccd2fe54bbb54e"
+  },
+  "ruoli/documenti/marketing_skills/skills/schema-markup/evals/evals.json": {
+    "mtime": 1774714978.554708,
+    "seen": 1787775475.209751,
+    "ast_hash": "f755da794def5a44a16b1fc4167db1f9",
+    "semantic_hash": "f755da794def5a44a16b1fc4167db1f9"
+  },
+  "ruoli/documenti/marketing_skills/skills/seo-audit/evals/evals.json": {
+    "mtime": 1774714978.5595188,
+    "seen": 1787775475.2097514,
+    "ast_hash": "fb3713abe8a4ed26f5c94131a8e5436c",
+    "semantic_hash": "fb3713abe8a4ed26f5c94131a8e5436c"
+  },
+  "ruoli/documenti/marketing_skills/skills/signup-flow-cro/evals/evals.json": {
+    "mtime": 1774714978.5618322,
+    "seen": 1787775475.2097523,
+    "ast_hash": "149e17f46408a1c3975a41255a63afd6",
+    "semantic_hash": "149e17f46408a1c3975a41255a63afd6"
+  },
+  "ruoli/documenti/marketing_skills/skills/site-architecture/evals/evals.json": {
+    "mtime": 1774714978.5629342,
+    "seen": 1787775475.2097528,
+    "ast_hash": "a65d7e8beb91b05b01b49cf6827c4808",
+    "semantic_hash": "a65d7e8beb91b05b01b49cf6827c4808"
+  },
+  "ruoli/documenti/marketing_skills/skills/social-content/evals/evals.json": {
+    "mtime": 1774714978.5675907,
+    "seen": 1787775475.2097535,
+    "ast_hash": "78f10ada77a2d1978efab6e971dc9c85",
+    "semantic_hash": "78f10ada77a2d1978efab6e971dc9c85"
+  },
+  "supabase/schema.sql": {
+    "mtime": 1775414203.966418,
+    "seen": 1787775475.2097542,
+    "ast_hash": "987dd7e1f003a3f9deddad87583da493",
+    "semantic_hash": "987dd7e1f003a3f9deddad87583da493"
+  },
+  "CLAUDE.md": {
+    "mtime": 1774721106.8510797,
+    "seen": 1787775475.209755,
+    "ast_hash": "977fa3c7ba59a2c51fb14c9079d8ae8b",
+    "semantic_hash": "977fa3c7ba59a2c51fb14c9079d8ae8b"
+  },
+  "ISTRUZIONI.md": {
+    "mtime": 1773682009.9129593,
+    "seen": 1787775475.2097557,
+    "ast_hash": "c123dde15182c2370961de565cbd77bd",
+    "semantic_hash": "c123dde15182c2370961de565cbd77bd"
+  },
+  "LiveLanguage_Architettura_Cluster.md": {
+    "mtime": 1775398213.9203818,
+    "seen": 1787775475.2097564,
+    "ast_hash": "7089f427d2c91fb6b9624fadd29451a3",
+    "semantic_hash": "7089f427d2c91fb6b9624fadd29451a3"
+  },
+  "REGOLE_ACCESSO.md": {
+    "mtime": 1778793399.4069984,
+    "seen": 1787775475.2097569,
+    "ast_hash": "0962cafbde839b4ecb29210218dae62f",
+    "semantic_hash": "0962cafbde839b4ecb29210218dae62f"
+  },
+  "_istruzioni/guida-operativa.html": {
+    "mtime": 1773682009.9129593,
+    "seen": 1787775475.2097583,
+    "ast_hash": "2c9eee827dc260be5a27e7f893b4643e",
+    "semantic_hash": "2c9eee827dc260be5a27e7f893b4643e"
+  },
+  "admin/dashboard.html": {
+    "mtime": 1783777712.8576093,
+    "seen": 1787775475.209759,
+    "ast_hash": "ab5fdff395d19529203e28fef298bc90",
+    "semantic_hash": "ab5fdff395d19529203e28fef298bc90"
+  },
+  "auth.html": {
+    "mtime": 1774458887.2744493,
+    "seen": 1787775475.2097595,
+    "ast_hash": "4a2adb152beb40adafa069ac9e31fa05",
+    "semantic_hash": "4a2adb152beb40adafa069ac9e31fa05"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/Copywriter_Brief_Blocco2_MiniStorie.md": {
+    "mtime": 1780211952.1934078,
+    "seen": 1787775475.2097602,
+    "ast_hash": "24aca2adc085f7f4a7dff8c08851f545",
+    "semantic_hash": "24aca2adc085f7f4a7dff8c08851f545"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/Maratona_Verbi_di_Moto_Giorno_6.md": {
+    "mtime": 1780645016.6999617,
+    "seen": 1787775475.2097611,
+    "ast_hash": "acc26364dc7643672cd438316067ad3c",
+    "semantic_hash": "acc26364dc7643672cd438316067ad3c"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/Maratona_Verbi_di_Moto_Giorno_6_\u0411\u0435\u0436\u0430\u0442\u044c_\u0411\u0435\u0433\u0430\u0442\u044c.md": {
+    "mtime": 1782024217.1641266,
+    "seen": 1787775475.2097623,
+    "ast_hash": "46d1cdf46e6c0f0ce6d96f7761b46df7",
+    "semantic_hash": "46d1cdf46e6c0f0ce6d96f7761b46df7"
+  },
+  "corsi/principianti/Marathon_Verbi_di_Moto_Curriculum_v2.md": {
+    "mtime": 1780159426.4993045,
+    "seen": 1787775475.209763,
+    "ast_hash": "ed6a1465f2ba18763155f2528c71cb46",
+    "semantic_hash": "ed6a1465f2ba18763155f2528c71cb46"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/LiveLanguage_ClusterSemantico_CarattereEmozioni_A1.md": {
+    "mtime": 1780642724.3547387,
+    "seen": 1787775475.209764,
+    "ast_hash": "53b060fd4a26f8e22a37a24c3b04469d",
+    "semantic_hash": "53b060fd4a26f8e22a37a24c3b04469d"
+  },
+  "corsi/\u041f\u0415\u0420\u0421\u041e\u041d\u0410\u0416\u0418_\u043e\u043f\u0438\u0441\u0430\u043d\u0438\u044f.md": {
+    "mtime": 1780307221.8265023,
+    "seen": 1787775475.209765,
+    "ast_hash": "8fed8becdcd459251bc803087dea423d",
+    "semantic_hash": "8fed8becdcd459251bc803087dea423d"
+  },
+  "courses.html": {
+    "mtime": 1774713124.376988,
+    "seen": 1787775475.2097654,
+    "ast_hash": "d3261e504af6e0759ab62fccf6c7972f",
+    "semantic_hash": "d3261e504af6e0759ab62fccf6c7972f"
+  },
+  "guida-operativa.html": {
+    "mtime": 1776059478.198724,
+    "seen": 1787775475.2097661,
+    "ast_hash": "38d2bed8e607fe7705f4812740bb1827",
+    "semantic_hash": "38d2bed8e607fe7705f4812740bb1827"
+  },
+  "index.html": {
+    "mtime": 1773682009.9191644,
+    "seen": 1787775475.2097669,
+    "ast_hash": "c7616211f9e9c5c88aab633e3a9b16cc",
+    "semantic_hash": "c7616211f9e9c5c88aab633e3a9b16cc"
+  },
+  "livello_elementare/PM_SKILL.md": {
+    "mtime": 1776360499.3512914,
+    "seen": 1787775475.2097673,
+    "ast_hash": "8d17dabd4317aee1cf0fc83c2bf2327b",
+    "semantic_hash": "8d17dabd4317aee1cf0fc83c2bf2327b"
+  },
+  "livello_elementare/aspetto/index.html": {
+    "mtime": 1776513416.8479645,
+    "seen": 1787775475.2097683,
+    "ast_hash": "88d1dc75235752e6860a4e112c97c1de",
+    "semantic_hash": "88d1dc75235752e6860a4e112c97c1de"
+  },
+  "livello_elementare/complementi/index.html": {
+    "mtime": 1776513416.8479645,
+    "seen": 1787775475.2097688,
+    "ast_hash": "cf6fee4c1e12e036f7eb3c7ab61fa9d0",
+    "semantic_hash": "cf6fee4c1e12e036f7eb3c7ab61fa9d0"
+  },
+  "livello_elementare/index.html": {
+    "mtime": 1779170660.9471326,
+    "seen": 1787775475.2097695,
+    "ast_hash": "4a24c721cf20ca80761e28c7896ebf5b",
+    "semantic_hash": "4a24c721cf20ca80761e28c7896ebf5b"
+  },
+  "livello_elementare/verbi-di-moto/complementi-dei-verbi-di-moto/index.html": {
+    "mtime": 1787401791.352445,
+    "seen": 1787775475.20977,
+    "ast_hash": "630972b9164ea58169f907aa6f70a659",
+    "semantic_hash": "630972b9164ea58169f907aa6f70a659"
+  },
+  "livello_elementare/verbi-di-moto/complementi-dei-verbi-di-moto/moto-a-luogo/index.html": {
+    "mtime": 1782232963.6538296,
+    "seen": 1787775475.2097707,
+    "ast_hash": "d3899158670026a8034832aa0b9ab8e7",
+    "semantic_hash": "d3899158670026a8034832aa0b9ab8e7"
+  },
+  "livello_elementare/verbi-di-moto/complementi-dei-verbi-di-moto/moto-da-luogo/index.html": {
+    "mtime": 1782232905.173908,
+    "seen": 1787775475.2097712,
+    "ast_hash": "427521442d1ceb974b586328adb26470",
+    "semantic_hash": "427521442d1ceb974b586328adb26470"
+  },
+  "livello_elementare/verbi-di-moto/complementi-dei-verbi-di-moto/moto-per-luogo/index.html": {
+    "mtime": 1782232912.5923498,
+    "seen": 1787775475.2097719,
+    "ast_hash": "0e130c8471b6f682d05435811a50146f",
+    "semantic_hash": "0e130c8471b6f682d05435811a50146f"
+  },
+  "livello_elementare/verbi-di-moto/futuro/index.html": {
+    "mtime": 1778303824.6022193,
+    "seen": 1787775475.2097726,
+    "ast_hash": "250ee4ae5570e5112add7f6a8a5db741",
+    "semantic_hash": "250ee4ae5570e5112add7f6a8a5db741"
+  },
+  "livello_elementare/verbi-di-moto/futuro/poyti-skhodit/index.html": {
+    "mtime": 1782232884.0353565,
+    "seen": 1787775475.209773,
+    "ast_hash": "8b28160cca85958258d2f1ca11794b5c",
+    "semantic_hash": "8b28160cca85958258d2f1ca11794b5c"
+  },
+  "livello_elementare/verbi-di-moto/futuro/verbi-specifici-futuro/index.html": {
+    "mtime": 1778303824.6032279,
+    "seen": 1787775475.2097738,
+    "ast_hash": "e57548bd0cdc31551cd61e228fcdc2d1",
+    "semantic_hash": "e57548bd0cdc31551cd61e228fcdc2d1"
+  },
+  "livello_elementare/verbi-di-moto/futuro/verbi-specifici-futuro/poekhat-sezdit/index.html": {
+    "mtime": 1782232952.3984096,
+    "seen": 1787775475.2097743,
+    "ast_hash": "44b8febc1a5f9968cd31d96333845e05",
+    "semantic_hash": "44b8febc1a5f9968cd31d96333845e05"
+  },
+  "livello_elementare/verbi-di-moto/futuro/verbi-specifici-futuro/sbegat-pobezhat/index.html": {
+    "mtime": 1782232956.5656927,
+    "seen": 1787775475.2097747,
+    "ast_hash": "85e3d6f7dbe36e41e02b07a7684011fe",
+    "semantic_hash": "85e3d6f7dbe36e41e02b07a7684011fe"
+  },
+  "livello_elementare/verbi-di-moto/futuro/verbi-specifici-futuro/splavat-poplavat/index.html": {
+    "mtime": 1782232960.00596,
+    "seen": 1787775475.2097757,
+    "ast_hash": "a457090495cd32f9b24e628bd9ad3bec",
+    "semantic_hash": "a457090495cd32f9b24e628bd9ad3bec"
+  },
+  "livello_elementare/verbi-di-moto/idti-usi-speciali/index.html": {
+    "mtime": 1777267051.0020602,
+    "seen": 1787775475.2097762,
+    "ast_hash": "0b433d8dbcde356a4de2b06550675939",
+    "semantic_hash": "0b433d8dbcde356a4de2b06550675939"
+  },
+  "livello_elementare/verbi-di-moto/index.html": {
+    "mtime": 1778793399.4224906,
+    "seen": 1787775475.2097769,
+    "ast_hash": "d9f98898515999dfddd88d6564187cd5",
+    "semantic_hash": "d9f98898515999dfddd88d6564187cd5"
+  },
+  "livello_elementare/verbi-di-moto/passato/exat-ezdit-idiomi/index.html": {
+    "mtime": 1777267051.003069,
+    "seen": 1787775475.2097774,
+    "ast_hash": "1501e2f9e437e0ad529f75965e889fcc",
+    "semantic_hash": "1501e2f9e437e0ad529f75965e889fcc"
+  },
+  "livello_elementare/verbi-di-moto/passato/exat-ezdit-passato/index.html": {
+    "mtime": 1787516992.6719398,
+    "seen": 1787775475.209778,
+    "ast_hash": "e00810a51c4c0f7df40c27b2473bc643",
+    "semantic_hash": "e00810a51c4c0f7df40c27b2473bc643"
+  },
+  "livello_elementare/verbi-di-moto/passato/idti-xodit-passato/index.html": {
+    "mtime": 1787407516.557727,
+    "seen": 1787775475.2097788,
+    "ast_hash": "d8c01890782655714fc08ddecccca2db",
+    "semantic_hash": "d8c01890782655714fc08ddecccca2db"
+  },
+  "livello_elementare/verbi-di-moto/passato/index.html": {
+    "mtime": 1787406653.711851,
+    "seen": 1787775475.2097795,
+    "ast_hash": "ec5cfb521a2346f4a206148bbddea20c",
+    "semantic_hash": "ec5cfb521a2346f4a206148bbddea20c"
+  },
+  "livello_elementare/verbi-di-moto/passato/verbi-specifici-passato/correre/index.html": {
+    "mtime": 1780679714.7445006,
+    "seen": 1787775475.20978,
+    "ast_hash": "755d9019ea51e54422823b78b3c888c6",
+    "semantic_hash": "755d9019ea51e54422823b78b3c888c6"
+  },
+  "livello_elementare/verbi-di-moto/passato/verbi-specifici-passato/index.html": {
+    "mtime": 1780677115.2401972,
+    "seen": 1787775475.2097807,
+    "ast_hash": "4d1dccf9b67dc2d58e3ed824223adea5",
+    "semantic_hash": "4d1dccf9b67dc2d58e3ed824223adea5"
+  },
+  "livello_elementare/verbi-di-moto/passato/verbi-specifici-passato/nuotare/index.html": {
+    "mtime": 1780676969.074675,
+    "seen": 1787775475.2097814,
+    "ast_hash": "8d648273b94859a42d67f55c4294fbaa",
+    "semantic_hash": "8d648273b94859a42d67f55c4294fbaa"
+  },
+  "livello_elementare/verbi-di-moto/passato/verbi-specifici-passato/volare/index.html": {
+    "mtime": 1780676969.1081722,
+    "seen": 1787775475.2097821,
+    "ast_hash": "e66caa83119146b2febf6684495df4a7",
+    "semantic_hash": "e66caa83119146b2febf6684495df4a7"
+  },
+  "livello_elementare/verbi-di-moto/passato/verbi-transitivi-passato/index.html": {
+    "mtime": 1787406664.8809245,
+    "seen": 1787775475.2097826,
+    "ast_hash": "b4a2a75574f492e047a1af78e5c4b6d0",
+    "semantic_hash": "b4a2a75574f492e047a1af78e5c4b6d0"
+  },
+  "livello_elementare/verbi-di-moto/passato/xodit-idiomi/index.html": {
+    "mtime": 1777267051.005582,
+    "seen": 1787775475.2097833,
+    "ast_hash": "96f2a02fa5cd5037fa5a5fed71593a09",
+    "semantic_hash": "96f2a02fa5cd5037fa5a5fed71593a09"
+  },
+  "livello_elementare/verbi-di-moto/pluridirezionali-vs-monodirezionali/idti-ili-xodit/index.html": {
+    "mtime": 1782232901.2855985,
+    "seen": 1787775475.2097838,
+    "ast_hash": "a9d93ec090742308e85cea72c4657a77",
+    "semantic_hash": "a9d93ec090742308e85cea72c4657a77"
+  },
+  "livello_elementare/verbi-di-moto/pluridirezionali-vs-monodirezionali/index.html": {
+    "mtime": 1778793399.4284914,
+    "seen": 1787775475.2097845,
+    "ast_hash": "55b925daf50a62acb4b2e4054629b3b0",
+    "semantic_hash": "55b925daf50a62acb4b2e4054629b3b0"
+  },
+  "livello_elementare/verbi-di-moto/verbi-di-moto-transitivi/index.html": {
+    "mtime": 1787404486.2231395,
+    "seen": 1787775475.209785,
+    "ast_hash": "04ed91aa1e7d03735186bd032454133c",
+    "semantic_hash": "04ed91aa1e7d03735186bd032454133c"
+  },
+  "livello_elementare/verbi-di-moto/verbi-di-moto-transitivi/nesti-nositi/index.html": {
+    "mtime": 1787404859.1380477,
+    "seen": 1787775475.2097857,
+    "ast_hash": "438662e344808da72df2a32b27bfaa2a",
+    "semantic_hash": "438662e344808da72df2a32b27bfaa2a"
+  },
+  "livello_elementare/verbi-di-moto/verbi-di-moto-transitivi/vesti-voditi/index.html": {
+    "mtime": 1787405075.412116,
+    "seen": 1787775475.2097878,
+    "ast_hash": "9c7c5906354ed5b4787447ebb21b4123",
+    "semantic_hash": "9c7c5906354ed5b4787447ebb21b4123"
+  },
+  "livello_elementare/verbi-di-moto/verbi-di-moto-transitivi/vezti-voziti/index.html": {
+    "mtime": 1787404663.1053448,
+    "seen": 1787775475.2097886,
+    "ast_hash": "ee722d4f6133d87b68f5146449e55912",
+    "semantic_hash": "ee722d4f6133d87b68f5146449e55912"
+  },
+  "livello_elementare/verbi-di-moto/verbi-specifici/andare-con-un-mezzo/index.html": {
+    "mtime": 1787403343.8948903,
+    "seen": 1787775475.2097895,
+    "ast_hash": "a95028370338f9f8fb55cc56b1acbb3b",
+    "semantic_hash": "a95028370338f9f8fb55cc56b1acbb3b"
+  },
+  "livello_elementare/verbi-di-moto/verbi-specifici/index.html": {
+    "mtime": 1780058629.4918609,
+    "seen": 1787775475.20979,
+    "ast_hash": "e0435b45571983df5c3e1fa11223bd94",
+    "semantic_hash": "e0435b45571983df5c3e1fa11223bd94"
+  },
+  "livello_elementare/verbi-di-moto/verbi-specifici/nuotare/index.html": {
+    "mtime": 1787403729.028684,
+    "seen": 1787775475.2097907,
+    "ast_hash": "b89f3862615e375cc25abf49ed958818",
+    "semantic_hash": "b89f3862615e375cc25abf49ed958818"
+  },
+  "livello_elementare/verbi-di-moto/verbi-specifici/verbi-di-moto-specifici/index.html": {
+    "mtime": 1787402597.1095388,
+    "seen": 1787775475.2097912,
+    "ast_hash": "c395a15d7393a141c49e6fe842b65d8a",
+    "semantic_hash": "c395a15d7393a141c49e6fe842b65d8a"
+  },
+  "livello_elementare/verbi-di-moto/verbi-specifici/volare/index.html": {
+    "mtime": 1787404078.7033975,
+    "seen": 1787775475.209792,
+    "ast_hash": "7092ed2638d05f7868e7ae2b8c1667c0",
+    "semantic_hash": "7092ed2638d05f7868e7ae2b8c1667c0"
+  },
+  "login.html": {
+    "mtime": 1774458887.2765355,
+    "seen": 1787775475.2097926,
+    "ast_hash": "923e2b4d3d42a04ef54e0dde9d2910ec",
+    "semantic_hash": "923e2b4d3d42a04ef54e0dde9d2910ec"
+  },
+  "principianti/avverbi-vs-aggettivi/che-tempo-fa/index.html": {
+    "mtime": 1787399631.0047169,
+    "seen": 1787775475.209793,
+    "ast_hash": "95a8c4b9af1187c99139a87736d06ab2",
+    "semantic_hash": "95a8c4b9af1187c99139a87736d06ab2"
+  },
+  "principianti/avverbi-vs-aggettivi/index.html": {
+    "mtime": 1787394468.2973526,
+    "seen": 1787775475.2097938,
+    "ast_hash": "6314eac09887e7a4d41cbd0e8c7bb898",
+    "semantic_hash": "6314eac09887e7a4d41cbd0e8c7bb898"
+  },
+  "principianti/casi/accusativo-il-caso-di-direzione/come-ti-chiami/index.html": {
+    "mtime": 1786261406.620829,
+    "seen": 1787775475.2097943,
+    "ast_hash": "1d09afa91d1af5a1c8a3d1618a148dae",
+    "semantic_hash": "1d09afa91d1af5a1c8a3d1618a148dae"
+  },
+  "principianti/casi/accusativo-il-caso-di-direzione/index.html": {
+    "mtime": 1785939150.0998964,
+    "seen": 1787775475.209795,
+    "ast_hash": "6b3a3ecdcab7ccf0af94556f849b4553",
+    "semantic_hash": "6b3a3ecdcab7ccf0af94556f849b4553"
+  },
+  "principianti/casi/dativo-il-caso-di-forze-soprannaturali/come-stai/index.html": {
+    "mtime": 1782493250.846815,
+    "seen": 1787775475.2097955,
+    "ast_hash": "8a46332dfa67c636e3aa5ece937f59fe",
+    "semantic_hash": "8a46332dfa67c636e3aa5ece937f59fe"
+  },
+  "principianti/casi/dativo-il-caso-di-forze-soprannaturali/index.html": {
+    "mtime": 1782493259.4248352,
+    "seen": 1787775475.2097964,
+    "ast_hash": "e03a3c2ff595fe0650e59b8c2d910ea9",
+    "semantic_hash": "e03a3c2ff595fe0650e59b8c2d910ea9"
+  },
+  "principianti/casi/dativo-il-caso-di-forze-soprannaturali/se-hai-bisogno-di-qualcosa/index.html": {
+    "mtime": 1782493247.7025049,
+    "seen": 1787775475.2097971,
+    "ast_hash": "82c08c2d808ef95d3787d27b3ebd04b0",
+    "semantic_hash": "82c08c2d808ef95d3787d27b3ebd04b0"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-di-appartenenza/index.html": {
+    "mtime": 1786261408.0472448,
+    "seen": 1787775475.2097976,
+    "ast_hash": "349a7812931125aa2f69f409a830fa2b",
+    "semantic_hash": "349a7812931125aa2f69f409a830fa2b"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-est-vs-net/index.html": {
+    "mtime": 1787563598.2603357,
+    "seen": 1787775475.2097983,
+    "ast_hash": "086502234851a2d564601cc8260564aa",
+    "semantic_hash": "086502234851a2d564601cc8260564aa"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/index.html": {
+    "mtime": 1787563295.5930486,
+    "seen": 1787775475.2097988,
+    "ast_hash": "075eaad96707af02463b76564c0e26b7",
+    "semantic_hash": "075eaad96707af02463b76564c0e26b7"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/quando-un-sostantivo-incontra-un-aggettivo/index.html": {
+    "mtime": 1782483955.1513393,
+    "seen": 1787775475.2097998,
+    "ast_hash": "2465a4f71d1978e21d04541bfcfa227a",
+    "semantic_hash": "2465a4f71d1978e21d04541bfcfa227a"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/sostantivi/index.html": {
+    "mtime": 1782483952.3160033,
+    "seen": 1787775475.2098002,
+    "ast_hash": "8fff7a101f70b8d5be98c30da22d5a51",
+    "semantic_hash": "8fff7a101f70b8d5be98c30da22d5a51"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/index.html": {
+    "mtime": 1786458668.494283,
+    "seen": 1787775475.209801,
+    "ast_hash": "dd38941e8178fdd69989271a2873555f",
+    "semantic_hash": "dd38941e8178fdd69989271a2873555f"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/na-vokzale/index.html": {
+    "mtime": 1786458764.3695576,
+    "seen": 1787775475.2098014,
+    "ast_hash": "8314c4e07711bdafbe191feb21ecfa59",
+    "semantic_hash": "8314c4e07711bdafbe191feb21ecfa59"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/okolo-tebya/index.html": {
+    "mtime": 1786458651.379261,
+    "seen": 1787775475.2098022,
+    "ast_hash": "0b0ac0061d492d727b33f8c3737a8767",
+    "semantic_hash": "0b0ac0061d492d727b33f8c3737a8767"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/v-aeroportu/index.html": {
+    "mtime": 1786458799.9242222,
+    "seen": 1787775475.2098029,
+    "ast_hash": "2d50bcf21d7a51ff23a5a1f274ab37c5",
+    "semantic_hash": "2d50bcf21d7a51ff23a5a1f274ab37c5"
+  },
+  "principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/v-gorode/index.html": {
+    "mtime": 1786463172.2136507,
+    "seen": 1787775475.2098036,
+    "ast_hash": "0034e156299167699072c70aa69cb215",
+    "semantic_hash": "0034e156299167699072c70aa69cb215"
+  },
+  "principianti/casi/nominativo/index.html": {
+    "mtime": 1785937761.3992028,
+    "seen": 1787775475.209804,
+    "ast_hash": "5c840287dffb2c67e21c06dd600f74c0",
+    "semantic_hash": "5c840287dffb2c67e21c06dd600f74c0"
+  },
+  "principianti/casi/prepositivo-il-caso-di-luogo/doma/index.html": {
+    "mtime": 1786261358.187874,
+    "seen": 1787775475.2098048,
+    "ast_hash": "57066dc55631237896c49c28cc47a81d",
+    "semantic_hash": "57066dc55631237896c49c28cc47a81d"
+  },
+  "principianti/casi/prepositivo-il-caso-di-luogo/in-citta/index.html": {
+    "mtime": 1786261405.547829,
+    "seen": 1787775475.2098053,
+    "ast_hash": "34440ccb04c65657b2e6e40a80e1df15",
+    "semantic_hash": "34440ccb04c65657b2e6e40a80e1df15"
+  },
+  "principianti/casi/prepositivo-il-caso-di-luogo/index.html": {
+    "mtime": 1786261287.8591225,
+    "seen": 1787775475.209806,
+    "ast_hash": "63c800f829740eedd838e2d8b0f0fab3",
+    "semantic_hash": "63c800f829740eedd838e2d8b0f0fab3"
+  },
+  "principianti/casi/prepositivo-il-caso-di-luogo/v-magazine/index.html": {
+    "mtime": 1786444660.9800582,
+    "seen": 1787775475.2098067,
+    "ast_hash": "25d603407da423d05e4147e3d774b8ca",
+    "semantic_hash": "25d603407da423d05e4147e3d774b8ca"
+  },
+  "principianti/casi/strumentale-il-caso-tecnico/index.html": {
+    "mtime": 1786633786.663349,
+    "seen": 1787775475.2098074,
+    "ast_hash": "0f6e9acd4a40440a0b505b2439908d4d",
+    "semantic_hash": "0f6e9acd4a40440a0b505b2439908d4d"
+  },
+  "principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/doma/index.html": {
+    "mtime": 1786634509.9229105,
+    "seen": 1787775475.2098079,
+    "ast_hash": "9e753b6235ca705ab1317e92b6c96127",
+    "semantic_hash": "9e753b6235ca705ab1317e92b6c96127"
+  },
+  "principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/index.html": {
+    "mtime": 1786634145.0825846,
+    "seen": 1787775475.2098086,
+    "ast_hash": "b48190ae03a7a99855641d35c3e831b2",
+    "semantic_hash": "b48190ae03a7a99855641d35c3e831b2"
+  },
+  "principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/na-vokzale/index.html": {
+    "mtime": 1786633886.0919826,
+    "seen": 1787775475.209809,
+    "ast_hash": "0d7860dd6909b5ac3890eaddf46af732",
+    "semantic_hash": "0d7860dd6909b5ac3890eaddf46af732"
+  },
+  "principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/v-aeroportu/index.html": {
+    "mtime": 1786634052.4269052,
+    "seen": 1787775475.20981,
+    "ast_hash": "922dc5b49600f00dd03b7d941e3db43e",
+    "semantic_hash": "922dc5b49600f00dd03b7d941e3db43e"
+  },
+  "principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/v-gorode/index.html": {
+    "mtime": 1786633845.0997424,
+    "seen": 1787775475.2098107,
+    "ast_hash": "1833a843330d6be337dd9c5dc9dbafda",
+    "semantic_hash": "1833a843330d6be337dd9c5dc9dbafda"
+  },
+  "principianti/index.html": {
+    "mtime": 1787394541.8426285,
+    "seen": 1787775475.2098112,
+    "ast_hash": "79a8a6156693a03ff3fcca235260acbd",
+    "semantic_hash": "79a8a6156693a03ff3fcca235260acbd"
+  },
+  "register.html": {
+    "mtime": 1785609440.7356248,
+    "seen": 1787775475.209812,
+    "ast_hash": "4ac4eeb1f2b9505950a599148b9cf80a",
+    "semantic_hash": "4ac4eeb1f2b9505950a599148b9cf80a"
+  },
+  "ruoli/Claude_PM_Instructions.md": {
+    "mtime": 1776581393.5150576,
+    "seen": 1787775475.2098124,
+    "ast_hash": "64b88228f98f97580bd32c7d0ff38cf7",
+    "semantic_hash": "64b88228f98f97580bd32c7d0ff38cf7"
+  },
+  "ruoli/copywriter_liveLanguage role.md": {
+    "mtime": 1775375605.942287,
+    "seen": 1787775475.2098134,
+    "ast_hash": "ea948861195c0342d4b7f404fca69d3c",
+    "semantic_hash": "ea948861195c0342d4b7f404fca69d3c"
+  },
+  "ruoli/documenti/Cose_Da_Sistemare.md": {
+    "mtime": 1784893792.018035,
+    "seen": 1787775475.209814,
+    "ast_hash": "455f8c5773747b5624e29510bf3dd7c1",
+    "semantic_hash": "455f8c5773747b5624e29510bf3dd7c1"
+  },
+  "ruoli/documenti/Jira_Tech_Backlog_Architettura.md": {
+    "mtime": 1784893203.3924217,
+    "seen": 1787775475.2098145,
+    "ast_hash": "1ff55df3e128abedb3e27b11ca6f73ba",
+    "semantic_hash": "1ff55df3e128abedb3e27b11ca6f73ba"
+  },
+  "ruoli/documenti/LiveLanguage_Concetto_Piattaforma.md": {
+    "mtime": 1776543908.803168,
+    "seen": 1787775475.2098153,
+    "ast_hash": "7b90a9cf15bb5511ce48a5d87c111037",
+    "semantic_hash": "7b90a9cf15bb5511ce48a5d87c111037"
+  },
+  "ruoli/documenti/LiveLanguage_Logica_Esercizi_Accesso.md": {
+    "mtime": 1776512641.679919,
+    "seen": 1787775475.209817,
+    "ast_hash": "5da48541a42649b9f955df39e54dc489",
+    "semantic_hash": "5da48541a42649b9f955df39e54dc489"
+  },
+  "ruoli/documenti/MASTER_PROMPT_CONTENT_ENGINE.md": {
+    "mtime": 1779733535.976773,
+    "seen": 1787775475.2098174,
+    "ast_hash": "572c1dc53086365ffb3e8fffa1fc8a20",
+    "semantic_hash": "572c1dc53086365ffb3e8fffa1fc8a20"
+  },
+  "ruoli/documenti/PROTOCOL_KP.md": {
+    "mtime": 1774794041.258679,
+    "seen": 1787775475.2098181,
+    "ast_hash": "a472d98b663fa04daa0a488ee59228c9",
+    "semantic_hash": "a472d98b663fa04daa0a488ee59228c9"
+  },
+  "ruoli/documenti/Prompt_Creazione_Esercizi_Pagina_Caso.md": {
+    "mtime": 1786262926.57372,
+    "seen": 1787775475.2098186,
+    "ast_hash": "62fd0c5f76814c364c26a6d84b2f8ef7",
+    "semantic_hash": "62fd0c5f76814c364c26a6d84b2f8ef7"
+  },
+  "ruoli/documenti/SOP-AI-YTGA-2526_ Integrated YouTube Growth and Google Ads Operational Manual.md": {
+    "mtime": 1774717245.1497104,
+    "seen": 1787775475.2098193,
+    "ast_hash": "266f330a262c0ec4fb568ff1447ad50e",
+    "semantic_hash": "266f330a262c0ec4fb568ff1447ad50e"
+  },
+  "ruoli/documenti/Struttura_Pagine_v1_Audit.md": {
+    "mtime": 1785073050.0292702,
+    "seen": 1787775475.2098198,
+    "ast_hash": "ca21956c43035f1065842269c0816467",
+    "semantic_hash": "ca21956c43035f1065842269c0816467"
+  },
+  "ruoli/documenti/TECHNICAL_PROPOSAL_MVP.md": {
+    "mtime": 1779733535.976773,
+    "seen": 1787775475.2098207,
+    "ast_hash": "9ea7d38361377018edec1aeaac54a125",
+    "semantic_hash": "9ea7d38361377018edec1aeaac54a125"
+  },
+  "ruoli/documenti/didattica/Banda_DNA.md": {
+    "mtime": 1780307221.8275008,
+    "seen": 1787775475.2098212,
+    "ast_hash": "6aafad8213a74f0799d7afb49eb4aca5",
+    "semantic_hash": "6aafad8213a74f0799d7afb49eb4aca5"
+  },
+  "ruoli/documenti/didattica/Cluster_vs_Pagine_Reali.md": {
+    "mtime": 1784894645.981274,
+    "seen": 1787775475.209822,
+    "ast_hash": "a1da70cbb97396ae0e50b05729e587b4",
+    "semantic_hash": "a1da70cbb97396ae0e50b05729e587b4"
+  },
+  "ruoli/documenti/didattica/LiveLanguage_Mappa_Esercizi_Verbi_Moto.md": {
+    "mtime": 1776517362.4416735,
+    "seen": 1787775475.2098227,
+    "ast_hash": "0c6d1877098f048e58ffedbbf012509c",
+    "semantic_hash": "0c6d1877098f048e58ffedbbf012509c"
+  },
+  "ruoli/documenti/didattica/LiveLanguage_Mappa_Esercizi_Verbi_Moto_v2.md": {
+    "mtime": 1787406391.366761,
+    "seen": 1787775475.2098231,
+    "ast_hash": "f720ab9085761ef95c27a2a65eed646d",
+    "semantic_hash": "f720ab9085761ef95c27a2a65eed646d"
+  },
+  "ruoli/documenti/didattica/LiveLanguage_Principianti_Architettura.md": {
+    "mtime": 1776527783.2272375,
+    "seen": 1787775475.2098238,
+    "ast_hash": "6e50b64fec0b4d8a5c8985f942186687",
+    "semantic_hash": "6e50b64fec0b4d8a5c8985f942186687"
+  },
+  "ruoli/documenti/didattica/Marathon_Verbi_di_Moto_Curriculum_v2.md": {
+    "mtime": 1780307221.8285153,
+    "seen": 1787775475.2098246,
+    "ast_hash": "1941af001ede71e951d048eb67f37073",
+    "semantic_hash": "1941af001ede71e951d048eb67f37073"
+  },
+  "ruoli/documenti/didattica/banda_dei_friends.md": {
+    "mtime": 1780307221.8295221,
+    "seen": 1787775475.209825,
+    "ast_hash": "3446b4e508b6b0f991e51d9b546a0086",
+    "semantic_hash": "3446b4e508b6b0f991e51d9b546a0086"
+  },
+  "ruoli/documenti/didattica/curriculum Verbi di Mototo 1.08.md": {
+    "mtime": 1785604960.3102252,
+    "seen": 1787775475.2098258,
+    "ast_hash": "d4c1a740cc18c159bcdbe7965737a161",
+    "semantic_hash": "d4c1a740cc18c159bcdbe7965737a161"
+  },
+  "ruoli/documenti/didattica/maratona Verbi di moto/Giorno1_Idti_Hodit_Programma_Lezione_v1.md": {
+    "mtime": 1786786922.3460715,
+    "seen": 1787775475.2098265,
+    "ast_hash": "596cbb27c4276d3a4531ce5a22af1314",
+    "semantic_hash": "596cbb27c4276d3a4531ce5a22af1314"
+  },
+  "ruoli/documenti/invest/LLR_PianoFinanziario_v2_Review_Aprile2026.md": {
+    "mtime": 1777357488.3588789,
+    "seen": 1787775475.2098274,
+    "ast_hash": "841dfe314b3e1af28e405ff08720cc14",
+    "semantic_hash": "841dfe314b3e1af28e405ff08720cc14"
+  },
+  "ruoli/documenti/marketing/Instruction Manual_ YouTube Platform & Advertising Operations (August 2025 \u2013 February 2026).md": {
+    "mtime": 1774717182.3247733,
+    "seen": 1787775475.2098286,
+    "ast_hash": "d3120c53f36fcb32f716523a40994cf7",
+    "semantic_hash": "d3120c53f36fcb32f716523a40994cf7"
+  },
+  "ruoli/documenti/marketing/Operational Manual_ Social Media Management & Meta Advertising (2025-2026).md": {
+    "mtime": 1774716750.1835823,
+    "seen": 1787775475.209829,
+    "ast_hash": "de99182d571d2dfc189546ff91c742fe",
+    "semantic_hash": "de99182d571d2dfc189546ff91c742fe"
+  },
+  "ruoli/documenti/marketing/SMM_STRATEGY_MARATHON.md": {
+    "mtime": 1779733535.976773,
+    "seen": 1787775475.2098298,
+    "ast_hash": "0d00b2b9cf0f5dc3fb71518b9b125951",
+    "semantic_hash": "0d00b2b9cf0f5dc3fb71518b9b125951"
+  },
+  "ruoli/documenti/marketing/Strategia_Hashtag_YouTube_TikTok.md": {
+    "mtime": 1776542976.0519063,
+    "seen": 1787775475.2098303,
+    "ast_hash": "a540e277a722193e72c91e1927d7b09d",
+    "semantic_hash": "a540e277a722193e72c91e1927d7b09d"
+  },
+  "ruoli/documenti/marketing/brand_value.md": {
+    "mtime": 1774719560.1397724,
+    "seen": 1787775475.2098312,
+    "ast_hash": "8c065667ee35d479c9f9788715ceae1c",
+    "semantic_hash": "8c065667ee35d479c9f9788715ceae1c"
+  },
+  "ruoli/documenti/marketing/liveLanguage-brand-palette.html": {
+    "mtime": 1778957455.0200503,
+    "seen": 1787775475.2098317,
+    "ast_hash": "4fd789f5c12ded9e60d71c71c5e52ef6",
+    "semantic_hash": "4fd789f5c12ded9e60d71c71c5e52ef6"
+  },
+  "ruoli/documenti/marketing/style_guide.md": {
+    "mtime": 1774763799.2091131,
+    "seen": 1787775475.2098322,
+    "ast_hash": "ace144d8b7d3c793ab607b4742a5599a",
+    "semantic_hash": "ace144d8b7d3c793ab607b4742a5599a"
+  },
+  "ruoli/documenti/marketing_skills/skills/ab-test-setup/SKILL.md": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.209833,
+    "ast_hash": "b66e1f02ce43d8173ad4e167edf39ed3",
+    "semantic_hash": "b66e1f02ce43d8173ad4e167edf39ed3"
+  },
+  "ruoli/documenti/marketing_skills/skills/ab-test-setup/references/sample-size-guide.md": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.2098334,
+    "ast_hash": "739ed75be56ec33feac82cf384ef2ba9",
+    "semantic_hash": "739ed75be56ec33feac82cf384ef2ba9"
+  },
+  "ruoli/documenti/marketing_skills/skills/ab-test-setup/references/test-templates.md": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.2098343,
+    "ast_hash": "c0b494aec29d8a10c80b064be67e7f87",
+    "semantic_hash": "c0b494aec29d8a10c80b064be67e7f87"
+  },
+  "ruoli/documenti/marketing_skills/skills/ad-creative/SKILL.md": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.209835,
+    "ast_hash": "4f3840bc27d3e9e2b169becd76c49dce",
+    "semantic_hash": "4f3840bc27d3e9e2b169becd76c49dce"
+  },
+  "ruoli/documenti/marketing_skills/skills/ad-creative/references/generative-tools.md": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.2098355,
+    "ast_hash": "c336ea8fd1e7f907d10f5ab155681f91",
+    "semantic_hash": "c336ea8fd1e7f907d10f5ab155681f91"
+  },
+  "ruoli/documenti/marketing_skills/skills/ad-creative/references/platform-specs.md": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.2098362,
+    "ast_hash": "d7ae838b7bc4b985ed5805e653b2d7c1",
+    "semantic_hash": "d7ae838b7bc4b985ed5805e653b2d7c1"
+  },
+  "ruoli/documenti/marketing_skills/skills/ai-seo/SKILL.md": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.2098367,
+    "ast_hash": "1b4f1da989d8cc3721e8b4fa7330af75",
+    "semantic_hash": "1b4f1da989d8cc3721e8b4fa7330af75"
+  },
+  "ruoli/documenti/marketing_skills/skills/ai-seo/references/content-patterns.md": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.2098377,
+    "ast_hash": "1a090d09c6e94e59bad1e8577f0a36f0",
+    "semantic_hash": "1a090d09c6e94e59bad1e8577f0a36f0"
+  },
+  "ruoli/documenti/marketing_skills/skills/ai-seo/references/platform-ranking-factors.md": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.2098382,
+    "ast_hash": "21f58129c55a84b99abc8abd458d16d5",
+    "semantic_hash": "21f58129c55a84b99abc8abd458d16d5"
+  },
+  "ruoli/documenti/marketing_skills/skills/analytics-tracking/SKILL.md": {
+    "mtime": 1774714978.4885077,
+    "seen": 1787775475.2098389,
+    "ast_hash": "a25379ed823fd9752a15feee78f66af1",
+    "semantic_hash": "a25379ed823fd9752a15feee78f66af1"
+  },
+  "ruoli/documenti/marketing_skills/skills/analytics-tracking/references/event-library.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.2098396,
+    "ast_hash": "7339d6b764cb0c1c456cc3711255eaa3",
+    "semantic_hash": "7339d6b764cb0c1c456cc3711255eaa3"
+  },
+  "ruoli/documenti/marketing_skills/skills/analytics-tracking/references/ga4-implementation.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.20984,
+    "ast_hash": "083be80011598cffd663282b9262ac0d",
+    "semantic_hash": "083be80011598cffd663282b9262ac0d"
+  },
+  "ruoli/documenti/marketing_skills/skills/analytics-tracking/references/gtm-implementation.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.209841,
+    "ast_hash": "d4d2e8a6421685ea43183d25d5d705a3",
+    "semantic_hash": "d4d2e8a6421685ea43183d25d5d705a3"
+  },
+  "ruoli/documenti/marketing_skills/skills/churn-prevention/SKILL.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.2098415,
+    "ast_hash": "ee2ec6dfc335dd678d9f36eabadcdd16",
+    "semantic_hash": "ee2ec6dfc335dd678d9f36eabadcdd16"
+  },
+  "ruoli/documenti/marketing_skills/skills/churn-prevention/references/cancel-flow-patterns.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.2098422,
+    "ast_hash": "31efdca814ce7db041cc821e015e8c36",
+    "semantic_hash": "31efdca814ce7db041cc821e015e8c36"
+  },
+  "ruoli/documenti/marketing_skills/skills/churn-prevention/references/dunning-playbook.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.2098427,
+    "ast_hash": "31ca3ee48377a52739013f51bed61390",
+    "semantic_hash": "31ca3ee48377a52739013f51bed61390"
+  },
+  "ruoli/documenti/marketing_skills/skills/cold-email/SKILL.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.2098434,
+    "ast_hash": "0c722fd75592f12e2c3bc8f6c533df2d",
+    "semantic_hash": "0c722fd75592f12e2c3bc8f6c533df2d"
+  },
+  "ruoli/documenti/marketing_skills/skills/cold-email/references/benchmarks.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.209844,
+    "ast_hash": "89805bac471a7d1ab6326c80a4a712d0",
+    "semantic_hash": "89805bac471a7d1ab6326c80a4a712d0"
+  },
+  "ruoli/documenti/marketing_skills/skills/cold-email/references/follow-up-sequences.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.2098448,
+    "ast_hash": "1359d0f8d7d57e9798f9847e1a327790",
+    "semantic_hash": "1359d0f8d7d57e9798f9847e1a327790"
+  },
+  "ruoli/documenti/marketing_skills/skills/cold-email/references/frameworks.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.2098453,
+    "ast_hash": "583479f3c3d870070654d497304765be",
+    "semantic_hash": "583479f3c3d870070654d497304765be"
+  },
+  "ruoli/documenti/marketing_skills/skills/cold-email/references/personalization.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.209846,
+    "ast_hash": "e12c572baec87afc7ee69c4e6225b753",
+    "semantic_hash": "e12c572baec87afc7ee69c4e6225b753"
+  },
+  "ruoli/documenti/marketing_skills/skills/cold-email/references/subject-lines.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.2098465,
+    "ast_hash": "a9bfcdd230fce155a241612edbd1249c",
+    "semantic_hash": "a9bfcdd230fce155a241612edbd1249c"
+  },
+  "ruoli/documenti/marketing_skills/skills/competitor-alternatives/SKILL.md": {
+    "mtime": 1774714978.496829,
+    "seen": 1787775475.2098472,
+    "ast_hash": "d18a468f6afb58aacafea955e005adf8",
+    "semantic_hash": "d18a468f6afb58aacafea955e005adf8"
+  },
+  "ruoli/documenti/marketing_skills/skills/competitor-alternatives/references/content-architecture.md": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.209848,
+    "ast_hash": "01d37d4606f212daceaa96a5ea76817d",
+    "semantic_hash": "01d37d4606f212daceaa96a5ea76817d"
+  },
+  "ruoli/documenti/marketing_skills/skills/competitor-alternatives/references/templates.md": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.2098486,
+    "ast_hash": "f2536442337f93c2f6248ab492db5b01",
+    "semantic_hash": "f2536442337f93c2f6248ab492db5b01"
+  },
+  "ruoli/documenti/marketing_skills/skills/content-strategy/SKILL.md": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.209849,
+    "ast_hash": "c4fabfe496c4460971f37b1b12e34016",
+    "semantic_hash": "c4fabfe496c4460971f37b1b12e34016"
+  },
+  "ruoli/documenti/marketing_skills/skills/content-strategy/references/headless-cms.md": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.2098498,
+    "ast_hash": "120e78980c651fc02793a1c930e0272d",
+    "semantic_hash": "120e78980c651fc02793a1c930e0272d"
+  },
+  "ruoli/documenti/marketing_skills/skills/copy-editing/SKILL.md": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.2098505,
+    "ast_hash": "14a54c8f4398dca7c87d7eb24d686bc0",
+    "semantic_hash": "14a54c8f4398dca7c87d7eb24d686bc0"
+  },
+  "ruoli/documenti/marketing_skills/skills/copy-editing/references/plain-english-alternatives.md": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.209851,
+    "ast_hash": "af8a6c36bbc3a3f912817e47f150cf58",
+    "semantic_hash": "af8a6c36bbc3a3f912817e47f150cf58"
+  },
+  "ruoli/documenti/marketing_skills/skills/copywriting/SKILL.md": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.2098517,
+    "ast_hash": "13ada128516b1bcc1de37bbbcc419896",
+    "semantic_hash": "13ada128516b1bcc1de37bbbcc419896"
+  },
+  "ruoli/documenti/marketing_skills/skills/copywriting/references/copy-frameworks.md": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.2098525,
+    "ast_hash": "5c163d9a4f30d1736d83903921ace419",
+    "semantic_hash": "5c163d9a4f30d1736d83903921ace419"
+  },
+  "ruoli/documenti/marketing_skills/skills/copywriting/references/natural-transitions.md": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.209853,
+    "ast_hash": "08003a7f59fb82bea6121dbdabbfb9cf",
+    "semantic_hash": "08003a7f59fb82bea6121dbdabbfb9cf"
+  },
+  "ruoli/documenti/marketing_skills/skills/customer-research/SKILL.md": {
+    "mtime": 1774714978.505293,
+    "seen": 1787775475.2098536,
+    "ast_hash": "e7333dce7b9c74d6b6c0ab6b64b4f9a4",
+    "semantic_hash": "e7333dce7b9c74d6b6c0ab6b64b4f9a4"
+  },
+  "ruoli/documenti/marketing_skills/skills/customer-research/references/source-guides.md": {
+    "mtime": 1774714978.5133579,
+    "seen": 1787775475.2098541,
+    "ast_hash": "33ac159ff6605685e0b1a1208472d319",
+    "semantic_hash": "33ac159ff6605685e0b1a1208472d319"
+  },
+  "ruoli/documenti/marketing_skills/skills/email-sequence/SKILL.md": {
+    "mtime": 1774714978.5133579,
+    "seen": 1787775475.209855,
+    "ast_hash": "b4315f732e10ca2f6e40b15f7655096a",
+    "semantic_hash": "b4315f732e10ca2f6e40b15f7655096a"
+  },
+  "ruoli/documenti/marketing_skills/skills/email-sequence/references/copy-guidelines.md": {
+    "mtime": 1774714978.5153615,
+    "seen": 1787775475.2098556,
+    "ast_hash": "b3f2f368974603dccbfce2b8d457adcc",
+    "semantic_hash": "b3f2f368974603dccbfce2b8d457adcc"
+  },
+  "ruoli/documenti/marketing_skills/skills/email-sequence/references/email-types.md": {
+    "mtime": 1774714978.5153615,
+    "seen": 1787775475.209856,
+    "ast_hash": "db04ffbd6f263f63765df7f65541e096",
+    "semantic_hash": "db04ffbd6f263f63765df7f65541e096"
+  },
+  "ruoli/documenti/marketing_skills/skills/email-sequence/references/sequence-templates.md": {
+    "mtime": 1774714978.517367,
+    "seen": 1787775475.2098575,
+    "ast_hash": "59786a271e4daf5e40a95abd7bc42d9c",
+    "semantic_hash": "59786a271e4daf5e40a95abd7bc42d9c"
+  },
+  "ruoli/documenti/marketing_skills/skills/form-cro/SKILL.md": {
+    "mtime": 1774714978.517367,
+    "seen": 1787775475.2098584,
+    "ast_hash": "0aad4ad1c823e0898a776dae9bfe9a18",
+    "semantic_hash": "0aad4ad1c823e0898a776dae9bfe9a18"
+  },
+  "ruoli/documenti/marketing_skills/skills/free-tool-strategy/SKILL.md": {
+    "mtime": 1774714978.517367,
+    "seen": 1787775475.209859,
+    "ast_hash": "e2b8bac466b743483c3e11a97c365f63",
+    "semantic_hash": "e2b8bac466b743483c3e11a97c365f63"
+  },
+  "ruoli/documenti/marketing_skills/skills/free-tool-strategy/references/tool-types.md": {
+    "mtime": 1774714978.519372,
+    "seen": 1787775475.2098596,
+    "ast_hash": "f7d8a2ad0ed30a78215effd140054f17",
+    "semantic_hash": "f7d8a2ad0ed30a78215effd140054f17"
+  },
+  "ruoli/documenti/marketing_skills/skills/launch-strategy/SKILL.md": {
+    "mtime": 1774714978.519372,
+    "seen": 1787775475.20986,
+    "ast_hash": "681c06146a4be6e92ed5775dd5ec0bb0",
+    "semantic_hash": "681c06146a4be6e92ed5775dd5ec0bb0"
+  },
+  "ruoli/documenti/marketing_skills/skills/lead-magnets/SKILL.md": {
+    "mtime": 1774714978.5213764,
+    "seen": 1787775475.2098608,
+    "ast_hash": "4c4cb246b31f1fcafe084d2640b41faf",
+    "semantic_hash": "4c4cb246b31f1fcafe084d2640b41faf"
+  },
+  "ruoli/documenti/marketing_skills/skills/lead-magnets/references/benchmarks.md": {
+    "mtime": 1774714978.5213764,
+    "seen": 1787775475.2098613,
+    "ast_hash": "73f15eab8f98661c75bca89182456a78",
+    "semantic_hash": "73f15eab8f98661c75bca89182456a78"
+  },
+  "ruoli/documenti/marketing_skills/skills/lead-magnets/references/format-guide.md": {
+    "mtime": 1774714978.5213764,
+    "seen": 1787775475.2098622,
+    "ast_hash": "de1754452549855be9d30be8a8692e5b",
+    "semantic_hash": "de1754452549855be9d30be8a8692e5b"
+  },
+  "ruoli/documenti/marketing_skills/skills/marketing-ideas/SKILL.md": {
+    "mtime": 1774714978.5213764,
+    "seen": 1787775475.209863,
+    "ast_hash": "8519a814978097a8c225f7dc70e277be",
+    "semantic_hash": "8519a814978097a8c225f7dc70e277be"
+  },
+  "ruoli/documenti/marketing_skills/skills/marketing-ideas/references/ideas-by-category.md": {
+    "mtime": 1774714978.5213764,
+    "seen": 1787775475.2098634,
+    "ast_hash": "8778c19522990a2267b4d9bedc4bb405",
+    "semantic_hash": "8778c19522990a2267b4d9bedc4bb405"
+  },
+  "ruoli/documenti/marketing_skills/skills/marketing-psychology/SKILL.md": {
+    "mtime": 1774714978.5213764,
+    "seen": 1787775475.2098641,
+    "ast_hash": "ccfa712be129f61d55a52516a63ba75b",
+    "semantic_hash": "ccfa712be129f61d55a52516a63ba75b"
+  },
+  "ruoli/documenti/marketing_skills/skills/onboarding-cro/SKILL.md": {
+    "mtime": 1774714978.5255902,
+    "seen": 1787775475.2098646,
+    "ast_hash": "2dc3660f95c535c3c848d7108904072a",
+    "semantic_hash": "2dc3660f95c535c3c848d7108904072a"
+  },
+  "ruoli/documenti/marketing_skills/skills/onboarding-cro/references/experiments.md": {
+    "mtime": 1774714978.5255902,
+    "seen": 1787775475.2098656,
+    "ast_hash": "6ee5896596680ce6ae6ef7e1b1c04df0",
+    "semantic_hash": "6ee5896596680ce6ae6ef7e1b1c04df0"
+  },
+  "ruoli/documenti/marketing_skills/skills/page-cro/SKILL.md": {
+    "mtime": 1774714978.5274503,
+    "seen": 1787775475.209866,
+    "ast_hash": "f00f15f0fb736d04c60b2ed5c86a6e9c",
+    "semantic_hash": "f00f15f0fb736d04c60b2ed5c86a6e9c"
+  },
+  "ruoli/documenti/marketing_skills/skills/page-cro/references/experiments.md": {
+    "mtime": 1774714978.5303173,
+    "seen": 1787775475.2098665,
+    "ast_hash": "e2ab36d280622b496311882374993f3e",
+    "semantic_hash": "e2ab36d280622b496311882374993f3e"
+  },
+  "ruoli/documenti/marketing_skills/skills/paid-ads/SKILL.md": {
+    "mtime": 1774714978.5303173,
+    "seen": 1787775475.2098672,
+    "ast_hash": "6d380c314cde455802820740e3d27f0d",
+    "semantic_hash": "6d380c314cde455802820740e3d27f0d"
+  },
+  "ruoli/documenti/marketing_skills/skills/paid-ads/references/ad-copy-templates.md": {
+    "mtime": 1774714978.5303173,
+    "seen": 1787775475.209868,
+    "ast_hash": "c747d83a6b61af15e7b1e1cb49268d99",
+    "semantic_hash": "c747d83a6b61af15e7b1e1cb49268d99"
+  },
+  "ruoli/documenti/marketing_skills/skills/paid-ads/references/audience-targeting.md": {
+    "mtime": 1774714978.5303173,
+    "seen": 1787775475.209869,
+    "ast_hash": "355572fdf6e4e906599964a747aa46dd",
+    "semantic_hash": "355572fdf6e4e906599964a747aa46dd"
+  },
+  "ruoli/documenti/marketing_skills/skills/paid-ads/references/platform-setup-checklists.md": {
+    "mtime": 1774714978.5303173,
+    "seen": 1787775475.2098694,
+    "ast_hash": "aa3dc04192a829e01fa76c4e5d59877d",
+    "semantic_hash": "aa3dc04192a829e01fa76c4e5d59877d"
+  },
+  "ruoli/documenti/marketing_skills/skills/paywall-upgrade-cro/SKILL.md": {
+    "mtime": 1774714978.5303173,
+    "seen": 1787775475.20987,
+    "ast_hash": "44a818a3e07c606188698c568c440a17",
+    "semantic_hash": "44a818a3e07c606188698c568c440a17"
+  },
+  "ruoli/documenti/marketing_skills/skills/paywall-upgrade-cro/references/experiments.md": {
+    "mtime": 1774714978.5303173,
+    "seen": 1787775475.2098706,
+    "ast_hash": "1f9910f401b1db4c0b312b25f0974c82",
+    "semantic_hash": "1f9910f401b1db4c0b312b25f0974c82"
+  },
+  "ruoli/documenti/marketing_skills/skills/popup-cro/SKILL.md": {
+    "mtime": 1774714978.5303173,
+    "seen": 1787775475.2098713,
+    "ast_hash": "01b26be796b87e53f3147f5e9368c4ef",
+    "semantic_hash": "01b26be796b87e53f3147f5e9368c4ef"
+  },
+  "ruoli/documenti/marketing_skills/skills/pricing-strategy/SKILL.md": {
+    "mtime": 1774714978.5379164,
+    "seen": 1787775475.2098718,
+    "ast_hash": "afcf55c46196559f65a1486dc1678900",
+    "semantic_hash": "afcf55c46196559f65a1486dc1678900"
+  },
+  "ruoli/documenti/marketing_skills/skills/pricing-strategy/references/research-methods.md": {
+    "mtime": 1774714978.539879,
+    "seen": 1787775475.2098727,
+    "ast_hash": "a8415d984f125a4308d7c85eb71e2289",
+    "semantic_hash": "a8415d984f125a4308d7c85eb71e2289"
+  },
+  "ruoli/documenti/marketing_skills/skills/pricing-strategy/references/tier-structure.md": {
+    "mtime": 1774714978.539879,
+    "seen": 1787775475.2098734,
+    "ast_hash": "d5c223605ccd0a7897f716c8e90fbe26",
+    "semantic_hash": "d5c223605ccd0a7897f716c8e90fbe26"
+  },
+  "ruoli/documenti/marketing_skills/skills/product-marketing-context/SKILL.md": {
+    "mtime": 1774714978.539879,
+    "seen": 1787775475.209874,
+    "ast_hash": "3b0b80a63e06a968078902b4571c855a",
+    "semantic_hash": "3b0b80a63e06a968078902b4571c855a"
+  },
+  "ruoli/documenti/marketing_skills/skills/programmatic-seo/SKILL.md": {
+    "mtime": 1774714978.5418856,
+    "seen": 1787775475.2098746,
+    "ast_hash": "047644b11f9c48b41b0dfa6b7f389d23",
+    "semantic_hash": "047644b11f9c48b41b0dfa6b7f389d23"
+  },
+  "ruoli/documenti/marketing_skills/skills/programmatic-seo/references/playbooks.md": {
+    "mtime": 1774714978.5418856,
+    "seen": 1787775475.209875,
+    "ast_hash": "8b0610eeea1d207fc9bb0aa289575766",
+    "semantic_hash": "8b0610eeea1d207fc9bb0aa289575766"
+  },
+  "ruoli/documenti/marketing_skills/skills/referral-program/SKILL.md": {
+    "mtime": 1774714978.5418856,
+    "seen": 1787775475.209876,
+    "ast_hash": "b6b6ddb2b270d96d876ba5bacfa0aa37",
+    "semantic_hash": "b6b6ddb2b270d96d876ba5bacfa0aa37"
+  },
+  "ruoli/documenti/marketing_skills/skills/referral-program/references/affiliate-programs.md": {
+    "mtime": 1774714978.5418856,
+    "seen": 1787775475.2098765,
+    "ast_hash": "8f8ef8f31bd53e95c5322293c9f42418",
+    "semantic_hash": "8f8ef8f31bd53e95c5322293c9f42418"
+  },
+  "ruoli/documenti/marketing_skills/skills/referral-program/references/program-examples.md": {
+    "mtime": 1774714978.5462265,
+    "seen": 1787775475.209877,
+    "ast_hash": "6388dbf7d58434592371f4713cd84fa2",
+    "semantic_hash": "6388dbf7d58434592371f4713cd84fa2"
+  },
+  "ruoli/documenti/marketing_skills/skills/revops/SKILL.md": {
+    "mtime": 1774714978.547205,
+    "seen": 1787775475.2098777,
+    "ast_hash": "51b5897028020ea9120a861fe490ca32",
+    "semantic_hash": "51b5897028020ea9120a861fe490ca32"
+  },
+  "ruoli/documenti/marketing_skills/skills/revops/references/automation-playbooks.md": {
+    "mtime": 1774714978.547205,
+    "seen": 1787775475.2098784,
+    "ast_hash": "dce1d22ebbc2a6d337175c3a95f58062",
+    "semantic_hash": "dce1d22ebbc2a6d337175c3a95f58062"
+  },
+  "ruoli/documenti/marketing_skills/skills/revops/references/lifecycle-definitions.md": {
+    "mtime": 1774714978.5492136,
+    "seen": 1787775475.209879,
+    "ast_hash": "7a003e117368a9ce7d2f4ebee69b117f",
+    "semantic_hash": "7a003e117368a9ce7d2f4ebee69b117f"
+  },
+  "ruoli/documenti/marketing_skills/skills/revops/references/routing-rules.md": {
+    "mtime": 1774714978.5492136,
+    "seen": 1787775475.2098799,
+    "ast_hash": "806af103187d3a9f2e0da308c48001ab",
+    "semantic_hash": "806af103187d3a9f2e0da308c48001ab"
+  },
+  "ruoli/documenti/marketing_skills/skills/revops/references/scoring-models.md": {
+    "mtime": 1774714978.5492136,
+    "seen": 1787775475.2098804,
+    "ast_hash": "a8c9f0a21f165dbcbf780726b791c546",
+    "semantic_hash": "a8c9f0a21f165dbcbf780726b791c546"
+  },
+  "ruoli/documenti/marketing_skills/skills/sales-enablement/SKILL.md": {
+    "mtime": 1774714978.5492136,
+    "seen": 1787775475.209881,
+    "ast_hash": "574caba1d0d4375e08af2c0f33cd605a",
+    "semantic_hash": "574caba1d0d4375e08af2c0f33cd605a"
+  },
+  "ruoli/documenti/marketing_skills/skills/sales-enablement/references/deck-frameworks.md": {
+    "mtime": 1774714978.5529604,
+    "seen": 1787775475.2098815,
+    "ast_hash": "0bf47ed201cf79385558a8e27ae26ed6",
+    "semantic_hash": "0bf47ed201cf79385558a8e27ae26ed6"
+  },
+  "ruoli/documenti/marketing_skills/skills/sales-enablement/references/demo-scripts.md": {
+    "mtime": 1774714978.5529604,
+    "seen": 1787775475.209882,
+    "ast_hash": "0bdc1ad59cf230406d67452dc8666952",
+    "semantic_hash": "0bdc1ad59cf230406d67452dc8666952"
+  },
+  "ruoli/documenti/marketing_skills/skills/sales-enablement/references/objection-library.md": {
+    "mtime": 1774714978.554708,
+    "seen": 1787775475.209883,
+    "ast_hash": "c823648afd00c2d05573567c3343d430",
+    "semantic_hash": "c823648afd00c2d05573567c3343d430"
+  },
+  "ruoli/documenti/marketing_skills/skills/sales-enablement/references/one-pager-templates.md": {
+    "mtime": 1774714978.554708,
+    "seen": 1787775475.2098835,
+    "ast_hash": "37f43d6a2bb2aafcaf622807ddf06333",
+    "semantic_hash": "37f43d6a2bb2aafcaf622807ddf06333"
+  },
+  "ruoli/documenti/marketing_skills/skills/schema-markup/SKILL.md": {
+    "mtime": 1774714978.554708,
+    "seen": 1787775475.2098842,
+    "ast_hash": "4f5cd40d1fe0e0dcaa632556b7b78227",
+    "semantic_hash": "4f5cd40d1fe0e0dcaa632556b7b78227"
+  },
+  "ruoli/documenti/marketing_skills/skills/schema-markup/references/schema-examples.md": {
+    "mtime": 1774714978.554708,
+    "seen": 1787775475.2098846,
+    "ast_hash": "824f6ddd8ac68ff7b17fe997a79d2928",
+    "semantic_hash": "824f6ddd8ac68ff7b17fe997a79d2928"
+  },
+  "ruoli/documenti/marketing_skills/skills/seo-audit/SKILL.md": {
+    "mtime": 1774714978.554708,
+    "seen": 1787775475.2098854,
+    "ast_hash": "49ad37cd22eb084e076e9e201b0f3df5",
+    "semantic_hash": "49ad37cd22eb084e076e9e201b0f3df5"
+  },
+  "ruoli/documenti/marketing_skills/skills/seo-audit/references/ai-writing-detection.md": {
+    "mtime": 1774714978.5595188,
+    "seen": 1787775475.2098858,
+    "ast_hash": "a5489f71fca1525b35d5822d3426fc90",
+    "semantic_hash": "a5489f71fca1525b35d5822d3426fc90"
+  },
+  "ruoli/documenti/marketing_skills/skills/signup-flow-cro/SKILL.md": {
+    "mtime": 1774714978.5615275,
+    "seen": 1787775475.2098868,
+    "ast_hash": "0c004c7586628f62926d03bbd2de4ce1",
+    "semantic_hash": "0c004c7586628f62926d03bbd2de4ce1"
+  },
+  "ruoli/documenti/marketing_skills/skills/site-architecture/SKILL.md": {
+    "mtime": 1774714978.5629342,
+    "seen": 1787775475.2098873,
+    "ast_hash": "1520022bd2133393f473f85ea5a45398",
+    "semantic_hash": "1520022bd2133393f473f85ea5a45398"
+  },
+  "ruoli/documenti/marketing_skills/skills/site-architecture/references/mermaid-templates.md": {
+    "mtime": 1774714978.5649443,
+    "seen": 1787775475.209888,
+    "ast_hash": "8eaecb02fb9288bfcde35ade1e174535",
+    "semantic_hash": "8eaecb02fb9288bfcde35ade1e174535"
+  },
+  "ruoli/documenti/marketing_skills/skills/site-architecture/references/navigation-patterns.md": {
+    "mtime": 1774714978.5649443,
+    "seen": 1787775475.2098885,
+    "ast_hash": "0a170e183b1240d436aaa430d59bb554",
+    "semantic_hash": "0a170e183b1240d436aaa430d59bb554"
+  },
+  "ruoli/documenti/marketing_skills/skills/site-architecture/references/site-type-templates.md": {
+    "mtime": 1774714978.5675907,
+    "seen": 1787775475.209889,
+    "ast_hash": "361004fcc86cc2583d44a0f02ff3fe47",
+    "semantic_hash": "361004fcc86cc2583d44a0f02ff3fe47"
+  },
+  "ruoli/documenti/marketing_skills/skills/social-content/SKILL.md": {
+    "mtime": 1774714978.5675907,
+    "seen": 1787775475.20989,
+    "ast_hash": "5fa21a070212fb6122b184be65fa9d96",
+    "semantic_hash": "5fa21a070212fb6122b184be65fa9d96"
+  },
+  "ruoli/documenti/marketing_skills/skills/social-content/references/platforms.md": {
+    "mtime": 1774714978.5675907,
+    "seen": 1787775475.2098904,
+    "ast_hash": "8832bb4316df220f3ea562c707d22b90",
+    "semantic_hash": "8832bb4316df220f3ea562c707d22b90"
+  },
+  "ruoli/documenti/marketing_skills/skills/social-content/references/post-templates.md": {
+    "mtime": 1774714978.570655,
+    "seen": 1787775475.2098913,
+    "ast_hash": "bd5696ebbf74043bf9c4a5db8dd69c56",
+    "semantic_hash": "bd5696ebbf74043bf9c4a5db8dd69c56"
+  },
+  "ruoli/documenti/marketing_skills/skills/social-content/references/reverse-engineering.md": {
+    "mtime": 1774714978.570655,
+    "seen": 1787775475.2098918,
+    "ast_hash": "50d6ecca601991d172a61fc7e6aedf15",
+    "semantic_hash": "50d6ecca601991d172a61fc7e6aedf15"
+  },
+  "ruoli/documenti/regole_copywriter_reels.md": {
+    "mtime": 1780261275.4340446,
+    "seen": 1787775475.2098925,
+    "ast_hash": "07bc2b9a03ab964b4c2b9b4a6b6b42c5",
+    "semantic_hash": "07bc2b9a03ab964b4c2b9b4a6b6b42c5"
+  },
+  "ruoli/id.md": {
+    "mtime": 1774711748.6887667,
+    "seen": 1787775475.2098932,
+    "ast_hash": "9881b264624d63bc73db5bc90a5eb26e",
+    "semantic_hash": "9881b264624d63bc73db5bc90a5eb26e"
+  },
+  "ruoli/role_index.md": {
+    "mtime": 1774721109.852748,
+    "seen": 1787775475.209894,
+    "ast_hash": "4a321dec8ca62e591a5636e07dc3161f",
+    "semantic_hash": "4a321dec8ca62e591a5636e07dc3161f"
+  },
+  "ruoli/seller.md": {
+    "mtime": 1774711748.6887667,
+    "seen": 1787775475.2098944,
+    "ast_hash": "64259d209c48bc7c4a168ab9460d5968",
+    "semantic_hash": "64259d209c48bc7c4a168ab9460d5968"
+  },
+  "ruoli/smm.md": {
+    "mtime": 1774711748.6938372,
+    "seen": 1787775475.2098951,
+    "ast_hash": "1189bf99546270fdcfd6f212f20cd5e6",
+    "semantic_hash": "1189bf99546270fdcfd6f212f20cd5e6"
+  },
+  "ruoli/tech_specialist.md": {
+    "mtime": 1774715369.867525,
+    "seen": 1787775475.2098956,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "smm/shooting_script_camminare.md": {
+    "mtime": 1779970834.7579935,
+    "seen": 1787775475.2098966,
+    "ast_hash": "83705f81b473d761fcbaf3b93c678e6f",
+    "semantic_hash": "83705f81b473d761fcbaf3b93c678e6f"
+  },
+  "success.html": {
+    "mtime": 1773682009.9323146,
+    "seen": 1787775475.2098973,
+    "ast_hash": "8b75986456595c25381f50d43ae717e5",
+    "semantic_hash": "8b75986456595c25381f50d43ae717e5"
+  },
+  "graphify-out\\transcripts\\\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439\u0442\u0435.txt": {
+    "mtime": 1787725887.2533174,
+    "seen": 1787775475.209898,
+    "ast_hash": "eeb03e00cbf4e13b41c205052e90c673",
+    "semantic_hash": "eeb03e00cbf4e13b41c205052e90c673"
+  },
+  "graphify-out\\transcripts\\\u041c\u0435\u0441\u0442\u043e\u0438\u043c\u0435\u043d\u0438\u044f \u0440\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439.txt": {
+    "mtime": 1787725903.001289,
+    "seen": 1787775475.2098987,
+    "ast_hash": "e0b6afabb54dd7ebbe5caa1bccf8b238",
+    "semantic_hash": "e0b6afabb54dd7ebbe5caa1bccf8b238"
+  },
+  "graphify-out\\transcripts\\\u0423 \u043c\u0435\u043d\u044f \u0435\u0441\u0442\u044c.txt": {
+    "mtime": 1787725960.8250833,
+    "seen": 1787775475.2098994,
+    "ast_hash": "b00d436301e7e6679d4edd05a27b0680",
+    "semantic_hash": "b00d436301e7e6679d4edd05a27b0680"
+  },
+  "graphify-out\\transcripts\\\u041f\u043e\u0433\u043e\u0434\u0430.txt": {
+    "mtime": 1787726067.7124028,
+    "seen": 1787775475.2099001,
+    "ast_hash": "07ed973f96ce2f0137bec028c4817ec1",
+    "semantic_hash": "07ed973f96ce2f0137bec028c4817ec1"
+  },
+  "graphify-out\\transcripts\\Il genitivo e l\u2019accusativo.txt": {
+    "mtime": 1787726121.6883595,
+    "seen": 1787775475.2099009,
+    "ast_hash": "adc5b391f8ace0bbed771123cf04f9ac",
+    "semantic_hash": "adc5b391f8ace0bbed771123cf04f9ac"
+  },
+  "graphify-out\\transcripts\\\u041d\u043e\u0432\u0430\u044f \u0437\u0430\u043f\u0438\u0441\u044c 14.txt": {
+    "mtime": 1787726175.5423837,
+    "seen": 1787775475.2099016,
+    "ast_hash": "bc5f05db0ff2e8aaa6dc349f6e7ec827",
+    "semantic_hash": "bc5f05db0ff2e8aaa6dc349f6e7ec827"
+  },
+  "graphify-out\\transcripts\\\u041e\u0442\u0440\u0438\u0446\u0430\u043d\u0438\u0435.txt": {
+    "mtime": 1787726221.543458,
+    "seen": 1787775475.2099023,
+    "ast_hash": "127030d1776e1b2cdf0e75e8458f6b4c",
+    "semantic_hash": "127030d1776e1b2cdf0e75e8458f6b4c"
+  },
+  "graphify-out\\transcripts\\\u0421\u0435\u043c\u044c\u044f \u0410\u043b\u044c\u0431\u0435\u0440\u0442\u0430 \u0440\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439.txt": {
+    "mtime": 1787726291.0670483,
+    "seen": 1787775475.209903,
+    "ast_hash": "2a3f445df6cdfb5855b675e630f6d74a",
+    "semantic_hash": "2a3f445df6cdfb5855b675e630f6d74a"
+  },
+  "graphify-out\\transcripts\\\u043a\u0430\u0442\u044f.txt": {
+    "mtime": 1787726302.2249753,
+    "seen": 1787775475.209904,
+    "ast_hash": "51246da01b62b1e6b390509560d320e6",
+    "semantic_hash": "51246da01b62b1e6b390509560d320e6"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/soluzioni 1_.pdf": {
+    "mtime": 1779733535.4055698,
+    "seen": 1787775475.2099044,
+    "ast_hash": "e4e264ac7ede9cbd56280aff422e8ea8",
+    "semantic_hash": "e4e264ac7ede9cbd56280aff422e8ea8"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/soluzioni 2.pdf": {
+    "mtime": 1779733535.4055698,
+    "seen": 1787775475.2099051,
+    "ast_hash": "14af3baa89f3a2a65d59ab7c54fa8020",
+    "semantic_hash": "14af3baa89f3a2a65d59ab7c54fa8020"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/soluzioni \u043b\u044e\u0431\u0438\u0442 \u0445\u043e\u0434\u0438\u0442\u044c.pdf": {
+    "mtime": 1779733535.4055698,
+    "seen": 1787775475.209906,
+    "ast_hash": "003d1d6ce3dfe4a2ee20ee975b73da81",
+    "semantic_hash": "003d1d6ce3dfe4a2ee20ee975b73da81"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/soluzioni \u0445\u043e\u0434\u0438\u0442\u044c_.pdf": {
+    "mtime": 1779733535.4055698,
+    "seen": 1787775475.2099073,
+    "ast_hash": "b0c4e2f0ad566c6cec130c13b3efd5ed",
+    "semantic_hash": "b0c4e2f0ad566c6cec130c13b3efd5ed"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0412\u041e\u0414\u0418\u0422\u042c \u041d\u041e\u0421\u0418\u0422\u042c \u0412\u041e\u0417\u0418\u0422\u042c \u043e\u0431\u0449\u0438\u0439.pdf": {
+    "mtime": 1779733535.4148192,
+    "seen": 1787775475.209908,
+    "ast_hash": "223a94bb7f3f22be35f04f78d3baa5e0",
+    "semantic_hash": "223a94bb7f3f22be35f04f78d3baa5e0"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0415\u0417\u0414\u0418\u0422\u042c \u0415\u0425\u0410\u0422\u042c \u0422\u0415\u041a\u0421\u0422 3.pdf": {
+    "mtime": 1779733535.4148192,
+    "seen": 1787775475.209909,
+    "ast_hash": "f6e6becb081cf9dfc0158ffdb75d0590",
+    "semantic_hash": "f6e6becb081cf9dfc0158ffdb75d0590"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0415\u0425\u0410\u0422\u042c \u0415\u0417\u0414\u0418\u0422\u042c \u0422\u0415\u041a\u0421\u0422 1.pdf": {
+    "mtime": 1779733535.4148192,
+    "seen": 1787775475.20991,
+    "ast_hash": "14663d004146cf03ee3c8ef878d4874a",
+    "semantic_hash": "14663d004146cf03ee3c8ef878d4874a"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0418\u0414\u0422\u0418 \u0425\u041e\u0414\u0418\u0422\u042c \u0433\u0440\u0430\u043c\u043c\u0430\u0442\u0438\u043a\u0430.pdf": {
+    "mtime": 1779733535.4148192,
+    "seen": 1787775475.2099109,
+    "ast_hash": "7d898df8b926759f1b59fcca6ab73b4d",
+    "semantic_hash": "7d898df8b926759f1b59fcca6ab73b4d"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u041c\u0410\u0420\u0410\u0424\u041e\u041d \u0413\u041b\u0410\u0413\u041e\u041b\u042b \u0414\u0412\u0418\u0416\u0415\u041d\u0418\u042f.pdf": {
+    "mtime": 1779733535.421308,
+    "seen": 1787775475.2099118,
+    "ast_hash": "47ca79f5d85688f6a5aa04d7a7220c5e",
+    "semantic_hash": "47ca79f5d85688f6a5aa04d7a7220c5e"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u041d\u0410 \u0412\u041a\u0423\u0421 \u0418 \u0426\u0412\u0415\u0422 \u0422\u041e\u0412\u0410\u0420\u0418\u0429\u0415\u0419 \u041d\u0415\u0422.pdf": {
+    "mtime": 1779733535.421308,
+    "seen": 1787775475.2099125,
+    "ast_hash": "b042a749c899c93b2f173622c3fc103e",
+    "semantic_hash": "b042a749c899c93b2f173622c3fc103e"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0425\u041e\u0414\u0418\u0422\u042c \u0418\u0414\u0422\u0418 \u041a\u0423\u0414\u0410.pdf": {
+    "mtime": 1779733535.426733,
+    "seen": 1787775475.2099135,
+    "ast_hash": "db7a63dee9e436f2b2dcb51b8cbdbce7",
+    "semantic_hash": "db7a63dee9e436f2b2dcb51b8cbdbce7"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0425\u041e\u0414\u0418\u0422\u042c \u0418\u0414\u0422\u0418 \u0422\u0415\u041a\u0421\u0422 1.pdf": {
+    "mtime": 1779733535.426733,
+    "seen": 1787775475.2099147,
+    "ast_hash": "f9531afbac97d1318decfc6d009eb2b1",
+    "semantic_hash": "f9531afbac97d1318decfc6d009eb2b1"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0425\u041e\u0414\u0418\u0422\u042c \u0418\u0414\u0422\u0418 \u0422\u0415\u041a\u0421\u0422 2.pdf": {
+    "mtime": 1779733535.426733,
+    "seen": 1787775475.2099154,
+    "ast_hash": "7a4d77851534e690cad29f4bc6bacddf",
+    "semantic_hash": "7a4d77851534e690cad29f4bc6bacddf"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0425\u041e\u0414\u0418\u0422\u042c \u0418\u0414\u0422\u0418 \u0422\u0415\u041a\u0421\u0422 3.pdf": {
+    "mtime": 1779733535.426733,
+    "seen": 1787775475.2099164,
+    "ast_hash": "9fa315e6e36e222652982ca78f3da80d",
+    "semantic_hash": "9fa315e6e36e222652982ca78f3da80d"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0425\u041e\u0414\u0418\u0422\u042c \u0418\u041b\u0418 \u0415\u0417\u0414\u0418\u0422\u042c \u0422\u0415\u041a\u0421\u0422 2.pdf": {
+    "mtime": 1779733535.432185,
+    "seen": 1787775475.2099175,
+    "ast_hash": "b84792f7fd3d624bc79e85ae31581fc1",
+    "semantic_hash": "b84792f7fd3d624bc79e85ae31581fc1"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0432\u0435\u0437\u0442\u0438 \u0432\u043e\u0437\u0438\u0442\u044c_\u0433\u0440\u0430\u043c\u043c\u0430\u0442\u0438\u043a\u0430.pdf": {
+    "mtime": 1779733535.4436545,
+    "seen": 1787775475.2099183,
+    "ast_hash": "3af8b2ea62da1252f7373c5b4b2f80a1",
+    "semantic_hash": "3af8b2ea62da1252f7373c5b4b2f80a1"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0432\u0435\u0441\u0442\u0438 \u0432\u043e\u0434\u0438\u0442\u044c.pdf": {
+    "mtime": 1779733535.4436545,
+    "seen": 1787775475.2099192,
+    "ast_hash": "7fc51f7a6af3a1df5a028a42688f836b",
+    "semantic_hash": "7fc51f7a6af3a1df5a028a42688f836b"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0433\u0434\u0435 \u043a\u0443\u0434\u0430 \u043e\u0442\u043a\u0443\u0434\u0430 _.pdf": {
+    "mtime": 1779733535.4530344,
+    "seen": 1787775475.2099202,
+    "ast_hash": "4fa60bb470e6a787d2d22202c98ad4c6",
+    "semantic_hash": "4fa60bb470e6a787d2d22202c98ad4c6"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0438\u0434\u0435\u043c, \u043a\u043e\u0433\u0434\u0430_.pdf": {
+    "mtime": 1779733535.4687643,
+    "seen": 1787775475.2099211,
+    "ast_hash": "18ed2cf3c8084462e6d00211278c016e",
+    "semantic_hash": "18ed2cf3c8084462e6d00211278c016e"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0438\u0434\u0442\u0438 1.pdf": {
+    "mtime": 1779733535.473465,
+    "seen": 1787775475.209922,
+    "ast_hash": "dff33e1fe94bd3a890e1770bb5dd7bd2",
+    "semantic_hash": "dff33e1fe94bd3a890e1770bb5dd7bd2"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0438\u0434\u0442\u0438 \u0438\u043b\u0438 \u0445\u043e\u0434\u0438\u0442\u044c.pdf": {
+    "mtime": 1779733535.4769542,
+    "seen": 1787775475.209923,
+    "ast_hash": "ff3a2c7248f6269501dd8b5bf9598bab",
+    "semantic_hash": "ff3a2c7248f6269501dd8b5bf9598bab"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0438\u0434\u0442\u0438 \u043a\u0443\u0434\u0430 \u0438\u0434\u0442\u0438 \u043a\u043e\u0433\u0434\u0430.pdf": {
+    "mtime": 1779733535.4798381,
+    "seen": 1787775475.2099237,
+    "ast_hash": "fda69dff5a60df0e2437ebbd9ed095d4",
+    "semantic_hash": "fda69dff5a60df0e2437ebbd9ed095d4"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u043a\u0443\u0434\u0430 \u043e\u0442\u043a\u0443\u0434\u0430 \u0433\u0440\u0430\u043c\u043c\u0430\u0442\u0438\u043a\u0430.pdf": {
+    "mtime": 1779733535.4798381,
+    "seen": 1787775475.209925,
+    "ast_hash": "d9e0eacd80e54d8f007e64ea9dc632c6",
+    "semantic_hash": "d9e0eacd80e54d8f007e64ea9dc632c6"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u043b\u044e\u0431\u0438\u0442 \u0445\u043e\u0434\u0438\u0442\u044c.pdf": {
+    "mtime": 1779733535.4950798,
+    "seen": 1787775475.209926,
+    "ast_hash": "ca82e4e1998924deb0061566e4f8e136",
+    "semantic_hash": "ca82e4e1998924deb0061566e4f8e136"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u043e\u0442\u0432\u0435\u0442\u044b \u0438\u0434\u0442\u0438 1.pdf": {
+    "mtime": 1779733535.4950798,
+    "seen": 1787775475.2099266,
+    "ast_hash": "7222d4b6968f87f51fe813b16fd26211",
+    "semantic_hash": "7222d4b6968f87f51fe813b16fd26211"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0441\u043b\u0443\u0447\u0430\u0439\u043d\u044b\u0435 \u0432\u0441\u0442\u0440\u0435\u0447\u0438 \u0445\u043e\u0434\u0438\u0442\u044c\u0438\u0434\u0442\u0438 1.pdf": {
+    "mtime": 1779733535.5062106,
+    "seen": 1787775475.2099278,
+    "ast_hash": "168afce23f20ab8d9a994183c2a2a319",
+    "semantic_hash": "168afce23f20ab8d9a994183c2a2a319"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0441\u043b\u0443\u0447\u0430\u0439\u043d\u044b\u0435 \u0432\u0441\u0442\u0440\u0435\u0447\u0438 \u0445\u043e\u0434\u0438\u0442\u044c\u0438\u0434\u0442\u0438 2.pdf": {
+    "mtime": 1779733535.5062106,
+    "seen": 1787775475.2099288,
+    "ast_hash": "7f3fcdc24c3f07d5e6120bad8f09d0c2",
+    "semantic_hash": "7f3fcdc24c3f07d5e6120bad8f09d0c2"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0445\u043e\u0434\u0438\u0442\u044c_.pdf": {
+    "mtime": 1779733535.5109086,
+    "seen": 1787775475.2099297,
+    "ast_hash": "b9f7e1ca72ef548e234b2fbbc4d2157a",
+    "semantic_hash": "b9f7e1ca72ef548e234b2fbbc4d2157a"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/PRINCIPIANTI_MODULO_1.1.2.pdf": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.2099302,
+    "ast_hash": "ce73c4898df4489451fc099fe44f466c",
+    "semantic_hash": "ce73c4898df4489451fc099fe44f466c"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/PRINCIPIANTI_MODULO_1.1.3.pdf": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.209931,
+    "ast_hash": "41836ccefdb6f7d844bc5c76632587a4",
+    "semantic_hash": "41836ccefdb6f7d844bc5c76632587a4"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/PRINCIPIANTI_MODULO_1.1.4.pdf": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.2099316,
+    "ast_hash": "50f4f21c4f9f72a3487d20396b092905",
+    "semantic_hash": "50f4f21c4f9f72a3487d20396b092905"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/PRINCIPIANTI_MODULO_1.1.5.pdf": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.2099323,
+    "ast_hash": "01c944897f7a546eb1c593373787e110",
+    "semantic_hash": "01c944897f7a546eb1c593373787e110"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/PRINCIPIANTI_MODULO_1.1.6.pdf": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.2099328,
+    "ast_hash": "660399443c5da5a54c91020c374098f9",
+    "semantic_hash": "660399443c5da5a54c91020c374098f9"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/PRINCIPIANTI_MODULO_1.1.7.pdf": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.2099335,
+    "ast_hash": "c4c951da1ba445515524fa0c1a5f472f",
+    "semantic_hash": "c4c951da1ba445515524fa0c1a5f472f"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/PRINCIPIANTI_MODULO_1.1.8.pdf": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.209934,
+    "ast_hash": "ae23760df2d5cccc059e73016b2b0dd3",
+    "semantic_hash": "ae23760df2d5cccc059e73016b2b0dd3"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/PRINCIPIANTI_MODULO_1.1.pdf": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.2099345,
+    "ast_hash": "727382d15d5b8279585de95d6718435d",
+    "semantic_hash": "727382d15d5b8279585de95d6718435d"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/alfabeto _sibilante.pdf": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.2099354,
+    "ast_hash": "6f845aaa6bb1bdf6deb574b365f5236f",
+    "semantic_hash": "6f845aaa6bb1bdf6deb574b365f5236f"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/\u0410\u041b\u0424\u0410\u0412\u0418\u0422 \u0413\u041b\u0410\u0421\u041d\u042b\u0415  \u0418 \u0421\u041e\u0413\u041b\u0410\u0421\u041d\u042b\u0415.pdf": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.2099364,
+    "ast_hash": "427530f1a7979b66ddde82028c50f535",
+    "semantic_hash": "427530f1a7979b66ddde82028c50f535"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/\u0410\u041b\u0424\u0410\u0412\u0418\u0422 \u0413\u041b\u0410\u0421\u041d\u042b\u0415_pr.pdf": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.2099373,
+    "ast_hash": "b2fc718e6e2ba9f5f6724eb8316898cc",
+    "semantic_hash": "b2fc718e6e2ba9f5f6724eb8316898cc"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/\u043c\u044f\u0433\u043a\u0438\u0439 \u0438 \u0442\u0432\u0435\u0440\u0434\u044b\u0439 \u0437\u043d\u0430\u043a.pdf": {
+    "mtime": 1779733535.5883589,
+    "seen": 1787775475.2099435,
+    "ast_hash": "0a9787264067f2e21877f4ff14766ef9",
+    "semantic_hash": "0a9787264067f2e21877f4ff14766ef9"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/\u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440 \u0438 \u044d\u043c\u043e\u0446\u0438\u0438_pr.pdf": {
+    "mtime": 1779733535.5883589,
+    "seen": 1787775475.2099442,
+    "ast_hash": "68ff4c32dba83a09bb2d0f469d2f1a32",
+    "semantic_hash": "68ff4c32dba83a09bb2d0f469d2f1a32"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/\u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440_pr.pdf": {
+    "mtime": 1779733535.5903707,
+    "seen": 1787775475.2099454,
+    "ast_hash": "b79f4d49f76e531ccd8ff4da053be606",
+    "semantic_hash": "b79f4d49f76e531ccd8ff4da053be606"
+  },
+  "corsi/principianti/Modulo 1/lezione 2/A12_MODULO_1.1 (Presentation).pdf.pdf": {
+    "mtime": 1779733535.6216812,
+    "seen": 1787775475.2099462,
+    "ast_hash": "73c901d083fb9759cfad0f27190d9d02",
+    "semantic_hash": "73c901d083fb9759cfad0f27190d9d02"
+  },
+  "corsi/principianti/Modulo 1/lezione 2/PRINCIPIANTI_1.2.pdf": {
+    "mtime": 1779733535.6216812,
+    "seen": 1787775475.2099469,
+    "ast_hash": "1afd36d18ec5708f79c1dca4befce405",
+    "semantic_hash": "1afd36d18ec5708f79c1dca4befce405"
+  },
+  "corsi/principianti/Modulo 1/lezione 2/PRINCIPIANTI_\u0410\u043b\u044c\u0431\u0435\u0440\u0442_il genivi e l-accusativo_1.2.2.pdf": {
+    "mtime": 1779733535.6216812,
+    "seen": 1787775475.2099478,
+    "ast_hash": "81654b759f2f1eaf95bf2a6ee1a9338f",
+    "semantic_hash": "81654b759f2f1eaf95bf2a6ee1a9338f"
+  },
+  "corsi/principianti/Modulo 1/lezione 2/pronomi possessivi e personali.pdf.pdf": {
+    "mtime": 1779733535.630097,
+    "seen": 1787775475.2099483,
+    "ast_hash": "92202a38407d46c8107176c3adf325a2",
+    "semantic_hash": "92202a38407d46c8107176c3adf325a2"
+  },
+  "corsi/principianti/Modulo 1/\u0415\u0421\u0422\u042c vs \u041d\u0415\u0422/il genitivo \u0415\u0421\u0422\u042c \u041d\u0415\u0422.pdf": {
+    "mtime": 1779733535.630097,
+    "seen": 1787775475.2099493,
+    "ast_hash": "021109a98211ca3fc1291336c12ff22a",
+    "semantic_hash": "021109a98211ca3fc1291336c12ff22a"
+  },
+  "corsi/principianti/Modulo 1/\u0415\u0421\u0422\u042c vs \u041d\u0415\u0422/il genitivo \u0415\u0421\u0422\u042c \u041d\u0415\u0422_1.pdf": {
+    "mtime": 1779733535.6346667,
+    "seen": 1787775475.2099502,
+    "ast_hash": "46a1e5f90f7850baa8d77422b73208be",
+    "semantic_hash": "46a1e5f90f7850baa8d77422b73208be"
+  },
+  "corsi/principianti/Modulo 1/\u041d\u0443\u0436\u043d\u043e-\u043d\u0443\u0436\u043d\u0430-\u043d\u0443\u0436\u043d\u044b/\u041d\u0423\u0416\u0415\u041d \u041d\u0423\u0416\u041d\u0410 \u041d\u0423\u0416\u041d\u041e \u041d\u0423\u0416\u041d\u042b.pdf": {
+    "mtime": 1779733535.6373298,
+    "seen": 1787775475.2099512,
+    "ast_hash": "03be61cdb9a4c89e641ffb8cd6445bbe",
+    "semantic_hash": "03be61cdb9a4c89e641ffb8cd6445bbe"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u041e\u0413\u041e\u0414\u0410/\u041e\u0411\u0421\u0422\u041e\u042f\u0422\u0415\u041b\u042c\u0421\u0422\u0412\u0410 \u0412\u0420\u0415\u041c\u0415\u041d\u0418.pdf": {
+    "mtime": 1779733535.6409707,
+    "seen": 1787775475.209952,
+    "ast_hash": "8290fa5552a3ba406fc172fccf69aa09",
+    "semantic_hash": "8290fa5552a3ba406fc172fccf69aa09"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u041e\u0413\u041e\u0414\u0410/\u041f\u041e\u0413\u041e\u0414\u0410 COMPLEMENTI.pdf": {
+    "mtime": 1779733535.6409707,
+    "seen": 1787775475.209953,
+    "ast_hash": "0b05ad78590918e4981cf744c9c63765",
+    "semantic_hash": "0b05ad78590918e4981cf744c9c63765"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u041e\u0413\u041e\u0414\u0410/\u041f\u041e\u0413\u041e\u0414\u0410 \u0411\u042b\u0412\u0410\u0415\u0422.pdf": {
+    "mtime": 1779733535.6409707,
+    "seen": 1787775475.2099538,
+    "ast_hash": "54c516ba61388fe892333a3a44821783",
+    "semantic_hash": "54c516ba61388fe892333a3a44821783"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u041e\u0413\u041e\u0414\u0410/\u041f\u041e\u0413\u041e\u0414\u0410 \u041d\u0410\u0420\u0415\u0427\u0418\u042f.pdf": {
+    "mtime": 1779733535.653054,
+    "seen": 1787775475.2099547,
+    "ast_hash": "85826f6bc0d438cc448b5066bbbc4609",
+    "semantic_hash": "85826f6bc0d438cc448b5066bbbc4609"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u041e\u0414\u0415\u0416\u0414\u0410.pdf": {
+    "mtime": 1779733535.6850035,
+    "seen": 1787775475.209956,
+    "ast_hash": "d47f548cffd803c7b0acfdc132a5ab71",
+    "semantic_hash": "d47f548cffd803c7b0acfdc132a5ab71"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415 \u041a\u0410\u0427\u0415\u0421\u0422\u0412\u0410 (1).pdf": {
+    "mtime": 1779733535.6850035,
+    "seen": 1787775475.209957,
+    "ast_hash": "20eaa3b74051dd4d8b488f6674813418",
+    "semantic_hash": "20eaa3b74051dd4d8b488f6674813418"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415 \u041a\u0410\u0427\u0415\u0421\u0422\u0412\u0410.pdf": {
+    "mtime": 1779733535.6850035,
+    "seen": 1787775475.2099578,
+    "ast_hash": "896bada9e4da0e4b3080da1bf81076c9",
+    "semantic_hash": "896bada9e4da0e4b3080da1bf81076c9"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415 \u041c\u0410\u0422\u0415\u0420\u0418\u0410\u041b.pdf": {
+    "mtime": 1779733535.6850035,
+    "seen": 1787775475.2099586,
+    "ast_hash": "b111bc8a90191cce3a18f5abca682b22",
+    "semantic_hash": "b111bc8a90191cce3a18f5abca682b22"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415 \u0424\u041e\u0420\u041c\u0410.pdf": {
+    "mtime": 1779733535.6850035,
+    "seen": 1787775475.2099597,
+    "ast_hash": "d83273c96551ccf7c8549d2ce4f67828",
+    "semantic_hash": "d83273c96551ccf7c8549d2ce4f67828"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415 \u0426\u0412\u0415\u0422.pdf": {
+    "mtime": 1779733535.6850035,
+    "seen": 1787775475.2099605,
+    "ast_hash": "8865509d56fc9617e29eb8a1eedf1cba",
+    "semantic_hash": "8865509d56fc9617e29eb8a1eedf1cba"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u0425\u0410\u0420\u0410\u041a\u0422\u0415\u0420.pdf": {
+    "mtime": 1779733535.6983893,
+    "seen": 1787775475.2099614,
+    "ast_hash": "baec803d87203b8835c5555ece6502fc",
+    "semantic_hash": "baec803d87203b8835c5555ece6502fc"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u043f\u0440\u0438\u043b\u0430\u0433\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0430 \u0414\u043e\u0431\u0440\u044b\u0439 \u0417\u043b\u043e\u0439.pdf": {
+    "mtime": 1779733535.7009084,
+    "seen": 1787775475.2099626,
+    "ast_hash": "398121c69422a9a93a18d56fe45da363",
+    "semantic_hash": "398121c69422a9a93a18d56fe45da363"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440 \u0438 \u044d\u043c\u043e\u0446\u0438\u0438.pdf": {
+    "mtime": 1779733535.7170198,
+    "seen": 1787775475.2099636,
+    "ast_hash": "f51fbc6d0548109cab3f6c8154c641c7",
+    "semantic_hash": "f51fbc6d0548109cab3f6c8154c641c7"
+  },
+  "corsi/principianti/Modulo 1/\u0420\u041e\u0414\u0418\u0422\u0415\u041b\u042c\u041d\u042b\u0419 \u041f\u0410\u0414\u0415\u0416 \u041c\u041d\u041e\u0416\u0415\u0421\u0422\u0412\u0415\u041d\u041d\u041e\u0415 \u0427\u0418\u0421\u041b\u041e/\u043c\u043d\u043e\u0433\u043e\u043c\u0430\u043b\u043e 0.pdf": {
+    "mtime": 1779733535.7170198,
+    "seen": 1787775475.2099643,
+    "ast_hash": "7f3c1a2fa8d7b7c2c491dfd24c1894e9",
+    "semantic_hash": "7f3c1a2fa8d7b7c2c491dfd24c1894e9"
+  },
+  "corsi/principianti/Modulo 1/\u0420\u041e\u0414\u0418\u0422\u0415\u041b\u042c\u041d\u042b\u0419 \u041f\u0410\u0414\u0415\u0416 \u041c\u041d\u041e\u0416\u0415\u0421\u0422\u0412\u0415\u041d\u041d\u041e\u0415 \u0427\u0418\u0421\u041b\u041e/\u043c\u043d\u043e\u0433\u043e\u043c\u0430\u043b\u043e 1.pdf": {
+    "mtime": 1779733535.7329123,
+    "seen": 1787775475.2099652,
+    "ast_hash": "b56d88336798c8a1e36039f0ccca1fae",
+    "semantic_hash": "b56d88336798c8a1e36039f0ccca1fae"
+  },
+  "corsi/principianti/Modulo 1/\u0420\u041e\u0414\u0418\u0422\u0415\u041b\u042c\u041d\u042b\u0419 \u041f\u0410\u0414\u0415\u0416 \u041c\u041d\u041e\u0416\u0415\u0421\u0422\u0412\u0415\u041d\u041d\u041e\u0415 \u0427\u0418\u0421\u041b\u041e/\u043c\u043d\u043e\u0433\u043e\u043c\u0430\u043b\u043e.pdf": {
+    "mtime": 1779733535.7329123,
+    "seen": 1787775475.2099664,
+    "ast_hash": "a470c1d8bad6e565abd8d5b1a57bdd7b",
+    "semantic_hash": "a470c1d8bad6e565abd8d5b1a57bdd7b"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/A12_MODULO_1.1.pdf": {
+    "mtime": 1779733535.7488704,
+    "seen": 1787775475.2099671,
+    "ast_hash": "f467fc9bc49514ea27d53e1ab8d29358",
+    "semantic_hash": "f467fc9bc49514ea27d53e1ab8d29358"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u0410\u041b\u042c\u0411\u0415\u0420\u0422_il genitivo L-accusativo_0.pdf": {
+    "mtime": 1779733535.7806075,
+    "seen": 1787775475.209968,
+    "ast_hash": "b1732f0fe975cdfae718898ce9acb7c5",
+    "semantic_hash": "b1732f0fe975cdfae718898ce9acb7c5"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u0410\u041b\u042c\u0411\u0415\u0420\u0422_il genitivo L-accusativo_0_PR.pdf": {
+    "mtime": 1779733535.7806075,
+    "seen": 1787775475.209969,
+    "ast_hash": "4af69a37544b0a015a3bce6342a5877f",
+    "semantic_hash": "4af69a37544b0a015a3bce6342a5877f"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u0410\u043b\u044c\u0431\u0435\u0440\u0442_il genivi e l-accusativo.pdf": {
+    "mtime": 1779733535.7806075,
+    "seen": 1787775475.2099702,
+    "ast_hash": "e487b30b4dcd94836eb285de59d234b1",
+    "semantic_hash": "e487b30b4dcd94836eb285de59d234b1"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u0410\u043b\u044c\u0431\u0435\u0440\u0442_il genivi e l-accusativo_PR.pdf": {
+    "mtime": 1779733535.7806075,
+    "seen": 1787775475.2099712,
+    "ast_hash": "4bef60522a94aee84c2efc48065ddd0f",
+    "semantic_hash": "4bef60522a94aee84c2efc48065ddd0f"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u0442\u0440\u043e\u0435 \u0434\u0432\u043e\u0435 \u043e\u0434\u043d\u043e\u0433\u043e \u0434\u0440\u0443\u0433\u043e\u0433\u043e.pdf": {
+    "mtime": 1779733535.8767726,
+    "seen": 1787775475.209972,
+    "ast_hash": "46cebea88fb9e129d9cb6516589a3494",
+    "semantic_hash": "46cebea88fb9e129d9cb6516589a3494"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041d\u0422\u041e\u041d\u0410/Specialista formazione CV Pletneva.pdf.pdf": {
+    "mtime": 1779733535.8767726,
+    "seen": 1787775475.209973,
+    "ast_hash": "459af77325866516da27184cc75ea2ab",
+    "semantic_hash": "459af77325866516da27184cc75ea2ab"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041d\u0422\u041e\u041d\u0410/il genitivo \u0412\u041d\u0415\u0428\u041d\u041e\u0421\u0422\u042c.pdf": {
+    "mtime": 1779733535.8767726,
+    "seen": 1787775475.209974,
+    "ast_hash": "a5d9a5007902e281e562275f9acfab6c",
+    "semantic_hash": "a5d9a5007902e281e562275f9acfab6c"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041d\u0422\u041e\u041d\u0410/\u0410\u041d\u0422\u041e\u041d \u0414\u0412\u041e\u0415 \u0422\u0420\u041e\u0415.pdf": {
+    "mtime": 1779733535.8767726,
+    "seen": 1787775475.2099748,
+    "ast_hash": "edca29adf73093237090a1b72e0c22a6",
+    "semantic_hash": "edca29adf73093237090a1b72e0c22a6"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041d\u0422\u041e\u041d\u0410/\u0412\u041d\u0415\u0428\u041d\u041e\u0421\u0422\u042c.pdf": {
+    "mtime": 1779733535.8767726,
+    "seen": 1787775475.2099757,
+    "ast_hash": "375e0a55ceef6117c33cfd485d2e68ac",
+    "semantic_hash": "375e0a55ceef6117c33cfd485d2e68ac"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041d\u0422\u041e\u041d\u0410/\u0421\u0435\u043c\u044c\u044f \u041a\u0430\u0442\u0438 \u0430\u0443\u0434\u0438\u043e.pdf": {
+    "mtime": 1779733535.8767726,
+    "seen": 1787775475.2099767,
+    "ast_hash": "991c8b1b3f6226cd1ad669bbe56945e5",
+    "semantic_hash": "991c8b1b3f6226cd1ad669bbe56945e5"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041d\u0422\u041e\u041d\u0410/\u0441\u0435\u043c\u044c\u044f \u0410\u043d\u0442\u043e\u043d\u0430.pdf": {
+    "mtime": 1779733535.9551773,
+    "seen": 1787775475.2099776,
+    "ast_hash": "046adc63d79ad41a60f2f5bb1f3d0f43",
+    "semantic_hash": "046adc63d79ad41a60f2f5bb1f3d0f43"
+  },
+  "corsi/principianti/stato vs moto/STATO IN LIOGO \u0434\u043e\u043c\u0430.pdf": {
+    "mtime": 1779733535.9551773,
+    "seen": 1787775475.2099786,
+    "ast_hash": "752277e62b5781a333870f3e349fc496",
+    "semantic_hash": "752277e62b5781a333870f3e349fc496"
+  },
+  "corsi/principianti/stato vs moto/STATO IN LUGO \u043d\u0430 \u0443\u043b\u0438\u0446\u0435.pdf": {
+    "mtime": 1779733535.9551773,
+    "seen": 1787775475.2099793,
+    "ast_hash": "4380d8899ad74bb1f1e9c14b9194d9c7",
+    "semantic_hash": "4380d8899ad74bb1f1e9c14b9194d9c7"
+  },
+  "corsi/principianti/stato vs moto/STATO IN LUOGO \u0440\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u043f\u0430\u0434\u0435\u0436.pdf": {
+    "mtime": 1779733535.9551773,
+    "seen": 1787775475.2099805,
+    "ast_hash": "4b4e5c281c93354ae0a94158c8e7c8b3",
+    "semantic_hash": "4b4e5c281c93354ae0a94158c8e7c8b3"
+  },
+  "corsi/principianti/stato vs moto/STATO IN LUOGO \u0442\u0432\u043e\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439.pdf": {
+    "mtime": 1779733535.9551773,
+    "seen": 1787775475.2099812,
+    "ast_hash": "a6637d8569cdccf44d13653878f02e39",
+    "semantic_hash": "a6637d8569cdccf44d13653878f02e39"
+  },
+  "corsi/principianti/stato vs moto/\u0417\u043e\u043b\u043e\u0442\u043e \u043d\u0430 \u0433\u043e\u043b\u0443\u0431\u043e\u043c.pdf": {
+    "mtime": 1779733535.9551773,
+    "seen": 1787775475.2099822,
+    "ast_hash": "6318a4076d1e620385aec31bf44d0180",
+    "semantic_hash": "6318a4076d1e620385aec31bf44d0180"
+  },
+  "corsi/principianti/stato vs moto/\u041f\u0420\u0415\u0414\u041b\u041e\u0416\u041d\u042b\u0419 \u041e\u0414\u0415\u0416\u0414\u0410 \u041e\u0411\u0423\u0412\u042c \u041f\u041e\u0421\u0423\u0414\u0410.pdf": {
+    "mtime": 1779733535.9711564,
+    "seen": 1787775475.2099833,
+    "ast_hash": "ee5850d7419ab9dc341889d83db5d878",
+    "semantic_hash": "ee5850d7419ab9dc341889d83db5d878"
+  },
+  "corsi/principianti/stato vs moto/\u0434\u0438\u0430\u043b\u043e\u0433\u0438 \u043f\u0440\u0435\u0434\u043b\u043e\u0436\u043d\u044b\u0439.pdf": {
+    "mtime": 1779733535.9711564,
+    "seen": 1787775475.209984,
+    "ast_hash": "076abae1c571d91907937c574e501938",
+    "semantic_hash": "076abae1c571d91907937c574e501938"
+  },
+  "corsi/principianti/stato vs moto/\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0433\u0434\u0435 \u043f\u0440\u0435\u0434\u043b\u043e\u0436\u043d\u044b\u0439.pdf": {
+    "mtime": 1779733535.9711564,
+    "seen": 1787775475.209985,
+    "ast_hash": "ec04959b78e31eebc5f664a65e6c279f",
+    "semantic_hash": "ec04959b78e31eebc5f664a65e6c279f"
+  },
+  "corsi/principianti/stato vs moto/\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0433\u0434\u0435 \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u044b.pdf": {
+    "mtime": 1779733535.976773,
+    "seen": 1787775475.2099857,
+    "ast_hash": "af740c448ddd38453d3266d4522f99ec",
+    "semantic_hash": "af740c448ddd38453d3266d4522f99ec"
+  },
+  "corsi/principianti/stato vs moto/\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0433\u0434\u0435 \u0440\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439.pdf": {
+    "mtime": 1779733535.976773,
+    "seen": 1787775475.209987,
+    "ast_hash": "ab533e29b2e72401481654d5f60b76f4",
+    "semantic_hash": "ab533e29b2e72401481654d5f60b76f4"
+  },
+  "corsi/principianti/stato vs moto/\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0433\u0434\u0435 \u0442\u0432\u043e\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439.pdf": {
+    "mtime": 1779733535.976773,
+    "seen": 1787775475.2099876,
+    "ast_hash": "4a5a6a633369d9130c445b7e310333a0",
+    "semantic_hash": "4a5a6a633369d9130c445b7e310333a0"
+  },
+  "corsi/principianti/stato vs moto/\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0433\u0434\u0435 \u0442\u0440\u0430\u0441\u043f\u043e\u0440\u0442 \u0434\u0435\u043d\u044c\u0433\u0438 \u0431\u0438\u043b\u0435\u0442\u044b.pdf": {
+    "mtime": 1779733535.976773,
+    "seen": 1787775475.2099886,
+    "ast_hash": "fb2c5dfd6a11b09ba075565c58694856",
+    "semantic_hash": "fb2c5dfd6a11b09ba075565c58694856"
+  },
+  "corsi/principianti/stato vs moto/\u043f\u0440\u0435\u0434\u043b\u043e\u0436\u043d\u044b\u0439 \u0433\u0440\u0430\u043c\u043c\u0430\u0442\u0438\u043a\u0430.pdf": {
+    "mtime": 1779733535.976773,
+    "seen": 1787775475.2099898,
+    "ast_hash": "95721fb4706f4adfa00cfc5b661e98a0",
+    "semantic_hash": "95721fb4706f4adfa00cfc5b661e98a0"
+  },
+  "corsi/principianti/stato vs moto/\u043f\u0440\u0435\u0434\u043b\u043e\u0436\u043d\u044b\u0439 \u0434\u0438\u0430\u043b\u043e\u0433\u0438_1.pdf": {
+    "mtime": 1779733535.976773,
+    "seen": 1787775475.2099907,
+    "ast_hash": "c768c52f83361ad3f6ec4fba3bd19425",
+    "semantic_hash": "c768c52f83361ad3f6ec4fba3bd19425"
+  },
+  "ruoli/documenti/LiveLanguage_FunzionalitaFuture.pdf": {
+    "mtime": 1774334528.2806551,
+    "seen": 1787775475.2099915,
+    "ast_hash": "afdf183654e829799e8b11428b48ed45",
+    "semantic_hash": "afdf183654e829799e8b11428b48ed45"
+  },
+  "ruoli/documenti/didattica/maratona Verbi di moto/Giorno1_Idti_Hodit_Programma_Lezione_v1.md.pdf": {
+    "mtime": 1786786992.7242167,
+    "seen": 1787775475.2099922,
+    "ast_hash": "c35d48a65d0ff50865caebbc1d725a5a",
+    "semantic_hash": "c35d48a65d0ff50865caebbc1d725a5a"
+  },
+  "ruoli/documenti/didattica/maratona Verbi di moto/Giorno1_Idti_Hodit_Programma_Lezione_v1.pdf": {
+    "mtime": 1786788259.5367563,
+    "seen": 1787775475.2099926,
+    "ast_hash": "3c04dd75239bd0b857dbf3e4ec965081",
+    "semantic_hash": "3c04dd75239bd0b857dbf3e4ec965081"
+  },
+  "ruoli/documenti/didattica/maratona Verbi di moto/Giorno4_Transitivi_Programma_Lezione_v1.md.pdf": {
+    "mtime": 1783682134.6236348,
+    "seen": 1787775475.2099934,
+    "ast_hash": "ba3e404587d7d3a8065bfa719f3ab49d",
+    "semantic_hash": "ba3e404587d7d3a8065bfa719f3ab49d"
+  },
+  "ruoli/documenti/didattica/maratona Verbi di moto/Giorno5_Shel_Hodil_Programma_Lezione_v1.md.pdf": {
+    "mtime": 1783682161.775938,
+    "seen": 1787775475.209994,
+    "ast_hash": "02c36aa1c2ad88fd15df7ed62099c63d",
+    "semantic_hash": "02c36aa1c2ad88fd15df7ed62099c63d"
+  },
+  "ruoli/documenti/didattica/maratona Verbi di moto/Giorno6_Bezhal_Ehal_Programma_Lezione_v1.md.pdf": {
+    "mtime": 1783682179.2570715,
+    "seen": 1787775475.2099948,
+    "ast_hash": "be2be5c1710603f390357109f17458a3",
+    "semantic_hash": "be2be5c1710603f390357109f17458a3"
+  },
+  "ruoli/documenti/didattica/maratona Verbi di moto/Giorno7_Letel_Plyl_Programma_Lezione_v1.md.pdf": {
+    "mtime": 1783682201.8043964,
+    "seen": 1787775475.2099955,
+    "ast_hash": "8d997a9ac591d83e54ea6c814fe4f9de",
+    "semantic_hash": "8d997a9ac591d83e54ea6c814fe4f9de"
+  },
+  "ruoli/documenti/didattica/maratona Verbi di moto/LLR_Piano_Lezione_Verbi_Specifici_Presente_IT.pdf": {
+    "mtime": 1786788506.2730224,
+    "seen": 1787775475.209996,
+    "ast_hash": "474db77110eefa39e593adf68660ea49",
+    "semantic_hash": "474db77110eefa39e593adf68660ea49"
+  },
+  "ruoli/documenti/invest/Scuola online progetto.docx.pdf": {
+    "mtime": 1774335339.156132,
+    "seen": 1787775475.2099967,
+    "ast_hash": "7d31b258bfe19d83ae596b9726a3bdda",
+    "semantic_hash": "7d31b258bfe19d83ae596b9726a3bdda"
+  },
+  "ruoli/documenti/marketing/Strategia_Hashtag_YouTube_TikTok.pdf": {
+    "mtime": 1774341308.3279767,
+    "seen": 1787775475.2099974,
+    "ast_hash": "5a040e3ae62136c080340a746c548503",
+    "semantic_hash": "5a040e3ae62136c080340a746c548503"
+  },
+  "smm/verbi di moto video/Storyboard_\u0412\u0420\u0415\u041c\u042f_\u0427\u0410\u0421\u042b_Instagram.pdf": {
+    "mtime": 1780311453.628658,
+    "seen": 1787775475.2099981,
+    "ast_hash": "13f12e930a852a901d1b4edc23c1700f",
+    "semantic_hash": "13f12e930a852a901d1b4edc23c1700f"
+  },
+  "smm/verbi di moto video/Storyboard_\u0412\u0420\u0415\u041c\u042f_\u0427\u0410\u0421\u042b_TikTok.pdf": {
+    "mtime": 1780315415.2935667,
+    "seen": 1787775475.209999,
+    "ast_hash": "6b9e30772cbe7e82561f2f7d7d505940",
+    "semantic_hash": "6b9e30772cbe7e82561f2f7d7d505940"
+  },
+  "smm/verbi di moto video/Storyboard_\u0412\u0420\u0415\u041c\u042f_\u0427\u0410\u0421\u042b_YouTube.pdf": {
+    "mtime": 1780315586.5694282,
+    "seen": 1787775475.21,
+    "ast_hash": "3456d7de9ef58802ca99d3a46486e4da",
+    "semantic_hash": "3456d7de9ef58802ca99d3a46486e4da"
+  },
+  "smm/verbi di moto video/Storyboard_\u0414\u041e\u0416\u0414\u042c_\u0421\u041d\u0415\u0413_Instagram.pdf": {
+    "mtime": 1780315910.196183,
+    "seen": 1787775475.2100012,
+    "ast_hash": "543ba5e2d4024a271d7b4045de116a82",
+    "semantic_hash": "543ba5e2d4024a271d7b4045de116a82"
+  },
+  "smm/verbi di moto video/Storyboard_\u0414\u041e\u0416\u0414\u042c_\u0421\u041d\u0415\u0413_TikTok.pdf": {
+    "mtime": 1780315916.6218686,
+    "seen": 1787775475.210002,
+    "ast_hash": "7736f4614f076487db240c9877ea639f",
+    "semantic_hash": "7736f4614f076487db240c9877ea639f"
+  },
+  "smm/verbi di moto video/Storyboard_\u0414\u041e\u0416\u0414\u042c_\u0421\u041d\u0415\u0413_YouTube.pdf": {
+    "mtime": 1780315921.730496,
+    "seen": 1787775475.210003,
+    "ast_hash": "7ebdcbb9870de379d08dd74d6b5898eb",
+    "semantic_hash": "7ebdcbb9870de379d08dd74d6b5898eb"
+  },
+  "smm/verbi di moto video/Storyboard_\u0417\u0410\u0419\u0426\u0415\u041c_Instagram.pdf": {
+    "mtime": 1780318335.396354,
+    "seen": 1787775475.2100036,
+    "ast_hash": "dab3a1399347df46ed52534a3185404a",
+    "semantic_hash": "dab3a1399347df46ed52534a3185404a"
+  },
+  "smm/verbi di moto video/Storyboard_\u0417\u0410\u0419\u0426\u0415\u041c_TikTok.pdf": {
+    "mtime": 1780318341.874259,
+    "seen": 1787775475.2100048,
+    "ast_hash": "8ec927ffdfb589b50cb25d1fff3784f2",
+    "semantic_hash": "8ec927ffdfb589b50cb25d1fff3784f2"
+  },
+  "smm/verbi di moto video/Storyboard_\u0417\u0410\u0419\u0426\u0415\u041c_YouTube.pdf": {
+    "mtime": 1780318355.9174316,
+    "seen": 1787775475.2100055,
+    "ast_hash": "6de1a137ea9631b0f4f50062ee1985b4",
+    "semantic_hash": "6de1a137ea9631b0f4f50062ee1985b4"
+  },
+  "smm/verbi di moto video/Storyboard_\u041b\u0410\u0421\u041a\u0410\u041b\u0410_Instagram.pdf": {
+    "mtime": 1780317729.2166753,
+    "seen": 1787775475.2100065,
+    "ast_hash": "9d8fd82dd3169cf0a3c0ae180f083e79",
+    "semantic_hash": "9d8fd82dd3169cf0a3c0ae180f083e79"
+  },
+  "smm/verbi di moto video/Storyboard_\u041b\u0410\u0421\u041a\u0410\u041b\u0410_TikTok.pdf": {
+    "mtime": 1780317770.4971774,
+    "seen": 1787775475.2100077,
+    "ast_hash": "2b4a085b2d1f04b7d7d46719c6eb231c",
+    "semantic_hash": "2b4a085b2d1f04b7d7d46719c6eb231c"
+  },
+  "smm/verbi di moto video/Storyboard_\u041b\u0410\u0421\u041a\u0410\u041b\u0410_YouTube.pdf": {
+    "mtime": 1780317780.129769,
+    "seen": 1787775475.2100084,
+    "ast_hash": "727c9d4f51f41da855983b99fe8328b6",
+    "semantic_hash": "727c9d4f51f41da855983b99fe8328b6"
+  },
+  "smm/verbi di moto video/Storyboard_\u0424\u0418\u041b\u042c\u041c_\u0421\u041e\u0411\u042b\u0422\u0418\u0415_Instagram.pdf": {
+    "mtime": 1780316397.171032,
+    "seen": 1787775475.2100093,
+    "ast_hash": "e3b2a848fa84a3fcb0363b40bc5f26e0",
+    "semantic_hash": "e3b2a848fa84a3fcb0363b40bc5f26e0"
+  },
+  "smm/verbi di moto video/Storyboard_\u0424\u0418\u041b\u042c\u041c_\u0421\u041e\u0411\u042b\u0422\u0418\u0415_TikTok.pdf": {
+    "mtime": 1780316401.2596905,
+    "seen": 1787775475.2100103,
+    "ast_hash": "bdc4897627c156309c92eae34770d954",
+    "semantic_hash": "bdc4897627c156309c92eae34770d954"
+  },
+  "smm/verbi di moto video/Storyboard_\u0424\u0418\u041b\u042c\u041c_\u0421\u041e\u0411\u042b\u0422\u0418\u0415_YouTube.pdf": {
+    "mtime": 1780316406.1133468,
+    "seen": 1787775475.2100112,
+    "ast_hash": "5e9ad840e2eef46733c2af2faac2069c",
+    "semantic_hash": "5e9ad840e2eef46733c2af2faac2069c"
+  },
+  "assets/img/walking-cloud.svg": {
+    "mtime": 1779733535.3968172,
+    "seen": 1787775475.210012,
+    "ast_hash": "13c5cdb42ef12378088e95b6d7ac54c2",
+    "semantic_hash": "13c5cdb42ef12378088e95b6d7ac54c2"
+  },
+  "assets/logog scuola finfin.png": {
+    "mtime": 1773682009.9155087,
+    "seen": 1787775475.2100124,
+    "ast_hash": "9e79b4969f8ab2eb49bf54c27e9cc653",
+    "semantic_hash": "9e79b4969f8ab2eb49bf54c27e9cc653"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0425\u041e\u0414\u0418\u0422\u042c \u0418\u041b\u0418 \u0415\u0417\u0414\u0418\u0422\u042c 3.png": {
+    "mtime": 1779733535.432185,
+    "seen": 1787775475.2100136,
+    "ast_hash": "b41d68eff1e522ef6f98c0a5f9d7da6d",
+    "semantic_hash": "b41d68eff1e522ef6f98c0a5f9d7da6d"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0431\u0435\u0433\u0430\u0442\u044c \u0431\u0435\u0436\u0430\u0442\u044c.png": {
+    "mtime": 1779733535.4391634,
+    "seen": 1787775475.2100148,
+    "ast_hash": "6726b3d72645cf7552a9cad19f524e40",
+    "semantic_hash": "6726b3d72645cf7552a9cad19f524e40"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0432\u043e\u0434\u0438\u0442\u044c \u0437\u0430 \u043d\u043e\u0441.png": {
+    "mtime": 1779733535.4436545,
+    "seen": 1787775475.2100155,
+    "ast_hash": "d319978603092650a0bcf6a3d0f74308",
+    "semantic_hash": "d319978603092650a0bcf6a3d0f74308"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0435\u0437\u0434\u0438\u0442\u044c \u043f\u043b\u0430\u0432\u0430\u0442\u044c \u0445\u043e\u0434\u0438\u0442\u044c \u04471.png": {
+    "mtime": 1779733535.4576437,
+    "seen": 1787775475.2100163,
+    "ast_hash": "531be11724cf1eae46ac36f9d0191dd0",
+    "semantic_hash": "531be11724cf1eae46ac36f9d0191dd0"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0435\u0445\u0430\u0442\u044c_\u0435\u0437\u0434\u0438\u0442\u044c \u0442\u0435\u043a\u0441\u0442\u044b.png": {
+    "mtime": 1779733535.4635663,
+    "seen": 1787775475.2100172,
+    "ast_hash": "4baa9841da15a2d3c05e4d393bd195fd",
+    "semantic_hash": "4baa9841da15a2d3c05e4d393bd195fd"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0438\u0434\u0442\u0438 \u0438\u043b\u0438 \u0445\u043e\u0434\u0438\u0442\u044c.png": {
+    "mtime": 1779733535.4798381,
+    "seen": 1787775475.2100184,
+    "ast_hash": "e4abf2f54b665b736ce5ca7ce35f976e",
+    "semantic_hash": "e4abf2f54b665b736ce5ca7ce35f976e"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u043b\u0435\u0442\u0430\u0442\u044c \u043b\u0435\u0442\u0435\u0442\u044c.png": {
+    "mtime": 1779733535.4914834,
+    "seen": 1787775475.210019,
+    "ast_hash": "969e25d4a635b0e3dbf981739494cf69",
+    "semantic_hash": "969e25d4a635b0e3dbf981739494cf69"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u043f\u043b\u0430\u0432\u0430\u0442\u044c \u043f\u043b\u044b\u0442\u044c.png": {
+    "mtime": 1779733535.5038767,
+    "seen": 1787775475.21002,
+    "ast_hash": "d014d128cf4ec30991c17afc7ae42c7a",
+    "semantic_hash": "d014d128cf4ec30991c17afc7ae42c7a"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u043f\u0440\u0435\u0437\u0435\u043d\u0442\u0430\u0446\u0438\u044f.png": {
+    "mtime": 1779733535.5062106,
+    "seen": 1787775475.2100208,
+    "ast_hash": "7abeeb68db2b3d34be8e43957b768bcc",
+    "semantic_hash": "7abeeb68db2b3d34be8e43957b768bcc"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0445\u043e\u0434\u0438\u0442 \u0438\u043b\u0438 \u0435\u0437\u0434\u0438\u0442\u044c_1.png": {
+    "mtime": 1779733535.5062106,
+    "seen": 1787775475.210022,
+    "ast_hash": "a7feebd6cb0465d44e481f432e5a3c8e",
+    "semantic_hash": "a7feebd6cb0465d44e481f432e5a3c8e"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0445\u043e\u0434\u0438\u0442\u044c \u0438\u043b\u0438 \u0435\u0437\u0434\u0438\u0442\u044c_2.png": {
+    "mtime": 1779733535.5109086,
+    "seen": 1787775475.210023,
+    "ast_hash": "14a46531be1aeb120f4ceae793f0ce12",
+    "semantic_hash": "14a46531be1aeb120f4ceae793f0ce12"
+  },
+  "corsi/MARATONE/VERBI_DI_MOTO/1 blocco/\u0447\u0442\u043e \u043d\u043e\u0441\u0438\u0442\u044c.png": {
+    "mtime": 1779733535.5180008,
+    "seen": 1787775475.2100236,
+    "ast_hash": "89d77d007e3d626283cb65b22badd419",
+    "semantic_hash": "89d77d007e3d626283cb65b22badd419"
+  },
+  "corsi/principianti/Modulo 1/Lezione 3/GENITIVO di appartenenza.png": {
+    "mtime": 1779733535.5270047,
+    "seen": 1787775475.2100244,
+    "ast_hash": "a629188e376a7b1fa1bbc9fd75790252",
+    "semantic_hash": "a629188e376a7b1fa1bbc9fd75790252"
+  },
+  "corsi/principianti/Modulo 1/lezione 1/PRINCIPIANTI_MODULO_1.5.png": {
+    "mtime": 1779733535.57689,
+    "seen": 1787775475.2100253,
+    "ast_hash": "a4d0d2d80bc4e125fd6a0a35e4096140",
+    "semantic_hash": "a4d0d2d80bc4e125fd6a0a35e4096140"
+  },
+  "corsi/principianti/Modulo 1/lezione 2/Minimal Teacher Lesson Plan.png": {
+    "mtime": 1779733535.6216812,
+    "seen": 1787775475.210026,
+    "ast_hash": "812ef2c153dc673c4152357090b21f74",
+    "semantic_hash": "812ef2c153dc673c4152357090b21f74"
+  },
+  "corsi/principianti/Modulo 1/\u041d\u0443\u0436\u043d\u043e-\u043d\u0443\u0436\u043d\u0430-\u043d\u0443\u0436\u043d\u044b/\u041d\u0423\u0416\u0415\u041d \u041d\u0423\u0416\u041d\u0410 \u041d\u0423\u0416\u041d\u041e\u041d\u0423\u0416\u041d\u042b.png": {
+    "mtime": 1779733535.6409707,
+    "seen": 1787775475.210027,
+    "ast_hash": "aea97f6830f79e7df5f54eab69225611",
+    "semantic_hash": "aea97f6830f79e7df5f54eab69225611"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/il genitivo_forma.png": {
+    "mtime": 1779733535.6850035,
+    "seen": 1787775475.210028,
+    "ast_hash": "e608889bfaf5465d988a6261c6b9265d",
+    "semantic_hash": "e608889bfaf5465d988a6261c6b9265d"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u0432\u0435\u0441\u0435\u043b\u044b\u0439.jpg": {
+    "mtime": 1779733535.7009084,
+    "seen": 1787775475.2100291,
+    "ast_hash": "738e886fa76323aa828d7cd46ad3e425",
+    "semantic_hash": "738e886fa76323aa828d7cd46ad3e425"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u0432\u043d\u0438\u043c\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0439.jpg": {
+    "mtime": 1779733535.7009084,
+    "seen": 1787775475.2100298,
+    "ast_hash": "dc1dc884c9642d3fed17666300c7d5c2",
+    "semantic_hash": "dc1dc884c9642d3fed17666300c7d5c2"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u0433\u0440\u0443\u0441\u0442\u043d\u044b\u0439.jpg": {
+    "mtime": 1779733535.7009084,
+    "seen": 1787775475.2100308,
+    "ast_hash": "81aa3f54cc4af8f5941618d27bd3e905",
+    "semantic_hash": "81aa3f54cc4af8f5941618d27bd3e905"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u0437\u0430\u0441\u0442\u0435\u043d\u0447\u0435\u0432\u044b\u0439.jpg": {
+    "mtime": 1779733535.7009084,
+    "seen": 1787775475.2100315,
+    "ast_hash": "d8a54aef6c1b5a056418b2f10627f944",
+    "semantic_hash": "d8a54aef6c1b5a056418b2f10627f944"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u0437\u043b\u0430\u044f.jpg": {
+    "mtime": 1779733535.7009084,
+    "seen": 1787775475.2100327,
+    "ast_hash": "20aa8246346887e0c06255d5649c53bf",
+    "semantic_hash": "20aa8246346887e0c06255d5649c53bf"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u043b\u044e\u0431\u043e\u043f\u044b\u0442\u043d\u044b\u0439.jpg": {
+    "mtime": 1779733535.7009084,
+    "seen": 1787775475.2100337,
+    "ast_hash": "43591083d47177f1abf90cde922e2938",
+    "semantic_hash": "43591083d47177f1abf90cde922e2938"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u043f\u0440\u0438\u043b\u0430\u0433\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0446\u0432\u0435\u0442.png": {
+    "mtime": 1779733535.7009084,
+    "seen": 1787775475.2100344,
+    "ast_hash": "17495704a9c077f0a591ddc72277b6cc",
+    "semantic_hash": "17495704a9c077f0a591ddc72277b6cc"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u043f\u0440\u0438\u043b\u0430\u0433\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435_\u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b.png": {
+    "mtime": 1779733535.7009084,
+    "seen": 1787775475.2100356,
+    "ast_hash": "bffe4c69b3a089ccef9d9f7291769de8",
+    "semantic_hash": "bffe4c69b3a089ccef9d9f7291769de8"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u043f\u0440\u0438\u043b\u0430\u0433\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435_\u0444\u043e\u0440\u043c\u0430.png": {
+    "mtime": 1779733535.7170198,
+    "seen": 1787775475.2100365,
+    "ast_hash": "cb133ca11fde34252d0798881ca7aee4",
+    "semantic_hash": "cb133ca11fde34252d0798881ca7aee4"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u043f\u0440\u0438\u043b\u0430\u0433\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435_\u0446\u0432\u0435\u0442.png": {
+    "mtime": 1779733535.7170198,
+    "seen": 1787775475.2100375,
+    "ast_hash": "50250303b9b22fdb72213961eccbb20f",
+    "semantic_hash": "50250303b9b22fdb72213961eccbb20f"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u0441\u0442\u0440\u043e\u0433\u0430\u044f.jpg": {
+    "mtime": 1779733535.7170198,
+    "seen": 1787775475.2100382,
+    "ast_hash": "8ce9b9e26f4ccc8170db02d0deb72574",
+    "semantic_hash": "8ce9b9e26f4ccc8170db02d0deb72574"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u0441\u0447\u0430\u0441\u0442\u043b\u0438\u0432\u044b\u0439.jpg": {
+    "mtime": 1779733535.7170198,
+    "seen": 1787775475.2100394,
+    "ast_hash": "d9265f9151058676ba751836e5d68715",
+    "semantic_hash": "d9265f9151058676ba751836e5d68715"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u0443\u0434\u0438\u0432\u043b\u0435\u043d\u043d\u044b\u0439.jpg": {
+    "mtime": 1779733535.7170198,
+    "seen": 1787775475.2100403,
+    "ast_hash": "a47c554ade606931179518cc4f70c3d7",
+    "semantic_hash": "a47c554ade606931179518cc4f70c3d7"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u0420\u0418\u041b\u0410\u0413\u0410\u0422\u0415\u041b\u042c\u041d\u042b\u0415/\u0443\u0441\u0442\u0430\u0432\u0448\u0430\u044f.jpg": {
+    "mtime": 1779733535.7170198,
+    "seen": 1787775475.210041,
+    "ast_hash": "b252dbf4813bd8063694e1b31192d77f",
+    "semantic_hash": "b252dbf4813bd8063694e1b31192d77f"
+  },
+  "corsi/principianti/Modulo 1/\u0420\u041e\u0414\u0418\u0422\u0415\u041b\u042c\u041d\u042b\u0419 \u041f\u0410\u0414\u0415\u0416 \u041c\u041d\u041e\u0416\u0415\u0421\u0422\u0412\u0415\u041d\u041d\u041e\u0415 \u0427\u0418\u0421\u041b\u041e/\u043c\u043d\u043e\u0433\u043e \u043c\u0430\u043b\u043e \u0433\u043e\u0440\u043e\u0434.png": {
+    "mtime": 1779733535.7170198,
+    "seen": 1787775475.210042,
+    "ast_hash": "4ce1c8387ce1609e14a70a72a0670967",
+    "semantic_hash": "4ce1c8387ce1609e14a70a72a0670967"
+  },
+  "corsi/principianti/Modulo 1/\u0420\u041e\u0414\u0418\u0422\u0415\u041b\u042c\u041d\u042b\u0419 \u041f\u0410\u0414\u0415\u0416 \u041c\u041d\u041e\u0416\u0415\u0421\u0422\u0412\u0415\u041d\u041d\u041e\u0415 \u0427\u0418\u0421\u041b\u041e/\u043c\u043d\u043e\u0433\u043e \u043c\u0430\u043b\u043e \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430.png": {
+    "mtime": 1779733535.7170198,
+    "seen": 1787775475.2100432,
+    "ast_hash": "de3d475955a438f305792d78fa1cfe44",
+    "semantic_hash": "de3d475955a438f305792d78fa1cfe44"
+  },
+  "corsi/principianti/Modulo 1/\u0420\u041e\u0414\u0418\u0422\u0415\u041b\u042c\u041d\u042b\u0419 \u041f\u0410\u0414\u0415\u0416 \u041c\u041d\u041e\u0416\u0415\u0421\u0422\u0412\u0415\u041d\u041d\u041e\u0415 \u0427\u0418\u0421\u041b\u041e/\u043c\u043d\u043e\u0433\u043e\u043c\u0430\u043b\u043e \u041a\u0412\u0410\u0420\u0422\u0418\u0420\u0410.png": {
+    "mtime": 1779733535.7329123,
+    "seen": 1787775475.210044,
+    "ast_hash": "952da302d15691b5da5744665014f570",
+    "semantic_hash": "952da302d15691b5da5744665014f570"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/1.PNG": {
+    "mtime": 1779733535.7488704,
+    "seen": 1787775475.2100449,
+    "ast_hash": "417301fb1bad5c4ca845da0785defad0",
+    "semantic_hash": "417301fb1bad5c4ca845da0785defad0"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/L'ACCUSATIVO E IL GENITIVO.png": {
+    "mtime": 1779733535.7649386,
+    "seen": 1787775475.210046,
+    "ast_hash": "f09933168ec4266c077ae311bff187f2",
+    "semantic_hash": "f09933168ec4266c077ae311bff187f2"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u0410\u041b\u042c\u0411\u0415\u0420\u0422_il genitivo L-accusativo_.png": {
+    "mtime": 1779733535.776933,
+    "seen": 1787775475.2100468,
+    "ast_hash": "8586c575dac43a1f3f9c1e6e4e0e9299",
+    "semantic_hash": "8586c575dac43a1f3f9c1e6e4e0e9299"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u0410\u043b\u044c\u0431\u0435\u0440\u0442_il genivi e l-accusativo.png": {
+    "mtime": 1779733535.7806075,
+    "seen": 1787775475.2100477,
+    "ast_hash": "08bd82aff49c58fefe87bae00ff662a4",
+    "semantic_hash": "08bd82aff49c58fefe87bae00ff662a4"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u041c\u0415\u0421\u0422\u041e\u0418\u041c\u0415\u041d\u0418\u042f \u0420\u041e\u0414\u0418\u0422\u0415\u041b\u042c\u041d\u042b\u0419.png": {
+    "mtime": 1779733535.7806075,
+    "seen": 1787775475.2100487,
+    "ast_hash": "48e87fddac94acce1f21b86ffb2ab2de",
+    "semantic_hash": "48e87fddac94acce1f21b86ffb2ab2de"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u041e\u0414\u0418\u041d \u0414\u0412\u0410 \u0414\u0412\u041e\u0415 \u0422\u0420\u041e\u0415.png": {
+    "mtime": 1779733535.7964845,
+    "seen": 1787775475.2100496,
+    "ast_hash": "1b8ef5007e27fe936daa0e9ec70299c0",
+    "semantic_hash": "1b8ef5007e27fe936daa0e9ec70299c0"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u0437\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439\u0442\u0435.png": {
+    "mtime": 1779733535.8439674,
+    "seen": 1787775475.2100506,
+    "ast_hash": "c8bf9d2843804c57efde16729a81e418",
+    "semantic_hash": "c8bf9d2843804c57efde16729a81e418"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u043e\u0434\u0438\u043d - \u043e\u0434\u043d\u043e\u0433\u043e \u043e\u0434\u043d\u0443 \u0434\u0440\u0443\u0433\u0443\u044e.png": {
+    "mtime": 1779733535.8617647,
+    "seen": 1787775475.2100515,
+    "ast_hash": "d4c8f6a3a3d5b1b8f2985a82a159c98d",
+    "semantic_hash": "d4c8f6a3a3d5b1b8f2985a82a159c98d"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u043e\u0434\u043d\u043e\u0433\u043e \u0434\u0440\u0443\u0433\u043e\u0433\u043e.png": {
+    "mtime": 1779733535.8676078,
+    "seen": 1787775475.2100523,
+    "ast_hash": "7d4cd248eb0d9f614e573b3050a793f9",
+    "semantic_hash": "7d4cd248eb0d9f614e573b3050a793f9"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u043e\u0442\u0440\u0438\u0446\u0430\u043d\u0438\u0435.png": {
+    "mtime": 1779733535.8676078,
+    "seen": 1787775475.2100534,
+    "ast_hash": "048ff0ca9c112b809f3c061cfd02ac96",
+    "semantic_hash": "048ff0ca9c112b809f3c061cfd02ac96"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u0440\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0438 \u0432\u0438\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439.png": {
+    "mtime": 1779733535.8720205,
+    "seen": 1787775475.2100542,
+    "ast_hash": "9d5197bea84db94851bd267740542845",
+    "semantic_hash": "9d5197bea84db94851bd267740542845"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u0440\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439_1.png": {
+    "mtime": 1779733535.8767726,
+    "seen": 1787775475.210055,
+    "ast_hash": "53f3ed10602943e1c7068a9923d25122",
+    "semantic_hash": "53f3ed10602943e1c7068a9923d25122"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041d\u0422\u041e\u041d\u0410/\u0430\u043d\u0442\u043e\u043d \u0444\u043e\u0442\u043e.png": {
+    "mtime": 1779733535.8767726,
+    "seen": 1787775475.2100563,
+    "ast_hash": "be6682d3e466779d1eb7b17ccb655d74",
+    "semantic_hash": "be6682d3e466779d1eb7b17ccb655d74"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041d\u0422\u041e\u041d\u0410/\u0441\u0435\u043c\u044c\u044f \u0410\u043d\u0442\u043e\u043d\u0430.png": {
+    "mtime": 1779733535.9551773,
+    "seen": 1787775475.210057,
+    "ast_hash": "0c213c65ff409c884726326c237715d3",
+    "semantic_hash": "0c213c65ff409c884726326c237715d3"
+  },
+  "corsi/principianti/Modulo 1/Lezione 3/\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439\u0442\u0435.m4a": {
+    "mtime": 1779733535.543103,
+    "seen": 1787775475.210058,
+    "ast_hash": "c28f5033fdd22461c112711a46eb96b3",
+    "semantic_hash": "c28f5033fdd22461c112711a46eb96b3"
+  },
+  "corsi/principianti/Modulo 1/Lezione 3/\u041c\u0435\u0441\u0442\u043e\u0438\u043c\u0435\u043d\u0438\u044f \u0440\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439.m4a": {
+    "mtime": 1779733535.5573163,
+    "seen": 1787775475.210059,
+    "ast_hash": "158be029d19ac30d3316da6d24334961",
+    "semantic_hash": "158be029d19ac30d3316da6d24334961"
+  },
+  "corsi/principianti/Modulo 1/Lezione 3/\u0423 \u043c\u0435\u043d\u044f \u0435\u0441\u0442\u044c.m4a": {
+    "mtime": 1779733535.5751662,
+    "seen": 1787775475.21006,
+    "ast_hash": "08ebd61af2b2914b4081be7e142eca45",
+    "semantic_hash": "08ebd61af2b2914b4081be7e142eca45"
+  },
+  "corsi/principianti/Modulo 1/\u041f\u041e\u0413\u041e\u0414\u0410/\u041f\u043e\u0433\u043e\u0434\u0430.m4a": {
+    "mtime": 1779733535.677003,
+    "seen": 1787775475.2100608,
+    "ast_hash": "3d11dc5803ee041d7c712870af3da55c",
+    "semantic_hash": "3d11dc5803ee041d7c712870af3da55c"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/Il genitivo e l\u2019accusativo.m4a": {
+    "mtime": 1779733535.7649386,
+    "seen": 1787775475.2100618,
+    "ast_hash": "3af917e9a0a2c012b5c45cff20c2f90a",
+    "semantic_hash": "3af917e9a0a2c012b5c45cff20c2f90a"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u041d\u043e\u0432\u0430\u044f \u0437\u0430\u043f\u0438\u0441\u044c 14.m4a": {
+    "mtime": 1779733535.7964845,
+    "seen": 1787775475.2100625,
+    "ast_hash": "dfdeb5f9879339f3233ee9927f2be92f",
+    "semantic_hash": "dfdeb5f9879339f3233ee9927f2be92f"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u041e\u0442\u0440\u0438\u0446\u0430\u043d\u0438\u0435.m4a": {
+    "mtime": 1779733535.81459,
+    "seen": 1787775475.2100637,
+    "ast_hash": "70b3732653b5e80194841f9b8fb659e5",
+    "semantic_hash": "70b3732653b5e80194841f9b8fb659e5"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041b\u042c\u0411\u0415\u0420\u0422\u0410/\u0421\u0435\u043c\u044c\u044f \u0410\u043b\u044c\u0431\u0435\u0440\u0442\u0430 \u0440\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439.m4a": {
+    "mtime": 1779733535.8439674,
+    "seen": 1787775475.2100644,
+    "ast_hash": "6610cf3ae8e962b75d51c3222207dc8b",
+    "semantic_hash": "6610cf3ae8e962b75d51c3222207dc8b"
+  },
+  "corsi/principianti/Modulo 1/\u0421\u0415\u041c\u042c\u042f \u0410\u041d\u0422\u041e\u041d\u0410/\u043a\u0430\u0442\u044f.mp4": {
+    "mtime": 1779733535.9551773,
+    "seen": 1787775475.2100654,
+    "ast_hash": "653f0c50780f7ca6a0a60f3287ff008f",
+    "semantic_hash": "653f0c50780f7ca6a0a60f3287ff008f"
+  }
+}
