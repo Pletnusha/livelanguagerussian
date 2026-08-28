@@ -338,9 +338,42 @@ function initPanel7() {
 
     let currentCard = 0;
 
-    const multipleChoiceData = [];
-    const matchPairs = [];
-    const quizData = [];
+    const multipleChoiceData = [
+        { question: "Вчера он ___ тяжёлую мебель на грузовике.", options: ["вёз", "везла", "везли"], answer: "вёз" },
+        { question: "Дима, мы куда вообще ___?", options: ["едем", "едешь", "ехали"], answer: "едем" },
+        { question: "Раньше он всегда ___ детей в школу сам.", options: ["возил", "возила", "возили"], answer: "возил" },
+        { question: "Наша машина ___ по мосту.", options: ["ехала", "ехал", "ехали"], answer: "ехала" },
+        { question: "Он ___ стройматериалы на объект каждый день.", options: ["возил", "возила", "возили"], answer: "возил" },
+        { question: "Куда ты нас сейчас ___?", options: ["везёшь", "везу", "везёт"], answer: "везёшь" },
+        { question: "Мы три квартала пешком ___.", options: ["шли", "шёл", "шла"], answer: "шли" },
+        { question: "Такси ___ нас через весь город в час пик.", options: ["везло", "вёз", "везли"], answer: "везло" },
+        { question: "Водитель полчаса ___ нас по одним и тем же переулкам!", options: ["возил", "возила", "возили"], answer: "возил" },
+        { question: "Я вас ___ к набережной.", options: ["везу", "везёт", "везём"], answer: "везу" },
+    ];
+    const matchPairs = [
+        { left: "Она ___ подругу в аэропорт рано утром.", right: "везла" },
+        { left: "Она много лет ___ туристов по городу.", right: "возила" },
+        { left: "Мы уже сорок минут ___ по центру!", right: "ездим" },
+        { left: "Я всегда ___ с собой перекус в контейнере.", right: "ношу" },
+        { left: "Или ___ в веганское кафе.", right: "бегаю" },
+        { left: "В прошлом месяце я ___ вас на пикник.", right: "возил" },
+        { left: "Когда мы ___ на Плещеево озеро, было отлично.", right: "ездили" },
+        { left: "Мы ___ туда через сосновый бор.", right: "шли" },
+        { left: "Пока Андрей ___ нас кругами, я умираю от голода.", right: "возит" },
+        { left: "Я по Москве всегда пешком ___.", right: "хожу" },
+    ];
+    const quizData = [
+        { id: "q01", promptPrefix: "Мы ", promptSuffix: " оборудование на все выставки в том году.", answers: ["возили"] },
+        { id: "q02", promptPrefix: "Она ", promptSuffix: " бабушку к врачу каждый месяц.", answers: ["возила"] },
+        { id: "q03", promptPrefix: "Курьер ", promptSuffix: " посылку через весь город под дождём.", answers: ["вёз"] },
+        { id: "q04", promptPrefix: "Я утром ", promptSuffix: " на работу.", answers: ["шёл"] },
+        { id: "q05", promptPrefix: "Нам надо ", promptSuffix: " на другой конец города.", answers: ["ехать"] },
+        { id: "q06", promptPrefix: "Когда он ", promptSuffix: " нас к Босфору, счётчик крутился как бешеный.", answers: ["вёз"] },
+        { id: "q07", promptPrefix: "Туристов специально кругами ", promptSuffix: ", чтобы накрутить цену.", answers: ["возят"] },
+        { id: "q08", promptPrefix: "Сами ", promptSuffix: " свои тяжеленные чемоданы.", answers: ["несли"] },
+        { id: "q09", promptPrefix: "Мы все вместе ", promptSuffix: " за уходящим кораблём.", answers: ["бежали"] },
+        { id: "q10", promptPrefix: "Мы ", promptSuffix: " оборудование на выставку всю ночь.", answers: ["везли"] },
+    ];
 
     const MC_END      = multipleChoiceData.length;
     const MATCH_END   = MC_END + matchPairs.length;
