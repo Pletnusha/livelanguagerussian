@@ -170,12 +170,58 @@ const p2exercises = [
 ];
 
 // ============================================================
-// PANEL 3 — GapText · public · Testo con lacune + glossario
-// TODO: in attesa del testo autentico da PM
+// PANEL 3 — GapText · public · "Голод не тётка"
+// Testo con lacune + glossario + spiegazioni.
+// Verbi testati (per spirale): ходить/идти, ехать/ездить,
+// бегать/бежать, нести/носить, возить/везти (tema di questa pagina).
 // ============================================================
-const p3instruction = "";
-const p3paragraphs = [];
-const p3gaps = {};
+const p3instruction = "Leggi il racconto e scrivi la forma corretta del verbo (ходить/идти, ехать/ездить, бегать/бежать, нести/носить, возить/везти), al presente, al passato o all'infinito. Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
+
+const p3paragraphs = [
+    "Субботний вечер начался с тихой паники: Женя вёз друзей в центр города, когда Дима признался, что забыл забронировать столик в ресторане. Машина застряла в пробке, а поиск нового места превратился в настоящий [[квест::un'avventura, una vera impresa]], ведь у каждого в компании свои строгие пищевые привычки.",
+    "<strong>1.1</strong>",
+    "— Мы уже сорок минут {{1}} по центру! — Женя раздражённо сжал руль. — Я обычно не {{2}} полную машину людей без чёткого плана. Дима, мы куда вообще {{3}}? — Простите! — виновато ответил Дима. — Я утром {{4}} на работу, {{5}} в сервис тяжеленный системный блок и просто забыл позвонить!",
+    "<strong>1.2</strong>",
+    "— Давайте просто вылезем и пойдём пешком? — предложил Дима. — Пойти пешком? В такой холод? — Катя ужаснулась. — Я в такую погоду пешком по улице не {{6}}. Я [[пескетарианка::pescetariana]], мне нужен рыбный ресторан! — А я мясоед! — отрезала Анна. — В прошлую субботу, когда мы {{7}} к маме, ты тоже заставила нас искать салат-бар!",
+    "<strong>1.3</strong>",
+    "— Друзья, спокойнее, — вмешался Тимур. — Я веган, но я не паникую. Я всегда {{8}} с собой перекус в контейнере или {{9}} в веганское кафе. Женя, куда ты нас сейчас {{10}}? — Я {{11}} вас к набережной, — ответил Женя. — Но если вы будете спорить, я развернусь. Помните, как в прошлом месяце я {{12}} вас на пикник, и мы два часа искали парковку?",
+    "<strong>1.4</strong>",
+    "— Да закройте вы тему с высокой кухней! — подал голос Андрей с заднего сиденья. — Я, когда на велосипеде по городу {{13}}, всегда [[заскакиваю::faccio un salto (in un posto)]] в фастфуд. Помню, как в прошлом месяце я {{14}} из банка и {{15}} пакет с бургерами — вот это был вечер! — Бургеры? [[Дикарь::Selvaggio (scherzoso)]], — поморщилась Катя. — Но чтобы поесть нормальной рыбы, нам надо {{16}} на другой конец города.",
+    "<strong>1.5</strong>",
+    "— На другой конец города мы не успеем, — Тимур посмотрел в навигатор. — Пока наша машина {{17}} по мосту, я изучил меню в округе. В первом месте нет рыбы для Кати, а во втором — ничего веганского для меня. — Потрясающе, — вздохнул Женя. — Когда я {{18}} иностранных гостей по ресторанам, у них было меньше претензий!",
+    "<strong>1.6</strong>",
+    "— [[Отставить панику::Basta panico! (comando militare scherzoso)]]! — Андрей победоносно поднял телефон. — Я нашёл новую бургерную в двух кварталах! Там есть сочные стейк-бургеры для Ани и меня, фиш-бургеры для Кати и [[нутовые котлеты::polpette di ceci]] для Тимура! В прошлом месяце, когда я {{19}} на выставку гаджетов, я заходил в их первый филиал. Там есть всё!",
+    "<strong>1.7</strong>",
+    "— Бургерная с веганским и рыбным меню? Невероятно, но это компромисс, — Женя включил [[поворотник::freccia (dell'auto)]]. — Всё, я {{20}} вас туда. Больше никаких кругов по центру. — Ура! — обрадовался Тимур. — А то пока мы тут {{21}}, у меня упал сахар. Я думал, уже сам пешком {{22}} придётся!",
+    "<strong>1.8</strong>",
+    "— Главное, чтобы там была вентиляция, — заметила Катя. — Дима, в следующий раз, когда ты будешь {{23}} свой системный блок, поставь себе напоминание в телефон! — Обязательно! — улыбнулся Дима. — А сейчас — едем есть!",
+];
+
+const p3gaps = {
+    1: { answers: ["ездим"], explanation: "ездим = movimento in più direzioni ripetuto/prolungato (giriamo da 40 minuti), non un tragitto in una sola direzione." },
+    2: { answers: ["вожу"], explanation: "вожу = abitudine ripetuta al presente (di solito non trasporto una macchina piena), non un'azione in corso ora." },
+    3: { answers: ["едем"], explanation: "едем = movimento con un mezzo in corso al presente, in una direzione precisa (dove stiamo andando ora)." },
+    4: { answers: ["шёл"], explanation: "шёл = movimento a piedi in corso in una direzione, in quel momento specifico (stamattina)." },
+    5: { answers: ["нёс"], explanation: "нёс = movimento a mano in corso in una direzione, azione concreta in quel momento." },
+    6: { answers: ["хожу"], explanation: "хожу = abitudine/fatto generale al presente (con questo tempo non vado mai), non un tragitto in corso." },
+    7: { answers: ["ехали"], explanation: "ехали = movimento con un mezzo in corso in una direzione, in quell'occasione specifica." },
+    8: { answers: ["ношу"], explanation: "ношу = abitudine ripetuta al presente (porto sempre con me), non un'azione in corso ora." },
+    9: { answers: ["бегаю"], explanation: "бегаю = abitudine ripetuta al presente (vado di corsa abitualmente), verbo già visto sulla pagina correre." },
+    10: { answers: ["везёшь"], explanation: "везёшь = movimento con un mezzo in corso al presente, in una direzione precisa (dove ci stai portando adesso)." },
+    11: { answers: ["везу"], explanation: "везу = movimento con un mezzo in corso al presente, in una direzione precisa." },
+    12: { answers: ["возил"], explanation: "возил = tragitto di andata e ritorno completato in un'occasione specifica (vi ho portato al picnic e riportati indietro), non un movimento in corso in una sola direzione." },
+    13: { answers: ["езжу"], explanation: "езжу = abitudine ripetuta al presente (quando vado in bici in giro per la città, di solito)." },
+    14: { answers: ["шёл"], explanation: "шёл = movimento a piedi in corso in una direzione, in quell'occasione specifica." },
+    15: { answers: ["нёс"], explanation: "нёс = movimento a mano in corso in una direzione, in quell'occasione." },
+    16: { answers: ["ехать"], explanation: "ехать (infinito) = tragitto specifico necessario, in una sola direzione, non un'abitudine." },
+    17: { answers: ["ехала"], explanation: "ехала = movimento con un mezzo in corso in una direzione, sullo sfondo di un'altra azione (studiavo il menù)." },
+    18: { answers: ["возил"], explanation: "возил = abitudine ripetuta nel passato (quando lavoravo con turisti stranieri, regolarmente), non un tragitto singolo." },
+    19: { answers: ["ходил"], explanation: "ходил = tragitto di andata e ritorno completato in un'occasione specifica (sono andato alla fiera e tornato), non un'abitudine." },
+    20: { answers: ["везу"], explanation: "везу = movimento con un mezzo in corso al presente, in una direzione precisa e decisa." },
+    21: { answers: ["ездили"], explanation: "ездили = movimento in più direzioni ripetuto (giravamo per il centro), non un tragitto in una sola direzione." },
+    22: { answers: ["бежать"], explanation: "бежать (infinito) = movimento a piedi specifico e diretto (di corsa, in una direzione precisa), non un'abitudine — verbo già visto sulla pagina correre." },
+    23: { answers: ["нести"], explanation: "нести (infinito) = portare a mano un oggetto concreto, azione specifica riferita a un caso preciso." },
+};
 
 // ============================================================
 // PANEL 4 — GapText · student · Testo con lacune + glossario
