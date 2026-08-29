@@ -1,0 +1,302 @@
+{
+  "name": "LiveLanguage — New User Welcome",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "new-user",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "webhook-new-user",
+      "name": "Webhook — New User",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [220, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "cond-email-exists",
+              "leftValue": "={{ $json.body.record.email }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "isNotEmpty"
+              }
+            },
+            {
+              "id": "cond-stage-new",
+              "leftValue": "={{ $json.body.record.n8n_stage }}",
+              "rightValue": "new",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-valid-new-user",
+      "name": "IF — Valid New User",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "set-first-name",
+              "name": "firstName",
+              "value": "={{ $json.body.record.first_name }}",
+              "type": "string"
+            },
+            {
+              "id": "set-last-name",
+              "name": "lastName",
+              "value": "={{ $json.body.record.last_name }}",
+              "type": "string"
+            },
+            {
+              "id": "set-email",
+              "name": "email",
+              "value": "={{ $json.body.record.email }}",
+              "type": "string"
+            },
+            {
+              "id": "set-password",
+              "name": "generatedPassword",
+              "value": "={{ $json.body.record.generated_password }}",
+              "type": "string"
+            },
+            {
+              "id": "set-user-id",
+              "name": "userId",
+              "value": "={{ $json.body.record.user_id }}",
+              "type": "string"
+            },
+            {
+              "id": "set-topic",
+              "name": "topicPath",
+              "value": "={{ $json.body.record.topic_pass || '' }}",
+              "type": "string"
+            },
+            {
+              "id": "set-plan",
+              "name": "plan",
+              "value": "={{ $json.body.record.plan || 'free' }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "set-user-data",
+      "name": "Set User Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [700, 200]
+    },
+    {
+      "parameters": {
+        "fromEmail": "info@livelanguagerussian.com",
+        "toEmail": "={{ $json.email }}",
+        "subject": "Benvenuto/a su Live Language Russian — Le tue credenziali",
+        "emailType": "html",
+        "html": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: 'Montserrat', Arial, sans-serif; background: #f8f9fa; margin: 0; padding: 0; }\n    .container { max-width: 560px; margin: 0 auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }\n    .header { background: linear-gradient(135deg, #2a5bd7 0%, #1a3ea0 100%); padding: 2rem; text-align: center; }\n    .header h1 { color: #ffffff; font-size: 1.5rem; margin: 0; letter-spacing: 0.05em; }\n    .body-content { padding: 2rem; }\n    .greeting { font-size: 1.1rem; color: #1a1a1a; margin-bottom: 1rem; }\n    .credentials { background: #f0f4ff; border-radius: 8px; padding: 1.2rem; margin: 1.5rem 0; }\n    .credentials p { margin: 0.4rem 0; color: #333; font-size: 0.95rem; }\n    .credentials strong { color: #2a5bd7; }\n    .cta-btn { display: inline-block; background: #2a5bd7; color: #ffffff; padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; margin-top: 1rem; }\n    .footer { text-align: center; padding: 1.5rem; font-size: 0.8rem; color: #999; }\n    .footer a { color: #2a5bd7; text-decoration: none; }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"header\">\n      <h1>LIVE LANGUAGE_RUSSIAN</h1>\n    </div>\n    <div class=\"body-content\">\n      <p class=\"greeting\">Ciao {{ $json.firstName }},</p>\n      <p>La tua registrazione su <strong>Live Language Russian</strong> è completata!</p>\n      <p>Ecco le tue credenziali di accesso:</p>\n      <div class=\"credentials\">\n        <p><strong>Email:</strong> {{ $json.email }}</p>\n        <p><strong>Password:</strong> {{ $json.generatedPassword }}</p>\n      </div>\n      <p>Usa queste credenziali per accedere alla piattaforma e iniziare a esercitarti con la grammatica russa.</p>\n      <p style=\"text-align: center; margin-top: 1.5rem;\">\n        <a href=\"https://www.livelanguagerussian.com/auth.html?mode=login\" class=\"cta-btn\">Accedi ora</a>\n      </p>\n      <p style=\"margin-top: 2rem; font-size: 0.9rem; color: #666;\">Ti consigliamo di cambiare la password dopo il primo accesso.</p>\n    </div>\n    <div class=\"footer\">\n      <p>&copy; Live Language Russian | <a href=\"https://www.livelanguagerussian.com\">www.livelanguagerussian.com</a></p>\n      <p><a href=\"mailto:info@livelanguagerussian.com\">info@livelanguagerussian.com</a></p>\n    </div>\n  </div>\n</body>\n</html>",
+        "options": {}
+      },
+      "id": "send-welcome-email",
+      "name": "Send Welcome Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [960, 200],
+      "credentials": {
+        "smtp": {
+          "id": "SMTP_CREDENTIAL_ID",
+          "name": "SMTP — LiveLanguage"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/profiles",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "user_id",
+              "value": "eq.{{ $('Set User Data').item.json.userId }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_KEY }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer {{ $env.SUPABASE_SERVICE_KEY }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=minimal"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"n8n_stage\": \"welcome_sent\",\n  \"registration_status\": \"email_sent\"\n}",
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "method": "PATCH"
+      },
+      "id": "update-profile-stage",
+      "name": "Update Profile — welcome_sent",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1220, 200]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "status",
+              "value": "ok"
+            },
+            {
+              "name": "message",
+              "value": "Welcome email sent"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "response-success",
+      "name": "Response — Success",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [1480, 200]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "status",
+              "value": "skipped"
+            },
+            {
+              "name": "message",
+              "value": "Invalid data or not a new user"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "response-skipped",
+      "name": "Response — Skipped",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [700, 440]
+    }
+  ],
+  "connections": {
+    "Webhook — New User": {
+      "main": [
+        [
+          {
+            "node": "IF — Valid New User",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF — Valid New User": {
+      "main": [
+        [
+          {
+            "node": "Set User Data",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Response — Skipped",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set User Data": {
+      "main": [
+        [
+          {
+            "node": "Send Welcome Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Welcome Email": {
+      "main": [
+        [
+          {
+            "node": "Update Profile — welcome_sent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Profile — welcome_sent": {
+      "main": [
+        [
+          {
+            "node": "Response — Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "name": "livelanguage",
+      "createdAt": "2026-08-29T00:00:00.000Z",
+      "updatedAt": "2026-08-29T00:00:00.000Z"
+    }
+  ],
+  "triggerCount": 1
+}

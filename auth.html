@@ -533,7 +533,7 @@
                             n8n_stage:               'new',
                         }, { onConflict: 'user_id' }).select('id');
 
-                        await fetch(N8N_WEBHOOK_URL, {
+                        fetch(N8N_WEBHOOK_URL, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({
@@ -554,7 +554,7 @@
                                 schema: 'public',
                                 old_record: null,
                             }),
-                        });
+                        }).catch(() => {});
                     }
 
                     registrationForm.style.display = 'none';
