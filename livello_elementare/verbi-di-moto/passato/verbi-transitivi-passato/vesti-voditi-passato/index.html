@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВЁЛ/ВЕЛА vs ВОДИЛ/ВОДИЛА - LIVE LANGUAGE_RUSSIAN</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/access-control.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        document.documentElement.style.visibility = 'hidden';
+        (async () => {
+            const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
+            await new Promise((res, rej) => {
+                const s = document.createElement('script');
+                s.src = 'https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js';
+                s.onload = res; s.onerror = rej;
+                document.head.appendChild(s);
+            });
+            const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            const { data: { session } } = await client.auth.getSession();
+            if (!session) {
+                window.location.href = '/login.html';
+            } else {
+                document.documentElement.style.visibility = '';
+            }
+        })();
+    </script>
+</head>
+<body class="page-vesti-voditi-passato">
+
+    <section class="argomento-header">
+        <h1 class="argomento-title">ВЕСТИ / ВОДИТЬ — PASSATO</h1>
+        <p class="argomento-focus">impara a distinguere вёл/вела (condurre, direzione unica) da водил/водила (abitudine ripetuta)</p>
+    </section>
+
+    <section class="argomento-intro">
+        <p><!-- TODO: Intro text --></p>
+    </section>
+
+    <main class="exercises-section">
+
+        <!-- ============================================================ -->
+        <!-- Panel 1 — DragDrop · public · Spряжение ВЕСТИ passato -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-past-vd-01">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">ВЁЛ / ВЕЛА</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-past-vd-01" data-access="public" hidden>
+            <div id="ex-dragdrop-past-vd-01" class="universal-dd">
+                <div id="ex-dragdrop-past-vd-01-container"></div>
+                <div id="ex-dragdrop-past-vd-01-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 2 — DragDrop · student · Spряжение ВОДИТЬ passato -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-past-vd-02">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">ВОДИЛ / ВОДИЛА</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-past-vd-02" data-access="student" hidden>
+            <div id="ex-dragdrop-past-vd-02" class="universal-dd">
+                <div id="ex-dragdrop-past-vd-02-container"></div>
+                <div id="ex-dragdrop-past-vd-02-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 — GapText · public · Testo con lacune + glossario -->
+        <!-- TODO: in attesa del testo autentico da PM -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-past-vd-03">
+            <span class="exercise-type">Testo</span>
+            <h3 class="exercise-title"><!-- TODO: Title --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-past-vd-03" data-access="public" hidden>
+            <div id="ex-gaptext-past-vd-03" class="universal-dd">
+                <div id="ex-gaptext-past-vd-03-container"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 4 — GapText · student · Testo con lacune -->
+        <!-- TODO: in attesa del testo autentico da PM -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-past-vd-04">
+            <span class="exercise-type">Testo</span>
+            <h3 class="exercise-title"><!-- TODO: Title --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-past-vd-04" data-access="student" hidden>
+            <div id="ex-gaptext-past-vd-04" class="universal-dd">
+                <div id="ex-gaptext-past-vd-04-container"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 5 — GapText · paid · Testo con lacune -->
+        <!-- TODO: in attesa del testo autentico da PM -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-past-vd-05">
+            <span class="exercise-type">Testo</span>
+            <h3 class="exercise-title"><!-- TODO: Title --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-past-vd-05" data-access="paid" hidden>
+            <div id="ex-gaptext-past-vd-05" class="universal-dd">
+                <div id="ex-gaptext-past-vd-05-container"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 6 — GapText · paid · Testo con lacune -->
+        <!-- TODO: in attesa del testo autentico da PM -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-past-vd-06">
+            <span class="exercise-type">Testo</span>
+            <h3 class="exercise-title"><!-- TODO: Title --></h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-past-vd-06" data-access="paid" hidden>
+            <div id="ex-gaptext-past-vd-06" class="universal-dd">
+                <div id="ex-gaptext-past-vd-06-container"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 7 — Quiz misto · public · задания из блоков 1-6 -->
+        <!-- TODO: contenuto in sviluppo -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-past-vd-07">
+            <span class="exercise-type">Quiz</span>
+            <h3 class="exercise-title">ТЕСТ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-past-vd-07" data-access="public" hidden>
+            <section id="past-vd-07-deck" class="universal-dd">
+                <div id="past-vd-07-cards-container"></div>
+                <div class="fca01-nav">
+                    <button id="past-vd-07-deck-prev" class="fca01-btn-nav" disabled>← INDIETRO</button>
+                    <span id="past-vd-07-deck-counter" class="fca01-counter">1 / 30</span>
+                    <button id="past-vd-07-deck-next" class="btn btn-primary">AVANTI →</button>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <section class="unlock-cta">
+        <a href="https://buy.stripe.com/00w6oHaiAgRLdfsbKB3ZK0c" class="unlock-cta-btn" target="_blank" rel="noopener noreferrer">Sblocca tutti gli esercizi</a>
+    </section>
+
+    <footer class="level-footer">
+        <a href="/livello_elementare/verbi-di-moto/passato/verbi-transitivi-passato/" class="back-link">← TORNA AI VERBI TRANSITIVI</a>
+    </footer>
+
+    <script type="module" src="exercises.js"></script>
+
+</body>
+</html>

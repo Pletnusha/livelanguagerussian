@@ -69,32 +69,183 @@ const p1exercises = [
         words: ["моего девушки", "моя девушка", "моей девушки", "моя девушки"],
         correctAnswers: { 1: "моей девушки" },
         explanation: "моего (pronome maschile, genitivo) + девушки (sostantivo femminile, genitivo) → genere del pronome sbagliato. моя (pronome femminile, nominativo) + девушка (sostantivo femminile, nominativo) → genere giusto ma caso sbagliato. моей (pronome femminile, genitivo) + девушки (sostantivo femminile, genitivo) → CORRETTO. моя (pronome femminile, nominativo) + девушки (sostantivo femminile, genitivo) → i due elementi non concordano nel caso."
+    },
+    {
+        instruction: "Scegli la forma corretta (sostantivo) al genitivo.",
+        text: "Кошелёк его {{1}}.",
+        words: ["жена", "жене", "жены", "женой"],
+        correctAnswers: { 1: "жены" },
+        explanation: "Sostantivo femminile al genitivo: жены. (его è invariabile, non cambia forma)."
     }
 ];
 
 // ============================================================
 // PANEL 2 — DragDrop · student
-// TODO: contenuto in attesa di materiale da PM
+// Pronome + sostantivo al genitivo — genitivo di appartenenza (чей?)
 // ============================================================
-const p2exercises = [];
+const p2exercises = [
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Тетрадь {{1}}.",
+        words: ["моего сестры", "моя сестра", "моей сестры", "моя сестры"],
+        correctAnswers: { 1: "моей сестры" }
+    },
+    {
+        instruction: "Scegli la forma corretta (sostantivo) al genitivo.",
+        text: "Кольцо его {{1}}.",
+        words: ["мать", "матери", "матерью", "матерей"],
+        correctAnswers: { 1: "матери" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Комната {{1}}.",
+        words: ["твою тёти", "твоя тётя", "твоей тёти", "твоя тёти"],
+        correctAnswers: { 1: "твоей тёти" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Ключ {{1}}.",
+        words: ["нашу дочери", "наша дочь", "нашей дочери", "наша дочери"],
+        correctAnswers: { 1: "нашей дочери" }
+    },
+    {
+        instruction: "Scegli la forma corretta (sostantivo) al genitivo.",
+        text: "Сумка её {{1}}.",
+        words: ["соседка", "соседке", "соседки", "соседкой"],
+        correctAnswers: { 1: "соседки" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Книга {{1}}.",
+        words: ["вашего племянницы", "ваша племянница", "вашей племянницы", "ваша племянницы"],
+        correctAnswers: { 1: "вашей племянницы" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Ручка {{1}}.",
+        words: ["нашу двери", "наша дверь", "нашей двери", "наша двери"],
+        correctAnswers: { 1: "нашей двери" }
+    },
+    {
+        instruction: "Scegli la forma corretta (sostantivo) al genitivo.",
+        text: "Шум их {{1}}.",
+        words: ["площадь", "площади", "площадью", "площадей"],
+        correctAnswers: { 1: "площади" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Подарок {{1}}.",
+        words: ["нашу коллеги", "наша коллега", "нашей коллеги", "наша коллеги"],
+        correctAnswers: { 1: "нашей коллеги" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Юбка {{1}}.",
+        words: ["твою невесты", "твоя невеста", "твоей невесты", "твоя невесты"],
+        correctAnswers: { 1: "твоей невесты" }
+    }
+];
 
 // ============================================================
 // PANEL 3 — DragDrop · paid
-// TODO: contenuto in attesa di materiale da PM
+// Pronome + sostantivo al genitivo — 2° declinazione (maschile in consonante)
 // ============================================================
-const p3exercises = [];
+const p3exercises = [
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Ключ {{1}}.",
+        words: ["мою брата", "мой брат", "моего брата", "мой брата"],
+        correctAnswers: { 1: "моего брата" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Гараж {{1}}.",
+        words: ["твою соседа", "твой сосед", "твоего соседа", "твой соседа"],
+        correctAnswers: { 1: "твоего соседа" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Кабинет {{1}}.",
+        words: ["нашу учителя", "наш учитель", "нашего учителя", "наш учителя"],
+        correctAnswers: { 1: "нашего учителя" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Приказ {{1}}.",
+        words: ["вашу начальника", "ваш начальник", "вашего начальника", "ваш начальника"],
+        correctAnswers: { 1: "вашего начальника" }
+    },
+    {
+        instruction: "Scegli la forma corretta (sostantivo) al genitivo.",
+        text: "Рюкзак её {{1}}.",
+        words: ["племянник", "племяннику", "племянника", "племянником"],
+        correctAnswers: { 1: "племянника" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Комната {{1}}.",
+        words: ["мою сына", "мой сын", "моего сына", "мой сына"],
+        correctAnswers: { 1: "моего сына" }
+    },
+    {
+        instruction: "Scegli la forma corretta (sostantivo) al genitivo.",
+        text: "Голос его {{1}}.",
+        words: ["отец", "отцу", "отца", "отцом"],
+        correctAnswers: { 1: "отца" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Кольцо {{1}}.",
+        words: ["твою мужа", "твой муж", "твоего мужа", "твой мужа"],
+        correctAnswers: { 1: "твоего мужа" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Свисток {{1}}.",
+        words: ["нашу тренера", "наш тренер", "нашего тренера", "наш тренера"],
+        correctAnswers: { 1: "нашего тренера" }
+    },
+    {
+        instruction: "Scegli la forma corretta (pronome + sostantivo) al genitivo.",
+        text: "Приём {{1}}.",
+        words: ["вашу доктора", "ваш доктор", "вашего доктора", "ваш доктора"],
+        correctAnswers: { 1: "вашего доктора" }
+    }
+];
 
 // ============================================================
 // PANEL 4 — Flashcard · public
-// TODO: contenuto in attesa di materiale da PM
+// Genitivo di appartenenza — albero familiare
 // ============================================================
-const p4cards = [];
+const p4cards = [
+    { front: "Линда", back: "сестра Альберта" },
+    { front: "Альберт", back: "брат Линды" },
+    { front: "Владислав", back: "муж Линды" },
+    { front: "Елена", back: "сестра Владислава" },
+    { front: "Александра", back: "племянница Елены" },
+    { front: "Сергей", back: "муж Александры" },
+    { front: "Анатолий", back: "муж Светланы" },
+    { front: "Светлана", back: "жена Анатолия" },
+    { front: "Кто отец Александры?", back: "Владислав" },
+    { front: "Чья дочь — Александра?", back: "дочь Линды" }
+];
 
 // ============================================================
 // PANEL 5 — Flashcard · student
-// TODO: contenuto in attesa di materiale da PM
+// Genitivo — 1° e 3° declinazione
 // ============================================================
-const p5cards = [];
+const p5cards = [
+    { front: "Парень ___.(дочь)", back: "дочери" },
+    { front: "Машина ___.(мать)", back: "матери" },
+    { front: "Шум ___.(площадь)", back: "площади" },
+    { front: "Зонт ___.(дядя)", back: "дяди" },
+    { front: "Шарф ___.(тётя)", back: "тёти" },
+    { front: "Очки ___.(бабушка)", back: "бабушки" },
+    { front: "Платок ___.(дедушка)", back: "дедушки" },
+    { front: "Кепка ___.(папа)", back: "папы" },
+    { front: "Сумка ___.(мама)", back: "мамы" },
+    { front: "Плащ ___.(девушка)", back: "девушки" }
+];
 
 // ============================================================
 // PANEL 6 — Flashcard · paid
@@ -104,21 +255,94 @@ const p6cards = [];
 
 // ============================================================
 // PANEL 7 — Flashcard · public
-// TODO: contenuto in attesa di materiale da PM
+// Genitivo — sostantivo + aggettivo
 // ============================================================
-const p7cards = [];
+const p7cards = [
+    {
+        front: "Куртка ___.",
+        back: "старшего брата",
+        explanation: "старший (aggettivo maschile) al genitivo → старшего; concorda con брат (sostantivo maschile) al genitivo → брата."
+    },
+    {
+        front: "Машина ___.",
+        back: "бывшего парня",
+        explanation: "бывший (aggettivo maschile) al genitivo → бывшего; concorda con парень (sostantivo maschile) al genitivo → парня."
+    },
+    {
+        front: "Подруга ___.",
+        back: "старшей сестры",
+        explanation: "старшая (aggettivo femminile) al genitivo → старшей; concorda con сестра (sostantivo femminile) al genitivo → сестры."
+    },
+    {
+        front: "Офис ___.",
+        back: "бывшей девушки",
+        explanation: "бывшая (aggettivo femminile) al genitivo → бывшей; concorda con девушка (sostantivo femminile) al genitivo → девушки."
+    },
+    {
+        front: "Дом ___.",
+        back: "лучшего друга",
+        explanation: "лучший (aggettivo maschile) al genitivo → лучшего; concorda con друг (sostantivo maschile) al genitivo → друга."
+    },
+    {
+        front: "День рождения ___.",
+        back: "лучшей подруги",
+        explanation: "лучшая (aggettivo femminile) al genitivo → лучшей; concorda con подруга (sostantivo femminile) al genitivo → подруги."
+    },
+    {
+        front: "Мотоцикл ___.",
+        back: "младшего брата",
+        explanation: "младший (aggettivo maschile) al genitivo → младшего; concorda con брат (sostantivo maschile) al genitivo → брата."
+    },
+    {
+        front: "Велосипед ___.",
+        back: "младшей сестры",
+        explanation: "младшая (aggettivo femminile) al genitivo → младшей; concorda con сестра (sostantivo femminile) al genitivo → сестры."
+    },
+    {
+        front: "Кольцо ___.",
+        back: "бывшей жены",
+        explanation: "бывшая (aggettivo femminile) al genitivo → бывшей; concorda con жена (sostantivo femminile) al genitivo → жены."
+    },
+    {
+        front: "Тетрадь ___.",
+        back: "младшего сына",
+        explanation: "младший (aggettivo maschile) al genitivo → младшего; concorda con сын (sostantivo maschile) al genitivo → сына."
+    }
+];
 
 // ============================================================
 // PANEL 8 — Flashcard · student
-// TODO: contenuto in attesa di materiale da PM
+// Genitivo — sostantivo + aggettivo, 1° e 3° declinazione
 // ============================================================
-const p8cards = [];
+const p8cards = [
+    { front: "Кольцо ___.", back: "первой жены" },
+    { front: "Звуки ___.", back: "народной песни" },
+    { front: "Тишина ___.", back: "глубокой ночи" },
+    { front: "Свадьба ___.", back: "младшей сестры" },
+    { front: "Красота ___.", back: "центральной площади" },
+    { front: "Письмо ___.", back: "бывшей студентки" },
+    { front: "Дом ___.", back: "лучшей подруги" },
+    { front: "Комната ___.", back: "старшей дочери" },
+    { front: "Юбка ___.", back: "старшей племянницы" },
+    { front: "Голос ___.", back: "уставшей матери" }
+];
 
 // ============================================================
 // PANEL 9 — Flashcard · paid
-// TODO: contenuto in attesa di materiale da PM
+// Genitivo — sostantivo + aggettivo, 2° declinazione
 // ============================================================
-const p9cards = [];
+const p9cards = [
+    { front: "Куртка ___.", back: "старшего брата" },
+    { front: "Поединок ___.", back: "мирового чемпиона" },
+    { front: "Голос ___.", back: "странного прохожего" },
+    { front: "Скрипка ___.", back: "молодого музыканта" },
+    { front: "Мотоцикл ___.", back: "бывшего парня" },
+    { front: "Книга ___.", back: "известного писателя" },
+    { front: "Песня ___.", back: "известного музыканта" },
+    { front: "Пластинки ___.", back: "младшего брата" },
+    { front: "Джинсы ___.", back: "лучшего друга" },
+    { front: "Доклад ___.", back: "лучшего студента" }
+];
 
 // ============================================================
 // PANEL 10 — Quiz misto (multiple choice + match + write) · paid
