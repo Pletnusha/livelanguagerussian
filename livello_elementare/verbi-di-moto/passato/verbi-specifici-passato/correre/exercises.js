@@ -395,6 +395,73 @@ const p11gaps = {
     26: { answers: ["бегал"] },
 };
 
+// ── Panel 12 — paid · testo con lacune «Марафон для всех» ──────────────────
+// GapText (showHints: false, senza spiegazioni). ходить/идти, ездить/ехать,
+// бегать/бежать al presente e al passato (anche бежать = «andare di fretta»);
+// носить/нести, водить/вести, возить/везти solo al presente.
+const p12instruction = "Leggi il racconto e scrivi la forma corretta del verbo: ходить/идти, ездить/ехать, бегать/бежать al presente o al passato; носить/нести, водить/вести, возить/везти al presente. Attenzione: бежать può voler dire anche «andare di fretta». Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
+
+const p12paragraphs = [
+    "[[Сюрприз::sorpresa]]. В пятницу вечером банда, как всегда, сидела в баре. Тимур {{1}} к их столику [[с таким лицом::con una faccia tale]], что Андрей сразу [[спрятал::ha nascosto]] сигареты.",
+    "<strong>1.1</strong>",
+    "— Ребята, я [[записал::ho iscritto]] вас всех на [[Московский марафон::la Maratona di Mosca]]! — гордо сказал Тимур.",
+    "— Всех?!",
+    "— Всех. Он в сентябре. Время ещё есть.",
+    "— Подожди, — сказала Катя. — Я же не {{2}}. Я {{3}}. Это разные вещи.",
+    "— Не бойся, там есть [[дистанция::distanza]] десять километров.",
+    "— Десять километров? В прошлое воскресенье я {{4}} по центру двенадцать. Пешком. С кофе.",
+    "<strong>1.2</strong>",
+    "— А я этот марафон не {{5}}, — сразу сказала Аня. — Я вообще не {{6}}. Только за автобусом. Но у меня есть машина. По субботам я всё равно {{7}} мимо парка на танцы.",
+    "— Отлично! — сказал Тимур. — Значит, ты нас {{8}} на тренировки, а Андрей {{9}} воду.",
+    "— Почему я? — [[возмутился::ha protestato]] Андрей.",
+    "<strong>1.3</strong>",
+    "— Потому что ты последний раз {{10}} в школе, — сказала Лена.",
+    "— Неправда! В прошлом году я {{11}} за трамваем и даже его [[догнал::ho raggiunto]]. И вообще, с понедельника я начинаю новую жизнь.",
+    "Все засмеялись.",
+    "<strong>1.4</strong>",
+    "Лена уже открыла в телефоне [[таблицу::foglio di calcolo]] с [[планом тренировок::programma di allenamento]].",
+    "— Значит, так. Во вторник и в четверг мы {{12}} в парке, в субботу — длинная [[пробежка::corsa]].",
+    "— А я бегать не буду, — сказал Женя. — У меня своя система. Я каждый день {{13}} пешком на работу и обратно, считаю шаги и калории. А на марафон я {{14}} болеть. С термосом.",
+    "<strong>1.5</strong>",
+    "Первая тренировка была в субботу, в восемь утра. Аня [[сигналила::suonava il clacson]] под окнами.",
+    "— Все в машину! Я {{15}} вас на тренировку!",
+    "Через полчаса все были в парке. Тимур ждал у входа с [[секундомером::cronometro]], а Лена уже {{16}} на месте и проверяла пульс. Катя в машину не села и {{17}} к парку пешком, с кофе. Аня {{18}} кругами вокруг парка и искала, где [[поставить машину::parcheggiare]]. Женя {{19}} вокруг [[пруда::stagno, laghetto]] и считал шаги. А Андрей, как всегда, [[проспал::non si è svegliato in tempo]].",
+    "— Андрей, ты где?!",
+    "— Я {{20}}, {{21}}! [[Опаздываю::sono in ritardo]]!",
+    "Он действительно {{22}} — от киоска с шаурмой к парку.",
+    "— Андрей, а что это ты {{23}}?!",
+    "— Шаурму. Это мой завтрак. Тренировка же!",
+    "— Так, все здесь, — [[скомандовал::ha dato l'ordine]] Тимур. — Я {{24}} вас на [[разминку::riscaldamento]].",
+    "Тимур посмотрел на свою банду и [[вздохнул::ha sospirato]]. [[До марафона оставалось::alla maratona mancavano]] пять месяцев.",
+];
+
+const p12gaps = {
+    1: { answers: ["шёл", "бежал"] },
+    2: { answers: ["бегаю"] },
+    3: { answers: ["хожу"] },
+    4: { answers: ["ходила"] },
+    5: { answers: ["бегу"] },
+    6: { answers: ["бегаю"] },
+    7: { answers: ["езжу"] },
+    8: { answers: ["возишь"] },
+    9: { answers: ["носит"] },
+    10: { answers: ["бегал"] },
+    11: { answers: ["бежал"] },
+    12: { answers: ["бегаем"] },
+    13: { answers: ["хожу"] },
+    14: { answers: ["еду", "иду"] },
+    15: { answers: ["везу"] },
+    16: { answers: ["бегала"] },
+    17: { answers: ["шла"] },
+    18: { answers: ["ездила"] },
+    19: { answers: ["ходил"] },
+    20: { answers: ["бегу"] },
+    21: { answers: ["бегу"] },
+    22: { answers: ["бежал"] },
+    23: { answers: ["несёшь"] },
+    24: { answers: ["веду"] },
+};
+
 // ── Panel 5 — student · abitudine e fatto compiuto (no explanation) ─────────
 const p5exercises = [
     {
@@ -574,6 +641,7 @@ const initializers = {
     'panel-past-cor-03': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-03', exercises: p3exercises }),
     'panel-past-cor-04': () => new GapTextExercise({ rootId: 'ex-gaptext-past-cor-04', instruction: p4instruction, paragraphs: p4paragraphs, gaps: p4gaps, showHints: false }),
     'panel-past-cor-11': () => new GapTextExercise({ rootId: 'ex-gaptext-past-cor-11', instruction: p11instruction, paragraphs: p11paragraphs, gaps: p11gaps, showHints: false }),
+    'panel-past-cor-12': () => new GapTextExercise({ rootId: 'ex-gaptext-past-cor-12', instruction: p12instruction, paragraphs: p12paragraphs, gaps: p12gaps, showHints: false }),
     'panel-past-cor-05': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-05', exercises: p5exercises }),
     'panel-past-cor-06': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-06', exercises: p6exercises }),
     'panel-past-cor-07': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-07', exercises: p7exercises }),
