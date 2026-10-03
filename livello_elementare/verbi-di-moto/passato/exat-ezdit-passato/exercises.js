@@ -6,8 +6,8 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // Struttura della pagina (identica a idti-xodit-passato) —
 // contenuti in sviluppo, riempiti panel per panel.
 //
-// PANEL 1 — DragDrop · public  · Spряжение ЕЗДИТЬ passato
-// PANEL 2 — DragDrop · student · Spряжение ЕХАТЬ passato
+// PANEL 1 — DragDrop · public  · Coniugazione ЕЗДИТЬ passato
+// PANEL 2 — DragDrop · student · Coniugazione ЕХАТЬ passato
 // PANEL 3 — GapText  · public  · Testo con lacune + glossario + spiegazioni
 // PANEL 4 — GapText  · student · Testo con lacune + glossario (no spiegazioni)
 // PANEL 5 — GapText  · paid    · Testo con lacune + glossario (no spiegazioni)
@@ -16,7 +16,7 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // ============================================================
 
 // ============================================================
-// PANEL 1 — DragDrop · public · Spряжение ЕЗДИТЬ passato
+// PANEL 1 — DragDrop · public · Coniugazione ЕЗДИТЬ passato
 // (ездил / ездила / ездило / ездили)
 // ============================================================
 const p1exercises = [
@@ -93,7 +93,7 @@ const p1exercises = [
 ];
 
 // ============================================================
-// PANEL 2 — DragDrop · student · Spряжение ЕХАТЬ passato
+// PANEL 2 — DragDrop · student · Coniugazione ЕХАТЬ passato
 // (ехал / ехала / ехало / ехали) — durata/sfondo di un movimento
 // ============================================================
 const p2exercises = [
