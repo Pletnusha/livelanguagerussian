@@ -123,6 +123,11 @@
             margin-bottom: 20px;
         }
         
+        .login-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
         .loading {
             display: none;
             text-align: center;
@@ -293,6 +298,8 @@
             <button type="submit" id="submitBtn">Registrati</button>
         </div>
     </form>
+
+    <p class="login-link">Hai già un account? <a id="loginLink" href="/login.html">Accedi</a></p>
     
     <div class="loading" id="loadingMessage">
         <p>Registrazione in corso...</p>
@@ -328,6 +335,10 @@
         const urlParams = new URLSearchParams(window.location.search);
         const topicPath = urlParams.get('topic') || '';
         const plan = urlParams.get('plan') || '';
+
+        if (topicPath) {
+            document.getElementById('loginLink').href = '/login.html?redirect=' + encodeURIComponent(topicPath);
+        }
 
         // Show selected plan at top of form
         if (plan && STRIPE_LINKS[plan]) {
@@ -532,6 +543,9 @@
                 }
 
                 console.log('User registered:', data);
+
+                // Il dispositivo ora ha un account: le lezioni manderanno al login, non alla registrazione
+                try { localStorage.setItem('llr_has_account', '1'); } catch (e) {}
 
                 // Redirect to Stripe if plan selected
                 if (plan && STRIPE_LINKS[plan]) {

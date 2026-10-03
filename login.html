@@ -197,7 +197,7 @@
         </div>
 
         <div class="login-footer">
-            Non hai un account? <a href="/register.html">Registrati gratis</a>
+            Non hai un account? <a id="registerLink" href="/register.html">Registrati gratis</a>
         </div>
 
     </div>
@@ -212,6 +212,10 @@
         const urlParams = new URLSearchParams(window.location.search);
         const redirectPath = urlParams.get('redirect') || '';
 
+        if (redirectPath) {
+            document.getElementById('registerLink').href = '/register.html?topic=' + encodeURIComponent(redirectPath);
+        }
+
         document.getElementById('loginForm').addEventListener('submit', async (e) => {
             e.preventDefault();
 
@@ -225,6 +229,8 @@
                 const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
 
                 if (error) throw error;
+
+                try { localStorage.setItem('llr_has_account', '1'); } catch (e) {}
 
                 await supabaseClient
                     .from('profiles')
