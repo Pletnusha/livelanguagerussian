@@ -761,4 +761,4 @@ const initializers = {
     'panel-past-ez-07': () => initPanel7(),
 };
 
-initPanelManager({ initializers, enableAccessControl: false });
+initPanelManager({ initializers, enableAccessControl: true });

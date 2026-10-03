@@ -8,6 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        document.documentElement.style.visibility = 'hidden';
+        (async () => {
+            const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
+            await new Promise((res, rej) => {
+                const s = document.createElement('script');
+                s.src = 'https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js';
+                s.onload = res; s.onerror = rej;
+                document.head.appendChild(s);
+            });
+            const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            const { data: { session } } = await client.auth.getSession();
+            if (!session) {
+                window.location.href = '/login.html?redirect=livello_elementare/verbi-di-moto/passato/verbi-specifici-passato/correre';
+            } else {
+                document.documentElement.style.visibility = '';
+            }
+        })();
+    </script>
 </head>
 <body class="page-correre-passato">
 
@@ -46,12 +66,12 @@
             </div>
         </div>
 
-        <!-- Panel 6 — Write · student · processo interrotto e genere -->
+        <!-- Panel 6 — Write · paid · processo interrotto e genere -->
         <article class="exercise-card" data-status="open" data-target="panel-past-cor-06">
             <span class="exercise-type">Scrivere</span>
             <h3 class="exercise-title">Бежал и вдруг — processo interrotto e genere</h3>
         </article>
-        <div class="exercise-panel" id="panel-past-cor-06" data-access="student" hidden>
+        <div class="exercise-panel" id="panel-past-cor-06" data-access="paid" hidden>
             <div id="ex-write-past-cor-06" class="universal-dd">
                 <div id="ex-write-past-cor-06-container"></div>
                 <div id="ex-write-past-cor-06-completion" style="display: none;"></div>
@@ -89,6 +109,22 @@
             <div id="ex-gaptext-past-cor-12" class="universal-dd">
                 <div id="ex-gaptext-past-cor-12-container"></div>
             </div>
+        </div>
+
+        <!-- Panel 7 — Quiz · public -->
+        <article class="exercise-card" data-status="open" data-target="panel-past-cor-07">
+            <span class="exercise-type">Quiz</span>
+            <h3 class="exercise-title">ТЕСТ — бежал или бегал?</h3>
+        </article>
+        <div class="exercise-panel" id="panel-past-cor-07" data-access="public" hidden>
+            <section id="past-cor-07-deck" class="universal-dd">
+                <div id="past-cor-07-cards-container"></div>
+                <div class="fca01-nav">
+                    <button id="past-cor-07-deck-prev" class="fca01-btn-nav" disabled>← INDIETRO</button>
+                    <span id="past-cor-07-deck-counter" class="fca01-counter">1 / 30</span>
+                    <button id="past-cor-07-deck-next" class="btn btn-primary">AVANTI →</button>
+                </div>
+            </section>
         </div>
 
     </main>
