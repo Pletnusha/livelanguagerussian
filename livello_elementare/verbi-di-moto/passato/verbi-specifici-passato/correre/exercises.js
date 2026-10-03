@@ -1,4 +1,5 @@
 import WriteDialogueExercise from '/assets/js/engines/WriteDialogueExercise.js';
+import GapTextExercise from '/assets/js/engines/GapTextExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ── Panel 1 — public · dialoghi brevi ───────────────────────────────────────
@@ -199,10 +200,110 @@ const p3exercises = [
     },
 ];
 
-// ── Panel 4 — public · testo (stub) ─────────────────────────────────────────
-const p4exercises = [
-    // TODO: testo con бежал/бегал in contesto narrativo
+// ── Panel 4 — public · testo con lacune «На вкус и цвет: кто как бегает» ────
+// GapText (showHints: false). Solo verbi di moto imperfettivi senza prefisso:
+// ходить/идти, ездить/ехать, бегать/бежать — scelta pluri/monodirezionale,
+// al presente e al passato.
+const p4instruction = "Leggi il racconto e scrivi la forma corretta del verbo (ходить/идти, ездить/ехать, бегать/бежать) al presente o al passato. Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
+
+const p4paragraphs = [
+    "[[На вкус и цвет товарищей нет::i gusti sono gusti]]. В субботу вечером вся банда, как обычно, сидела в баре. Не было только Тимура. — Тимур, ты где?! — написала Лена в чат. — Уже {{1}}! Пять минут! — ответил Тимур.",
+    "<strong>1.1</strong>",
+    "Тимур опоздал на полчаса. Сначала он {{2}} из парка на [[моноколесе::monoruota elettrica]], но на полпути [[разрядился аккумулятор::si è scaricata la batteria]], и последние два километра он {{3}} — и даже обогнал троллейбус. — Ребята, не ругайтесь, — сказал он и посмотрел на [[фитнес-браслет::braccialetto fitness]]. — Я сегодня {{4}} по парку два часа. Двадцать тысяч шагов! Браслет мной гордится.",
+    "<strong>1.2</strong>",
+    "— Два часа? Это вредно для [[суставов::articolazioni]], — сказал Женя. — Я читал исследование. — Ты всё читал, — засмеялась Лена. — А сам ты когда-нибудь {{5}}? — Один раз. На [[беговой дорожке::tapis roulant]]. Это ужасно: ты {{6}} целый час и всё время смотришь в стену. Поэтому теперь я {{7}} пешком в любую погоду, а зимой {{8}} на лыжах.",
+    "<strong>1.3</strong>",
+    "— Ходить пешком — это не спорт, — заявила Лена. Лена [[следит за пульсом::controlla il battito cardiaco]] даже во сне и {{9}} в спортзал пять раз в неделю. — Вот вчера я {{10}} на дорожке сорок минут, пульс — сто сорок. Вот это [[нагрузка::sforzo fisico]]! — А когда ты {{11}} домой пешком после спортзала, пульс тоже был сто сорок? — спросила Катя. — Нет, конечно. — Вот! А у меня каждое воскресенье нормальная нагрузка.",
+    "<strong>1.4</strong>",
+    "Катя бег не любит, она любит гулять. Каждое воскресенье она {{12}} в парк или в центр. — В прошлое воскресенье мы с Аней {{13}} по центру пять часов! — гордо сказала она. — Пять часов, — [[мрачно::cupamente]] повторила Аня. — Я потом два дня лежала на диване.",
+    "<strong>1.5</strong>",
+    "Аня ненавидит ходить пешком. На работу она {{14}} на машине, на прогулки — на велосипеде, а дома, кажется, на [[самокате::monopattino]]: из спальни на кухню и обратно. Бегает Аня только в одном случае. — Только когда опаздываю, — объяснила она. — Вот вчера я {{15}} за автобусом: машина была в сервисе. — И как? — Автобус {{16}} быстрее.",
+    "<strong>1.6</strong>",
+    "Андрей всё это время молча ел бургер с картошкой фри. — Андрей, а ты? — спросил Тимур. — Ты же в понедельник тоже {{17}}! — Конечно, — гордо ответил Андрей. — Целых пятнадцать минут. Я {{18}} в киоск за шаурмой и обратно. — Это [[не считается::non vale]]! — Ещё как считается. Когда я {{19}} мимо Лениного спортзала, я даже не курил. Андрей [[начинает новую жизнь::comincia una nuova vita]] каждый понедельник. В прошлый понедельник он тоже {{20}}. И в позапрошлый.",
 ];
+
+const p4gaps = {
+    1: {
+        answers: ["бегу", "иду", "еду"],
+        explanation: "бегу = movimento in corso adesso, in una direzione (verso il bar): verbo monodirezionale al presente.",
+    },
+    2: {
+        answers: ["ехал"],
+        explanation: "ехал = viaggio con un mezzo (la monoruota) in corso, in una direzione: dal parco verso il bar.",
+    },
+    3: {
+        answers: ["бежал"],
+        explanation: "бежал = corsa in una sola direzione, un tragitto concreto (gli ultimi due chilometri fino al bar).",
+    },
+    4: {
+        answers: ["бегал"],
+        explanation: "бегал по парку = correre in giro, in più direzioni, per due ore: verbo pluridirezionale.",
+    },
+    5: {
+        answers: ["бегал"],
+        explanation: "бегал = esperienza in generale (hai mai corso?): la corsa come attività, senza direzione.",
+    },
+    6: {
+        answers: ["бегаешь"],
+        explanation: "бегаешь = la corsa come attività sul tapis roulant: non c'è una meta, si corre «sul posto».",
+    },
+    7: {
+        answers: ["хожу"],
+        explanation: "хожу пешком = abitudine (con qualsiasi tempo): verbo pluridirezionale al presente.",
+    },
+    8: {
+        answers: ["езжу"],
+        explanation: "езжу на лыжах = attività abituale d'inverno, senza una direzione precisa.",
+    },
+    9: {
+        answers: ["ходит"],
+        explanation: "ходит в спортзал = abitudine ripetuta (cinque volte a settimana): andata e ritorno ogni volta.",
+    },
+    10: {
+        answers: ["бегала"],
+        explanation: "бегала на дорожке = la corsa come attività per quaranta minuti, senza una meta.",
+    },
+    11: {
+        answers: ["шла"],
+        explanation: "шла = movimento a piedi in una sola direzione (verso casa), in un momento preciso.",
+    },
+    12: {
+        answers: ["ходит"],
+        explanation: "ходит = abitudine (ogni domenica va al parco o in centro e torna).",
+    },
+    13: {
+        answers: ["ходили"],
+        explanation: "ходили по центру = camminare in giro, in più direzioni, per cinque ore.",
+    },
+    14: {
+        answers: ["ездит"],
+        explanation: "ездит на машине = abitudine (va al lavoro in macchina ogni giorno).",
+    },
+    15: {
+        answers: ["бежала"],
+        explanation: "бежала за автобусом = una corsa concreta in una direzione, dietro all'autobus.",
+    },
+    16: {
+        answers: ["ехал"],
+        explanation: "ехал = l'autobus era in movimento in quel momento, in una direzione: monodirezionale.",
+    },
+    17: {
+        answers: ["бегал"],
+        explanation: "бегал = la corsa come attività (anche tu hai corso lunedì?), senza direzione.",
+    },
+    18: {
+        answers: ["бегал"],
+        explanation: "бегал в киоск и обратно = andata e ritorno: con il ritorno si usa il pluridirezionale.",
+    },
+    19: {
+        answers: ["бежал"],
+        explanation: "бежал мимо = movimento in corso in una direzione, nel momento in cui passava davanti alla palestra.",
+    },
+    20: {
+        answers: ["бегал"],
+        explanation: "бегал = un fatto generale, ripetuto (ogni lunedì): la corsa come attività.",
+    },
+};
 
 // ── Panel 5 — student · abitudine e fatto compiuto (no explanation) ─────────
 const p5exercises = [
@@ -381,7 +482,7 @@ const initializers = {
     'panel-past-cor-01': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-01', exercises: p1exercises }),
     'panel-past-cor-02': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-02', exercises: p2exercises }),
     'panel-past-cor-03': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-03', exercises: p3exercises }),
-    'panel-past-cor-04': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-04', exercises: p4exercises }),
+    'panel-past-cor-04': () => new GapTextExercise({ rootId: 'ex-gaptext-past-cor-04', instruction: p4instruction, paragraphs: p4paragraphs, gaps: p4gaps, showHints: false }),
     'panel-past-cor-05': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-05', exercises: p5exercises }),
     'panel-past-cor-06': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-06', exercises: p6exercises }),
     'panel-past-cor-07': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-07', exercises: p7exercises }),
