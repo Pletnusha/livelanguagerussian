@@ -8,70 +8,70 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // ============================================================
 const p1exercises = [
     {
-        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        instruction: "Metti il pronome o il sostantivo al genitivo.",
         text: "У ___ есть сестра.",
         words: ["я", "мне", "меня"],
         correctAnswers: { 1: "меня" },
         explanation: "Genitivo del pronome personale: я → меня."
     },
     {
-        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        instruction: "Metti il pronome o il sostantivo al genitivo.",
         text: "У ___ есть друг.",
         words: ["моя старшая сестра", "моей старшей сестре", "моей старшей сестры"],
         correctAnswers: { 1: "моей старшей сестры" },
         explanation: "Genitivo: сестра (femminile) → сестры; l'aggettivo concorda: моя старшая → моей старшей."
     },
     {
-        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        instruction: "Metti il pronome o il sostantivo al genitivo.",
         text: "У ___ есть машина?",
         words: ["твой сосед", "твоему соседу", "твоего соседа"],
         correctAnswers: { 1: "твоего соседа" },
         explanation: "Genitivo: сосед (maschile) → соседа; il pronome concorda: твой → твоего."
     },
     {
-        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        instruction: "Metti il pronome o il sostantivo al genitivo.",
         text: "У ___ есть собака.",
         words: ["наша бабушка", "нашей бабушке", "нашей бабушки"],
         correctAnswers: { 1: "нашей бабушки" },
         explanation: "Genitivo: бабушка (femminile) → бабушки; il pronome concorda: наша → нашей."
     },
     {
-        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        instruction: "Metti il pronome o il sostantivo al genitivo.",
         text: "У ___ есть работа.",
         words: ["она", "ей", "неё"],
         correctAnswers: { 1: "неё" },
         explanation: "Genitivo del pronome personale: она → неё (con -н- dopo la preposizione «у»)."
     },
     {
-        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        instruction: "Metti il pronome o il sostantivo al genitivo.",
         text: "У ___ есть квартира.",
         words: ["ваш дядя", "вашему дяде", "вашего дяди"],
         correctAnswers: { 1: "вашего дяди" },
         explanation: "дядя è maschile ma si declina come i sostantivi femminili in -я: genitivo дяди. Il pronome concorda al maschile: ваш → вашего."
     },
     {
-        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        instruction: "Metti il pronome o il sostantivo al genitivo.",
         text: "У его ___ есть время.",
         words: ["брат", "брату", "брата"],
         correctAnswers: { 1: "брата" },
         explanation: "Sostantivo maschile al genitivo: брата. (его è invariabile, non cambia forma)."
     },
     {
-        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        instruction: "Metti il pronome o il sostantivo al genitivo.",
         text: "У её ___ есть велосипед.",
         words: ["подруга", "подруге", "подруги"],
         correctAnswers: { 1: "подруги" },
         explanation: "Sostantivo femminile al genitivo: подруги. (её è invariabile, non cambia forma)."
     },
     {
-        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        instruction: "Metti il pronome o il sostantivo al genitivo.",
         text: "У ___ есть дети.",
         words: ["они", "им", "них"],
         correctAnswers: { 1: "них" },
         explanation: "Genitivo del pronome personale: они → них (con -н- dopo la preposizione «у»)."
     },
     {
-        instruction: "Поставь местоимение или существительное в родительный падеж.",
+        instruction: "Metti il pronome o il sostantivo al genitivo.",
         text: "У ___ есть дача.",
         words: ["мы", "нам", "нас"],
         correctAnswers: { 1: "нас" },
@@ -85,61 +85,61 @@ const p1exercises = [
 // ============================================================
 const p2exercises = [
     {
-        instruction: "Поставь слова в родительный падеж (два пропуска).",
+        instruction: "Metti le parole al genitivo (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["я", "меня", "кошка", "кошки"],
         correctAnswers: { 1: "меня", 2: "кошки" }
     },
     {
-        instruction: "Поставь слова в родительный падеж (два пропуска).",
+        instruction: "Metti le parole al genitivo (due spazi vuoti).",
         text: "У {{1}} брата нет {{2}}.",
         words: ["мой старший", "моего старшего", "чёрная куртка", "чёрной куртки"],
         correctAnswers: { 1: "моего старшего", 2: "чёрной куртки" }
     },
     {
-        instruction: "Поставь слова в родительный падеж (два пропуска).",
+        instruction: "Metti le parole al genitivo (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["ты", "тебя", "заграничный паспорт", "заграничного паспорта"],
         correctAnswers: { 1: "тебя", 2: "заграничного паспорта" }
     },
     {
-        instruction: "Поставь слова в родительный падеж (два пропуска).",
+        instruction: "Metti le parole al genitivo (due spazi vuoti).",
         text: "У {{1}} сестры нет {{2}}.",
         words: ["твоя младшая", "твоей младшей", "мобильный телефон", "мобильного телефона"],
         correctAnswers: { 1: "твоей младшей", 2: "мобильного телефона" }
     },
     {
-        instruction: "Поставь слова в родительный падеж (два пропуска).",
+        instruction: "Metti le parole al genitivo (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["он", "него", "русский словарь", "русского словаря"],
         correctAnswers: { 1: "него", 2: "русского словаря" }
     },
     {
-        instruction: "Поставь слова в родительный падеж (два пропуска).",
+        instruction: "Metti le parole al genitivo (due spazi vuoti).",
         text: "У {{1}} соседа нет {{2}}.",
         words: ["наш", "нашего", "большая терраса", "большой террасы"],
         correctAnswers: { 1: "нашего", 2: "большой террасы" }
     },
     {
-        instruction: "Поставь слова в родительный падеж (два пропуска).",
+        instruction: "Metti le parole al genitivo (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["ваша соседка", "вашей соседки", "большое зеркало", "большого зеркала"],
         correctAnswers: { 1: "вашей соседки", 2: "большого зеркала" }
     },
     {
-        instruction: "Поставь слова в родительный падеж (два пропуска).",
+        instruction: "Metti le parole al genitivo (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["его подруга", "его подруги", "парень", "парня"],
         correctAnswers: { 1: "его подруги", 2: "парня" }
     },
     {
-        instruction: "Поставь слова в родительный падеж (два пропуска).",
+        instruction: "Metti le parole al genitivo (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["мы", "нас", "время", "времени"],
         correctAnswers: { 1: "нас", 2: "времени" }
     },
     {
-        instruction: "Поставь слова в родительный падеж (два пропуска).",
+        instruction: "Metti le parole al genitivo (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["её друг", "её друга", "девушка", "девушки"],
         correctAnswers: { 1: "её друга", 2: "девушки" }
@@ -152,61 +152,61 @@ const p2exercises = [
 // ============================================================
 const p3exercises = [
     {
-        instruction: "Поставь слова в правильный падеж (два пропуска).",
+        instruction: "Metti le parole al caso corretto (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["он", "него", "новый телефон", "нового телефона"],
         correctAnswers: { 1: "него", 2: "нового телефона" }
     },
     {
-        instruction: "Поставь слова в правильный падеж (два пропуска).",
+        instruction: "Metti le parole al caso corretto (due spazi vuoti).",
         text: "У {{1}} есть {{2}}.",
         words: ["я", "меня", "старший брат", "старшего брата"],
         correctAnswers: { 1: "меня", 2: "старший брат" }
     },
     {
-        instruction: "Поставь слова в правильный падеж (два пропуска).",
+        instruction: "Metti le parole al caso corretto (due spazi vuoti).",
         text: "У {{1}} есть {{2}}.",
         words: ["он", "него", "новый телефон", "нового телефона"],
         correctAnswers: { 1: "него", 2: "новый телефон" }
     },
     {
-        instruction: "Поставь слова в правильный падеж (два пропуска).",
+        instruction: "Metti le parole al caso corretto (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["она", "неё", "свободное время", "свободного времени"],
         correctAnswers: { 1: "неё", 2: "свободного времени" }
     },
     {
-        instruction: "Поставь слова в правильный падеж (два пропуска).",
+        instruction: "Metti le parole al caso corretto (due spazi vuoti).",
         text: "У {{1}} есть {{2}}.",
         words: ["ты", "тебя", "большая собака", "большой собаки"],
         correctAnswers: { 1: "тебя", 2: "большая собака" }
     },
     {
-        instruction: "Поставь слова в правильный падеж (два пропуска).",
+        instruction: "Metti le parole al caso corretto (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["мы", "нас", "большое зеркало", "большого зеркала"],
         correctAnswers: { 1: "нас", 2: "большого зеркала" }
     },
     {
-        instruction: "Поставь слова в правильный падеж (два пропуска).",
+        instruction: "Metti le parole al caso corretto (due spazi vuoti).",
         text: "У {{1}} есть {{2}}.",
         words: ["мы", "нас", "большое зеркало", "большого зеркала"],
         correctAnswers: { 1: "нас", 2: "большое зеркало" }
     },
     {
-        instruction: "Поставь слова в правильный падеж (два пропуска).",
+        instruction: "Metti le parole al caso corretto (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["ты", "тебя", "большая собака", "большой собаки"],
         correctAnswers: { 1: "тебя", 2: "большой собаки" }
     },
     {
-        instruction: "Поставь слова в правильный падеж (два пропуска).",
+        instruction: "Metti le parole al caso corretto (due spazi vuoti).",
         text: "У {{1}} есть {{2}}.",
         words: ["она", "неё", "свободное время", "свободного времени"],
         correctAnswers: { 1: "неё", 2: "свободное время" }
     },
     {
-        instruction: "Поставь слова в правильный падеж (два пропуска).",
+        instruction: "Metti le parole al caso corretto (due spazi vuoti).",
         text: "У {{1}} нет {{2}}.",
         words: ["я", "меня", "старший брат", "старшего брата"],
         correctAnswers: { 1: "меня", 2: "старшего брата" }
