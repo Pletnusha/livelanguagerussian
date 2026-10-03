@@ -325,6 +325,65 @@ const p4gaps = {
     },
 };
 
+// ── Panel 11 — student · testo con lacune «Ультрамарафон» ──────────────────
+// GapText (showHints: false, senza spiegazioni). ходить/идти, ездить/ехать,
+// бегать/бежать al presente e al passato (anche бежать = «andare di fretta»);
+// носить/нести, водить/вести, возить/везти solo al presente.
+const p11instruction = "Leggi il racconto e scrivi la forma corretta del verbo: ходить/идти, ездить/ехать, бегать/бежать al presente o al passato; носить/нести, водить/вести, возить/везти al presente. Attenzione: бежать può voler dire anche «andare di fretta». Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
+
+const p11paragraphs = [
+    "[[Ультрамарафон::ultramaratona]] — это не марафон. Это сто километров. Полгода Тимур [[готовился::si è preparato]] к нему как настоящий профессионал: каждое утро он {{1}} по парку, а по выходным {{2}} за город и {{3}} по лесу по пять часов. Время {{4}} быстро, и [[до старта оставался::alla partenza mancava]] всего месяц.",
+    "<strong>1.1</strong>",
+    "— Тимур, пойдём сегодня в кино? — спросила Катя.",
+    "— Не могу, у меня тренировка. Всё, {{5}}! — и Тимур уже надевал кроссовки.",
+    "— А что у тебя в рюкзаке? — спросила Аня.",
+    "— Вода, бананы и [[энергетические гели::gel energetici]]. На длинные тренировки я всегда {{6}} с собой два литра воды.",
+    "— Два литра? Я даже сумку с продуктами сама не {{7}}. Для этого у меня есть машина, — засмеялась Аня.",
+    "<strong>1.2</strong>",
+    "В день старта, в пять утра, вся банда собралась у Ани: все хотели [[болеть за::fare il tifo per]] Тимура, но только Аня [[согласилась::ha accettato]] [[сесть за руль::mettersi alla guida]] [[в такую рань::così presto]]. Не было только Андрея.",
+    "— Андрей, ты где?! Мы уже в машине!",
+    "— Я {{8}}, {{9}}! Пять минут! [[Опаздываю::sono in ritardo]]! — ответил Андрей.",
+    "Через двадцать минут они наконец {{10}} на старт.",
+    "— Аня, ты всегда так быстро {{11}}? — [[испуганно::spaventato]] спросил Женя.",
+    "— Я {{12}} машину двадцать лет, [[не бойся::non avere paura]], — ответила Аня.",
+    "— [[Аккуратнее::più piano, fai attenzione]]! Мы {{13}} в [[багажнике::bagagliaio]] торт для Тимура! — крикнула Лена.",
+    "— Веганский, — уточнил Женя. — Без сахара, без муки и, кажется, без вкуса.",
+    "<strong>1.3</strong>",
+    "Тимур {{14}} уже десятый час. Женя {{15}} [[вдоль трассы::lungo il percorso]] [[туда-сюда::avanti e indietro]] и проверял пульс на своих умных часах — у себя, не у Тимура. Андрей {{16}} от трассы к киоску с кофе и обратно. Катя стояла с [[плакатом::cartellone]] «Тимур, ты лучший!», а последние пять километров Лена {{17}} рядом с Тимуром и кричала: «[[Дыши::respira]]!»",
+    "<strong>1.4</strong>",
+    "Тимур [[финишировал::ha tagliato il traguardo]] через тринадцать часов.",
+    "— Ну как ты? — спросила Катя.",
+    "— Отлично. Только ноги не {{18}}.",
+    "— Ничего, мы тебя {{19}} домой, — сказала Аня.",
+    "— Андрей, а что это ты {{20}}? — спросил Женя.",
+    "— Медаль Тимура. Он сказал, что она слишком тяжёлая.",
+    "Всю дорогу Тимур спал на [[заднем сиденье::sedile posteriore]]. А в понедельник в шесть утра он уже снова {{21}} по парку.",
+];
+
+const p11gaps = {
+    1: { answers: ["бегал"] },
+    2: { answers: ["ездил"] },
+    3: { answers: ["бегал"] },
+    4: { answers: ["бежало"] },
+    5: { answers: ["бегу"] },
+    6: { answers: ["ношу"] },
+    7: { answers: ["ношу"] },
+    8: { answers: ["бегу"] },
+    9: { answers: ["бегу"] },
+    10: { answers: ["ехали"] },
+    11: { answers: ["водишь"] },
+    12: { answers: ["вожу"] },
+    13: { answers: ["везём"] },
+    14: { answers: ["бежал"] },
+    15: { answers: ["ходил"] },
+    16: { answers: ["бегал"] },
+    17: { answers: ["бежала"] },
+    18: { answers: ["ходят"] },
+    19: { answers: ["везём"] },
+    20: { answers: ["несёшь"] },
+    21: { answers: ["бегал"] },
+};
+
 // ── Panel 5 — student · abitudine e fatto compiuto (no explanation) ─────────
 const p5exercises = [
     {
@@ -503,6 +562,7 @@ const initializers = {
     'panel-past-cor-02': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-02', exercises: p2exercises }),
     'panel-past-cor-03': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-03', exercises: p3exercises }),
     'panel-past-cor-04': () => new GapTextExercise({ rootId: 'ex-gaptext-past-cor-04', instruction: p4instruction, paragraphs: p4paragraphs, gaps: p4gaps, showHints: false }),
+    'panel-past-cor-11': () => new GapTextExercise({ rootId: 'ex-gaptext-past-cor-11', instruction: p11instruction, paragraphs: p11paragraphs, gaps: p11gaps, showHints: false }),
     'panel-past-cor-05': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-05', exercises: p5exercises }),
     'panel-past-cor-06': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-06', exercises: p6exercises }),
     'panel-past-cor-07': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-07', exercises: p7exercises }),
