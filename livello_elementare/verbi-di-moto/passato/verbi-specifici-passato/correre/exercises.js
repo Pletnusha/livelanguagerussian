@@ -325,6 +325,76 @@ const p4gaps = {
     },
 };
 
+// ── Panel 11 — student · testo con lacune «Ультрамарафон» ──────────────────
+// GapText (showHints: false, senza spiegazioni). ходить/идти, ездить/ехать,
+// бегать/бежать al presente e al passato (anche бежать = «andare di fretta»);
+// носить/нести, водить/вести, возить/везти solo al presente.
+const p11instruction = "Leggi il racconto e scrivi la forma corretta del verbo: ходить/идти, ездить/ехать, бегать/бежать al presente o al passato; носить/нести, водить/вести, возить/везти al presente. Attenzione: бежать può voler dire anche «andare di fretta». Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
+
+const p11paragraphs = [
+    "[[Ультрамарафон::ultramaratona]] — это не марафон. Это сто миль, то есть сто шестьдесят километров. В декабре. Под Переславлем-Залесским. Полгода Тимур [[готовился::si è preparato]] к нему как настоящий профессионал: каждое утро он {{1}} по [[заснеженному::innevato]] парку, а по выходным {{2}} за город и {{3}} по лесу по пять часов — в минус двадцать. Время {{4}} быстро, и [[до старта оставался::alla partenza mancava]] всего месяц.",
+    "<strong>1.1</strong>",
+    "— Тимур, пойдём сегодня в кино? — спросила Катя.",
+    "— Не могу, у меня тренировка. Всё, {{5}}! — и Тимур уже надевал [[шипованные кроссовки::scarpe da corsa chiodate]].",
+    "— А что у тебя в рюкзаке? — спросила Аня.",
+    "— Вода, бананы, [[энергетические гели::gel energetici]] и [[запасные::di ricambio]] носки. Зимой я всегда {{6}} с собой [[термос::thermos]] с горячим чаем.",
+    "— Термос? Я даже сумку с продуктами сама не {{7}}. Для этого у меня есть машина, — засмеялась Аня.",
+    "<strong>1.2</strong>",
+    "В день старта, в четыре утра, вся банда собралась у Ани: все хотели [[болеть за::fare il tifo per]] Тимура, но только Аня [[согласилась::ha accettato]] [[сесть за руль::mettersi alla guida]] [[в такую рань::così presto]]. Не было только Андрея.",
+    "— Андрей, ты где?! Мы уже в машине!",
+    "— Я {{8}}, {{9}}! Пять минут! [[Опаздываю::sono in ritardo]]! — ответил Андрей.",
+    "Через двадцать минут они наконец {{10}} в Переславль-Залесский. На трассе была [[метель::tormenta di neve]].",
+    "— Аня, ты всегда так быстро {{11}}? Даже в метель? — [[испуганно::spaventato]] спросил Женя.",
+    "— Я {{12}} машину двадцать лет, у меня [[зимняя резина::gomme invernali]], [[не бойся::non avere paura]], — ответила Аня.",
+    "— [[Аккуратнее::più piano, fai attenzione]]! Мы {{13}} в [[багажнике::bagagliaio]] торт для Тимура! — крикнула Лена.",
+    "— Веганский, — уточнил Женя. — Без сахара, без муки и, кажется, без вкуса.",
+    "<strong>1.3</strong>",
+    "Днём Тимур {{14}} по [[глубокому снегу::neve alta]] — тяжело, но ещё [[куда ни шло::passi ancora]]. А ночью стало по-настоящему страшно: темнота, лес, минус восемнадцать и только маленький круг света от [[налобного фонарика::lampada frontale]]. Тимур {{15}} уже семнадцать часов. Чай в термосе давно [[кончился::era finito]].",
+    "Всю ночь ребята {{16}} от одной [[контрольной точки::punto di controllo]] к другой. На каждой точке Аня держала [[наготове::pronto in mano]] горячий термос, Лена — бананы, Катя — [[плакат::cartellone]] «Тимур, ты лучший!». Плакат замёрз. Катя тоже. Тимур [[появлялся из темноты::sbucava dal buio]], [[молча::in silenzio]] пил чай и {{17}} дальше, в лес. А ребята прыгали в машину и {{18}} на следующую точку.",
+    "Женя на каждой точке {{19}} [[туда-сюда::avanti e indietro]], чтобы не [[замёрзнуть::congelarsi]], и проверял пульс на своих умных часах — у себя, не у Тимура. Андрей {{20}} от машины к [[костру::falò]] и обратно — [[греться::a scaldarsi]].",
+    "На сто пятьдесят девятом километре Тимур остановился.",
+    "— Всё. Я больше не могу. Я не чувствую ног.",
+    "— Можешь, — сказала Лена. — Ты полгода {{21}} в минус двадцать. Остался один километр.",
+    "Последний километр Лена {{22}} рядом с ним по [[сугробам::cumuli di neve]] и кричала: «[[Дыши::respira]]!»",
+    "<strong>1.4</strong>",
+    "Тимур [[финишировал::ha tagliato il traguardo]] больше чем через [[сутки::un giorno intero (24 ore)]].",
+    "— Ну как ты? — спросила Катя.",
+    "— Отлично. Только ноги не {{23}}. И пальцы не чувствую.",
+    "— Ничего, мы тебя {{24}} домой, — сказала Аня.",
+    "— Андрей, а что это ты {{25}}? — спросил Женя.",
+    "— Медаль Тимура. Он сказал, что она слишком тяжёлая.",
+    "Всю дорогу Тимур спал на [[заднем сиденье::sedile posteriore]] под тремя куртками. А в понедельник в шесть утра он уже снова {{26}} по заснеженному парку.",
+];
+
+const p11gaps = {
+    1: { answers: ["бегал"] },
+    2: { answers: ["ездил"] },
+    3: { answers: ["бегал"] },
+    4: { answers: ["бежало"] },
+    5: { answers: ["бегу"] },
+    6: { answers: ["ношу"] },
+    7: { answers: ["ношу"] },
+    8: { answers: ["бегу"] },
+    9: { answers: ["бегу"] },
+    10: { answers: ["ехали"] },
+    11: { answers: ["водишь"] },
+    12: { answers: ["вожу"] },
+    13: { answers: ["везём"] },
+    14: { answers: ["бежал"] },
+    15: { answers: ["бежал"] },
+    16: { answers: ["ездили"] },
+    17: { answers: ["бежал"] },
+    18: { answers: ["ехали"] },
+    19: { answers: ["ходил"] },
+    20: { answers: ["бегал"] },
+    21: { answers: ["бегал"] },
+    22: { answers: ["бежала"] },
+    23: { answers: ["ходят"] },
+    24: { answers: ["везём"] },
+    25: { answers: ["несёшь"] },
+    26: { answers: ["бегал"] },
+};
+
 // ── Panel 5 — student · abitudine e fatto compiuto (no explanation) ─────────
 const p5exercises = [
     {
@@ -503,6 +573,7 @@ const initializers = {
     'panel-past-cor-02': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-02', exercises: p2exercises }),
     'panel-past-cor-03': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-03', exercises: p3exercises }),
     'panel-past-cor-04': () => new GapTextExercise({ rootId: 'ex-gaptext-past-cor-04', instruction: p4instruction, paragraphs: p4paragraphs, gaps: p4gaps, showHints: false }),
+    'panel-past-cor-11': () => new GapTextExercise({ rootId: 'ex-gaptext-past-cor-11', instruction: p11instruction, paragraphs: p11paragraphs, gaps: p11gaps, showHints: false }),
     'panel-past-cor-05': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-05', exercises: p5exercises }),
     'panel-past-cor-06': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-06', exercises: p6exercises }),
     'panel-past-cor-07': () => new WriteDialogueExercise({ rootId: 'ex-write-past-cor-07', exercises: p7exercises }),
