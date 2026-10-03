@@ -230,8 +230,6 @@
 
                 if (error) throw error;
 
-                try { localStorage.setItem('llr_has_account', '1'); } catch (e) {}
-
                 await supabaseClient
                     .from('profiles')
                     .update({ last_login: new Date().toISOString() })
