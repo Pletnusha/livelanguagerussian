@@ -1,0 +1,36 @@
+/* Complementi — card badges: cluster semantico + livello */
+.card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  color: #fff;
+  background: #888;
+}
+
+.badge--luogo-tempo { background: #0E94C9; }
+.badge--livello     { background: #1a1a1a; }
+.badge--soon        { background: transparent; color: #888; border: 1px solid #ccc; }
+
+/* Card «in arrivo»: visibile ma non cliccabile */
+.argomento-card--soon {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.argomento-card--soon:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
