@@ -23,7 +23,7 @@
             const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
             const { data: { session } } = await client.auth.getSession();
             if (!session) {
-                window.location.href = '/login.html';
+                window.location.href = '/login.html?redirect=livello_elementare/complementi/complemento-di-tempo-determinato/che-ore-sono-che-giorno-e';
             } else {
                 document.documentElement.style.visibility = '';
             }
