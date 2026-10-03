@@ -510,4 +510,4 @@ const initializers = {
     'panel-past-vd-07': () => initPanel7(),
 };
 
-initPanelManager({ initializers, enableAccessControl: false });
+initPanelManager({ initializers, enableAccessControl: true });
