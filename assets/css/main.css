@@ -250,7 +250,10 @@ h1, h2, h3 {
 .page-exat-ezdit-passato .argomento-header,
 .page-nesti-nositi-passato .argomento-header,
 .page-vezti-voziti-passato .argomento-header,
-.page-vesti-voditi-passato .argomento-header {
+.page-vesti-voditi-passato .argomento-header,
+.page-correre-passato .argomento-header,
+.page-nuotare-passato .argomento-header,
+.page-volare-passato .argomento-header {
   padding-top: 2.5rem;
 }
 
