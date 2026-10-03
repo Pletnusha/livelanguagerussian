@@ -24,6 +24,11 @@
 .badge--livello     { background: #1a1a1a; }
 .badge--soon        { background: transparent; color: #888; border: 1px solid #ccc; }
 
+/* Pagine lezione: titolo più in basso, come le pagine verbi di moto */
+.page-che-ore-sono-che-giorno-e .argomento-header {
+  padding-top: 2.5rem;
+}
+
 /* Card «in arrivo»: visibile ma non cliccabile */
 .argomento-card--soon {
   cursor: default;
