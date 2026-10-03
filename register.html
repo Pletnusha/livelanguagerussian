@@ -544,9 +544,6 @@
 
                 console.log('User registered:', data);
 
-                // Il dispositivo ora ha un account: le lezioni manderanno al login, non alla registrazione
-                try { localStorage.setItem('llr_has_account', '1'); } catch (e) {}
-
                 // Redirect to Stripe if plan selected
                 if (plan && STRIPE_LINKS[plan]) {
                     const userId = data.user?.id || '';

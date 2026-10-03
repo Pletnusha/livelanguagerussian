@@ -23,14 +23,8 @@
             const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
             const { data: { session } } = await client.auth.getSession();
             if (!session) {
-                const back = 'principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-di-appartenenza';
-                let known = false;
-                try { known = localStorage.getItem('llr_has_account') === '1'; } catch (e) {}
-                window.location.href = known
-                    ? '/login.html?redirect=' + back
-                    : '/register.html?topic=' + back;
+                window.location.href = '/login.html?redirect=principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-di-appartenenza';
             } else {
-                try { localStorage.setItem('llr_has_account', '1'); } catch (e) {}
                 document.documentElement.style.visibility = '';
             }
         })();
