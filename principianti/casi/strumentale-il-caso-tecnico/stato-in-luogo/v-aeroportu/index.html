@@ -23,8 +23,14 @@
             const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
             const { data: { session } } = await client.auth.getSession();
             if (!session) {
-                window.location.href = '/login.html';
+                const back = 'principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/v-aeroportu';
+                let known = false;
+                try { known = localStorage.getItem('llr_has_account') === '1'; } catch (e) {}
+                window.location.href = known
+                    ? '/login.html?redirect=' + back
+                    : '/register.html?topic=' + back;
             } else {
+                try { localStorage.setItem('llr_has_account', '1'); } catch (e) {}
                 document.documentElement.style.visibility = '';
             }
         })();
