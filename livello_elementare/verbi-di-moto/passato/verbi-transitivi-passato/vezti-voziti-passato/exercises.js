@@ -6,8 +6,8 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // Struttura della pagina (identica a nesti-nositi-passato) —
 // contenuti in sviluppo, riempiti panel per panel.
 //
-// PANEL 1 — DragDrop · public  · Spряжение ВЕЗТИ passato
-// PANEL 2 — DragDrop · student · Spряжение ВОЗИТЬ passato
+// PANEL 1 — DragDrop · public  · Coniugazione ВЕЗТИ passato
+// PANEL 2 — DragDrop · student · Coniugazione ВОЗИТЬ passato
 // PANEL 3 — GapText  · public  · Testo con lacune + glossario + spiegazioni
 // PANEL 4 — GapText  · student · Testo con lacune + glossario (no spiegazioni)
 // PANEL 5 — GapText  · paid    · Testo con lacune + glossario (no spiegazioni)
@@ -16,7 +16,7 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // ============================================================
 
 // ============================================================
-// PANEL 1 — DragDrop · public · Spряжение ВЕЗТИ passato
+// PANEL 1 — DragDrop · public · Coniugazione ВЕЗТИ passato
 // (вёз / везла / везло / везли) — trasportare con un mezzo, direzione unica
 // ============================================================
 const p1exercises = [
@@ -93,7 +93,7 @@ const p1exercises = [
 ];
 
 // ============================================================
-// PANEL 2 — DragDrop · student · Spряжение ВОЗИТЬ passato
+// PANEL 2 — DragDrop · student · Coniugazione ВОЗИТЬ passato
 // (возил / возила / возили) — abitudine ripetuta
 // ============================================================
 const p2exercises = [

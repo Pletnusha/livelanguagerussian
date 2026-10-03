@@ -3,7 +3,7 @@ import GapTextExercise from '/assets/js/engines/GapTextExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public · Spряжение ХОДИТЬ passato
+// PANEL 1 — DragDrop · public · Coniugazione ХОДИТЬ passato
 // (ходил / ходила / ходило / ходили)
 // ============================================================
 const p1exercises = [
@@ -80,7 +80,7 @@ const p1exercises = [
 ];
 
 // ============================================================
-// PANEL 2 — DragDrop · student · Spряжение ИДТИ passato
+// PANEL 2 — DragDrop · student · Coniugazione ИДТИ passato
 // (шёл / шла / шло / шли)
 // ============================================================
 const p2exercises = [
