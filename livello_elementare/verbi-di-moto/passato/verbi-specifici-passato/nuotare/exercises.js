@@ -98,99 +98,93 @@ const p6exercises = [
     },
 ];
 
-// ── Panel 4 — public · testo con lacune «На вкус и цвет: кто как плавает» ───
+// ── Panel 4 — public · testo con lacune «Море или озеро?» ───────────────────
 // GapText (showHints: false). Solo verbi di moto imperfettivi senza prefisso:
 // плыть/плавать, ходить/идти, ездить/ехать, бегать/бежать — scelta
-// pluri/monodirezionale, al presente e al passato.
-const p4instruction = "Leggi il racconto e scrivi la forma corretta del verbo (плыть/плавать, ходить/идти, ездить/ехать, бегать/бежать) al presente o al passato. Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
+// pluri/monodirezionale, solo al passato.
+const p4instruction = "Leggi il racconto e scrivi la forma corretta del verbo (плыть/плавать, ходить/идти, ездить/ехать, бегать/бежать) al passato. Clicca sulle parole sottolineate per vedere la traduzione in italiano.";
 
 const p4paragraphs = [
-    "[[На вкус и цвет товарищей нет::i gusti sono gusti (ognuno ha i suoi gusti)]]. В июле банда опять {{1}} к Жене на дачу. Рядом с дачей есть озеро — пять минут на велосипеде. Тимур {{2}} к озеру первым, на [[моноколесе::monoruota elettrica]], по лесной дороге.",
-    "<strong>1.1</strong>",
-    "Через минуту он уже {{3}} на другой берег.",
-    "— Ребята, я каждое утро {{4}} два километра! — крикнул он из воды. — Это лучше, чем бег!",
-    "<strong>1.2</strong>",
-    "Женя сидел на берегу в [[панаме::cappello da sole]].",
-    "— В этом озере я не {{5}}. Я читал [[исследование::uno studio scientifico]]: здесь бактерии. Я {{6}} в бассейн три раза в неделю. Там вода с [[хлором::cloro]], зато [[стерильная::sterile]].",
-    "<strong>1.3</strong>",
-    "Лена {{7}} [[вдоль берега::lungo la riva]] [[туда-сюда::avanti e indietro]] и [[следила за пульсом::controllava il battito cardiaco]].",
-    "— Сорок минут, пульс сто двадцать!",
-    "— Лен, ты же на отдыхе, — сказала Катя.",
-    "<strong>1.4</strong>",
-    "Катя плавать любит, но только у берега.",
-    "— В прошлом году я {{8}} к середине озера и вдруг [[испугалась::mi sono spaventata]]: там так глубоко! С тех пор я {{9}} только там, где можно стоять.",
-    "<strong>1.5</strong>",
-    "Аня не плавает вообще. Она [[загорала::prendeva il sole]] на берегу и смотрела на всех в [[бинокль::binocolo]].",
-    "— Зачем плавать? Когда мне жарко, я беру [[водный велосипед::pedalò]] и {{10}} на нём по озеру, — сказала она.",
-    "— Ага. А вчера ты на нём {{11}} к Тимуру на другой берег и [[застряла в камышах::sei rimasta bloccata tra le canne]], — засмеялась Катя.",
-    "<strong>1.6</strong>",
-    "Андрей {{12}} у берега на [[надувном матрасе::materassino gonfiabile]] с бутербродом.",
-    "— Андрей, ты сегодня хоть раз {{13}}? По-настоящему? — спросил Тимур.",
-    "— Конечно. Я {{14}} от берега до середины озера. На матрасе.",
-    "— Это [[не считается::non vale]]!",
-    "— [[Ещё как считается::eccome se vale]]. А потом я ещё два раза {{15}} на дачу за бутербродами. Это тоже спорт!",
+    "[[На вкус и цвет товарищей нет::i gusti sono gusti (ognuno ha i suoi gusti)]]. Прошлым летом банда [[поспорила::ha discusso]]: где лучше плавать — в море или в озере? Аня, Лена и Женя {{1}} в Сочи, а Тимур, Катя и Андрей весь июль жили у Жени на даче, у озера. В сентябре все сидели в баре и сравнивали.",
+    "<strong>1.1 Озеро. Тимур</strong>",
+    "— На озере [[волн::onde]] нет, вода спокойная и [[пресная::dolce (non salata)]], — сказал Тимур. — Каждое утро я {{2}} на другой берег и обратно. А один раз я {{3}} туда и вдруг увидел на берегу [[лося::alce]]!",
+    "<strong>1.2 Озеро. Катя</strong>",
+    "— А я в первый день {{4}} к середине озера и вдруг [[испугалась::mi sono spaventata]]: там так глубоко! — сказала Катя. — И я решила: буду [[тренироваться::allenarmi]]. Весь месяц я каждый день {{5}} у берега — сначала десять минут, потом полчаса. А в последний день я [[доплыла::sono arrivata a nuoto]] до другого берега. Сама!",
+    "<strong>1.3 Озеро. Андрей</strong>",
+    "— А мне озеро очень понравилось, — сказал Андрей. — Я каждый день {{6}} на [[надувном матрасе::materassino gonfiabile]] с бутербродом.",
+    "— Это не плавание! — сказал Тимур.",
+    "— [[Ещё как::eccome se lo è]] плавание. Один раз матрас {{7}} прямо в [[камыши::canne (piante acquatiche)]], а я на нём спал. А ещё я три раза в день {{8}} на дачу за бутербродами. Одна проблема — [[комары::zanzare]]. И жара: [[ветерок::venticello]] совсем не [[обдувает::rinfresca, soffia addosso]].",
+    "<strong>1.4 Море. Лена</strong>",
+    "— А на море ветерок обдувает, и комаров нет! — сказала Лена. — И солёная вода тебя [[держит::ti tiene a galla]]. Я купила [[надувной матрас с единорогом::materassino gonfiabile a forma di unicorno]] и каждое утро {{9}} на нём вдоль берега [[туда-сюда::avanti e indietro]]. А в последний день я {{10}} на нём до [[буйков::boe]] — против волн!",
+    "<strong>1.5 Море. Женя</strong>",
+    "— Морская вода — это [[детокс::detox]], — сказал Женя. — Но там [[медузы::meduse]]. Мне хватало морского воздуха. Каждое утро я {{11}} по пляжу в [[панаме::cappello da sole]]…",
+    "— …и мазал всех [[солнцезащитным кремом::crema solare]], — закончила Лена.",
+    "<strong>1.6 Море. Аня</strong>",
+    "Аня не плавает ни в море, ни в озере.",
+    "— Я брала [[водный велосипед::pedalò]] и {{12}} на нём вдоль пляжа, — сказала она. — А один раз я {{13}} к буйкам, и меня остановили [[спасатели::bagnini]]: туда на водном велосипеде нельзя. Волны!",
+    "— Ну и кто победил? — спросил Тимур.",
+    "— Море, — сказала Лена.",
+    "— Озеро, — сказала Катя.",
+    "— Бутерброды, — сказал Андрей.",
+    "Спорили до полуночи. А потом Андрей {{14}} к последнему трамваю — с бутербродом в руке.",
 ];
 
 const p4gaps = {
     1: {
-        answers: ["ездила", "ездили"],
-        explanation: "ездила к Жене на дачу = andata e ritorno (ci sono andati e poi sono tornati), e «опять»: è una cosa che si ripete.",
+        answers: ["ездили"],
+        explanation: "ездили в Сочи = andata e ritorno: ci sono andati e poi sono tornati a casa.",
     },
     2: {
-        answers: ["ехал"],
-        explanation: "ехал = viaggio con un mezzo (la monoruota) in corso, in una sola direzione: verso il lago.",
+        answers: ["плавал"],
+        explanation: "плавал на другой берег и обратно = andata e ritorno, ogni mattina: verbo pluridirezionale.",
     },
     3: {
         answers: ["плыл"],
-        explanation: "плыл на другой берег = nuotata in corso, in una direzione, verso una meta (l'altra riva).",
+        explanation: "плыл туда = una volta, in una direzione, quando all'improvviso ha visto l'alce.",
     },
     4: {
-        answers: ["плаваю"],
-        explanation: "плаваю = abitudine al presente (ogni mattina): il nuoto come attività.",
+        answers: ["плыла"],
+        explanation: "плыла к середине = nuotata in una direzione, interrotta (si è spaventata).",
     },
     5: {
-        answers: ["плаваю"],
-        explanation: "не плаваю = in generale non nuoto in questo lago: attività, non un tragitto.",
+        answers: ["плавала"],
+        explanation: "плавала у берега каждый день = abitudine, senza una meta: verbo pluridirezionale.",
     },
     6: {
-        answers: ["хожу"],
-        explanation: "хожу в бассейн = abitudine ripetuta (tre volte a settimana): andata e ritorno ogni volta.",
+        answers: ["плавал"],
+        explanation: "плавал на матрасе = stare in acqua senza una meta, ogni giorno.",
     },
     7: {
-        answers: ["плавала"],
-        explanation: "плавала туда-сюда = nuotare in più direzioni, avanti e indietro: verbo pluridirezionale.",
+        answers: ["плыл"],
+        explanation: "матрас плыл в камыши = il materassino si muoveva in una direzione, verso le canne.",
     },
     8: {
-        answers: ["плыла"],
-        explanation: "плыла к середине = nuotata in una direzione, interrotta (all'improvviso si è spaventata).",
+        answers: ["бегал"],
+        explanation: "бегал на дачу за бутербродами = andata e ritorno, tre volte al giorno.",
     },
     9: {
-        answers: ["плаваю"],
-        explanation: "плаваю = abitudine al presente (da allora nuoto solo dove si tocca).",
+        answers: ["плавала"],
+        explanation: "плавала туда-сюда = in più direzioni, avanti e indietro, ogni mattina.",
     },
     10: {
-        answers: ["езжу"],
-        explanation: "езжу по озеру = andare in giro con un mezzo, senza una meta precisa: pluridirezionale.",
+        answers: ["плыла"],
+        explanation: "плыла до буйков = una volta, in una direzione, verso le boe.",
     },
     11: {
-        answers: ["ехала"],
-        explanation: "ехала к Тимуру = una volta, in una direzione (verso l'altra riva), quando è rimasta bloccata.",
+        answers: ["ходил"],
+        explanation: "ходил по пляжу = camminare in giro, senza una meta, ogni mattina.",
     },
     12: {
-        answers: ["плавал"],
-        explanation: "плавал у берега = stare in acqua senza una meta, vicino alla riva.",
+        answers: ["ездила"],
+        explanation: "ездила вдоль пляжа = andare in giro con un mezzo (il pedalò), avanti e indietro.",
     },
     13: {
-        answers: ["плавал"],
-        explanation: "плавал = la domanda è sull'attività in generale (hai nuotato almeno una volta oggi?).",
+        answers: ["ехала"],
+        explanation: "ехала к буйкам = una volta, in una direzione, quando l'hanno fermata.",
     },
     14: {
-        answers: ["плыл"],
-        explanation: "плыл от берега до середины = un tragitto in una direzione, da un punto a un altro.",
-    },
-    15: {
-        answers: ["бегал"],
-        explanation: "бегал на дачу = andata e ritorno (due volte alla dacia e poi di nuovo al lago).",
+        answers: ["бежал"],
+        explanation: "бежал к трамваю = corsa in una direzione, di fretta, verso l'ultimo tram.",
     },
 };
 
@@ -312,24 +306,24 @@ function initPanel7() {
 
     const multipleChoiceData = [
         { question: "Через минуту Тимур уже ___ на другой берег.", options: ["плыл", "плавал", "плавает"], answer: "плыл" },
-        { question: "Я каждое утро ___ два километра!", options: ["плыву", "плаваю", "плавал"], answer: "плаваю" },
-        { question: "Лена ___ вдоль берега туда-сюда и следила за пульсом.", options: ["плыла", "плавает", "плавала"], answer: "плавала" },
+        { question: "Каждое утро я ___ на другой берег и обратно.", options: ["плыл", "плавал", "плаваю"], answer: "плавал" },
+        { question: "Лена каждое утро ___ на матрасе с единорогом туда-сюда.", options: ["плыла", "плавает", "плавала"], answer: "плавала" },
         { question: "В прошлом году я ___ к середине озера и вдруг испугалась.", options: ["плыла", "плавала", "плыл"], answer: "плыла" },
         { question: "Через час Андрей открыл глаза: матрас медленно ___ в открытое море.", options: ["плавал", "плыл", "плыла"], answer: "плыл" },
-        { question: "В этом озере я не ___: здесь бактерии.", options: ["плыву", "плавал", "плаваю"], answer: "плаваю" },
+        { question: "Аня не ___ ни в море, ни в озере.", options: ["плывёт", "плавала", "плавает"], answer: "плавает" },
         { question: "Корабль медленно ___ по Неве, а мы смотрели на мосты.", options: ["плыл", "плавал", "плывёт"], answer: "плыл" },
         { question: "Тимур ___ в проруби целых три минуты.", options: ["плыл", "плавал", "плавает"], answer: "плавал" },
         { question: "Утки спокойно ___ рядом, им всё равно.", options: ["плыли", "плавает", "плавали"], answer: "плавали" },
         { question: "Женя, ты правда каждое воскресенье так ___?", options: ["плаваешь", "плывёшь", "плавал"], answer: "плаваешь" },
     ];
     const matchPairs = [
-        { left: "Андрей ___ от берега до середины озера.", right: "плыл" },
+        { left: "Один раз матрас ___ прямо в камыши.", right: "плыл" },
         { left: "В детстве он много ___ в бассейне.", right: "плавал" },
         { left: "Вчера бабушка ___ быстрее всех на дорожке.", right: "плыла" },
         { left: "Бабушка в молодости ___ в Волге до октября.", right: "плавала" },
         { left: "Мы ___ на лодке к острову, и вдруг начался дождь.", right: "плыли" },
         { left: "В отпуске мы каждый день ___ в море.", right: "плавали" },
-        { left: "Я ___ только там, где можно стоять.", right: "плаваю" },
+        { left: "Теперь я ___ каждый день, даже зимой в бассейне.", right: "плаваю" },
         { left: "Смотри, медуза ___ прямо к нам!", right: "плывёт" },
         { left: "Женя каждое воскресенье ___ в проруби.", right: "плавает" },
         { left: "По субботам мы с Леной ___ в бассейне.", right: "плаваем" },
@@ -341,7 +335,7 @@ function initPanel7() {
         { id: "q04", promptPrefix: "— Мы таких туристов каждое лето ", promptSuffix: ". Обычно на матрасах.", answers: ["возим"] },
         { id: "q05", promptPrefix: "— Завтра я ", promptSuffix: " вас всех в бассейн, — сказала Лена.", answers: ["веду"] },
         { id: "q06", promptPrefix: "В Москве я каждую неделю ", promptSuffix: " племянника в бассейн.", answers: ["вожу"] },
-        { id: "q07", promptPrefix: "В июле банда опять ", promptSuffix: " к Жене на дачу.", answers: ["ездила", "ездили"] },
+        { id: "q07", promptPrefix: "Аня, Лена и Женя ", promptSuffix: " в Сочи.", answers: ["ездили"] },
         { id: "q08", promptPrefix: "Аня ", promptSuffix: " по пляжу к спасателям.", answers: ["бежала"] },
         { id: "q09", promptPrefix: "Мимо проруби ", promptSuffix: " священник.", answers: ["шёл"] },
         { id: "q10", promptPrefix: "По дороге домой Андрей ", promptSuffix: " в одном тапке.", answers: ["ехал"] },
