@@ -72,3 +72,54 @@ Consegna: Scrivi la forma corretta del verbo al passato. Senza spiegazioni. Lacu
 — А мяч *прилетел* прямо Андрею в руки. Он даже пиво не *пролил*.
 
 Glossario: пристегните ремни — allacciate le cinture; дрон — drone; полетел — è volato via (è partito in volo); прикалываться — prendere in giro; сосна — pino; увернулся — ho schivato; лужа — pozzanghera; прилетел — è arrivato in volo; пролил — ha versato.
+
+## Pannello 4 — testo «Андрей и парашют» (public, con spiegazioni) — APPROVATO
+
+Consegna: Leggi il racconto e scrivi la forma corretta del verbo (лететь/летать, ехать/ездить, плыть/плавать, ходить/идти, бегать/бежать). Clicca sulle parole sottolineate per vedere la traduzione in italiano.
+
+В пятницу вечером банда собралась у Кати смотреть новый фильм Содерберга «Чёрный чемодан». *Редкий случай*: фильм хотели смотреть все. Но до фильма дело не дошло.
+— Ребята, — сказал Тимур и положил на стол *сертификат*. — В субботу прыгаем с *парашютом*. Все. Андрей — тоже.
+
+**1.1 Андрей**
+— Я? С парашютом? — Андрей *побледнел*. — Я за всю жизнь [1 летал] на самолёте три раза. И три раза думал, что это последний.
+
+**1.2 Катя**
+— Тимур, оставь его, — сказала Катя и погладила Андрея по плечу. — Помнишь, как мы [2 летели] в Милан с *пересадкой* в Риме? Андрей [3 летел] до Рима белый как стена. А в Риме сказал: «Дальше — только по земле» — и купил билет на поезд. Мы [4 летели] до Милана час, а он [5 ехал] три.
+— Зато я видел Тоскану, — сказал Андрей.
+
+**1.3 Лена**
+— А Сицилию помнишь? — *подколола* Лена. — Из Палермо до Мальты на самолёте меньше часа. Но Андрей сказал: «Только по воде!» И мы три *лишних* часа [6 ехали] на машине через весь остров, а потом ещё два часа [7 плыли] на *пароме*. А самолёт туда [8 летит] сорок минут!
+— Зато я видел дельфинов.
+— Ты видел только *пакет*, — сказала Лена. — Тебя всю дорогу *укачивало*.
+
+**1.4 Женя**
+Женя *отпил* вина.
+— В прошлом году я [9 летал] двадцать раз. Самолёт — самый безопасный транспорт в мире. Андрей, это не страх. Это *каприз*. Тебе просто нравится, когда тебя все уговаривают.
+
+**1.5 Тимур**
+— Страх нужно *побороть*, — сказал Тимур. — В детстве я боялся леса. Ночью я даже мимо леса не [10 ходил]. А теперь я каждое утро [11 бегаю] там один. Даже зимой. В темноте. Начни летать чаще — и всё пройдёт.
+— Тимур, — сказал Андрей. — В лесу невозможно упасть с высоты четыре километра.
+Он взял пульт и включил фильм.
+
+**1.6 Суббота**
+В субботу утром они [12 ехали] на *аэродром* на двух машинах. Андрей тоже поехал — «посмотреть». Он стоял на земле с пивом и смотрел в небо. Где-то очень высоко [13 летел] самолёт — его было почти не видно. Вдруг в небе появились три *точки* — Тимур, Лена и Женя. Через минуту над ними *раскрылись* парашюты.
+Катя стояла рядом с Андреем. Она погладила его по плечу:
+— Пусть сами летают, если им нравится.
+
+Spiegazioni:
+1 летал — esperienza in generale nella vita (tre volte), non un viaggio preciso.
+2 летели — un viaggio preciso, in una direzione (verso Milano).
+3 летел — volo in corso, in una direzione (fino a Roma).
+4 летели — durata di un volo preciso, in una direzione.
+5 ехал — viaggio in treno preciso, in una direzione.
+6 ехали — un tragitto preciso in macchina, in una direzione, per tre ore.
+7 плыли — un tragitto preciso in traghetto, in una direzione.
+8 летит — fatto generale: quanto dura il volo, in una direzione.
+9 летал — andata e ritorno ripetuti (venti volte).
+10 ходил — abitudine al passato (di notte non ci andava mai).
+11 бегаю — abitudine al presente (ogni mattina), senza una meta.
+12 ехали — un tragitto preciso verso l'aerodromo.
+13 летел — l'aereo era in volo in quel momento.
+
+Glossario: редкий случай — un caso raro; сертификат — buono regalo; парашют — paracadute; побледнел — è impallidito; пересадка — scalo; подколола — ha punzecchiato; лишних — in più; паром — traghetto; пакет — sacchetto; укачивало — aveva il mal di mare; отпил — ha bevuto un sorso; каприз — capriccio; побороть — vincere, superare; аэродром — aerodromo; точки — puntini; раскрылись — si sono aperti.
+[CHECK] Traghetto per Malta da Pozzallo (circa 3 ore di macchina da Palermo); volo Palermo–Malta.
