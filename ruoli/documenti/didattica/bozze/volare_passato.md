@@ -205,3 +205,9 @@ Glossario: решилась — si è decisa; страховка — assicurazio
 — Ладно. Но если самолёт будет падать, я прыгаю первым.
 
 Glossario: уговаривали — cercavano di convincere; мягко — con delicatezza; шаг за шагом — passo dopo passo; аэротруба — galleria del vento; вентиляторы — ventilatori; комбинезон — tuta; шлем — casco; ракурс — inquadratura; мотало — sballottava; мешок с картошкой — sacco di patate; кружить — far girare; полетел — è volato (di colpo); раскинул — ha allargato; набирал — digitava.
+
+---
+
+## Pannello 7 — ТЕСТ (public) — APPROVATO
+
+Dati nel sito: `volare/exercises.js` → `multipleChoiceData` (10), `matchPairs` (10), `quizData` (10). Frasi dai testi dei pannelli 4–6.
