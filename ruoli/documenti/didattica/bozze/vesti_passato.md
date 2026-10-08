@@ -125,4 +125,4 @@ Consegna: Leggi il racconto e scrivi la forma corretta del verbo (водить/�
 Вечером Кирилл написал из Нью-Йорка: «Как вы там?»
 Женя ответил честно: «Нормально. Он меня *воспитывает*».
 
-Glossario: кашемировом — di cachemire; дёрнуть — strattonare; ретировался — ha battuto in ritirata; поводок — guinzaglio; углеводы — carboidrati; расстраивает — dispiace, irrita; любопытством — curiosità; добило — gli ha dato il colpo di grazia; подсчёт — conteggio; скормила — ha dato da mangiare; дисциплина — disciplina; воспитывает — educa.
+Glossario: дёрнуть — strattonare; ретировался — ha battuto in ritirata; поводок — guinzaglio; углеводы — carboidrati; расстраивает — dispiace, irrita; любопытством — curiosità; добило — gli ha dato il colpo di grazia; подсчёт — conteggio; скормила — ha dato da mangiare; дисциплина — disciplina; воспитывает — educa.
