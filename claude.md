@@ -153,6 +153,20 @@ Stop and ask PM when:
 
 ---
 
+## EXERCISE TEXTS — ASK FOR THE BRIEF FIRST
+
+Before drafting ANY exercise text (gap texts, dialogues), ask the PM for a short brief — every time, even if the plot seems obvious. Do not draft until it is answered:
+
+1. Plot in one sentence (where, when, who is there)
+2. Mood / attitude of each character
+3. Verb set and tenses for the gaps
+4. Real-world details (place, date, custom — e.g. «в проруби окунаются, не плавают»)
+5. Panel and access level (public / student / paid)
+
+Then write one draft, show it in full, and change only what the PM corrects. Never write several texts at once without approval of each.
+
+---
+
 ## ACTIVE PROJECT
 
 **LiveLanguage Russian only.**
