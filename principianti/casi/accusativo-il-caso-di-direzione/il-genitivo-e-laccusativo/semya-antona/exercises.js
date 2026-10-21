@@ -227,8 +227,6 @@ const p6cards = [
 // Лексика: семья (russo → italiano)
 // ============================================================
 const p7cards = [
-    { front: "мама", back: "mamma" },
-    { front: "папа", back: "papà" },
     { front: "отец", back: "padre" },
     { front: "брат", back: "fratello" },
     { front: "сестра", back: "sorella" },
@@ -236,7 +234,9 @@ const p7cards = [
     { front: "дедушка", back: "nonno" },
     { front: "старший", back: "maggiore" },
     { front: "младший", back: "minore" },
-    { front: "средний", back: "di mezzo" }
+    { front: "средний", back: "di mezzo" },
+    { front: "высокий / высокая", back: "alto / alta" },
+    { front: "невысокий", back: "non molto alto, basso" }
 ];
 
 // ============================================================
@@ -244,15 +244,15 @@ const p7cards = [
 // Лексика: внешность (russo → italiano)
 // ============================================================
 const p8cards = [
-    { front: "высокий / высокая", back: "alto / alta" },
-    { front: "стройная", back: "snella, slanciata" },
-    { front: "телосложение", back: "corporatura" },
-    { front: "атлетическое телосложение", back: "corporatura atletica" },
     { front: "светлые волосы", back: "capelli chiari" },
     { front: "тёмные волосы", back: "capelli scuri" },
     { front: "голубые глаза", back: "occhi azzurri" },
     { front: "карие глаза", back: "occhi marroni" },
     { front: "зелёные глаза", back: "occhi verdi" },
+    { front: "стройная", back: "snella, slanciata" },
+    { front: "атлетическое телосложение", back: "corporatura atletica" },
+    { front: "серьёзная", back: "seria" },
+    { front: "весёлый", back: "allegro" },
     { front: "рост", back: "statura, altezza" }
 ];
 
@@ -261,16 +261,16 @@ const p8cards = [
 // Лексика: характер и описание (russo → italiano)
 // ============================================================
 const p9cards = [
-    { front: "серьёзный / серьёзная", back: "serio / seria" },
-    { front: "весёлый / весёлая", back: "allegro / allegra" },
-    { front: "невысокий", back: "non molto alto, basso" },
+    { front: "телосложение", back: "corporatura" },
     { front: "стройный / стройная", back: "snello / snella" },
     { front: "волосы", back: "capelli" },
     { front: "глаза", back: "occhi" },
     { front: "голубой", back: "azzurro" },
     { front: "карий", back: "marrone (solo per gli occhi)" },
     { front: "зелёный", back: "verde" },
-    { front: "семья", back: "famiglia" }
+    { front: "семья", back: "famiglia" },
+    { front: "серьёзный / серьёзная", back: "serio / seria" },
+    { front: "весёлый / весёлая", back: "allegro / allegra" }
 ];
 
 // ============================================================
