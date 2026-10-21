@@ -44,16 +44,313 @@
     <main class="exercises-section">
 
         <!-- ============================================================ -->
-        <!-- Panel 1 (public) - Антон описывает свою семью (внешность) -->
+        <!-- Panel 1 (public) - Drag & Drop: accusativo -->
         <!-- ============================================================ -->
         <article class="exercise-card" data-status="open" data-target="panel-sa-1">
-            <span class="exercise-type">Scrivi</span>
-            <h3 class="exercise-title">Семья Антона — genitivo e accusativo</h3>
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Зовут + кого? — accusativo</h3>
         </article>
 
         <div class="exercise-panel" id="panel-sa-1" data-access="public" hidden>
-            <div id="ex-gaptext-sa-1">
-                <div id="ex-gaptext-sa-1-container"></div>
+            <div id="ex-dragdrop-sa-01" class="universal-dd">
+                <div id="ex-dragdrop-sa-01-container"></div>
+                <div id="ex-dragdrop-sa-01-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 2 (student) - Drag & Drop: genitivo -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-sa-2">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">У кого? — genitivo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-sa-2" data-access="student" hidden>
+            <div id="ex-dragdrop-sa-02" class="universal-dd">
+                <div id="ex-dragdrop-sa-02-container"></div>
+                <div id="ex-dragdrop-sa-02-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 (paid) - Drag & Drop: misto -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-sa-3">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Accusativo e genitivo — misto</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-sa-3" data-access="paid" hidden>
+            <div id="ex-dragdrop-sa-03" class="universal-dd">
+                <div id="ex-dragdrop-sa-03-container"></div>
+                <div id="ex-dragdrop-sa-03-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 4 (public) - Flashcard: accusativo + притяжательные -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-sa-4">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Притяжательные + accusativo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-sa-4" data-access="public" hidden>
+            <section id="ex-flashcards-sa-04">
+                <div class="fca01-header">
+                    <h2>Притяжательные + accusativo</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-sa-04-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-sa-04-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-sa-04-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-sa-04-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-sa-04-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-04-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-sa-04-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-04-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-04-section-match" class="fca01-section">
+                    <div id="ex-flashcards-sa-04-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-04-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 5 (student) - Flashcard: genitivo + притяжательные -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-sa-5">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Притяжательные + genitivo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-sa-5" data-access="student" hidden>
+            <section id="ex-flashcards-sa-05">
+                <div class="fca01-header">
+                    <h2>Притяжательные + genitivo</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-sa-05-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-sa-05-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-sa-05-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-sa-05-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-sa-05-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-05-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-sa-05-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-05-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-05-section-match" class="fca01-section">
+                    <div id="ex-flashcards-sa-05-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-05-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 6 (paid) - Flashcard: misto acc+gen -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-sa-6">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Притяжательные — accusativo e genitivo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-sa-6" data-access="paid" hidden>
+            <section id="ex-flashcards-sa-06">
+                <div class="fca01-header">
+                    <h2>Притяжательные — accusativo e genitivo</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-sa-06-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-sa-06-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-sa-06-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-sa-06-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-sa-06-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-06-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-sa-06-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-06-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-06-section-match" class="fca01-section">
+                    <div id="ex-flashcards-sa-06-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-06-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 7 (public) - Flashcard: лексика семья -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-sa-7">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Семья — vocabolario</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-sa-7" data-access="public" hidden>
+            <section id="ex-flashcards-sa-07">
+                <div class="fca01-header">
+                    <h2>Семья — vocabolario</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-sa-07-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-sa-07-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-sa-07-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-sa-07-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-sa-07-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-07-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-sa-07-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-07-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-07-section-match" class="fca01-section">
+                    <div id="ex-flashcards-sa-07-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-07-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 8 (student) - Flashcard: лексика внешность -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-sa-8">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Внешность — vocabolario</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-sa-8" data-access="student" hidden>
+            <section id="ex-flashcards-sa-08">
+                <div class="fca01-header">
+                    <h2>Внешность — vocabolario</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-sa-08-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-sa-08-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-sa-08-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-sa-08-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-sa-08-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-08-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-sa-08-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-08-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-08-section-match" class="fca01-section">
+                    <div id="ex-flashcards-sa-08-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-08-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 9 (paid) - Flashcard: лексика характер и описание -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-sa-9">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Характер и описание — vocabolario</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-sa-9" data-access="paid" hidden>
+            <section id="ex-flashcards-sa-09">
+                <div class="fca01-header">
+                    <h2>Характер и описание — vocabolario</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-sa-09-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-sa-09-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-sa-09-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-sa-09-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-sa-09-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-09-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-sa-09-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-09-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-sa-09-section-match" class="fca01-section">
+                    <div id="ex-flashcards-sa-09-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-sa-09-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 10 (public) - GapText: полный текст -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-sa-10">
+            <span class="exercise-type">Scrivi</span>
+            <h3 class="exercise-title">Семья Антона — testo completo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-sa-10" data-access="public" hidden>
+            <div id="ex-gaptext-sa-10">
+                <div id="ex-gaptext-sa-10-container"></div>
             </div>
         </div>
 
