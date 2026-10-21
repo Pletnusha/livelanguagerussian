@@ -176,16 +176,16 @@ const p3exercises = [
 // Accusativo: притяжательные + существительные
 // ============================================================
 const p4cards = [
-    { front: "я → accusativo (кого зовут?)", back: "меня", explanation: "Pronome personale: я → меня (accusativo)." },
-    { front: "моя мама → accusativo", back: "мою маму", explanation: "Femminile: моя → мою, мама → маму." },
-    { front: "мой отец → accusativo", back: "моего отца", explanation: "Maschile animato (acc. = gen.): мой → моего, отец → отца." },
-    { front: "мой старший брат → accusativo", back: "моего старшего брата", explanation: "Maschile animato: мой → моего, старший → старшего, брат → брата." },
-    { front: "моя младшая сестра → accusativo", back: "мою младшую сестру", explanation: "Femminile: моя → мою, младшая → младшую, сестра → сестру." },
-    { front: "наш дедушка → accusativo", back: "нашего дедушку", explanation: "Maschile animato (1ª decl.): наш → нашего, дедушка → дедушку." },
-    { front: "твой папа → accusativo", back: "твоего папу", explanation: "Maschile animato (1ª decl.): твой → твоего, папа → папу." },
-    { front: "ваш сын → accusativo", back: "вашего сына", explanation: "Maschile animato: ваш → вашего, сын → сына." },
-    { front: "наша бабушка → accusativo", back: "нашу бабушку", explanation: "Femminile: наша → нашу, бабушка → бабушку." },
-    { front: "мой средний сын → accusativo", back: "моего среднего сына", explanation: "Maschile animato: мой → моего, средний → среднего, сын → сына." }
+    { front: "зовут + я", back: "меня зовут", explanation: "Pronome personale: я → меня (accusativo dopo «зовут»)." },
+    { front: "зовут + моя мама", back: "мою маму зовут", explanation: "Femminile: моя → мою, мама → маму." },
+    { front: "зовут + мой отец", back: "моего отца зовут", explanation: "Maschile animato (acc. = gen.): мой → моего, отец → отца." },
+    { front: "зовут + мой старший брат", back: "моего старшего брата зовут", explanation: "Maschile animato: мой → моего, старший → старшего, брат → брата." },
+    { front: "зовут + моя младшая сестра", back: "мою младшую сестру зовут", explanation: "Femminile: моя → мою, младшая → младшую, сестра → сестру." },
+    { front: "зовут + наш дедушка", back: "нашего дедушку зовут", explanation: "Maschile animato (1ª decl.): наш → нашего, дедушка → дедушку." },
+    { front: "зовут + твой папа", back: "твоего папу зовут", explanation: "Maschile animato (1ª decl.): твой → твоего, папа → папу." },
+    { front: "зовут + ваш сын", back: "вашего сына зовут", explanation: "Maschile animato: ваш → вашего, сын → сына." },
+    { front: "зовут + наша бабушка", back: "нашу бабушку зовут", explanation: "Femminile: наша → нашу, бабушка → бабушку." },
+    { front: "зовут + мой средний сын", back: "моего среднего сына зовут", explanation: "Maschile animato: мой → моего, средний → среднего, сын → сына." }
 ];
 
 // ============================================================

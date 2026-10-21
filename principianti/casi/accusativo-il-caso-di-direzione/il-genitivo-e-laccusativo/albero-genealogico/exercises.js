@@ -197,16 +197,16 @@ const p3exercises = [
 // Accusativo dei sostantivi: membri della famiglia
 // ============================================================
 const p4cards = [
-    { front: "сестра", back: "сестру", explanation: "Accusativo femminile: -а → -у." },
-    { front: "муж", back: "мужа", explanation: "Accusativo maschile animato = genitivo: -∅ → -а." },
-    { front: "сын", back: "сына", explanation: "Accusativo maschile animato = genitivo: -∅ → -а." },
-    { front: "дочь", back: "дочь", explanation: "Accusativo femminile in -ь = nominativo (invariato)." },
-    { front: "жена", back: "жену", explanation: "Accusativo femminile: -а → -у." },
-    { front: "брат", back: "брата", explanation: "Accusativo maschile animato = genitivo: -∅ → -а." },
-    { front: "тётя", back: "тётю", explanation: "Accusativo femminile: -я → -ю." },
-    { front: "дядя", back: "дядю", explanation: "Accusativo maschile animato in -я → -ю (come femminile)." },
-    { front: "мама", back: "маму", explanation: "Accusativo femminile: -а → -у." },
-    { front: "папа", back: "папу", explanation: "Accusativo maschile animato in -а → -у (come femminile)." }
+    { front: "зовут + сестра", back: "сестру зовут", explanation: "Accusativo femminile: -а → -у. «Зовут» управляет accusativo." },
+    { front: "зовут + муж", back: "мужа зовут", explanation: "Accusativo maschile animato = genitivo: -∅ → -а." },
+    { front: "зовут + сын", back: "сына зовут", explanation: "Accusativo maschile animato = genitivo: -∅ → -а." },
+    { front: "зовут + дочь", back: "дочь зовут", explanation: "Accusativo femminile in -ь = nominativo (invariato)." },
+    { front: "зовут + жена", back: "жену зовут", explanation: "Accusativo femminile: -а → -у." },
+    { front: "зовут + брат", back: "брата зовут", explanation: "Accusativo maschile animato = genitivo: -∅ → -а." },
+    { front: "зовут + тётя", back: "тётю зовут", explanation: "Accusativo femminile: -я → -ю." },
+    { front: "зовут + дядя", back: "дядю зовут", explanation: "Accusativo maschile animato in -я → -ю (come femminile)." },
+    { front: "зовут + мама", back: "маму зовут", explanation: "Accusativo femminile: -а → -у." },
+    { front: "зовут + папа", back: "папу зовут", explanation: "Accusativo maschile animato in -а → -у (come femminile)." }
 ];
 
 // ============================================================
@@ -214,16 +214,16 @@ const p4cards = [
 // Genitivo dei nomi propri (dal testo)
 // ============================================================
 const p5cards = [
-    { front: "Альберт (genitivo)", back: "Альберта", explanation: "Maschile: -∅ → -а." },
-    { front: "Линда (genitivo)", back: "Линды", explanation: "Femminile: -а → -ы." },
-    { front: "Владислав (genitivo)", back: "Владислава", explanation: "Maschile: -∅ → -а." },
-    { front: "Анатолий (genitivo)", back: "Анатолия", explanation: "Maschile in -й → -я." },
-    { front: "Светлана (genitivo)", back: "Светланы", explanation: "Femminile: -а → -ы." },
-    { front: "Александра (genitivo)", back: "Александры", explanation: "Femminile: -а → -ы." },
-    { front: "Сергей (genitivo)", back: "Сергея", explanation: "Maschile in -й → -я." },
-    { front: "Елена (genitivo)", back: "Елены", explanation: "Femminile: -а → -ы." },
-    { front: "Руслан (genitivo)", back: "Руслана", explanation: "Maschile: -∅ → -а." },
-    { front: "Катя (genitivo)", back: "Кати", explanation: "Femminile in -я → -и." }
+    { front: "у + Альберт", back: "у Альберта", explanation: "Genitivo maschile: -∅ → -а. «У» управляет genitivo." },
+    { front: "сестра + Альберт", back: "сестра Альберта", explanation: "Genitivo принадлежности: Альберт → Альберта." },
+    { front: "муж + Линда", back: "муж Линды", explanation: "Genitivo femminile: -а → -ы." },
+    { front: "сын + Линда и Владислав", back: "сын Линды и Владислава", explanation: "Genitivo: Линда → Линды, Владислав → Владислава." },
+    { front: "жена + Анатолий", back: "жена Анатолия", explanation: "Genitivo maschile in -й → -я." },
+    { front: "муж + Александра", back: "муж Александры", explanation: "Genitivo femminile: -а → -ы." },
+    { front: "тётя + Анатолий и Александра", back: "тётя Анатолия и Александры", explanation: "Genitivo: -й → -я, -а → -ы." },
+    { front: "дядя + Рома и Катя", back: "дядя Ромы и Кати", explanation: "Genitivo: Рома → Ромы, Катя → Кати." },
+    { front: "сын + Сергей и Александра", back: "сын Сергея и Александры", explanation: "Genitivo: Сергей → Сергея, Александра → Александры." },
+    { front: "дочь + Сергей и Александра", back: "дочь Сергея и Александры", explanation: "Genitivo: -й → -я, -а → -ы." }
 ];
 
 // ============================================================
