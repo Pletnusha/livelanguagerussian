@@ -3,7 +3,8 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
 // PANEL 1 — GapText · public
-// Семья: родительный (у + Род.) + винительный (Вин. + зовут)
+// Семейное древо: кто кому кем приходится
+// Род.: у + кого, сестра/тётя/дядя + кого; Вин.: кого зовут
 // ============================================================
 const p1paragraphs = [
     "Это Альберт. У {{1}} есть сестра. {{2}} Альберта зовут Линда.",
@@ -46,7 +47,7 @@ const p1gaps = {
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-gea-1': () => new GapTextExercise({ rootId: 'ex-gaptext-gea-1', paragraphs: p1paragraphs, gaps: p1gaps, showHints: true })
+    'panel-ag-1': () => new GapTextExercise({ rootId: 'ex-gaptext-ag-1', paragraphs: p1paragraphs, gaps: p1gaps, showHints: true })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
