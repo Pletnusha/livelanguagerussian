@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СЕМЕЙНОЕ ДРЕВО - LIVE LANGUAGE_RUSSIAN</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/access-control.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        document.documentElement.style.visibility = 'hidden';
+        (async () => {
+            const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
+            await new Promise((res, rej) => {
+                const s = document.createElement('script');
+                s.src = 'https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js';
+                s.onload = res; s.onerror = rej;
+                document.head.appendChild(s);
+            });
+            const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            const { data: { session } } = await client.auth.getSession();
+            if (!session) {
+                window.location.href = '/login.html?redirect=principianti/casi/accusativo-il-caso-di-direzione/il-genitivo-e-laccusativo/albero-genealogico';
+            } else {
+                document.documentElement.style.visibility = '';
+            }
+        })();
+    </script>
+</head>
+<body class="page-accusativo-il-caso-di-direzione">
+
+    <section class="argomento-header">
+        <h1 class="argomento-title">СЕМЕЙНОЕ ДРЕВО</h1>
+        <p class="argomento-focus">Род.: у кого, сестра/тётя кого · Вин.: кого зовут</p>
+    </section>
+
+    <section class="argomento-intro">
+        <p></p>
+    </section>
+
+    <main class="exercises-section">
+
+        <!-- ============================================================ -->
+        <!-- Panel 1 (public) - D&D: Accusativo -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-ag-1">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Кого зовут? — accusativo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-ag-1" data-access="public" hidden>
+            <div id="ex-dragdrop-ag-01" class="universal-dd">
+                <div id="ex-dragdrop-ag-01-container"></div>
+                <div id="ex-dragdrop-ag-01-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 2 (student) - D&D: Genitivo -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-ag-2">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">У кого? — genitivo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-ag-2" data-access="student" hidden>
+            <div id="ex-dragdrop-ag-02" class="universal-dd">
+                <div id="ex-dragdrop-ag-02-container"></div>
+                <div id="ex-dragdrop-ag-02-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 (paid) - D&D: Misto -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-ag-3">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Accusativo e genitivo — misto</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-ag-3" data-access="paid" hidden>
+            <div id="ex-dragdrop-ag-03" class="universal-dd">
+                <div id="ex-dragdrop-ag-03-container"></div>
+                <div id="ex-dragdrop-ag-03-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 4 (public) - FC: Accusativo sostantivi -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-ag-4">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Члены семьи — accusativo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-ag-4" data-access="public" hidden>
+            <section id="ex-flashcards-ag-04">
+                <div class="fca01-header">
+                    <h2>Члены семьи — accusativo</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-ag-04-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-ag-04-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-ag-04-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-ag-04-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-ag-04-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-04-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-ag-04-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-04-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-04-section-match" class="fca01-section">
+                    <div id="ex-flashcards-ag-04-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-04-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 5 (student) - FC: Genitivo nomi propri -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-ag-5">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Имена — genitivo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-ag-5" data-access="student" hidden>
+            <section id="ex-flashcards-ag-05">
+                <div class="fca01-header">
+                    <h2>Имена — genitivo</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-ag-05-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-ag-05-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-ag-05-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-ag-05-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-ag-05-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-05-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-ag-05-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-05-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-05-section-match" class="fca01-section">
+                    <div id="ex-flashcards-ag-05-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-05-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 6 (paid) - FC: Frasi complete acc+gen -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-ag-6">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Семейные связи — accusativo e genitivo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-ag-6" data-access="paid" hidden>
+            <section id="ex-flashcards-ag-06">
+                <div class="fca01-header">
+                    <h2>Семейные связи — accusativo e genitivo</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-ag-06-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-ag-06-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-ag-06-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-ag-06-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-ag-06-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-06-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-ag-06-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-06-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-06-section-match" class="fca01-section">
+                    <div id="ex-flashcards-ag-06-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-06-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 7 (public) - FC: Vocabolario famiglia -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-ag-7">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Семья — vocabolario</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-ag-7" data-access="public" hidden>
+            <section id="ex-flashcards-ag-07">
+                <div class="fca01-header">
+                    <h2>Семья — vocabolario</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-ag-07-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-ag-07-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-ag-07-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-ag-07-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-ag-07-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-07-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-ag-07-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-07-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-07-section-match" class="fca01-section">
+                    <div id="ex-flashcards-ag-07-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-07-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 8 (student) - FC: Vocabolario parentela -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-ag-8">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Родственные связи — vocabolario</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-ag-8" data-access="student" hidden>
+            <section id="ex-flashcards-ag-08">
+                <div class="fca01-header">
+                    <h2>Родственные связи — vocabolario</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-ag-08-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-ag-08-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-ag-08-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-ag-08-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-ag-08-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-08-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-ag-08-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-08-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-08-section-match" class="fca01-section">
+                    <div id="ex-flashcards-ag-08-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-08-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 9 (paid) - FC: Vocabolario verbi/espressioni -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-ag-9">
+            <span class="exercise-type">Flashcard</span>
+            <h3 class="exercise-title">Глаголы и выражения — vocabolario</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-ag-9" data-access="paid" hidden>
+            <section id="ex-flashcards-ag-09">
+                <div class="fca01-header">
+                    <h2>Глаголы и выражения — vocabolario</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-ag-09-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-ag-09-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-ag-09-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-ag-09-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-ag-09-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-09-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-ag-09-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-09-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-ag-09-section-match" class="fca01-section">
+                    <div id="ex-flashcards-ag-09-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-ag-09-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 10 (public) - GapText: testo completo -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-ag-10">
+            <span class="exercise-type">Scrivi</span>
+            <h3 class="exercise-title">Семейное древо — testo completo</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-ag-10" data-access="public" hidden>
+            <div id="ex-gaptext-ag-10">
+                <div id="ex-gaptext-ag-10-container"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <section class="unlock-cta">
+        <a href="https://buy.stripe.com/00w6oHaiAgRLdfsbKB3ZK0c" class="unlock-cta-btn" target="_blank" rel="noopener noreferrer">Sblocca tutti gli esercizi</a>
+    </section>
+
+    <footer class="level-footer">
+        <a href="/principianti/casi/accusativo-il-caso-di-direzione/il-genitivo-e-laccusativo/" class="back-link">← Torna a Il genitivo e l'accusativo</a>
+    </footer>
+
+    <script type="module" src="./exercises.js"></script>
+
+</body>
+</html>
