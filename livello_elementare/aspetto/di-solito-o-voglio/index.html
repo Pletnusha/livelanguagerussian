@@ -5,21 +5,315 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ОБЫЧНО ИЛИ ХОЧУ - LIVE LANGUAGE_RUSSIAN</title>
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/access-control.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        document.documentElement.style.visibility = 'hidden';
+        (async () => {
+            const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
+            await new Promise((res, rej) => {
+                const s = document.createElement('script');
+                s.src = 'https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js';
+                s.onload = res; s.onerror = rej;
+                document.head.appendChild(s);
+            });
+            const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            const { data: { session } } = await client.auth.getSession();
+            if (!session) {
+                window.location.href = '/login.html?redirect=livello_elementare/aspetto/di-solito-o-voglio';
+            } else {
+                document.documentElement.style.visibility = '';
+            }
+        })();
+    </script>
 </head>
-<body>
-    <header class="level-header">
-        <h1>ОБЫЧНО ИЛИ ХОЧУ</h1>
-        <p class="level-description">Di solito o voglio: aspetto imperfettivo e perfettivo.</p>
-    </header>
-    <main class="level-content">
-        <section class="macro-area">
-        </section>
+<body class="page-di-solito-o-voglio">
+
+    <section class="argomento-header">
+        <h1 class="argomento-title">ОБЫЧНО ИЛИ ХОЧУ</h1>
+        <p class="argomento-focus">Aspetto imperfettivo vs perfettivo — обычно / всегда → НСВ, хочу → СВ, хочу + фазовый глагол → СВ + НСВ</p>
+    </section>
+
+    <section class="argomento-intro">
+        <p><!-- TODO: Intro text --></p>
+    </section>
+
+    <main class="exercises-section">
+
+        <!-- ============================================================ -->
+        <!-- Panel 1 — DragDrop · public -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-dv-01">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">Выбери НСВ или СВ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-dv-01" data-access="public" hidden>
+            <div id="ex-dragdrop-dv-01" class="universal-dd">
+                <div id="ex-dragdrop-dv-01-container"></div>
+                <div id="ex-dragdrop-dv-01-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 5 — DragDrop · student -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-dv-05">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">НСВ или СВ — без подсказок</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-dv-05" data-access="student" hidden>
+            <div id="ex-dragdrop-dv-05" class="universal-dd">
+                <div id="ex-dragdrop-dv-05-container"></div>
+                <div id="ex-dragdrop-dv-05-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 6 — DragDrop · paid -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-dv-06">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">НСВ или СВ — микс</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-dv-06" data-access="paid" hidden>
+            <div id="ex-dragdrop-dv-06" class="universal-dd">
+                <div id="ex-dragdrop-dv-06-container"></div>
+                <div id="ex-dragdrop-dv-06-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 2 — Flashcard · public -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-dv-02">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Лексика: «Мне нравится»</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-dv-02" data-access="public" hidden>
+            <section id="ex-flashcards-dv-02">
+                <div class="fca01-header">
+                    <h2>Лексика: «Мне нравится»</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-dv-02-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-dv-02-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-dv-02-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-dv-02-counter" class="fca01-counter">1 / 9</span>
+                        <button id="ex-flashcards-dv-02-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-dv-02-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-dv-02-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-dv-02-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-dv-02-section-match" class="fca01-section">
+                    <div id="ex-flashcards-dv-02-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-dv-02-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 7 — Flashcard · student -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-dv-07">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Лексика: «Странный день»</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-dv-07" data-access="student" hidden>
+            <section id="ex-flashcards-dv-07">
+                <div class="fca01-header">
+                    <h2>Лексика: «Странный день»</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-dv-07-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-dv-07-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-dv-07-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-dv-07-counter" class="fca01-counter">1 / 9</span>
+                        <button id="ex-flashcards-dv-07-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-dv-07-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-dv-07-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-dv-07-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-dv-07-section-match" class="fca01-section">
+                    <div id="ex-flashcards-dv-07-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-dv-07-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 8 — Flashcard · paid -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-dv-08">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Глаголы в ситуациях: НСВ / СВ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-dv-08" data-access="paid" hidden>
+            <section id="ex-flashcards-dv-08">
+                <div class="fca01-header">
+                    <h2>Глаголы в ситуациях: НСВ / СВ</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-dv-08-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-dv-08-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-dv-08-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-dv-08-counter" class="fca01-counter">1 / 12</span>
+                        <button id="ex-flashcards-dv-08-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-dv-08-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-dv-08-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-dv-08-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-dv-08-section-match" class="fca01-section">
+                    <div id="ex-flashcards-dv-08-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-dv-08-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 — GapText · public -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-dv-03">
+            <span class="exercise-type">Scrivi</span>
+            <h3 class="exercise-title">Текст «Мне нравится»</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-dv-03" data-access="public" hidden>
+            <div id="ex-gaptext-dv-03">
+                <div id="ex-gaptext-dv-03-container"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 9 — GapText · student -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-dv-09">
+            <span class="exercise-type">Scrivi</span>
+            <h3 class="exercise-title">Текст «Странный день»</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-dv-09" data-access="student" hidden>
+            <div id="ex-gaptext-dv-09">
+                <div id="ex-gaptext-dv-09-container"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 10 — Flashcard · paid -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-dv-10">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">Глагольное управление</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-dv-10" data-access="paid" hidden>
+            <section id="ex-flashcards-dv-10">
+                <div class="fca01-header">
+                    <h2>Глагольное управление</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+                <div id="ex-flashcards-dv-10-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-dv-10-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-dv-10-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-dv-10-counter" class="fca01-counter">1 / 15</span>
+                        <button id="ex-flashcards-dv-10-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-dv-10-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-dv-10-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-dv-10-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+                <div id="ex-flashcards-dv-10-section-match" class="fca01-section">
+                    <div id="ex-flashcards-dv-10-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-dv-10-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 4 — Quiz misto · public -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-dv-04">
+            <span class="exercise-type">Quiz</span>
+            <h3 class="exercise-title">TEST</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-dv-04" data-access="public" hidden>
+            <section id="dv-04-deck" class="universal-dd">
+                <div id="dv-04-cards-container"></div>
+                <div class="fca01-nav">
+                    <button id="dv-04-deck-prev" class="fca01-btn-nav" disabled>← INDIETRO</button>
+                    <span id="dv-04-deck-counter" class="fca01-counter">1 / 16</span>
+                    <button id="dv-04-deck-next" class="btn btn-primary">AVANTI →</button>
+                </div>
+            </section>
+        </div>
+
     </main>
+
+    <section class="unlock-cta">
+        <a href="https://buy.stripe.com/00w6oHaiAgRLdfsbKB3ZK0c" class="unlock-cta-btn" target="_blank" rel="noopener noreferrer">Sblocca tutti gli esercizi</a>
+    </section>
+
     <footer class="level-footer">
         <a href="/livello_elementare/aspetto/" class="back-link">← Torna all'Aspetto</a>
     </footer>
+
+    <script type="module" src="exercises.js"></script>
+
 </body>
 </html>
