@@ -169,6 +169,16 @@ h1, h2, h3 {
   color: #666;
 }
 
+.argomento-card--soon {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.argomento-card--soon:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
 .argomento-card--parent {
   cursor: pointer;
   padding-bottom: 1rem;
