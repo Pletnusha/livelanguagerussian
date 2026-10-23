@@ -1026,6 +1026,84 @@ h1, h2, h3 {
     margin-right: auto;
   }
 }
+/* ===== QuizExercise — generic styles ===== */
+
+.quiz-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quiz-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.quiz-item:last-child {
+  border-bottom: none;
+}
+
+.quiz-prompt {
+  font-size: 1.1rem;
+  line-height: 2.4;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.quiz-input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 4px 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  width: 130px;
+  margin: 0 6px;
+  vertical-align: middle;
+  transition: border-color 0.2s;
+}
+
+.quiz-input:focus {
+  outline: none;
+  border-color: #2a5bd7;
+}
+
+.quiz-input.correct {
+  border-color: #22c55e;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.quiz-input.incorrect {
+  border-color: #ef4444;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.quiz-controls {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.quiz-feedback {
+  margin-top: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  min-height: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.quiz-feedback.correct   { color: #22c55e; }
+.quiz-feedback.incorrect { color: #ef4444; }
+
+/* Wider input for prepositivo quiz (long locative answers) */
+[id^="panel-neg-"] .quiz-input {
+  width: min(320px, 80vw);
+}
+
 .quiz-check-btn.btn.btn-primary {
   font-size: 1rem;
   font-weight: 600;
