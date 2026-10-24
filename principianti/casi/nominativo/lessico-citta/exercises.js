@@ -3,7 +3,7 @@ import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public · ГОРОД И ТРАНСПОРТ
+// PANEL 1 — DragDrop · public · ГОРОД
 // ============================================================
 const p1exercises = [
     {
@@ -15,13 +15,49 @@ const p1exercises = [
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
         text: "la farmacia = {{1}}, la piazza = {{2}}, il parco = {{3}}, la strada = {{4}}",
-        words: ["аптека", "площадь", "парк", "улица", "автобус"],
+        words: ["аптека", "площадь", "парк", "улица", "рынок"],
+        correctAnswers: { 1: "аптека", 2: "площадь", 3: "парк", 4: "улица" }
+    }
+];
+
+// ============================================================
+// PANEL 2 — DragDrop · student · ТРАНСПОРТ
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "l'autobus = {{1}}, il treno = {{2}}, l'aereo = {{3}}, la macchina = {{4}}",
+        words: ["автобус", "поезд", "самолёт", "машина", "трамвай"],
+        correctAnswers: { 1: "автобус", 2: "поезд", 3: "самолёт", 4: "машина" }
+    },
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "il tram = {{1}}, i pattini a rotelle = {{2}}, la bicicletta = {{3}}, il monopattino = {{4}}",
+        words: ["трамвай", "ролики", "велосипед", "самокат", "автобус"],
+        correctAnswers: { 1: "трамвай", 2: "ролики", 3: "велосипед", 4: "самокат" }
+    }
+];
+
+// ============================================================
+// PANEL 3 — DragDrop · paid · ВСЁ ВМЕСТЕ
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "il mercato = {{1}}, il negozio = {{2}}, la banca = {{3}}, la stazione = {{4}}",
+        words: ["рынок", "магазин", "банк", "вокзал", "парк"],
+        correctAnswers: { 1: "рынок", 2: "магазин", 3: "банк", 4: "вокзал" }
+    },
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "la farmacia = {{1}}, la piazza = {{2}}, il parco = {{3}}, la strada = {{4}}",
+        words: ["аптека", "площадь", "парк", "улица", "магазин"],
         correctAnswers: { 1: "аптека", 2: "площадь", 3: "парк", 4: "улица" }
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
         text: "l'autobus = {{1}}, il treno = {{2}}, l'aereo = {{3}}, la macchina = {{4}}",
-        words: ["автобус", "поезд", "самолёт", "машина", "трамвай"],
+        words: ["автобус", "поезд", "самолёт", "машина", "велосипед"],
         correctAnswers: { 1: "автобус", 2: "поезд", 3: "самолёт", 4: "машина" }
     },
     {
@@ -33,9 +69,37 @@ const p1exercises = [
 ];
 
 // ============================================================
-// PANEL 2 — Flashcards · student · ЛЕКСИКА: ГОРОД И ТРАНСПОРТ
+// PANEL 4 — Flashcards · public · ЛЕКСИКА: ГОРОД
 // ============================================================
-const p2cards = [
+const p4cards = [
+    { front: "il mercato", back: "рынок" },
+    { front: "il negozio", back: "магазин" },
+    { front: "la banca", back: "банк" },
+    { front: "la stazione", back: "вокзал" },
+    { front: "la farmacia", back: "аптека" },
+    { front: "la piazza", back: "площадь" },
+    { front: "il parco", back: "парк" },
+    { front: "la strada", back: "улица" }
+];
+
+// ============================================================
+// PANEL 5 — Flashcards · student · ЛЕКСИКА: ТРАНСПОРТ
+// ============================================================
+const p5cards = [
+    { front: "l'autobus", back: "автобус" },
+    { front: "il treno", back: "поезд" },
+    { front: "l'aereo", back: "самолёт" },
+    { front: "la macchina", back: "машина" },
+    { front: "il tram", back: "трамвай" },
+    { front: "i pattini a rotelle", back: "ролики" },
+    { front: "la bicicletta", back: "велосипед" },
+    { front: "il monopattino", back: "самокат" }
+];
+
+// ============================================================
+// PANEL 6 — Flashcards · paid · ЛЕКСИКА: ВСЁ ВМЕСТЕ
+// ============================================================
+const p6cards = [
     { front: "il mercato", back: "рынок" },
     { front: "il negozio", back: "магазин" },
     { front: "la banca", back: "банк" },
@@ -55,17 +119,39 @@ const p2cards = [
 ];
 
 // ============================================================
-// PANEL 3 — Quiz misto · public
-// MC (5) + Match (5) + Scrivi (5) = 15
+// PANEL 7 — Flashcards · paid · ЛЕКСИКА: ВСЯ ЛЕКСИКА
 // ============================================================
-function initPanelCit3() {
-    const panel = document.getElementById('panel-cit-3');
+const p7cards = [
+    { front: "il mercato", back: "рынок" },
+    { front: "il negozio", back: "магазин" },
+    { front: "la banca", back: "банк" },
+    { front: "la stazione", back: "вокзал" },
+    { front: "la farmacia", back: "аптека" },
+    { front: "la piazza", back: "площадь" },
+    { front: "il parco", back: "парк" },
+    { front: "la strada", back: "улица" },
+    { front: "l'autobus", back: "автобус" },
+    { front: "il treno", back: "поезд" },
+    { front: "l'aereo", back: "самолёт" },
+    { front: "la macchina", back: "машина" },
+    { front: "il tram", back: "трамвай" },
+    { front: "i pattini a rotelle", back: "ролики" },
+    { front: "la bicicletta", back: "велосипед" },
+    { front: "il monopattino", back: "самокат" }
+];
+
+// ============================================================
+// PANEL 8 — Quiz misto · public
+// MC (6) + Match (6) + Scrivi (4) = 16
+// ============================================================
+function initPanelCit8() {
+    const panel = document.getElementById('panel-cit-8');
     if (!panel) return;
 
-    const container = panel.querySelector('#cit-3-cards-container');
-    const prevBtn   = panel.querySelector('#cit-3-deck-prev');
-    const nextBtn   = panel.querySelector('#cit-3-deck-next');
-    const counterEl = panel.querySelector('#cit-3-deck-counter');
+    const container = panel.querySelector('#cit-8-cards-container');
+    const prevBtn   = panel.querySelector('#cit-8-deck-prev');
+    const nextBtn   = panel.querySelector('#cit-8-deck-next');
+    const counterEl = panel.querySelector('#cit-8-deck-counter');
 
     let currentCard = 0;
 
@@ -74,7 +160,8 @@ function initPanelCit3() {
         { question: "Come si dice 'il treno' in russo?", options: ["поезд", "автобус", "самолёт"], answer: "поезд" },
         { question: "Come si dice 'la bicicletta' in russo?", options: ["велосипед", "самокат", "машина"], answer: "велосипед" },
         { question: "Come si dice 'la piazza' in russo?", options: ["площадь", "улица", "парк"], answer: "площадь" },
-        { question: "Come si dice 'la stazione' in russo?", options: ["вокзал", "рынок", "банк"], answer: "вокзал" }
+        { question: "Come si dice 'la stazione' in russo?", options: ["вокзал", "рынок", "банк"], answer: "вокзал" },
+        { question: "Come si dice 'il monopattino' in russo?", options: ["самокат", "велосипед", "ролики"], answer: "самокат" }
     ];
 
     const matchPairs = [
@@ -82,15 +169,15 @@ function initPanelCit3() {
         { left: "il negozio", right: "магазин" },
         { left: "la macchina", right: "машина" },
         { left: "il parco", right: "парк" },
-        { left: "il tram", right: "трамвай" }
+        { left: "il tram", right: "трамвай" },
+        { left: "i pattini a rotelle", right: "ролики" }
     ];
 
     const quizData = [
         { id: "cit-001", promptPrefix: "l'autobus = ", promptSuffix: "", answers: ["автобус"] },
         { id: "cit-002", promptPrefix: "l'aereo = ", promptSuffix: "", answers: ["самолёт"] },
         { id: "cit-003", promptPrefix: "la strada = ", promptSuffix: "", answers: ["улица"] },
-        { id: "cit-004", promptPrefix: "la banca = ", promptSuffix: "", answers: ["банк"] },
-        { id: "cit-005", promptPrefix: "il monopattino = ", promptSuffix: "", answers: ["самокат"] }
+        { id: "cit-004", promptPrefix: "la banca = ", promptSuffix: "", answers: ["банк"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
@@ -198,8 +285,13 @@ function initPanelCit3() {
 // ============================================================
 const initializers = {
     'panel-cit-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-cit-01', exercises: p1exercises }),
-    'panel-cit-2': () => new FlashcardExercise({ rootId: 'ex-flashcards-cit-02', cards: p2cards }),
-    'panel-cit-3': () => initPanelCit3(),
+    'panel-cit-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-cit-02', exercises: p2exercises }),
+    'panel-cit-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-cit-03', exercises: p3exercises }),
+    'panel-cit-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-cit-04', cards: p4cards }),
+    'panel-cit-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-cit-05', cards: p5cards }),
+    'panel-cit-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-cit-06', cards: p6cards }),
+    'panel-cit-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-cit-07', cards: p7cards }),
+    'panel-cit-8': () => initPanelCit8(),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
