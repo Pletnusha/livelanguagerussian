@@ -704,7 +704,9 @@ const initializers = {
     'panel-dom-1':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-01', exercises: p1exercises }),
     'panel-dom-2':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-02', exercises: p2exercises }),
     'panel-dom-3':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-03', exercises: p3exercises }),
-    'panel-dom-4':  () => new ImageLabelExercise({ rootId: 'ex-imagelabel-dom-04', image: './img/kitchen.jpg', labels: kitchenLabels }),
+    'panel-dom-4':  () => new ImageLabelExercise({ rootId: 'ex-imagelabel-dom-04', rooms: [
+        { name: 'Кухня', image: './img/kitchen.jpg', labels: kitchenLabels },
+    ]}),
     'panel-dom-5':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-05', cards: p4cards }),
     'panel-dom-6':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-06', cards: p5cards }),
     'panel-dom-7':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-07', cards: p6cards }),
