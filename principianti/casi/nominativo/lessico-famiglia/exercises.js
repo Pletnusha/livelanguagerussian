@@ -196,16 +196,16 @@ function initPanelFam7() {
             card.innerHTML = `
                 <h1 class="exercise-counter">Esercizio ${index + 1} di ${TOTAL_CARDS}</h1>
                 <p class="quiz-question">${d.question}</p>
-                <div class="quiz-options">
-                    ${d.options.map(o => `<button class="quiz-option">${o}</button>`).join('')}
+                <div class="quiz-grid">
+                    ${d.options.map(o => `<button class="quiz-btn">${o}</button>`).join('')}
                 </div>
                 <div class="quiz-feedback"></div>`;
-            card.querySelectorAll('.quiz-option').forEach(btn => {
+            card.querySelectorAll('.quiz-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    if (card.querySelector('.quiz-option.correct, .quiz-option.wrong')) return;
+                    if (card.querySelector('.quiz-btn.correct, .quiz-btn.wrong')) return;
                     const isCorrect = btn.textContent === d.answer;
                     btn.classList.add(isCorrect ? 'correct' : 'wrong');
-                    if (!isCorrect) card.querySelector(`.quiz-option:not(.wrong)`).classList.add('correct');
+                    if (!isCorrect) card.querySelector(`.quiz-btn:not(.wrong)`).classList.add('correct');
                     card.querySelector('.quiz-feedback').textContent = isCorrect ? '✓ Giusto!' : `✗ La risposta corretta: ${d.answer}`;
                     card.querySelector('.quiz-feedback').className = `quiz-feedback ${isCorrect ? 'correct' : 'wrong'}`;
                 });

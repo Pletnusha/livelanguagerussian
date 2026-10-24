@@ -1130,43 +1130,6 @@ h1, h2, h3 {
   margin: 0 0 1.25rem;
 }
 
-.quiz-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.quiz-option {
-  width: 100%;
-  text-align: left;
-  padding: 1rem 1.25rem;
-  background: rgba(255, 255, 255, 0.7);
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-}
-
-.quiz-option:hover {
-  background: rgba(42, 91, 215, 0.05);
-  border-color: #2a5bd7;
-}
-
-.quiz-option.correct {
-  background: rgba(34, 197, 94, 0.1);
-  border-color: #22c55e;
-  color: #166534;
-}
-
-.quiz-option.wrong {
-  background: rgba(239, 68, 68, 0.1);
-  border-color: #ef4444;
-  color: #991b1b;
-}
-
 .match-grid {
   display: flex;
   flex-direction: column;
