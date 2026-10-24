@@ -1,0 +1,235 @@
+import DragDropExercise from '/assets/js/engines/DragDropExercise.js';
+import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
+import { initPanelManager } from '/assets/js/panel-manager.js';
+
+// ============================================================
+// PANEL 1 — DragDrop · public · МЕБЕЛЬ И ДОМ
+// ============================================================
+const p1exercises = [
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "la parete = {{1}}, la finestra = {{2}}, il letto = {{3}}, la lampada = {{4}}",
+        words: ["стена", "окно", "кровать", "лампа", "диван"],
+        correctAnswers: { 1: "стена", 2: "окно", 3: "кровать", 4: "лампа" }
+    },
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "il divano = {{1}}, la poltrona = {{2}}, il tavolo = {{3}}, l'armadio = {{4}}",
+        words: ["диван", "кресло", "стол", "шкаф", "стул"],
+        correctAnswers: { 1: "диван", 2: "кресло", 3: "стол", 4: "шкаф" }
+    },
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "la porta = {{1}}, la sedia = {{2}}, lo specchio = {{3}}, le chiavi = {{4}}",
+        words: ["дверь", "стул", "зеркало", "ключи", "чемодан"],
+        correctAnswers: { 1: "дверь", 2: "стул", 3: "зеркало", 4: "ключи" }
+    }
+];
+
+// ============================================================
+// PANEL 2 — DragDrop · student · ПРЕДМЕТЫ
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "la valigia = {{1}}, il telefono = {{2}}, l'orologio = {{3}}, la forchetta = {{4}}",
+        words: ["чемодан", "телефон", "часы", "вилка", "кастрюля"],
+        correctAnswers: { 1: "чемодан", 2: "телефон", 3: "часы", 4: "вилка" }
+    },
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "la pentola = {{1}}, la padella = {{2}}, la borsa = {{3}}, lo zaino = {{4}}",
+        words: ["кастрюля", "сковорода", "сумка", "рюкзак", "ложка"],
+        correctAnswers: { 1: "кастрюля", 2: "сковорода", 3: "сумка", 4: "рюкзак" }
+    },
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "il cucchiaio = {{1}}, il coltello = {{2}}, il piatto = {{3}}, la tazza = {{4}}",
+        words: ["ложка", "нож", "тарелка", "чашка", "стена"],
+        correctAnswers: { 1: "ложка", 2: "нож", 3: "тарелка", 4: "чашка" }
+    }
+];
+
+// ============================================================
+// PANEL 3 — Flashcards · public · ЛЕКСИКА: ДОМ И ПРЕДМЕТЫ
+// ============================================================
+const p3cards = [
+    { front: "la parete", back: "стена" },
+    { front: "la finestra", back: "окно" },
+    { front: "il letto", back: "кровать" },
+    { front: "la lampada", back: "лампа" },
+    { front: "il divano", back: "диван" },
+    { front: "la poltrona", back: "кресло" },
+    { front: "il tavolo", back: "стол" },
+    { front: "l'armadio", back: "шкаф" },
+    { front: "la porta", back: "дверь" },
+    { front: "la sedia", back: "стул" },
+    { front: "lo specchio", back: "зеркало" },
+    { front: "le chiavi", back: "ключи" },
+    { front: "la valigia", back: "чемодан" },
+    { front: "il telefono", back: "телефон" },
+    { front: "l'orologio", back: "часы" },
+    { front: "la forchetta", back: "вилка" },
+    { front: "la pentola", back: "кастрюля" },
+    { front: "la padella", back: "сковорода" },
+    { front: "la borsa", back: "сумка" },
+    { front: "lo zaino", back: "рюкзак" },
+    { front: "il cucchiaio", back: "ложка" },
+    { front: "il coltello", back: "нож" },
+    { front: "il piatto", back: "тарелка" },
+    { front: "la tazza", back: "чашка" }
+];
+
+// ============================================================
+// PANEL 4 — Quiz misto · student
+// MC (6) + Match (6) + Scrivi (6) = 18
+// ============================================================
+function initPanelCas4() {
+    const panel = document.getElementById('panel-cas-4');
+    if (!panel) return;
+
+    const container = panel.querySelector('#cas-4-cards-container');
+    const prevBtn   = panel.querySelector('#cas-4-deck-prev');
+    const nextBtn   = panel.querySelector('#cas-4-deck-next');
+    const counterEl = panel.querySelector('#cas-4-deck-counter');
+
+    let currentCard = 0;
+
+    const multipleChoiceData = [
+        { question: "Come si dice 'il letto' in russo?", options: ["кровать", "стол", "стул"], answer: "кровать" },
+        { question: "Come si dice 'lo specchio' in russo?", options: ["зеркало", "окно", "дверь"], answer: "зеркало" },
+        { question: "Come si dice 'la pentola' in russo?", options: ["кастрюля", "сковорода", "тарелка"], answer: "кастрюля" },
+        { question: "Come si dice 'l'orologio' in russo?", options: ["часы", "телефон", "ключи"], answer: "часы" },
+        { question: "Come si dice 'la poltrona' in russo?", options: ["кресло", "диван", "стул"], answer: "кресло" },
+        { question: "Come si dice 'lo zaino' in russo?", options: ["рюкзак", "сумка", "чемодан"], answer: "рюкзак" }
+    ];
+
+    const matchPairs = [
+        { left: "la parete", right: "стена" },
+        { left: "la finestra", right: "окно" },
+        { left: "l'armadio", right: "шкаф" },
+        { left: "la forchetta", right: "вилка" },
+        { left: "il coltello", right: "нож" },
+        { left: "la tazza", right: "чашка" }
+    ];
+
+    const quizData = [
+        { id: "cas-001", promptPrefix: "il divano = ", promptSuffix: "", answers: ["диван"] },
+        { id: "cas-002", promptPrefix: "la porta = ", promptSuffix: "", answers: ["дверь"] },
+        { id: "cas-003", promptPrefix: "la valigia = ", promptSuffix: "", answers: ["чемодан"] },
+        { id: "cas-004", promptPrefix: "la padella = ", promptSuffix: "", answers: ["сковорода"] },
+        { id: "cas-005", promptPrefix: "il cucchiaio = ", promptSuffix: "", answers: ["ложка"] },
+        { id: "cas-006", promptPrefix: "il piatto = ", promptSuffix: "", answers: ["тарелка"] }
+    ];
+
+    const MC_END      = multipleChoiceData.length;
+    const MATCH_END   = MC_END + matchPairs.length;
+    const TOTAL_CARDS = MATCH_END + quizData.length;
+
+    function normalizeInput(str) {
+        return str.trim().replace(/\s+/g, ' ');
+    }
+
+    function buildCard(index) {
+        const card = document.createElement('div');
+        card.className = 'quiz-card';
+
+        if (index < MC_END) {
+            const d = multipleChoiceData[index];
+            card.innerHTML = `
+                <h1 class="exercise-counter">Esercizio ${index + 1} di ${TOTAL_CARDS}</h1>
+                <p class="quiz-question">${d.question}</p>
+                <div class="quiz-grid">
+                    ${d.options.map(o => `<button class="quiz-btn">${o}</button>`).join('')}
+                </div>
+                <div class="quiz-feedback"></div>`;
+            card.querySelectorAll('.quiz-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (card.querySelector('.quiz-btn.correct, .quiz-btn.wrong')) return;
+                    const isCorrect = btn.textContent === d.answer;
+                    btn.classList.add(isCorrect ? 'correct' : 'wrong');
+                    if (!isCorrect) card.querySelector(`.quiz-btn:not(.wrong)`).classList.add('correct');
+                    card.querySelector('.quiz-feedback').textContent = isCorrect ? '✓ Giusto!' : `✗ La risposta corretta: ${d.answer}`;
+                    card.querySelector('.quiz-feedback').className = `quiz-feedback ${isCorrect ? 'correct' : 'wrong'}`;
+                });
+            });
+        } else if (index < MATCH_END) {
+            const pairs = matchPairs.slice();
+            const shuffledRight = pairs.map(p => p.right).sort(() => Math.random() - 0.5);
+            card.innerHTML = `
+                <h1>Esercizio ${index + 1} di ${TOTAL_CARDS}</h1>
+                <p class="quiz-question">Collega le parole.</p>
+                <div class="match-grid">
+                    ${pairs.map((p, i) => `
+                        <div class="match-pair">
+                            <span class="match-left">${p.left}</span>
+                            <select class="match-select">
+                                <option value="">…</option>
+                                ${shuffledRight.map(r => `<option value="${r}">${r}</option>`).join('')}
+                            </select>
+                        </div>`).join('')}
+                </div>
+                <button class="btn btn-primary match-check-btn">Verifica</button>
+                <div class="quiz-feedback"></div>`;
+            card.querySelector('.match-check-btn').addEventListener('click', () => {
+                const selects = card.querySelectorAll('.match-select');
+                let allCorrect = true;
+                selects.forEach((sel, i) => {
+                    const correct = sel.value === pairs[i].right;
+                    sel.style.borderColor = correct ? '#16a34a' : '#dc2626';
+                    if (!correct) allCorrect = false;
+                });
+                const fb = card.querySelector('.quiz-feedback');
+                fb.textContent = allCorrect ? '✓ Tutto giusto!' : '✗ Ci sono errori, riprova.';
+                fb.className = `quiz-feedback ${allCorrect ? 'correct' : 'wrong'}`;
+            });
+        } else {
+            const d = quizData[index - MATCH_END];
+            card.innerHTML = `
+                <h1>Esercizio ${index + 1} di ${TOTAL_CARDS}</h1>
+                <p class="quiz-question">Scrivi la traduzione russa.</p>
+                <p class="quiz-prompt">${d.promptPrefix}<span class="quiz-gap-inline"></span>${d.promptSuffix}</p>
+                <input type="text" class="quiz-input" placeholder="Scrivi in russo…">
+                <button class="btn btn-primary quiz-check-btn">Verifica</button>
+                <div class="quiz-feedback"></div>`;
+            card.querySelector('.quiz-check-btn').addEventListener('click', () => {
+                const input = card.querySelector('.quiz-input');
+                const val = normalizeInput(input.value).toLowerCase();
+                const correct = d.answers.some(a => normalizeInput(a).toLowerCase() === val);
+                const fb = card.querySelector('.quiz-feedback');
+                fb.textContent = correct ? '✓ Giusto!' : `✗ La risposta corretta: ${d.answers[0]}`;
+                fb.className = `quiz-feedback ${correct ? 'correct' : 'wrong'}`;
+                input.style.borderColor = correct ? '#16a34a' : '#dc2626';
+            });
+        }
+
+        return card;
+    }
+
+    const cards = Array.from({ length: TOTAL_CARDS }, (_, i) => buildCard(i));
+    cards.forEach((c, i) => { if (i > 0) c.style.display = 'none'; container.appendChild(c); });
+
+    function showCard(idx) {
+        cards.forEach((c, i) => c.style.display = i === idx ? '' : 'none');
+        currentCard = idx;
+        counterEl.textContent = `${idx + 1} / ${TOTAL_CARDS}`;
+        prevBtn.disabled = idx === 0;
+        nextBtn.textContent = idx === TOTAL_CARDS - 1 ? 'FINE' : 'AVANTI →';
+    }
+
+    prevBtn.addEventListener('click', () => { if (currentCard > 0) showCard(currentCard - 1); });
+    nextBtn.addEventListener('click', () => { if (currentCard < TOTAL_CARDS - 1) showCard(currentCard + 1); });
+    showCard(0);
+}
+
+// ============================================================
+// INIT
+// ============================================================
+const initializers = {
+    'panel-cas-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-cas-01', exercises: p1exercises }),
+    'panel-cas-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-cas-02', exercises: p2exercises }),
+    'panel-cas-3': () => new FlashcardExercise({ rootId: 'ex-flashcards-cas-03', cards: p3cards }),
+    'panel-cas-4': () => initPanelCas4(),
+};
+
+initPanelManager({ initializers, enableAccessControl: true });
