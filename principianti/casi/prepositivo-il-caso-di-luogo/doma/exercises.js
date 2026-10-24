@@ -224,6 +224,22 @@ const kitchenLabels = [
     { id: 'k-14', x: 30, y: 45, answers: ['салатница'] }
 ];
 
+const livingLabels = [
+    { id: 'l-01', x: 22.4, y: 85.5, answers: ['диван'] },
+    { id: 'l-02', x: 80.2, y: 85, answers: ['подушка'] },
+    { id: 'l-03', x: 37.8, y: 66.2, answers: ['стенка'] },
+    { id: 'l-04', x: 42.3, y: 93.4, answers: ['ковёр', 'ковер'] },
+    { id: 'l-05', x: 90, y: 29.6, answers: ['занавеска'] },
+    { id: 'l-06', x: 75.4, y: 51.5, answers: ['лампа'] },
+    { id: 'l-07', x: 58.3, y: 41.1, answers: ['лампа'] },
+    { id: 'l-08', x: 61, y: 64, answers: ['стул'] },
+    { id: 'l-09', x: 54.9, y: 60.2, answers: ['стол'] },
+    { id: 'l-10', x: 80.8, y: 35.1, answers: ['окно'] },
+    { id: 'l-11', x: 51.8, y: 83.8, answers: ['пол'] },
+    { id: 'l-12', x: 64.5, y: 9.8, answers: ['потолок'] },
+    { id: 'l-13', x: 32.5, y: 58.2, answers: ['книги'] },
+];
+
 // ============================================================
 // PANEL 5 — Flashcard · public · ЛЕКСИКА: КУХНЯ
 // ============================================================
@@ -706,6 +722,7 @@ const initializers = {
     'panel-dom-3':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-03', exercises: p3exercises }),
     'panel-dom-4':  () => new ImageLabelExercise({ rootId: 'ex-imagelabel-dom-04', rooms: [
         { name: 'Кухня', image: './img/kitchen.jpg', labels: kitchenLabels },
+        { name: 'Гостиная', image: './img/living.jpg', labels: livingLabels },
     ]}),
     'panel-dom-5':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-05', cards: p4cards }),
     'panel-dom-6':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-06', cards: p5cards }),
