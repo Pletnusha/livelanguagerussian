@@ -464,7 +464,8 @@ h1, h2, h3 {
   font-size: 0.95rem;
 }
 
-[id^="ex-flashcards-"] .fca01-mode-buttons {
+[id^="ex-flashcards-"] .fca01-mode-buttons,
+[id^="ex-imagelabel-"] .fca01-mode-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -472,7 +473,8 @@ h1, h2, h3 {
   margin-bottom: 2.5rem;
 }
 
-[id^="ex-flashcards-"] .fca01-mode-btn {
+[id^="ex-flashcards-"] .fca01-mode-btn,
+[id^="ex-imagelabel-"] .fca01-mode-btn {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
@@ -485,12 +487,14 @@ h1, h2, h3 {
   transition: all 0.2s ease;
 }
 
-[id^="ex-flashcards-"] .fca01-mode-btn:hover {
+[id^="ex-flashcards-"] .fca01-mode-btn:hover,
+[id^="ex-imagelabel-"] .fca01-mode-btn:hover {
   background: rgba(255, 255, 255, 1);
   border-color: #2a5bd7;
 }
 
-[id^="ex-flashcards-"] .fca01-mode-btn.active {
+[id^="ex-flashcards-"] .fca01-mode-btn.active,
+[id^="ex-imagelabel-"] .fca01-mode-btn.active {
   background: #2a5bd7;
   color: #fff;
   border-color: #2a5bd7;
@@ -972,13 +976,15 @@ h1, h2, h3 {
     box-sizing: border-box;
   }
 
-  /* Flashcards: mode buttons - all 3 on one row on mobile */
-  [id^="ex-flashcards-"] .fca01-mode-buttons {
+  /* Flashcards & ImageLabel: mode/tab buttons - all on one row on mobile */
+  [id^="ex-flashcards-"] .fca01-mode-buttons,
+  [id^="ex-imagelabel-"] .fca01-mode-buttons {
     flex-wrap: nowrap;
     gap: 0.4rem;
   }
 
-  [id^="ex-flashcards-"] .fca01-mode-btn {
+  [id^="ex-flashcards-"] .fca01-mode-btn,
+  [id^="ex-imagelabel-"] .fca01-mode-btn {
     font-size: 0.8rem;
     padding: 0.55rem 0.75rem;
     flex: 1;
