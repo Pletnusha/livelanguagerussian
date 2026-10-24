@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛЕКСИКА: ГОРОД И ТРАНСПОРТ - LIVE LANGUAGE_RUSSIAN</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/access-control.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        document.documentElement.style.visibility = 'hidden';
+        (async () => {
+            const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
+            await new Promise((res, rej) => {
+                const s = document.createElement('script');
+                s.src = 'https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js';
+                s.onload = res; s.onerror = rej;
+                document.head.appendChild(s);
+            });
+            const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            const { data: { session } } = await client.auth.getSession();
+            if (!session) {
+                window.location.href = '/login.html?redirect=principianti/casi/nominativo/lessico-citta';
+            } else {
+                document.documentElement.style.visibility = '';
+            }
+        })();
+    </script>
+</head>
+<body class="page-nominativo">
+
+    <section class="argomento-header">
+        <h1 class="argomento-title">ЛЕКСИКА: ГОРОД И ТРАНСПОРТ</h1>
+        <p class="argomento-focus">Vocabolario della città e dei trasporti</p>
+    </section>
+
+    <section class="argomento-intro">
+        <p><!-- TODO: Intro text --></p>
+    </section>
+
+    <main class="exercises-section">
+
+        <!-- ============================================================ -->
+        <!-- Panel 1 (public) — DragDrop · Город и транспорт -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-cit-1">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">ГОРОД И ТРАНСПОРТ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-cit-1" data-access="public" hidden>
+            <div id="ex-dragdrop-cit-01" class="universal-dd">
+                <div id="ex-dragdrop-cit-01-container"></div>
+                <div id="ex-dragdrop-cit-01-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 2 (student) — Flashcards · Город и транспорт -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-cit-2">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">ЛЕКСИКА: ГОРОД И ТРАНСПОРТ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-cit-2" data-access="student" hidden>
+            <section id="ex-flashcards-cit-02">
+                <div class="fca01-header">
+                    <h2>Лексика: город и транспорт</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+
+                <div id="ex-flashcards-cit-02-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-cit-02-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-cit-02-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-cit-02-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-cit-02-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-cit-02-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-cit-02-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-cit-02-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-cit-02-section-match" class="fca01-section">
+                    <div id="ex-flashcards-cit-02-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-cit-02-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 (public) — Quiz misto (MC + Match + Scrivi = 15) -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-cit-3">
+            <span class="exercise-type">Quiz</span>
+            <h3 class="exercise-title">ТЕСТ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-cit-3" data-access="public" hidden>
+            <section id="cit-3-deck" class="universal-dd">
+                <div id="cit-3-cards-container"></div>
+                <div class="fca01-nav">
+                    <button id="cit-3-deck-prev" class="fca01-btn-nav" disabled>← INDIETRO</button>
+                    <span id="cit-3-deck-counter" class="fca01-counter">1 / 1</span>
+                    <button id="cit-3-deck-next" class="btn btn-primary">AVANTI →</button>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <section class="unlock-cta">
+        <a href="https://buy.stripe.com/00w6oHaiAgRLdfsbKB3ZK0c" class="unlock-cta-btn" target="_blank" rel="noopener noreferrer">Sblocca tutti gli esercizi</a>
+    </section>
+
+    <footer class="level-footer">
+        <a href="/principianti/casi/nominativo/" class="back-link">← Torna a Именительный падеж</a>
+    </footer>
+
+    <script type="module" src="./exercises.js"></script>
+
+</body>
+</html>

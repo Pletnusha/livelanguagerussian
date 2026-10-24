@@ -3,33 +3,9 @@ import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public · ОДЕЖДА
+// PANEL 1 — DragDrop · public · МЕБЕЛЬ И ДОМ
 // ============================================================
 const p1exercises = [
-    {
-        instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "la maglietta = {{1}}, il vestito = {{2}}, la gonna = {{3}}, la sciarpa = {{4}}",
-        words: ["футболка", "платье", "юбка", "шарф", "ботинки"],
-        correctAnswers: { 1: "футболка", 2: "платье", 3: "юбка", 4: "шарф" }
-    },
-    {
-        instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "gli stivali = {{1}}, la camicia = {{2}}, il maglione = {{3}}, la giacca = {{4}}",
-        words: ["ботинки", "рубашка", "свитер", "пиджак", "брюки"],
-        correctAnswers: { 1: "ботинки", 2: "рубашка", 3: "свитер", 4: "пиджак" }
-    },
-    {
-        instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "i pantaloni = {{1}}, il berretto = {{2}}, il cappotto = {{3}}, il giubbotto = {{4}}",
-        words: ["брюки", "шапка", "пальто", "куртка", "платье"],
-        correctAnswers: { 1: "брюки", 2: "шапка", 3: "пальто", 4: "куртка" }
-    }
-];
-
-// ============================================================
-// PANEL 2 — DragDrop · student · ДОМ И ПРЕДМЕТЫ
-// ============================================================
-const p2exercises = [
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
         text: "la parete = {{1}}, la finestra = {{2}}, il letto = {{3}}, la lampada = {{4}}",
@@ -47,7 +23,13 @@ const p2exercises = [
         text: "la porta = {{1}}, la sedia = {{2}}, lo specchio = {{3}}, le chiavi = {{4}}",
         words: ["дверь", "стул", "зеркало", "ключи", "чемодан"],
         correctAnswers: { 1: "дверь", 2: "стул", 3: "зеркало", 4: "ключи" }
-    },
+    }
+];
+
+// ============================================================
+// PANEL 2 — DragDrop · student · ПРЕДМЕТЫ
+// ============================================================
+const p2exercises = [
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
         text: "la valigia = {{1}}, il telefono = {{2}}, l'orologio = {{3}}, la forchetta = {{4}}",
@@ -69,57 +51,9 @@ const p2exercises = [
 ];
 
 // ============================================================
-// PANEL 3 — DragDrop · paid · ГОРОД И ТРАНСПОРТ
+// PANEL 3 — Flashcards · public · ЛЕКСИКА: ДОМ И ПРЕДМЕТЫ
 // ============================================================
-const p3exercises = [
-    {
-        instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "il mercato = {{1}}, il negozio = {{2}}, la banca = {{3}}, la stazione = {{4}}",
-        words: ["рынок", "магазин", "банк", "вокзал", "аптека"],
-        correctAnswers: { 1: "рынок", 2: "магазин", 3: "банк", 4: "вокзал" }
-    },
-    {
-        instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "la farmacia = {{1}}, la piazza = {{2}}, il parco = {{3}}, la strada = {{4}}",
-        words: ["аптека", "площадь", "парк", "улица", "автобус"],
-        correctAnswers: { 1: "аптека", 2: "площадь", 3: "парк", 4: "улица" }
-    },
-    {
-        instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "l'autobus = {{1}}, il treno = {{2}}, l'aereo = {{3}}, la macchina = {{4}}",
-        words: ["автобус", "поезд", "самолёт", "машина", "трамвай"],
-        correctAnswers: { 1: "автобус", 2: "поезд", 3: "самолёт", 4: "машина" }
-    },
-    {
-        instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "il tram = {{1}}, i pattini a rotelle = {{2}}, la bicicletta = {{3}}, il monopattino = {{4}}",
-        words: ["трамвай", "ролики", "велосипед", "самокат", "поезд"],
-        correctAnswers: { 1: "трамвай", 2: "ролики", 3: "велосипед", 4: "самокат" }
-    }
-];
-
-// ============================================================
-// PANEL 4 — Flashcards · public · ЛЕКСИКА: ОДЕЖДА
-// ============================================================
-const p4cards = [
-    { front: "la maglietta", back: "футболка" },
-    { front: "il vestito", back: "платье" },
-    { front: "la gonna", back: "юбка" },
-    { front: "la sciarpa", back: "шарф" },
-    { front: "gli stivali", back: "ботинки" },
-    { front: "la camicia", back: "рубашка" },
-    { front: "il maglione", back: "свитер" },
-    { front: "la giacca", back: "пиджак" },
-    { front: "i pantaloni", back: "брюки" },
-    { front: "il berretto", back: "шапка" },
-    { front: "il cappotto", back: "пальто" },
-    { front: "il giubbotto", back: "куртка" }
-];
-
-// ============================================================
-// PANEL 5 — Flashcards · student · ЛЕКСИКА: ДОМ И ПРЕДМЕТЫ
-// ============================================================
-const p5cards = [
+const p3cards = [
     { front: "la parete", back: "стена" },
     { front: "la finestra", back: "окно" },
     { front: "il letto", back: "кровать" },
@@ -147,108 +81,45 @@ const p5cards = [
 ];
 
 // ============================================================
-// PANEL 6 — Flashcards · paid · ЛЕКСИКА: ГОРОД И ТРАНСПОРТ
+// PANEL 4 — Quiz misto · student
+// MC (6) + Match (6) + Scrivi (6) = 18
 // ============================================================
-const p6cards = [
-    { front: "il mercato", back: "рынок" },
-    { front: "il negozio", back: "магазин" },
-    { front: "la banca", back: "банк" },
-    { front: "la stazione", back: "вокзал" },
-    { front: "la farmacia", back: "аптека" },
-    { front: "la piazza", back: "площадь" },
-    { front: "il parco", back: "парк" },
-    { front: "la strada", back: "улица" },
-    { front: "l'autobus", back: "автобус" },
-    { front: "il treno", back: "поезд" },
-    { front: "l'aereo", back: "самолёт" },
-    { front: "la macchina", back: "машина" },
-    { front: "il tram", back: "трамвай" },
-    { front: "i pattini a rotelle", back: "ролики" },
-    { front: "la bicicletta", back: "велосипед" },
-    { front: "il monopattino", back: "самокат" }
-];
-
-// ============================================================
-// PANEL 7 — Flashcards · student · ЛЕКСИКА: ЕДА
-// ============================================================
-const p7cards = [
-    { front: "l'arancia", back: "апельсин" },
-    { front: "l'anguria", back: "арбуз" },
-    { front: "la melanzana", back: "баклажан" },
-    { front: "la pera", back: "груша" },
-    { front: "la patata", back: "картошка" },
-    { front: "la cipolla", back: "лук" },
-    { front: "la carota", back: "морковь" },
-    { front: "la mela", back: "яблоко" },
-    { front: "la carne", back: "мясо" },
-    { front: "il pesce", back: "рыба" },
-    { front: "la prugna", back: "слива" },
-    { front: "il mirtillo", back: "черника" },
-    { front: "l'aglio", back: "чеснок" },
-    { front: "la banana", back: "банан" },
-    { front: "i piselli", back: "горошек" },
-    { front: "il cavolo", back: "капуста" },
-    { front: "il latte", back: "молоко" },
-    { front: "il peperone", back: "перец" },
-    { front: "la zucchina", back: "кабачок" },
-    { front: "il pomodoro", back: "помидор" },
-    { front: "il sedano", back: "сельдерей" },
-    { front: "il formaggio", back: "сыр" },
-    { front: "il pane", back: "хлеб" },
-    { front: "le uova", back: "яйца" },
-    { front: "il lampone", back: "малина" },
-    { front: "il burro", back: "масло (сливочное)" },
-    { front: "l'olio", back: "масло (растительное)" }
-];
-
-// ============================================================
-// PANEL 8 — Quiz misto · public
-// MC (10) + Match (8) + Scrivi (8) = 26
-// ============================================================
-function initPanelCasa8() {
-    const panel = document.getElementById('panel-casa-8');
+function initPanelCas4() {
+    const panel = document.getElementById('panel-cas-4');
     if (!panel) return;
 
-    const container = panel.querySelector('#casa-8-cards-container');
-    const prevBtn   = panel.querySelector('#casa-8-deck-prev');
-    const nextBtn   = panel.querySelector('#casa-8-deck-next');
-    const counterEl = panel.querySelector('#casa-8-deck-counter');
+    const container = panel.querySelector('#cas-4-cards-container');
+    const prevBtn   = panel.querySelector('#cas-4-deck-prev');
+    const nextBtn   = panel.querySelector('#cas-4-deck-next');
+    const counterEl = panel.querySelector('#cas-4-deck-counter');
 
     let currentCard = 0;
 
     const multipleChoiceData = [
-        { question: "Come si dice 'la maglietta' in russo?", options: ["футболка", "рубашка", "куртка"], answer: "футболка" },
         { question: "Come si dice 'il letto' in russo?", options: ["кровать", "стол", "стул"], answer: "кровать" },
-        { question: "Come si dice 'la farmacia' in russo?", options: ["аптека", "банк", "магазин"], answer: "аптека" },
-        { question: "Come si dice 'il treno' in russo?", options: ["поезд", "автобус", "самолёт"], answer: "поезд" },
-        { question: "Come si dice 'il formaggio' in russo?", options: ["сыр", "хлеб", "молоко"], answer: "сыр" },
-        { question: "Come si dice 'la gonna' in russo?", options: ["юбка", "платье", "брюки"], answer: "юбка" },
         { question: "Come si dice 'lo specchio' in russo?", options: ["зеркало", "окно", "дверь"], answer: "зеркало" },
-        { question: "Come si dice 'la bicicletta' in russo?", options: ["велосипед", "самокат", "машина"], answer: "велосипед" },
-        { question: "Come si dice 'la carota' in russo?", options: ["морковь", "картошка", "лук"], answer: "морковь" },
-        { question: "Come si dice 'la pentola' in russo?", options: ["кастрюля", "сковорода", "тарелка"], answer: "кастрюля" }
+        { question: "Come si dice 'la pentola' in russo?", options: ["кастрюля", "сковорода", "тарелка"], answer: "кастрюля" },
+        { question: "Come si dice 'l'orologio' in russo?", options: ["часы", "телефон", "ключи"], answer: "часы" },
+        { question: "Come si dice 'la poltrona' in russo?", options: ["кресло", "диван", "стул"], answer: "кресло" },
+        { question: "Come si dice 'lo zaino' in russo?", options: ["рюкзак", "сумка", "чемодан"], answer: "рюкзак" }
     ];
 
     const matchPairs = [
-        { left: "il maglione", right: "свитер" },
-        { left: "la sedia", right: "стул" },
-        { left: "il negozio", right: "магазин" },
-        { left: "la macchina", right: "машина" },
-        { left: "il pomodoro", right: "помидор" },
-        { left: "la borsa", right: "сумка" },
-        { left: "il parco", right: "парк" },
-        { left: "la mela", right: "яблоко" }
+        { left: "la parete", right: "стена" },
+        { left: "la finestra", right: "окно" },
+        { left: "l'armadio", right: "шкаф" },
+        { left: "la forchetta", right: "вилка" },
+        { left: "il coltello", right: "нож" },
+        { left: "la tazza", right: "чашка" }
     ];
 
     const quizData = [
-        { id: "casa-001", promptPrefix: "il cappotto = ", promptSuffix: "", answers: ["пальто"] },
-        { id: "casa-002", promptPrefix: "la finestra = ", promptSuffix: "", answers: ["окно"] },
-        { id: "casa-003", promptPrefix: "l'autobus = ", promptSuffix: "", answers: ["автобус"] },
-        { id: "casa-004", promptPrefix: "il pane = ", promptSuffix: "", answers: ["хлеб"] },
-        { id: "casa-005", promptPrefix: "le chiavi = ", promptSuffix: "", answers: ["ключи"] },
-        { id: "casa-006", promptPrefix: "la piazza = ", promptSuffix: "", answers: ["площадь"] },
-        { id: "casa-007", promptPrefix: "il coltello = ", promptSuffix: "", answers: ["нож"] },
-        { id: "casa-008", promptPrefix: "la banana = ", promptSuffix: "", answers: ["банан"] }
+        { id: "cas-001", promptPrefix: "il divano = ", promptSuffix: "", answers: ["диван"] },
+        { id: "cas-002", promptPrefix: "la porta = ", promptSuffix: "", answers: ["дверь"] },
+        { id: "cas-003", promptPrefix: "la valigia = ", promptSuffix: "", answers: ["чемодан"] },
+        { id: "cas-004", promptPrefix: "la padella = ", promptSuffix: "", answers: ["сковорода"] },
+        { id: "cas-005", promptPrefix: "il cucchiaio = ", promptSuffix: "", answers: ["ложка"] },
+        { id: "cas-006", promptPrefix: "il piatto = ", promptSuffix: "", answers: ["тарелка"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
@@ -355,14 +226,10 @@ function initPanelCasa8() {
 // INIT
 // ============================================================
 const initializers = {
-    'panel-casa-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-casa-01', exercises: p1exercises }),
-    'panel-casa-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-casa-02', exercises: p2exercises }),
-    'panel-casa-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-casa-03', exercises: p3exercises }),
-    'panel-casa-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-casa-04', cards: p4cards }),
-    'panel-casa-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-casa-05', cards: p5cards }),
-    'panel-casa-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-casa-06', cards: p6cards }),
-    'panel-casa-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-casa-07', cards: p7cards }),
-    'panel-casa-8': () => initPanelCasa8(),
+    'panel-cas-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-cas-01', exercises: p1exercises }),
+    'panel-cas-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-cas-02', exercises: p2exercises }),
+    'panel-cas-3': () => new FlashcardExercise({ rootId: 'ex-flashcards-cas-03', cards: p3cards }),
+    'panel-cas-4': () => initPanelCas4(),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });

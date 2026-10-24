@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЛЕКСИКА: МИР ВОКРУГ НАС - LIVE LANGUAGE_RUSSIAN</title>
+    <title>ЛЕКСИКА: ДОМ И ПРЕДМЕТЫ - LIVE LANGUAGE_RUSSIAN</title>
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/access-control.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,8 +33,8 @@
 <body class="page-nominativo">
 
     <section class="argomento-header">
-        <h1 class="argomento-title">ЛЕКСИКА: МИР ВОКРУГ НАС</h1>
-        <p class="argomento-focus">Vocabolario quotidiano — abbigliamento, casa, città e cibo</p>
+        <h1 class="argomento-title">ЛЕКСИКА: ДОМ И ПРЕДМЕТЫ</h1>
+        <p class="argomento-focus">Vocabolario della casa e degli oggetti quotidiani</p>
     </section>
 
     <section class="argomento-intro">
@@ -44,106 +44,45 @@
     <main class="exercises-section">
 
         <!-- ============================================================ -->
-        <!-- Panel 1 (public) — DragDrop · Одежда -->
+        <!-- Panel 1 (public) — DragDrop · Мебель и дом -->
         <!-- ============================================================ -->
-        <article class="exercise-card" data-status="open" data-target="panel-casa-1">
+        <article class="exercise-card" data-status="open" data-target="panel-cas-1">
             <span class="exercise-type">Drag &amp; Drop</span>
-            <h3 class="exercise-title">ОДЕЖДА</h3>
+            <h3 class="exercise-title">МЕБЕЛЬ И ДОМ</h3>
         </article>
 
-        <div class="exercise-panel" id="panel-casa-1" data-access="public" hidden>
-            <div id="ex-dragdrop-casa-01" class="universal-dd">
-                <div id="ex-dragdrop-casa-01-container"></div>
-                <div id="ex-dragdrop-casa-01-completion" style="display: none;"></div>
+        <div class="exercise-panel" id="panel-cas-1" data-access="public" hidden>
+            <div id="ex-dragdrop-cas-01" class="universal-dd">
+                <div id="ex-dragdrop-cas-01-container"></div>
+                <div id="ex-dragdrop-cas-01-completion" style="display: none;"></div>
             </div>
         </div>
 
         <!-- ============================================================ -->
-        <!-- Panel 2 (student) — DragDrop · Дом и предметы -->
+        <!-- Panel 2 (student) — DragDrop · Предметы -->
         <!-- ============================================================ -->
-        <article class="exercise-card" data-status="open" data-target="panel-casa-2">
+        <article class="exercise-card" data-status="open" data-target="panel-cas-2">
             <span class="exercise-type">Drag &amp; Drop</span>
-            <h3 class="exercise-title">ДОМ И ПРЕДМЕТЫ</h3>
+            <h3 class="exercise-title">ПРЕДМЕТЫ</h3>
         </article>
 
-        <div class="exercise-panel" id="panel-casa-2" data-access="student" hidden>
-            <div id="ex-dragdrop-casa-02" class="universal-dd">
-                <div id="ex-dragdrop-casa-02-container"></div>
-                <div id="ex-dragdrop-casa-02-completion" style="display: none;"></div>
+        <div class="exercise-panel" id="panel-cas-2" data-access="student" hidden>
+            <div id="ex-dragdrop-cas-02" class="universal-dd">
+                <div id="ex-dragdrop-cas-02-container"></div>
+                <div id="ex-dragdrop-cas-02-completion" style="display: none;"></div>
             </div>
         </div>
 
         <!-- ============================================================ -->
-        <!-- Panel 3 (paid) — DragDrop · Город и транспорт -->
+        <!-- Panel 3 (public) — Flashcards · Все слова -->
         <!-- ============================================================ -->
-        <article class="exercise-card" data-status="open" data-target="panel-casa-3">
-            <span class="exercise-type">Drag &amp; Drop</span>
-            <h3 class="exercise-title">ГОРОД И ТРАНСПОРТ</h3>
-        </article>
-
-        <div class="exercise-panel" id="panel-casa-3" data-access="paid" hidden>
-            <div id="ex-dragdrop-casa-03" class="universal-dd">
-                <div id="ex-dragdrop-casa-03-container"></div>
-                <div id="ex-dragdrop-casa-03-completion" style="display: none;"></div>
-            </div>
-        </div>
-
-        <!-- ============================================================ -->
-        <!-- Panel 4 (public) — Flashcards · Одежда -->
-        <!-- ============================================================ -->
-        <article class="exercise-card" data-status="open" data-target="panel-casa-4">
-            <span class="exercise-type">Flashcards</span>
-            <h3 class="exercise-title">ЛЕКСИКА: ОДЕЖДА</h3>
-        </article>
-
-        <div class="exercise-panel" id="panel-casa-4" data-access="public" hidden>
-            <section id="ex-flashcards-casa-04">
-                <div class="fca01-header">
-                    <h2>Лексика: одежда</h2>
-                    <p>Scegliere modalità</p>
-                </div>
-
-                <div class="fca01-mode-buttons">
-                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
-                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
-                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
-                </div>
-
-                <div id="ex-flashcards-casa-04-section-study" class="fca01-section visible">
-                    <div id="ex-flashcards-casa-04-learning-area-study"></div>
-                    <div class="fca01-nav">
-                        <button id="ex-flashcards-casa-04-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
-                        <span id="ex-flashcards-casa-04-counter" class="fca01-counter">1 / 1</span>
-                        <button id="ex-flashcards-casa-04-next-btn" class="btn btn-primary">AVANTI →</button>
-                    </div>
-                </div>
-
-                <div id="ex-flashcards-casa-04-section-quiz" class="fca01-section">
-                    <div id="ex-flashcards-casa-04-learning-area-quiz"></div>
-                    <div class="fca01-center-btn">
-                        <button id="ex-flashcards-casa-04-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
-                    </div>
-                </div>
-
-                <div id="ex-flashcards-casa-04-section-match" class="fca01-section">
-                    <div id="ex-flashcards-casa-04-learning-area-match"></div>
-                    <div class="fca01-center-btn">
-                        <button id="ex-flashcards-casa-04-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- ============================================================ -->
-        <!-- Panel 5 (student) — Flashcards · Дом и предметы -->
-        <!-- ============================================================ -->
-        <article class="exercise-card" data-status="open" data-target="panel-casa-5">
+        <article class="exercise-card" data-status="open" data-target="panel-cas-3">
             <span class="exercise-type">Flashcards</span>
             <h3 class="exercise-title">ЛЕКСИКА: ДОМ И ПРЕДМЕТЫ</h3>
         </article>
 
-        <div class="exercise-panel" id="panel-casa-5" data-access="student" hidden>
-            <section id="ex-flashcards-casa-05">
+        <div class="exercise-panel" id="panel-cas-3" data-access="public" hidden>
+            <section id="ex-flashcards-cas-03">
                 <div class="fca01-header">
                     <h2>Лексика: дом и предметы</h2>
                     <p>Scegliere modalità</p>
@@ -155,138 +94,46 @@
                     <button class="fca01-mode-btn" data-mode="match">MATCH</button>
                 </div>
 
-                <div id="ex-flashcards-casa-05-section-study" class="fca01-section visible">
-                    <div id="ex-flashcards-casa-05-learning-area-study"></div>
+                <div id="ex-flashcards-cas-03-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-cas-03-learning-area-study"></div>
                     <div class="fca01-nav">
-                        <button id="ex-flashcards-casa-05-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
-                        <span id="ex-flashcards-casa-05-counter" class="fca01-counter">1 / 1</span>
-                        <button id="ex-flashcards-casa-05-next-btn" class="btn btn-primary">AVANTI →</button>
+                        <button id="ex-flashcards-cas-03-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-cas-03-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-cas-03-next-btn" class="btn btn-primary">AVANTI →</button>
                     </div>
                 </div>
 
-                <div id="ex-flashcards-casa-05-section-quiz" class="fca01-section">
-                    <div id="ex-flashcards-casa-05-learning-area-quiz"></div>
+                <div id="ex-flashcards-cas-03-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-cas-03-learning-area-quiz"></div>
                     <div class="fca01-center-btn">
-                        <button id="ex-flashcards-casa-05-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                        <button id="ex-flashcards-cas-03-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
                     </div>
                 </div>
 
-                <div id="ex-flashcards-casa-05-section-match" class="fca01-section">
-                    <div id="ex-flashcards-casa-05-learning-area-match"></div>
+                <div id="ex-flashcards-cas-03-section-match" class="fca01-section">
+                    <div id="ex-flashcards-cas-03-learning-area-match"></div>
                     <div class="fca01-center-btn">
-                        <button id="ex-flashcards-casa-05-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                        <button id="ex-flashcards-cas-03-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
                     </div>
                 </div>
             </section>
         </div>
 
         <!-- ============================================================ -->
-        <!-- Panel 6 (paid) — Flashcards · Город и транспорт -->
+        <!-- Panel 4 (student) — Quiz misto (MC + Match + Scrivi = 18) -->
         <!-- ============================================================ -->
-        <article class="exercise-card" data-status="open" data-target="panel-casa-6">
-            <span class="exercise-type">Flashcards</span>
-            <h3 class="exercise-title">ЛЕКСИКА: ГОРОД И ТРАНСПОРТ</h3>
-        </article>
-
-        <div class="exercise-panel" id="panel-casa-6" data-access="paid" hidden>
-            <section id="ex-flashcards-casa-06">
-                <div class="fca01-header">
-                    <h2>Лексика: город и транспорт</h2>
-                    <p>Scegliere modalità</p>
-                </div>
-
-                <div class="fca01-mode-buttons">
-                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
-                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
-                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
-                </div>
-
-                <div id="ex-flashcards-casa-06-section-study" class="fca01-section visible">
-                    <div id="ex-flashcards-casa-06-learning-area-study"></div>
-                    <div class="fca01-nav">
-                        <button id="ex-flashcards-casa-06-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
-                        <span id="ex-flashcards-casa-06-counter" class="fca01-counter">1 / 1</span>
-                        <button id="ex-flashcards-casa-06-next-btn" class="btn btn-primary">AVANTI →</button>
-                    </div>
-                </div>
-
-                <div id="ex-flashcards-casa-06-section-quiz" class="fca01-section">
-                    <div id="ex-flashcards-casa-06-learning-area-quiz"></div>
-                    <div class="fca01-center-btn">
-                        <button id="ex-flashcards-casa-06-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
-                    </div>
-                </div>
-
-                <div id="ex-flashcards-casa-06-section-match" class="fca01-section">
-                    <div id="ex-flashcards-casa-06-learning-area-match"></div>
-                    <div class="fca01-center-btn">
-                        <button id="ex-flashcards-casa-06-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- ============================================================ -->
-        <!-- Panel 7 (student) — Flashcards · Еда -->
-        <!-- ============================================================ -->
-        <article class="exercise-card" data-status="open" data-target="panel-casa-7">
-            <span class="exercise-type">Flashcards</span>
-            <h3 class="exercise-title">ЛЕКСИКА: ЕДА</h3>
-        </article>
-
-        <div class="exercise-panel" id="panel-casa-7" data-access="student" hidden>
-            <section id="ex-flashcards-casa-07">
-                <div class="fca01-header">
-                    <h2>Лексика: еда</h2>
-                    <p>Scegliere modalità</p>
-                </div>
-
-                <div class="fca01-mode-buttons">
-                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
-                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
-                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
-                </div>
-
-                <div id="ex-flashcards-casa-07-section-study" class="fca01-section visible">
-                    <div id="ex-flashcards-casa-07-learning-area-study"></div>
-                    <div class="fca01-nav">
-                        <button id="ex-flashcards-casa-07-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
-                        <span id="ex-flashcards-casa-07-counter" class="fca01-counter">1 / 1</span>
-                        <button id="ex-flashcards-casa-07-next-btn" class="btn btn-primary">AVANTI →</button>
-                    </div>
-                </div>
-
-                <div id="ex-flashcards-casa-07-section-quiz" class="fca01-section">
-                    <div id="ex-flashcards-casa-07-learning-area-quiz"></div>
-                    <div class="fca01-center-btn">
-                        <button id="ex-flashcards-casa-07-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
-                    </div>
-                </div>
-
-                <div id="ex-flashcards-casa-07-section-match" class="fca01-section">
-                    <div id="ex-flashcards-casa-07-learning-area-match"></div>
-                    <div class="fca01-center-btn">
-                        <button id="ex-flashcards-casa-07-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- ============================================================ -->
-        <!-- Panel 8 (public) — Quiz misto (MC + Match + Scrivi) -->
-        <!-- ============================================================ -->
-        <article class="exercise-card" data-status="open" data-target="panel-casa-8">
+        <article class="exercise-card" data-status="open" data-target="panel-cas-4">
             <span class="exercise-type">Quiz</span>
             <h3 class="exercise-title">ТЕСТ</h3>
         </article>
 
-        <div class="exercise-panel" id="panel-casa-8" data-access="public" hidden>
-            <section id="casa-8-deck" class="universal-dd">
-                <div id="casa-8-cards-container"></div>
+        <div class="exercise-panel" id="panel-cas-4" data-access="student" hidden>
+            <section id="cas-4-deck" class="universal-dd">
+                <div id="cas-4-cards-container"></div>
                 <div class="fca01-nav">
-                    <button id="casa-8-deck-prev" class="fca01-btn-nav" disabled>← INDIETRO</button>
-                    <span id="casa-8-deck-counter" class="fca01-counter">1 / 1</span>
-                    <button id="casa-8-deck-next" class="btn btn-primary">AVANTI →</button>
+                    <button id="cas-4-deck-prev" class="fca01-btn-nav" disabled>← INDIETRO</button>
+                    <span id="cas-4-deck-counter" class="fca01-counter">1 / 1</span>
+                    <button id="cas-4-deck-next" class="btn btn-primary">AVANTI →</button>
                 </div>
             </section>
         </div>
