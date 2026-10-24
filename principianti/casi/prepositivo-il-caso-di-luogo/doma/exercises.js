@@ -1,375 +1,419 @@
 import DragDropExercise from '/assets/js/engines/DragDropExercise.js';
 import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
+import GapTextExercise from '/assets/js/engines/GapTextExercise.js';
+import ImageLabelExercise from '/assets/js/engines/ImageLabelExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public
-// Sostantivo al prepositivo (dopo в/на) — dove si trova l'oggetto in casa
+// PANEL 1 — DragDrop · public · "В ВАННОЙ / ПОЛОЖЕНИЕ"
+// Предложный падеж — дистракторы: родительный + винительный
 // ============================================================
 const p1exercises = [
     {
         instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Ваза на {{1}}.",
-        words: ["стол", "стола", "столе"],
-        correctAnswers: { 1: "столе" },
-        explanation: "Sostantivo maschile al prepositivo (dopo на/в): стол → столе."
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Чашки на {{1}}.",
-        words: ["полка", "полки", "полке"],
-        correctAnswers: { 1: "полке" },
-        explanation: "Sostantivo femminile in -а al prepositivo: полка → полке."
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Тарелки в {{1}}.",
-        words: ["раковина", "раковины", "раковине"],
-        correctAnswers: { 1: "раковине" },
-        explanation: "Sostantivo femminile in -а al prepositivo: раковина → раковине."
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Мясо в {{1}}.",
-        words: ["холодильник", "холодильника", "холодильнике"],
-        correctAnswers: { 1: "холодильнике" },
-        explanation: "Sostantivo maschile al prepositivo: холодильник → холодильнике."
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Кот на {{1}}.",
-        words: ["диван", "дивана", "диване"],
-        correctAnswers: { 1: "диване" },
-        explanation: "Sostantivo maschile al prepositivo: диван → диване."
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Подушки на {{1}}.",
-        words: ["кровать", "кроватью", "кровати"],
-        correctAnswers: { 1: "кровати" },
-        explanation: "Sostantivo femminile (3ª declinazione, in -ь) al prepositivo: кровать → кровати. (genitivo e prepositivo coincidono per questo tipo di sostantivo, quindi il distrattore qui è lo strumentale кроватью)."
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Кастрюля на {{1}}.",
-        words: ["плита", "плиты", "плите"],
-        correctAnswers: { 1: "плите" },
-        explanation: "Sostantivo femminile in -а al prepositivo: плита → плите."
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Книги на {{1}}.",
-        words: ["полка", "полки", "полке"],
-        correctAnswers: { 1: "полке" },
-        explanation: "Sostantivo femminile in -а al prepositivo: полка → полке."
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Суп в {{1}}.",
-        words: ["кастрюля", "кастрюли", "кастрюле"],
-        correctAnswers: { 1: "кастрюле" },
-        explanation: "Sostantivo femminile in -я al prepositivo: кастрюля → кастрюле."
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Чемодан в {{1}}.",
-        words: ["комната", "комнаты", "комнате"],
-        correctAnswers: { 1: "комнате" },
-        explanation: "Sostantivo femminile in -а al prepositivo: комната → комнате."
-    }
-];
-
-// ============================================================
-// PANEL 2 — DragDrop · student
-// Sostantivo femminile (1a declinazione) al prepositivo (dopo в/на)
-// ============================================================
-const p2exercises = [
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Чай в {{1}}.",
-        words: ["чашка", "чашки", "чашке"],
-        correctAnswers: { 1: "чашке" }
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Кофе на {{1}}.",
-        words: ["полка", "полки", "полке"],
-        correctAnswers: { 1: "полке" }
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Посуда в {{1}}.",
-        words: ["раковина", "раковины", "раковине"],
+        text: "Зубная паста на {{1}}.",
+        words: ["раковине", "раковины", "раковину"],
         correctAnswers: { 1: "раковине" }
     },
     {
         instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Картина на {{1}}.",
-        words: ["стена", "стены", "стене"],
-        correctAnswers: { 1: "стене" }
+        text: "Шампунь на {{1}}.",
+        words: ["полке", "полки", "полку"],
+        correctAnswers: { 1: "полке" }
     },
     {
         instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Салат в {{1}}.",
-        words: ["тарелка", "тарелки", "тарелке"],
-        correctAnswers: { 1: "тарелке" }
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Курица в {{1}}.",
-        words: ["духовка", "духовки", "духовке"],
-        correctAnswers: { 1: "духовке" }
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Холодильник на {{1}}.",
-        words: ["кухня", "кухни", "кухне"],
-        correctAnswers: { 1: "кухне" }
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Я в {{1}}.",
-        words: ["ванна", "ванны", "ванне"],
-        correctAnswers: { 1: "ванне" }
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Игрушки в {{1}}.",
-        words: ["коробка", "коробки", "коробке"],
+        text: "Туалетная бумага в {{1}}.",
+        words: ["коробке", "коробки", "коробку"],
         correctAnswers: { 1: "коробке" }
     },
     {
         instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Ключи в {{1}}.",
-        words: ["сумка", "сумки", "сумке"],
-        correctAnswers: { 1: "сумке" }
-    }
-];
-
-// ============================================================
-// PANEL 3 — DragDrop · paid
-// Sostantivo (2a/3a declinazione) al prepositivo — inclusi i casi irregolari in -у (пол, шкаф, угол)
-// ============================================================
-const p3exercises = [
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Занавеска на {{1}}.",
-        words: ["окно", "окна", "окне"],
-        correctAnswers: { 1: "окне" }
+        text: "Бутылка воды в {{1}}.",
+        words: ["холодильнике", "холодильника", "холодильник"],
+        correctAnswers: { 1: "холодильнике" }
     },
     {
         instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Ковёр на {{1}}.",
-        words: ["пол", "поле", "полу"],
-        correctAnswers: { 1: "полу" }
+        text: "Ваза на {{1}}.",
+        words: ["столе", "стола", "стол"],
+        correctAnswers: { 1: "столе" }
     },
     {
         instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Платье в {{1}}.",
-        words: ["шкаф", "шкафе", "шкафу"],
+        text: "Кофе в {{1}}.",
+        words: ["шкафу", "шкафа", "шкаф"],
         correctAnswers: { 1: "шкафу" }
     },
     {
         instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Ключи на {{1}}.",
-        words: ["зеркало", "зеркала", "зеркале"],
-        correctAnswers: { 1: "зеркале" }
+        text: "Компьютер в {{1}}.",
+        words: ["ремонте", "ремонта", "ремонт"],
+        correctAnswers: { 1: "ремонте" }
     },
     {
         instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Кошка в {{1}}.",
-        words: ["кресло", "кресла", "кресле"],
-        correctAnswers: { 1: "кресле" }
+        text: "Полотенца на {{1}}.",
+        words: ["двери", "двери", "дверь"],
+        correctAnswers: { 1: "двери" }
     },
     {
         instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Рубашка на {{1}}.",
-        words: ["стул", "стула", "стуле"],
-        correctAnswers: { 1: "стуле" }
+        text: "Ключи в {{1}}.",
+        words: ["сумке", "сумки", "сумку"],
+        correctAnswers: { 1: "сумке" }
     },
     {
         instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Кресло в {{1}}.",
-        words: ["угол", "угле", "углу"],
-        correctAnswers: { 1: "углу" }
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Ножи в {{1}}.",
-        words: ["ящик", "ящика", "ящике"],
-        correctAnswers: { 1: "ящике" }
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Ботинки в {{1}}.",
-        words: ["коридор", "коридора", "коридоре"],
-        correctAnswers: { 1: "коридоре" }
-    },
-    {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Лампа на {{1}}.",
-        words: ["потолок", "потолка", "потолке"],
-        correctAnswers: { 1: "потолке" }
+        text: "Пульт на {{1}}.",
+        words: ["диване", "дивана", "диван"],
+        correctAnswers: { 1: "диване" }
     }
 ];
 
 // ============================================================
-// PANEL 4 — Flashcard · public
-// Aggettivo + sostantivo al prepositivo (10 frasi riprese dai pannelli 1-3, con aggettivo aggiunto)
+// PANEL 2 — DragDrop · student · "В ГОСТИНОЙ"
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Пульт на {{1}}.",
+        words: ["столике", "столика", "столик"],
+        correctAnswers: { 1: "столике" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Подушки на {{1}}.",
+        words: ["диване", "дивана", "диван"],
+        correctAnswers: { 1: "диване" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Книги на {{1}}.",
+        words: ["полке", "полки", "полку"],
+        correctAnswers: { 1: "полке" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Лампа на {{1}}.",
+        words: ["столе", "стола", "стол"],
+        correctAnswers: { 1: "столе" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Ковёр на {{1}}.",
+        words: ["полу", "пола", "пол"],
+        correctAnswers: { 1: "полу" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Ваза на {{1}}.",
+        words: ["окне", "окна", "окно"],
+        correctAnswers: { 1: "окне" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Занавеска на {{1}}.",
+        words: ["окне", "окна", "окно"],
+        correctAnswers: { 1: "окне" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Картина на {{1}}.",
+        words: ["стене", "стены", "стену"],
+        correctAnswers: { 1: "стене" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Кот на {{1}}.",
+        words: ["подоконнике", "подоконника", "подоконник"],
+        correctAnswers: { 1: "подоконнике" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Подушка на {{1}}.",
+        words: ["кресле", "кресла", "кресло"],
+        correctAnswers: { 1: "кресле" }
+    }
+];
+
+// ============================================================
+// PANEL 3 — DragDrop · paid · "НА КУХНЕ"
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Курица в {{1}}.",
+        words: ["духовке", "духовки", "духовку"],
+        correctAnswers: { 1: "духовке" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Тарелки на {{1}}.",
+        words: ["полке", "полки", "полку"],
+        correctAnswers: { 1: "полке" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Кастрюля на {{1}}.",
+        words: ["плите", "плиты", "плиту"],
+        correctAnswers: { 1: "плите" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Салатница на {{1}}.",
+        words: ["столе", "стола", "стол"],
+        correctAnswers: { 1: "столе" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Бокалы в {{1}}.",
+        words: ["шкафу", "шкафа", "шкаф"],
+        correctAnswers: { 1: "шкафу" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Мясо в {{1}}.",
+        words: ["холодильнике", "холодильника", "холодильник"],
+        correctAnswers: { 1: "холодильнике" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Чай в {{1}}.",
+        words: ["чашке", "чашки", "чашку"],
+        correctAnswers: { 1: "чашке" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Посуда в {{1}}.",
+        words: ["раковине", "раковины", "раковину"],
+        correctAnswers: { 1: "раковине" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Суп в {{1}}.",
+        words: ["кастрюле", "кастрюли", "кастрюлю"],
+        correctAnswers: { 1: "кастрюле" }
+    },
+    {
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Ножи в {{1}}.",
+        words: ["ящике", "ящика", "ящик"],
+        correctAnswers: { 1: "ящике" }
+    }
+];
+
+// ============================================================
+// PANEL 4 — Flashcard · public · ЛЕКСИКА: КУХНЯ
 // ============================================================
 const p4cards = [
-    { front: "Кот", back: "на старинном диване", explanation: "Aggettivo maschile prepositivo (старинном) + sostantivo maschile prepositivo (диване)." },
-    { front: "Курица", back: "в новой духовке", explanation: "Aggettivo femminile prepositivo (новой) + sostantivo femminile prepositivo (духовке)." },
-    { front: "Кресло", back: "в этом углу", explanation: "Dimostrativo maschile prepositivo (этом) + sostantivo maschile, locativo irregolare in -у́ (углу)." },
-    { front: "Ваза", back: "на обеденном столе", explanation: "Aggettivo maschile prepositivo (обеденном) + sostantivo maschile prepositivo (столе)." },
-    { front: "Ключи", back: "в чёрной кожаной сумке", explanation: "Due aggettivi femminili prepositivo (чёрной, кожаной) + sostantivo femminile prepositivo (сумке)." },
-    { front: "Лампа", back: "на высоком потолке", explanation: "Aggettivo maschile prepositivo (высоком) + sostantivo maschile prepositivo (потолке)." },
-    { front: "Подушки", back: "на широкой кровати", explanation: "Aggettivo femminile prepositivo (широкой) + sostantivo femminile (3ª declinazione) prepositivo (кровати)." },
-    { front: "Я", back: "в большой ванне", explanation: "Aggettivo femminile prepositivo (большой) + sostantivo femminile prepositivo (ванне)." },
-    { front: "Платье", back: "в деревянном шкафу", explanation: "Aggettivo maschile prepositivo regolare (деревянном) + sostantivo maschile, locativo irregolare in -у́ (шкафу) — le due desinenze non si assomigliano, ma il caso è lo stesso." },
-    { front: "Суп", back: "в большой кастрюле", explanation: "Aggettivo femminile prepositivo (большой) + sostantivo femminile prepositivo (кастрюле)." }
+    { front: "духовка", back: "forno" },
+    { front: "микроволновка", back: "microonde" },
+    { front: "вытяжка", back: "cappa aspirante" },
+    { front: "раковина", back: "lavandino" },
+    { front: "холодильник", back: "frigorifero" },
+    { front: "кран", back: "rubinetto" },
+    { front: "кухонный комбайн", back: "robot da cucina" },
+    { front: "плита", back: "piano cottura" },
+    { front: "тарелки", back: "piatti" },
+    { front: "ступка", back: "mortaio" }
 ];
 
 // ============================================================
-// PANEL 5 — Flashcard · student
-// 5 ripetute da panel 4 (3 maschili + 2 femminili) + 5 nuove dal pool pannelli 1-3, con aggettivo
+// PANEL 5 — Flashcard · student · ЛЕКСИКА: ГОСТИНАЯ
 // ============================================================
 const p5cards = [
-    { front: "Кот", back: "на старинном диване" },
-    { front: "Кресло", back: "в этом углу" },
-    { front: "Платье", back: "в деревянном шкафу" },
-    { front: "Курица", back: "в новой духовке" },
-    { front: "Я", back: "в большой ванне" },
-    { front: "Тарелки", back: "в кухонной раковине" },
-    { front: "Мясо", back: "в сером холодильнике" },
-    { front: "Чемодан", back: "в большой комнате" },
-    { front: "Картина", back: "на белой стене" },
-    { front: "Ножи", back: "в верхнем ящике" }
+    { front: "потолок", back: "soffitto" },
+    { front: "стенка", back: "parete attrezzata" },
+    { front: "диван", back: "divano" },
+    { front: "подушка", back: "cuscino" },
+    { front: "ковёр", back: "tappeto" },
+    { front: "занавеска", back: "tenda" },
+    { front: "лампа", back: "lampada" },
+    { front: "стул", back: "sedia" },
+    { front: "ваза", back: "vaso" },
+    { front: "окно", back: "finestra" }
 ];
 
 // ============================================================
-// PANEL 6 — Flashcard · paid
-// 5 ripetute da panel 5 (3 femminili + 2 maschili) + 5 nuove dal pool pannelli 1-3, con aggettivo
+// PANEL 6 — Flashcard · paid · ЛЕКСИКА: ВАННАЯ + РАЗНОЕ
 // ============================================================
 const p6cards = [
-    { front: "Курица", back: "в новой духовке" },
-    { front: "Я", back: "в большой ванне" },
-    { front: "Картина", back: "на белой стене" },
-    { front: "Кот", back: "на старинном диване" },
-    { front: "Ножи", back: "в верхнем ящике" },
-    { front: "Книги", back: "на книжной полке" },
-    { front: "Занавески", back: "на большом окне" },
-    { front: "Ковёр", back: "на паркетном полу" },
-    { front: "Кошка", back: "в бархатном красном кресле" },
-    { front: "Ботинки", back: "в длинном коридоре" }
+    { front: "полотенце", back: "asciugamano" },
+    { front: "зеркало", back: "specchio" },
+    { front: "мыло", back: "sapone" },
+    { front: "шампунь", back: "shampoo" },
+    { front: "зубная паста", back: "dentifricio" },
+    { front: "пульт", back: "telecomando" },
+    { front: "камин", back: "camino" },
+    { front: "картина", back: "quadro" },
+    { front: "кресло", back: "poltrona" },
+    { front: "коробка", back: "scatola" }
 ];
 
 // ============================================================
-// PANEL 7 — Flashcard · public
-// Plurale al prepositivo — oggetti distribuiti su più luoghi (semanticamente coerenti col plurale)
+// PANEL 7 — GapText · public · ПРЕДЛОГ В/НА (1)
 // ============================================================
-const p7cards = [
-    { front: "Тарелки", back: "на этих полках", explanation: "Plurale prepositivo: полка → на полках." },
-    { front: "Книги", back: "на книжных полках", explanation: "Plurale prepositivo: полка → на книжных полках." },
-    { front: "Картины", back: "в тяжёлых рамах", explanation: "Plurale prepositivo: рама → в тяжёлых рамах." },
-    { front: "Чашки", back: "в кухонных шкафах", explanation: "Plurale prepositivo: шкаф → в кухонных шкафах (al plurale l'eccezione in -у́ del singolare scompare, torna la desinenza regolare -ах)." },
-    { front: "Вилки и ножи", back: "в этих ящиках", explanation: "Plurale prepositivo: ящик → в этих ящиках." },
-    { front: "Полотенца", back: "на деревянных полках", explanation: "Plurale prepositivo: полка → на деревянных полках." },
-    { front: "Кастрюли", back: "в тех ящиках", explanation: "Plurale prepositivo: ящик → в тех ящиках." },
-    { front: "Вино", back: "в бокалах", explanation: "Plurale prepositivo: бокал → в бокалах." },
-    { front: "Рубашки", back: "на стульях", explanation: "Plurale prepositivo irregolare: стул → стулья (plurale) → на стульях (cambio di tema al plurale)." },
-    { front: "Платья", back: "на вешалках", explanation: "Plurale prepositivo: вешалка → на вешалках." }
+const p7paragraphs = [
+    "Зубная паста {{0}} раковине.",
+    "Шампунь {{1}} полке.",
+    "Бутылка воды {{2}} холодильнике.",
+    "Кофе {{3}} шкафу.",
+    "Ковёр {{4}} полу.",
+    "Книги {{5}} полке.",
+    "Подушки {{6}} диване.",
+    "Занавеска {{7}} окне.",
+    "Картина {{8}} стене.",
+    "Кастрюля {{9}} плите."
 ];
 
-// ============================================================
-// PANEL 8 — Flashcard · student
-// 4 nuove + 6 dal pool pannello 7 (in ordine misto)
-// ============================================================
-const p8cards = [
-    { front: "Посуда", back: "на кухонных полках" },
-    { front: "Книги", back: "на книжных полках" },
-    { front: "Кастрюли", back: "в нижних ящиках" },
-    { front: "Вино", back: "в хрустальных бокалах" },
-    { front: "Цветы", back: "в керамических вазах" },
-    { front: "Платья", back: "на новых вешалках" },
-    { front: "Вода", back: "в пластиковых бутылках" },
-    { front: "Чашки", back: "в кухонных шкафах" },
-    { front: "Рубашки", back: "на деревянных стульях" },
-    { front: "Картины", back: "в тяжёлых рамах" }
-];
+const p7gaps = {
+    0: { answers: ["на"] },
+    1: { answers: ["на"] },
+    2: { answers: ["в"] },
+    3: { answers: ["в"] },
+    4: { answers: ["на"] },
+    5: { answers: ["на"] },
+    6: { answers: ["на"] },
+    7: { answers: ["на"] },
+    8: { answers: ["на"] },
+    9: { answers: ["на"] }
+};
 
 // ============================================================
-// PANEL 9 — Flashcard · paid
-// 10 uniche dal pool combinato pannelli 7+8, ordine misto
+// PANEL 8 — GapText · student · ПРЕДЛОГ В/НА (2)
+// ============================================================
+const p8paragraphs = [
+    "Тарелки {{0}} раковине.",
+    "Курица {{1}} духовке.",
+    "Ваза {{2}} столе.",
+    "Мясо {{3}} холодильнике.",
+    "Суп {{4}} кастрюле.",
+    "Ключи {{5}} сумке.",
+    "Пульт {{6}} диване.",
+    "Лампа {{7}} столе.",
+    "Платье {{8}} шкафу.",
+    "Полотенца {{9}} двери."
+];
+
+const p8gaps = {
+    0: { answers: ["в"] },
+    1: { answers: ["в"] },
+    2: { answers: ["на"] },
+    3: { answers: ["в"] },
+    4: { answers: ["в"] },
+    5: { answers: ["в"] },
+    6: { answers: ["на"] },
+    7: { answers: ["на"] },
+    8: { answers: ["в"] },
+    9: { answers: ["на"] }
+};
+
+// ============================================================
+// PANEL 9 — Flashcard · paid · ИМЕНИТЕЛЬНЫЙ → ПРЕДЛОЖНЫЙ (1)
 // ============================================================
 const p9cards = [
-    { front: "Вилки и ножи", back: "в этих ящиках" },
-    { front: "Посуда", back: "на кухонных полках" },
-    { front: "Цветы", back: "в керамических вазах" },
-    { front: "Тарелки", back: "на этих полках" },
-    { front: "Вино", back: "в хрустальных бокалах" },
-    { front: "Полотенца", back: "на деревянных полках" },
-    { front: "Вода", back: "в пластиковых бутылках" },
-    { front: "Кастрюли", back: "в нижних ящиках" },
-    { front: "Рубашки", back: "на деревянных стульях" },
-    { front: "Платья", back: "на новых вешалках" }
+    { front: "старый диван", back: "на старом диване" },
+    { front: "новая духовка", back: "в новой духовке" },
+    { front: "обеденный стол", back: "на обеденном столе" },
+    { front: "чёрная сумка", back: "в чёрной сумке" },
+    { front: "высокий потолок", back: "на высоком потолке" },
+    { front: "широкая кровать", back: "на широкой кровати" },
+    { front: "деревянный шкаф", back: "в деревянном шкафу" },
+    { front: "большая кастрюля", back: "в большой кастрюле" },
+    { front: "белая стена", back: "на белой стене" },
+    { front: "паркетный пол", back: "на паркетном полу" }
 ];
 
 // ============================================================
-// PANEL 10 — Quiz misto (multiple choice + match + write) · paid
-// TODO: contenuto in attesa di materiale da PM
-// 0-(MC_END-1):          multiple choice
-// MC_END-(MATCH_END-1):  match game
-// MATCH_END onwards:     text input
+// PANEL 10 — Flashcard · public · ИМЕНИТЕЛЬНЫЙ → ПРЕДЛОЖНЫЙ (2)
 // ============================================================
-function initPanelDom10() {
-    const panel = document.getElementById('panel-dom-10');
+const p10cards = [
+    { front: "кухонная раковина", back: "в кухонной раковине" },
+    { front: "книжная полка", back: "на книжной полке" },
+    { front: "большой холодильник", back: "в большом холодильнике" },
+    { front: "журнальный столик", back: "на журнальном столике" },
+    { front: "мягкое кресло", back: "в мягком кресле" },
+    { front: "входная дверь", back: "на входной двери" },
+    { front: "большое окно", back: "на большом окне" },
+    { front: "верхний ящик", back: "в верхнем ящике" },
+    { front: "горячая плита", back: "на горячей плите" },
+    { front: "тёмный коридор", back: "в тёмном коридоре" },
+    { front: "маленькая коробка", back: "в маленькой коробке" }
+];
+
+// ============================================================
+// PANEL 11 — ImageLabel · public · КУХНЯ: НАЙДИ ПРЕДМЕТ
+// ============================================================
+const kitchenLabels = [
+    { id: 'k-01', x: 14, y: 38, answers: ['духовка'] },
+    { id: 'k-02', x: 48, y: 7,  answers: ['вытяжка'] },
+    { id: 'k-03', x: 68, y: 30, answers: ['холодильник'] },
+    { id: 'k-04', x: 42, y: 48, answers: ['плита'] },
+    { id: 'k-05', x: 38, y: 36, answers: ['раковина'] },
+    { id: 'k-06', x: 33, y: 72, answers: ['тарелки'] },
+    { id: 'k-07', x: 63, y: 47, answers: ['кухонный комбайн'] },
+    { id: 'k-08', x: 87, y: 47, answers: ['камин'] },
+    { id: 'k-09', x: 44, y: 26, answers: ['полка'] },
+    { id: 'k-10', x: 30, y: 14, answers: ['лампа'] },
+    { id: 'k-11', x: 85, y: 22, answers: ['картина', 'картины'] },
+    { id: 'k-12', x: 80, y: 60, answers: ['ваза'] },
+    { id: 'k-13', x: 76, y: 83, answers: ['ковёр', 'ковер'] },
+    { id: 'k-14', x: 30, y: 45, answers: ['салатница'] }
+];
+
+// ============================================================
+// PANEL 12 — Quiz misto · public
+// MC (10) + Match (10) + Scrivi (10) = 30 карточек
+// ============================================================
+function initPanelDom12() {
+    const panel = document.getElementById('panel-dom-12');
     if (!panel) return;
 
-    const container = panel.querySelector('#dom-10-cards-container');
-    const prevBtn   = panel.querySelector('#dom-10-deck-prev');
-    const nextBtn   = panel.querySelector('#dom-10-deck-next');
-    const counterEl = panel.querySelector('#dom-10-deck-counter');
+    const container = panel.querySelector('#dom-12-cards-container');
+    const prevBtn   = panel.querySelector('#dom-12-deck-prev');
+    const nextBtn   = panel.querySelector('#dom-12-deck-next');
+    const counterEl = panel.querySelector('#dom-12-deck-counter');
 
     let currentCard = 0;
 
     const multipleChoiceData = [
         { question: "Суп в ___.", options: ["большой кастрюле", "большая кастрюля"], answer: "большой кастрюле" },
         { question: "Тарелки в ___.", options: ["кухонной раковине", "кухонная раковина"], answer: "кухонной раковине" },
-        { question: "Чемодан в ___.", options: ["большой комнате", "большая комната"], answer: "большой комнате" },
         { question: "Лампа на ___.", options: ["высоком потолке", "высокий потолок"], answer: "высоком потолке" },
         { question: "Платье в ___.", options: ["деревянном шкафу", "деревянный шкаф"], answer: "деревянном шкафу" },
-        { question: "Мясо в ___.", options: ["сером холодильнике", "серый холодильник"], answer: "сером холодильнике" },
+        { question: "Мясо в ___.", options: ["большом холодильнике", "большой холодильник"], answer: "большом холодильнике" },
         { question: "Подушки на ___.", options: ["широкой кровати", "широкая кровать"], answer: "широкой кровати" },
-        { question: "Чашки в ___.", options: ["кухонных шкафах", "кухонные шкафы"], answer: "кухонных шкафах" },
-        { question: "Кастрюли в ___.", options: ["тех ящиках", "те ящики"], answer: "тех ящиках" },
-        { question: "Посуда на ___.", options: ["кухонных полках", "кухонные полки"], answer: "кухонных полках" }
+        { question: "Ковёр на ___.", options: ["паркетном полу", "паркетный пол"], answer: "паркетном полу" },
+        { question: "Картина на ___.", options: ["белой стене", "белая стена"], answer: "белой стене" },
+        { question: "Ключи в ___.", options: ["чёрной сумке", "чёрная сумка"], answer: "чёрной сумке" },
+        { question: "Курица в ___.", options: ["новой духовке", "новая духовка"], answer: "новой духовке" }
     ];
 
     const matchPairs = [
         { left: "Курица в новой", right: "духовке" },
-        { left: "Ключи в чёрной кожаной", right: "сумке" },
-        { left: "Я в большой", right: "ванне" },
-        { left: "Кот на старинном", right: "диване" },
+        { left: "Ключи в чёрной", right: "сумке" },
+        { left: "Кот на старом", right: "диване" },
         { left: "Ваза на обеденном", right: "столе" },
         { left: "Ножи в верхнем", right: "ящике" },
         { left: "Подушки на широкой", right: "кровати" },
-        { left: "Книги на книжных", right: "полках" },
-        { left: "Картины в тяжёлых", right: "рамах" },
-        { left: "Вино в хрустальных", right: "бокалах" }
+        { left: "Книги на книжной", right: "полке" },
+        { left: "Картина на белой", right: "стене" },
+        { left: "Ковёр на паркетном", right: "полу" },
+        { left: "Занавеска на большом", right: "окне" }
     ];
 
     const quizData = [
-        { id: "dom-001", promptPrefix: "Картина ", promptSuffix: " (белая стена).", answers: ["на белой стене"] },
-        { id: "dom-002", promptPrefix: "Чай ", promptSuffix: " (белая чашка).", answers: ["в белой чашке"] },
-        { id: "dom-003", promptPrefix: "Салат ", promptSuffix: " (глубокая тарелка).", answers: ["в глубокой тарелке"] },
-        { id: "dom-004", promptPrefix: "Кресло ", promptSuffix: " (этот угол).", answers: ["в этом углу"] },
-        { id: "dom-005", promptPrefix: "Ковёр ", promptSuffix: " (паркетный пол).", answers: ["на паркетном полу"] },
-        { id: "dom-006", promptPrefix: "Кошка ", promptSuffix: " (бархатное красное кресло).", answers: ["в бархатном красном кресле"] },
-        { id: "dom-007", promptPrefix: "Ботинки ", promptSuffix: " (длинный коридор).", answers: ["в длинном коридоре"] },
-        { id: "dom-008", promptPrefix: "Подушки ", promptSuffix: " (широкая кровать).", answers: ["на широкой кровати"] },
-        { id: "dom-009", promptPrefix: "Вилки и ножи ", promptSuffix: " (эти ящики).", answers: ["в этих ящиках"] },
-        { id: "dom-010", promptPrefix: "Цветы ", promptSuffix: " (керамические вазы).", answers: ["в керамических вазах"] }
+        { id: "dom-001", promptPrefix: "Чай ", promptSuffix: " (белая чашка).", answers: ["в белой чашке"] },
+        { id: "dom-002", promptPrefix: "Кресло ", promptSuffix: " (этот угол).", answers: ["в этом углу"] },
+        { id: "dom-003", promptPrefix: "Ковёр ", promptSuffix: " (паркетный пол).", answers: ["на паркетном полу"] },
+        { id: "dom-004", promptPrefix: "Кошка ", promptSuffix: " (мягкое кресло).", answers: ["в мягком кресле"] },
+        { id: "dom-005", promptPrefix: "Ботинки ", promptSuffix: " (тёмный коридор).", answers: ["в тёмном коридоре"] },
+        { id: "dom-006", promptPrefix: "Подушки ", promptSuffix: " (широкая кровать).", answers: ["на широкой кровати"] },
+        { id: "dom-007", promptPrefix: "Занавеска ", promptSuffix: " (большое окно).", answers: ["на большом окне"] },
+        { id: "dom-008", promptPrefix: "Суп ", promptSuffix: " (большая кастрюля).", answers: ["в большой кастрюле"] },
+        { id: "dom-009", promptPrefix: "Платье ", promptSuffix: " (деревянный шкаф).", answers: ["в деревянном шкафу"] },
+        { id: "dom-010", promptPrefix: "Картина ", promptSuffix: " (белая стена).", answers: ["на белой стене"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
@@ -398,7 +442,7 @@ function initPanelDom10() {
 
         for (let i = 0; i < TOTAL_CARDS; i++) {
             const card = document.createElement('div');
-            card.className = 'fca01-card-container dom-10-card';
+            card.className = 'fca01-card-container dom-12-card';
             card.dataset.index = i;
             if (i === 0) card.classList.add('visible');
             card.hidden = (i !== 0);
@@ -540,7 +584,7 @@ function initPanelDom10() {
     }
 
     function attachHandlers() {
-        container.querySelectorAll('.dom-10-card').forEach(card => {
+        container.querySelectorAll('.dom-12-card').forEach(card => {
             const cardIndex = parseInt(card.dataset.index, 10);
             if (cardIndex >= MC_END) return;
 
@@ -601,7 +645,7 @@ function initPanelDom10() {
 
         container.querySelectorAll('.quiz-check-btn').forEach(btn => {
             btn.addEventListener('click', function() {
-                const card    = this.closest('.dom-10-card');
+                const card    = this.closest('.dom-11-card');
                 const idx     = parseInt(card.dataset.index) - MATCH_END;
                 const item    = quizData[idx];
                 const input   = card.querySelector('.quiz-input');
@@ -636,7 +680,7 @@ function initPanelDom10() {
 
     function showCard(idx) {
         currentCard = idx;
-        container.querySelectorAll('.dom-10-card').forEach((c, i) => {
+        container.querySelectorAll('.dom-12-card').forEach((c, i) => {
             c.classList.toggle('visible', i === idx);
             c.hidden = (i !== idx);
         });
@@ -656,16 +700,18 @@ function initPanelDom10() {
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-dom-1':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-01',    exercises: p1exercises }),
-    'panel-dom-2':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-02',    exercises: p2exercises }),
-    'panel-dom-3':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-03',    exercises: p3exercises }),
+    'panel-dom-1':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-01', exercises: p1exercises }),
+    'panel-dom-2':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-02', exercises: p2exercises }),
+    'panel-dom-3':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-03', exercises: p3exercises }),
     'panel-dom-4':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-04', cards: p4cards }),
     'panel-dom-5':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-05', cards: p5cards }),
     'panel-dom-6':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-06', cards: p6cards }),
-    'panel-dom-7':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-07', cards: p7cards }),
-    'panel-dom-8':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-08', cards: p8cards }),
+    'panel-dom-7':  () => new GapTextExercise({ rootId: 'ex-gaptext-dom-07', paragraphs: p7paragraphs, gaps: p7gaps, showHints: false }),
+    'panel-dom-8':  () => new GapTextExercise({ rootId: 'ex-gaptext-dom-08', paragraphs: p8paragraphs, gaps: p8gaps, showHints: false }),
     'panel-dom-9':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-09', cards: p9cards }),
-    'panel-dom-10': () => initPanelDom10()
+    'panel-dom-10': () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-10', cards: p10cards }),
+    'panel-dom-11': () => new ImageLabelExercise({ rootId: 'ex-imagelabel-dom-11', image: './img/kitchen.jpg', labels: kitchenLabels }),
+    'panel-dom-12': () => initPanelDom12()
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
