@@ -3,57 +3,111 @@ import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public · МЕБЕЛЬ И ДОМ
+// PANEL 1 — DragDrop · public · МЕБЕЛЬ
 // ============================================================
 const p1exercises = [
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
         text: "la parete = {{1}}, la finestra = {{2}}, il letto = {{3}}, la lampada = {{4}}",
-        words: ["стена", "окно", "кровать", "лампа", "диван"],
+        words: ["стена", "окно", "кровать", "лампа", "вилка"],
         correctAnswers: { 1: "стена", 2: "окно", 3: "кровать", 4: "лампа" }
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
         text: "il divano = {{1}}, la poltrona = {{2}}, il tavolo = {{3}}, l'armadio = {{4}}",
-        words: ["диван", "кресло", "стол", "шкаф", "стул"],
+        words: ["диван", "кресло", "стол", "шкаф", "чемодан"],
         correctAnswers: { 1: "диван", 2: "кресло", 3: "стол", 4: "шкаф" }
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "la porta = {{1}}, la sedia = {{2}}, lo specchio = {{3}}, le chiavi = {{4}}",
-        words: ["дверь", "стул", "зеркало", "ключи", "чемодан"],
-        correctAnswers: { 1: "дверь", 2: "стул", 3: "зеркало", 4: "ключи" }
+        text: "la porta = {{1}}, la sedia = {{2}}, lo specchio = {{3}}",
+        words: ["дверь", "стул", "зеркало", "ложка"],
+        correctAnswers: { 1: "дверь", 2: "стул", 3: "зеркало" }
     }
 ];
 
 // ============================================================
-// PANEL 2 — DragDrop · student · ПРЕДМЕТЫ
+// PANEL 2 — DragDrop · student · КУХНЯ
 // ============================================================
 const p2exercises = [
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "la valigia = {{1}}, il telefono = {{2}}, l'orologio = {{3}}, la forchetta = {{4}}",
-        words: ["чемодан", "телефон", "часы", "вилка", "кастрюля"],
-        correctAnswers: { 1: "чемодан", 2: "телефон", 3: "часы", 4: "вилка" }
+        text: "la forchetta = {{1}}, la pentola = {{2}}, la padella = {{3}}, il cucchiaio = {{4}}",
+        words: ["вилка", "кастрюля", "сковорода", "ложка", "стул"],
+        correctAnswers: { 1: "вилка", 2: "кастрюля", 3: "сковорода", 4: "ложка" }
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "la pentola = {{1}}, la padella = {{2}}, la borsa = {{3}}, lo zaino = {{4}}",
-        words: ["кастрюля", "сковорода", "сумка", "рюкзак", "ложка"],
-        correctAnswers: { 1: "кастрюля", 2: "сковорода", 3: "сумка", 4: "рюкзак" }
-    },
-    {
-        instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "il cucchiaio = {{1}}, il coltello = {{2}}, il piatto = {{3}}, la tazza = {{4}}",
-        words: ["ложка", "нож", "тарелка", "чашка", "стена"],
-        correctAnswers: { 1: "ложка", 2: "нож", 3: "тарелка", 4: "чашка" }
+        text: "il coltello = {{1}}, il piatto = {{2}}, la tazza = {{3}}",
+        words: ["нож", "тарелка", "чашка", "зеркало"],
+        correctAnswers: { 1: "нож", 2: "тарелка", 3: "чашка" }
     }
 ];
 
 // ============================================================
-// PANEL 3 — Flashcards · public · ЛЕКСИКА: ДОМ И ПРЕДМЕТЫ
+// PANEL 3 — DragDrop · paid · ВЕЩИ И АКСЕССУАРЫ
 // ============================================================
-const p3cards = [
+const p3exercises = [
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "le chiavi = {{1}}, la valigia = {{2}}, il telefono = {{3}}",
+        words: ["ключи", "чемодан", "телефон", "кровать"],
+        correctAnswers: { 1: "ключи", 2: "чемодан", 3: "телефон" }
+    },
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "l'orologio = {{1}}, la borsa = {{2}}, lo zaino = {{3}}",
+        words: ["часы", "сумка", "рюкзак", "шкаф"],
+        correctAnswers: { 1: "часы", 2: "сумка", 3: "рюкзак" }
+    }
+];
+
+// ============================================================
+// PANEL 4 — Flashcards · public · ЛЕКСИКА: МЕБЕЛЬ
+// ============================================================
+const p4cards = [
+    { front: "la parete", back: "стена" },
+    { front: "la finestra", back: "окно" },
+    { front: "il letto", back: "кровать" },
+    { front: "la lampada", back: "лампа" },
+    { front: "il divano", back: "диван" },
+    { front: "la poltrona", back: "кресло" },
+    { front: "il tavolo", back: "стол" },
+    { front: "l'armadio", back: "шкаф" },
+    { front: "la porta", back: "дверь" },
+    { front: "la sedia", back: "стул" },
+    { front: "lo specchio", back: "зеркало" }
+];
+
+// ============================================================
+// PANEL 5 — Flashcards · student · ЛЕКСИКА: КУХНЯ
+// ============================================================
+const p5cards = [
+    { front: "la forchetta", back: "вилка" },
+    { front: "la pentola", back: "кастрюля" },
+    { front: "la padella", back: "сковорода" },
+    { front: "il cucchiaio", back: "ложка" },
+    { front: "il coltello", back: "нож" },
+    { front: "il piatto", back: "тарелка" },
+    { front: "la tazza", back: "чашка" }
+];
+
+// ============================================================
+// PANEL 6 — Flashcards · paid · ЛЕКСИКА: ВЕЩИ
+// ============================================================
+const p6cards = [
+    { front: "le chiavi", back: "ключи" },
+    { front: "la valigia", back: "чемодан" },
+    { front: "il telefono", back: "телефон" },
+    { front: "l'orologio", back: "часы" },
+    { front: "la borsa", back: "сумка" },
+    { front: "lo zaino", back: "рюкзак" }
+];
+
+// ============================================================
+// PANEL 7 — Flashcards · paid · ЛЕКСИКА: ВСЁ ВМЕСТЕ
+// ============================================================
+const p7cards = [
     { front: "la parete", back: "стена" },
     { front: "la finestra", back: "окно" },
     { front: "il letto", back: "кровать" },
@@ -65,33 +119,33 @@ const p3cards = [
     { front: "la porta", back: "дверь" },
     { front: "la sedia", back: "стул" },
     { front: "lo specchio", back: "зеркало" },
+    { front: "la forchetta", back: "вилка" },
+    { front: "la pentola", back: "кастрюля" },
+    { front: "la padella", back: "сковорода" },
+    { front: "il cucchiaio", back: "ложка" },
+    { front: "il coltello", back: "нож" },
+    { front: "il piatto", back: "тарелка" },
+    { front: "la tazza", back: "чашка" },
     { front: "le chiavi", back: "ключи" },
     { front: "la valigia", back: "чемодан" },
     { front: "il telefono", back: "телефон" },
     { front: "l'orologio", back: "часы" },
-    { front: "la forchetta", back: "вилка" },
-    { front: "la pentola", back: "кастрюля" },
-    { front: "la padella", back: "сковорода" },
     { front: "la borsa", back: "сумка" },
-    { front: "lo zaino", back: "рюкзак" },
-    { front: "il cucchiaio", back: "ложка" },
-    { front: "il coltello", back: "нож" },
-    { front: "il piatto", back: "тарелка" },
-    { front: "la tazza", back: "чашка" }
+    { front: "lo zaino", back: "рюкзак" }
 ];
 
 // ============================================================
-// PANEL 4 — Quiz misto · student
-// MC (6) + Match (6) + Scrivi (6) = 18
+// PANEL 8 — Quiz misto · public
+// MC (8) + Match (8) + Scrivi (8) = 24
 // ============================================================
-function initPanelCas4() {
-    const panel = document.getElementById('panel-cas-4');
+function initPanelCas8() {
+    const panel = document.getElementById('panel-cas-8');
     if (!panel) return;
 
-    const container = panel.querySelector('#cas-4-cards-container');
-    const prevBtn   = panel.querySelector('#cas-4-deck-prev');
-    const nextBtn   = panel.querySelector('#cas-4-deck-next');
-    const counterEl = panel.querySelector('#cas-4-deck-counter');
+    const container = panel.querySelector('#cas-8-cards-container');
+    const prevBtn   = panel.querySelector('#cas-8-deck-prev');
+    const nextBtn   = panel.querySelector('#cas-8-deck-next');
+    const counterEl = panel.querySelector('#cas-8-deck-counter');
 
     let currentCard = 0;
 
@@ -101,7 +155,9 @@ function initPanelCas4() {
         { question: "Come si dice 'la pentola' in russo?", options: ["кастрюля", "сковорода", "тарелка"], answer: "кастрюля" },
         { question: "Come si dice 'l'orologio' in russo?", options: ["часы", "телефон", "ключи"], answer: "часы" },
         { question: "Come si dice 'la poltrona' in russo?", options: ["кресло", "диван", "стул"], answer: "кресло" },
-        { question: "Come si dice 'lo zaino' in russo?", options: ["рюкзак", "сумка", "чемодан"], answer: "рюкзак" }
+        { question: "Come si dice 'lo zaino' in russo?", options: ["рюкзак", "сумка", "чемодан"], answer: "рюкзак" },
+        { question: "Come si dice 'la tazza' in russo?", options: ["чашка", "тарелка", "ложка"], answer: "чашка" },
+        { question: "Come si dice 'la lampada' in russo?", options: ["лампа", "стена", "зеркало"], answer: "лампа" }
     ];
 
     const matchPairs = [
@@ -110,16 +166,20 @@ function initPanelCas4() {
         { left: "l'armadio", right: "шкаф" },
         { left: "la forchetta", right: "вилка" },
         { left: "il coltello", right: "нож" },
-        { left: "la tazza", right: "чашка" }
+        { left: "la borsa", right: "сумка" },
+        { left: "il divano", right: "диван" },
+        { left: "il piatto", right: "тарелка" }
     ];
 
     const quizData = [
-        { id: "cas-001", promptPrefix: "il divano = ", promptSuffix: "", answers: ["диван"] },
-        { id: "cas-002", promptPrefix: "la porta = ", promptSuffix: "", answers: ["дверь"] },
+        { id: "cas-001", promptPrefix: "la porta = ", promptSuffix: "", answers: ["дверь"] },
+        { id: "cas-002", promptPrefix: "il tavolo = ", promptSuffix: "", answers: ["стол"] },
         { id: "cas-003", promptPrefix: "la valigia = ", promptSuffix: "", answers: ["чемодан"] },
         { id: "cas-004", promptPrefix: "la padella = ", promptSuffix: "", answers: ["сковорода"] },
         { id: "cas-005", promptPrefix: "il cucchiaio = ", promptSuffix: "", answers: ["ложка"] },
-        { id: "cas-006", promptPrefix: "il piatto = ", promptSuffix: "", answers: ["тарелка"] }
+        { id: "cas-006", promptPrefix: "il telefono = ", promptSuffix: "", answers: ["телефон"] },
+        { id: "cas-007", promptPrefix: "la sedia = ", promptSuffix: "", answers: ["стул"] },
+        { id: "cas-008", promptPrefix: "le chiavi = ", promptSuffix: "", answers: ["ключи"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
@@ -228,8 +288,12 @@ function initPanelCas4() {
 const initializers = {
     'panel-cas-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-cas-01', exercises: p1exercises }),
     'panel-cas-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-cas-02', exercises: p2exercises }),
-    'panel-cas-3': () => new FlashcardExercise({ rootId: 'ex-flashcards-cas-03', cards: p3cards }),
-    'panel-cas-4': () => initPanelCas4(),
+    'panel-cas-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-cas-03', exercises: p3exercises }),
+    'panel-cas-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-cas-04', cards: p4cards }),
+    'panel-cas-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-cas-05', cards: p5cards }),
+    'panel-cas-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-cas-06', cards: p6cards }),
+    'panel-cas-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-cas-07', cards: p7cards }),
+    'panel-cas-8': () => initPanelCas8(),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });

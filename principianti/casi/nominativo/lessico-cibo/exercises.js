@@ -3,7 +3,7 @@ import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public · ФРУКТЫ И ОВОЩИ
+// PANEL 1 — DragDrop · public · ФРУКТЫ И ЯГОДЫ
 // ============================================================
 const p1exercises = [
     {
@@ -17,19 +17,19 @@ const p1exercises = [
         text: "la banana = {{1}}, la prugna = {{2}}, il mirtillo = {{3}}, il lampone = {{4}}",
         words: ["банан", "слива", "черника", "малина", "арбуз"],
         correctAnswers: { 1: "банан", 2: "слива", 3: "черника", 4: "малина" }
-    },
+    }
+];
+
+// ============================================================
+// PANEL 2 — DragDrop · student · ОВОЩИ
+// ============================================================
+const p2exercises = [
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
         text: "la melanzana = {{1}}, la patata = {{2}}, la cipolla = {{3}}, la carota = {{4}}",
         words: ["баклажан", "картошка", "лук", "морковь", "чеснок"],
         correctAnswers: { 1: "баклажан", 2: "картошка", 3: "лук", 4: "морковь" }
-    }
-];
-
-// ============================================================
-// PANEL 2 — DragDrop · student · ОВОЩИ И ПРОДУКТЫ
-// ============================================================
-const p2exercises = [
+    },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
         text: "l'aglio = {{1}}, i piselli = {{2}}, il cavolo = {{3}}, il peperone = {{4}}",
@@ -38,69 +38,120 @@ const p2exercises = [
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "la zucchina = {{1}}, il pomodoro = {{2}}, il sedano = {{3}}, la carne = {{4}}",
-        words: ["кабачок", "помидор", "сельдерей", "мясо", "рыба"],
-        correctAnswers: { 1: "кабачок", 2: "помидор", 3: "сельдерей", 4: "мясо" }
-    },
-    {
-        instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "il pesce = {{1}}, il latte = {{2}}, il formaggio = {{3}}, il pane = {{4}}",
-        words: ["рыба", "молоко", "сыр", "хлеб", "яйца"],
-        correctAnswers: { 1: "рыба", 2: "молоко", 3: "сыр", 4: "хлеб" }
-    },
-    {
-        instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "le uova = {{1}}, il burro = {{2}}, l'olio = {{3}}",
-        words: ["яйца", "масло (сливочное)", "масло (растительное)", "молоко"],
-        correctAnswers: { 1: "яйца", 2: "масло (сливочное)", 3: "масло (растительное)" }
+        text: "la zucchina = {{1}}, il pomodoro = {{2}}, il sedano = {{3}}",
+        words: ["кабачок", "помидор", "сельдерей", "морковь"],
+        correctAnswers: { 1: "кабачок", 2: "помидор", 3: "сельдерей" }
     }
 ];
 
 // ============================================================
-// PANEL 3 — Flashcards · public · ЛЕКСИКА: ВСЯ ЕДА
+// PANEL 3 — DragDrop · paid · ПРОДУКТЫ
 // ============================================================
-const p3cards = [
+const p3exercises = [
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "la carne = {{1}}, il pesce = {{2}}, il latte = {{3}}, il formaggio = {{4}}",
+        words: ["мясо", "рыба", "молоко", "сыр", "хлеб"],
+        correctAnswers: { 1: "мясо", 2: "рыба", 3: "молоко", 4: "сыр" }
+    },
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "il pane = {{1}}, le uova = {{2}}, il burro = {{3}}, l'olio = {{4}}",
+        words: ["хлеб", "яйца", "масло (сливочное)", "масло (растительное)", "мясо"],
+        correctAnswers: { 1: "хлеб", 2: "яйца", 3: "масло (сливочное)", 4: "масло (растительное)" }
+    }
+];
+
+// ============================================================
+// PANEL 4 — Flashcards · public · ЛЕКСИКА: ФРУКТЫ И ЯГОДЫ
+// ============================================================
+const p4cards = [
     { front: "l'arancia", back: "апельсин" },
     { front: "l'anguria", back: "арбуз" },
-    { front: "la melanzana", back: "баклажан" },
     { front: "la pera", back: "груша" },
+    { front: "la mela", back: "яблоко" },
+    { front: "la banana", back: "банан" },
+    { front: "la prugna", back: "слива" },
+    { front: "il mirtillo", back: "черника" },
+    { front: "il lampone", back: "малина" }
+];
+
+// ============================================================
+// PANEL 5 — Flashcards · student · ЛЕКСИКА: ОВОЩИ
+// ============================================================
+const p5cards = [
+    { front: "la melanzana", back: "баклажан" },
     { front: "la patata", back: "картошка" },
     { front: "la cipolla", back: "лук" },
     { front: "la carota", back: "морковь" },
-    { front: "la mela", back: "яблоко" },
-    { front: "la carne", back: "мясо" },
-    { front: "il pesce", back: "рыба" },
-    { front: "la prugna", back: "слива" },
-    { front: "il mirtillo", back: "черника" },
     { front: "l'aglio", back: "чеснок" },
-    { front: "la banana", back: "банан" },
     { front: "i piselli", back: "горошек" },
     { front: "il cavolo", back: "капуста" },
-    { front: "il latte", back: "молоко" },
     { front: "il peperone", back: "перец" },
     { front: "la zucchina", back: "кабачок" },
     { front: "il pomodoro", back: "помидор" },
-    { front: "il sedano", back: "сельдерей" },
+    { front: "il sedano", back: "сельдерей" }
+];
+
+// ============================================================
+// PANEL 6 — Flashcards · paid · ЛЕКСИКА: ПРОДУКТЫ
+// ============================================================
+const p6cards = [
+    { front: "la carne", back: "мясо" },
+    { front: "il pesce", back: "рыба" },
+    { front: "il latte", back: "молоко" },
     { front: "il formaggio", back: "сыр" },
     { front: "il pane", back: "хлеб" },
     { front: "le uova", back: "яйца" },
-    { front: "il lampone", back: "малина" },
     { front: "il burro", back: "масло (сливочное)" },
     { front: "l'olio", back: "масло (растительное)" }
 ];
 
 // ============================================================
-// PANEL 4 — Quiz misto · student
-// MC (6) + Match (8) + Scrivi (6) = 20
+// PANEL 7 — Flashcards · paid · ЛЕКСИКА: ВСЯ ЕДА
 // ============================================================
-function initPanelCib4() {
-    const panel = document.getElementById('panel-cib-4');
+const p7cards = [
+    { front: "l'arancia", back: "апельсин" },
+    { front: "l'anguria", back: "арбуз" },
+    { front: "la pera", back: "груша" },
+    { front: "la mela", back: "яблоко" },
+    { front: "la banana", back: "банан" },
+    { front: "la prugna", back: "слива" },
+    { front: "il mirtillo", back: "черника" },
+    { front: "il lampone", back: "малина" },
+    { front: "la melanzana", back: "баклажан" },
+    { front: "la patata", back: "картошка" },
+    { front: "la cipolla", back: "лук" },
+    { front: "la carota", back: "морковь" },
+    { front: "l'aglio", back: "чеснок" },
+    { front: "i piselli", back: "горошек" },
+    { front: "il cavolo", back: "капуста" },
+    { front: "il peperone", back: "перец" },
+    { front: "la zucchina", back: "кабачок" },
+    { front: "il pomodoro", back: "помидор" },
+    { front: "il sedano", back: "сельдерей" },
+    { front: "la carne", back: "мясо" },
+    { front: "il pesce", back: "рыба" },
+    { front: "il latte", back: "молоко" },
+    { front: "il formaggio", back: "сыр" },
+    { front: "il pane", back: "хлеб" },
+    { front: "le uova", back: "яйца" },
+    { front: "il burro", back: "масло (сливочное)" },
+    { front: "l'olio", back: "масло (растительное)" }
+];
+
+// ============================================================
+// PANEL 8 — Quiz misto · public
+// MC (8) + Match (8) + Scrivi (8) = 24
+// ============================================================
+function initPanelCib8() {
+    const panel = document.getElementById('panel-cib-8');
     if (!panel) return;
 
-    const container = panel.querySelector('#cib-4-cards-container');
-    const prevBtn   = panel.querySelector('#cib-4-deck-prev');
-    const nextBtn   = panel.querySelector('#cib-4-deck-next');
-    const counterEl = panel.querySelector('#cib-4-deck-counter');
+    const container = panel.querySelector('#cib-8-cards-container');
+    const prevBtn   = panel.querySelector('#cib-8-deck-prev');
+    const nextBtn   = panel.querySelector('#cib-8-deck-next');
+    const counterEl = panel.querySelector('#cib-8-deck-counter');
 
     let currentCard = 0;
 
@@ -108,9 +159,11 @@ function initPanelCib4() {
         { question: "Come si dice 'l'arancia' in russo?", options: ["апельсин", "банан", "яблоко"], answer: "апельсин" },
         { question: "Come si dice 'la carota' in russo?", options: ["морковь", "картошка", "лук"], answer: "морковь" },
         { question: "Come si dice 'il formaggio' in russo?", options: ["сыр", "хлеб", "молоко"], answer: "сыр" },
-        { question: "Come si dice 'il pesce' in russo?", options: ["рыба", "мясо", "сыр"], answer: "рыба" },
+        { question: "Come si dice 'il mirtillo' in russo?", options: ["черника", "малина", "слива"], answer: "черника" },
         { question: "Come si dice 'il pomodoro' in russo?", options: ["помидор", "перец", "баклажан"], answer: "помидор" },
-        { question: "Come si dice 'l'anguria' in russo?", options: ["арбуз", "груша", "слива"], answer: "арбуз" }
+        { question: "Come si dice 'il pesce' in russo?", options: ["рыба", "мясо", "сыр"], answer: "рыба" },
+        { question: "Come si dice 'l'anguria' in russo?", options: ["арбуз", "груша", "слива"], answer: "арбуз" },
+        { question: "Come si dice 'il cavolo' in russo?", options: ["капуста", "кабачок", "сельдерей"], answer: "капуста" }
     ];
 
     const matchPairs = [
@@ -119,7 +172,7 @@ function initPanelCib4() {
         { left: "la pera", right: "груша" },
         { left: "la carne", right: "мясо" },
         { left: "il pane", right: "хлеб" },
-        { left: "il cavolo", right: "капуста" },
+        { left: "il lampone", right: "малина" },
         { left: "il latte", right: "молоко" },
         { left: "la prugna", right: "слива" }
     ];
@@ -130,7 +183,9 @@ function initPanelCib4() {
         { id: "cib-003", promptPrefix: "l'aglio = ", promptSuffix: "", answers: ["чеснок"] },
         { id: "cib-004", promptPrefix: "le uova = ", promptSuffix: "", answers: ["яйца"] },
         { id: "cib-005", promptPrefix: "il burro = ", promptSuffix: "", answers: ["масло (сливочное)", "масло"] },
-        { id: "cib-006", promptPrefix: "la zucchina = ", promptSuffix: "", answers: ["кабачок"] }
+        { id: "cib-006", promptPrefix: "la zucchina = ", promptSuffix: "", answers: ["кабачок"] },
+        { id: "cib-007", promptPrefix: "l'olio = ", promptSuffix: "", answers: ["масло (растительное)", "масло"] },
+        { id: "cib-008", promptPrefix: "il peperone = ", promptSuffix: "", answers: ["перец"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
@@ -239,8 +294,12 @@ function initPanelCib4() {
 const initializers = {
     'panel-cib-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-cib-01', exercises: p1exercises }),
     'panel-cib-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-cib-02', exercises: p2exercises }),
-    'panel-cib-3': () => new FlashcardExercise({ rootId: 'ex-flashcards-cib-03', cards: p3cards }),
-    'panel-cib-4': () => initPanelCib4(),
+    'panel-cib-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-cib-03', exercises: p3exercises }),
+    'panel-cib-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-cib-04', cards: p4cards }),
+    'panel-cib-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-cib-05', cards: p5cards }),
+    'panel-cib-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-cib-06', cards: p6cards }),
+    'panel-cib-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-cib-07', cards: p7cards }),
+    'panel-cib-8': () => initPanelCib8(),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });

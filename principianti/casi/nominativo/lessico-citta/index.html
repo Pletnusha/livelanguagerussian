@@ -44,11 +44,11 @@
     <main class="exercises-section">
 
         <!-- ============================================================ -->
-        <!-- Panel 1 (public) — DragDrop · Город и транспорт -->
+        <!-- Panel 1 (public) — DragDrop · Город -->
         <!-- ============================================================ -->
         <article class="exercise-card" data-status="open" data-target="panel-cit-1">
             <span class="exercise-type">Drag &amp; Drop</span>
-            <h3 class="exercise-title">ГОРОД И ТРАНСПОРТ</h3>
+            <h3 class="exercise-title">ГОРОД</h3>
         </article>
 
         <div class="exercise-panel" id="panel-cit-1" data-access="public" hidden>
@@ -59,17 +59,47 @@
         </div>
 
         <!-- ============================================================ -->
-        <!-- Panel 2 (student) — Flashcards · Город и транспорт -->
+        <!-- Panel 2 (student) — DragDrop · Транспорт -->
         <!-- ============================================================ -->
         <article class="exercise-card" data-status="open" data-target="panel-cit-2">
-            <span class="exercise-type">Flashcards</span>
-            <h3 class="exercise-title">ЛЕКСИКА: ГОРОД И ТРАНСПОРТ</h3>
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">ТРАНСПОРТ</h3>
         </article>
 
         <div class="exercise-panel" id="panel-cit-2" data-access="student" hidden>
-            <section id="ex-flashcards-cit-02">
+            <div id="ex-dragdrop-cit-02" class="universal-dd">
+                <div id="ex-dragdrop-cit-02-container"></div>
+                <div id="ex-dragdrop-cit-02-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 (paid) — DragDrop · Всё вместе -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-cit-3">
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">ВСЁ ВМЕСТЕ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-cit-3" data-access="paid" hidden>
+            <div id="ex-dragdrop-cit-03" class="universal-dd">
+                <div id="ex-dragdrop-cit-03-container"></div>
+                <div id="ex-dragdrop-cit-03-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 4 (public) — Flashcards · Места -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-cit-4">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">ЛЕКСИКА: МЕСТА</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-cit-4" data-access="public" hidden>
+            <section id="ex-flashcards-cit-04">
                 <div class="fca01-header">
-                    <h2>Лексика: город и транспорт</h2>
+                    <h2>Лексика: места</h2>
                     <p>Scegliere modalità</p>
                 </div>
 
@@ -79,46 +109,184 @@
                     <button class="fca01-mode-btn" data-mode="match">MATCH</button>
                 </div>
 
-                <div id="ex-flashcards-cit-02-section-study" class="fca01-section visible">
-                    <div id="ex-flashcards-cit-02-learning-area-study"></div>
+                <div id="ex-flashcards-cit-04-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-cit-04-learning-area-study"></div>
                     <div class="fca01-nav">
-                        <button id="ex-flashcards-cit-02-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
-                        <span id="ex-flashcards-cit-02-counter" class="fca01-counter">1 / 1</span>
-                        <button id="ex-flashcards-cit-02-next-btn" class="btn btn-primary">AVANTI →</button>
+                        <button id="ex-flashcards-cit-04-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-cit-04-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-cit-04-next-btn" class="btn btn-primary">AVANTI →</button>
                     </div>
                 </div>
 
-                <div id="ex-flashcards-cit-02-section-quiz" class="fca01-section">
-                    <div id="ex-flashcards-cit-02-learning-area-quiz"></div>
+                <div id="ex-flashcards-cit-04-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-cit-04-learning-area-quiz"></div>
                     <div class="fca01-center-btn">
-                        <button id="ex-flashcards-cit-02-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                        <button id="ex-flashcards-cit-04-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
                     </div>
                 </div>
 
-                <div id="ex-flashcards-cit-02-section-match" class="fca01-section">
-                    <div id="ex-flashcards-cit-02-learning-area-match"></div>
+                <div id="ex-flashcards-cit-04-section-match" class="fca01-section">
+                    <div id="ex-flashcards-cit-04-learning-area-match"></div>
                     <div class="fca01-center-btn">
-                        <button id="ex-flashcards-cit-02-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                        <button id="ex-flashcards-cit-04-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
                     </div>
                 </div>
             </section>
         </div>
 
         <!-- ============================================================ -->
-        <!-- Panel 3 (public) — Quiz misto (MC + Match + Scrivi = 15) -->
+        <!-- Panel 5 (student) — Flashcards · Город -->
         <!-- ============================================================ -->
-        <article class="exercise-card" data-status="open" data-target="panel-cit-3">
+        <article class="exercise-card" data-status="open" data-target="panel-cit-5">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">ЛЕКСИКА: ГОРОД</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-cit-5" data-access="student" hidden>
+            <section id="ex-flashcards-cit-05">
+                <div class="fca01-header">
+                    <h2>Лексика: город</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+
+                <div id="ex-flashcards-cit-05-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-cit-05-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-cit-05-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-cit-05-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-cit-05-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-cit-05-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-cit-05-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-cit-05-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-cit-05-section-match" class="fca01-section">
+                    <div id="ex-flashcards-cit-05-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-cit-05-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 6 (student) — Flashcards · Транспорт -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-cit-6">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">ЛЕКСИКА: ТРАНСПОРТ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-cit-6" data-access="student" hidden>
+            <section id="ex-flashcards-cit-06">
+                <div class="fca01-header">
+                    <h2>Лексика: транспорт</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+
+                <div id="ex-flashcards-cit-06-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-cit-06-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-cit-06-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-cit-06-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-cit-06-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-cit-06-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-cit-06-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-cit-06-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-cit-06-section-match" class="fca01-section">
+                    <div id="ex-flashcards-cit-06-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-cit-06-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 7 (paid) — Flashcards · Всё вместе -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-cit-7">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">ЛЕКСИКА: ВСЁ ВМЕСТЕ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-cit-7" data-access="paid" hidden>
+            <section id="ex-flashcards-cit-07">
+                <div class="fca01-header">
+                    <h2>Лексика: всё вместе</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+
+                <div id="ex-flashcards-cit-07-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-cit-07-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-cit-07-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-cit-07-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-cit-07-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-cit-07-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-cit-07-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-cit-07-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-cit-07-section-match" class="fca01-section">
+                    <div id="ex-flashcards-cit-07-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-cit-07-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 8 (public) — Quiz misto (MC 6 + Match 6 + Scrivi 4 = 16) -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-cit-8">
             <span class="exercise-type">Quiz</span>
             <h3 class="exercise-title">ТЕСТ</h3>
         </article>
 
-        <div class="exercise-panel" id="panel-cit-3" data-access="public" hidden>
-            <section id="cit-3-deck" class="universal-dd">
-                <div id="cit-3-cards-container"></div>
+        <div class="exercise-panel" id="panel-cit-8" data-access="public" hidden>
+            <section id="cit-8-deck" class="universal-dd">
+                <div id="cit-8-cards-container"></div>
                 <div class="fca01-nav">
-                    <button id="cit-3-deck-prev" class="fca01-btn-nav" disabled>← INDIETRO</button>
-                    <span id="cit-3-deck-counter" class="fca01-counter">1 / 1</span>
-                    <button id="cit-3-deck-next" class="btn btn-primary">AVANTI →</button>
+                    <button id="cit-8-deck-prev" class="fca01-btn-nav" disabled>← INDIETRO</button>
+                    <span id="cit-8-deck-counter" class="fca01-counter">1 / 1</span>
+                    <button id="cit-8-deck-next" class="btn btn-primary">AVANTI →</button>
                 </div>
             </section>
         </div>
