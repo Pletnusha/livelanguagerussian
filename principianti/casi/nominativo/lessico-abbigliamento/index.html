@@ -44,11 +44,11 @@
     <main class="exercises-section">
 
         <!-- ============================================================ -->
-        <!-- Panel 1 (public) — DragDrop · Одежда -->
+        <!-- Panel 1 (public) — DragDrop · Лёгкая одежда -->
         <!-- ============================================================ -->
         <article class="exercise-card" data-status="open" data-target="panel-abb-1">
             <span class="exercise-type">Drag &amp; Drop</span>
-            <h3 class="exercise-title">ОДЕЖДА</h3>
+            <h3 class="exercise-title">ЛЁГКАЯ ОДЕЖДА</h3>
         </article>
 
         <div class="exercise-panel" id="panel-abb-1" data-access="public" hidden>
@@ -59,17 +59,32 @@
         </div>
 
         <!-- ============================================================ -->
-        <!-- Panel 2 (student) — Flashcards · Одежда -->
+        <!-- Panel 2 (student) — DragDrop · Верхняя одежда -->
         <!-- ============================================================ -->
         <article class="exercise-card" data-status="open" data-target="panel-abb-2">
-            <span class="exercise-type">Flashcards</span>
-            <h3 class="exercise-title">ЛЕКСИКА: ОДЕЖДА</h3>
+            <span class="exercise-type">Drag &amp; Drop</span>
+            <h3 class="exercise-title">ВЕРХНЯЯ ОДЕЖДА</h3>
         </article>
 
         <div class="exercise-panel" id="panel-abb-2" data-access="student" hidden>
-            <section id="ex-flashcards-abb-02">
+            <div id="ex-dragdrop-abb-02" class="universal-dd">
+                <div id="ex-dragdrop-abb-02-container"></div>
+                <div id="ex-dragdrop-abb-02-completion" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 (public) — Flashcards · Лёгкая одежда -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-abb-3">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">ЛЕКСИКА: ЛЁГКАЯ ОДЕЖДА</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-abb-3" data-access="public" hidden>
+            <section id="ex-flashcards-abb-03">
                 <div class="fca01-header">
-                    <h2>Лексика: одежда</h2>
+                    <h2>Лексика: лёгкая одежда</h2>
                     <p>Scegliere modalità</p>
                 </div>
 
@@ -79,46 +94,92 @@
                     <button class="fca01-mode-btn" data-mode="match">MATCH</button>
                 </div>
 
-                <div id="ex-flashcards-abb-02-section-study" class="fca01-section visible">
-                    <div id="ex-flashcards-abb-02-learning-area-study"></div>
+                <div id="ex-flashcards-abb-03-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-abb-03-learning-area-study"></div>
                     <div class="fca01-nav">
-                        <button id="ex-flashcards-abb-02-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
-                        <span id="ex-flashcards-abb-02-counter" class="fca01-counter">1 / 1</span>
-                        <button id="ex-flashcards-abb-02-next-btn" class="btn btn-primary">AVANTI →</button>
+                        <button id="ex-flashcards-abb-03-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-abb-03-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-abb-03-next-btn" class="btn btn-primary">AVANTI →</button>
                     </div>
                 </div>
 
-                <div id="ex-flashcards-abb-02-section-quiz" class="fca01-section">
-                    <div id="ex-flashcards-abb-02-learning-area-quiz"></div>
+                <div id="ex-flashcards-abb-03-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-abb-03-learning-area-quiz"></div>
                     <div class="fca01-center-btn">
-                        <button id="ex-flashcards-abb-02-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                        <button id="ex-flashcards-abb-03-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
                     </div>
                 </div>
 
-                <div id="ex-flashcards-abb-02-section-match" class="fca01-section">
-                    <div id="ex-flashcards-abb-02-learning-area-match"></div>
+                <div id="ex-flashcards-abb-03-section-match" class="fca01-section">
+                    <div id="ex-flashcards-abb-03-learning-area-match"></div>
                     <div class="fca01-center-btn">
-                        <button id="ex-flashcards-abb-02-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                        <button id="ex-flashcards-abb-03-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
                     </div>
                 </div>
             </section>
         </div>
 
         <!-- ============================================================ -->
-        <!-- Panel 3 (public) — Quiz misto (MC + Match + Scrivi = 12) -->
+        <!-- Panel 4 (student) — Flashcards · Верхняя одежда -->
         <!-- ============================================================ -->
-        <article class="exercise-card" data-status="open" data-target="panel-abb-3">
+        <article class="exercise-card" data-status="open" data-target="panel-abb-4">
+            <span class="exercise-type">Flashcards</span>
+            <h3 class="exercise-title">ЛЕКСИКА: ВЕРХНЯЯ ОДЕЖДА</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-abb-4" data-access="student" hidden>
+            <section id="ex-flashcards-abb-04">
+                <div class="fca01-header">
+                    <h2>Лексика: верхняя одежда</h2>
+                    <p>Scegliere modalità</p>
+                </div>
+
+                <div class="fca01-mode-buttons">
+                    <button class="fca01-mode-btn active" data-mode="study">ESPLORARE</button>
+                    <button class="fca01-mode-btn" data-mode="quiz">QUIZ</button>
+                    <button class="fca01-mode-btn" data-mode="match">MATCH</button>
+                </div>
+
+                <div id="ex-flashcards-abb-04-section-study" class="fca01-section visible">
+                    <div id="ex-flashcards-abb-04-learning-area-study"></div>
+                    <div class="fca01-nav">
+                        <button id="ex-flashcards-abb-04-prev-btn" class="fca01-btn-nav">← INDIETRO</button>
+                        <span id="ex-flashcards-abb-04-counter" class="fca01-counter">1 / 1</span>
+                        <button id="ex-flashcards-abb-04-next-btn" class="btn btn-primary">AVANTI →</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-abb-04-section-quiz" class="fca01-section">
+                    <div id="ex-flashcards-abb-04-learning-area-quiz"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-abb-04-start-quiz-btn" class="btn btn-primary hidden">Nuova domanda</button>
+                    </div>
+                </div>
+
+                <div id="ex-flashcards-abb-04-section-match" class="fca01-section">
+                    <div id="ex-flashcards-abb-04-learning-area-match"></div>
+                    <div class="fca01-center-btn">
+                        <button id="ex-flashcards-abb-04-reset-match-btn" class="btn btn-secondary">Ricomincia</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 5 (public) — Quiz misto (MC + Match + Scrivi = 12) -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="open" data-target="panel-abb-5">
             <span class="exercise-type">Quiz</span>
             <h3 class="exercise-title">ТЕСТ</h3>
         </article>
 
-        <div class="exercise-panel" id="panel-abb-3" data-access="public" hidden>
-            <section id="abb-3-deck" class="universal-dd">
-                <div id="abb-3-cards-container"></div>
+        <div class="exercise-panel" id="panel-abb-5" data-access="public" hidden>
+            <section id="abb-5-deck" class="universal-dd">
+                <div id="abb-5-cards-container"></div>
                 <div class="fca01-nav">
-                    <button id="abb-3-deck-prev" class="fca01-btn-nav" disabled>← INDIETRO</button>
-                    <span id="abb-3-deck-counter" class="fca01-counter">1 / 1</span>
-                    <button id="abb-3-deck-next" class="btn btn-primary">AVANTI →</button>
+                    <button id="abb-5-deck-prev" class="fca01-btn-nav" disabled>← INDIETRO</button>
+                    <span id="abb-5-deck-counter" class="fca01-counter">1 / 1</span>
+                    <button id="abb-5-deck-next" class="btn btn-primary">AVANTI →</button>
                 </div>
             </section>
         </div>

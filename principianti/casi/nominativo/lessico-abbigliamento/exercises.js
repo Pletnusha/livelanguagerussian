@@ -3,81 +3,99 @@ import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public · ОДЕЖДА
+// PANEL 1 — DragDrop · public · ЛЁГКАЯ ОДЕЖДА
 // ============================================================
 const p1exercises = [
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "la maglietta = {{1}}, il vestito = {{2}}, la gonna = {{3}}, la sciarpa = {{4}}",
-        words: ["футболка", "платье", "юбка", "шарф", "ботинки"],
-        correctAnswers: { 1: "футболка", 2: "платье", 3: "юбка", 4: "шарф" }
+        text: "la maglietta = {{1}}, il vestito = {{2}}, la gonna = {{3}}",
+        words: ["футболка", "платье", "юбка", "рубашка"],
+        correctAnswers: { 1: "футболка", 2: "платье", 3: "юбка" }
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "gli stivali = {{1}}, la camicia = {{2}}, il maglione = {{3}}, la giacca = {{4}}",
-        words: ["ботинки", "рубашка", "свитер", "пиджак", "брюки"],
-        correctAnswers: { 1: "ботинки", 2: "рубашка", 3: "свитер", 4: "пиджак" }
-    },
-    {
-        instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "i pantaloni = {{1}}, il berretto = {{2}}, il cappotto = {{3}}, il giubbotto = {{4}}",
-        words: ["брюки", "шапка", "пальто", "куртка", "платье"],
-        correctAnswers: { 1: "брюки", 2: "шапка", 3: "пальто", 4: "куртка" }
+        text: "la camicia = {{1}}, i pantaloni = {{2}}, la sciarpa = {{3}}",
+        words: ["рубашка", "брюки", "шарф", "юбка"],
+        correctAnswers: { 1: "рубашка", 2: "брюки", 3: "шарф" }
     }
 ];
 
 // ============================================================
-// PANEL 2 — Flashcards · student · ЛЕКСИКА: ОДЕЖДА
+// PANEL 2 — DragDrop · student · ВЕРХНЯЯ ОДЕЖДА
 // ============================================================
-const p2cards = [
+const p2exercises = [
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "la giacca = {{1}}, il maglione = {{2}}, gli stivali = {{3}}",
+        words: ["пиджак", "свитер", "ботинки", "шапка"],
+        correctAnswers: { 1: "пиджак", 2: "свитер", 3: "ботинки" }
+    },
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "il berretto = {{1}}, il cappotto = {{2}}, il giubbotto = {{3}}",
+        words: ["шапка", "пальто", "куртка", "пиджак"],
+        correctAnswers: { 1: "шапка", 2: "пальто", 3: "куртка" }
+    }
+];
+
+// ============================================================
+// PANEL 3 — Flashcards · public · ЛЕКСИКА: ЛЁГКАЯ ОДЕЖДА
+// ============================================================
+const p3cards = [
     { front: "la maglietta", back: "футболка" },
     { front: "il vestito", back: "платье" },
     { front: "la gonna", back: "юбка" },
-    { front: "la sciarpa", back: "шарф" },
-    { front: "gli stivali", back: "ботинки" },
     { front: "la camicia", back: "рубашка" },
-    { front: "il maglione", back: "свитер" },
-    { front: "la giacca", back: "пиджак" },
     { front: "i pantaloni", back: "брюки" },
+    { front: "la sciarpa", back: "шарф" }
+];
+
+// ============================================================
+// PANEL 4 — Flashcards · student · ЛЕКСИКА: ВЕРХНЯЯ ОДЕЖДА
+// ============================================================
+const p4cards = [
+    { front: "la giacca", back: "пиджак" },
+    { front: "il maglione", back: "свитер" },
+    { front: "gli stivali", back: "ботинки" },
     { front: "il berretto", back: "шапка" },
     { front: "il cappotto", back: "пальто" },
     { front: "il giubbotto", back: "куртка" }
 ];
 
 // ============================================================
-// PANEL 3 — Quiz misto · public
+// PANEL 5 — Quiz misto · public
 // MC (4) + Match (4) + Scrivi (4) = 12
 // ============================================================
-function initPanelAbb3() {
-    const panel = document.getElementById('panel-abb-3');
+function initPanelAbb5() {
+    const panel = document.getElementById('panel-abb-5');
     if (!panel) return;
 
-    const container = panel.querySelector('#abb-3-cards-container');
-    const prevBtn   = panel.querySelector('#abb-3-deck-prev');
-    const nextBtn   = panel.querySelector('#abb-3-deck-next');
-    const counterEl = panel.querySelector('#abb-3-deck-counter');
+    const container = panel.querySelector('#abb-5-cards-container');
+    const prevBtn   = panel.querySelector('#abb-5-deck-prev');
+    const nextBtn   = panel.querySelector('#abb-5-deck-next');
+    const counterEl = panel.querySelector('#abb-5-deck-counter');
 
     let currentCard = 0;
 
     const multipleChoiceData = [
         { question: "Come si dice 'la maglietta' in russo?", options: ["футболка", "рубашка", "куртка"], answer: "футболка" },
-        { question: "Come si dice 'il vestito' in russo?", options: ["платье", "юбка", "пальто"], answer: "платье" },
         { question: "Come si dice 'gli stivali' in russo?", options: ["ботинки", "брюки", "шапка"], answer: "ботинки" },
-        { question: "Come si dice 'la giacca' in russo?", options: ["пиджак", "свитер", "куртка"], answer: "пиджак" }
+        { question: "Come si dice 'il cappotto' in russo?", options: ["пальто", "пиджак", "свитер"], answer: "пальто" },
+        { question: "Come si dice 'la gonna' in russo?", options: ["юбка", "платье", "шарф"], answer: "юбка" }
     ];
 
     const matchPairs = [
-        { left: "la gonna", right: "юбка" },
-        { left: "la sciarpa", right: "шарф" },
+        { left: "il vestito", right: "платье" },
         { left: "la camicia", right: "рубашка" },
-        { left: "il maglione", right: "свитер" }
+        { left: "il maglione", right: "свитер" },
+        { left: "il giubbotto", right: "куртка" }
     ];
 
     const quizData = [
         { id: "abb-001", promptPrefix: "i pantaloni = ", promptSuffix: "", answers: ["брюки"] },
-        { id: "abb-002", promptPrefix: "il berretto = ", promptSuffix: "", answers: ["шапка"] },
-        { id: "abb-003", promptPrefix: "il cappotto = ", promptSuffix: "", answers: ["пальто"] },
-        { id: "abb-004", promptPrefix: "il giubbotto = ", promptSuffix: "", answers: ["куртка"] }
+        { id: "abb-002", promptPrefix: "la sciarpa = ", promptSuffix: "", answers: ["шарф"] },
+        { id: "abb-003", promptPrefix: "la giacca = ", promptSuffix: "", answers: ["пиджак"] },
+        { id: "abb-004", promptPrefix: "il berretto = ", promptSuffix: "", answers: ["шапка"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
@@ -185,8 +203,10 @@ function initPanelAbb3() {
 // ============================================================
 const initializers = {
     'panel-abb-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-abb-01', exercises: p1exercises }),
-    'panel-abb-2': () => new FlashcardExercise({ rootId: 'ex-flashcards-abb-02', cards: p2cards }),
-    'panel-abb-3': () => initPanelAbb3(),
+    'panel-abb-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-abb-02', exercises: p2exercises }),
+    'panel-abb-3': () => new FlashcardExercise({ rootId: 'ex-flashcards-abb-03', cards: p3cards }),
+    'panel-abb-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-abb-04', cards: p4cards }),
+    'panel-abb-5': () => initPanelAbb5(),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
