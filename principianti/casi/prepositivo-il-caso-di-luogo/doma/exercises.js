@@ -1,11 +1,10 @@
 import DragDropExercise from '/assets/js/engines/DragDropExercise.js';
 import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import GapTextExercise from '/assets/js/engines/GapTextExercise.js';
-import ImageLabelExercise from '/assets/js/engines/ImageLabelExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public · "В ВАННОЙ / ПОЛОЖЕНИЕ"
+// PANEL 1 — DragDrop · public · "ГДЕ У ТЕБЯ..."
 // Предложный падеж — дистракторы: родительный + винительный
 // ============================================================
 const p1exercises = [
@@ -204,57 +203,9 @@ const p3exercises = [
 ];
 
 // ============================================================
-// PANEL 4 — Flashcard · public · ЛЕКСИКА: КУХНЯ
+// PANEL 4 — GapText · public · ПРЕДЛОГ В/НА (1)
 // ============================================================
-const p4cards = [
-    { front: "духовка", back: "forno" },
-    { front: "микроволновка", back: "microonde" },
-    { front: "вытяжка", back: "cappa aspirante" },
-    { front: "раковина", back: "lavandino" },
-    { front: "холодильник", back: "frigorifero" },
-    { front: "кран", back: "rubinetto" },
-    { front: "кухонный комбайн", back: "robot da cucina" },
-    { front: "плита", back: "piano cottura" },
-    { front: "тарелки", back: "piatti" },
-    { front: "ступка", back: "mortaio" }
-];
-
-// ============================================================
-// PANEL 5 — Flashcard · student · ЛЕКСИКА: ГОСТИНАЯ
-// ============================================================
-const p5cards = [
-    { front: "потолок", back: "soffitto" },
-    { front: "стенка", back: "parete attrezzata" },
-    { front: "диван", back: "divano" },
-    { front: "подушка", back: "cuscino" },
-    { front: "ковёр", back: "tappeto" },
-    { front: "занавеска", back: "tenda" },
-    { front: "лампа", back: "lampada" },
-    { front: "стул", back: "sedia" },
-    { front: "ваза", back: "vaso" },
-    { front: "окно", back: "finestra" }
-];
-
-// ============================================================
-// PANEL 6 — Flashcard · paid · ЛЕКСИКА: ВАННАЯ + РАЗНОЕ
-// ============================================================
-const p6cards = [
-    { front: "полотенце", back: "asciugamano" },
-    { front: "зеркало", back: "specchio" },
-    { front: "мыло", back: "sapone" },
-    { front: "шампунь", back: "shampoo" },
-    { front: "зубная паста", back: "dentifricio" },
-    { front: "пульт", back: "telecomando" },
-    { front: "камин", back: "camino" },
-    { front: "картина", back: "quadro" },
-    { front: "кресло", back: "poltrona" },
-    { front: "коробка", back: "scatola" }
-];
-
-// ============================================================
-// PANEL 7 — GapText · public · ПРЕДЛОГ В/НА (1)
-// ============================================================
-const p7paragraphs = [
+const p4paragraphs = [
     "Зубная паста {{0}} раковине.",
     "Шампунь {{1}} полке.",
     "Бутылка воды {{2}} холодильнике.",
@@ -267,7 +218,7 @@ const p7paragraphs = [
     "Кастрюля {{9}} плите."
 ];
 
-const p7gaps = {
+const p4gaps = {
     0: { answers: ["на"] },
     1: { answers: ["на"] },
     2: { answers: ["в"] },
@@ -281,9 +232,9 @@ const p7gaps = {
 };
 
 // ============================================================
-// PANEL 8 — GapText · student · ПРЕДЛОГ В/НА (2)
+// PANEL 5 — GapText · student · ПРЕДЛОГ В/НА (2)
 // ============================================================
-const p8paragraphs = [
+const p5paragraphs = [
     "Тарелки {{0}} раковине.",
     "Курица {{1}} духовке.",
     "Ваза {{2}} столе.",
@@ -296,7 +247,7 @@ const p8paragraphs = [
     "Полотенца {{9}} двери."
 ];
 
-const p8gaps = {
+const p5gaps = {
     0: { answers: ["в"] },
     1: { answers: ["в"] },
     2: { answers: ["на"] },
@@ -310,9 +261,9 @@ const p8gaps = {
 };
 
 // ============================================================
-// PANEL 9 — Flashcard · paid · ИМЕНИТЕЛЬНЫЙ → ПРЕДЛОЖНЫЙ (1)
+// PANEL 6 — Flashcard · paid · ИМЕНИТЕЛЬНЫЙ → ПРЕДЛОЖНЫЙ (1)
 // ============================================================
-const p9cards = [
+const p6cards = [
     { front: "старый диван", back: "на старом диване" },
     { front: "новая духовка", back: "в новой духовке" },
     { front: "обеденный стол", back: "на обеденном столе" },
@@ -326,9 +277,9 @@ const p9cards = [
 ];
 
 // ============================================================
-// PANEL 10 — Flashcard · public · ИМЕНИТЕЛЬНЫЙ → ПРЕДЛОЖНЫЙ (2)
+// PANEL 7 — Flashcard · public · ИМЕНИТЕЛЬНЫЙ → ПРЕДЛОЖНЫЙ (2)
 // ============================================================
-const p10cards = [
+const p7cards = [
     { front: "кухонная раковина", back: "в кухонной раковине" },
     { front: "книжная полка", back: "на книжной полке" },
     { front: "большой холодильник", back: "в большом холодильнике" },
@@ -343,37 +294,17 @@ const p10cards = [
 ];
 
 // ============================================================
-// PANEL 11 — ImageLabel · public · КУХНЯ: НАЙДИ ПРЕДМЕТ
-// ============================================================
-const kitchenLabels = [
-    { id: 'k-01', x: 14, y: 38, answers: ['духовка'] },
-    { id: 'k-02', x: 48, y: 7,  answers: ['вытяжка'] },
-    { id: 'k-03', x: 68, y: 30, answers: ['холодильник'] },
-    { id: 'k-04', x: 42, y: 48, answers: ['плита'] },
-    { id: 'k-05', x: 38, y: 36, answers: ['раковина'] },
-    { id: 'k-06', x: 33, y: 72, answers: ['тарелки'] },
-    { id: 'k-07', x: 63, y: 47, answers: ['кухонный комбайн'] },
-    { id: 'k-08', x: 87, y: 47, answers: ['камин'] },
-    { id: 'k-09', x: 44, y: 26, answers: ['полка'] },
-    { id: 'k-10', x: 30, y: 14, answers: ['лампа'] },
-    { id: 'k-11', x: 85, y: 22, answers: ['картина', 'картины'] },
-    { id: 'k-12', x: 80, y: 60, answers: ['ваза'] },
-    { id: 'k-13', x: 76, y: 83, answers: ['ковёр', 'ковер'] },
-    { id: 'k-14', x: 30, y: 45, answers: ['салатница'] }
-];
-
-// ============================================================
-// PANEL 12 — Quiz misto · public
+// PANEL 8 — Quiz misto · public
 // MC (10) + Match (10) + Scrivi (10) = 30 карточек
 // ============================================================
-function initPanelDom12() {
-    const panel = document.getElementById('panel-dom-12');
+function initPanelDom8() {
+    const panel = document.getElementById('panel-dom-8');
     if (!panel) return;
 
-    const container = panel.querySelector('#dom-12-cards-container');
-    const prevBtn   = panel.querySelector('#dom-12-deck-prev');
-    const nextBtn   = panel.querySelector('#dom-12-deck-next');
-    const counterEl = panel.querySelector('#dom-12-deck-counter');
+    const container = panel.querySelector('#dom-8-cards-container');
+    const prevBtn   = panel.querySelector('#dom-8-deck-prev');
+    const nextBtn   = panel.querySelector('#dom-8-deck-next');
+    const counterEl = panel.querySelector('#dom-8-deck-counter');
 
     let currentCard = 0;
 
@@ -442,7 +373,7 @@ function initPanelDom12() {
 
         for (let i = 0; i < TOTAL_CARDS; i++) {
             const card = document.createElement('div');
-            card.className = 'fca01-card-container dom-12-card';
+            card.className = 'fca01-card-container dom-8-card';
             card.dataset.index = i;
             if (i === 0) card.classList.add('visible');
             card.hidden = (i !== 0);
@@ -584,7 +515,7 @@ function initPanelDom12() {
     }
 
     function attachHandlers() {
-        container.querySelectorAll('.dom-12-card').forEach(card => {
+        container.querySelectorAll('.dom-8-card').forEach(card => {
             const cardIndex = parseInt(card.dataset.index, 10);
             if (cardIndex >= MC_END) return;
 
@@ -645,7 +576,7 @@ function initPanelDom12() {
 
         container.querySelectorAll('.quiz-check-btn').forEach(btn => {
             btn.addEventListener('click', function() {
-                const card    = this.closest('.dom-11-card');
+                const card    = this.closest('.dom-8-card');
                 const idx     = parseInt(card.dataset.index) - MATCH_END;
                 const item    = quizData[idx];
                 const input   = card.querySelector('.quiz-input');
@@ -680,7 +611,7 @@ function initPanelDom12() {
 
     function showCard(idx) {
         currentCard = idx;
-        container.querySelectorAll('.dom-12-card').forEach((c, i) => {
+        container.querySelectorAll('.dom-8-card').forEach((c, i) => {
             c.classList.toggle('visible', i === idx);
             c.hidden = (i !== idx);
         });
@@ -700,18 +631,14 @@ function initPanelDom12() {
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-dom-1':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-01', exercises: p1exercises }),
-    'panel-dom-2':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-02', exercises: p2exercises }),
-    'panel-dom-3':  () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-03', exercises: p3exercises }),
-    'panel-dom-4':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-04', cards: p4cards }),
-    'panel-dom-5':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-05', cards: p5cards }),
-    'panel-dom-6':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-06', cards: p6cards }),
-    'panel-dom-7':  () => new GapTextExercise({ rootId: 'ex-gaptext-dom-07', paragraphs: p7paragraphs, gaps: p7gaps, showHints: false }),
-    'panel-dom-8':  () => new GapTextExercise({ rootId: 'ex-gaptext-dom-08', paragraphs: p8paragraphs, gaps: p8gaps, showHints: false }),
-    'panel-dom-9':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-09', cards: p9cards }),
-    'panel-dom-10': () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-10', cards: p10cards }),
-    'panel-dom-11': () => new ImageLabelExercise({ rootId: 'ex-imagelabel-dom-11', image: './img/kitchen.jpg', labels: kitchenLabels }),
-    'panel-dom-12': () => initPanelDom12()
+    'panel-dom-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-01', exercises: p1exercises }),
+    'panel-dom-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-02', exercises: p2exercises }),
+    'panel-dom-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dom-03', exercises: p3exercises }),
+    'panel-dom-4': () => new GapTextExercise({ rootId: 'ex-gaptext-dom-04', paragraphs: p4paragraphs, gaps: p4gaps, showHints: false }),
+    'panel-dom-5': () => new GapTextExercise({ rootId: 'ex-gaptext-dom-05', paragraphs: p5paragraphs, gaps: p5gaps, showHints: false }),
+    'panel-dom-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-06', cards: p6cards }),
+    'panel-dom-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-07', cards: p7cards }),
+    'panel-dom-8': () => initPanelDom8()
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
