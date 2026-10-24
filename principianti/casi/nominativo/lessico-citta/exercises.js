@@ -69,13 +69,19 @@ const p3exercises = [
 ];
 
 // ============================================================
-// PANEL 4 — Flashcards · public · ЛЕКСИКА: ГОРОД
+// PANEL 4 — Flashcards · public · ЛЕКСИКА: МЕСТА
 // ============================================================
 const p4cards = [
     { front: "il mercato", back: "рынок" },
     { front: "il negozio", back: "магазин" },
     { front: "la banca", back: "банк" },
-    { front: "la stazione", back: "вокзал" },
+    { front: "la stazione", back: "вокзал" }
+];
+
+// ============================================================
+// PANEL 5 — Flashcards · student · ЛЕКСИКА: ГОРОД
+// ============================================================
+const p5cards = [
     { front: "la farmacia", back: "аптека" },
     { front: "la piazza", back: "площадь" },
     { front: "il parco", back: "парк" },
@@ -83,31 +89,9 @@ const p4cards = [
 ];
 
 // ============================================================
-// PANEL 5 — Flashcards · student · ЛЕКСИКА: ТРАНСПОРТ
-// ============================================================
-const p5cards = [
-    { front: "l'autobus", back: "автобус" },
-    { front: "il treno", back: "поезд" },
-    { front: "l'aereo", back: "самолёт" },
-    { front: "la macchina", back: "машина" },
-    { front: "il tram", back: "трамвай" },
-    { front: "i pattini a rotelle", back: "ролики" },
-    { front: "la bicicletta", back: "велосипед" },
-    { front: "il monopattino", back: "самокат" }
-];
-
-// ============================================================
-// PANEL 6 — Flashcards · paid · ЛЕКСИКА: ВСЁ ВМЕСТЕ
+// PANEL 6 — Flashcards · student · ЛЕКСИКА: ТРАНСПОРТ
 // ============================================================
 const p6cards = [
-    { front: "il mercato", back: "рынок" },
-    { front: "il negozio", back: "магазин" },
-    { front: "la banca", back: "банк" },
-    { front: "la stazione", back: "вокзал" },
-    { front: "la farmacia", back: "аптека" },
-    { front: "la piazza", back: "площадь" },
-    { front: "il parco", back: "парк" },
-    { front: "la strada", back: "улица" },
     { front: "l'autobus", back: "автобус" },
     { front: "il treno", back: "поезд" },
     { front: "l'aereo", back: "самолёт" },
@@ -119,7 +103,7 @@ const p6cards = [
 ];
 
 // ============================================================
-// PANEL 7 — Flashcards · paid · ЛЕКСИКА: ВСЯ ЛЕКСИКА
+// PANEL 7 — Flashcards · paid · ЛЕКСИКА: ВСЁ ВМЕСТЕ
 // ============================================================
 const p7cards = [
     { front: "il mercato", back: "рынок" },
