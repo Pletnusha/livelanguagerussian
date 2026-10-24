@@ -1,6 +1,7 @@
 import DragDropExercise from '/assets/js/engines/DragDropExercise.js';
 import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import GapTextExercise from '/assets/js/engines/GapTextExercise.js';
+import ImageLabelExercise from '/assets/js/engines/ImageLabelExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
@@ -342,17 +343,37 @@ const p10cards = [
 ];
 
 // ============================================================
-// PANEL 11 — Quiz misto · public
+// PANEL 11 — ImageLabel · public · КУХНЯ: НАЙДИ ПРЕДМЕТ
+// ============================================================
+const kitchenLabels = [
+    { id: 'k-01', x: 14, y: 38, answers: ['духовка'] },
+    { id: 'k-02', x: 48, y: 7,  answers: ['вытяжка'] },
+    { id: 'k-03', x: 68, y: 30, answers: ['холодильник'] },
+    { id: 'k-04', x: 42, y: 48, answers: ['плита'] },
+    { id: 'k-05', x: 38, y: 36, answers: ['раковина'] },
+    { id: 'k-06', x: 33, y: 72, answers: ['тарелки'] },
+    { id: 'k-07', x: 63, y: 47, answers: ['кухонный комбайн'] },
+    { id: 'k-08', x: 87, y: 47, answers: ['камин'] },
+    { id: 'k-09', x: 44, y: 26, answers: ['полка'] },
+    { id: 'k-10', x: 30, y: 14, answers: ['лампа'] },
+    { id: 'k-11', x: 85, y: 22, answers: ['картина', 'картины'] },
+    { id: 'k-12', x: 80, y: 60, answers: ['ваза'] },
+    { id: 'k-13', x: 76, y: 83, answers: ['ковёр', 'ковер'] },
+    { id: 'k-14', x: 30, y: 45, answers: ['салатница'] }
+];
+
+// ============================================================
+// PANEL 12 — Quiz misto · public
 // MC (10) + Match (10) + Scrivi (10) = 30 карточек
 // ============================================================
-function initPanelDom11() {
-    const panel = document.getElementById('panel-dom-11');
+function initPanelDom12() {
+    const panel = document.getElementById('panel-dom-12');
     if (!panel) return;
 
-    const container = panel.querySelector('#dom-11-cards-container');
-    const prevBtn   = panel.querySelector('#dom-11-deck-prev');
-    const nextBtn   = panel.querySelector('#dom-11-deck-next');
-    const counterEl = panel.querySelector('#dom-11-deck-counter');
+    const container = panel.querySelector('#dom-12-cards-container');
+    const prevBtn   = panel.querySelector('#dom-12-deck-prev');
+    const nextBtn   = panel.querySelector('#dom-12-deck-next');
+    const counterEl = panel.querySelector('#dom-12-deck-counter');
 
     let currentCard = 0;
 
@@ -421,7 +442,7 @@ function initPanelDom11() {
 
         for (let i = 0; i < TOTAL_CARDS; i++) {
             const card = document.createElement('div');
-            card.className = 'fca01-card-container dom-11-card';
+            card.className = 'fca01-card-container dom-12-card';
             card.dataset.index = i;
             if (i === 0) card.classList.add('visible');
             card.hidden = (i !== 0);
@@ -563,7 +584,7 @@ function initPanelDom11() {
     }
 
     function attachHandlers() {
-        container.querySelectorAll('.dom-11-card').forEach(card => {
+        container.querySelectorAll('.dom-12-card').forEach(card => {
             const cardIndex = parseInt(card.dataset.index, 10);
             if (cardIndex >= MC_END) return;
 
@@ -659,7 +680,7 @@ function initPanelDom11() {
 
     function showCard(idx) {
         currentCard = idx;
-        container.querySelectorAll('.dom-11-card').forEach((c, i) => {
+        container.querySelectorAll('.dom-12-card').forEach((c, i) => {
             c.classList.toggle('visible', i === idx);
             c.hidden = (i !== idx);
         });
@@ -689,7 +710,8 @@ const initializers = {
     'panel-dom-8':  () => new GapTextExercise({ rootId: 'ex-gaptext-dom-08', paragraphs: p8paragraphs, gaps: p8gaps, showHints: false }),
     'panel-dom-9':  () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-09', cards: p9cards }),
     'panel-dom-10': () => new FlashcardExercise({ rootId: 'ex-flashcards-dom-10', cards: p10cards }),
-    'panel-dom-11': () => initPanelDom11()
+    'panel-dom-11': () => new ImageLabelExercise({ rootId: 'ex-imagelabel-dom-11', image: './img/kitchen.jpg', labels: kitchenLabels }),
+    'panel-dom-12': () => initPanelDom12()
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
