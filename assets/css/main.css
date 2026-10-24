@@ -1189,6 +1189,77 @@ h1, h2, h3 {
   margin: 0 4px;
 }
 
+/* ===== Quiz deck navigation (fam-7, etc.) ===== */
+.universal-dd .fca01-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 1.5rem auto 0;
+}
+
+.universal-dd .fca01-btn-nav {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  min-width: 120px;
+  flex: 0 0 auto;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.universal-dd .fca01-btn-nav:hover {
+  background: #f8f8f8;
+  border-color: #2a5bd7;
+}
+
+.universal-dd .fca01-btn-nav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.universal-dd .fca01-nav .btn.btn-primary {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  min-width: 140px;
+  flex: 0 0 auto;
+  background: #2a5bd7;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.universal-dd .fca01-nav .btn.btn-primary:hover {
+  background: #1e4bb8;
+  transform: translateY(-1px);
+}
+
+.universal-dd .fca01-counter {
+  color: #333;
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+
 /* Wider input for prepositivo quiz (long locative answers) */
 [id^="panel-neg-"] .quiz-input {
   width: min(320px, 80vw);
