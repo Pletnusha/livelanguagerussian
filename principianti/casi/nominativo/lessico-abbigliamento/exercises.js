@@ -42,12 +42,12 @@ const p2exercises = [
 // PANEL 3 — Flashcards · public · ЛЕКСИКА: ЛЁГКАЯ ОДЕЖДА
 // ============================================================
 const p3cards = [
-    { front: "la maglietta", back: "футболка" },
-    { front: "il vestito", back: "платье" },
-    { front: "la gonna", back: "юбка" },
-    { front: "la camicia", back: "рубашка" },
-    { front: "i pantaloni", back: "брюки", frontImg: "/principianti/casi/nominativo/lessico-abbigliamento/img/bryuki.png" },
-    { front: "la sciarpa", back: "шарф" }
+    { front: "la maglietta", back: "футболка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/futbolka.png" },
+    { front: "il vestito", back: "платье", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/platye.png" },
+    { front: "la gonna", back: "юбка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/юбка.png" },
+    { front: "la camicia", back: "рубашка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/rubashka.png" },
+    { front: "i pantaloni", back: "брюки", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/БОЮКАИ.png" },
+    { front: "la sciarpa", back: "шарф", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/ШАРФ.png" }
 ];
 
 // ============================================================
@@ -55,10 +55,10 @@ const p3cards = [
 // ============================================================
 const p4cards = [
     { front: "la giacca", back: "пиджак", frontImg: "/principianti/casi/nominativo/lessico-abbigliamento/img/pidzhak.png" },
-    { front: "il maglione", back: "свитер" },
-    { front: "gli stivali", back: "ботинки", frontImg: "/principianti/casi/nominativo/lessico-abbigliamento/img/botinki.png" },
-    { front: "il berretto", back: "шапка" },
-    { front: "il cappotto", back: "пальто", frontImg: "/principianti/casi/nominativo/lessico-abbigliamento/img/palto.png" },
+    { front: "il maglione", back: "свитер", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/sviter.png" },
+    { front: "gli stivali", back: "ботинки", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/БОТИНКИ.png" },
+    { front: "il berretto", back: "шапка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/shapka.png" },
+    { front: "il cappotto", back: "пальто", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/пальто.png" },
     { front: "il giubbotto", back: "куртка", frontImg: "/principianti/casi/nominativo/lessico-abbigliamento/img/kurtka.png" }
 ];
 
