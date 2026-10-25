@@ -72,56 +72,56 @@ const p3exercises = [
 // PANEL 4 — Flashcards · public · ЛЕКСИКА: МЕСТА
 // ============================================================
 const p4cards = [
-    { front: "il mercato", back: "рынок" },
-    { front: "il negozio", back: "магазин" },
-    { front: "la banca", back: "банк" },
-    { front: "la stazione", back: "вокзал" }
+    { front: "il mercato", back: "рынок", frontImg: "/assets/img/principianti/vocaboli/citta/РЫНОК.png" },
+    { front: "il negozio", back: "магазин", frontImg: "/assets/img/principianti/vocaboli/citta/МАГАЗИН.png" },
+    { front: "la banca", back: "банк", frontImg: "/assets/img/principianti/vocaboli/citta/БАНК.png" },
+    { front: "la stazione", back: "вокзал", frontImg: "/assets/img/principianti/vocaboli/citta/ВОКЗАЛ.png" }
 ];
 
 // ============================================================
 // PANEL 5 — Flashcards · student · ЛЕКСИКА: ГОРОД
 // ============================================================
 const p5cards = [
-    { front: "la farmacia", back: "аптека" },
-    { front: "la piazza", back: "площадь" },
+    { front: "la farmacia", back: "аптека", frontImg: "/assets/img/principianti/vocaboli/citta/АПТЕКА.png" },
+    { front: "la piazza", back: "площадь", frontImg: "/assets/img/principianti/vocaboli/citta/ПЛОЩАДЬ.png" },
     { front: "il parco", back: "парк" },
-    { front: "la strada", back: "улица" }
+    { front: "la strada", back: "улица", frontImg: "/assets/img/principianti/vocaboli/citta/УЛИЦА.png" }
 ];
 
 // ============================================================
 // PANEL 6 — Flashcards · student · ЛЕКСИКА: ТРАНСПОРТ
 // ============================================================
 const p6cards = [
-    { front: "l'autobus", back: "автобус" },
-    { front: "il treno", back: "поезд" },
-    { front: "l'aereo", back: "самолёт" },
-    { front: "la macchina", back: "машина" },
-    { front: "il tram", back: "трамвай" },
+    { front: "l'autobus", back: "автобус", frontImg: "/assets/img/principianti/vocaboli/citta/АВТОБУС.png" },
+    { front: "il treno", back: "поезд", frontImg: "/assets/img/principianti/vocaboli/citta/ПОЕЗД.png" },
+    { front: "l'aereo", back: "самолёт", frontImg: "/assets/img/principianti/vocaboli/citta/САМОЛЁТ.png" },
+    { front: "la macchina", back: "машина", frontImg: "/assets/img/principianti/vocaboli/citta/МАШИНА.png" },
+    { front: "il tram", back: "трамвай", frontImg: "/assets/img/principianti/vocaboli/citta/ТРАМВАЙ.png" },
     { front: "i pattini a rotelle", back: "ролики" },
-    { front: "la bicicletta", back: "велосипед" },
-    { front: "il monopattino", back: "самокат" }
+    { front: "la bicicletta", back: "велосипед", frontImg: "/assets/img/principianti/vocaboli/citta/велосипед.png" },
+    { front: "il monopattino", back: "самокат", frontImg: "/assets/img/principianti/vocaboli/citta/самокат.png" }
 ];
 
 // ============================================================
 // PANEL 7 — Flashcards · paid · ЛЕКСИКА: ВСЁ ВМЕСТЕ
 // ============================================================
 const p7cards = [
-    { front: "il mercato", back: "рынок" },
-    { front: "il negozio", back: "магазин" },
-    { front: "la banca", back: "банк" },
-    { front: "la stazione", back: "вокзал" },
-    { front: "la farmacia", back: "аптека" },
-    { front: "la piazza", back: "площадь" },
+    { front: "il mercato", back: "рынок", frontImg: "/assets/img/principianti/vocaboli/citta/РЫНОК.png" },
+    { front: "il negozio", back: "магазин", frontImg: "/assets/img/principianti/vocaboli/citta/МАГАЗИН.png" },
+    { front: "la banca", back: "банк", frontImg: "/assets/img/principianti/vocaboli/citta/БАНК.png" },
+    { front: "la stazione", back: "вокзал", frontImg: "/assets/img/principianti/vocaboli/citta/ВОКЗАЛ.png" },
+    { front: "la farmacia", back: "аптека", frontImg: "/assets/img/principianti/vocaboli/citta/АПТЕКА.png" },
+    { front: "la piazza", back: "площадь", frontImg: "/assets/img/principianti/vocaboli/citta/ПЛОЩАДЬ.png" },
     { front: "il parco", back: "парк" },
-    { front: "la strada", back: "улица" },
-    { front: "l'autobus", back: "автобус" },
-    { front: "il treno", back: "поезд" },
-    { front: "l'aereo", back: "самолёт" },
-    { front: "la macchina", back: "машина" },
-    { front: "il tram", back: "трамвай" },
+    { front: "la strada", back: "улица", frontImg: "/assets/img/principianti/vocaboli/citta/УЛИЦА.png" },
+    { front: "l'autobus", back: "автобус", frontImg: "/assets/img/principianti/vocaboli/citta/АВТОБУС.png" },
+    { front: "il treno", back: "поезд", frontImg: "/assets/img/principianti/vocaboli/citta/ПОЕЗД.png" },
+    { front: "l'aereo", back: "самолёт", frontImg: "/assets/img/principianti/vocaboli/citta/САМОЛЁТ.png" },
+    { front: "la macchina", back: "машина", frontImg: "/assets/img/principianti/vocaboli/citta/МАШИНА.png" },
+    { front: "il tram", back: "трамвай", frontImg: "/assets/img/principianti/vocaboli/citta/ТРАМВАЙ.png" },
     { front: "i pattini a rotelle", back: "ролики" },
-    { front: "la bicicletta", back: "велосипед" },
-    { front: "il monopattino", back: "самокат" }
+    { front: "la bicicletta", back: "велосипед", frontImg: "/assets/img/principianti/vocaboli/citta/велосипед.png" },
+    { front: "il monopattino", back: "самокат", frontImg: "/assets/img/principianti/vocaboli/citta/самокат.png" }
 ];
 
 // ============================================================
