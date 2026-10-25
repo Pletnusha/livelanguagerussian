@@ -54,12 +54,12 @@ const p3cards = [
 // PANEL 4 — Flashcards · student · ЛЕКСИКА: ВЕРХНЯЯ ОДЕЖДА
 // ============================================================
 const p4cards = [
-    { front: "la giacca", back: "пиджак" },
+    { front: "la giacca", back: "пиджак", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/ПИДЖАК.png" },
     { front: "il maglione", back: "свитер", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/sviter.png" },
     { front: "gli stivali", back: "ботинки", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/БОТИНКИ.png" },
     { front: "il berretto", back: "шапка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/shapka.png" },
     { front: "il cappotto", back: "пальто", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/пальто.png" },
-    { front: "il giubbotto", back: "куртка" }
+    { front: "il giubbotto", back: "куртка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/куртка.png" }
 ];
 
 // ============================================================
