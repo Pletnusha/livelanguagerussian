@@ -84,16 +84,25 @@ export default class FlashcardExercise {
         if (counter) counter.textContent = `${this.currentIndex + 1} / ${this.cards.length}`;
 
         if (area) {
+            const isImgFront = cardData.frontImg;
+            const isImgBack = cardData.backImg;
+            const frontContent = isImgFront
+                ? `<img src="${cardData.frontImg}" alt="${cardData.front}" class="fca01-card-img">`
+                : cardData.front;
+            const backContent = isImgBack
+                ? `<img src="${cardData.backImg}" alt="${cardData.back}" class="fca01-card-img">`
+                : cardData.back;
+
             area.innerHTML = `
                 <div class="fca01-card-container">
                     <div class="fca01-card">
                         <div class="fca01-card-face fca01-card-front">
-                            <button class="fca01-audio-btn" data-text="${cardData.front}">🔊</button>
-                            ${cardData.front}
+                            ${isImgFront ? '' : `<button class="fca01-audio-btn" data-text="${cardData.front}">🔊</button>`}
+                            ${frontContent}
                         </div>
                         <div class="fca01-card-face fca01-card-back">
-                            <button class="fca01-audio-btn" data-text="${cardData.back}">🔊</button>
-                            ${cardData.back}
+                            ${isImgBack ? '' : `<button class="fca01-audio-btn" data-text="${cardData.back}">🔊</button>`}
+                            ${backContent}
                         </div>
                     </div>
                 </div>
