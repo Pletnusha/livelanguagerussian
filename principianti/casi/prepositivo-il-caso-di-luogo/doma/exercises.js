@@ -9,74 +9,64 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // ============================================================
 const p1exercises = [
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Зубная паста {{1}}.",
-        words: ["на раковине", "в раковине", "на раковина", "в раковина"],
-        correctAnswers: { 1: "на раковине" },
-        explanation: "раковина → на раковине (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Зубная паста на {{1}}.",
+        words: ["раковине", "раковины", "раковину"],
+        correctAnswers: { 1: "раковине" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Шампунь {{1}}.",
-        words: ["в полке", "на полка", "на полке", "в полка"],
-        correctAnswers: { 1: "на полке" },
-        explanation: "полка → на полке (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Шампунь на {{1}}.",
+        words: ["полке", "полки", "полку"],
+        correctAnswers: { 1: "полке" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Туалетная бумага {{1}}.",
-        words: ["в коробке", "на коробке", "в коробка", "на коробка"],
-        correctAnswers: { 1: "в коробке" },
-        explanation: "коробка → в коробке (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Туалетная бумага в {{1}}.",
+        words: ["коробке", "коробки", "коробку"],
+        correctAnswers: { 1: "коробке" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Бутылка воды {{1}}.",
-        words: ["на холодильнике", "в холодильник", "в холодильнике", "на холодильник"],
-        correctAnswers: { 1: "в холодильнике" },
-        explanation: "холодильник → в холодильнике (м.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Бутылка воды в {{1}}.",
+        words: ["холодильнике", "холодильника", "холодильник"],
+        correctAnswers: { 1: "холодильнике" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Ваза {{1}}.",
-        words: ["на столе", "в столе", "на стол", "в стол"],
-        correctAnswers: { 1: "на столе" },
-        explanation: "стол → на столе (м.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Ваза на {{1}}.",
+        words: ["столе", "стола", "стол"],
+        correctAnswers: { 1: "столе" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Кофе {{1}}.",
-        words: ["на шкафу", "в шкаф", "в шкафу", "на шкаф"],
-        correctAnswers: { 1: "в шкафу" },
-        explanation: "шкаф → в шкафу (м.р., -у)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Кофе в {{1}}.",
+        words: ["шкафу", "шкафа", "шкаф"],
+        correctAnswers: { 1: "шкафу" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Компьютер {{1}}.",
-        words: ["в ремонте", "на ремонте", "в ремонт", "на ремонт"],
-        correctAnswers: { 1: "в ремонте" },
-        explanation: "ремонт → в ремонте (м.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Компьютер в {{1}}.",
+        words: ["ремонте", "ремонта", "ремонт"],
+        correctAnswers: { 1: "ремонте" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Полотенца {{1}}.",
-        words: ["в двери", "на дверь", "на двери", "в дверь"],
-        correctAnswers: { 1: "на двери" },
-        explanation: "дверь → на двери (ж.р., -и)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Полотенца на {{1}}.",
+        words: ["двери", "двери", "дверь"],
+        correctAnswers: { 1: "двери" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Ключи {{1}}.",
-        words: ["в сумке", "на сумке", "в сумка", "на сумка"],
-        correctAnswers: { 1: "в сумке" },
-        explanation: "сумка → в сумке (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Ключи в {{1}}.",
+        words: ["сумке", "сумки", "сумку"],
+        correctAnswers: { 1: "сумке" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Пульт {{1}}.",
-        words: ["в диване", "на диван", "на диване", "в диван"],
-        correctAnswers: { 1: "на диване" },
-        explanation: "диван → на диване (м.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Пульт на {{1}}.",
+        words: ["диване", "дивана", "диван"],
+        correctAnswers: { 1: "диване" }
     }
 ];
 
@@ -85,74 +75,64 @@ const p1exercises = [
 // ============================================================
 const p2exercises = [
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Пульт {{1}}.",
-        words: ["на столике", "в столике", "на столик", "в столик"],
-        correctAnswers: { 1: "на столике" },
-        explanation: "столик → на столике (м.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Пульт на {{1}}.",
+        words: ["столике", "столика", "столик"],
+        correctAnswers: { 1: "столике" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Подушки {{1}}.",
-        words: ["в диване", "на диван", "на диване", "в диван"],
-        correctAnswers: { 1: "на диване" },
-        explanation: "диван → на диване (м.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Подушки на {{1}}.",
+        words: ["диване", "дивана", "диван"],
+        correctAnswers: { 1: "диване" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Книги {{1}}.",
-        words: ["на полке", "в полке", "на полка", "в полка"],
-        correctAnswers: { 1: "на полке" },
-        explanation: "полка → на полке (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Книги на {{1}}.",
+        words: ["полке", "полки", "полку"],
+        correctAnswers: { 1: "полке" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Лампа {{1}}.",
-        words: ["в столе", "на стол", "на столе", "в стол"],
-        correctAnswers: { 1: "на столе" },
-        explanation: "стол → на столе (м.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Лампа на {{1}}.",
+        words: ["столе", "стола", "стол"],
+        correctAnswers: { 1: "столе" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Ковёр {{1}}.",
-        words: ["на полу", "в полу", "на пол", "в пол"],
-        correctAnswers: { 1: "на полу" },
-        explanation: "пол → на полу (м.р., -у)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Ковёр на {{1}}.",
+        words: ["полу", "пола", "пол"],
+        correctAnswers: { 1: "полу" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Ваза {{1}}.",
-        words: ["в окне", "на окно", "на окне", "в окно"],
-        correctAnswers: { 1: "на окне" },
-        explanation: "окно → на окне (ср.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Ваза на {{1}}.",
+        words: ["окне", "окна", "окно"],
+        correctAnswers: { 1: "окне" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Занавеска {{1}}.",
-        words: ["на окне", "в окне", "на окно", "в окно"],
-        correctAnswers: { 1: "на окне" },
-        explanation: "окно → на окне (ср.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Занавеска на {{1}}.",
+        words: ["окне", "окна", "окно"],
+        correctAnswers: { 1: "окне" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Картина {{1}}.",
-        words: ["в стене", "на стена", "на стене", "в стена"],
-        correctAnswers: { 1: "на стене" },
-        explanation: "стена → на стене (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Картина на {{1}}.",
+        words: ["стене", "стены", "стену"],
+        correctAnswers: { 1: "стене" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Кот {{1}}.",
-        words: ["на подоконнике", "в подоконнике", "на подоконник", "в подоконник"],
-        correctAnswers: { 1: "на подоконнике" },
-        explanation: "подоконник → на подоконнике (м.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Кот на {{1}}.",
+        words: ["подоконнике", "подоконника", "подоконник"],
+        correctAnswers: { 1: "подоконнике" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Подушка {{1}}.",
-        words: ["на кресле", "в кресло", "в кресле", "на кресло"],
-        correctAnswers: { 1: "в кресле" },
-        explanation: "кресло → в кресле (ср.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Подушка на {{1}}.",
+        words: ["кресле", "кресла", "кресло"],
+        correctAnswers: { 1: "кресле" }
     }
 ];
 
@@ -161,74 +141,64 @@ const p2exercises = [
 // ============================================================
 const p3exercises = [
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Курица {{1}}.",
-        words: ["в духовке", "на духовке", "в духовка", "на духовка"],
-        correctAnswers: { 1: "в духовке" },
-        explanation: "духовка → в духовке (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Курица в {{1}}.",
+        words: ["духовке", "духовки", "духовку"],
+        correctAnswers: { 1: "духовке" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Тарелки {{1}}.",
-        words: ["в полке", "на полка", "на полке", "в полка"],
-        correctAnswers: { 1: "на полке" },
-        explanation: "полка → на полке (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Тарелки на {{1}}.",
+        words: ["полке", "полки", "полку"],
+        correctAnswers: { 1: "полке" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Кастрюля {{1}}.",
-        words: ["на плите", "в плите", "на плита", "в плита"],
-        correctAnswers: { 1: "на плите" },
-        explanation: "плита → на плите (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Кастрюля на {{1}}.",
+        words: ["плите", "плиты", "плиту"],
+        correctAnswers: { 1: "плите" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Салатница {{1}}.",
-        words: ["в столе", "на стол", "на столе", "в стол"],
-        correctAnswers: { 1: "на столе" },
-        explanation: "стол → на столе (м.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Салатница на {{1}}.",
+        words: ["столе", "стола", "стол"],
+        correctAnswers: { 1: "столе" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Бокалы {{1}}.",
-        words: ["в шкафу", "на шкафу", "в шкаф", "на шкаф"],
-        correctAnswers: { 1: "в шкафу" },
-        explanation: "шкаф → в шкафу (м.р., -у)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Бокалы в {{1}}.",
+        words: ["шкафу", "шкафа", "шкаф"],
+        correctAnswers: { 1: "шкафу" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Мясо {{1}}.",
-        words: ["на холодильнике", "в холодильник", "в холодильнике", "на холодильник"],
-        correctAnswers: { 1: "в холодильнике" },
-        explanation: "холодильник → в холодильнике (м.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Мясо в {{1}}.",
+        words: ["холодильнике", "холодильника", "холодильник"],
+        correctAnswers: { 1: "холодильнике" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Чай {{1}}.",
-        words: ["в чашке", "на чашке", "в чашка", "на чашка"],
-        correctAnswers: { 1: "в чашке" },
-        explanation: "чашка → в чашке (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Чай в {{1}}.",
+        words: ["чашке", "чашки", "чашку"],
+        correctAnswers: { 1: "чашке" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Посуда {{1}}.",
-        words: ["на раковине", "в раковина", "в раковине", "на раковина"],
-        correctAnswers: { 1: "в раковине" },
-        explanation: "раковина → в раковине (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Посуда в {{1}}.",
+        words: ["раковине", "раковины", "раковину"],
+        correctAnswers: { 1: "раковине" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Суп {{1}}.",
-        words: ["в кастрюле", "на кастрюле", "в кастрюля", "на кастрюля"],
-        correctAnswers: { 1: "в кастрюле" },
-        explanation: "кастрюля → в кастрюле (ж.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Суп в {{1}}.",
+        words: ["кастрюле", "кастрюли", "кастрюлю"],
+        correctAnswers: { 1: "кастрюле" }
     },
     {
-        instruction: "Scegli la preposizione e la forma corretta.",
-        text: "Ножи {{1}}.",
-        words: ["на ящике", "в ящик", "в ящике", "на ящик"],
-        correctAnswers: { 1: "в ящике" },
-        explanation: "ящик → в ящике (м.р., -е)"
+        instruction: "Scegli la forma corretta al prepositivo.",
+        text: "Ножи в {{1}}.",
+        words: ["ящике", "ящика", "ящик"],
+        correctAnswers: { 1: "ящике" }
     }
 ];
 
@@ -339,16 +309,16 @@ function initPanelDom8() {
     let currentCard = 0;
 
     const multipleChoiceData = [
-        { question: "Суп ___.", options: ["в большой кастрюле", "на большой кастрюле", "в большая кастрюля", "на большая кастрюля"], answer: "в большой кастрюле" },
-        { question: "Тарелки ___.", options: ["на кухонной раковине", "в кухонной раковине", "в кухонная раковина", "на кухонная раковина"], answer: "в кухонной раковине" },
-        { question: "Лампа ___.", options: ["на высоком потолке", "в высоком потолке", "на высокий потолок", "в высокий потолок"], answer: "на высоком потолке" },
-        { question: "Платье ___.", options: ["на деревянном шкафу", "в деревянный шкаф", "в деревянном шкафу", "на деревянный шкаф"], answer: "в деревянном шкафу" },
-        { question: "Мясо ___.", options: ["в большом холодильнике", "на большом холодильнике", "в большой холодильник", "на большой холодильник"], answer: "в большом холодильнике" },
-        { question: "Подушки ___.", options: ["в широкой кровати", "на широкая кровать", "на широкой кровати", "в широкая кровать"], answer: "на широкой кровати" },
-        { question: "Ковёр ___.", options: ["на паркетном полу", "в паркетном полу", "на паркетный пол", "в паркетный пол"], answer: "на паркетном полу" },
-        { question: "Картина ___.", options: ["в белой стене", "на белая стена", "на белой стене", "в белая стена"], answer: "на белой стене" },
-        { question: "Ключи ___.", options: ["в чёрной сумке", "на чёрной сумке", "в чёрная сумка", "на чёрная сумка"], answer: "в чёрной сумке" },
-        { question: "Курица ___.", options: ["на новой духовке", "в новая духовка", "в новой духовке", "на новая духовка"], answer: "в новой духовке" }
+        { question: "Суп в ___.", options: ["большой кастрюле", "большая кастрюля"], answer: "большой кастрюле" },
+        { question: "Тарелки в ___.", options: ["кухонной раковине", "кухонная раковина"], answer: "кухонной раковине" },
+        { question: "Лампа на ___.", options: ["высоком потолке", "высокий потолок"], answer: "высоком потолке" },
+        { question: "Платье в ___.", options: ["деревянном шкафу", "деревянный шкаф"], answer: "деревянном шкафу" },
+        { question: "Мясо в ___.", options: ["большом холодильнике", "большой холодильник"], answer: "большом холодильнике" },
+        { question: "Подушки на ___.", options: ["широкой кровати", "широкая кровать"], answer: "широкой кровати" },
+        { question: "Ковёр на ___.", options: ["паркетном полу", "паркетный пол"], answer: "паркетном полу" },
+        { question: "Картина на ___.", options: ["белой стене", "белая стена"], answer: "белой стене" },
+        { question: "Ключи в ___.", options: ["чёрной сумке", "чёрная сумка"], answer: "чёрной сумке" },
+        { question: "Курица в ___.", options: ["новой духовке", "новая духовка"], answer: "новой духовке" }
     ];
 
     const matchPairs = [
