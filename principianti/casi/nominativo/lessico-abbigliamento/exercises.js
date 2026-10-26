@@ -42,24 +42,24 @@ const p2exercises = [
 // PANEL 3 — Flashcards · public · ЛЕКСИКА: ЛЁГКАЯ ОДЕЖДА
 // ============================================================
 const p3cards = [
-    { front: "la maglietta", back: "футболка" },
-    { front: "il vestito", back: "платье" },
-    { front: "la gonna", back: "юбка" },
-    { front: "la camicia", back: "рубашка" },
-    { front: "i pantaloni", back: "брюки" },
-    { front: "la sciarpa", back: "шарф" }
+    { front: "la maglietta", back: "футболка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/futbolka.png" },
+    { front: "il vestito", back: "платье", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/platye.png" },
+    { front: "la gonna", back: "юбка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/юбка.png" },
+    { front: "la camicia", back: "рубашка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/rubashka.png" },
+    { front: "i pantaloni", back: "брюки", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/БРЮКИ.png" },
+    { front: "la sciarpa", back: "шарф", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/ШАРФ.png" }
 ];
 
 // ============================================================
 // PANEL 4 — Flashcards · student · ЛЕКСИКА: ВЕРХНЯЯ ОДЕЖДА
 // ============================================================
 const p4cards = [
-    { front: "la giacca", back: "пиджак" },
-    { front: "il maglione", back: "свитер" },
-    { front: "gli stivali", back: "ботинки" },
-    { front: "il berretto", back: "шапка" },
-    { front: "il cappotto", back: "пальто" },
-    { front: "il giubbotto", back: "куртка" }
+    { front: "la giacca", back: "пиджак", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/ПИДЖАК.png" },
+    { front: "il maglione", back: "свитер", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/sviter.png" },
+    { front: "gli stivali", back: "ботинки", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/БОТИНКИ.png" },
+    { front: "il berretto", back: "шапка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/shapka.png" },
+    { front: "il cappotto", back: "пальто", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/пальто.png" },
+    { front: "il giubbotto", back: "куртка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/куртка.png" }
 ];
 
 // ============================================================

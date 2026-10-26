@@ -66,78 +66,78 @@ const p3exercises = [
 // PANEL 4 — Flashcards · public · ЛЕКСИКА: ФРУКТЫ И ЯГОДЫ
 // ============================================================
 const p4cards = [
-    { front: "l'arancia", back: "апельсин" },
-    { front: "l'anguria", back: "арбуз" },
-    { front: "la pera", back: "груша" },
-    { front: "la mela", back: "яблоко" },
-    { front: "la banana", back: "банан" },
-    { front: "la prugna", back: "слива" },
-    { front: "il mirtillo", back: "черника" },
-    { front: "il lampone", back: "малина" }
+    { front: "l'arancia", back: "апельсин", frontImg: "/assets/img/principianti/vocaboli/cibo/апельсин.png" },
+    { front: "l'anguria", back: "арбуз", frontImg: "/assets/img/principianti/vocaboli/cibo/арбуз.png" },
+    { front: "la pera", back: "груша", frontImg: "/assets/img/principianti/vocaboli/cibo/груша.png" },
+    { front: "la mela", back: "яблоко", frontImg: "/assets/img/principianti/vocaboli/cibo/яблоко.png" },
+    { front: "la banana", back: "банан", frontImg: "/assets/img/principianti/vocaboli/cibo/банан.png" },
+    { front: "la prugna", back: "слива", frontImg: "/assets/img/principianti/vocaboli/cibo/сливы.png" },
+    { front: "il mirtillo", back: "черника", frontImg: "/assets/img/principianti/vocaboli/cibo/черника.png" },
+    { front: "il lampone", back: "малина", frontImg: "/assets/img/principianti/vocaboli/cibo/малина.png" }
 ];
 
 // ============================================================
 // PANEL 5 — Flashcards · student · ЛЕКСИКА: ОВОЩИ
 // ============================================================
 const p5cards = [
-    { front: "la melanzana", back: "баклажан" },
-    { front: "la patata", back: "картошка" },
-    { front: "la cipolla", back: "лук" },
-    { front: "la carota", back: "морковь" },
-    { front: "l'aglio", back: "чеснок" },
-    { front: "i piselli", back: "горошек" },
-    { front: "il cavolo", back: "капуста" },
-    { front: "il peperone", back: "перец" },
-    { front: "la zucchina", back: "кабачок" },
-    { front: "il pomodoro", back: "помидор" },
-    { front: "il sedano", back: "сельдерей" }
+    { front: "la melanzana", back: "баклажан", frontImg: "/assets/img/principianti/vocaboli/cibo/баклажаны.png" },
+    { front: "la patata", back: "картошка", frontImg: "/assets/img/principianti/vocaboli/cibo/картофель.png" },
+    { front: "la cipolla", back: "лук", frontImg: "/assets/img/principianti/vocaboli/cibo/лук.png" },
+    { front: "la carota", back: "морковь", frontImg: "/assets/img/principianti/vocaboli/cibo/морковь.png" },
+    { front: "l'aglio", back: "чеснок", frontImg: "/assets/img/principianti/vocaboli/cibo/чеснок.png" },
+    { front: "i piselli", back: "горошек", frontImg: "/assets/img/principianti/vocaboli/cibo/горох.png" },
+    { front: "il cavolo", back: "капуста", frontImg: "/assets/img/principianti/vocaboli/cibo/капуста.png" },
+    { front: "il peperone", back: "перец", frontImg: "/assets/img/principianti/vocaboli/cibo/перец.png" },
+    { front: "la zucchina", back: "кабачок", frontImg: "/assets/img/principianti/vocaboli/cibo/кабачки.png" },
+    { front: "il pomodoro", back: "помидор", frontImg: "/assets/img/principianti/vocaboli/cibo/помидоры.png" },
+    { front: "il sedano", back: "сельдерей", frontImg: "/assets/img/principianti/vocaboli/cibo/сельдерей.png" }
 ];
 
 // ============================================================
 // PANEL 6 — Flashcards · paid · ЛЕКСИКА: ПРОДУКТЫ
 // ============================================================
 const p6cards = [
-    { front: "la carne", back: "мясо" },
-    { front: "il pesce", back: "рыба" },
-    { front: "il latte", back: "молоко" },
-    { front: "il formaggio", back: "сыр" },
-    { front: "il pane", back: "хлеб" },
-    { front: "le uova", back: "яйца" },
-    { front: "il burro", back: "масло (сливочное)" },
-    { front: "l'olio", back: "масло (растительное)" }
+    { front: "la carne", back: "мясо", frontImg: "/assets/img/principianti/vocaboli/cibo/мясо.png" },
+    { front: "il pesce", back: "рыба", frontImg: "/assets/img/principianti/vocaboli/cibo/рыба.png" },
+    { front: "il latte", back: "молоко", frontImg: "/assets/img/principianti/vocaboli/cibo/молоко.png" },
+    { front: "il formaggio", back: "сыр", frontImg: "/assets/img/principianti/vocaboli/cibo/сыр.png" },
+    { front: "il pane", back: "хлеб", frontImg: "/assets/img/principianti/vocaboli/cibo/хлеб.png" },
+    { front: "le uova", back: "яйца", frontImg: "/assets/img/principianti/vocaboli/cibo/яйца.png" },
+    { front: "il burro", back: "масло (сливочное)", frontImg: "/assets/img/principianti/vocaboli/cibo/сливочное масло.png" },
+    { front: "l'olio", back: "масло (растительное)", frontImg: "/assets/img/principianti/vocaboli/cibo/растительное масло.png" }
 ];
 
 // ============================================================
 // PANEL 7 — Flashcards · paid · ЛЕКСИКА: ВСЯ ЕДА
 // ============================================================
 const p7cards = [
-    { front: "l'arancia", back: "апельсин" },
-    { front: "l'anguria", back: "арбуз" },
-    { front: "la pera", back: "груша" },
-    { front: "la mela", back: "яблоко" },
-    { front: "la banana", back: "банан" },
-    { front: "la prugna", back: "слива" },
-    { front: "il mirtillo", back: "черника" },
-    { front: "il lampone", back: "малина" },
-    { front: "la melanzana", back: "баклажан" },
-    { front: "la patata", back: "картошка" },
-    { front: "la cipolla", back: "лук" },
-    { front: "la carota", back: "морковь" },
-    { front: "l'aglio", back: "чеснок" },
-    { front: "i piselli", back: "горошек" },
-    { front: "il cavolo", back: "капуста" },
-    { front: "il peperone", back: "перец" },
-    { front: "la zucchina", back: "кабачок" },
-    { front: "il pomodoro", back: "помидор" },
-    { front: "il sedano", back: "сельдерей" },
-    { front: "la carne", back: "мясо" },
-    { front: "il pesce", back: "рыба" },
-    { front: "il latte", back: "молоко" },
-    { front: "il formaggio", back: "сыр" },
-    { front: "il pane", back: "хлеб" },
-    { front: "le uova", back: "яйца" },
-    { front: "il burro", back: "масло (сливочное)" },
-    { front: "l'olio", back: "масло (растительное)" }
+    { front: "l'arancia", back: "апельсин", frontImg: "/assets/img/principianti/vocaboli/cibo/апельсин.png" },
+    { front: "l'anguria", back: "арбуз", frontImg: "/assets/img/principianti/vocaboli/cibo/арбуз.png" },
+    { front: "la pera", back: "груша", frontImg: "/assets/img/principianti/vocaboli/cibo/груша.png" },
+    { front: "la mela", back: "яблоко", frontImg: "/assets/img/principianti/vocaboli/cibo/яблоко.png" },
+    { front: "la banana", back: "банан", frontImg: "/assets/img/principianti/vocaboli/cibo/банан.png" },
+    { front: "la prugna", back: "слива", frontImg: "/assets/img/principianti/vocaboli/cibo/сливы.png" },
+    { front: "il mirtillo", back: "черника", frontImg: "/assets/img/principianti/vocaboli/cibo/черника.png" },
+    { front: "il lampone", back: "малина", frontImg: "/assets/img/principianti/vocaboli/cibo/малина.png" },
+    { front: "la melanzana", back: "баклажан", frontImg: "/assets/img/principianti/vocaboli/cibo/баклажаны.png" },
+    { front: "la patata", back: "картошка", frontImg: "/assets/img/principianti/vocaboli/cibo/картофель.png" },
+    { front: "la cipolla", back: "лук", frontImg: "/assets/img/principianti/vocaboli/cibo/лук.png" },
+    { front: "la carota", back: "морковь", frontImg: "/assets/img/principianti/vocaboli/cibo/морковь.png" },
+    { front: "l'aglio", back: "чеснок", frontImg: "/assets/img/principianti/vocaboli/cibo/чеснок.png" },
+    { front: "i piselli", back: "горошек", frontImg: "/assets/img/principianti/vocaboli/cibo/горох.png" },
+    { front: "il cavolo", back: "капуста", frontImg: "/assets/img/principianti/vocaboli/cibo/капуста.png" },
+    { front: "il peperone", back: "перец", frontImg: "/assets/img/principianti/vocaboli/cibo/перец.png" },
+    { front: "la zucchina", back: "кабачок", frontImg: "/assets/img/principianti/vocaboli/cibo/кабачки.png" },
+    { front: "il pomodoro", back: "помидор", frontImg: "/assets/img/principianti/vocaboli/cibo/помидоры.png" },
+    { front: "il sedano", back: "сельдерей", frontImg: "/assets/img/principianti/vocaboli/cibo/сельдерей.png" },
+    { front: "la carne", back: "мясо", frontImg: "/assets/img/principianti/vocaboli/cibo/мясо.png" },
+    { front: "il pesce", back: "рыба", frontImg: "/assets/img/principianti/vocaboli/cibo/рыба.png" },
+    { front: "il latte", back: "молоко", frontImg: "/assets/img/principianti/vocaboli/cibo/молоко.png" },
+    { front: "il formaggio", back: "сыр", frontImg: "/assets/img/principianti/vocaboli/cibo/сыр.png" },
+    { front: "il pane", back: "хлеб", frontImg: "/assets/img/principianti/vocaboli/cibo/хлеб.png" },
+    { front: "le uova", back: "яйца", frontImg: "/assets/img/principianti/vocaboli/cibo/яйца.png" },
+    { front: "il burro", back: "масло (сливочное)", frontImg: "/assets/img/principianti/vocaboli/cibo/сливочное масло.png" },
+    { front: "l'olio", back: "масло (растительное)", frontImg: "/assets/img/principianti/vocaboli/cibo/растительное масло.png" }
 ];
 
 // ============================================================
