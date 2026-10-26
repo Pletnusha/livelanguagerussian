@@ -10,77 +10,77 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 const p1exercises = [
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["облачный", "облака", "облачно"],
         correctAnswers: { 1: "облачный" },
         explanation: "Aggettivo: concorda con день (maschile) — облачный день."
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "На улице ___.",
+        text: "На улице {{1}}.",
         words: ["солнце", "солнечный", "солнечно"],
         correctAnswers: { 1: "солнце" },
         explanation: "Sostantivo: soggetto della frase — на улице солнце."
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["ветер", "ветреный", "ветрено"],
         correctAnswers: { 1: "ветреный" },
         explanation: "Aggettivo: concorda con день (maschile) — ветреный день."
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["холодно", "холодный", "холод"],
         correctAnswers: { 1: "холодный" },
         explanation: "Aggettivo: concorda con день (maschile) — холодный день."
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___.",
+        text: "Сегодня {{1}}.",
         words: ["солнечный", "солнечно", "солнце"],
         correctAnswers: { 1: "солнечно" },
         explanation: "Avverbio predicativo invariabile: descrive lo stato del tempo."
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["пасмурный", "пасмурно"],
         correctAnswers: { 1: "пасмурный" },
         explanation: "Aggettivo: concorda con день (maschile) — пасмурный день."
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___.",
+        text: "Сегодня {{1}}.",
         words: ["дождливо", "дождливый", "дождь"],
         correctAnswers: { 1: "дождливо" },
         explanation: "Avverbio predicativo invariabile: descrive lo stato del tempo."
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "На улице ___.",
+        text: "На улице {{1}}.",
         words: ["ясный", "ясно"],
         correctAnswers: { 1: "ясно" },
         explanation: "Avverbio predicativo invariabile: descrive lo stato del tempo."
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "На улице ___.",
+        text: "На улице {{1}}.",
         words: ["жарко", "жаркий", "жара"],
         correctAnswers: { 1: "жара" },
         explanation: "Sostantivo: soggetto della frase — на улице жара."
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["дождливо", "дождь", "дождливый"],
         correctAnswers: { 1: "дождливый" },
         explanation: "Aggettivo: concorda con день (maschile) — дождливый день."
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["солнце", "солнечно", "солнечный"],
         correctAnswers: { 1: "солнечный" },
         explanation: "Aggettivo: concorda con день (maschile) — солнечный день."
@@ -94,67 +94,67 @@ const p1exercises = [
 const p2exercises = [
     {
         instruction: "Scegli la forma corretta.",
-        text: "На улице ___.",
+        text: "На улице {{1}}.",
         words: ["холод", "холодный", "холодно"],
         correctAnswers: { 1: "холод" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___.",
+        text: "Сегодня {{1}}.",
         words: ["ветреный", "ветрено", "ветер"],
         correctAnswers: { 1: "ветрено" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___.",
+        text: "Сегодня {{1}}.",
         words: ["жара", "жарко", "жаркий"],
         correctAnswers: { 1: "жарко" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___.",
+        text: "Сегодня {{1}}.",
         words: ["облачный", "облачно", "облака"],
         correctAnswers: { 1: "облачно" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___.",
+        text: "Сегодня {{1}}.",
         words: ["пасмурный", "пасмурно"],
         correctAnswers: { 1: "пасмурно" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["ясный", "ясно"],
         correctAnswers: { 1: "ясный" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___.",
+        text: "Сегодня {{1}}.",
         words: ["холодный", "холод", "холодно"],
         correctAnswers: { 1: "холодно" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "На улице ___.",
+        text: "На улице {{1}}.",
         words: ["дождливый", "дождь", "дождливо"],
         correctAnswers: { 1: "дождь" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "На улице ___.",
+        text: "На улице {{1}}.",
         words: ["ветрено", "ветреный", "ветер"],
         correctAnswers: { 1: "ветер" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "На небе ___.",
+        text: "На небе {{1}}.",
         words: ["облачно", "облака", "облачный"],
         correctAnswers: { 1: "облака" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["жаркий", "жара", "жарко"],
         correctAnswers: { 1: "жаркий" }
     }
@@ -167,61 +167,61 @@ const p2exercises = [
 const p3exercises = [
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___.",
+        text: "Сегодня {{1}}.",
         words: ["пасмурный", "пасмурно"],
         correctAnswers: { 1: "пасмурно" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["холодно", "холодный", "холод"],
         correctAnswers: { 1: "холодный" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["жаркий", "жара", "жарко"],
         correctAnswers: { 1: "жаркий" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___.",
+        text: "Сегодня {{1}}.",
         words: ["дождливо", "дождливый", "дождь"],
         correctAnswers: { 1: "дождливо" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___.",
+        text: "Сегодня {{1}}.",
         words: ["ветреный", "ветрено", "ветер"],
         correctAnswers: { 1: "ветрено" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "На улице ___.",
+        text: "На улице {{1}}.",
         words: ["жарко", "жаркий", "жара"],
         correctAnswers: { 1: "жара" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "На улице ___.",
+        text: "На улице {{1}}.",
         words: ["дождливый", "дождь", "дождливо"],
         correctAnswers: { 1: "дождь" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["облачный", "облака", "облачно"],
         correctAnswers: { 1: "облачный" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "На небе ___.",
+        text: "На небе {{1}}.",
         words: ["облачно", "облака", "облачный"],
         correctAnswers: { 1: "облака" }
     },
     {
         instruction: "Scegli la forma corretta.",
-        text: "Сегодня ___ день.",
+        text: "Сегодня {{1}} день.",
         words: ["ветер", "ветреный", "ветрено"],
         correctAnswers: { 1: "ветреный" }
     }
