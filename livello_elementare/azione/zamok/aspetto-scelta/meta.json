@@ -1,0 +1,20 @@
+{
+  "id": "b1-azione-zamok-aspetto-scelta",
+  "url": "/livello_elementare/azione/zamok/aspetto-scelta/",
+  "level": "b1",
+  "doc_type": "exercise",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [
+    "aspetto/perfettivo-vs-imperfettivo"
+  ],
+  "complementi": [],
+  "lessico": [
+    "vita-quotidiana"
+  ],
+  "title_ru": "НСВ ИЛИ СВ",
+  "title_it": "Perfettivo o imperfettivo — coppie aspettuali dal testo",
+  "source_doc": "b1-azione-zamok",
+  "focus": "aspetto-scelta"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "b1-azione-zamok-aspetto-prefissi",
+  "url": "/livello_elementare/azione/zamok/aspetto-prefissi/",
+  "level": "b1",
+  "doc_type": "exercise",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [
+    "aspetto/perfettivo-con-prefissi"
+  ],
+  "complementi": [],
+  "lessico": [
+    "vita-quotidiana"
+  ],
+  "title_ru": "ПРИСТАВОЧНЫЕ ГЛАГОЛЫ",
+  "title_it": "Verbi con prefisso — вы-, по-, до-, пере-, на-",
+  "source_doc": "b1-azione-zamok",
+  "focus": "aspetto-prefissi"
+}
