@@ -10,77 +10,77 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 const p1exercises = [
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Мне нравится ___ рано утром.",
+        text: "Мне нравится {{1}} рано утром.",
         words: ["вставать", "встать"],
         correctAnswers: { 1: "вставать" },
         explanation: "Dopo «нравится» si usa l'imperfettivo: è un'abitudine, non un'azione singola."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ на Бали зимой.",
+        text: "Я хочу {{1}} на Бали зимой.",
         words: ["ехать", "поехать"],
         correctAnswers: { 1: "поехать" },
         explanation: "Dopo «хочу» si usa il perfettivo: è un piano concreto, un'azione unica."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я люблю ___ иностранные языки.",
+        text: "Я люблю {{1}} иностранные языки.",
         words: ["изучать", "изучить"],
         correctAnswers: { 1: "изучать" },
         explanation: "Dopo «люблю» si usa l'imperfettivo: è un'attività che piace in generale."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ местные блюда.",
+        text: "Я хочу {{1}} местные блюда.",
         words: ["пробовать", "попробовать"],
         correctAnswers: { 1: "попробовать" },
         explanation: "Dopo «хочу» si usa il perfettivo: voglio provarli (risultato concreto)."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Мне нравится ___ с друзьями.",
+        text: "Мне нравится {{1}} с друзьями.",
         words: ["гулять", "погулять"],
         correctAnswers: { 1: "гулять" },
         explanation: "Dopo «нравится» si usa l'imperfettivo: passeggiare in generale, come abitudine."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ набор тарелок.",
+        text: "Я хочу {{1}} набор тарелок.",
         words: ["покупать", "купить"],
         correctAnswers: { 1: "купить" },
         explanation: "Dopo «хочу» si usa il perfettivo: comprare un oggetto specifico."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я обожаю ___ на море зимой.",
+        text: "Я обожаю {{1}} на море зимой.",
         words: ["ездить", "поехать"],
         correctAnswers: { 1: "ездить" },
         explanation: "Dopo «обожаю» si usa l'imperfettivo: è un'attività ripetuta che amo fare."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ настоящий лимончелло.",
+        text: "Я хочу {{1}} настоящий лимончелло.",
         words: ["готовить", "приготовить"],
         correctAnswers: { 1: "приготовить" },
         explanation: "Dopo «хочу» si usa il perfettivo: preparare una volta, ottenere un risultato."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я ненавижу ___ на встречи.",
+        text: "Я ненавижу {{1}} на встречи.",
         words: ["опаздывать", "опоздать"],
         correctAnswers: { 1: "опаздывать" },
         explanation: "Dopo «ненавижу» si usa l'imperfettivo: odio fare tardi in generale."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ подарок родителям.",
+        text: "Я хочу {{1}} подарок родителям.",
         words: ["дарить", "подарить"],
         correctAnswers: { 1: "подарить" },
         explanation: "Dopo «хочу» si usa il perfettivo: regalare una cosa concreta, una volta."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я люблю ___ научно-популярные фильмы.",
+        text: "Я люблю {{1}} научно-популярные фильмы.",
         words: ["смотреть", "посмотреть"],
         correctAnswers: { 1: "смотреть" },
         explanation: "Dopo «люблю» si usa l'imperfettivo: guardare come attività abituale."
@@ -94,67 +94,67 @@ const p1exercises = [
 const p2exercises = [
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я боюсь ___ машину.",
+        text: "Я боюсь {{1}} машину.",
         words: ["водить", "повести"],
         correctAnswers: { 1: "водить" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ в бухтах.",
+        text: "Я хочу {{1}} в бухтах.",
         words: ["нырять", "понырять"],
         correctAnswers: { 1: "понырять" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Мне нравится ___ горячий крепкий кофе.",
+        text: "Мне нравится {{1}} горячий крепкий кофе.",
         words: ["пить", "выпить"],
         correctAnswers: { 1: "пить" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ на Амальфитанское побережье.",
+        text: "Я хочу {{1}} на Амальфитанское побережье.",
         words: ["ехать", "поехать"],
         correctAnswers: { 1: "поехать" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я люблю ___ и загорать.",
+        text: "Я люблю {{1}} и загорать.",
         words: ["купаться", "искупаться"],
         correctAnswers: { 1: "купаться" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ маленькие городки.",
+        text: "Я хочу {{1}} маленькие городки.",
         words: ["посещать", "посетить"],
         correctAnswers: { 1: "посетить" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Мне нравится ___ на курсы онлайн.",
+        text: "Мне нравится {{1}} на курсы онлайн.",
         words: ["записываться", "записаться"],
         correctAnswers: { 1: "записываться" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ его с собой на Бали.",
+        text: "Я хочу {{1}} его с собой на Бали.",
         words: ["брать", "взять"],
         correctAnswers: { 1: "взять" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я люблю ___ плотно.",
+        text: "Я люблю {{1}} плотно.",
         words: ["завтракать", "позавтракать"],
         correctAnswers: { 1: "завтракать" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я не хочу ___ время на пробки.",
+        text: "Я не хочу {{1}} время на пробки.",
         words: ["тратить", "потратить"],
         correctAnswers: { 1: "потратить" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Мне нравится ___ закаты и архитектуру.",
+        text: "Мне нравится {{1}} закаты и архитектуру.",
         words: ["фотографировать", "сфотографировать"],
         correctAnswers: { 1: "фотографировать" }
     }
@@ -167,67 +167,67 @@ const p2exercises = [
 const p3exercises = [
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ на яхте.",
+        text: "Я хочу {{1}} на яхте.",
         words: ["кататься", "покататься"],
         correctAnswers: { 1: "покататься" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Мне нравится ___ красное вино.",
+        text: "Мне нравится {{1}} красное вино.",
         words: ["пить", "выпить"],
         correctAnswers: { 1: "пить" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ в Рим.",
+        text: "Я хочу {{1}} в Рим.",
         words: ["ездить", "съездить"],
         correctAnswers: { 1: "съездить" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я боюсь ___ на встречи.",
+        text: "Я боюсь {{1}} на встречи.",
         words: ["опаздывать", "опоздать"],
         correctAnswers: { 1: "опаздывать" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ оттуда на Бали.",
+        text: "Я хочу {{1}} оттуда на Бали.",
         words: ["летать", "улететь"],
         correctAnswers: { 1: "улететь" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я люблю ___ на дождь.",
+        text: "Я люблю {{1}} на дождь.",
         words: ["смотреть", "посмотреть"],
         correctAnswers: { 1: "смотреть" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я не хочу ___ за парковки.",
+        text: "Я не хочу {{1}} за парковки.",
         words: ["платить", "заплатить"],
         correctAnswers: { 1: "заплатить" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я обожаю ___ закаты.",
+        text: "Я обожаю {{1}} закаты.",
         words: ["фотографировать", "сфотографировать"],
         correctAnswers: { 1: "фотографировать" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ там на полгода.",
+        text: "Я хочу {{1}} там на полгода.",
         words: ["оставаться", "остаться"],
         correctAnswers: { 1: "остаться" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я ненавижу ___ в плохие рестораны.",
+        text: "Я ненавижу {{1}} в плохие рестораны.",
         words: ["ходить", "сходить"],
         correctAnswers: { 1: "ходить" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Я хочу ___ горячий шоколад.",
+        text: "Я хочу {{1}} горячий шоколад.",
         words: ["пить", "выпить"],
         correctAnswers: { 1: "выпить" }
     }

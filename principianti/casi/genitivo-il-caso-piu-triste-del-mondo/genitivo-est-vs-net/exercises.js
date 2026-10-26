@@ -9,70 +9,70 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 const p1exercises = [
     {
         instruction: "Metti il pronome o il sostantivo al genitivo.",
-        text: "У ___ есть сестра.",
+        text: "У {{1}} есть сестра.",
         words: ["я", "мне", "меня"],
         correctAnswers: { 1: "меня" },
         explanation: "Genitivo del pronome personale: я → меня."
     },
     {
         instruction: "Metti il pronome o il sostantivo al genitivo.",
-        text: "У ___ есть друг.",
+        text: "У {{1}} есть друг.",
         words: ["моя старшая сестра", "моей старшей сестре", "моей старшей сестры"],
         correctAnswers: { 1: "моей старшей сестры" },
         explanation: "Genitivo: сестра (femminile) → сестры; l'aggettivo concorda: моя старшая → моей старшей."
     },
     {
         instruction: "Metti il pronome o il sostantivo al genitivo.",
-        text: "У ___ есть машина?",
+        text: "У {{1}} есть машина?",
         words: ["твой сосед", "твоему соседу", "твоего соседа"],
         correctAnswers: { 1: "твоего соседа" },
         explanation: "Genitivo: сосед (maschile) → соседа; il pronome concorda: твой → твоего."
     },
     {
         instruction: "Metti il pronome o il sostantivo al genitivo.",
-        text: "У ___ есть собака.",
+        text: "У {{1}} есть собака.",
         words: ["наша бабушка", "нашей бабушке", "нашей бабушки"],
         correctAnswers: { 1: "нашей бабушки" },
         explanation: "Genitivo: бабушка (femminile) → бабушки; il pronome concorda: наша → нашей."
     },
     {
         instruction: "Metti il pronome o il sostantivo al genitivo.",
-        text: "У ___ есть работа.",
+        text: "У {{1}} есть работа.",
         words: ["она", "ей", "неё"],
         correctAnswers: { 1: "неё" },
         explanation: "Genitivo del pronome personale: она → неё (con -н- dopo la preposizione «у»)."
     },
     {
         instruction: "Metti il pronome o il sostantivo al genitivo.",
-        text: "У ___ есть квартира.",
+        text: "У {{1}} есть квартира.",
         words: ["ваш дядя", "вашему дяде", "вашего дяди"],
         correctAnswers: { 1: "вашего дяди" },
         explanation: "дядя è maschile ma si declina come i sostantivi femminili in -я: genitivo дяди. Il pronome concorda al maschile: ваш → вашего."
     },
     {
         instruction: "Metti il pronome o il sostantivo al genitivo.",
-        text: "У его ___ есть время.",
+        text: "У его {{1}} есть время.",
         words: ["брат", "брату", "брата"],
         correctAnswers: { 1: "брата" },
         explanation: "Sostantivo maschile al genitivo: брата. (его è invariabile, non cambia forma)."
     },
     {
         instruction: "Metti il pronome o il sostantivo al genitivo.",
-        text: "У её ___ есть велосипед.",
+        text: "У её {{1}} есть велосипед.",
         words: ["подруга", "подруге", "подруги"],
         correctAnswers: { 1: "подруги" },
         explanation: "Sostantivo femminile al genitivo: подруги. (её è invariabile, non cambia forma)."
     },
     {
         instruction: "Metti il pronome o il sostantivo al genitivo.",
-        text: "У ___ есть дети.",
+        text: "У {{1}} есть дети.",
         words: ["они", "им", "них"],
         correctAnswers: { 1: "них" },
         explanation: "Genitivo del pronome personale: они → них (con -н- dopo la preposizione «у»)."
     },
     {
         instruction: "Metti il pronome o il sostantivo al genitivo.",
-        text: "У ___ есть дача.",
+        text: "У {{1}} есть дача.",
         words: ["мы", "нам", "нас"],
         correctAnswers: { 1: "нас" },
         explanation: "Genitivo del pronome personale: мы → нас."
@@ -334,16 +334,16 @@ function initPanelEvn10() {
     let currentCard = 0;
 
     const multipleChoiceData = [
-        { question: "У моей соседки нет ___.", options: ["новый телефон", "новому телефону", "нового телефона"], answer: "нового телефона" },
-        { question: "У нашей бабушки нет ___.", options: ["старая фотография", "старую фотографию", "старой фотографии"], answer: "старой фотографии" },
-        { question: "У его сестры нет ___.", options: ["интересная книга", "интересную книгу", "интересной книги"], answer: "интересной книги" },
-        { question: "У твоей мамы нет ___.", options: ["вкусный торт", "вкусному торту", "вкусного торта"], answer: "вкусного торта" },
-        { question: "У вашей тёти нет ___.", options: ["красивое платье", "красивому платью", "красивого платья"], answer: "красивого платья" },
-        { question: "У твоего друга нет ___.", options: ["красная машина", "красную машину", "красной машины"], answer: "красной машины" },
-        { question: "У вашего брата нет ___.", options: ["большая собака", "большую собаку", "большой собаки"], answer: "большой собаки" },
-        { question: "У её дяди нет ___.", options: ["новый дом", "новому дому", "нового дома"], answer: "нового дома" },
-        { question: "У моего папы нет ___.", options: ["быстрый мотоцикл", "быстрому мотоциклу", "быстрого мотоцикла"], answer: "быстрого мотоцикла" },
-        { question: "У нашего соседа нет ___.", options: ["большой сад", "большому саду", "большого сада"], answer: "большого сада" }
+        { question: "У моей соседки нет {{1}}.", options: ["новый телефон", "новому телефону", "нового телефона"], answer: "нового телефона" },
+        { question: "У нашей бабушки нет {{1}}.", options: ["старая фотография", "старую фотографию", "старой фотографии"], answer: "старой фотографии" },
+        { question: "У его сестры нет {{1}}.", options: ["интересная книга", "интересную книгу", "интересной книги"], answer: "интересной книги" },
+        { question: "У твоей мамы нет {{1}}.", options: ["вкусный торт", "вкусному торту", "вкусного торта"], answer: "вкусного торта" },
+        { question: "У вашей тёти нет {{1}}.", options: ["красивое платье", "красивому платью", "красивого платья"], answer: "красивого платья" },
+        { question: "У твоего друга нет {{1}}.", options: ["красная машина", "красную машину", "красной машины"], answer: "красной машины" },
+        { question: "У вашего брата нет {{1}}.", options: ["большая собака", "большую собаку", "большой собаки"], answer: "большой собаки" },
+        { question: "У её дяди нет {{1}}.", options: ["новый дом", "новому дому", "нового дома"], answer: "нового дома" },
+        { question: "У моего папы нет {{1}}.", options: ["быстрый мотоцикл", "быстрому мотоциклу", "быстрого мотоцикла"], answer: "быстрого мотоцикла" },
+        { question: "У нашего соседа нет {{1}}.", options: ["большой сад", "большому саду", "большого сада"], answer: "большого сада" }
     ];
     const matchPairs = [
         { left: "У лучшей подруги есть красная машина.", right: "У лучшей подруги нет красной машины." },
@@ -406,7 +406,7 @@ function initPanelEvn10() {
             if (i < MC_END) {
                 const item = multipleChoiceData[i];
                 const opts = item.options.map((o, idx) => `<div class="word-option" data-word="${o}" data-index="${idx}">${o}</div>`).join('');
-                const questionText = item.question.replace('___', `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`);
+                const questionText = item.question.replace('{{1}}', `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`);
                 card.innerHTML = `
                     <div class="instruction">Completa la frase scegliendo la forma corretta</div>
                     <div class="exercise-text">${questionText}</div>

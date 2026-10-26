@@ -9,28 +9,28 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 const p1exercises = [
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Слесарь долго ___ замок, но не мог открыть.",
+        text: "Слесарь долго {{1}} замок, но не мог открыть.",
         words: ["чинил", "починил"],
         correctAnswers: { 1: "чинил" },
         explanation: "Imperfettivo: processo in corso, senza risultato (долго + не мог)."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Наконец слесарь ___ замок.",
+        text: "Наконец слесарь {{1}} замок.",
         words: ["чинил", "починил"],
         correctAnswers: { 1: "починил" },
         explanation: "Perfettivo: azione completata con risultato (наконец = finalmente)."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Он каждый день ___ двери в этом доме.",
+        text: "Он каждый день {{1}} двери в этом доме.",
         words: ["открывал", "открыл"],
         correctAnswers: { 1: "открывал" },
         explanation: "Imperfettivo: azione ripetuta abitualmente (каждый день)."
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Сосед ___ дверь и вошёл.",
+        text: "Сосед {{1}} дверь и вошёл.",
         words: ["открывал", "открыл"],
         correctAnswers: { 1: "открыл" },
         explanation: "Perfettivo: azione singola completata, parte di una catena di eventi."
@@ -44,25 +44,25 @@ const p1exercises = [
 const p2exercises = [
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Гидравлик ___ номер телефона слесаря.",
+        text: "Гидравлик {{1}} номер телефона слесаря.",
         words: ["набирал", "набрал"],
         correctAnswers: { 1: "набрал" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Он долго ___ номер, но линия была занята.",
+        text: "Он долго {{1}} номер, но линия была занята.",
         words: ["набирал", "набрал"],
         correctAnswers: { 1: "набирал" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Заказчик ___ трубку после разговора.",
+        text: "Заказчик {{1}} трубку после разговора.",
         words: ["вешал", "повесил"],
         correctAnswers: { 1: "повесил" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Мастер ___ замки каждый день — это его работа.",
+        text: "Мастер {{1}} замки каждый день — это его работа.",
         words: ["ломал", "сломал"],
         correctAnswers: { 1: "ломал" }
     }
@@ -75,25 +75,25 @@ const p2exercises = [
 const p3exercises = [
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Он ___ дверь ключом и вошёл в квартиру.",
+        text: "Он {{1}} дверь ключом и вошёл в квартиру.",
         words: ["открывал", "открыл"],
         correctAnswers: { 1: "открыл" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Пока слесарь ___ замок, мы пили чай.",
+        text: "Пока слесарь {{1}} замок, мы пили чай.",
         words: ["чинил", "починил"],
         correctAnswers: { 1: "чинил" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Кто ___ этот замок? Он не работает!",
+        text: "Кто {{1}} этот замок? Он не работает!",
         words: ["ломал", "сломал"],
         correctAnswers: { 1: "сломал" }
     },
     {
         instruction: "Выбери правильный вид глагола.",
-        text: "Она всегда ___ дверь на два замка.",
+        text: "Она всегда {{1}} дверь на два замка.",
         words: ["закрывала", "закрыла"],
         correctAnswers: { 1: "закрывала" }
     }
