@@ -1,0 +1,18 @@
+{
+  "id": "b1-azione-zamok-lessico",
+  "url": "/livello_elementare/azione/zamok/lessico/",
+  "level": "b1",
+  "doc_type": "exercise",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [],
+  "complementi": [],
+  "lessico": [
+    "vita-quotidiana"
+  ],
+  "title_ru": "ЛЕКСИКА B1",
+  "title_it": "Lessico B1 dal testo «Как сломать дверной замок»",
+  "source_doc": "b1-azione-zamok",
+  "focus": "lessico"
+}

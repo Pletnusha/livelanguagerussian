@@ -1,0 +1,82 @@
+{
+  "generated": "2026-10-26T11:46:23.466Z",
+  "count": 4,
+  "pages": [
+    {
+      "id": "b1-azione-zamok",
+      "url": "/livello_elementare/azione/zamok/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "КАК СЛОМАТЬ ДВЕРНОЙ ЗАМОК",
+      "title_it": "Come rompere la serratura — lessico B1, aspetto e prefissi verbali",
+      "_source": "livello_elementare/azione/zamok/meta.json"
+    },
+    {
+      "id": "b1-azione-zamok-aspetto-prefissi",
+      "url": "/livello_elementare/azione/zamok/aspetto-prefissi/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "aspetto/perfettivo-con-prefissi"
+      ],
+      "complementi": [],
+      "lessico": [
+        "vita-quotidiana"
+      ],
+      "title_ru": "ПРИСТАВОЧНЫЕ ГЛАГОЛЫ",
+      "title_it": "Verbi con prefisso — вы-, по-, до-, пере-, на-",
+      "source_doc": "b1-azione-zamok",
+      "focus": "aspetto-prefissi",
+      "_source": "livello_elementare/azione/zamok/aspetto-prefissi/meta.json"
+    },
+    {
+      "id": "b1-azione-zamok-aspetto-scelta",
+      "url": "/livello_elementare/azione/zamok/aspetto-scelta/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "aspetto/perfettivo-vs-imperfettivo"
+      ],
+      "complementi": [],
+      "lessico": [
+        "vita-quotidiana"
+      ],
+      "title_ru": "НСВ ИЛИ СВ",
+      "title_it": "Perfettivo o imperfettivo — coppie aspettuali dal testo",
+      "source_doc": "b1-azione-zamok",
+      "focus": "aspetto-scelta",
+      "_source": "livello_elementare/azione/zamok/aspetto-scelta/meta.json"
+    },
+    {
+      "id": "b1-azione-zamok-lessico",
+      "url": "/livello_elementare/azione/zamok/lessico/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [],
+      "complementi": [],
+      "lessico": [
+        "vita-quotidiana"
+      ],
+      "title_ru": "ЛЕКСИКА B1",
+      "title_it": "Lessico B1 dal testo «Как сломать дверной замок»",
+      "source_doc": "b1-azione-zamok",
+      "focus": "lessico",
+      "_source": "livello_elementare/azione/zamok/lessico/meta.json"
+    }
+  ]
+}
