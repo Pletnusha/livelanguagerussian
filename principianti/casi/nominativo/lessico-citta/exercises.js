@@ -14,9 +14,9 @@ const p1exercises = [
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "la farmacia = {{1}}, la piazza = {{2}}, il parco = {{3}}, la strada = {{4}}",
-        words: ["аптека", "площадь", "парк", "улица", "рынок"],
-        correctAnswers: { 1: "аптека", 2: "площадь", 3: "парк", 4: "улица" }
+        text: "la farmacia = {{1}}, la piazza = {{2}}, la strada = {{3}}",
+        words: ["аптека", "площадь", "улица", "рынок"],
+        correctAnswers: { 1: "аптека", 2: "площадь", 3: "улица" }
     }
 ];
 
@@ -32,9 +32,9 @@ const p2exercises = [
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "il tram = {{1}}, i pattini a rotelle = {{2}}, la bicicletta = {{3}}, il monopattino = {{4}}",
-        words: ["трамвай", "ролики", "велосипед", "самокат", "автобус"],
-        correctAnswers: { 1: "трамвай", 2: "ролики", 3: "велосипед", 4: "самокат" }
+        text: "il tram = {{1}}, la bicicletta = {{2}}, il monopattino = {{3}}",
+        words: ["трамвай", "велосипед", "самокат", "автобус"],
+        correctAnswers: { 1: "трамвай", 2: "велосипед", 3: "самокат" }
     }
 ];
 
@@ -50,9 +50,9 @@ const p3exercises = [
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "la farmacia = {{1}}, la piazza = {{2}}, il parco = {{3}}, la strada = {{4}}",
-        words: ["аптека", "площадь", "парк", "улица", "магазин"],
-        correctAnswers: { 1: "аптека", 2: "площадь", 3: "парк", 4: "улица" }
+        text: "la farmacia = {{1}}, la piazza = {{2}}, la strada = {{3}}",
+        words: ["аптека", "площадь", "улица", "магазин"],
+        correctAnswers: { 1: "аптека", 2: "площадь", 3: "улица" }
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
@@ -62,9 +62,9 @@ const p3exercises = [
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "il tram = {{1}}, i pattini a rotelle = {{2}}, la bicicletta = {{3}}, il monopattino = {{4}}",
-        words: ["трамвай", "ролики", "велосипед", "самокат", "поезд"],
-        correctAnswers: { 1: "трамвай", 2: "ролики", 3: "велосипед", 4: "самокат" }
+        text: "il tram = {{1}}, la bicicletta = {{2}}, il monopattino = {{3}}",
+        words: ["трамвай", "велосипед", "самокат", "поезд"],
+        correctAnswers: { 1: "трамвай", 2: "велосипед", 3: "самокат" }
     }
 ];
 
@@ -84,7 +84,6 @@ const p4cards = [
 const p5cards = [
     { front: "la farmacia", back: "аптека", frontImg: "/assets/img/principianti/vocaboli/citta/АПТЕКА.png" },
     { front: "la piazza", back: "площадь", frontImg: "/assets/img/principianti/vocaboli/citta/ПЛОЩАДЬ.png" },
-    { front: "il parco", back: "парк" },
     { front: "la strada", back: "улица", frontImg: "/assets/img/principianti/vocaboli/citta/УЛИЦА.png" }
 ];
 
@@ -97,7 +96,6 @@ const p6cards = [
     { front: "l'aereo", back: "самолёт", frontImg: "/assets/img/principianti/vocaboli/citta/САМОЛЁТ.png" },
     { front: "la macchina", back: "машина", frontImg: "/assets/img/principianti/vocaboli/citta/МАШИНА.png" },
     { front: "il tram", back: "трамвай", frontImg: "/assets/img/principianti/vocaboli/citta/ТРАМВАЙ.png" },
-    { front: "i pattini a rotelle", back: "ролики" },
     { front: "la bicicletta", back: "велосипед", frontImg: "/assets/img/principianti/vocaboli/citta/велосипед.png" },
     { front: "il monopattino", back: "самокат", frontImg: "/assets/img/principianti/vocaboli/citta/самокат.png" }
 ];
@@ -112,21 +110,19 @@ const p7cards = [
     { front: "la stazione", back: "вокзал", frontImg: "/assets/img/principianti/vocaboli/citta/ВОКЗАЛ.png" },
     { front: "la farmacia", back: "аптека", frontImg: "/assets/img/principianti/vocaboli/citta/АПТЕКА.png" },
     { front: "la piazza", back: "площадь", frontImg: "/assets/img/principianti/vocaboli/citta/ПЛОЩАДЬ.png" },
-    { front: "il parco", back: "парк" },
     { front: "la strada", back: "улица", frontImg: "/assets/img/principianti/vocaboli/citta/УЛИЦА.png" },
     { front: "l'autobus", back: "автобус", frontImg: "/assets/img/principianti/vocaboli/citta/АВТОБУС.png" },
     { front: "il treno", back: "поезд", frontImg: "/assets/img/principianti/vocaboli/citta/ПОЕЗД.png" },
     { front: "l'aereo", back: "самолёт", frontImg: "/assets/img/principianti/vocaboli/citta/САМОЛЁТ.png" },
     { front: "la macchina", back: "машина", frontImg: "/assets/img/principianti/vocaboli/citta/МАШИНА.png" },
     { front: "il tram", back: "трамвай", frontImg: "/assets/img/principianti/vocaboli/citta/ТРАМВАЙ.png" },
-    { front: "i pattini a rotelle", back: "ролики" },
     { front: "la bicicletta", back: "велосипед", frontImg: "/assets/img/principianti/vocaboli/citta/велосипед.png" },
     { front: "il monopattino", back: "самокат", frontImg: "/assets/img/principianti/vocaboli/citta/самокат.png" }
 ];
 
 // ============================================================
 // PANEL 8 — Quiz misto · public
-// MC (6) + Match (6) + Scrivi (4) = 16
+// MC (6) + Match (4) + Scrivi (4) = 14
 // ============================================================
 function initPanelCit8() {
     const panel = document.getElementById('panel-cit-8');
@@ -143,18 +139,16 @@ function initPanelCit8() {
         { question: "Come si dice 'la farmacia' in russo?", options: ["аптека", "банк", "магазин"], answer: "аптека" },
         { question: "Come si dice 'il treno' in russo?", options: ["поезд", "автобус", "самолёт"], answer: "поезд" },
         { question: "Come si dice 'la bicicletta' in russo?", options: ["велосипед", "самокат", "машина"], answer: "велосипед" },
-        { question: "Come si dice 'la piazza' in russo?", options: ["площадь", "улица", "парк"], answer: "площадь" },
+        { question: "Come si dice 'la piazza' in russo?", options: ["площадь", "улица", "вокзал"], answer: "площадь" },
         { question: "Come si dice 'la stazione' in russo?", options: ["вокзал", "рынок", "банк"], answer: "вокзал" },
-        { question: "Come si dice 'il monopattino' in russo?", options: ["самокат", "велосипед", "ролики"], answer: "самокат" }
+        { question: "Come si dice 'il monopattino' in russo?", options: ["самокат", "велосипед", "трамвай"], answer: "самокат" }
     ];
 
     const matchPairs = [
         { left: "il mercato", right: "рынок" },
         { left: "il negozio", right: "магазин" },
         { left: "la macchina", right: "машина" },
-        { left: "il parco", right: "парк" },
-        { left: "il tram", right: "трамвай" },
-        { left: "i pattini a rotelle", right: "ролики" }
+        { left: "il tram", right: "трамвай" }
     ];
 
     const quizData = [
