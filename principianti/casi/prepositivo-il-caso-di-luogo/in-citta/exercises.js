@@ -10,72 +10,72 @@ const p1exercises = [
     {
         instruction: "Scegli la preposizione e la forma corretta.",
         text: "Мы любим гулять {{1}}.",
-        words: ["на парке", "в парк", "в парке"],
+        words: ["на парке", "в парке", "на парк", "в парк"],
         correctAnswers: { 1: "в парке" },
-        explanation: "Con парк si usa la preposizione в (non на); prepositivo: парк → парке."
+        explanation: "парк → в парке (м.р., -е)"
     },
     {
         instruction: "Scegli la preposizione e la forma corretta.",
         text: "Я {{1}}.",
-        words: ["в улице", "на улице", "на улица"],
+        words: ["на улице", "в улице", "на улица", "в улица"],
         correctAnswers: { 1: "на улице" },
-        explanation: "Con улица si usa на; prepositivo: улица → улице."
+        explanation: "улица → на улице (ж.р., -е)"
     },
     {
         instruction: "Scegli la preposizione e la forma corretta.",
         text: "Катя {{1}}.",
-        words: ["на рынок", "на рынке", "в рынке"],
+        words: ["в рынке", "на рынок", "на рынке", "в рынок"],
         correctAnswers: { 1: "на рынке" },
-        explanation: "Con рынок si usa на (luogo all'aperto); prepositivo: рынок → рынке."
+        explanation: "рынок → на рынке (м.р., -е)"
     },
     {
         instruction: "Scegli la preposizione e la forma corretta.",
         text: "Андрей {{1}}.",
-        words: ["на банке", "в банк", "в банке"],
+        words: ["на банке", "в банк", "на банк", "в банке"],
         correctAnswers: { 1: "в банке" },
-        explanation: "Con банк si usa в; prepositivo: банк → банке."
+        explanation: "банк → в банке (м.р., -е)"
     },
     {
         instruction: "Scegli la preposizione e la forma corretta.",
         text: "Женя {{1}}.",
-        words: ["в больница", "в больнице", "на больнице"],
+        words: ["в больница", "в больнице", "на больнице", "на больница"],
         correctAnswers: { 1: "в больнице" },
-        explanation: "Con больница si usa в; prepositivo: больница → больнице."
+        explanation: "больница → в больнице (ж.р., -е)"
     },
     {
         instruction: "Scegli la preposizione e la forma corretta.",
         text: "Лена {{1}}.",
-        words: ["в офис", "в офисе", "на офисе"],
+        words: ["на офисе", "в офис", "в офисе", "на офис"],
         correctAnswers: { 1: "в офисе" },
-        explanation: "Con офис si usa в; prepositivo: офис → офисе."
+        explanation: "офис → в офисе (м.р., -е)"
     },
     {
         instruction: "Scegli la preposizione e la forma corretta.",
         text: "Мы {{1}}.",
-        words: ["на ресторане", "в ресторан", "в ресторане"],
+        words: ["в ресторане", "на ресторане", "в ресторан", "на ресторан"],
         correctAnswers: { 1: "в ресторане" },
-        explanation: "Con ресторан si usa в; prepositivo: ресторан → ресторане."
+        explanation: "ресторан → в ресторане (м.р., -е)"
     },
     {
         instruction: "Scegli la preposizione e la forma corretta.",
         text: "Студенты {{1}}.",
-        words: ["в библиотека", "на библиотеке", "в библиотеке"],
+        words: ["на библиотеке", "в библиотека", "в библиотеке", "на библиотека"],
         correctAnswers: { 1: "в библиотеке" },
-        explanation: "Con библиотека si usa в; prepositivo: библиотека → библиотеке."
+        explanation: "библиотека → в библиотеке (ж.р., -е)"
     },
     {
         instruction: "Scegli la preposizione e la forma corretta.",
         text: "Они {{1}}.",
-        words: ["на музее", "в музей", "в музее"],
+        words: ["в музее", "на музее", "в музей", "на музей"],
         correctAnswers: { 1: "в музее" },
-        explanation: "Con музей si usa в; prepositivo: музей → музее."
+        explanation: "музей → в музее (м.р., -е)"
     },
     {
         instruction: "Scegli la preposizione e la forma corretta.",
         text: "Друзья {{1}}.",
-        words: ["в перекрёстке", "на перекрёсток", "на перекрёстке"],
+        words: ["в перекрёстке", "на перекрёсток", "на перекрёстке", "в перекрёсток"],
         correctAnswers: { 1: "на перекрёстке" },
-        explanation: "Con перекрёсток si usa на; prepositivo: перекрёсток → перекрёстке."
+        explanation: "перекрёсток → на перекрёстке (м.р., -е)"
     }
 ];
 
@@ -85,64 +85,74 @@ const p1exercises = [
 // ============================================================
 const p2exercises = [
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Мы на {{1}}.",
-        words: ["остановка", "остановки", "остановке"],
-        correctAnswers: { 1: "остановке" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Мы {{1}}.",
+        words: ["на остановке", "в остановке", "на остановка", "в остановка"],
+        correctAnswers: { 1: "на остановке" },
+        explanation: "остановка → на остановке (ж.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Машина на {{1}}.",
-        words: ["парковка", "парковки", "парковке"],
-        correctAnswers: { 1: "парковке" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Машина {{1}}.",
+        words: ["в парковке", "на парковка", "на парковке", "в парковка"],
+        correctAnswers: { 1: "на парковке" },
+        explanation: "парковка → на парковке (ж.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Платье в {{1}} магазина.",
-        words: ["витрина", "витрины", "витрине"],
-        correctAnswers: { 1: "витрине" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Платье {{1}} магазина.",
+        words: ["в витрине", "на витрине", "в витрина", "на витрина"],
+        correctAnswers: { 1: "в витрине" },
+        explanation: "витрина → в витрине (ж.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Дедушка на {{1}}.",
-        words: ["лавочка", "лавочки", "лавочке"],
-        correctAnswers: { 1: "лавочке" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Дедушка {{1}}.",
+        words: ["в лавочке", "на лавочка", "на лавочке", "в лавочка"],
+        correctAnswers: { 1: "на лавочке" },
+        explanation: "лавочка → на лавочке (ж.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Дети в {{1}}.",
-        words: ["школа", "школы", "школе"],
-        correctAnswers: { 1: "школе" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Дети {{1}}.",
+        words: ["на школе", "в школа", "в школе", "на школа"],
+        correctAnswers: { 1: "в школе" },
+        explanation: "школа → в школе (ж.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Студенты в {{1}}.",
-        words: ["гостиница", "гостиницы", "гостинице"],
-        correctAnswers: { 1: "гостинице" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Студенты {{1}}.",
+        words: ["в гостинице", "на гостинице", "в гостиница", "на гостиница"],
+        correctAnswers: { 1: "в гостинице" },
+        explanation: "гостиница → в гостинице (ж.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Тимур в {{1}}.",
-        words: ["аптека", "аптеки", "аптеке"],
-        correctAnswers: { 1: "аптеке" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Тимур {{1}}.",
+        words: ["на аптеке", "в аптека", "в аптеке", "на аптека"],
+        correctAnswers: { 1: "в аптеке" },
+        explanation: "аптека → в аптеке (ж.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Мы на {{1}}.",
-        words: ["почта", "почты", "почте"],
-        correctAnswers: { 1: "почте" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Мы {{1}}.",
+        words: ["на почте", "в почте", "на почта", "в почта"],
+        correctAnswers: { 1: "на почте" },
+        explanation: "почта → на почте (ж.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Я на {{1}}.",
-        words: ["улица", "улицы", "улице"],
-        correctAnswers: { 1: "улице" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Я {{1}}.",
+        words: ["в улице", "на улица", "на улице", "в улица"],
+        correctAnswers: { 1: "на улице" },
+        explanation: "улица → на улице (ж.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Женя в {{1}}.",
-        words: ["больница", "больницы", "больнице"],
-        correctAnswers: { 1: "больнице" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Женя {{1}}.",
+        words: ["в больнице", "на больнице", "в больница", "на больница"],
+        correctAnswers: { 1: "в больнице" },
+        explanation: "больница → в больнице (ж.р., -е)"
     }
 ];
 
@@ -152,64 +162,74 @@ const p2exercises = [
 // ============================================================
 const p3exercises = [
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Катя на {{1}}.",
-        words: ["рынок", "рынка", "рынке"],
-        correctAnswers: { 1: "рынке" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Катя {{1}}.",
+        words: ["в рынке", "на рынок", "на рынке", "в рынок"],
+        correctAnswers: { 1: "на рынке" },
+        explanation: "рынок → на рынке (м.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Аня в {{1}}.",
-        words: ["магазин", "магазина", "магазине"],
-        correctAnswers: { 1: "магазине" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Аня {{1}}.",
+        words: ["в магазине", "на магазине", "в магазин", "на магазин"],
+        correctAnswers: { 1: "в магазине" },
+        explanation: "магазин → в магазине (м.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Тимур в {{1}}.",
-        words: ["парк", "парка", "парке"],
-        correctAnswers: { 1: "парке" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Тимур {{1}}.",
+        words: ["на парке", "в парк", "в парке", "на парк"],
+        correctAnswers: { 1: "в парке" },
+        explanation: "парк → в парке (м.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Мы в {{1}}.",
-        words: ["банк", "банка", "банке"],
-        correctAnswers: { 1: "банке" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Мы {{1}}.",
+        words: ["в банке", "на банке", "в банк", "на банк"],
+        correctAnswers: { 1: "в банке" },
+        explanation: "банк → в банке (м.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Они на {{1}}.",
-        words: ["перекрёсток", "перекрёстка", "перекрёстке"],
-        correctAnswers: { 1: "перекрёстке" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Они {{1}}.",
+        words: ["в перекрёстке", "на перекрёсток", "на перекрёстке", "в перекрёсток"],
+        correctAnswers: { 1: "на перекрёстке" },
+        explanation: "перекрёсток → на перекрёстке (м.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Машина в {{1}}.",
-        words: ["гараж", "гаража", "гараже"],
-        correctAnswers: { 1: "гараже" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Машина {{1}}.",
+        words: ["на гараже", "в гараж", "в гараже", "на гараж"],
+        correctAnswers: { 1: "в гараже" },
+        explanation: "гараж → в гараже (м.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Они в {{1}}.",
-        words: ["ресторан", "ресторана", "ресторане"],
-        correctAnswers: { 1: "ресторане" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Они {{1}}.",
+        words: ["в ресторане", "на ресторане", "в ресторан", "на ресторан"],
+        correctAnswers: { 1: "в ресторане" },
+        explanation: "ресторан → в ресторане (м.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Я в {{1}}.",
-        words: ["супермаркет", "супермаркета", "супермаркете"],
-        correctAnswers: { 1: "супермаркете" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Я {{1}}.",
+        words: ["на супермаркете", "в супермаркет", "в супермаркете", "на супермаркет"],
+        correctAnswers: { 1: "в супермаркете" },
+        explanation: "супермаркет → в супермаркете (м.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Вы на {{1}}?",
-        words: ["вокзал", "вокзала", "вокзале"],
-        correctAnswers: { 1: "вокзале" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Вы {{1}}?",
+        words: ["на вокзале", "в вокзале", "на вокзал", "в вокзал"],
+        correctAnswers: { 1: "на вокзале" },
+        explanation: "вокзал → на вокзале (м.р., -е)"
     },
     {
-        instruction: "Scegli la forma corretta al prepositivo.",
-        text: "Тимур и Катя в {{1}}.",
-        words: ["университет", "университета", "университете"],
-        correctAnswers: { 1: "университете" }
+        instruction: "Scegli la preposizione e la forma corretta.",
+        text: "Тимур и Катя {{1}}.",
+        words: ["на университете", "в университет", "в университете", "на университет"],
+        correctAnswers: { 1: "в университете" },
+        explanation: "университет → в университете (м.р., -е)"
     }
 ];
 
@@ -334,16 +354,16 @@ function initPanelCit10() {
     let currentCard = 0;
 
     const multipleChoiceData = [
-        { question: "Мы на ___.", options: ["остановке", "остановка"], answer: "остановке" },
-        { question: "Машина на ___.", options: ["парковке", "парковка"], answer: "парковке" },
-        { question: "Платье в ___ магазина.", options: ["витрине", "витрина"], answer: "витрине" },
-        { question: "Дедушка на ___.", options: ["лавочке", "лавочка"], answer: "лавочке" },
-        { question: "Дети в ___.", options: ["школе", "школа"], answer: "школе" },
-        { question: "Студенты в ___.", options: ["гостинице", "гостиница"], answer: "гостинице" },
-        { question: "Тимур в ___.", options: ["аптеке", "аптека"], answer: "аптеке" },
-        { question: "Мы на ___.", options: ["почте", "почта"], answer: "почте" },
-        { question: "Я на ___.", options: ["улице", "улица"], answer: "улице" },
-        { question: "Женя в ___.", options: ["больнице", "больница"], answer: "больнице" }
+        { question: "Мы ___.", options: ["на остановке", "в остановке", "на остановка", "в остановка"], answer: "на остановке" },
+        { question: "Машина ___.", options: ["в парковке", "на парковке", "на парковка", "в парковка"], answer: "на парковке" },
+        { question: "Платье ___ магазина.", options: ["в витрине", "на витрине", "в витрина", "на витрина"], answer: "в витрине" },
+        { question: "Дедушка ___.", options: ["в лавочке", "на лавочке", "на лавочка", "в лавочка"], answer: "на лавочке" },
+        { question: "Дети ___.", options: ["на школе", "в школе", "в школа", "на школа"], answer: "в школе" },
+        { question: "Студенты ___.", options: ["в гостинице", "на гостинице", "в гостиница", "на гостиница"], answer: "в гостинице" },
+        { question: "Тимур ___.", options: ["на аптеке", "в аптеке", "в аптека", "на аптека"], answer: "в аптеке" },
+        { question: "Мы ___.", options: ["на почте", "в почте", "на почта", "в почта"], answer: "на почте" },
+        { question: "Я ___.", options: ["в улице", "на улице", "на улица", "в улица"], answer: "на улице" },
+        { question: "Женя ___.", options: ["в больнице", "на больнице", "в больница", "на больница"], answer: "в больнице" }
     ];
 
     const matchPairs = [
