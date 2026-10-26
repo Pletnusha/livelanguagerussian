@@ -160,12 +160,12 @@ const p8cards = [
 // PANEL 9 — Flashcard · paid
 // ============================================================
 const p9cards = [
-    { front: "сломать ≠ починить", back: "rompere ≠ riparare" },
-    { front: "открыть ≠ закрыть", back: "aprire ≠ chiudere" },
-    { front: "набрать ≠ повесить", back: "comporre ≠ riattaccare" },
-    { front: "входная ≠ задняя", back: "d'ingresso ≠ posteriore" },
-    { front: "внезапно ≠ постепенно", back: "all'improvviso ≠ gradualmente" },
-    { front: "настойчиво ≠ робко", back: "insistentemente ≠ timidamente" }
+    { front: "чинить = ремонтировать", back: "riparare = aggiustare" },
+    { front: "слесарь = мастер", back: "fabbro = artigiano" },
+    { front: "заказчик = клиент", back: "committente = cliente" },
+    { front: "внезапно = вдруг", back: "all'improvviso = di colpo" },
+    { front: "печально = грустно", back: "tristemente = con tristezza" },
+    { front: "набрать = позвонить", back: "comporre = telefonare" }
 ];
 
 // ============================================================
