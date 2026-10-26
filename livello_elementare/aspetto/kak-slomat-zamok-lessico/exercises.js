@@ -8,31 +8,31 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 const p1exercises = [
     {
         instruction: "Выбери правильное слово.",
-        text: "Слесарь пришёл ___ дверной замок.",
-        words: ["чинить", "сломать"],
-        correctAnswers: { 1: "чинить" },
-        explanation: "Il fabbro è venuto per riparare, non rompere. «Чинить» = riparare."
-    },
-    {
-        instruction: "Выбери правильное слово.",
-        text: "Сосед позвонил в дверь и попросил ___ воды.",
-        words: ["бокал", "стакан"],
-        correctAnswers: { 1: "стакан" },
-        explanation: "Per l'acqua si usa «стакан» (bicchiere), non «бокал» (calice per vino)."
-    },
-    {
-        instruction: "Выбери правильное слово.",
-        text: "После ___ мы решили пойти домой.",
-        words: ["вечеринки", "тренировки"],
-        correctAnswers: { 1: "вечеринки" },
-        explanation: "«Вечеринка» = festa, party. Dopo la festa siamo andati a casa."
-    },
-    {
-        instruction: "Выбери правильное слово.",
-        text: "Он ___ позвонил в дверь.",
-        words: ["внезапно", "печально"],
+        text: "Если что-то ___ сломалось, можно им звонить.",
+        words: ["внезапно", "часто"],
         correctAnswers: { 1: "внезапно" },
-        explanation: "«Внезапно» = all'improvviso. Ha suonato all'improvviso."
+        explanation: "«Внезапно сломалось» — all'improvviso. «Часто» + СВ «сломалось» не сочетается."
+    },
+    {
+        instruction: "Выбери правильное слово.",
+        text: "Катя ___ трубку.",
+        words: ["повесила", "положила"],
+        correctAnswers: { 1: "повесила" },
+        explanation: "«Повесить трубку» — riattaccare. Устойчивое выражение. «Положить трубку» не говорят."
+    },
+    {
+        instruction: "Выбери правильное слово.",
+        text: "Их компания ___ услуги 24 часа в сутки.",
+        words: ["предоставляет", "даёт"],
+        correctAnswers: { 1: "предоставляет" },
+        explanation: "«Предоставлять услуги» — fornire servizi. Коллокация. «Давать услуги» не говорят."
+    },
+    {
+        instruction: "Выбери правильное слово.",
+        text: "Кто-то ___ хотел попасть в её квартиру.",
+        words: ["настойчиво", "сильно"],
+        correctAnswers: { 1: "настойчиво" },
+        explanation: "«Настойчиво» — insistentemente. «Сильно хотел» — разговорное, не подходит к «попасть»."
     }
 ];
 
@@ -42,27 +42,27 @@ const p1exercises = [
 const p2exercises = [
     {
         instruction: "Выбери правильное слово.",
-        text: "___ предоставляет услуги по ремонту замков.",
-        words: ["Слесарь", "Заказчик"],
-        correctAnswers: { 1: "Слесарь" }
+        text: "У нас были недавно ___.",
+        words: ["заказчики", "покупатели"],
+        correctAnswers: { 1: "заказчики" }
     },
     {
         instruction: "Выбери правильное слово.",
-        text: "Гидравлик ___ номер телефона слесаря.",
-        words: ["набрал", "повесил"],
-        correctAnswers: { 1: "набрал" }
+        text: "У них есть ___, слесари.",
+        words: ["гидравлики", "водопроводчики"],
+        correctAnswers: { 1: "гидравлики" }
     },
     {
         instruction: "Выбери правильное слово.",
-        text: "Заказчик ___ трубку после разговора.",
-        words: ["повесил", "набрал"],
-        correctAnswers: { 1: "повесил" }
+        text: "Тебе нужно ___ полицию.",
+        words: ["набрать", "позвать"],
+        correctAnswers: { 1: "набрать" }
     },
     {
         instruction: "Выбери правильное слово.",
-        text: "Он попросил ___ услуги в течение суток.",
-        words: ["предоставить", "набрать"],
-        correctAnswers: { 1: "предоставить" }
+        text: "Да, — ___ сказал Володя.",
+        words: ["печально", "грустный"],
+        correctAnswers: { 1: "печально" }
     }
 ];
 
@@ -72,27 +72,27 @@ const p2exercises = [
 const p3exercises = [
     {
         instruction: "Выбери правильное слово.",
-        text: "Он ___ посмотрел на сломанный замок.",
-        words: ["печально", "настойчиво"],
-        correctAnswers: { 1: "печально" }
+        text: "Их компания предоставляет услуги 24 часа в ___.",
+        words: ["сутки", "день"],
+        correctAnswers: { 1: "сутки" }
     },
     {
         instruction: "Выбери правильное слово.",
-        text: "Сосед ___ стучал в дверь.",
-        words: ["настойчиво", "внезапно"],
-        correctAnswers: { 1: "настойчиво" }
+        text: "Вот, ___ их номер!",
+        words: ["нашёл", "узнал"],
+        correctAnswers: { 1: "нашёл" }
     },
     {
         instruction: "Выбери правильное слово.",
-        text: "___ все замки были сломаны, кроме одного.",
-        words: ["В общем", "Внезапно"],
-        correctAnswers: { 1: "В общем" }
+        text: "Она ___ из душа и включила подкаст.",
+        words: ["вышла", "ушла"],
+        correctAnswers: { 1: "вышла" }
     },
     {
         instruction: "Выбери правильное слово.",
-        text: "Он не мог открыть ___ дверь.",
-        words: ["входную", "печальную"],
-        correctAnswers: { 1: "входную" }
+        text: "Я ___ ключ в замок и понял, что дверь не моя.",
+        words: ["вставил", "поставил"],
+        correctAnswers: { 1: "вставил" }
     }
 ];
 
@@ -100,12 +100,12 @@ const p3exercises = [
 // PANEL 4 — Flashcard · public
 // ============================================================
 const p4cards = [
-    { front: "замок", back: "serratura / lucchetto", explanation: "Sostantivo maschile. Anche: castello (замок con accento diverso)." },
+    { front: "замок", back: "serratura / lucchetto", explanation: "Sostantivo maschile. Anche: castello (за́мок con accento diverso)." },
     { front: "слесарь", back: "fabbro", explanation: "Specialista che ripara serrature e meccanismi." },
-    { front: "сосед", back: "vicino (di casa)", explanation: "Sostantivo maschile. Femminile: соседка." },
     { front: "бокал", back: "calice (per vino)", explanation: "Bicchiere con lo stelo, per bevande alcoliche." },
-    { front: "тренировка", back: "allenamento", explanation: "Sostantivo femminile. Dal verbo тренироваться." },
-    { front: "вечеринка", back: "festa, party", explanation: "Sostantivo femminile. Da «вечер» (sera)." }
+    { front: "вечеринка", back: "festa, party", explanation: "Sostantivo femminile. Da «вечер» (sera)." },
+    { front: "попасть", back: "entrare, riuscire ad arrivare", explanation: "СВ. «Хотел попасть в её квартиру» — voleva entrare nel suo appartamento." },
+    { front: "испугаться", back: "spaventarsi", explanation: "СВ возвратный. «Она испугалась» — si è spaventata." }
 ];
 
 // ============================================================
@@ -150,10 +150,10 @@ const p7cards = [
 const p8cards = [
     { front: "замок (на двери)", back: "serratura (sulla porta)" },
     { front: "замок (средневековый)", back: "castello (medievale)" },
-    { front: "ключ", back: "chiave" },
-    { front: "дверь", back: "porta" },
-    { front: "ремонт", back: "riparazione / ristrutturazione" },
-    { front: "мастер", back: "maestro / artigiano / tecnico" }
+    { front: "повернуться", back: "girarsi" },
+    { front: "послышаться", back: "sentirsi, farsi sentire" },
+    { front: "что-нибудь кроме", back: "qualcosa tranne / a parte" },
+    { front: "предлагать", back: "proporre, suggerire" }
 ];
 
 // ============================================================
