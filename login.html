@@ -248,7 +248,14 @@
 
             } catch (error) {
                 const msg = document.getElementById('errorMessage');
-                msg.textContent = 'Email o password non validi. Riprova.';
+                const code = error?.status || error?.code || '';
+                if (code === 400 || error?.message?.includes('Invalid login')) {
+                    msg.textContent = 'Email o password non validi. Riprova.';
+                } else if (code === 429) {
+                    msg.textContent = 'Troppi tentativi. Riprova tra qualche minuto.';
+                } else {
+                    msg.textContent = 'Errore di connessione. Riprova più tardi. (' + (error?.message || 'unknown') + ')';
+                }
                 msg.style.display = 'block';
                 document.getElementById('loginBtn').disabled = false;
             }
