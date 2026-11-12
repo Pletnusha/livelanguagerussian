@@ -12,9 +12,9 @@ This document serves as the single source of truth for the characters' personali
 
 ### 👩 Катя (Katya)
 - **Role:** The Aesthetic / Intellectual.
-- **Diet:** Vegetarian.
+- **Diet:** Fish and vegetables only, no meat.
 - **Shopping Habits:** Markets (for fresh veg) and curated organic shops.
-- **Key Trait:** Critical of "pop" culture, prefers high-art (Fellini), maintains a strict vegetarian diet.
+- **Key Trait:** Critical of "pop" culture, prefers high-art (Fellini), eats only fish and vegetables.
 
 ### 👨 Женя (Zhenya)
 - **Role:** The Snob / Optimizer.
@@ -50,7 +50,7 @@ This document serves as the single source of truth for the characters' personali
 | Character | Diet | Primary Source | Conflict Point |
 | :--- | :--- | :--- | :--- |
 | **Anna** | Meat | Farmer's Market | Dislikes "plastic" supermarkets |
-| **Katya** | Vegetarian | Market/Organic | Conflict with Anna's butcher shop |
+| **Katya** | Fish & veg | Market/Organic | Conflict with Anna's butcher shop |
 | **Timur** | Vegan | Vegan Shop | Total opposite of Anna's diet |
 | **Zhenya** | Optimized | Monthly Delivery | Finds physical shopping primitive |
 | **Andrey** | Burgers/Beer | Supermarket/Apps | High-calorie, zero-effort |
