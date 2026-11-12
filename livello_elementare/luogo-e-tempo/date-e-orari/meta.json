@@ -1,0 +1,14 @@
+{
+  "id": "b1-luogo-e-tempo-date-e-orari",
+  "url": "/livello_elementare/luogo-e-tempo/date-e-orari/",
+  "level": "b1",
+  "doc_type": "hub",
+  "cluster": [
+    "luogo-e-tempo"
+  ],
+  "grammatica": [],
+  "complementi": [],
+  "lessico": [],
+  "title_ru": "ДАТЫ И ВРЕМЯ",
+  "title_it": "Date e orari in russo — giorno, mese, anno"
+}
