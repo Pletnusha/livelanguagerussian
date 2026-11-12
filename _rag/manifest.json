@@ -1,7 +1,22 @@
 {
-  "generated": "2026-10-26T11:46:23.466Z",
-  "count": 4,
+  "generated": "2026-11-12T09:25:24.947Z",
+  "count": 6,
   "pages": [
+    {
+      "id": "b1-azione-verbi-collocativi",
+      "url": "/livello_elementare/azione/verbi-collocativi/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "КОЛЛОКАТИВНЫЕ ГЛАГОЛЫ",
+      "title_it": "Verbi collocativi — ставить, класть, вешать nella vita quotidiana",
+      "_source": "livello_elementare\\azione\\verbi-collocativi\\meta.json"
+    },
     {
       "id": "b1-azione-zamok",
       "url": "/livello_elementare/azione/zamok/",
@@ -15,7 +30,7 @@
       "lessico": [],
       "title_ru": "КАК СЛОМАТЬ ДВЕРНОЙ ЗАМОК",
       "title_it": "Come rompere la serratura — lessico B1, aspetto e prefissi verbali",
-      "_source": "livello_elementare/azione/zamok/meta.json"
+      "_source": "livello_elementare\\azione\\zamok\\meta.json"
     },
     {
       "id": "b1-azione-zamok-aspetto-prefissi",
@@ -36,7 +51,7 @@
       "title_it": "Verbi con prefisso — вы-, по-, до-, пере-, на-",
       "source_doc": "b1-azione-zamok",
       "focus": "aspetto-prefissi",
-      "_source": "livello_elementare/azione/zamok/aspetto-prefissi/meta.json"
+      "_source": "livello_elementare\\azione\\zamok\\aspetto-prefissi\\meta.json"
     },
     {
       "id": "b1-azione-zamok-aspetto-scelta",
@@ -57,7 +72,7 @@
       "title_it": "Perfettivo o imperfettivo — coppie aspettuali dal testo",
       "source_doc": "b1-azione-zamok",
       "focus": "aspetto-scelta",
-      "_source": "livello_elementare/azione/zamok/aspetto-scelta/meta.json"
+      "_source": "livello_elementare\\azione\\zamok\\aspetto-scelta\\meta.json"
     },
     {
       "id": "b1-azione-zamok-lessico",
@@ -76,7 +91,22 @@
       "title_it": "Lessico B1 dal testo «Как сломать дверной замок»",
       "source_doc": "b1-azione-zamok",
       "focus": "lessico",
-      "_source": "livello_elementare/azione/zamok/lessico/meta.json"
+      "_source": "livello_elementare\\azione\\zamok\\lessico\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-verbi-di-posizione",
+      "url": "/livello_elementare/luogo-e-tempo/verbi-di-posizione/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "ГЛАГОЛЫ ПОЛОЖЕНИЯ",
+      "title_it": "Verbi di posizione — стоять, лежать, сидеть, висеть e verbi collocativi",
+      "_source": "livello_elementare\\luogo-e-tempo\\verbi-di-posizione\\meta.json"
     }
   ]
 }
