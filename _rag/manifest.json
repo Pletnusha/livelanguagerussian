@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-12T09:25:24.947Z",
-  "count": 6,
+  "generated": "2026-11-12T09:58:26.445Z",
+  "count": 7,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -92,6 +92,21 @@
       "source_doc": "b1-azione-zamok",
       "focus": "lessico",
       "_source": "livello_elementare\\azione\\zamok\\lessico\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-date-e-orari",
+      "url": "/livello_elementare/luogo-e-tempo/date-e-orari/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "ДАТЫ И ВРЕМЯ",
+      "title_it": "Date e orari in russo — giorno, mese, anno",
+      "_source": "livello_elementare\\luogo-e-tempo\\date-e-orari\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-verbi-di-posizione",
