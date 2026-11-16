@@ -4,78 +4,78 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
 // PANEL 1 — DragDrop · public
-// Fatto o momento: ore e date misti
+// Сколько времени? — riconosci l'orario (ora successiva)
 // ============================================================
 const p1exercises = [
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(17:30) — Во сколько у тебя встреча? — {{1}}.",
-        words: ["Половина шестого", "В половине шестого", "В половину шестого"],
-        correctAnswers: { 1: "В половине шестого" },
-        explanation: "«Во сколько?» chiede il momento. Con la mezz'ora: в + prepositivo → в половине шестого."
+        instruction: "Che ore sono? Trascina l'orario giusto.",
+        text: "— Сколько сейчас времени? — Половина седьмого. = {{1}}",
+        words: ["7.30", "6.30", "19.30"],
+        correctAnswers: { 1: "6.30" },
+        explanation: "Половина седьмого = metà della settima ora, che va dalle 6 alle 7: sono le 6.30 (o le 18.30)."
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(05.05) — Когда у тебя день рождения? — {{1}}.",
-        words: ["Пятое мая", "В пятое мая", "Пятого мая"],
-        correctAnswers: { 1: "Пятого мая" },
-        explanation: "«Когда?» con la data: genitivo senza preposizione → пятого мая."
+        instruction: "Che ore sono? Trascina l'orario giusto.",
+        text: "— Который час? — Четверть третьего. = {{1}}",
+        words: ["14.15", "3.15", "15.15"],
+        correctAnswers: { 1: "14.15" },
+        explanation: "La terza ora va dalle 2 alle 3 (dalle 14 alle 15): четверть третьего = 14.15 (o 2.15)."
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(19:00) — Во сколько начинается концерт? — {{1}}.",
-        words: ["В семь часов", "Семь часов", "В семи часах"],
-        correctAnswers: { 1: "В семь часов" },
-        explanation: "«Во сколько?»: в + accusativo. «Семь часов» non cambia forma."
+        instruction: "Che ore sono? Trascina l'orario giusto.",
+        text: "— Сколько времени? — Двадцать минут девятого. = {{1}}",
+        words: ["8.20", "9.20", "21.20"],
+        correctAnswers: { 1: "8.20" },
+        explanation: "La nona ora va dalle 8 alle 9: двадцать минут девятого = 8.20 (o 20.20)."
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(17:30) — Сколько сейчас времени? — {{1}}.",
-        words: ["В половине шестого", "Половина шестого", "Половину шестого"],
-        correctAnswers: { 1: "Половина шестого" },
-        explanation: "«Сколько времени?» chiede il fatto: niente preposizione → половина шестого."
+        instruction: "Che ore sono? Trascina l'orario giusto.",
+        text: "— Который час? — Шесть часов. = {{1}}",
+        words: ["5.00", "7.00", "6.00"],
+        correctAnswers: { 1: "6.00" },
+        explanation: "Con l'ora esatta non si passa all'ora successiva: шесть часов = 6.00."
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(01.09) — Когда начинается учёба? — {{1}}.",
-        words: ["Первое сентября", "В первое сентября", "Первого сентября"],
-        correctAnswers: { 1: "Первого сентября" },
-        explanation: "«Когда?» con la data: genitivo senza preposizione → первого сентября."
+        instruction: "Che ore sono? Trascina l'orario giusto.",
+        text: "— Сколько сейчас времени? — Половина первого. = {{1}}",
+        words: ["1.30", "12.30", "13.30"],
+        correctAnswers: { 1: "12.30" },
+        explanation: "La prima ora va da mezzogiorno all'una: половина первого = 12.30."
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(8:15) — Во сколько уходит автобус? — {{1}}.",
-        words: ["В четверть девятого", "Четверть девятого", "В четверти девятого"],
-        correctAnswers: { 1: "В четверть девятого" },
-        explanation: "в + accusativo. Четверть non cambia forma (accusativo = nominativo)."
+        instruction: "Che ore sono? Trascina l'orario giusto.",
+        text: "— Который час? — Десять минут пятого. = {{1}}",
+        words: ["17.10", "5.10", "16.10"],
+        correctAnswers: { 1: "16.10" },
+        explanation: "La quinta ora va dalle 4 alle 5 (dalle 16 alle 17): десять минут пятого = 16.10 (o 4.10)."
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(05.05) — Какое сегодня число? — {{1}}.",
-        words: ["Пятого мая", "Пятое мая", "В пятое мая"],
-        correctAnswers: { 1: "Пятое мая" },
-        explanation: "«Какое число?» chiede il fatto: nominativo neutro → пятое мая."
+        instruction: "Che ore sono? Trascina l'orario giusto.",
+        text: "— Сколько времени? — Двадцать пять минут одиннадцатого. = {{1}}",
+        words: ["10.25", "11.25", "23.25"],
+        correctAnswers: { 1: "10.25" },
+        explanation: "L'undicesima ora va dalle 10 alle 11: двадцать пять минут одиннадцатого = 10.25 (o 22.25)."
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(13:00) — Во сколько обед? — {{1}}.",
-        words: ["Час дня", "В часу дня", "В час дня"],
-        correctAnswers: { 1: "В час дня" },
-        explanation: "в + accusativo. «Час» non cambia forma."
+        instruction: "Che ore sono? Trascina l'orario giusto.",
+        text: "— Который час? — Четверть восьмого. = {{1}}",
+        words: ["20.15", "8.15", "19.15"],
+        correctAnswers: { 1: "19.15" },
+        explanation: "L'ottava ora va dalle 7 alle 8 (dalle 19 alle 20): четверть восьмого = 19.15 (o 7.15)."
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(16:10) — Во сколько придёт мастер? — {{1}}.",
-        words: ["В десять минут пятого", "Десять минут пятого", "В десяти минутах пятого"],
-        correctAnswers: { 1: "В десять минут пятого" },
-        explanation: "в + accusativo. «Десять минут» non cambia forma."
+        instruction: "Che ore sono? Trascina l'orario giusto.",
+        text: "— Сколько сейчас времени? — Пятнадцать минут четвёртого. = {{1}}",
+        words: ["16.15", "15.15", "4.15"],
+        correctAnswers: { 1: "15.15" },
+        explanation: "La quarta ora va dalle 3 alle 4 (dalle 15 alle 16): пятнадцать минут четвёртого = 15.15 (o 3.15)."
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(31.12) — Когда вы едете к бабушке? — {{1}}.",
-        words: ["Тридцать первое декабря", "Тридцать первого декабря", "В тридцать первое декабря"],
-        correctAnswers: { 1: "Тридцать первого декабря" },
-        explanation: "«Когда?»: nei numeri composti cambia solo l'ultima parola → тридцать первого декабря."
+        instruction: "Che ore sono? Trascina l'orario giusto.",
+        text: "— Который час? — Половина десятого. = {{1}}",
+        words: ["10.30", "9.30", "22.30"],
+        correctAnswers: { 1: "9.30" },
+        explanation: "La decima ora va dalle 9 alle 10: половина десятого = 9.30 (o 21.30)."
     }
 ];
 
