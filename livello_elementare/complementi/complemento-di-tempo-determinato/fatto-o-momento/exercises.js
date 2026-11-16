@@ -148,68 +148,68 @@ const p2exercises = [
 
 // ============================================================
 // PANEL 3 — DragDrop · paid
-// Solo date: когда? (con contrasto какое число?)
+// Без: без пяти шесть (senza в, sia «сколько времени?» sia «во сколько?»)
 // ============================================================
 const p3exercises = [
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(12.06) — Когда День России? — {{1}} июня.",
-        words: ["Двенадцатое", "Двенадцатого", "В двенадцатое"],
-        correctAnswers: { 1: "Двенадцатого" }
+        instruction: "Trascina la forma giusta.",
+        text: "(17.55) — Во сколько отходит поезд? — {{1}}.",
+        words: ["Без пяти шести", "В без пяти шесть", "Без пяти шесть"],
+        correctAnswers: { 1: "Без пяти шесть" }
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(07.01) — Когда в России празднуют Рождество? — Седьмого {{1}}.",
-        words: ["январь", "январе", "января"],
-        correctAnswers: { 1: "января" }
+        instruction: "Trascina la forma giusta.",
+        text: "(9.40) — Сколько сейчас времени? — {{1}}.",
+        words: ["Без двадцати десять", "Без двадцать десять", "Без двадцати девять"],
+        correctAnswers: { 1: "Без двадцати десять" }
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(14.02) — Какое завтра число? — {{1}} февраля.",
-        words: ["Четырнадцатое", "Четырнадцатого", "В четырнадцатое"],
-        correctAnswers: { 1: "Четырнадцатое" }
+        instruction: "Trascina la forma giusta.",
+        text: "(13.45) — Во сколько начинается собрание? — {{1}}.",
+        words: ["Без четверть два", "Без четверти два", "В без четверти два"],
+        correctAnswers: { 1: "Без четверти два" }
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(01.04) — Когда все шутят? — {{1}} апреля.",
-        words: ["Первое", "Первого", "В первое"],
-        correctAnswers: { 1: "Первого" }
+        instruction: "Trascina la forma giusta.",
+        text: "(12.40) — Который час? — {{1}}.",
+        words: ["Без двадцати один", "Без двадцати час", "Без двадцати часа"],
+        correctAnswers: { 1: "Без двадцати час" }
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(10.07) — Когда у тебя экзамен? — {{1}} июля.",
-        words: ["Десятое", "В десятое", "Десятого"],
-        correctAnswers: { 1: "Десятого" }
+        instruction: "Trascina la forma giusta.",
+        text: "(18.50) — Во сколько закрывается аптека? — {{1}}.",
+        words: ["Без десяти семи", "В без десяти семь", "Без десяти семь"],
+        correctAnswers: { 1: "Без десяти семь" }
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(03.10) — Когда у вас свадьба? — Третьего {{1}}.",
-        words: ["октября", "октябрь", "в октябре"],
-        correctAnswers: { 1: "октября" }
+        instruction: "Trascina la forma giusta.",
+        text: "(7.35) — Во сколько ты выходишь из дома? — {{1}}.",
+        words: ["Без двадцати пяти восемь", "Без двадцать пять восемь", "Без двадцати пяти семь"],
+        correctAnswers: { 1: "Без двадцати пяти восемь" }
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(25.05) — Какое сегодня число? — {{1}} мая.",
-        words: ["Двадцать пятого", "Двадцать пятое", "В двадцать пятое"],
-        correctAnswers: { 1: "Двадцать пятое" }
+        instruction: "Trascina la forma giusta.",
+        text: "(21.45) — Сколько времени? — {{1}}.",
+        words: ["Без пятнадцати десять", "Без пятнадцати девять", "Без пятнадцати десяти"],
+        correctAnswers: { 1: "Без пятнадцати десять" }
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(20.08) — Когда вы вернётесь с моря? — {{1}} августа.",
-        words: ["Двадцатое", "В двадцатое", "Двадцатого"],
-        correctAnswers: { 1: "Двадцатого" }
+        instruction: "Trascina la forma giusta.",
+        text: "(10.55) — Во сколько у тебя созвон? — {{1}}.",
+        words: ["В без пяти одиннадцать", "Без пяти одиннадцати", "Без пяти одиннадцать"],
+        correctAnswers: { 1: "Без пяти одиннадцать" }
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(08.03) — Когда Женский день? — {{1}} марта.",
-        words: ["Восьмого", "Восьмое", "В восьмое"],
-        correctAnswers: { 1: "Восьмого" }
+        instruction: "Trascina la forma giusta.",
+        text: "(15.50) — Во сколько приедет такси? — {{1}}.",
+        words: ["Без десять четыре", "Без десяти четыре", "Без десяти три"],
+        correctAnswers: { 1: "Без десяти четыре" }
     },
     {
-        instruction: "Scegli la forma giusta.",
-        text: "(30.11) — Когда зарплата? — {{1}} ноября.",
-        words: ["Тридцатое", "Тридцатого", "В тридцатое"],
-        correctAnswers: { 1: "Тридцатого" }
+        instruction: "Trascina la forma giusta.",
+        text: "(11.40) — Который час? — {{1}}.",
+        words: ["Без двадцати двенадцать", "В без двадцати двенадцать", "Без двадцати двенадцати"],
+        correctAnswers: { 1: "Без двадцати двенадцать" }
     }
 ];
 
