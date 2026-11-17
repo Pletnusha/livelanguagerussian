@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-12T09:58:26.445Z",
-  "count": 7,
+  "generated": "2026-11-17T10:51:56.547Z",
+  "count": 15,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -94,19 +94,166 @@
       "_source": "livello_elementare\\azione\\zamok\\lessico\\meta.json"
     },
     {
-      "id": "b1-luogo-e-tempo-date-e-orari",
-      "url": "/livello_elementare/luogo-e-tempo/date-e-orari/",
+      "id": "b1-luogo-e-tempo-complemento-di-tempo",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/",
       "level": "b1",
       "doc_type": "hub",
       "cluster": [
         "luogo-e-tempo"
       ],
       "grammatica": [],
-      "complementi": [],
+      "complementi": [
+        "tempo-determinato",
+        "tempo-continuato"
+      ],
       "lessico": [],
       "title_ru": "ДАТЫ И ВРЕМЯ",
-      "title_it": "Date e orari in russo — giorno, mese, anno",
-      "_source": "livello_elementare\\luogo-e-tempo\\date-e-orari\\meta.json"
+      "title_it": "Complemento di tempo: date e orari in russo",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-continuato",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-continuato/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-continuato"
+      ],
+      "lessico": [],
+      "title_ru": "COMPLEMENTO DI TEMPO CONTINUATO",
+      "title_it": "Complemento di tempo continuato: da… a — periodi in russo",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-continuato\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-continuato-periodo",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-continuato/periodo/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-continuato"
+      ],
+      "lessico": [],
+      "title_ru": "С … ДО, С … ПО",
+      "title_it": "Periodo: dalle… alle, dal… al",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-continuato",
+      "focus": "periodo",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-continuato\\periodo\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "COMPLEMENTO DI TEMPO DETERMINATO",
+      "title_it": "Complemento di tempo determinato: quando? — orari e date in russo",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/date/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "ДАТЫ",
+      "title_it": "Date in russo — giorno, mese, anno",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\date\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/orari/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "ВРЕМЯ",
+      "title_it": "Che ore sono? A che ora? — orari in russo",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\orari\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari-circa",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/orari/circa/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "ОКОЛО ТРЁХ",
+      "title_it": "Verso le tre: около + genitivo",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
+      "focus": "circa",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\orari\\circa\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari-entro",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/orari/entro/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "К ТРЁМ",
+      "title_it": "Entro le tre: к + dativo",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
+      "focus": "entro",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\orari\\entro\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari-fatto-o-momento",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/orari/fatto-o-momento/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "СКОЛЬКО ВРЕМЕНИ? ВО СКОЛЬКО?",
+      "title_it": "Che ore sono? A che ora? — fatto o momento",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
+      "focus": "fatto-o-momento",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\orari\\fatto-o-momento\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-verbi-di-posizione",
