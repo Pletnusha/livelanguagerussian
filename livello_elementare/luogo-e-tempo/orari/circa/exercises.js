@@ -270,6 +270,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni: approssimato / esatto / periodo / без
+// ============================================================
+const p7cards = [
+    { front: "(≈20:30) Когда ты будешь дома?", back: "Около половины девятого", distractors: ["Около половина девятого", "В половине девятого"], explanation: "≈ = circa: около + genitivo. Anche la mezz'ora va al genitivo: половины." },
+    { front: "(Ср–Пт) Когда работает выставка?", back: "Со среды по пятницу", distractors: ["Со среды по пятницы", "С среды по пятницу"], explanation: "Giorni: со среды (со davanti a ср-) по пятницу (accusativo)." },
+    { front: "(≈16:00) Когда у тебя перерыв?", back: "Часа в четыре", distractors: ["Часов в четыре", "В четыре часа"], explanation: "Inversione = circa. Con 2, 3, 4: часа (часа в четыре)." },
+    { front: "(8:40) Сколько времени?", back: "Без двадцати девять", distractors: ["В без двадцати девять", "Около без двадцати девять"], explanation: "Che ore sono? Con без niente preposizione: без двадцати девять." },
+    { front: "(≈13:00) Когда ты пообедаешь?", back: "Около часа", distractors: ["Около час", "Около в час"], explanation: "около + genitivo: час → часа. Mai «около в»." },
+    { front: "(19:15) Во сколько начинается урок?", back: "В четверть восьмого", distractors: ["Четверть восьмого", "Около четверти восьмого"], explanation: "Ora esatta (senza ≈): в + accusativo → в четверть восьмого." },
+    { front: "(≈7:00) Когда ты встаёшь?", back: "Часов в семь", distractors: ["Часа в семь", "В семь часов"], explanation: "Inversione = circa. Con 5–12: часов (часов в семь)." },
+    { front: "(11:00–15:00) Когда открыт музей?", back: "С одиннадцати до трёх", distractors: ["С одиннадцати по три", "С одиннадцать до трёх"], explanation: "Periodo con le ore: с + genitivo … до + genitivo." },
+    { front: "(0:00) Во сколько бой курантов?", back: "В полночь", distractors: ["Около полуночи", "В полуночи"], explanation: "Ora esatta: в полночь (accusativo), come в полдень. Около полуночи = circa." },
+    { front: "(≈9:00) Когда ты придёшь в офис?", back: "Около девяти", distractors: ["Около девять", "Около девятью"], explanation: "около + genitivo: девять → девяти." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -279,6 +296,7 @@ const initializers = {
     'panel-cir-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-cir-04', cards: p4cards }),
     'panel-cir-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-cir-05', cards: p5cards }),
     'panel-cir-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-cir-06', cards: p6cards }),
+    'panel-cir-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-cir-07', cards: p7cards }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
