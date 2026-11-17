@@ -92,61 +92,61 @@ const p1exercises = [
 const p2exercises = [
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 16:00) Нужно вернуться {{1}}.",
+        text: "(16:00) Нужно вернуться {{1}}.",
         words: ["к четыре", "к четырём", "к четырёх"],
         correctAnswers: { 1: "к четырём" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 19:00) Ужин будет готов {{1}}.",
+        text: "(19:00) Ужин будет готов {{1}}.",
         words: ["к семи", "к семь", "к семью"],
         correctAnswers: { 1: "к семи" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 11:30) Приходи {{1}}.",
+        text: "(11:30) Приходи {{1}}.",
         words: ["к половину двенадцатого", "к половины двенадцатого", "к половине двенадцатого"],
         correctAnswers: { 1: "к половине двенадцатого" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 13:00) Курьер привезёт заказ {{1}}.",
+        text: "(13:00) Курьер привезёт заказ {{1}}.",
         words: ["к час", "к часу", "к часа"],
         correctAnswers: { 1: "к часу" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 22:00) Мы должны быть дома {{1}}.",
+        text: "(22:00) Мы должны быть дома {{1}}.",
         words: ["к десять", "к десятью", "к десяти"],
         correctAnswers: { 1: "к десяти" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 9:15) Приезжай {{1}}.",
+        text: "(9:15) Приезжай {{1}}.",
         words: ["к четверти десятого", "к четверть десятого", "к в четверть десятого"],
         correctAnswers: { 1: "к четверти десятого" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 12:00) Отчёт нужен {{1}}.",
+        text: "(12:00) Отчёт нужен {{1}}.",
         words: ["к полудню", "к полдень", "к полудня"],
         correctAnswers: { 1: "к полудню" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 2:00) Он обещал вернуться {{1}} ночи.",
+        text: "(2:00) Он обещал вернуться {{1}} ночи.",
         words: ["к два", "к двум", "к двух"],
         correctAnswers: { 1: "к двум" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 18:00) Заберите заказ {{1}}.",
+        text: "(18:00) Заберите заказ {{1}}.",
         words: ["к шесть", "к шестью", "к шести"],
         correctAnswers: { 1: "к шести" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 0:00) Праздник закончится {{1}}.",
+        text: "(0:00) Праздник закончится {{1}}.",
         words: ["к полночь", "к полуночи", "к полночью"],
         correctAnswers: { 1: "к полуночи" }
     }
