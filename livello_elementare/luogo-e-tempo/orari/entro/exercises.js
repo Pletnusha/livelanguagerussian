@@ -152,11 +152,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// к + dativo (entro) o до + genitivo (fino a)?
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(entro 15:00) Отчёт должен быть готов {{1}}.",
+        words: ["до трёх", "к трём", "к трёх"],
+        correctAnswers: { 1: "к трём" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(fino alle 15:00) Я сегодня работаю {{1}}.",
+        words: ["до трёх", "к трём", "до трём"],
+        correctAnswers: { 1: "до трёх" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(entro 13:00) Обед должен быть на столе {{1}}.",
+        words: ["до часа", "к часа", "к часу"],
+        correctAnswers: { 1: "к часу" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(fino alle 13:00) Перерыв продлится {{1}}.",
+        words: ["к часу", "до час", "до часа"],
+        correctAnswers: { 1: "до часа" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(entro 19:00) Будь дома {{1}}.",
+        words: ["до семи", "к семи", "к семь"],
+        correctAnswers: { 1: "к семи" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(fino alle 19:00) Аптека открыта {{1}}.",
+        words: ["к семи", "до семь", "до семи"],
+        correctAnswers: { 1: "до семи" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(entro 8:00) Мы должны быть на вокзале {{1}}.",
+        words: ["к восьми", "до восьми", "к восемь"],
+        correctAnswers: { 1: "к восьми" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(fino alle 10:00) В субботу я сплю {{1}}.",
+        words: ["к десяти", "до десять", "до десяти"],
+        correctAnswers: { 1: "до десяти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(entro 14:00) Машина должна быть готова {{1}}.",
+        words: ["к два", "к двум", "до двух"],
+        correctAnswers: { 1: "к двум" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(fino alle 14:00) Подожди меня {{1}}.",
+        words: ["до двух", "к двум", "до двум"],
+        correctAnswers: { 1: "до двух" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-ent-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-ent-01', exercises: p1exercises }),
     'panel-ent-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-ent-02', exercises: p2exercises }),
+    'panel-ent-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ent-03', exercises: p3exercises }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
