@@ -4160,3 +4160,17 @@ article.exercise-card[data-target="panel-acc-open-10"],
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 #panel-acc-open-4 .acc04-feedback.wrong   { color: #ef4444; }
+
+/* Flashcards — mobile: the counter («1 / 10») has an id starting with "ex-flashcards-",
+   so the container rule [id^="ex-flashcards-"] (width 100%, padding 2rem) hit it too and
+   pushed INDIETRO / AVANTI off-screen. Let it share the row with the buttons instead. */
+@media (max-width: 768px) {
+  [id^="ex-flashcards-"] .fca01-counter {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0 0.25rem;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
