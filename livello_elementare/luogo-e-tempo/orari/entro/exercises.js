@@ -253,6 +253,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto: к / к ↔ до (nuovo) + около / periodo / momento / без (vecchio)
+// ============================================================
+const p6cards = [
+    { front: "(entro 18:00) Когда нужно сдать проект?", back: "К шести", distractors: ["К шесть", "К шестью"] },
+    { front: "(fino alle 18:00) До какого часа работает банк?", back: "До шести", distractors: ["К шести", "До шесть"] },
+    { front: "(≈21:00) Когда ты вернёшься?", back: "Часов в девять", distractors: ["Часа в девять", "В девять часов"] },
+    { front: "(9:00–17:00) Когда работает почта?", back: "С девяти до пяти", distractors: ["С девяти по пять", "С девяти к пяти"] },
+    { front: "(entro 13:30) Когда нужно вернуться с обеда?", back: "К половине второго", distractors: ["К половина второго", "К половину второго"] },
+    { front: "(19:00) Во сколько начинается спектакль?", back: "В семь часов", distractors: ["К семи часам", "Семь часов"] },
+    { front: "(fino alle 23:00) До какого часа открыт клуб?", back: "До одиннадцати", distractors: ["К одиннадцати", "До одиннадцать"] },
+    { front: "(entro 10:00) Когда нужно освободить номер?", back: "К десяти", distractors: ["К десять", "К десятью"] },
+    { front: "(16:45) Сколько времени?", back: "Без пятнадцати пять", distractors: ["К без пятнадцати пять", "В без пятнадцати пять"] },
+    { front: "(entro 14:00) Когда будет готов обед?", back: "К двум часам", distractors: ["К двум часов", "К двух часам"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -261,6 +278,7 @@ const initializers = {
     'panel-ent-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ent-03', exercises: p3exercises }),
     'panel-ent-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-ent-04', cards: p4cards }),
     'panel-ent-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-ent-05', cards: p5cards }),
+    'panel-ent-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-ent-06', cards: p6cards }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
