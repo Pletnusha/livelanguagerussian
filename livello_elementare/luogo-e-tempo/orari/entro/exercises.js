@@ -236,6 +236,23 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Forma piena: к трём → к трём часам (часам = dativo plurale, con ogni numero)
+// ============================================================
+const p5cards = [
+    { front: "к трём = …", back: "к трём часам", distractors: ["к трём часов", "к трём часа"] },
+    { front: "к двум = …", back: "к двум часам", distractors: ["к двум часов", "к двум часа"] },
+    { front: "к пяти = …", back: "к пяти часам", distractors: ["к пяти часов", "к пяти часу"] },
+    { front: "к четырём = …", back: "к четырём часам", distractors: ["к четырём часов", "к четырём часа"] },
+    { front: "к семи = …", back: "к семи часам", distractors: ["к семи часов", "к семи часу"] },
+    { front: "к десяти = …", back: "к десяти часам", distractors: ["к десяти часов", "к десяти часа"] },
+    { front: "к восьми утра = …", back: "к восьми часам утра", distractors: ["к восьми часов утра", "к восьми утра часам"] },
+    { front: "к шести вечера = …", back: "к шести часам вечера", distractors: ["к шести часов вечера", "к шести часа вечера"] },
+    { front: "к двенадцати = …", back: "к двенадцати часам", distractors: ["к двенадцати часов", "к двенадцати часу"] },
+    { front: "к одиннадцати = …", back: "к одиннадцати часам", distractors: ["к одиннадцати часов", "к одиннадцати часа"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -243,6 +260,7 @@ const initializers = {
     'panel-ent-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-ent-02', exercises: p2exercises }),
     'panel-ent-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ent-03', exercises: p3exercises }),
     'panel-ent-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-ent-04', cards: p4cards }),
+    'panel-ent-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-ent-05', cards: p5cards }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
