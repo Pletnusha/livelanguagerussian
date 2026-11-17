@@ -154,68 +154,68 @@ const p2exercises = [
 
 // ============================================================
 // PANEL 3 — DragDrop · paid
-// к + dativo (entro) o до + genitivo (fino a)?
+// К какому часу? (к + dativo) o До какого часа? (до + genitivo)
 // ============================================================
 const p3exercises = [
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 15:00) Отчёт должен быть готов {{1}}.",
-        words: ["до трёх", "к трём", "к трёх"],
-        correctAnswers: { 1: "к трём" }
+        text: "(15:00) — К какому часу должен быть готов отчёт? — {{1}}.",
+        words: ["До трёх", "К трём", "К трёх"],
+        correctAnswers: { 1: "К трём" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(fino alle 15:00) Я сегодня работаю {{1}}.",
-        words: ["до трёх", "к трём", "до трём"],
-        correctAnswers: { 1: "до трёх" }
+        text: "(15:00) — До какого часа ты сегодня работаешь? — {{1}}.",
+        words: ["До трёх", "К трём", "До трём"],
+        correctAnswers: { 1: "До трёх" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 13:00) Обед должен быть на столе {{1}}.",
-        words: ["до часа", "к часа", "к часу"],
-        correctAnswers: { 1: "к часу" }
+        text: "(13:00) — К какому часу подать обед? — {{1}}.",
+        words: ["До часа", "К часа", "К часу"],
+        correctAnswers: { 1: "К часу" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(fino alle 13:00) Перерыв продлится {{1}}.",
-        words: ["к часу", "до час", "до часа"],
-        correctAnswers: { 1: "до часа" }
+        text: "(13:00) — До какого часа продлится перерыв? — {{1}}.",
+        words: ["К часу", "До час", "До часа"],
+        correctAnswers: { 1: "До часа" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 19:00) Будь дома {{1}}.",
-        words: ["до семи", "к семи", "к семь"],
-        correctAnswers: { 1: "к семи" }
+        text: "(19:00) — К какому часу мне быть дома? — {{1}}.",
+        words: ["До семи", "К семи", "К семь"],
+        correctAnswers: { 1: "К семи" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(fino alle 19:00) Аптека открыта {{1}}.",
-        words: ["к семи", "до семь", "до семи"],
-        correctAnswers: { 1: "до семи" }
+        text: "(19:00) — До какого часа открыта аптека? — {{1}}.",
+        words: ["К семи", "До семь", "До семи"],
+        correctAnswers: { 1: "До семи" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 8:00) Мы должны быть на вокзале {{1}}.",
-        words: ["к восьми", "до восьми", "к восемь"],
-        correctAnswers: { 1: "к восьми" }
+        text: "(8:00) — К какому часу нам быть на вокзале? — {{1}}.",
+        words: ["К восьми", "До восьми", "К восемь"],
+        correctAnswers: { 1: "К восьми" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(fino alle 10:00) В субботу я сплю {{1}}.",
-        words: ["к десяти", "до десять", "до десяти"],
-        correctAnswers: { 1: "до десяти" }
+        text: "(10:00) — До какого часа ты спишь в субботу? — {{1}}.",
+        words: ["К десяти", "До десять", "До десяти"],
+        correctAnswers: { 1: "До десяти" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 14:00) Машина должна быть готова {{1}}.",
-        words: ["к два", "к двум", "до двух"],
-        correctAnswers: { 1: "к двум" }
+        text: "(14:00) — К какому часу будет готова машина? — {{1}}.",
+        words: ["К два", "К двум", "До двух"],
+        correctAnswers: { 1: "К двум" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(fino alle 14:00) Подожди меня {{1}}.",
-        words: ["до двух", "к двум", "до двум"],
-        correctAnswers: { 1: "до двух" }
+        text: "(14:00) — До какого часа тебя ждать? — {{1}}.",
+        words: ["До двух", "К двум", "До двум"],
+        correctAnswers: { 1: "До двух" }
     }
 ];
 
