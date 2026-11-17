@@ -236,6 +236,23 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Inversione = «circa»: около трёх → часа в три (2–4: часа; 5–12: часов)
+// ============================================================
+const p5cards = [
+    { front: "около трёх = …", back: "часа в три", distractors: ["часов в три", "в три часа"] },
+    { front: "около восьми = …", back: "часов в восемь", distractors: ["часа в восемь", "в восемь часов"] },
+    { front: "около двух = …", back: "часа в два", distractors: ["часов в два", "часу в два"] },
+    { front: "около пяти = …", back: "часов в пять", distractors: ["часа в пять", "в пять часов"] },
+    { front: "около четырёх = …", back: "часа в четыре", distractors: ["часов в четыре", "в четыре часа"] },
+    { front: "около десяти = …", back: "часов в десять", distractors: ["часа в десять", "в десять часов"] },
+    { front: "около семи = …", back: "часов в семь", distractors: ["часа в семь", "в семь часов"] },
+    { front: "около двенадцати = …", back: "часов в двенадцать", distractors: ["часа в двенадцать", "в двенадцать часов"] },
+    { front: "около одиннадцати = …", back: "часов в одиннадцать", distractors: ["часа в одиннадцать", "в одиннадцать часов"] },
+    { front: "около шести вечера = …", back: "часов в шесть вечера", distractors: ["часа в шесть вечера", "в шесть часов вечера"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -243,6 +260,7 @@ const initializers = {
     'panel-cir-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-cir-02', exercises: p2exercises }),
     'panel-cir-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-cir-03', exercises: p3exercises }),
     'panel-cir-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-cir-04', cards: p4cards }),
+    'panel-cir-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-cir-05', cards: p5cards }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
