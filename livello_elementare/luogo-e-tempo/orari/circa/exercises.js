@@ -253,6 +253,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto: около / часа в … (nuovo) + periodo / momento / fatto / без (vecchio)
+// ============================================================
+const p6cards = [
+    { front: "(≈15:30) Когда начнём?", back: "Около половины четвёртого", distractors: ["Около половина четвёртого", "В половине четвёртого"] },
+    { front: "(10:00–14:00) Когда работает касса?", back: "С десяти до двух", distractors: ["С десяти по два", "С десять до двух"] },
+    { front: "(17:45) Сколько времени?", back: "Без пятнадцати шесть", distractors: ["В без пятнадцати шесть", "Около без пятнадцати шесть"] },
+    { front: "(≈21:00) Когда вы вернётесь?", back: "Часов в девять", distractors: ["Часа в девять", "В девять часов"] },
+    { front: "(9:20) Во сколько приходит автобус?", back: "В двадцать минут десятого", distractors: ["Двадцать минут десятого", "Около двадцать минут десятого"] },
+    { front: "(≈23:30) Когда закончится праздник?", back: "Около половины двенадцатого", distractors: ["Около половина двенадцатого", "В половине двенадцатого"] },
+    { front: "(Пн–Чт) Когда открыт бассейн?", back: "С понедельника по четверг", distractors: ["С понедельника по четверга", "С понедельник по четверг"] },
+    { front: "(≈14:00) Когда тебе позвонить?", back: "Часа в два", distractors: ["Часов в два", "В два часа"] },
+    { front: "(12:00) Во сколько встречаемся?", back: "В полдень", distractors: ["Около полудня", "В полудня"] },
+    { front: "(16:15) Сколько времени?", back: "Четверть пятого", distractors: ["В четверть пятого", "Около четверти пятого"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -261,6 +278,7 @@ const initializers = {
     'panel-cir-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-cir-03', exercises: p3exercises }),
     'panel-cir-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-cir-04', cards: p4cards }),
     'panel-cir-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-cir-05', cards: p5cards }),
+    'panel-cir-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-cir-06', cards: p6cards }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
