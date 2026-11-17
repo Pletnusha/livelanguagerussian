@@ -151,11 +151,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// с … по: giorni della settimana e date (с + genitivo, по + accusativo)
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(Пн–Сб) Магазин работает {{1}}.",
+        words: ["с понедельник по субботу", "с понедельника по субботу", "с понедельника по субботы"],
+        correctAnswers: { 1: "с понедельника по субботу" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(Ср–Вс) Выставка открыта {{1}}.",
+        words: ["со среды по воскресенье", "с среды по воскресенье", "со среды по воскресенья"],
+        correctAnswers: { 1: "со среды по воскресенье" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(3–7 марта) Конференция {{1}} марта.",
+        words: ["с третье по седьмое", "с третьего по седьмого", "с третьего по седьмое"],
+        correctAnswers: { 1: "с третьего по седьмое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(Чт–Пт) Курсы проходят {{1}}.",
+        words: ["с четверга по пятница", "с четверг по пятницу", "с четверга по пятницу"],
+        correctAnswers: { 1: "с четверга по пятницу" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1–31 августа) Музей закрыт {{1}} августа.",
+        words: ["с первого по тридцать первое", "с первого по тридцать первого", "с первое по тридцать первое"],
+        correctAnswers: { 1: "с первого по тридцать первое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(Вт–Чт) Приём врача {{1}}.",
+        words: ["со вторника по четверг", "со вторника по четверга", "с вторник по четверг"],
+        correctAnswers: { 1: "со вторника по четверг" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15–20 апреля) Я в Москве {{1}} апреля.",
+        words: ["с пятнадцатое по двадцатое", "с пятнадцатого по двадцатое", "с пятнадцатого по двадцатого"],
+        correctAnswers: { 1: "с пятнадцатого по двадцатое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(Пн–Чт) Бассейн открыт {{1}}.",
+        words: ["с понедельника по четверга", "с понедельника по четвергу", "с понедельника по четверг"],
+        correctAnswers: { 1: "с понедельника по четверг" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2–9 января) Каникулы {{1}} января.",
+        words: ["с второго по девятое", "со второго по девятое", "со второго по девятого"],
+        correctAnswers: { 1: "со второго по девятое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(Пт–Вс) Фестиваль {{1}}.",
+        words: ["с пятницы по воскресенье", "с пятница по воскресенье", "с пятницы по воскресенья"],
+        correctAnswers: { 1: "с пятницы по воскресенье" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-per-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-per-01', exercises: p1exercises }),
     'panel-per-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-per-02', exercises: p2exercises }),
+    'panel-per-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-per-03', exercises: p3exercises }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
