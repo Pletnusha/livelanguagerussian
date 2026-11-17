@@ -5,7 +5,8 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // Pagina «К трём» — scadenza: к + dativo (entro), in alternativa a до + genitivo (fino a)
 // Schema: 1 D&D misto (nuovo + vecchio, con spiegazioni) · 2–3 D&D nuovo · 4–5 FC nuovo · 6–8 FC misto · 9 Quiz
 // I dati di ogni pannello si aggiungono dopo l'approvazione della PM.
-// Convenzioni: «(entro 15:00)» = scadenza → к; «(fino alle 20:00)» = fino a → до; «≈» = ora approssimativa.
+// Niente suggerimenti di significato: tra parentesi solo l'ora. Il senso lo dà la domanda russa
+// (К какому часу? / До какого часа? / Когда примерно? / Во сколько?) o un verbo che esclude l'altra preposizione.
 
 // ============================================================
 // PANEL 1 — DragDrop · public
@@ -14,17 +15,17 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 const p1exercises = [
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 15:00) Документы нужно сдать {{1}}.",
-        words: ["к три", "к трём", "к трёх"],
-        correctAnswers: { 1: "к трём" },
-        explanation: "Scadenza (entro): к + dativo: три → трём."
+        text: "(15:00) — К какому часу нужно сдать документы? — {{1}}.",
+        words: ["К три", "К трём", "К трёх"],
+        correctAnswers: { 1: "К трём" },
+        explanation: "К какому часу? = entro: к + dativo: три → трём."
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(≈19:00) Гости придут {{1}}.",
-        words: ["около семь", "около в семь", "около семи"],
-        correctAnswers: { 1: "около семи" },
-        explanation: "Ora approssimativa: около + genitivo: семь → семи."
+        text: "(19:00) — Когда примерно придут гости? — {{1}}.",
+        words: ["Около семь", "Около в семь", "Около семи"],
+        correctAnswers: { 1: "Около семи" },
+        explanation: "Когда примерно? = circa: около + genitivo: семь → семи."
     },
     {
         instruction: "Trascina la forma giusta.",
@@ -35,10 +36,10 @@ const p1exercises = [
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 13:00) Надо закончить отчёт {{1}}.",
+        text: "(13:00) Отчёт должен быть готов {{1}}.",
         words: ["к час", "к часу", "к часа"],
         correctAnswers: { 1: "к часу" },
-        explanation: "к + dativo: час → часу."
+        explanation: "Должен быть готов к… = entro: к + dativo: час → часу."
     },
     {
         instruction: "Trascina la forma giusta.",
@@ -49,21 +50,21 @@ const p1exercises = [
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 18:30) Приходи {{1}}.",
-        words: ["к половина седьмого", "к половину седьмого", "к половине седьмого"],
-        correctAnswers: { 1: "к половине седьмого" },
+        text: "(18:30) — К какому часу нам приходить? — {{1}}.",
+        words: ["К половина седьмого", "К половину седьмого", "К половине седьмого"],
+        correctAnswers: { 1: "К половине седьмого" },
         explanation: "к + dativo: половина → половине."
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(fino alle 20:00) Магазин работает {{1}}.",
-        words: ["к восьми", "до восемь", "до восьми"],
-        correctAnswers: { 1: "до восьми" },
-        explanation: "«Fino a»: до + genitivo. К vuol dire «entro», non «fino a»."
+        text: "(20:00) — До какого часа работает магазин? — {{1}}.",
+        words: ["К восьми", "До восемь", "До восьми"],
+        correctAnswers: { 1: "До восьми" },
+        explanation: "До какого часа? = fino a: до + genitivo. К vuol dire «entro»."
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 12:00) Обед будет готов {{1}}.",
+        text: "(12:00) Обед будет готов {{1}}.",
         words: ["к полудню", "к полдню", "к полудня"],
         correctAnswers: { 1: "к полудню" },
         explanation: "Dativo irregolare: полдень → полудню."
@@ -77,9 +78,9 @@ const p1exercises = [
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(entro 0:00) Мы вернёмся {{1}}.",
-        words: ["к полночь", "к полуночи", "к полуночью"],
-        correctAnswers: { 1: "к полуночи" },
+        text: "(0:00) — К какому часу вы вернётесь? — {{1}}.",
+        words: ["К полночь", "К полуночи", "К полуночью"],
+        correctAnswers: { 1: "К полуночи" },
         explanation: "Dativo irregolare: полночь → полуночи (come il genitivo)."
     }
 ];
