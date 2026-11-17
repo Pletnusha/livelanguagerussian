@@ -215,19 +215,19 @@ const p3exercises = [
 
 // ============================================================
 // PANEL 4 — Flashcard · public
-// Misto: fatto → momento
+// Сколько времени? (fatto) ↔ Во сколько? (momento)
 // ============================================================
 const p4cards = [
-    { front: "Половина шестого", back: "У меня встреча в половине шестого.", explanation: "La mezz'ora come momento: в + prepositivo → в половине." },
-    { front: "Пятое мая", back: "У меня день рождения пятого мая.", explanation: "«Когда?» con la data: genitivo senza preposizione." },
-    { front: "Четверть восьмого", back: "Поезд отправляется в четверть восьмого.", explanation: "в + accusativo. Четверть non cambia forma." },
-    { front: "Первое сентября", back: "Первого сентября дети идут в школу.", explanation: "Data come momento: genitivo senza preposizione." },
-    { front: "Пять минут третьего", back: "Урок начался в пять минут третьего.", explanation: "в + accusativo. «Пять минут» non cambia forma." },
-    { front: "Тридцать первое декабря", back: "Тридцать первого декабря мы едем к бабушке.", explanation: "Nei numeri composti cambia solo l'ultima parola: тридцать первого." },
-    { front: "Двадцать минут пятого", back: "Автобус приходит в двадцать минут пятого.", explanation: "в + accusativo. «Двадцать минут» non cambia forma." },
-    { front: "Восьмое марта", back: "Восьмого марта я всегда дарю маме цветы.", explanation: "Data come momento: genitivo senza preposizione." },
-    { front: "Час дня", back: "Давай встретимся в час дня.", explanation: "в + accusativo. «Час» non cambia forma." },
-    { front: "Двадцать пятое мая", back: "Двадцать пятого мая в школах последний звонок.", explanation: "Data come momento: двадцать пятое → двадцать пятого." }
+    { front: "15.15", back: "Пятнадцать минут четвёртого", explanation: "Che ore sono? È il fatto: niente в. La quarta ora va dalle 3 alle 4 (dalle 15 alle 16)." },
+    { front: "(18.15) Во сколько мы встречаемся?", back: "В пятнадцать минут седьмого", explanation: "A che ora? È il momento: в + accusativo. «Пятнадцать минут» non cambia forma." },
+    { front: "6.30", back: "Половина седьмого", explanation: "Il fatto: половина + genitivo dell'ora successiva (la settima ora va dalle 6 alle 7)." },
+    { front: "(9.30) Во сколько начинается урок?", back: "В половине десятого", explanation: "Il momento con la mezz'ora: в + prepositivo → в половине." },
+    { front: "14.15", back: "Четверть третьего", explanation: "Il fatto: четверть + genitivo dell'ora successiva (la terza ora va dalle 14 alle 15)." },
+    { front: "(13.00) Во сколько ты обедаешь?", back: "В час", explanation: "All'una si dice solo «в час», senza «один»." },
+    { front: "11.20", back: "Двадцать минут двенадцатого", explanation: "Il fatto: minuti + genitivo dell'ora successiva (la dodicesima ora va dalle 11 alle 12)." },
+    { front: "(7.10) Во сколько приходит поезд?", back: "В десять минут восьмого", explanation: "Il momento: в + accusativo. «Десять минут» non cambia forma." },
+    { front: "20.00", back: "Восемь часов вечера", explanation: "Ora esatta: non si passa all'ora successiva. 20.00 = восемь часов вечера." },
+    { front: "(17.00) Во сколько закрывается банк?", back: "В пять часов вечера", explanation: "Il momento con l'ora esatta: в + accusativo → в пять часов." }
 ];
 
 // ============================================================
