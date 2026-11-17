@@ -10,72 +10,72 @@ const p1exercises = [
     {
         instruction: "Che ore sono? Trascina l'orario giusto.",
         text: "— Сколько сейчас времени? — Половина седьмого. = {{1}}",
-        words: ["7.30", "6.30", "19.30"],
-        correctAnswers: { 1: "6.30" },
-        explanation: "Половина седьмого = metà della settima ora, che va dalle 6 alle 7: sono le 6.30 (o le 18.30)."
+        words: ["7:30", "6:30", "19:30"],
+        correctAnswers: { 1: "6:30" },
+        explanation: "Половина седьмого = metà della settima ora, che va dalle 6 alle 7: sono le 6:30 (o le 18:30)."
     },
     {
         instruction: "Che ore sono? Trascina l'orario giusto.",
         text: "— Который час? — Четверть третьего. = {{1}}",
-        words: ["14.15", "3.15", "15.15"],
-        correctAnswers: { 1: "14.15" },
-        explanation: "La terza ora va dalle 2 alle 3 (dalle 14 alle 15): четверть третьего = 14.15 (o 2.15)."
+        words: ["14:15", "3:15", "15:15"],
+        correctAnswers: { 1: "14:15" },
+        explanation: "La terza ora va dalle 2 alle 3 (dalle 14 alle 15): четверть третьего = 14:15 (o 2:15)."
     },
     {
         instruction: "Che ore sono? Trascina l'orario giusto.",
         text: "— Сколько времени? — Двадцать минут девятого. = {{1}}",
-        words: ["8.20", "9.20", "21.20"],
-        correctAnswers: { 1: "8.20" },
-        explanation: "La nona ora va dalle 8 alle 9: двадцать минут девятого = 8.20 (o 20.20)."
+        words: ["8:20", "9:20", "21:20"],
+        correctAnswers: { 1: "8:20" },
+        explanation: "La nona ora va dalle 8 alle 9: двадцать минут девятого = 8:20 (o 20:20)."
     },
     {
         instruction: "Che ore sono? Trascina l'orario giusto.",
         text: "— Который час? — Шесть часов. = {{1}}",
-        words: ["5.00", "7.00", "6.00"],
-        correctAnswers: { 1: "6.00" },
+        words: ["5:00", "7:00", "6:00"],
+        correctAnswers: { 1: "6:00" },
         explanation: "Con l'ora esatta non si passa all'ora successiva: шесть часов = 6.00."
     },
     {
         instruction: "Che ore sono? Trascina l'orario giusto.",
         text: "— Сколько сейчас времени? — Половина первого. = {{1}}",
-        words: ["1.30", "12.30", "13.30"],
-        correctAnswers: { 1: "12.30" },
+        words: ["1:30", "12:30", "13:30"],
+        correctAnswers: { 1: "12:30" },
         explanation: "La prima ora va da mezzogiorno all'una: половина первого = 12.30."
     },
     {
         instruction: "Che ore sono? Trascina l'orario giusto.",
         text: "— Который час? — Десять минут пятого. = {{1}}",
-        words: ["17.10", "5.10", "16.10"],
-        correctAnswers: { 1: "16.10" },
-        explanation: "La quinta ora va dalle 4 alle 5 (dalle 16 alle 17): десять минут пятого = 16.10 (o 4.10)."
+        words: ["17:10", "5:10", "16:10"],
+        correctAnswers: { 1: "16:10" },
+        explanation: "La quinta ora va dalle 4 alle 5 (dalle 16 alle 17): десять минут пятого = 16:10 (o 4:10)."
     },
     {
         instruction: "Che ore sono? Trascina l'orario giusto.",
         text: "— Сколько времени? — Двадцать пять минут одиннадцатого. = {{1}}",
-        words: ["10.25", "11.25", "23.25"],
-        correctAnswers: { 1: "10.25" },
-        explanation: "L'undicesima ora va dalle 10 alle 11: двадцать пять минут одиннадцатого = 10.25 (o 22.25)."
+        words: ["10:25", "11:25", "23:25"],
+        correctAnswers: { 1: "10:25" },
+        explanation: "L'undicesima ora va dalle 10 alle 11: двадцать пять минут одиннадцатого = 10:25 (o 22:25)."
     },
     {
         instruction: "Che ore sono? Trascina l'orario giusto.",
         text: "— Который час? — Четверть восьмого. = {{1}}",
-        words: ["20.15", "8.15", "19.15"],
-        correctAnswers: { 1: "19.15" },
-        explanation: "L'ottava ora va dalle 7 alle 8 (dalle 19 alle 20): четверть восьмого = 19.15 (o 7.15)."
+        words: ["20:15", "8:15", "19:15"],
+        correctAnswers: { 1: "19:15" },
+        explanation: "L'ottava ora va dalle 7 alle 8 (dalle 19 alle 20): четверть восьмого = 19:15 (o 7:15)."
     },
     {
         instruction: "Che ore sono? Trascina l'orario giusto.",
         text: "— Сколько сейчас времени? — Пятнадцать минут четвёртого. = {{1}}",
-        words: ["16.15", "15.15", "4.15"],
-        correctAnswers: { 1: "15.15" },
-        explanation: "La quarta ora va dalle 3 alle 4 (dalle 15 alle 16): пятнадцать минут четвёртого = 15.15 (o 3.15)."
+        words: ["16:15", "15:15", "4:15"],
+        correctAnswers: { 1: "15:15" },
+        explanation: "La quarta ora va dalle 3 alle 4 (dalle 15 alle 16): пятнадцать минут четвёртого = 15:15 (o 3:15)."
     },
     {
         instruction: "Che ore sono? Trascina l'orario giusto.",
         text: "— Который час? — Половина десятого. = {{1}}",
-        words: ["10.30", "9.30", "22.30"],
-        correctAnswers: { 1: "9.30" },
-        explanation: "La decima ora va dalle 9 alle 10: половина десятого = 9.30 (o 21.30)."
+        words: ["10:30", "9:30", "22:30"],
+        correctAnswers: { 1: "9:30" },
+        explanation: "La decima ora va dalle 9 alle 10: половина десятого = 9:30 (o 21:30)."
     }
 ];
 
@@ -86,61 +86,61 @@ const p1exercises = [
 const p2exercises = [
     {
         instruction: "A che ora? Trascina la forma giusta.",
-        text: "(18.30) — Во сколько начинается фильм? — {{1}}.",
+        text: "(18:30) — Во сколько начинается фильм? — {{1}}.",
         words: ["В половину седьмого", "В половине седьмого", "В половине семь"],
         correctAnswers: { 1: "В половине седьмого" }
     },
     {
         instruction: "A che ora? Trascina la forma giusta.",
-        text: "(7.15) — Во сколько ты встаёшь? — {{1}}.",
+        text: "(7:15) — Во сколько ты встаёшь? — {{1}}.",
         words: ["В четверть восьмого", "Четверть восьмого", "В четверти восьмого"],
         correctAnswers: { 1: "В четверть восьмого" }
     },
     {
         instruction: "A che ora? Trascina la forma giusta.",
-        text: "(13.00) — Во сколько у нас обед? — {{1}}.",
+        text: "(13:00) — Во сколько у нас обед? — {{1}}.",
         words: ["В одном часу", "Час", "В час"],
         correctAnswers: { 1: "В час" }
     },
     {
         instruction: "A che ora? Trascina la forma giusta.",
-        text: "(9.20) — Во сколько приходит автобус? — {{1}}.",
+        text: "(9:20) — Во сколько приходит автобус? — {{1}}.",
         words: ["Двадцать минут десятого", "В двадцать минут девятого", "В двадцать минут десятого"],
         correctAnswers: { 1: "В двадцать минут десятого" }
     },
     {
         instruction: "A che ora? Trascina la forma giusta.",
-        text: "(11.00) — Во сколько открывается магазин? — {{1}}.",
+        text: "(11:00) — Во сколько открывается магазин? — {{1}}.",
         words: ["В одиннадцать часов", "В одиннадцати часах", "Одиннадцать часов"],
         correctAnswers: { 1: "В одиннадцать часов" }
     },
     {
         instruction: "A che ora? Trascina la forma giusta.",
-        text: "(20.00) — Во сколько начинается концерт? — {{1}}.",
+        text: "(20:00) — Во сколько начинается концерт? — {{1}}.",
         words: ["В восемь часов", "Восемь часов", "В восьми часах"],
         correctAnswers: { 1: "В восемь часов" }
     },
     {
         instruction: "A che ora? Trascina la forma giusta.",
-        text: "(12.30) — Во сколько встречаемся? — {{1}}.",
+        text: "(12:30) — Во сколько встречаемся? — {{1}}.",
         words: ["В половине двенадцатого", "В половину первого", "В половине первого"],
         correctAnswers: { 1: "В половине первого" }
     },
     {
         instruction: "A che ora? Trascina la forma giusta.",
-        text: "(16.10) — Во сколько придёт мастер? — {{1}}.",
+        text: "(16:10) — Во сколько придёт мастер? — {{1}}.",
         words: ["Десять минут пятого", "В десять минут пятого", "В десять минут четвёртого"],
         correctAnswers: { 1: "В десять минут пятого" }
     },
     {
         instruction: "A che ora? Trascina la forma giusta.",
-        text: "(14.30) — Во сколько начинается урок? — {{1}}.",
+        text: "(14:30) — Во сколько начинается урок? — {{1}}.",
         words: ["В половину третьего", "В половине третьего", "В половине второго"],
         correctAnswers: { 1: "В половине третьего" }
     },
     {
         instruction: "A che ora? Trascina la forma giusta.",
-        text: "(18.15) — Во сколько мы встречаемся? — {{1}}.",
+        text: "(18:15) — Во сколько мы встречаемся? — {{1}}.",
         words: ["В пятнадцать минут седьмого", "Пятнадцать минут седьмого", "В пятнадцать минут шестого"],
         correctAnswers: { 1: "В пятнадцать минут седьмого" }
     }
@@ -153,61 +153,61 @@ const p2exercises = [
 const p3exercises = [
     {
         instruction: "Trascina la forma giusta.",
-        text: "(17.55) — Во сколько отходит поезд? — {{1}}.",
+        text: "(17:55) — Во сколько отходит поезд? — {{1}}.",
         words: ["Без пяти шести", "В без пяти шесть", "Без пяти шесть"],
         correctAnswers: { 1: "Без пяти шесть" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(9.40) — Сколько сейчас времени? — {{1}}.",
+        text: "(9:40) — Сколько сейчас времени? — {{1}}.",
         words: ["Без двадцати десять", "Без двадцать десять", "Без двадцати девять"],
         correctAnswers: { 1: "Без двадцати десять" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(13.45) — Во сколько начинается собрание? — {{1}}.",
+        text: "(13:45) — Во сколько начинается собрание? — {{1}}.",
         words: ["Без четверть два", "Без четверти два", "В без четверти два"],
         correctAnswers: { 1: "Без четверти два" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(12.40) — Который час? — {{1}}.",
+        text: "(12:40) — Который час? — {{1}}.",
         words: ["Без двадцати один", "Без двадцати час", "Без двадцати часа"],
         correctAnswers: { 1: "Без двадцати час" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(18.50) — Во сколько закрывается аптека? — {{1}}.",
+        text: "(18:50) — Во сколько закрывается аптека? — {{1}}.",
         words: ["Без десяти семи", "В без десяти семь", "Без десяти семь"],
         correctAnswers: { 1: "Без десяти семь" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(7.35) — Во сколько ты выходишь из дома? — {{1}}.",
+        text: "(7:35) — Во сколько ты выходишь из дома? — {{1}}.",
         words: ["Без двадцати пяти восемь", "Без двадцать пять восемь", "Без двадцати пяти семь"],
         correctAnswers: { 1: "Без двадцати пяти восемь" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(21.45) — Сколько времени? — {{1}}.",
+        text: "(21:45) — Сколько времени? — {{1}}.",
         words: ["Без пятнадцати десять", "Без пятнадцати девять", "Без пятнадцати десяти"],
         correctAnswers: { 1: "Без пятнадцати десять" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(10.55) — Во сколько у тебя созвон? — {{1}}.",
+        text: "(10:55) — Во сколько у тебя созвон? — {{1}}.",
         words: ["В без пяти одиннадцать", "Без пяти одиннадцати", "Без пяти одиннадцать"],
         correctAnswers: { 1: "Без пяти одиннадцать" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(15.50) — Во сколько приедет такси? — {{1}}.",
+        text: "(15:50) — Во сколько приедет такси? — {{1}}.",
         words: ["Без десять четыре", "Без десяти четыре", "Без десяти три"],
         correctAnswers: { 1: "Без десяти четыре" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(11.40) — Который час? — {{1}}.",
+        text: "(11:40) — Который час? — {{1}}.",
         words: ["Без двадцати двенадцать", "В без двадцати двенадцать", "Без двадцати двенадцати"],
         correctAnswers: { 1: "Без двадцати двенадцать" }
     }
@@ -218,16 +218,16 @@ const p3exercises = [
 // Сколько времени? (fatto) ↔ Во сколько? (momento)
 // ============================================================
 const p4cards = [
-    { front: "15.15", back: "Пятнадцать минут четвёртого", explanation: "Che ore sono? È il fatto: niente в. La quarta ora va dalle 3 alle 4 (dalle 15 alle 16)." },
-    { front: "(18.15) Во сколько мы встречаемся?", back: "В пятнадцать минут седьмого", explanation: "A che ora? È il momento: в + accusativo. «Пятнадцать минут» non cambia forma." },
-    { front: "6.30", back: "Половина седьмого", explanation: "Il fatto: половина + genitivo dell'ora successiva (la settima ora va dalle 6 alle 7)." },
-    { front: "(9.30) Во сколько начинается урок?", back: "В половине десятого", explanation: "Il momento con la mezz'ora: в + prepositivo → в половине." },
-    { front: "14.15", back: "Четверть третьего", explanation: "Il fatto: четверть + genitivo dell'ora successiva (la terza ora va dalle 14 alle 15)." },
-    { front: "(13.00) Во сколько ты обедаешь?", back: "В час", explanation: "All'una si dice solo «в час», senza «один»." },
-    { front: "11.20", back: "Двадцать минут двенадцатого", explanation: "Il fatto: minuti + genitivo dell'ora successiva (la dodicesima ora va dalle 11 alle 12)." },
-    { front: "(7.10) Во сколько приходит поезд?", back: "В десять минут восьмого", explanation: "Il momento: в + accusativo. «Десять минут» non cambia forma." },
-    { front: "20.00", back: "Восемь часов вечера", explanation: "Ora esatta: non si passa all'ora successiva. 20.00 = восемь часов вечера." },
-    { front: "(17.00) Во сколько закрывается банк?", back: "В пять часов вечера", explanation: "Il momento con l'ora esatta: в + accusativo → в пять часов." }
+    { front: "15:15", back: "Пятнадцать минут четвёртого", explanation: "Che ore sono? È il fatto: niente в. La quarta ora va dalle 3 alle 4 (dalle 15 alle 16)." },
+    { front: "(18:15) Во сколько мы встречаемся?", back: "В пятнадцать минут седьмого", explanation: "A che ora? È il momento: в + accusativo. «Пятнадцать минут» non cambia forma." },
+    { front: "6:30", back: "Половина седьмого", explanation: "Il fatto: половина + genitivo dell'ora successiva (la settima ora va dalle 6 alle 7)." },
+    { front: "(9:30) Во сколько начинается урок?", back: "В половине десятого", explanation: "Il momento con la mezz'ora: в + prepositivo → в половине." },
+    { front: "14:15", back: "Четверть третьего", explanation: "Il fatto: четверть + genitivo dell'ora successiva (la terza ora va dalle 14 alle 15)." },
+    { front: "(13:00) Во сколько ты обедаешь?", back: "В час", explanation: "All'una si dice solo «в час», senza «один»." },
+    { front: "11:20", back: "Двадцать минут двенадцатого", explanation: "Il fatto: minuti + genitivo dell'ora successiva (la dodicesima ora va dalle 11 alle 12)." },
+    { front: "(7:10) Во сколько приходит поезд?", back: "В десять минут восьмого", explanation: "Il momento: в + accusativo. «Десять минут» non cambia forma." },
+    { front: "20:00", back: "Восемь часов вечера", explanation: "Ora esatta: non si passa all'ora successiva. 20:00 = восемь часов вечера." },
+    { front: "(17:00) Во сколько закрывается банк?", back: "В пять часов вечера", explanation: "Il momento con l'ora esatta: в + accusativo → в пять часов." }
 ];
 
 // ============================================================
@@ -235,16 +235,16 @@ const p4cards = [
 // Misto: сколько времени? / во сколько? / без
 // ============================================================
 const p5cards = [
-    { front: "19.30", back: "Половина восьмого" },
-    { front: "(10.30) Во сколько открывается музей?", back: "В половине одиннадцатого" },
-    { front: "8.40", back: "Без двадцати девять" },
-    { front: "(16.55) Во сколько заканчивается урок?", back: "Без пяти пять" },
-    { front: "12.10", back: "Десять минут первого" },
-    { front: "(21.15) Во сколько начинается фильм?", back: "В четверть десятого" },
-    { front: "13.00", back: "Час дня" },
-    { front: "(6.45) Во сколько ты встаёшь?", back: "Без четверти семь" },
-    { front: "(14.00) Во сколько у тебя встреча?", back: "В два часа" },
-    { front: "23.25", back: "Двадцать пять минут двенадцатого" }
+    { front: "19:30", back: "Половина восьмого" },
+    { front: "(10:30) Во сколько открывается музей?", back: "В половине одиннадцатого" },
+    { front: "8:40", back: "Без двадцати девять" },
+    { front: "(16:55) Во сколько заканчивается урок?", back: "Без пяти пять" },
+    { front: "12:10", back: "Десять минут первого" },
+    { front: "(21:15) Во сколько начинается фильм?", back: "В четверть десятого" },
+    { front: "13:00", back: "Час дня" },
+    { front: "(6:45) Во сколько ты встаёшь?", back: "Без четверти семь" },
+    { front: "(14:00) Во сколько у тебя встреча?", back: "В два часа" },
+    { front: "23:25", back: "Двадцать пять минут двенадцатого" }
 ];
 
 // ============================================================
@@ -252,16 +252,16 @@ const p5cards = [
 // Misto: giorno e notte, fatto / momento / без
 // ============================================================
 const p6cards = [
-    { front: "0.30", back: "Половина первого ночи" },
-    { front: "(23.45) Во сколько закрывается бар?", back: "Без пятнадцати двенадцать" },
-    { front: "(12.05) Во сколько ты обедаешь?", back: "В пять минут первого" },
-    { front: "18.35", back: "Без двадцати пяти семь" },
-    { front: "(15.30) Во сколько начинается экскурсия?", back: "В половине четвёртого" },
-    { front: "1.00", back: "Час ночи" },
-    { front: "(7.50) Во сколько уходит электричка?", back: "Без десяти восемь" },
-    { front: "22.20", back: "Двадцать минут одиннадцатого" },
-    { front: "(11.15) Во сколько приходит курьер?", back: "В четверть двенадцатого" },
-    { front: "(1.00) Во сколько вы легли спать?", back: "В час ночи" }
+    { front: "0:30", back: "Половина первого ночи" },
+    { front: "(23:45) Во сколько закрывается бар?", back: "Без пятнадцати двенадцать" },
+    { front: "(12:05) Во сколько ты обедаешь?", back: "В пять минут первого" },
+    { front: "18:35", back: "Без двадцати пяти семь" },
+    { front: "(15:30) Во сколько начинается экскурсия?", back: "В половине четвёртого" },
+    { front: "1:00", back: "Час ночи" },
+    { front: "(7:50) Во сколько уходит электричка?", back: "Без десяти восемь" },
+    { front: "22:20", back: "Двадцать минут одиннадцатого" },
+    { front: "(11:15) Во сколько приходит курьер?", back: "В четверть двенадцатого" },
+    { front: "(1:00) Во сколько вы легли спать?", back: "В час ночи" }
 ];
 
 // ============================================================
