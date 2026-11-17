@@ -24,7 +24,7 @@
             const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
             const { data: { session } } = await client.auth.getSession();
             if (!session) {
-                window.location.href = '/login.html?redirect=livello_elementare/complementi/complemento-di-tempo-determinato/fatto-o-momento';
+                window.location.href = '/login.html?redirect=livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/orari/fatto-o-momento';
             } else {
                 document.documentElement.style.visibility = '';
             }
@@ -241,7 +241,7 @@
     </section>
 
     <footer class="level-footer">
-        <a href="/livello_elementare/complementi/complemento-di-tempo-determinato/" class="back-link">← Torna al Complemento di tempo determinato</a>
+        <a href="/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/orari/" class="back-link">← Torna a Время</a>
     </footer>
 
     <script type="module" src="./exercises.js"></script>
