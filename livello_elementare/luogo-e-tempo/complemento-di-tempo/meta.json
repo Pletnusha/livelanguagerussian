@@ -1,0 +1,17 @@
+{
+  "id": "b1-luogo-e-tempo-complemento-di-tempo",
+  "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/",
+  "level": "b1",
+  "doc_type": "hub",
+  "cluster": [
+    "luogo-e-tempo"
+  ],
+  "grammatica": [],
+  "complementi": [
+    "tempo-determinato",
+    "tempo-continuato"
+  ],
+  "lessico": [],
+  "title_ru": "ДАТЫ И ВРЕМЯ",
+  "title_it": "Complemento di tempo: date e orari in russo"
+}
