@@ -289,6 +289,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Misto: orari di viaggio — до / после + periodo / около / к / в / без
+// ============================================================
+const p8cards = [
+    { front: "Расписание: 9:00 — урок, 10:30 — перерыв. Когда перерыв?", back: "После урока", distractors: ["До урока", "После урок"] },
+    { front: "(12:00–13:00) Когда у нас обед?", back: "С двенадцати до часа", distractors: ["С двенадцати по час", "С двенадцать до часа"] },
+    { front: "Расписание: 8:00 — завтрак, 9:00 — экскурсия. Когда завтрак?", back: "До экскурсии", distractors: ["После экскурсии", "До экскурсия"] },
+    { front: "(16:00) Когда примерно закончится экскурсия?", back: "Часа в четыре", distractors: ["Часов в четыре", "Около четыре"] },
+    { front: "Расписание: 14:00 — концерт, 16:00 — ужин. Когда ужин?", back: "После концерта", distractors: ["До концерта", "После концерт"] },
+    { front: "(10:00) К какому часу нужно прийти на вокзал?", back: "К десяти", distractors: ["К десять", "К десятью"] },
+    { front: "(19:00) Ужин в семь. Сначала прогулка, потом ужин. Когда прогулка?", back: "До семи", distractors: ["После семи", "До семь"] },
+    { front: "(7:15) Во сколько по расписанию уходит автобус?", back: "В четверть восьмого", distractors: ["В четверти восьмого", "Около четверти восьмого"] },
+    { front: "(22:00) Экскурсия заканчивается в десять. Когда мы вернёмся в отель?", back: "После десяти", distractors: ["До десяти", "После десять"] },
+    { front: "(13:50) Сколько времени?", back: "Без десяти два", distractors: ["В без десяти два", "После без десяти два"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -298,7 +315,8 @@ const initializers = {
     'panel-pd-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-04', cards: p4cards }),
     'panel-pd-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-05', cards: p5cards }),
     'panel-pd-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-06', cards: p6cards }),
-    'panel-pd-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-07', cards: p7cards })
+    'panel-pd-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-07', cards: p7cards }),
+    'panel-pd-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
