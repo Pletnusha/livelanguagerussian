@@ -269,6 +269,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni: periodo + fatto / momento / без
+// ============================================================
+const p7cards = [
+    { front: "Пт–Вс: 12:00–22:00", back: "С пятницы по воскресенье с двенадцати до десяти", explanation: "Giorni con по (+ accusativo), ore con до (+ genitivo)." },
+    { front: "(16:45) Во сколько начинается встреча?", back: "Без пятнадцати пять", explanation: "Con без non si mette в: без + genitivo dei minuti + l'ora successiva." },
+    { front: "8:15", back: "Четверть девятого", explanation: "Che ore sono? Il fatto, senza preposizione: четверть + genitivo dell'ora successiva." },
+    { front: "11–14 февраля", back: "С одиннадцатого по четырнадцатое февраля", explanation: "Date: с + genitivo … по + accusativo. Il 14 è incluso." },
+    { front: "(20:30) Во сколько начинается спектакль?", back: "В половине девятого", explanation: "A che ora? Con la mezz'ora: в + prepositivo → в половине." },
+    { front: "Приём: 9:30–12:00", back: "Приём с половины десятого до двенадцати", explanation: "Dopo с anche la mezz'ora va al genitivo: половина → половины." },
+    { front: "13:10", back: "Десять минут второго", explanation: "Il fatto: minuti + genitivo dell'ora successiva (la seconda ora va dalle 13 alle 14)." },
+    { front: "Ср–Пт", back: "Со среды по пятницу", explanation: "Davanti a ср- si dice со. Poi по + accusativo: пятницу." },
+    { front: "(6:00) Во сколько ты встаёшь?", back: "В шесть часов", explanation: "Il momento con l'ora esatta: в + accusativo → в шесть часов." },
+    { front: "Обед: 13:00–14:30", back: "Обед с часа до половины третьего", explanation: "Genitivo dopo с e до: час → часа, половина → половины." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -278,6 +295,7 @@ const initializers = {
     'panel-per-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-per-04', cards: p4cards }),
     'panel-per-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-per-05', cards: p5cards }),
     'panel-per-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-per-06', cards: p6cards }),
+    'panel-per-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-per-07', cards: p7cards }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
