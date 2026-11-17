@@ -221,19 +221,19 @@ const p3exercises = [
 
 // ============================================================
 // PANEL 4 — Flashcard · public
-// к + dativo: rispondere «Когда…?» con una scadenza (entro)
+// к + dativo: rispondere «К какому часу…?»
 // ============================================================
 const p4cards = [
-    { front: "(entro 14:00) Когда ты придёшь?", back: "К двум", distractors: ["К двух", "К два"], explanation: "Scadenza: к + dativo: два → двум." },
-    { front: "(entro 17:00) Когда будет готово платье?", back: "К пяти", distractors: ["К пять", "К пятью"], explanation: "к + dativo: пять → пяти." },
-    { front: "(entro 19:30) Когда нужно быть в театре?", back: "К половине восьмого", distractors: ["К половина восьмого", "К половину восьмого"], explanation: "Anche la mezz'ora va al dativo: половина → половине." },
-    { front: "(entro 12:00) Когда привезут пиццу?", back: "К полудню", distractors: ["К полдень", "К полудня"], explanation: "Dativo irregolare: полдень → полудню." },
-    { front: "(entro 23:00) Когда ты вернёшься?", back: "К одиннадцати", distractors: ["К одиннадцать", "К одиннадцатью"], explanation: "к + dativo: одиннадцать → одиннадцати." },
-    { front: "(entro 13:00) Когда закончится собрание?", back: "К часу", distractors: ["К час", "К часа"], explanation: "к + dativo: час → часу." },
-    { front: "(entro 15:00) Когда нужно отправить письмо?", back: "К трём", distractors: ["К трёх", "К три"], explanation: "к + dativo: три → трём. «Трёх» è il genitivo (до трёх, около трёх)." },
-    { front: "(entro 0:00) Когда закончится вечеринка?", back: "К полуночи", distractors: ["К полночь", "К полночью"], explanation: "Dativo irregolare: полночь → полуночи." },
-    { front: "(entro 8:15) Когда нужно быть в офисе?", back: "К четверти девятого", distractors: ["К четверть девятого", "К четвертью девятого"], explanation: "Anche il quarto va al dativo: четверть → четверти." },
-    { front: "(entro 16:00) Когда будут готовы документы?", back: "К четырём", distractors: ["К четырёх", "К четыре"], explanation: "к + dativo: четыре → четырём." }
+    { front: "(14:00) К какому часу ты придёшь?", back: "К двум", distractors: ["К двух", "К два"], explanation: "Scadenza: к + dativo: два → двум." },
+    { front: "(17:00) К какому часу будет готово платье?", back: "К пяти", distractors: ["К пять", "К пятью"], explanation: "к + dativo: пять → пяти." },
+    { front: "(19:30) К какому часу нужно быть в театре?", back: "К половине восьмого", distractors: ["К половина восьмого", "К половину восьмого"], explanation: "Anche la mezz'ora va al dativo: половина → половине." },
+    { front: "(12:00) К какому часу привезут пиццу?", back: "К полудню", distractors: ["К полдень", "К полудня"], explanation: "Dativo irregolare: полдень → полудню." },
+    { front: "(23:00) К какому часу ты вернёшься?", back: "К одиннадцати", distractors: ["К одиннадцать", "К одиннадцатью"], explanation: "к + dativo: одиннадцать → одиннадцати." },
+    { front: "(13:00) К какому часу закончится собрание?", back: "К часу", distractors: ["К час", "К часа"], explanation: "к + dativo: час → часу." },
+    { front: "(15:00) К какому часу нужно отправить письмо?", back: "К трём", distractors: ["К трёх", "К три"], explanation: "к + dativo: три → трём. «Трёх» è il genitivo (до трёх, около трёх)." },
+    { front: "(0:00) К какому часу закончится вечеринка?", back: "К полуночи", distractors: ["К полночь", "К полночью"], explanation: "Dativo irregolare: полночь → полуночи." },
+    { front: "(8:15) К какому часу нужно быть в офисе?", back: "К четверти девятого", distractors: ["К четверть девятого", "К четвертью девятого"], explanation: "Anche il quarto va al dativo: четверть → четверти." },
+    { front: "(16:00) К какому часу будут готовы документы?", back: "К четырём", distractors: ["К четырёх", "К четыре"], explanation: "к + dativo: четыре → четырём." }
 ];
 
 // ============================================================
