@@ -92,61 +92,61 @@ const p1exercises = [
 const p2exercises = [
     {
         instruction: "Trascina la forma giusta.",
-        text: "(≈16:00) Я приеду {{1}}.",
+        text: "(16:00) Я приеду {{1}}.",
         words: ["около четыре", "около четырёх", "около четырём"],
         correctAnswers: { 1: "около четырёх" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(≈19:00) Гости придут {{1}}.",
+        text: "(19:00) Гости придут {{1}}.",
         words: ["около семи", "около семь", "около в семь"],
         correctAnswers: { 1: "около семи" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(≈11:30) Мастер будет {{1}}.",
+        text: "(11:30) Мастер будет {{1}}.",
         words: ["около половину двенадцатого", "около половина двенадцатого", "около половины двенадцатого"],
         correctAnswers: { 1: "около половины двенадцатого" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(≈22:00) Поезд прибывает {{1}}.",
+        text: "(22:00) Поезд прибывает {{1}}.",
         words: ["около десять", "около десяти", "около десятью"],
         correctAnswers: { 1: "около десяти" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(≈2:00) Он вернулся {{1}} ночи.",
+        text: "(2:00) Он вернулся {{1}} ночи.",
         words: ["около два", "около двух", "около двумя"],
         correctAnswers: { 1: "около двух" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(≈9:15) Начнём {{1}}.",
+        text: "(9:15) Начнём {{1}}.",
         words: ["около четверть десятого", "около в четверть десятого", "около четверти десятого"],
         correctAnswers: { 1: "около четверти десятого" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(≈18:00) Магазин закроется {{1}}.",
+        text: "(18:00) Магазин закроется {{1}}.",
         words: ["около шести", "около шесть", "около шестью"],
         correctAnswers: { 1: "около шести" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(≈0:00) Фильм закончится {{1}}.",
+        text: "(0:00) Фильм закончится {{1}}.",
         words: ["около полуночи", "около полночь", "около в полночь"],
         correctAnswers: { 1: "около полуночи" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(≈13:00) Позвоните {{1}}.",
+        text: "(13:00) Позвоните {{1}}.",
         words: ["около час", "около в час", "около часа"],
         correctAnswers: { 1: "около часа" }
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(≈12:00) Приходи {{1}}.",
+        text: "(12:00) Приходи {{1}}.",
         words: ["около полдень", "около полудня", "около полудню"],
         correctAnswers: { 1: "около полудня" }
     }
