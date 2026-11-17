@@ -235,6 +235,23 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// до o по? Ore → до + genitivo; giorni e date → по + accusativo
+// ============================================================
+const p5cards = [
+    { front: "(10:00–17:00) с десяти … пяти", back: "с десяти до пяти" },
+    { front: "(Пн–Чт) с понедельника … четверг", back: "с понедельника по четверг" },
+    { front: "(5–12 июня) с пятого … двенадцатое июня", back: "с пятого по двенадцатое июня" },
+    { front: "(12:00–13:30) с двенадцати … половины второго", back: "с двенадцати до половины второго" },
+    { front: "(Ср–Сб) со среды … субботу", back: "со среды по субботу" },
+    { front: "(23:00–6:00) с одиннадцати вечера … шести утра", back: "с одиннадцати вечера до шести утра" },
+    { front: "(1–15 сентября) с первого … пятнадцатое сентября", back: "с первого по пятнадцатое сентября" },
+    { front: "(Вт–Пт) со вторника … пятницу", back: "со вторника по пятницу" },
+    { front: "(16:00–18:00) с четырёх … шести", back: "с четырёх до шести" },
+    { front: "(25–31 декабря) с двадцать пятого … тридцать первое декабря", back: "с двадцать пятого по тридцать первое декабря" }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -242,6 +259,7 @@ const initializers = {
     'panel-per-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-per-02', exercises: p2exercises }),
     'panel-per-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-per-03', exercises: p3exercises }),
     'panel-per-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-per-04', cards: p4cards }),
+    'panel-per-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-per-05', cards: p5cards }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
