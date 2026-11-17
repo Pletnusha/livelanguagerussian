@@ -265,7 +265,7 @@ const p6cards = [
 ];
 
 // ============================================================
-// PANEL 7 — Quiz misto (multiple choice + match + write) · public
+// PANEL 7 — Quiz misto (multiple choice + match + write) · public — solo orari
 // 0-(MC_END-1):          multiple choice
 // MC_END-(MATCH_END-1):  match game
 // MATCH_END onwards:     text input
@@ -282,40 +282,40 @@ function initPanelFom7() {
     let currentCard = 0;
 
     const multipleChoiceData = [
-        { question: "(16:30) — Во сколько у тебя урок? — ___.", options: ["В половине пятого", "Половина пятого", "В половину пятого"], answer: "В половине пятого" },
-        { question: "(15.05) — Когда у Оли день рождения? — ___ мая.", options: ["Пятнадцатое", "Пятнадцатого", "В пятнадцатое"], answer: "Пятнадцатого" },
+        { question: "(16:30) — Во сколько у тебя урок? — ___.", options: ["Половина пятого", "В половине пятого", "В половину пятого"], answer: "В половине пятого" },
+        { question: "(11:10) — Сколько времени? — ___.", options: ["Десять минут двенадцатого", "В десять минут двенадцатого", "Десять минут одиннадцатого"], answer: "Десять минут двенадцатого" },
         { question: "(19:00) — Во сколько вы ужинаете? — ___.", options: ["Семь часов вечера", "В семь часов утра", "В семь часов вечера"], answer: "В семь часов вечера" },
-        { question: "(сб) — Когда вы едете на дачу? — ___.", options: ["В субботу", "Суббота", "В субботе"], answer: "В субботу" },
-        { question: "(11:10) — Сколько времени? — ___.", options: ["В десять минут двенадцатого", "Десять минут двенадцатого", "Десять минут одиннадцатого"], answer: "Десять минут двенадцатого" },
-        { question: "(01.07) — Когда начинается отпуск? — ___ июля.", options: ["Первое", "В первое", "Первого"], answer: "Первого" },
-        { question: "(8:15) — Во сколько приходит поезд? — ___ девятого.", options: ["В четверть", "В четверти", "Четверть"], answer: "В четверть" },
-        { question: "(09.05) — Какое сегодня число? — ___ мая.", options: ["Девятого", "Девятое", "В девятое"], answer: "Девятое" },
-        { question: "(вт) — Когда у нас встреча? — ___.", options: ["Вторник", "В вторник", "Во вторник"], answer: "Во вторник" },
-        { question: "(14:25) — Во сколько он позвонил? — ___.", options: ["В двадцать пять минут третьего", "Двадцать пять минут третьего", "В двадцать пять минут второго"], answer: "В двадцать пять минут третьего" }
+        { question: "(8:45) — Сколько времени? — ___.", options: ["Без пятнадцати девять", "В без пятнадцати девять", "Без пятнадцати восемь"], answer: "Без пятнадцати девять" },
+        { question: "(8:15) — Во сколько приходит поезд? — ___.", options: ["Четверть девятого", "В четверти девятого", "В четверть девятого"], answer: "В четверть девятого" },
+        { question: "(13:00) — Сколько времени? — ___.", options: ["Один час дня", "Час дня", "В час дня"], answer: "Час дня" },
+        { question: "(14:25) — Во сколько он позвонил? — ___.", options: ["В двадцать пять минут второго", "В двадцать пять минут третьего", "Двадцать пять минут третьего"], answer: "В двадцать пять минут третьего" },
+        { question: "(23:30) — Сколько времени? — ___.", options: ["Половина двенадцатого", "Половина одиннадцатого", "В половине двенадцатого"], answer: "Половина двенадцатого" },
+        { question: "(6:50) — Во сколько ты встаёшь? — ___.", options: ["В без десяти семь", "Без десять семь", "Без десяти семь"], answer: "Без десяти семь" },
+        { question: "(12:00) — Во сколько обед? — ___.", options: ["Двенадцать часов", "В двенадцать часов", "В двенадцати часах"], answer: "В двенадцать часов" }
     ];
     const matchPairs = [
         { left: "(17:30) Сколько времени?", right: "половина шестого" },
         { left: "(17:30) Во сколько?", right: "в половине шестого" },
         { left: "(7:15) Сколько времени?", right: "четверть восьмого" },
         { left: "(7:15) Во сколько?", right: "в четверть восьмого" },
-        { left: "(05.05) Какое число?", right: "пятое мая" },
-        { left: "(05.05) Когда?", right: "пятого мая" },
+        { left: "(13:00) Сколько времени?", right: "час дня" },
         { left: "(13:00) Во сколько?", right: "в час дня" },
-        { left: "(31.12) Когда?", right: "тридцать первого декабря" },
-        { left: "(ср) Когда?", right: "в среду" },
-        { left: "(16:10) Во сколько?", right: "в десять минут пятого" }
+        { left: "(16:10) Во сколько?", right: "в десять минут пятого" },
+        { left: "(9:55) Во сколько?", right: "без пяти десять" },
+        { left: "(20:00) Сколько времени?", right: "восемь часов вечера" },
+        { left: "(2:00) Во сколько?", right: "в два часа ночи" }
     ];
     const quizData = [
         { id: "fom7-w1", promptPrefix: "У меня встреча ", promptSuffix: ". (17:30)", answers: ["в половине шестого"] },
         { id: "fom7-w2", promptPrefix: "Поезд отправляется ", promptSuffix: ". (7:15)", answers: ["в четверть восьмого", "в пятнадцать минут восьмого"] },
-        { id: "fom7-w3", promptPrefix: "У меня день рождения ", promptSuffix: ". (05.05)", answers: ["пятого мая"] },
+        { id: "fom7-w3", promptPrefix: "— Сколько сейчас времени? — ", promptSuffix: ". (16:40)", answers: ["без двадцати пять"] },
         { id: "fom7-w4", promptPrefix: "Урок начинается ", promptSuffix: ". (16:10)", answers: ["в десять минут пятого"] },
-        { id: "fom7-w5", promptPrefix: "Мы идём в кино ", promptSuffix: ". (вт)", answers: ["во вторник"] },
-        { id: "fom7-w6", promptPrefix: "Он вернулся домой ", promptSuffix: ". (2:00)", answers: ["в два часа ночи"] },
-        { id: "fom7-w7", promptPrefix: "Мы едем к бабушке ", promptSuffix: ". (31.12)", answers: ["тридцать первого декабря"] },
-        { id: "fom7-w8", promptPrefix: "Фильм начинается ", promptSuffix: ". (19:30)", answers: ["в половине восьмого"] },
-        { id: "fom7-w9", promptPrefix: "Встречаемся ", promptSuffix: ". (пт)", answers: ["в пятницу"] },
-        { id: "fom7-w10", promptPrefix: "Рождество празднуют ", promptSuffix: ". (07.01)", answers: ["седьмого января"] }
+        { id: "fom7-w5", promptPrefix: "Он вернулся домой ", promptSuffix: ". (2:00)", answers: ["в два часа ночи", "в два часа"] },
+        { id: "fom7-w6", promptPrefix: "— Который час? — ", promptSuffix: ". (12:30)", answers: ["половина первого"] },
+        { id: "fom7-w7", promptPrefix: "Фильм начинается ", promptSuffix: ". (19:30)", answers: ["в половине восьмого"] },
+        { id: "fom7-w8", promptPrefix: "Магазин открывается ", promptSuffix: ". (8:55)", answers: ["без пяти девять"] },
+        { id: "fom7-w9", promptPrefix: "— Сколько времени? — ", promptSuffix: ". (21:00)", answers: ["девять часов", "девять часов вечера"] },
+        { id: "fom7-w10", promptPrefix: "Мы обедаем ", promptSuffix: ". (13:00)", answers: ["в час", "в час дня"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
@@ -324,8 +324,10 @@ function initPanelFom7() {
 
     if (TOTAL_CARDS === 0) return;
 
+    // Typed answers: ignore case, ё/е, extra spaces and a final dot
+    // (Italian keyboards usually have no ё).
     function normalizeInput(str) {
-        return str.trim().replace(/\s+/g, ' ');
+        return str.trim().replace(/\s+/g, ' ').replace(/[.!]+$/, '').toLowerCase().replace(/ё/g, 'е');
     }
 
     function ensureCardTitle(card, index) {
@@ -555,7 +557,7 @@ function initPanelFom7() {
                 const input   = card.querySelector('.quiz-input');
                 const fb      = card.querySelector('.quiz-feedback');
                 const userAnswer = normalizeInput(input.value);
-                const isCorrect  = item.answers.some(ans => userAnswer === ans);
+                const isCorrect  = item.answers.some(ans => userAnswer === normalizeInput(ans));
                 if (isCorrect) {
                     input.classList.remove('incorrect');
                     input.classList.add('correct');
