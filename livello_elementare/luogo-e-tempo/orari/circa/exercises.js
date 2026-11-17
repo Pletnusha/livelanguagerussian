@@ -152,11 +152,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Approssimativo (≈: около / часа в три) o esatto (в + accusativo)?
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15:00) Встреча начнётся {{1}}.",
+        words: ["около трёх", "в три", "в трёх"],
+        correctAnswers: { 1: "в три" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(≈15:00) Встреча начнётся {{1}}.",
+        words: ["часа в три", "в три", "часов в три"],
+        correctAnswers: { 1: "часа в три" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(≈18:30) Я освобожусь {{1}}.",
+        words: ["в половине седьмого", "около половины седьмого", "около в половине седьмого"],
+        correctAnswers: { 1: "около половины седьмого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(18:30) Начало спектакля {{1}}.",
+        words: ["около половины седьмого", "в половину седьмого", "в половине седьмого"],
+        correctAnswers: { 1: "в половине седьмого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(≈21:00) Мы будем дома {{1}}.",
+        words: ["часов в девять", "часа в девять", "в девять часов"],
+        correctAnswers: { 1: "часов в девять" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(21:00) Поезд отправляется {{1}}.",
+        words: ["часов в девять", "в девять часов", "около девяти"],
+        correctAnswers: { 1: "в девять часов" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(≈4:00) Он лёг спать {{1}} утра.",
+        words: ["часа в четыре", "часов в четыре", "в четыре часа"],
+        correctAnswers: { 1: "часа в четыре" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(≈12:00) Давай пообедаем {{1}}.",
+        words: ["в полдень", "около полдень", "около полудня"],
+        correctAnswers: { 1: "около полудня" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(0:00) Новый год наступает {{1}}.",
+        words: ["около полуночи", "в полночь", "в полуночи"],
+        correctAnswers: { 1: "в полночь" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(≈10:30) Я позвоню {{1}}.",
+        words: ["около половины одиннадцатого", "в половине одиннадцатого", "около половину одиннадцатого"],
+        correctAnswers: { 1: "около половины одиннадцатого" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-cir-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-cir-01', exercises: p1exercises }),
     'panel-cir-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-cir-02', exercises: p2exercises }),
+    'panel-cir-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-cir-03', exercises: p3exercises }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
