@@ -252,6 +252,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto: periodo (с … до / с … по) + fatto / momento / без
+// ============================================================
+const p6cards = [
+    { front: "(14:30) Во сколько начинается кино?", back: "В половине третьего" },
+    { front: "Пн–Ср: 10:00–14:00", back: "С понедельника по среду с десяти до двух" },
+    { front: "17:45", back: "Без пятнадцати шесть" },
+    { front: "Перерыв: 12:30–13:15", back: "Перерыв с половины первого до четверти второго" },
+    { front: "(9:05) Во сколько приходит поезд?", back: "В пять минут десятого" },
+    { front: "4–8 ноября", back: "С четвёртого по восьмое ноября" },
+    { front: "21:20", back: "Двадцать минут десятого" },
+    { front: "Чт–Вс: 18:00–23:00", back: "С четверга по воскресенье с шести до одиннадцати" },
+    { front: "(10:50) Во сколько у тебя урок?", back: "Без десяти одиннадцать" },
+    { front: "Приём: 8:30–11:00", back: "Приём с половины девятого до одиннадцати" }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -260,6 +277,7 @@ const initializers = {
     'panel-per-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-per-03', exercises: p3exercises }),
     'panel-per-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-per-04', cards: p4cards }),
     'panel-per-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-per-05', cards: p5cards }),
+    'panel-per-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-per-06', cards: p6cards }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
