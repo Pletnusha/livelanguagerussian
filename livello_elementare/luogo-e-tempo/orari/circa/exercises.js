@@ -224,16 +224,16 @@ const p3exercises = [
 // около + genitivo: rispondere «Когда…?» con un'ora approssimativa
 // ============================================================
 const p4cards = [
-    { front: "(≈17:00) Когда ты придёшь?", back: "Около пяти", distractors: ["Около пять", "Около пятью"], explanation: "Ora approssimativa: около + genitivo: пять → пяти." },
-    { front: "(≈14:00) Когда приедет курьер?", back: "Около двух", distractors: ["Около два", "Около двумя"], explanation: "около + genitivo: два → двух." },
-    { front: "(≈19:30) Когда начнётся ужин?", back: "Около половины восьмого", distractors: ["Около половина восьмого", "Около в половине восьмого"], explanation: "Dopo около anche la mezz'ora va al genitivo: половина → половины." },
-    { front: "(≈12:00) Когда ты обедаешь?", back: "Около полудня", distractors: ["Около полдень", "Около полудню"], explanation: "Genitivo irregolare: полдень → полудня." },
-    { front: "(≈23:00) Когда ты ложишься спать?", back: "Около одиннадцати", distractors: ["Около одиннадцать", "Около одиннадцатью"], explanation: "около + genitivo: одиннадцать → одиннадцати." },
-    { front: "(≈8:15) Когда ты выходишь из дома?", back: "Около четверти девятого", distractors: ["Около четверть девятого", "Около четвертью девятого"], explanation: "Anche il quarto va al genitivo: четверть → четверти." },
-    { front: "(≈1:00) Когда вы вернулись?", back: "Около часа ночи", distractors: ["Около час ночи", "Около часом ночи"], explanation: "около + genitivo: час → часа." },
-    { front: "(≈0:00) Когда закончится вечеринка?", back: "Около полуночи", distractors: ["Около полночь", "Около полночью"], explanation: "Genitivo irregolare: полночь → полуночи." },
-    { front: "(≈10:00) Когда откроется магазин?", back: "Около десяти", distractors: ["Около десять", "Около в десять"], explanation: "Mai «около в»: около prende il genitivo direttamente (около десяти)." },
-    { front: "(≈18:00) Когда ты будешь дома?", back: "Около шести", distractors: ["Около шесть", "Около шестью"], explanation: "около + genitivo: шесть → шести." }
+    { front: "(17:00) Когда ты придёшь?", back: "Около пяти", distractors: ["Около пять", "Около пятью"], explanation: "Ora approssimativa: около + genitivo: пять → пяти." },
+    { front: "(14:00) Когда приедет курьер?", back: "Около двух", distractors: ["Около два", "Около двумя"], explanation: "около + genitivo: два → двух." },
+    { front: "(19:30) Когда начнётся ужин?", back: "Около половины восьмого", distractors: ["Около половина восьмого", "Около в половине восьмого"], explanation: "Dopo около anche la mezz'ora va al genitivo: половина → половины." },
+    { front: "(12:00) Когда ты обедаешь?", back: "Около полудня", distractors: ["Около полдень", "Около полудню"], explanation: "Genitivo irregolare: полдень → полудня." },
+    { front: "(23:00) Когда ты ложишься спать?", back: "Около одиннадцати", distractors: ["Около одиннадцать", "Около одиннадцатью"], explanation: "около + genitivo: одиннадцать → одиннадцати." },
+    { front: "(8:15) Когда ты выходишь из дома?", back: "Около четверти девятого", distractors: ["Около четверть девятого", "Около четвертью девятого"], explanation: "Anche il quarto va al genitivo: четверть → четверти." },
+    { front: "(1:00) Когда вы вернулись?", back: "Около часа ночи", distractors: ["Около час ночи", "Около часом ночи"], explanation: "около + genitivo: час → часа." },
+    { front: "(0:00) Когда закончится вечеринка?", back: "Около полуночи", distractors: ["Около полночь", "Около полночью"], explanation: "Genitivo irregolare: полночь → полуночи." },
+    { front: "(10:00) Когда откроется магазин?", back: "Около десяти", distractors: ["Около десять", "Около в десять"], explanation: "Mai «около в»: около prende il genitivo direttamente (около десяти)." },
+    { front: "(18:00) Когда ты будешь дома?", back: "Около шести", distractors: ["Около шесть", "Около шестью"], explanation: "около + genitivo: шесть → шести." }
 ];
 
 // ============================================================
