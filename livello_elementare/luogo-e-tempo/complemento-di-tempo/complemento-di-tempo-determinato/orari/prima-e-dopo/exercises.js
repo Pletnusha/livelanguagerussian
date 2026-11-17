@@ -87,10 +87,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// до / после + genitivo con eventi (обед → обеда, работа → работы, выходные → выходных)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы гуляем в парке {{1}}.",
+        words: ["после обед", "после обеда", "после обедом"],
+        correctAnswers: { 1: "после обеда" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я делаю домашнее задание {{1}}.",
+        words: ["после урока", "после урок", "после уроку"],
+        correctAnswers: { 1: "после урока" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мой руки {{1}}!",
+        words: ["до еда", "до еды", "до едой"],
+        correctAnswers: { 1: "до еды" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Позвони мне утром, {{1}}.",
+        words: ["до работа", "до работе", "до работы"],
+        correctAnswers: { 1: "до работы" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы вернёмся в Москву {{1}}.",
+        words: ["после отпуска", "после отпуск", "после отпуском"],
+        correctAnswers: { 1: "после отпуска" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно всё повторить {{1}}.",
+        words: ["до экзамен", "до экзамену", "до экзамена"],
+        correctAnswers: { 1: "до экзамена" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Увидимся {{1}}!",
+        words: ["после выходные", "после выходных", "после выходным"],
+        correctAnswers: { 1: "после выходных" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Дети гуляют {{1}}.",
+        words: ["до ужин", "до ужину", "до ужина"],
+        correctAnswers: { 1: "до ужина" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я плаваю в бассейне {{1}}.",
+        words: ["до школы", "до школа", "до школе"],
+        correctAnswers: { 1: "до школы" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Встретимся у театра {{1}}.",
+        words: ["после концерт", "после концерта", "после концертом"],
+        correctAnswers: { 1: "после концерта" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-pd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-01', exercises: p1exercises })
+    'panel-pd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-01', exercises: p1exercises }),
+    'panel-pd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
