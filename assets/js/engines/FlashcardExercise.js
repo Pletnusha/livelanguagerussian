@@ -146,7 +146,14 @@ export default class FlashcardExercise {
 
         let options = [correctCard];
 
-        if (this.quizByPrep) {
+        if (Array.isArray(correctCard.distractors) && correctCard.distractors.length > 0) {
+            // Card-specific wrong answers (other forms of the same phrase) instead of
+            // the backs of other cards, which can be unrelated and too easy to rule out.
+            correctCard.distractors
+                .filter(d => d && d !== correctCard.back)
+                .slice(0, 2)
+                .forEach(d => options.push({ back: d }));
+        } else if (this.quizByPrep) {
             const getPrep = (card) => card.front.trim().split(' ').pop().toLowerCase();
             const correctPrep = getPrep(correctCard);
 
