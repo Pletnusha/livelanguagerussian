@@ -24,7 +24,7 @@
             const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
             const { data: { session } } = await client.auth.getSession();
             if (!session) {
-                window.location.href = '/login.html?redirect=livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/orari/periodo';
+                window.location.href = '/login.html?redirect=livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-continuato/periodo';
             } else {
                 document.documentElement.style.visibility = '';
             }
