@@ -221,12 +221,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Cartelli, ricette, regole: до / после + genitivo (con spiegazioni)
+// ============================================================
+const p4cards = [
+    { front: "Рецепт: сначала таблетка, потом еда. «Принимать …»", back: "До еды", distractors: ["До еда", "До едой"], explanation: "Prima dei pasti: до + genitivo: еда → еды." },
+    { front: "Рецепт: сначала еда, потом таблетка. «Принимать …»", back: "После еды", distractors: ["После еда", "После едой"], explanation: "Dopo i pasti: после + genitivo: еда → еды." },
+    { front: "(23:00) Ночью соседи спят. «… не шуметь»", back: "После одиннадцати", distractors: ["После одиннадцать", "После одиннадцатью"], explanation: "Dopo le 23: после + genitivo: одиннадцать → одиннадцати." },
+    { front: "(9:00) Рано утром не звонить! «Не звонить …»", back: "До девяти", distractors: ["До девять", "До девятью"], explanation: "Prima delle 9: до + genitivo: девять → девяти." },
+    { front: "(18:00) Музей: по вечерам бесплатно. «Вход бесплатный …»", back: "После шести", distractors: ["После шесть", "После шестью"], explanation: "Dopo le 18: после + genitivo: шесть → шести." },
+    { front: "Бассейн: сначала душ, потом плавание. «Принять душ …»", back: "До плавания", distractors: ["До плавание", "До плаванию"], explanation: "Prima di nuotare: до + genitivo: плавание → плавания." },
+    { front: "(12:00) Отель: «Освободить номер …»", back: "До полудня", distractors: ["До полдень", "До полудню"], explanation: "Prima di mezzogiorno: полдень → полудня (genitivo irregolare)." },
+    { front: "(0:00) Парк ночью закрыт. «Вход запрещён …»", back: "После полуночи", distractors: ["После полночь", "После полночью"], explanation: "Dopo mezzanotte: полночь → полуночи (genitivo irregolare)." },
+    { front: "Школа: сначала выключить телефоны, потом урок. «Выключить телефоны …»", back: "До урока", distractors: ["До урок", "До уроку"], explanation: "Prima della lezione: до + genitivo: урок → урока." },
+    { front: "(20:00) Супермаркет: вечером всё дешевле. «Скидки …»", back: "После восьми", distractors: ["После восемь", "После восьмью"], explanation: "Dopo le 20: после + genitivo: восемь → восьми." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-pd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-01', exercises: p1exercises }),
     'panel-pd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-02', exercises: p2exercises }),
-    'panel-pd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-03', exercises: p3exercises })
+    'panel-pd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-03', exercises: p3exercises }),
+    'panel-pd-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
