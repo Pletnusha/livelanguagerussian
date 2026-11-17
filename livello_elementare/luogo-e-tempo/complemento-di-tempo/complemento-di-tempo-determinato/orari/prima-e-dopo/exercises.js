@@ -272,6 +272,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni: regole di casa / ostello — до / после + periodo / около / к / в / fatto
+// ============================================================
+const p7cards = [
+    { front: "Хостел: «Завтрак — с семи до десяти». Когда нужно прийти на завтрак?", back: "До десяти", distractors: ["После десяти", "До десять"], explanation: "La colazione finisce alle 10 → prima: до + genitivo: десять → десяти." },
+    { front: "(Пн–Пт) Когда работает прачечная в общежитии?", back: "С понедельника по пятницу", distractors: ["С понедельника до пятницу", "С понедельник по пятницу"], explanation: "Giorni: с + genitivo … по + accusativo (venerdì incluso)." },
+    { front: "Сначала уборка, потом вечеринка. Когда мы убираем квартиру?", back: "До вечеринки", distractors: ["После вечеринки", "До вечеринка"], explanation: "Prima della festa: до + genitivo: вечеринка → вечеринки." },
+    { front: "(23:00) Когда примерно ты вернёшься домой?", back: "Около одиннадцати", distractors: ["Около одиннадцать", "Около одиннадцатью"], explanation: "Circa: около + genitivo: одиннадцать → одиннадцати." },
+    { front: "(21:30) Гости уходят в половине десятого. Когда гостям уже нельзя быть в общежитии?", back: "После половины десятого", distractors: ["До половины десятого", "После половина десятого"], explanation: "Dopo: после + genitivo: половина → половины." },
+    { front: "(20:00) К какому часу нужно вернуться домой?", back: "К восьми", distractors: ["К восемь", "К восьмью"], explanation: "Scadenza: к + dativo: восемь → восьми." },
+    { front: "Сначала уроки, потом компьютер. Когда можно играть на компьютере?", back: "После уроков", distractors: ["До уроков", "После уроки"], explanation: "Dopo i compiti: после + genitivo plurale: уроки → уроков." },
+    { front: "(7:00) Во сколько точно открывается столовая?", back: "В семь часов", distractors: ["Около семи", "В семи часов"], explanation: "Ora esatta (точно): в + accusativo." },
+    { front: "(9:00) В выходные утром не шуметь до девяти. Когда можно пылесосить?", back: "После девяти", distractors: ["До девяти", "После девять"], explanation: "Qui «до девяти» = fino alle nove; si può dopo: после девяти." },
+    { front: "(21:15) Сколько времени?", back: "Четверть десятого", distractors: ["В четверть десятого", "После четверти десятого"], explanation: "Che ore sono? Il fatto, senza preposizione." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -280,7 +297,8 @@ const initializers = {
     'panel-pd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-03', exercises: p3exercises }),
     'panel-pd-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-04', cards: p4cards }),
     'panel-pd-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-05', cards: p5cards }),
-    'panel-pd-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-06', cards: p6cards })
+    'panel-pd-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-06', cards: p6cards }),
+    'panel-pd-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
