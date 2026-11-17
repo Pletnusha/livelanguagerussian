@@ -1,0 +1,16 @@
+{
+  "id": "b1-luogo-e-tempo-orari",
+  "url": "/livello_elementare/luogo-e-tempo/orari/",
+  "level": "b1",
+  "doc_type": "hub",
+  "cluster": [
+    "luogo-e-tempo"
+  ],
+  "grammatica": [],
+  "complementi": [
+    "tempo-determinato"
+  ],
+  "lessico": [],
+  "title_ru": "ВРЕМЯ",
+  "title_it": "Che ore sono? A che ora? — orari in russo"
+}

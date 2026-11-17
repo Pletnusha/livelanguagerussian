@@ -1,0 +1,16 @@
+{
+  "id": "b1-luogo-e-tempo-date",
+  "url": "/livello_elementare/luogo-e-tempo/date/",
+  "level": "b1",
+  "doc_type": "hub",
+  "cluster": [
+    "luogo-e-tempo"
+  ],
+  "grammatica": [],
+  "complementi": [
+    "tempo-determinato"
+  ],
+  "lessico": [],
+  "title_ru": "ДАТЫ",
+  "title_it": "Date in russo — giorno, mese, anno"
+}
