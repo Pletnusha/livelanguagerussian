@@ -270,6 +270,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni: к / к ↔ до + около / periodo / momento / fatto
+// ============================================================
+const p7cards = [
+    { front: "(entro 9:00) Когда нужно прийти на экзамен?", back: "К девяти", distractors: ["К девять", "К девятью"], explanation: "Scadenza: к + dativo: девять → девяти." },
+    { front: "(fino alle 17:00) До какого часа идёт урок?", back: "До пяти", distractors: ["К пяти", "До пять"], explanation: "Fino a: до + genitivo. К vuol dire «entro»." },
+    { front: "(≈16:00) Когда ты освободишься?", back: "Около четырёх", distractors: ["Около четыре", "Около четырём"], explanation: "≈ = circa: около + genitivo: четыре → четырёх." },
+    { front: "(entro 20:00) Когда гости должны прийти?", back: "К восьми", distractors: ["К восемь", "К восьмью"], explanation: "Scadenza: к + dativo: восемь → восьми." },
+    { front: "(Пн–Сб) Когда работает рынок?", back: "С понедельника по субботу", distractors: ["С понедельника по субботы", "С понедельник по субботу"], explanation: "Giorni: с + genitivo … по + accusativo (sabato incluso)." },
+    { front: "(12:30) Во сколько у нас встреча?", back: "В половине первого", distractors: ["К половине первого", "В половину первого"], explanation: "Во сколько? = momento esatto: в половине. К vuol dire «entro»." },
+    { front: "(entro 6:30) Когда нужно быть в аэропорту?", back: "К половине седьмого", distractors: ["К половина седьмого", "К половину седьмого"], explanation: "к + dativo: половина → половине." },
+    { front: "(fino alle 2:00) До какого часа работает бар?", back: "До двух", distractors: ["К двум", "До двум"], explanation: "Fino a: до + genitivo: два → двух. «К двум» = entro le due." },
+    { front: "(10:10) Сколько времени?", back: "Десять минут одиннадцатого", distractors: ["К десяти минутам одиннадцатого", "В десять минут одиннадцатого"], explanation: "Che ore sono? Il fatto, senza preposizione." },
+    { front: "(entro 18:00) Когда будут готовы фотографии?", back: "К шести часам", distractors: ["К шести часов", "К шести часа"], explanation: "Forma piena: к шести часам (часам = dativo plurale)." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -279,6 +296,7 @@ const initializers = {
     'panel-ent-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-ent-04', cards: p4cards }),
     'panel-ent-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-ent-05', cards: p5cards }),
     'panel-ent-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-ent-06', cards: p6cards }),
+    'panel-ent-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-ent-07', cards: p7cards }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
