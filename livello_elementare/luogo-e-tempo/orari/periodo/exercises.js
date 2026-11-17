@@ -218,12 +218,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Cartelli: come si leggono (ore → с … до, giorni e date → с … по)
+// ============================================================
+const p4cards = [
+    { front: "Пн–Пт", back: "С понедельника по пятницу", explanation: "Giorni: с + genitivo … по + accusativo. Il venerdì è incluso." },
+    { front: "9:00–18:00", back: "С девяти до шести", explanation: "Ore: с … до + genitivo. Nello stile ufficiale si dice anche «до восемнадцати»." },
+    { front: "Сб: 10:00–15:00", back: "В субботу с десяти до трёх", explanation: "Un solo giorno: в + accusativo (в субботу). Poi le ore con с … до." },
+    { front: "Перерыв: 13:00–14:00", back: "Перерыв с часа до двух", explanation: "Genitivo dopo с e до: час → часа, два → двух." },
+    { front: "1–10 мая", back: "С первого по десятое мая", explanation: "Date: с первого (genitivo) по десятое (accusativo). Il 10 è incluso." },
+    { front: "Вт–Вс: 11:00–19:00", back: "Со вторника по воскресенье с одиннадцати до семи", explanation: "Davanti a вт- si dice со. Giorni con по, ore con до." },
+    { front: "Приём: 16:00–18:30", back: "Приём с четырёх до половины седьмого", explanation: "Dopo до anche la mezz'ora va al genitivo: половина → половины." },
+    { front: "Ср–Чт", back: "Со среды по четверг", explanation: "Davanti a ср- si dice со: со среды. Poi по + accusativo: четверг." },
+    { front: "20–25 декабря", back: "С двадцатого по двадцать пятое декабря", explanation: "Nei numeri composti cambia solo l'ultima parola: двадцать пятое." },
+    { front: "Пн–Сб: 8:00–20:00", back: "С понедельника по субботу с восьми утра до восьми вечера", explanation: "Giorni con по, ore con до. «утра» e «вечера» distinguono le 8 del mattino dalle 20." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-per-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-per-01', exercises: p1exercises }),
     'panel-per-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-per-02', exercises: p2exercises }),
     'panel-per-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-per-03', exercises: p3exercises }),
+    'panel-per-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-per-04', cards: p4cards }),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
