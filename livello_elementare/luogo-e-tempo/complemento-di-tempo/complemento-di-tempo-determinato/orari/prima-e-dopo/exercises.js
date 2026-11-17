@@ -154,11 +154,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// до или после? Sceglie il contesto russo (сначала … потом, orari di apertura / chiusura)
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сначала душ, потом завтрак. Я завтракаю {{1}}.",
+        words: ["до душа", "после душа", "после душ"],
+        correctAnswers: { 1: "после душа" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сначала магазин, потом кино. Мы идём в кино {{1}}.",
+        words: ["после магазина", "до магазина", "после магазин"],
+        correctAnswers: { 1: "после магазина" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Фильм начинается в восемь. Мы придём в семь, то есть {{1}}.",
+        words: ["после восьми", "до восемь", "до восьми"],
+        correctAnswers: { 1: "до восьми" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сначала суп, потом фрукты: фрукты едят {{1}}.",
+        words: ["после супа", "до супа", "после суп"],
+        correctAnswers: { 1: "после супа" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Магазин открывается в девять. Если ты придёшь {{1}}, он будет закрыт.",
+        words: ["до девять", "после девяти", "до девяти"],
+        correctAnswers: { 1: "до девяти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сначала экзамен, потом каникулы. Мы поедем на море {{1}}.",
+        words: ["до экзамена", "после экзамена", "после экзамен"],
+        correctAnswers: { 1: "после экзамена" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Врач сказал: сначала лекарство, потом еда. Лекарство нужно пить {{1}}.",
+        words: ["до еды", "после еды", "до еда"],
+        correctAnswers: { 1: "до еды" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Музей закрывается в пять. {{1}} в музей уже нельзя.",
+        words: ["После пять", "До пяти", "После пяти"],
+        correctAnswers: { 1: "После пяти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сначала разминка, потом тренировка: разминку делают {{1}}.",
+        words: ["после тренировки", "до тренировки", "до тренировка"],
+        correctAnswers: { 1: "до тренировки" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Поезд уходит в семь. На вокзале нужно быть {{1}}.",
+        words: ["до семи", "после семи", "до семь"],
+        correctAnswers: { 1: "до семи" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-pd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-01', exercises: p1exercises }),
-    'panel-pd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-02', exercises: p2exercises })
+    'panel-pd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-02', exercises: p2exercises }),
+    'panel-pd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pd-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
