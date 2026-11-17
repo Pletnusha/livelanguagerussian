@@ -1,6 +1,6 @@
 {
-  "id": "b1-luogo-e-tempo-orari-periodo",
-  "url": "/livello_elementare/luogo-e-tempo/orari/periodo/",
+  "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari-periodo",
+  "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/orari/periodo/",
   "level": "b1",
   "doc_type": "exercise",
   "cluster": [
@@ -13,6 +13,6 @@
   "lessico": [],
   "title_ru": "С … ДО, С … ПО",
   "title_it": "Periodo: dalle… alle, dal… al",
-  "source_doc": "b1-luogo-e-tempo-orari",
+  "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
   "focus": "periodo"
 }
