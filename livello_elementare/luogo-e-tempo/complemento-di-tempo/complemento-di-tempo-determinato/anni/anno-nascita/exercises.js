@@ -87,10 +87,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Anno al genitivo dopo la data: … ого года (non «… ом году», «… ый год», «… ого году»)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(05.03.1990) Мама родилась пятого марта тысяча девятьсот {{1}}.",
+        words: ["девяностом году", "девяностого года", "девяностого году"],
+        correctAnswers: { 1: "девяностого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(14.07.2001) Сын родился четырнадцатого июля две тысячи {{1}}.",
+        words: ["первом году", "первый год", "первого года"],
+        correctAnswers: { 1: "первого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.01.2000) Это фото первого января {{1}}.",
+        words: ["двухтысячного года", "двухтысячный год", "двухтысячном году"],
+        correctAnswers: { 1: "двухтысячного года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(09.03.1934) Гагарин родился девятого марта тысяча девятьсот тридцать {{1}}.",
+        words: ["четвёртого года", "четвёртого году", "четвёртом году"],
+        correctAnswers: { 1: "четвёртого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(07.05.1840) Чайковский родился седьмого мая тысяча восемьсот {{1}}.",
+        words: ["сорокового году", "сороковой год", "сорокового года"],
+        correctAnswers: { 1: "сорокового года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.01.1920) Феллини родился двадцатого января тысяча девятьсот {{1}}.",
+        words: ["двадцатом году", "двадцатого года", "двадцатый год"],
+        correctAnswers: { 1: "двадцатого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.04.1452) Леонардо да Винчи родился пятнадцатого апреля тысяча четыреста пятьдесят {{1}}.",
+        words: ["втором году", "второй год", "второго года"],
+        correctAnswers: { 1: "второго года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(09.09.1828) Толстой родился девятого сентября тысяча восемьсот двадцать {{1}}.",
+        words: ["восьмого года", "восьмом году", "восьмого году"],
+        correctAnswers: { 1: "восьмого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(23.02.2023) Дочь родилась двадцать третьего февраля две тысячи двадцать {{1}}.",
+        words: ["третьем году", "третьего года", "третий год"],
+        correctAnswers: { 1: "третьего года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(31.12.1999) Мы встретились тридцать первого декабря тысяча девятьсот девяносто {{1}}.",
+        words: ["девятого года", "девятом году", "девятый год"],
+        correctAnswers: { 1: "девятого года" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-an-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-an-01', exercises: p1exercises })
+    'panel-an-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-an-01', exercises: p1exercises }),
+    'panel-an-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-an-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
