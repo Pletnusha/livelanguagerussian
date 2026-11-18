@@ -88,10 +88,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Il fatto: ordinale neutro al nominativo (первое, второе, третье, двадцать второе)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(03.10) — Какое сегодня число? — {{1}} октября.",
+        words: ["Третое", "Третье", "Третьего"],
+        correctAnswers: { 1: "Третье" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(02.04) Сегодня {{1}} апреля.",
+        words: ["второй", "второго", "второе"],
+        correctAnswers: { 1: "второе" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(07.01) Сегодня {{1}} января, православное Рождество.",
+        words: ["седьмое", "седьмой", "седьмого"],
+        correctAnswers: { 1: "седьмое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(04.07) — Какое завтра число? — {{1}} июля.",
+        words: ["Четвёртого", "Четвёртый", "Четвёртое"],
+        correctAnswers: { 1: "Четвёртое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.02) Сегодня {{1}} февраля.",
+        words: ["десятый", "десятое", "десятого"],
+        correctAnswers: { 1: "десятое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(22.08) Сегодня {{1}} августа.",
+        words: ["двадцать второе", "двадцать второго", "двадцать второй"],
+        correctAnswers: { 1: "двадцать второе" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(30.04) Сегодня {{1}} апреля.",
+        words: ["тридцатое", "тридцатого", "тридцатый"],
+        correctAnswers: { 1: "тридцатое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(06.06) Сегодня {{1}} июня — День русского языка.",
+        words: ["шестой", "шестого", "шестое"],
+        correctAnswers: { 1: "шестое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(11.11) — Какое вчера было число? — {{1}} ноября.",
+        words: ["Одиннадцатое", "Одиннадцатого", "Одиннадцатый"],
+        correctAnswers: { 1: "Одиннадцатое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(23.02) Сегодня {{1}} февраля.",
+        words: ["двадцать третий", "двадцать третье", "двадцать третьего"],
+        correctAnswers: { 1: "двадцать третье" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-dfm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-01', exercises: p1exercises })
+    'panel-dfm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-01', exercises: p1exercises }),
+    'panel-dfm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
