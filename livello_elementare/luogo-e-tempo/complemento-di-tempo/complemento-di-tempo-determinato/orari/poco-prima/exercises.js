@@ -290,6 +290,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Misto: lavoro e giornata — за … до / перед / до + ore / задолго до + после / через / около / к / во сколько
+// ============================================================
+const p8cards = [
+    { front: "Совещание в 10:00, я пришёл в 9:59. Когда я пришёл?", back: "За минуту до совещания", distractors: ["Через минуту до совещания", "За минута до совещания"] },
+    { front: "Сначала работа, потом фитнес. Когда фитнес?", back: "После работы", distractors: ["Через работу", "После работа"] },
+    { front: "Я мою руки, а потом сразу обедаю. Когда я мою руки?", back: "Перед обедом", distractors: ["Перед обед", "Перед обеда"] },
+    { front: "Сейчас 16:00, встреча в 16:45. Когда встреча?", back: "Через сорок пять минут", distractors: ["Через сорок пять минуты", "Через сорок пять минуту"] },
+    { front: "(17:00) Офис закрывается в пять. Когда нужно позвонить?", back: "До пяти", distractors: ["Перед пятью", "До пять"] },
+    { front: "(13:00) Когда примерно ты пообедаешь?", back: "Около часа", distractors: ["Около час", "Около часом"] },
+    { front: "Отпуск в понедельник, я купил билеты в пятницу. Когда?", back: "За три дня до отпуска", distractors: ["За три дней до отпуска", "За три дня до отпуск"] },
+    { front: "(18:00) К какому часу нужно закончить отчёт?", back: "К шести", distractors: ["К шесть", "К шестью"] },
+    { front: "Подарок маме я купил в марте, а день рождения у неё в декабре. Когда?", back: "Задолго до дня рождения", distractors: ["Задолго перед днём рождения", "Задолго до день рождения"] },
+    { front: "(19:30) Во сколько точно начинается спектакль?", back: "В половине восьмого", distractors: ["Около половины восьмого", "В половину восьмого"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -299,7 +316,8 @@ const initializers = {
     'panel-pp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-04', cards: p4cards }),
     'panel-pp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-05', cards: p5cards }),
     'panel-pp-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-06', cards: p6cards }),
-    'panel-pp-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-07', cards: p7cards })
+    'panel-pp-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-07', cards: p7cards }),
+    'panel-pp-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
