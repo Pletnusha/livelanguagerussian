@@ -223,12 +223,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Nuovo: secoli (Какой век? В каком веке?), Novecento/Seicento/Quattrocento, decennio, в начале/в конце, прошлого века, con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "(XXI в.) — Какой сейчас век?", back: "Двадцать первый", distractors: ["Двадцать первом", "Двадцать первого"], explanation: "Il fatto: nominativo: двадцать первый (век)." },
+    { front: "(XX в.) — В каком веке жил Гагарин?", back: "В двадцатом веке", distractors: ["В двадцатый век", "В двадцатого века"], explanation: "В каком веке? — в + prepositivo, come «в … году»: в двадцатом веке." },
+    { front: "(Novecento) — Какой это век?", back: "Двадцатый век", distractors: ["Девятисотый век", "Девятнадцатый век"], explanation: "Il Novecento sono gli anni 1900–1999 = il XX secolo: двадцатый век. In russo si conta il secolo, non le centinaia." },
+    { front: "(Seicento) — В каком веке?", back: "В семнадцатом веке", distractors: ["В шестом веке", "В шестнадцатом веке"], explanation: "Il Seicento (1600–1699) = XVII secolo: в семнадцатом веке." },
+    { front: "(XIX в.) — В каком веке Пушкин написал «Евгения Онегина»?", back: "В девятнадцатом веке", distractors: ["В девятнадцатый век", "В девятнадцатого века"], explanation: "в + prepositivo: в девятнадцатом веке." },
+    { front: "(Quattrocento) — Какой это век?", back: "Пятнадцатый век", distractors: ["Четырёхсотый век", "Четырнадцатый век"], explanation: "Il Quattrocento (1400–1499) = XV secolo: пятнадцатый век." },
+    { front: "(90-е) — В какие годы ты жил в Москве?", back: "В девяностые годы", distractors: ["В девяностом году", "В девяностый год"], explanation: "В какие годы? — в + accusativo plurale: в девяностые годы. Si dice anche «в девяностых (годах)»." },
+    { front: "(1992) — Когда вы познакомились? В начале…", back: "В начале девяностых", distractors: ["В начале девяностые", "В начало девяностых"], explanation: "в начале + genitivo plurale: девяностых. Forma piena: в начале девяностых годов." },
+    { front: "(1920-е) — Когда прабабушка жила в Париже?", back: "В двадцатые годы прошлого века", distractors: ["В двадцатом году прошлого века", "В двадцатые годы этого века"], explanation: "«Прошлого века» (genitivo) chiarisce: gli anni Venti del Novecento, non del 2000." },
+    { front: "(1799) — Когда родился Пушкин? В конце…", back: "В конце восемнадцатого века", distractors: ["В конце девятнадцатого века", "В конце восемнадцатом веке"], explanation: "Il 1799 è nel Settecento = XVIII secolo: в конце восемнадцатого века (genitivo)." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-ad-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-01', exercises: p1exercises }),
     'panel-ad-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-02', exercises: p2exercises }),
-    'panel-ad-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-03', exercises: p3exercises })
+    'panel-ad-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-03', exercises: p3exercises }),
+    'panel-ad-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-ad-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
