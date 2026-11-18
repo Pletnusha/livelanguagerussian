@@ -239,13 +239,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// в начале / в середине / в конце + genitivo del mese (non «в начало», «в начале май»)
+// ============================================================
+const p5cards = [
+    { front: "(01.05–05.05) Когда мы едем на дачу?", back: "В начале мая", distractors: ["В начало мая", "В начале май"] },
+    { front: "(13.07–17.07) Когда фестиваль?", back: "В середине июля", distractors: ["В середину июля", "В середине июль"] },
+    { front: "(27.12–31.12) Когда корпоратив?", back: "В конце декабря", distractors: ["В конец декабря", "В конце декабрь"] },
+    { front: "(01.09–04.09) Когда начинаются занятия в университете?", back: "В начале сентября", distractors: ["В начало сентября", "В начале сентябрь"] },
+    { front: "(14.02–17.02) Когда у нас экзамены?", back: "В середине февраля", distractors: ["В середину февраля", "В середине февраль"] },
+    { front: "(26.06–30.06) Когда отпуск у мамы?", back: "В конце июня", distractors: ["В конец июня", "В конце июнь"] },
+    { front: "(02.03–06.03) Когда приедет бабушка?", back: "В начале марта", distractors: ["В начало марта", "В начале март"] },
+    { front: "(14.10–18.10) Когда ремонт в офисе?", back: "В середине октября", distractors: ["В середину октября", "В середине октябрь"] },
+    { front: "(25.08–31.08) Когда мы вернёмся с моря?", back: "В конце августа", distractors: ["В конец августа", "В конце август"] },
+    { front: "(28–31 число) Когда приходят счета за квартиру?", back: "В конце месяца", distractors: ["В конец месяца", "В конце месяц"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-dc-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-01', exercises: p1exercises }),
     'panel-dc-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-02', exercises: p2exercises }),
     'panel-dc-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-03', exercises: p3exercises }),
-    'panel-dc-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-04', cards: p4cards })
+    'panel-dc-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-04', cards: p4cards }),
+    'panel-dc-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
