@@ -222,12 +222,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Scadenze reali: К какому числу? → к + dativo dell'ordinale (con spiegazioni)
+// ============================================================
+const p4cards = [
+    { front: "(15.04) К какому числу нужно подать документы на визу?", back: "К пятнадцатому апреля", distractors: ["К пятнадцатого апреля", "К пятнадцатое апреля"], explanation: "к + dativo: пятнадцатое → пятнадцатому." },
+    { front: "(01.07) К какому числу нужно освободить квартиру?", back: "К первому июля", distractors: ["К первого июля", "К первое июля"], explanation: "к + dativo: первое → первому." },
+    { front: "(20.05) К какому числу нужно написать курсовую?", back: "К двадцатому мая", distractors: ["К двадцатого мая", "К двадцатое мая"], explanation: "к + dativo: двадцатое → двадцатому." },
+    { front: "(03.06) К какому числу будут готовы фотографии со свадьбы?", back: "К третьему июня", distractors: ["К третего июня", "К третьего июня"], explanation: "Третье → третьему (con «ь»)." },
+    { front: "(02.11) К какому числу нужно продлить страховку?", back: "Ко второму ноября", distractors: ["К второму ноября", "Ко второго ноября"], explanation: "к → ко davanti a «вт»: ко второму." },
+    { front: "(25.12) К какому числу должен прийти подарок?", back: "К двадцать пятому декабря", distractors: ["К двадцать пятого декабря", "К двадцать пятое декабря"], explanation: "Solo l'ultima parola cambia: двадцать пятому." },
+    { front: "(10.10) К какому числу нужно оплатить свет и газ?", back: "К десятому октября", distractors: ["К десятого октября", "К десятом октября"], explanation: "к + dativo: десятое → десятому." },
+    { front: "(31.08) К какому числу нужно записаться на курсы?", back: "К тридцать первому августа", distractors: ["К тридцать первого августа", "К тридцать первое августа"], explanation: "к тридцать первому (dativo)." },
+    { front: "(14.02) К какому числу нужно купить цветы?", back: "К четырнадцатому февраля", distractors: ["К четырнадцатого февраля", "К четырнадцатое февраля"], explanation: "к + dativo: четырнадцатое → четырнадцатому." },
+    { front: "(08.03) К какому празднику мы покупаем цветы маме?", back: "К восьмому марта", distractors: ["К восьмого марта", "К восьмое марта"], explanation: "Anche le feste: к восьмому марта = per l'8 marzo." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-de-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-01', exercises: p1exercises }),
     'panel-de-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-02', exercises: p2exercises }),
-    'panel-de-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-03', exercises: p3exercises })
+    'panel-de-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-03', exercises: p3exercises }),
+    'panel-de-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
