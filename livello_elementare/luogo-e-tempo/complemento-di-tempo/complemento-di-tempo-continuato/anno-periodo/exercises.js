@@ -223,12 +223,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Nuovo: domanda → risposta (С какого по какой год? С какого года? По какой год?), forma piena e breve, con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "(2010–2020) — С какого по какой год ты работал в банке?", back: "С две тысячи десятого по две тысячи двадцатый год", distractors: ["С две тысячи десятого по две тысячи двадцатого года", "С две тысячи десятый по две тысячи двадцатый год"], explanation: "с + genitivo … по + accusativo. «Год» una sola volta, alla fine: по … двадцатый год." },
+    { front: "(2017) — С какого года ты живёшь в Италии?", back: "С две тысячи семнадцатого года", distractors: ["В две тысячи семнадцатом году", "С две тысячи семнадцатый год"], explanation: "Da quando? с + genitivo: … семнадцатого года." },
+    { front: "(2000–2004) — С какого по какой год ты учился в школе в Риме?", back: "С двухтысячного по две тысячи четвёртый год", distractors: ["С двухтысячный по две тысячи четвёртый год", "С двухтысячного по две тысячи четвёртого года"], explanation: "Il 2000 in una parola: с двухтысячного." },
+    { front: "(2010–2020) — С какого по какой год ты работал в банке? Коротко.", back: "С десятого по двадцатый", distractors: ["С десятый по двадцатый", "С десятого по двадцатого"], explanation: "Nel parlato si omettono «две тысячи» e «год»: с десятого по двадцатый." },
+    { front: "(1990–1995) — С какого по какой год вы жили в Казани?", back: "С тысяча девятьсот девяностого по тысяча девятьсот девяносто пятый год", distractors: ["С тысяча девятьсот девяностом по тысяча девятьсот девяносто пятый год", "С тысяча девятьсот девяностого до тысяча девятьсот девяносто пятый год"], explanation: "Anche con il 1900 cambia solo l'ultima parola: девяностого … девяносто пятый." },
+    { front: "(2003) — С какого года работает этот ресторан?", back: "С две тысячи третьего года", distractors: ["С две тысячи третий год", "В две тысячи третьем году"], explanation: "Da quando? с + genitivo: третьего года." },
+    { front: "(2012–2015) — По какой год ты учился в Падуе?", back: "По две тысячи пятнадцатый год", distractors: ["По две тысячи пятнадцатого года", "До две тысячи пятнадцатый год"], explanation: "По какой год? — по + accusativo: il 2015 compreso." },
+    { front: "(2017) — С какого года ты живёшь в Италии? Коротко.", back: "С семнадцатого", distractors: ["С семнадцатый", "В семнадцатом"], explanation: "Forma breve: с семнадцатого (года)." },
+    { front: "(2008–2012) Я жила в Генуе с две тысячи восьмого… Закончи с «до».", back: "До две тысячи тринадцатого года", distractors: ["До две тысячи двенадцатого года", "До две тысячи тринадцатый год"], explanation: "Il 2012 è compreso, quindi con «до» si nomina l'anno dopo: до … тринадцатого года (= по … двенадцатый год)." },
+    { front: "(2021–2024) — С какого по какой год вы снимали квартиру? Коротко.", back: "С двадцать первого по двадцать четвёртый", distractors: ["С двадцать первого по двадцать четвёртого", "С двадцать первый по двадцать четвёртый"], explanation: "Forma breve: с + genitivo … по + accusativo." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-ap-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-01', exercises: p1exercises }),
     'panel-ap-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-02', exercises: p2exercises }),
-    'panel-ap-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-03', exercises: p3exercises })
+    'panel-ap-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-03', exercises: p3exercises }),
+    'panel-ap-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-ap-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
