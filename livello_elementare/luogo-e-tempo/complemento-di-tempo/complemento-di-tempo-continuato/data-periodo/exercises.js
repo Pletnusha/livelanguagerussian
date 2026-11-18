@@ -273,6 +273,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni — chiusure e riscaldamento: с … по, по / до + fatto / momento / giorni
+// ============================================================
+const p7cards = [
+    { front: "(01.07–14.07) Объявление: «Бассейн закрыт на ремонт с первого…»", back: "по четырнадцатое июля", distractors: ["по четырнадцатого июля", "до четырнадцатое июля"], explanation: "Ultimo giorno compreso: по + accusativo: четырнадцатое." },
+    { front: "(01.07) Какое сегодня число? Бассейн закрылся.", back: "Первое июля", distractors: ["Первого июля", "Первый июль"], explanation: "Il fatto: nominativo neutro: первое; il mese al genitivo." },
+    { front: "Кафе закрыто с пятого июля, двенадцатого оно уже работает. Закрыто с пятого…", back: "до двенадцатого июля", distractors: ["по двенадцатое июля", "до двенадцатое июля"], explanation: "Il 12 escluso → до + genitivo: до двенадцатого." },
+    { front: "(пн, 12.07) Когда кафе снова открывается?", back: "В понедельник, двенадцатого", distractors: ["Во понедельник, двенадцатого", "В понедельник, двенадцатое"], explanation: "В понедельник (non «во»); data al genitivo." },
+    { front: "(15.10–15.04) С какого по какое число в Милане работает отопление?", back: "С пятнадцатого октября по пятнадцатое апреля", distractors: ["С пятнадцатого октября по пятнадцатого апреля", "С пятнадцатое октября по пятнадцатое апреля"], explanation: "с пятнадцатого (gen.) … по пятнадцатое (acc.). In Italia il riscaldamento si accende per legge: di norma a Milano (zona E) dal 15 ottobre al 15 aprile." },
+    { front: "(15.10) Когда в Милане включают отопление?", back: "Пятнадцатого октября", distractors: ["Пятнадцатое октября", "В пятнадцатое октября"], explanation: "Quando? Il momento: genitivo senza preposizione: пятнадцатого октября." },
+    { front: "(02.08–06.08) Магазин закрыт, последний закрытый день — шестое. Закрыт со второго…", back: "по шестое августа", distractors: ["до шестого августа", "по шестого августа"], explanation: "Compreso → по шестое. «Со второго»: с → со davanti a «вт»." },
+    { front: "(вт–сб) Когда работает библиотека?", back: "Со вторника по субботу", distractors: ["С вторника по субботу", "Со вторника по суббота"], explanation: "Giorni: со вторника (gen.) … по субботу (acc.)." },
+    { front: "(01.12–11.01) Каток открыт с первого декабря…", back: "по одиннадцатое января", distractors: ["по одиннадцатого января", "по одиннадцатому января"], explanation: "Due mesi: по одиннадцатое января; il mese al genitivo." },
+    { front: "(11.01) Какое сегодня число? Последний день катка.", back: "Одиннадцатое января", distractors: ["Одиннадцатого января", "Одиннадцатый январь"], explanation: "Il fatto: nominativo neutro: одиннадцатое." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -281,7 +298,8 @@ const initializers = {
     'panel-dp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dp-03', exercises: p3exercises }),
     'panel-dp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dp-04', cards: p4cards }),
     'panel-dp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dp-05', cards: p5cards }),
-    'panel-dp-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dp-06', cards: p6cards })
+    'panel-dp-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dp-06', cards: p6cards }),
+    'panel-dp-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-dp-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
