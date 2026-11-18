@@ -88,10 +88,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// к + dativo dell'ordinale: к пятому, к первому, к третьему, ко второму
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.05) Отчёт нужно сдать {{1}} мая.",
+        words: ["к десятого", "к десятому", "к десятое"],
+        correctAnswers: { 1: "к десятому" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.06) Сайт должен работать {{1}} июня.",
+        words: ["к первому", "к первом", "к первого"],
+        correctAnswers: { 1: "к первому" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(03.09) Документы будут готовы {{1}} сентября.",
+        words: ["к третье", "к третего", "к третьему"],
+        correctAnswers: { 1: "к третьему" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(02.04) Нужно оплатить курс {{1}} апреля.",
+        words: ["ко второму", "к второму", "ко второго"],
+        correctAnswers: { 1: "ко второму" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.07) Мастер закончит ремонт {{1}} июля.",
+        words: ["к пятнадцатого", "к пятнадцатому", "к пятнадцатое"],
+        correctAnswers: { 1: "к пятнадцатому" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.12) Подарки купим {{1}} декабря.",
+        words: ["к двадцатое", "к двадцатом", "к двадцатому"],
+        correctAnswers: { 1: "к двадцатому" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(25.02) Зарплата придёт {{1}} февраля.",
+        words: ["к двадцать пятого", "к двадцать пятому", "к двадцать пятое"],
+        correctAnswers: { 1: "к двадцать пятому" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(07.11) Бабушка приедет {{1}} ноября.",
+        words: ["к седьмому", "к седьмого", "к седьмом"],
+        correctAnswers: { 1: "к седьмому" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(30.06) Виза будет готова {{1}} июня.",
+        words: ["к тридцатого", "к тридцатое", "к тридцатому"],
+        correctAnswers: { 1: "к тридцатому" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(12.08) Нужно забронировать гостиницу {{1}} августа.",
+        words: ["к двенадцатому", "к двенадцатое", "к двенадцатого"],
+        correctAnswers: { 1: "к двенадцатому" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-de-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-01', exercises: p1exercises })
+    'panel-de-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-01', exercises: p1exercises }),
+    'panel-de-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
