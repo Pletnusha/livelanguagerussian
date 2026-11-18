@@ -223,12 +223,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Nuovo: vita prima e dopo internet — до / после / около + genitivo, году в …, примерно в … году; «перед» non si usa con gli anni; con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "(2005) — У тебя был интернет дома, когда ты учился в школе? — Нет, интернет появился только…", back: "После две тысячи пятого года", distractors: ["До две тысячи пятого года", "После две тысячи пятый год"], explanation: "Prima niente internet, poi sì: после + genitivo." },
+    { front: "(2010) — Ты писал письма от руки? — Да, но только…", back: "До две тысячи десятого года", distractors: ["После две тысячи десятого года", "До две тысячи десятом году"], explanation: "Prima del 2010: до + genitivo. Qui «до» = prima di." },
+    { front: "(2000) — Когда у вас дома появился компьютер? — Точно не помню…", back: "Около двухтысячного года", distractors: ["В двухтысячном году", "Около двухтысячный год"], explanation: "Non ricordo esattamente → около + genitivo: circa il 2000." },
+    { front: "(2012) — Когда ты начал пользоваться WhatsApp? — Году в…", back: "Году в двенадцатом", distractors: ["Году в двенадцатого", "Года в двенадцатом"], explanation: "Inversione colloquiale (come «часа в три»): году в двенадцатом = circa nel 2012." },
+    { front: "(1995) — Когда в семье появился мобильный телефон? — Только…", back: "После тысяча девятьсот девяносто пятого года", distractors: ["До тысяча девятьсот девяносто пятого года", "После тысяча девятьсот девяносто пятом году"], explanation: "Prima no, poi sì: после + genitivo." },
+    { front: "(2015) — Ты покупал бумажные газеты? — Да, но только…", back: "До две тысячи пятнадцатого года", distractors: ["После две тысячи пятнадцатого года", "До две тысячи пятнадцатый год"], explanation: "Prima del 2015 sì, adesso no: до + genitivo." },
+    { front: "(2000) — Как сказать по-русски «prima del 2000»?", back: "До двухтысячного года", distractors: ["Перед двухтысячным годом", "До двухтысячном году"], explanation: "Con gli anni si usa «до». «Перед» va con un momento vicino: перед обедом, перед праздником." },
+    { front: "(2019) — Когда ты начал работать из дома? — Примерно…", back: "В две тысячи девятнадцатом году", distractors: ["Около две тысячи девятнадцатом году", "В две тысячи девятнадцатого года"], explanation: "Примерно + в … году = circa nel 2019. Con «около» invece il genitivo." },
+    { front: "(2008) — Когда ты купил первый ноутбук? — Не помню точно…", back: "Около две тысячи восьмого года", distractors: ["Около две тысячи восьмой год", "В две тысячи восьмого года"], explanation: "около + genitivo: восьмого года." },
+    { front: "(2001) — Когда ты в первый раз купил что-то в интернете? — Уже…", back: "После две тысячи первого года", distractors: ["До две тысячи первого года", "После две тысячи первым годом"], explanation: "Уже после = già dopo: после + genitivo." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-apd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-01', exercises: p1exercises }),
     'panel-apd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-02', exercises: p2exercises }),
-    'panel-apd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-03', exercises: p3exercises })
+    'panel-apd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-03', exercises: p3exercises }),
+    'panel-apd-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-apd-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
