@@ -291,6 +291,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Misto: la giornata — между (ore ed eventi) + с … до / около / через / перед / к
+// ============================================================
+const p8cards = [
+    { front: "(12:00–13:00) Когда ты пообедал?", back: "Между двенадцатью и часом", distractors: ["С двенадцати до часа", "Между двенадцати и часа"] },
+    { front: "(9:00–17:00) Когда открыт банк?", back: "С девяти до пяти", distractors: ["Между девятью и пятью", "С девять до пяти"] },
+    { front: "Работа до 18:00, ужин в 19:00, я звоню маме в 18:30. Когда?", back: "Между работой и ужином", distractors: ["Между работы и ужина", "Между работа и ужин"] },
+    { front: "(10:00) Когда примерно ты проснёшься?", back: "Около десяти", distractors: ["Около десять", "Около десятью"] },
+    { front: "(15:00–16:00) Когда закончилась встреча?", back: "Между тремя и четырьмя", distractors: ["С трёх до четырёх", "Между трёх и четырёх"] },
+    { front: "Сейчас 9:00, автобус в 9:10. Когда автобус?", back: "Через десять минут", distractors: ["Через десять минуты", "После десяти минут"] },
+    { front: "(20:00–21:00) Когда вернулся папа?", back: "Между восемью и девятью", distractors: ["С восьми до девяти", "Между восемь и девять"] },
+    { front: "Я чищу зубы, а потом сразу сплю. Когда я чищу зубы?", back: "Перед сном", distractors: ["Перед сон", "Перед сна"] },
+    { front: "Тренировки во вторник и в четверг, в среду я отдыхаю. Когда?", back: "Между тренировками", distractors: ["Между тренировок", "Между тренировкам"] },
+    { front: "(7:00) К какому часу нужно быть на работе?", back: "К семи", distractors: ["К семь", "К семью"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -300,7 +317,8 @@ const initializers = {
     'panel-fo-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-04', cards: p4cards }),
     'panel-fo-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-05', cards: p5cards }),
     'panel-fo-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-06', cards: p6cards }),
-    'panel-fo-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-07', cards: p7cards })
+    'panel-fo-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-07', cards: p7cards }),
+    'panel-fo-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
