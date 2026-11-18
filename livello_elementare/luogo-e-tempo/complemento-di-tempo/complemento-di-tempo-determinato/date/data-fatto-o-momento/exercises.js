@@ -290,6 +290,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Misto — inviti: fatto / momento / giorno + data
+// ============================================================
+const p8cards = [
+    { front: "(пт, 27.11) Приглашение на юбилей. Когда праздник?", back: "В пятницу, двадцать седьмого", distractors: ["В пятница, двадцать седьмого", "В пятницу, двадцать седьмое"] },
+    { front: "(03.12) Какое сегодня число? Пришло приглашение!", back: "Третье декабря", distractors: ["Третьего декабря", "Третий декабря"] },
+    { front: "(12.12) Когда новоселье у Димы?", back: "Двенадцатого декабря", distractors: ["Двенадцатое декабря", "В двенадцатое декабря"] },
+    { front: "(сб, 19.12) Когда корпоратив?", back: "В субботу, девятнадцатого", distractors: ["В субботу, девятнадцатое", "В суббота, девятнадцатого"] },
+    { front: "(16.01) Какое сегодня число? Мы пишем приглашения.", back: "Шестнадцатое января", distractors: ["Шестнадцатого января", "Шестнадцатый января"] },
+    { front: "(22.01) Когда нужно ответить на приглашение?", back: "Двадцать второго января", distractors: ["Двадцать второе января", "В двадцать второе января"] },
+    { front: "(сб, 20.02) Когда вечеринка у Кати?", back: "В субботу, двадцатого", distractors: ["В субботу, двадцатое", "В суббота, двадцатого"] },
+    { front: "(13.03) Какое сегодня число? Сегодня юбилей!", back: "Тринадцатое марта", distractors: ["Тринадцатого марта", "Тринадцатый март"] },
+    { front: "(03.04) Когда день рождения у бабушки?", back: "Третьего апреля", distractors: ["Третье апреля", "Третего апреля"] },
+    { front: "(сб, 10.04) Когда выпускной?", back: "В субботу, десятого", distractors: ["В субботу, десятое", "Во субботу, десятого"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -299,7 +316,8 @@ const initializers = {
     'panel-dfm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-04', cards: p4cards }),
     'panel-dfm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-05', cards: p5cards }),
     'panel-dfm-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-06', cards: p6cards }),
-    'panel-dfm-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-07', cards: p7cards })
+    'panel-dfm-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-07', cards: p7cards }),
+    'panel-dfm-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
