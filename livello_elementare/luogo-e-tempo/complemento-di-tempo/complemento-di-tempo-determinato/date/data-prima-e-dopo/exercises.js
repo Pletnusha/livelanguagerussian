@@ -215,10 +215,27 @@ const p3exercises = [
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "(01.05) Майские праздники начинаются первого. Билеты на дачу купим заранее, {{1}} мая.",
+        text: "(01.05) Майские праздники начинаются первого. Продукты на дачу купим заранее, {{1}} мая.",
         words: ["до первого", "после первого", "до первое"],
         correctAnswers: { 1: "до первого" }
     }
+];
+
+// ============================================================
+// PANEL 4 — Flashcard · public
+// Feste per nome: до / после + genitivo (Нового года, Рождества, Пасхи, майских праздников, каникул), con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "Сначала праздничный стол, потом диета. Когда начинаем диету?", back: "После Нового года", distractors: ["До Нового года", "После Новый год"], explanation: "Dopo la festa: после + genitivo: Новый год → Нового года." },
+    { front: "Ёлку и подарки покупаем заранее. Когда?", back: "До Нового года", distractors: ["После Нового года", "До Новый год"], explanation: "Prima della festa: до + genitivo: Нового года." },
+    { front: "Распродажи начинаются, когда праздник прошёл. Когда?", back: "После Рождества", distractors: ["До Рождества", "После Рождество"], explanation: "Рождество → Рождества (genitivo)." },
+    { front: "Ремонт начнём, когда закончатся майские праздники. Когда?", back: "После майских праздников", distractors: ["До майских праздников", "После майские праздники"], explanation: "Plurale: майские праздники → майских праздников." },
+    { front: "Цветы для мамы заказываем заранее. Когда?", back: "До Восьмого марта", distractors: ["После Восьмого марта", "До Восьмое марта"], explanation: "Восьмое марта → Восьмого марта." },
+    { front: "Куличи пекут заранее, а едят в праздник. Когда пекут?", back: "До Пасхи", distractors: ["После Пасхи", "До Пасха"], explanation: "Пасха → Пасхи." },
+    { front: "Сначала блины на Масленицу, потом пост. Когда начинается пост?", back: "После Масленицы", distractors: ["До Масленицы", "После Масленица"], explanation: "Масленица (la settimana dei blini) → Масленицы." },
+    { front: "Отпуск у мамы — когда дети уже в школе. Когда?", back: "После первого сентября", distractors: ["До первого сентября", "После первое сентября"], explanation: "Dopo il primo settembre: после первого сентября." },
+    { front: "Сначала отдыхаем, потом снова учимся. Когда начинаются уроки?", back: "После каникул", distractors: ["До каникул", "После каникулы"], explanation: "Каникулы → каникул (genitivo plurale senza desinenza)." },
+    { front: "Сначала экзамены, потом каникулы. Когда экзамены?", back: "До каникул", distractors: ["После каникул", "До каникулы"], explanation: "Prima delle vacanze: до каникул." }
 ];
 
 // ============================================================
@@ -227,7 +244,8 @@ const p3exercises = [
 const initializers = {
     'panel-dpd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-01', exercises: p1exercises }),
     'panel-dpd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-02', exercises: p2exercises }),
-    'panel-dpd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-03', exercises: p3exercises })
+    'panel-dpd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-03', exercises: p3exercises }),
+    'panel-dpd-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
