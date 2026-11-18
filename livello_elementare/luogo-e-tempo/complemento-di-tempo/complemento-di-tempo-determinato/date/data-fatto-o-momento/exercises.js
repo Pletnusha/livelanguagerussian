@@ -256,6 +256,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto — il matrimonio: fatto (Какое число?) / momento (Когда?) / giorno + data
+// ============================================================
+const p6cards = [
+    { front: "(28.11) Какое сегодня число?", back: "Двадцать восьмое ноября", distractors: ["Двадцать восьмого ноября", "Двадцать восьмой ноября"] },
+    { front: "(сб, 05.12) Когда свадьба у Ани и Максима?", back: "В субботу, пятого", distractors: ["В субботу, пятое", "В суббота, пятого"] },
+    { front: "(09.12) Когда нужно купить кольца?", back: "Девятого декабря", distractors: ["Девятое декабря", "В девятое декабря"] },
+    { front: "(11.12) Какое завтра число? Примерка платья!", back: "Одиннадцатое декабря", distractors: ["Одиннадцатого декабря", "Одиннадцатый декабря"] },
+    { front: "(вт, 15.12) Когда мы отправим приглашения?", back: "Во вторник, пятнадцатого", distractors: ["В вторник, пятнадцатого", "Во вторник, пятнадцатое"] },
+    { front: "(18.12) Когда приедут родители жениха?", back: "Восемнадцатого декабря", distractors: ["Восемнадцатое декабря", "В восемнадцатое декабря"] },
+    { front: "(20.12) Какое сегодня число? Мы выбираем торт.", back: "Двадцатое декабря", distractors: ["Двадцатого декабря", "Двадцатый декабря"] },
+    { front: "(сб, 26.12) Когда свадьба у Олега?", back: "В субботу, двадцать шестого", distractors: ["В субботу, двадцать шестое", "В суббота, двадцать шестого"] },
+    { front: "(02.01) Когда они улетают в свадебное путешествие?", back: "Второго января", distractors: ["Второе января", "В второе января"] },
+    { front: "(03.01) Какое сегодня число? Мы на море!", back: "Третье января", distractors: ["Третьего января", "Третое января"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -263,7 +280,8 @@ const initializers = {
     'panel-dfm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-02', exercises: p2exercises }),
     'panel-dfm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-03', exercises: p3exercises }),
     'panel-dfm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-04', cards: p4cards }),
-    'panel-dfm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-05', cards: p5cards })
+    'panel-dfm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-05', cards: p5cards }),
+    'panel-dfm-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
