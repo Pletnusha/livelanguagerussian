@@ -88,10 +88,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// до / после + genitivo dell'ordinale (forma; la preposizione è data dal contesto: заранее, только после, сразу)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.09) Купи тетради заранее, {{1}} сентября.",
+        words: ["до первое", "до первого", "до первому"],
+        correctAnswers: { 1: "до первого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.05) Зарплата десятого. Отпуск начнётся сразу {{1}} мая.",
+        words: ["после десятое", "после десятому", "после десятого"],
+        correctAnswers: { 1: "после десятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(03.07) Документы нужно отправить заранее, {{1}} июля.",
+        words: ["до третьего", "до третье", "до третьему"],
+        correctAnswers: { 1: "до третьего" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.12) Подарки покупаем заранее, {{1}} декабря.",
+        words: ["до двадцатого", "до двадцатое", "до двадцатым"],
+        correctAnswers: { 1: "до двадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.03) Мастер свободен только {{1}} марта.",
+        words: ["после пятнадцатое", "после пятнадцатым", "после пятнадцатого"],
+        correctAnswers: { 1: "после пятнадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(02.05) Майские праздники — первого и второго. Работаем {{1}} мая.",
+        words: ["после второе", "после второго", "после второму"],
+        correctAnswers: { 1: "после второго" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(31.08) Отпуск заканчивается тридцать первого. Встретимся {{1}} августа.",
+        words: ["после тридцать первое", "после тридцать первому", "после тридцать первого"],
+        correctAnswers: { 1: "после тридцать первого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(08.03) Цветы нужно купить заранее, {{1}} марта.",
+        words: ["до восьмого", "до восьмое", "до восьмому"],
+        correctAnswers: { 1: "до восьмого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(07.01) Рождество седьмого. Ёлку убираем {{1}} января.",
+        words: ["после седьмое", "после седьмого", "после седьмому"],
+        correctAnswers: { 1: "после седьмого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(25.04) Сейчас билеты дорогие, они подешевеют только {{1}} апреля.",
+        words: ["после двадцать пятого", "после двадцать пятое", "после двадцать пятым"],
+        correctAnswers: { 1: "после двадцать пятого" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-dpd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-01', exercises: p1exercises })
+    'panel-dpd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-01', exercises: p1exercises }),
+    'panel-dpd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
