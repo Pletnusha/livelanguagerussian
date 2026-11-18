@@ -273,6 +273,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni — il calendario dell'anno: fatto / momento / giorno + data
+// ============================================================
+const p7cards = [
+    { front: "(25.01) Какое сегодня число? Татьянин день — праздник студентов.", back: "Двадцать пятое января", distractors: ["Двадцать пятого января", "Двадцать пятый января"], explanation: "Il fatto: nominativo neutro: двадцать пятое." },
+    { front: "(25.01) Когда празднуют День студента?", back: "Двадцать пятого января", distractors: ["Двадцать пятое января", "В двадцать пятое января"], explanation: "Quando? Genitivo senza preposizione: двадцать пятого." },
+    { front: "(вс, 14.02) Когда в этом году День святого Валентина?", back: "В воскресенье, четырнадцатого", distractors: ["Во воскресенье, четырнадцатого", "В воскресенье, четырнадцатое"], explanation: "В воскресенье (non «во»); data al genitivo." },
+    { front: "(01.03) Какое сегодня число? Первый день весны.", back: "Первое марта", distractors: ["Первого марта", "Первый март"], explanation: "Il fatto: первое; il mese al genitivo: марта." },
+    { front: "(12.04) Когда День космонавтики?", back: "Двенадцатого апреля", distractors: ["Двенадцатое апреля", "В двенадцатое апреля"], explanation: "Quando? Genitivo: двенадцатого апреля." },
+    { front: "(сб, 01.05) Когда Праздник весны и труда?", back: "В субботу, первого", distractors: ["В субботу, первое", "В суббота, первого"], explanation: "В субботу: суббота → субботу (accusativo); первого (genitivo)." },
+    { front: "(01.06) Какое сегодня число? День защиты детей.", back: "Первое июня", distractors: ["Первого июня", "Первый июнь"], explanation: "Il fatto: первое июня; il mese al genitivo." },
+    { front: "(ср, 07.07) Когда у Маши день рождения?", back: "В среду, седьмого", distractors: ["В среда, седьмого", "В среду, седьмое"], explanation: "Среда → среду (accusativo); седьмого (genitivo)." },
+    { front: "(15.08) Какое сегодня число? Феррагосто!", back: "Пятнадцатое августа", distractors: ["Пятнадцатого августа", "Пятнадцатый август"], explanation: "Il fatto: пятнадцатое августа." },
+    { front: "(чт, 30.09) Когда ты сдаёшь экзамен?", back: "В четверг, тридцатого", distractors: ["Во четверг, тридцатого", "В четверг, тридцатое"], explanation: "В четверг (non «во»); тридцатого (genitivo)." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -281,7 +298,8 @@ const initializers = {
     'panel-dfm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-03', exercises: p3exercises }),
     'panel-dfm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-04', cards: p4cards }),
     'panel-dfm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-05', cards: p5cards }),
-    'panel-dfm-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-06', cards: p6cards })
+    'panel-dfm-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-06', cards: p6cards }),
+    'panel-dfm-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
