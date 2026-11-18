@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T15:13:06.771Z",
-  "count": 24,
+  "generated": "2026-11-18T15:28:39.590Z",
+  "count": 25,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -237,6 +237,25 @@
       "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
       "focus": "data-entro",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\date\\data-entro\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date-data-fascia",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/date/data-fascia/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "МЕЖДУ ПЕРВЫМ И ПЯТЫМ",
+      "title_it": "Tra il primo e il cinque: между первым и пятым / с первого по пятое",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
+      "focus": "data-fascia",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\date\\data-fascia\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date-data-fatto-o-momento",
