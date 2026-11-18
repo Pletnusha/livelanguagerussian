@@ -239,13 +239,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Giorno della settimana + data: в субботу, двадцать первого (в / во + accusativo; data al genitivo). Giorni reali del calendario 2026–2027
+// ============================================================
+const p5cards = [
+    { front: "(сб, 21.11) Когда у них свадьба?", back: "В субботу, двадцать первого", distractors: ["В субботу, двадцать первое", "В суббота, двадцать первого"] },
+    { front: "(вт, 01.12) Когда у тебя экзамен?", back: "Во вторник, первого", distractors: ["В вторник, первого", "Во вторник, первое"] },
+    { front: "(ср, 02.12) Когда приедет бабушка?", back: "В среду, второго", distractors: ["В среда, второго", "В среду, второе"] },
+    { front: "(пт, 04.12) Когда вечеринка?", back: "В пятницу, четвёртого", distractors: ["В пятница, четвёртого", "В пятницу, четвёртое"] },
+    { front: "(пн, 07.12) Когда начинается курс?", back: "В понедельник, седьмого", distractors: ["Во понедельник, седьмого", "В понедельник, седьмое"] },
+    { front: "(вс, 13.12) Когда концерт?", back: "В воскресенье, тринадцатого", distractors: ["В воскресенье, тринадцатое", "Во воскресенье, тринадцатого"] },
+    { front: "(чт, 24.12) Когда ты улетаешь?", back: "В четверг, двадцать четвёртого", distractors: ["В четверг, двадцать четвёртое", "Во четверг, двадцать четвёртого"] },
+    { front: "(сб, 30.01) Когда день рождения у Лены?", back: "В субботу, тридцатого", distractors: ["В субботу, тридцатое", "В суббота, тридцатого"] },
+    { front: "(вт, 16.02) Когда собрание?", back: "Во вторник, шестнадцатого", distractors: ["В вторник, шестнадцатого", "Во вторник, шестнадцатое"] },
+    { front: "(ср, 21.04) Когда ты переезжаешь?", back: "В среду, двадцать первого", distractors: ["В среду, двадцать первое", "В среда, двадцать первого"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-dfm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-01', exercises: p1exercises }),
     'panel-dfm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-02', exercises: p2exercises }),
     'panel-dfm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-03', exercises: p3exercises }),
-    'panel-dfm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-04', cards: p4cards })
+    'panel-dfm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-04', cards: p4cards }),
+    'panel-dfm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
