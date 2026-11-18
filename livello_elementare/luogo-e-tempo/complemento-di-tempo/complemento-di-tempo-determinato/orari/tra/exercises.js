@@ -88,7 +88,7 @@ const p1exercises = [
 
 // ============================================================
 // PANEL 2 — DragDrop · student
-// через + accusativo senza numerali: час, минуту, неделю, месяц, год, полчаса, четверть часа
+// через + accusativo senza numerali: час, минуту, неделю, месяц, полчаса, четверть часа (gli anni → blocco Даты)
 // ============================================================
 const p2exercises = [
     {
@@ -117,9 +117,9 @@ const p2exercises = [
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "Они поженятся {{1}}.",
-        words: ["через года", "через годом", "через год"],
-        correctAnswers: { 1: "через год" }
+        text: "Обед будет готов {{1}}.",
+        words: ["через часа", "через часом", "через час"],
+        correctAnswers: { 1: "через час" }
     },
     {
         instruction: "Trascina la forma giusta.",
@@ -221,12 +221,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// через + numerali (ore, minuti, giorni, settimane): 1 → nome; 2–4 → genitivo singolare; 5+ → genitivo plurale (con spiegazioni)
+// ============================================================
+const p4cards = [
+    { front: "Сейчас 14:00, концерт в 16:00. Когда начнётся концерт?", back: "Через два часа", distractors: ["Через два часов", "Через две часа"], explanation: "2, 3, 4 + genitivo singolare: два часа." },
+    { front: "Сейчас 10:00, урок в 10:05. Когда начнётся урок?", back: "Через пять минут", distractors: ["Через пять минуты", "Через пять минуту"], explanation: "Da 5 in poi + genitivo plurale: пять минут." },
+    { front: "Сейчас 8:00, поезд в 11:00. Когда уходит поезд?", back: "Через три часа", distractors: ["Через три часов", "Через три час"], explanation: "2, 3, 4 + genitivo singolare: три часа." },
+    { front: "Сейчас 12:00, автобус в 12:02. Когда придёт автобус?", back: "Через две минуты", distractors: ["Через два минуты", "Через две минут"], explanation: "Минута è femminile: две минуты (non «два»)." },
+    { front: "Сегодня понедельник, концерт в четверг. Когда концерт?", back: "Через три дня", distractors: ["Через три дней", "Через три день"], explanation: "2, 3, 4 + genitivo singolare: день → дня." },
+    { front: "Сейчас 9:00, обед в 14:00. Когда обед?", back: "Через пять часов", distractors: ["Через пять часа", "Через пять час"], explanation: "Da 5 in poi + genitivo plurale: пять часов." },
+    { front: "Сегодня 1 марта, экзамен 15 марта. Когда экзамен?", back: "Через две недели", distractors: ["Через два недели", "Через две неделю"], explanation: "Неделя è femminile: две недели." },
+    { front: "Сейчас 15:00, фильм в 15:20. Когда начнётся фильм?", back: "Через двадцать минут", distractors: ["Через двадцать минуты", "Через двадцать минуту"], explanation: "20 come 5: genitivo plurale: двадцать минут." },
+    { front: "Сегодня 10 мая, свадьба 17 мая. Когда свадьба?", back: "Через неделю", distractors: ["Через неделя", "Через недели"], explanation: "Una settimana: через неделю, senza numero." },
+    { front: "Сейчас 7:00, автобус в 7:40. Когда придёт автобус?", back: "Через сорок минут", distractors: ["Через сорок минуты", "Через сорок минуту"], explanation: "40 come 5: genitivo plurale: сорок минут." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-tra-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-01', exercises: p1exercises }),
     'panel-tra-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-02', exercises: p2exercises }),
-    'panel-tra-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-03', exercises: p3exercises })
+    'panel-tra-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-03', exercises: p3exercises }),
+    'panel-tra-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
