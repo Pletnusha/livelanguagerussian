@@ -222,12 +222,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Storia: В каком году? → в … ом году (eventi verificati), con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "(1961) В каком году Гагарин полетел в космос?", back: "В тысяча девятьсот шестьдесят первом году", distractors: ["В тысяча девятьсот шестьдесят первом годе", "Тысяча девятьсот шестьдесят первый год"], explanation: "В каком году? в + prepositivo; si declina solo l'ultima parola; «году», non «годе»." },
+    { front: "(1957) В каком году запустили первый спутник?", back: "В тысяча девятьсот пятьдесят седьмом году", distractors: ["В тысяча девятьсот пятьдесят седьмом годе", "Тысяча девятьсот пятьдесят седьмой год"], explanation: "седьмой → седьмом." },
+    { front: "(1861) В каком году объединили Италию?", back: "В тысяча восемьсот шестьдесят первом году", distractors: ["В тысяча восемьсот шестьдесят первом годе", "Тысяча восемьсот шестьдесят первый год"], explanation: "Anche l'Ottocento: тысяча восемьсот…" },
+    { front: "(1703) В каком году основали Санкт-Петербург?", back: "В тысяча семьсот третьем году", distractors: ["В тысяча семьсот третьем годе", "В тысяча семьсот третем году"], explanation: "Третий → третьем (con «ь»)." },
+    { front: "(1945) В каком году закончилась Вторая мировая война?", back: "В тысяча девятьсот сорок пятом году", distractors: ["В тысяча девятьсот сорок пятом годе", "Тысяча девятьсот сорок пятый год"], explanation: "пятый → пятом." },
+    { front: "(1991) В каком году распался СССР?", back: "В тысяча девятьсот девяносто первом году", distractors: ["В тысяча девятьсот девяносто первом годе", "Тысяча девятьсот девяносто первый год"], explanation: "первый → первом." },
+    { front: "(2002) В каком году в Италии появились евро?", back: "В две тысячи втором году", distractors: ["В две тысячи втором годе", "Две тысячи второй год"], explanation: "второй → втором." },
+    { front: "(1946) В каком году Италия стала республикой?", back: "В тысяча девятьсот сорок шестом году", distractors: ["В тысяча девятьсот сорок шестом годе", "Тысяча девятьсот сорок шестой год"], explanation: "шестой → шестом." },
+    { front: "(1935) В каком году открыли московское метро?", back: "В тысяча девятьсот тридцать пятом году", distractors: ["В тысяча девятьсот тридцать пятом годе", "Тысяча девятьсот тридцать пятый год"], explanation: "Solo l'ultima parola cambia." },
+    { front: "(2026) Какой сейчас год?", back: "Две тысячи двадцать шестой", distractors: ["В две тысячи двадцать шестом году", "Две тысячи двадцать шестое"], explanation: "Che anno è? Il fatto: nominativo maschile (non neutro: год, non число)." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-afm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-01', exercises: p1exercises }),
     'panel-afm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-02', exercises: p2exercises }),
-    'panel-afm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-03', exercises: p3exercises })
+    'panel-afm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-03', exercises: p3exercises }),
+    'panel-afm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
