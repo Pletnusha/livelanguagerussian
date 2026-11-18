@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T09:46:35.829Z",
-  "count": 20,
+  "generated": "2026-11-18T10:31:09.068Z",
+  "count": 21,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -127,6 +127,25 @@
       "title_ru": "COMPLEMENTO DI TEMPO CONTINUATO",
       "title_it": "Complemento di tempo continuato: da… a — periodi in russo",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-continuato\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-continuato-data-periodo",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-continuato/data-periodo/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-continuato"
+      ],
+      "lessico": [],
+      "title_ru": "С ПЕРВОГО ПО ПЯТОЕ",
+      "title_it": "Dal primo al cinque: с первого по пятое (date)",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-continuato",
+      "focus": "data-periodo",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-continuato\\data-periodo\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-continuato-periodo",
