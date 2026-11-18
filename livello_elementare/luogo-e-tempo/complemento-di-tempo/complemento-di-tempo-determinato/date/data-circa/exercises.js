@@ -88,10 +88,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// около + genitivo dell'ordinale (около пятого, non «около пятое» né «около пяти»)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(05.05) Точно не знаю: приеду {{1}} мая.",
+        words: ["около пятое", "около пятого", "около пяти"],
+        correctAnswers: { 1: "около пятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(21.06) Наверное, отпуск начнётся {{1}} июня.",
+        words: ["около двадцать первого", "около двадцать первое", "около двадцати одного"],
+        correctAnswers: { 1: "около двадцать первого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.09) Ремонт закончат {{1}} сентября, точной даты нет.",
+        words: ["около десятое", "около десяти", "около десятого"],
+        correctAnswers: { 1: "около десятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(03.12) Посылка придёт {{1}} декабря, точно не знаю.",
+        words: ["около третьего", "около трёх", "около третье"],
+        correctAnswers: { 1: "около третьего" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.03) Наверное, мы переедем {{1}} марта.",
+        words: ["около пятнадцати", "около пятнадцатое", "около пятнадцатого"],
+        correctAnswers: { 1: "около пятнадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.07) Точно не знаю, но курсы начнутся {{1}} июля.",
+        words: ["около первое", "около первого", "около одного"],
+        correctAnswers: { 1: "около первого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(30.10) Бабушка вернётся {{1}} октября, точной даты пока нет.",
+        words: ["около тридцатого", "около тридцати", "около тридцатое"],
+        correctAnswers: { 1: "около тридцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(12.04) Наверное, документы будут готовы {{1}} апреля.",
+        words: ["около двенадцатое", "около двенадцатого", "около двенадцати"],
+        correctAnswers: { 1: "около двенадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(08.08) Точно не помню: мы познакомились {{1}} августа.",
+        words: ["около восьми", "около восьмое", "около восьмого"],
+        correctAnswers: { 1: "около восьмого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(25.02) Наверное, зарплату дадут {{1}} февраля.",
+        words: ["около двадцать пятого", "около двадцати пяти", "около двадцать пятое"],
+        correctAnswers: { 1: "около двадцать пятого" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-dc-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-01', exercises: p1exercises })
+    'panel-dc-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-01', exercises: p1exercises }),
+    'panel-dc-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
