@@ -11,9 +11,87 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // I dati di ogni pannello si aggiungono dopo l'approvazione della PM.
 
 // ============================================================
+// PANEL 1 — DragDrop · public
+// Misto: до / после con date e feste (nuovo) + fatto / momento / с … по / около / к (vecchio), con spiegazioni
+// ============================================================
+const p1exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(05.05) Зарплата пятого, а сегодня третье: {{1}} денег нет.",
+        words: ["До пятое", "До пятого", "После пятого"],
+        correctAnswers: { 1: "До пятого" },
+        explanation: "Prima del 5: до + genitivo: пятое → пятого."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(03.05) — Какое сегодня число? — {{1}} мая.",
+        words: ["Третьего", "До третьего", "Третье"],
+        correctAnswers: { 1: "Третье" },
+        explanation: "Che giorno è? Il fatto: nominativo neutro."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.06) Магазин открывается десятого июня. {{1}} можно будет купить всё.",
+        words: ["После десятого", "До десятого", "После десятое"],
+        correctAnswers: { 1: "После десятого" },
+        explanation: "Dopo il 10: после + genitivo: десятое → десятого."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.07–14.07) Отпуск с первого {{1}} июля.",
+        words: ["по четырнадцатого", "после четырнадцатого", "по четырнадцатое"],
+        correctAnswers: { 1: "по четырнадцатое" },
+        explanation: "Periodo compreso: по + accusativo."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.01) Сначала праздники, потом диета: на диету сядем {{1}}.",
+        words: ["до Нового года", "после Нового года", "после Новый год"],
+        correctAnswers: { 1: "после Нового года" },
+        explanation: "Prima le feste, poi la dieta → после + genitivo: Новый год → Нового года."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.05) Точно не знаю: зарплата будет {{1}} мая.",
+        words: ["около двадцатого", "около двадцатое", "около двадцати"],
+        correctAnswers: { 1: "около двадцатого" },
+        explanation: "Data approssimativa: около + genitivo dell'ordinale."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.08) Отпуск начнётся пятнадцатого. Билеты на море купим заранее, {{1}} августа.",
+        words: ["после пятнадцатого", "до пятнадцатое", "до пятнадцатого"],
+        correctAnswers: { 1: "до пятнадцатого" },
+        explanation: "Заранее = in anticipo → prima: до пятнадцатого."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.05) — К какому числу нужно сдать отчёт? — {{1}} мая.",
+        words: ["К десятому", "После десятого", "К десятого"],
+        correctAnswers: { 1: "К десятому" },
+        explanation: "Scadenza: к + dativo."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(31.12) Подарки нужно купить {{1}} декабря, а не потом!",
+        words: ["после тридцать первого", "до тридцать первого", "до тридцать первое"],
+        correctAnswers: { 1: "до тридцать первого" },
+        explanation: "«А не потом» → prima: до тридцать первого."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(21.11) — Какого числа свадьба? — {{1}} ноября.",
+        words: ["Двадцать первое", "После двадцать первого", "Двадцать первого"],
+        correctAnswers: { 1: "Двадцать первого" },
+        explanation: "Какого числа? → la data esatta al genitivo."
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
+    'panel-dpd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-01', exercises: p1exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
