@@ -155,11 +155,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Il momento: в … ом году (non «в … ом годе», non «… ый год»); 2000 = в двухтысячном году (una parola)
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2026) Мы переехали в Италию в две тысячи двадцать {{1}}.",
+        words: ["шестом годе", "шестой год", "шестом году"],
+        correctAnswers: { 1: "шестом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2000) Я родился в {{1}}.",
+        words: ["двухтысячном году", "двухтысячный год", "двух тысячном году"],
+        correctAnswers: { 1: "двухтысячном году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1961) Гагарин полетел в космос в тысяча девятьсот шестьдесят {{1}}.",
+        words: ["первый год", "первом году", "первом годе"],
+        correctAnswers: { 1: "первом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2014) Олимпиада в Сочи была в две тысячи {{1}}.",
+        words: ["четырнадцатый год", "четырнадцатом году", "четырнадцатом годе"],
+        correctAnswers: { 1: "четырнадцатом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2006) Олимпиада в Турине была в две тысячи {{1}}.",
+        words: ["шестой год", "шестом годе", "шестом году"],
+        correctAnswers: { 1: "шестом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1960) Олимпиада в Риме была в тысяча девятьсот {{1}}.",
+        words: ["шестидесятом году", "шестидесятом годе", "шестидесятый год"],
+        correctAnswers: { 1: "шестидесятом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2023) Мы поженились в две тысячи двадцать {{1}}.",
+        words: ["третьем году", "третий год", "третьем годе"],
+        correctAnswers: { 1: "третьем году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1990) Папа окончил университет в тысяча девятьсот {{1}}.",
+        words: ["девяностом годе", "девяностый год", "девяностом году"],
+        correctAnswers: { 1: "девяностом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1980) Олимпиада в Москве была в тысяча девятьсот {{1}}.",
+        words: ["восьмидесятый год", "восьмидесятом году", "восьмидесятом годе"],
+        correctAnswers: { 1: "восьмидесятом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2018) Чемпионат мира по футболу в России был в две тысячи {{1}}.",
+        words: ["восемнадцатый год", "восемнадцатом годе", "восемнадцатом году"],
+        correctAnswers: { 1: "восемнадцатом году" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-afm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-01', exercises: p1exercises }),
-    'panel-afm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-02', exercises: p2exercises })
+    'panel-afm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-02', exercises: p2exercises }),
+    'panel-afm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
