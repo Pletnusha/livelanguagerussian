@@ -273,6 +273,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni — preparativi per Capodanno e Natale: к / до / к концу + fatto / momento / с … по / около
+// ============================================================
+const p7cards = [
+    { front: "(31.12) К какому празднику мы наряжаем ёлку?", back: "К Новому году", distractors: ["К Новый год", "К Нового года"], explanation: "к + dativo: Новый год → Новому году." },
+    { front: "(31.12) Какое сегодня число? Новогодний вечер!", back: "Тридцать первое декабря", distractors: ["Тридцать первого декабря", "К тридцать первому декабря"], explanation: "Il fatto: nominativo neutro." },
+    { front: "(28.12) — К какому числу нужно купить продукты для праздника?", back: "К двадцать восьмому декабря", distractors: ["К двадцать восьмого декабря", "К двадцать восьмое декабря"], explanation: "Scadenza: к двадцать восьмому (dativo)." },
+    { front: "(01.01–08.01) С какого по какое число новогодние каникулы?", back: "С первого по восьмое января", distractors: ["С первого по восьмого января", "С первое по восьмое января"], explanation: "Periodo compreso: с + gen. … по + acc." },
+    { front: "(09.01) — До какого числа мы отдыхаем? Девятого уже на работу.", back: "До девятого января", distractors: ["К девятому января", "До девятое января"], explanation: "До какого числа? → до + genitivo (fino a, il 9 escluso)." },
+    { front: "(25.12) Когда католическое Рождество?", back: "Двадцать пятого декабря", distractors: ["Двадцать пятое декабря", "К двадцать пятому декабря"], explanation: "Quando? Il momento: genitivo senza preposizione." },
+    { front: "(20.12) — К какому числу нужно отправить открытки?", back: "К двадцатому декабря", distractors: ["К двадцатого декабря", "К двадцатом декабря"], explanation: "Scadenza: к двадцатому." },
+    { front: "(10.12) — Когда примерно мы покупаем ёлку? — Точной даты нет…", back: "Около десятого декабря", distractors: ["Около десятое декабря", "К десятому декабря"], explanation: "Data approssimativa: около + genitivo." },
+    { front: "(27.12–31.12) Ремонт закончим не позже последних дней декабря, то есть…", back: "к концу декабря", distractors: ["к конец декабря", "к концу декабрь"], explanation: "К концу = non oltre la fine; в конце = alla fine." },
+    { front: "(07.01) К какому празднику в православных семьях пекут пироги?", back: "К Рождеству", distractors: ["К Рождество", "К Рождества"], explanation: "к + dativo: Рождество → Рождеству." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -281,7 +298,8 @@ const initializers = {
     'panel-de-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-03', exercises: p3exercises }),
     'panel-de-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-04', cards: p4cards }),
     'panel-de-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-05', cards: p5cards }),
-    'panel-de-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-06', cards: p6cards })
+    'panel-de-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-06', cards: p6cards }),
+    'panel-de-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
