@@ -88,10 +88,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Il fatto: ultima parola dell'anno, ordinale maschile al nominativo (шестой, двухтысячный, третий, сороковой)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2026) Сейчас две тысячи двадцать {{1}} год.",
+        words: ["шестое", "шестой", "шестом"],
+        correctAnswers: { 1: "шестой" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2000) Это был {{1}} год.",
+        words: ["двухтысячный", "двухтысячное", "двухтысячном"],
+        correctAnswers: { 1: "двухтысячный" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1990) Тысяча девятьсот {{1}} год — год рождения папы.",
+        words: ["девяностом", "девяностое", "девяностый"],
+        correctAnswers: { 1: "девяностый" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2023) Две тысячи двадцать {{1}} год был трудным.",
+        words: ["третье", "третьем", "третий"],
+        correctAnswers: { 1: "третий" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1961) Тысяча девятьсот шестьдесят {{1}} год — Гагарин в космосе!",
+        words: ["первый", "первое", "первом"],
+        correctAnswers: { 1: "первый" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2014) Две тысячи {{1}} год — Олимпиада в Сочи.",
+        words: ["четырнадцатое", "четырнадцатый", "четырнадцатом"],
+        correctAnswers: { 1: "четырнадцатый" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1980) Тысяча девятьсот {{1}} год — Олимпиада в Москве.",
+        words: ["восьмидесятое", "восьмидесятом", "восьмидесятый"],
+        correctAnswers: { 1: "восьмидесятый" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2027) — Какой год будет следующим? — Две тысячи двадцать {{1}} год.",
+        words: ["седьмой", "седьмое", "седьмого"],
+        correctAnswers: { 1: "седьмой" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1940) — Какой год на фото? — Тысяча девятьсот {{1}} год.",
+        words: ["сороковое", "сороковой", "сороковом"],
+        correctAnswers: { 1: "сороковой" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2010) Две тысячи {{1}} год — я окончил школу.",
+        words: ["десятый", "десятом", "десятое"],
+        correctAnswers: { 1: "десятый" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-afm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-01', exercises: p1exercises })
+    'panel-afm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-01', exercises: p1exercises }),
+    'panel-afm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
