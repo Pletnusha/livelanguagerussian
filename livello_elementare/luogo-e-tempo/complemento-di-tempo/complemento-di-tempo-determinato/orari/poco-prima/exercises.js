@@ -256,6 +256,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto: перед / до / за … до / задолго до (nuovo) + через / после / около / к / сколько времени (vecchio)
+// ============================================================
+const p6cards = [
+    { front: "Экзамен через минуту. Когда я так волнуюсь?", back: "Перед экзаменом", distractors: ["До экзамена", "Перед экзамен"] },
+    { front: "Сейчас 13:00, экзамен в 15:00. Когда экзамен?", back: "Через два часа", distractors: ["Через два часов", "Через двух часов"] },
+    { front: "(10:00) Экзамен начинается в десять. Когда нужно сдать телефоны?", back: "До десяти", distractors: ["Перед десятью", "До десять"] },
+    { front: "Сначала экзамен, потом каникулы. Когда каникулы?", back: "После экзамена", distractors: ["Через экзамен", "После экзамен"] },
+    { front: "Экзамен в 9:00, я пришёл в 8:30. Когда я пришёл?", back: "За полчаса до экзамена", distractors: ["Через полчаса до экзамена", "За получаса до экзамена"] },
+    { front: "(12:00) Когда примерно будут результаты?", back: "Около полудня", distractors: ["Около полдень", "Около полудню"] },
+    { front: "Я начал готовиться в сентябре, а экзамен в июне. Когда я начал?", back: "Задолго до экзамена", distractors: ["Задолго перед экзаменом", "Задолго до экзамен"] },
+    { front: "(9:00) К какому часу нужно прийти на экзамен?", back: "К девяти", distractors: ["К девять", "К девятью"] },
+    { front: "Я повторяю слова в кровати, а потом сразу сплю. Когда?", back: "Перед сном", distractors: ["Перед сон", "Перед сна"] },
+    { front: "(8:50) Сколько времени?", back: "Без десяти девять", distractors: ["В без десяти девять", "Перед без десяти девять"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -263,7 +280,8 @@ const initializers = {
     'panel-pp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-02', exercises: p2exercises }),
     'panel-pp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-03', exercises: p3exercises }),
     'panel-pp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-04', cards: p4cards }),
-    'panel-pp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-05', cards: p5cards })
+    'panel-pp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-05', cards: p5cards }),
+    'panel-pp-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
