@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T15:51:11.067Z",
-  "count": 26,
+  "generated": "2026-11-18T15:55:12.141Z",
+  "count": 27,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -200,6 +200,25 @@
       "title_ru": "ГОДЫ",
       "title_it": "In che anno? Gli anni in russo — anni, decenni, secoli",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\anni\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni-anno-fatto-o-momento",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/anni/anno-fatto-o-momento/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "КАКОЙ СЕЙЧАС ГОД?",
+      "title_it": "Che anno è? Две тысячи двадцать шестой год / в две тысячи двадцать шестом году",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni",
+      "focus": "anno-fatto-o-momento",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\anni\\anno-fatto-o-momento\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
