@@ -155,11 +155,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Fine del periodo: по + accusativo (по пятое, по тридцать первое), non «по пятого» né «по пятому»
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.05–05.05) Выставка с первого {{1}} мая.",
+        words: ["по пятого", "по пятое", "по пятому"],
+        correctAnswers: { 1: "по пятое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.07–20.07) Я в отпуске с десятого {{1}} июля.",
+        words: ["по двадцатого", "по двадцатому", "по двадцатое"],
+        correctAnswers: { 1: "по двадцатое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.06–31.08) Каникулы с первого июня {{1}} августа.",
+        words: ["по тридцать первое", "по тридцать первого", "по тридцать первому"],
+        correctAnswers: { 1: "по тридцать первое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(25.12–08.01) Праздники с двадцать пятого декабря {{1}} января.",
+        words: ["по восьмое", "по восьмого", "по восьмому"],
+        correctAnswers: { 1: "по восьмое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(14.02–16.02) Мы в Венеции с четырнадцатого {{1}} февраля.",
+        words: ["по шестнадцатого", "по шестнадцатому", "по шестнадцатое"],
+        correctAnswers: { 1: "по шестнадцатое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.11–03.11) Офис закрыт с первого {{1}} ноября.",
+        words: ["по третьего", "по третье", "по третьему"],
+        correctAnswers: { 1: "по третье" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(05.04–12.04) Курс с пятого {{1}} апреля.",
+        words: ["по двенадцатого", "по двенадцатому", "по двенадцатое"],
+        correctAnswers: { 1: "по двенадцатое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(19.10–23.10) Командировка с девятнадцатого {{1}} октября.",
+        words: ["по двадцать третье", "по двадцать третьего", "по двадцать третьему"],
+        correctAnswers: { 1: "по двадцать третье" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.09–07.09) Неделя кино с первого {{1}} сентября.",
+        words: ["по седьмого", "по седьмое", "по седьмому"],
+        correctAnswers: { 1: "по седьмое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(26.06–02.07) Отпуск с двадцать шестого июня {{1}} июля.",
+        words: ["по второго", "по второму", "по второе"],
+        correctAnswers: { 1: "по второе" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-dp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dp-01', exercises: p1exercises }),
-    'panel-dp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dp-02', exercises: p2exercises })
+    'panel-dp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dp-02', exercises: p2exercises }),
+    'panel-dp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dp-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
