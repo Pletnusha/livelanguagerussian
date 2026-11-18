@@ -89,10 +89,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// между + numerali allo strumentale (verbi di evento unico): двумя, тремя, четырьмя, пятью … двенадцатью, часом
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15:00–17:00) Мама позвонила {{1}}.",
+        words: ["между трёх и пяти", "между тремя и пятью", "между три и пять"],
+        correctAnswers: { 1: "между тремя и пятью" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10:00–12:00) Он пришёл {{1}}.",
+        words: ["между десяти и двенадцати", "между десятью и двенадцатью", "между десять и двенадцать"],
+        correctAnswers: { 1: "между десятью и двенадцатью" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(6:00–7:00) Я проснулся {{1}}.",
+        words: ["между шесть и семь", "между шести и семи", "между шестью и семью"],
+        correctAnswers: { 1: "между шестью и семью" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(13:00–15:00) Посылку доставили {{1}}.",
+        words: ["между часом и тремя", "между часа и трёх", "между час и три"],
+        correctAnswers: { 1: "между часом и тремя" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20:00–21:00) Фильм закончился {{1}}.",
+        words: ["между восьми и девяти", "между восемь и девять", "между восемью и девятью"],
+        correctAnswers: { 1: "между восемью и девятью" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(16:00–18:00) Курьер приехал {{1}}.",
+        words: ["между четырьмя и шестью", "между четырёх и шести", "между четыре и шесть"],
+        correctAnswers: { 1: "между четырьмя и шестью" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(11:00–12:00) Он ответил на письмо {{1}}.",
+        words: ["между одиннадцати и двенадцати", "между одиннадцатью и двенадцатью", "между одиннадцать и двенадцать"],
+        correctAnswers: { 1: "между одиннадцатью и двенадцатью" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(14:00–15:00) Врач вернулся {{1}}.",
+        words: ["между два и три", "между двух и трёх", "между двумя и тремя"],
+        correctAnswers: { 1: "между двумя и тремя" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(17:00–19:00) Гости ушли {{1}}.",
+        words: ["между пятью и семью", "между пяти и семи", "между пять и семь"],
+        correctAnswers: { 1: "между пятью и семью" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(9:00–10:00) Поезд пришёл {{1}}.",
+        words: ["между девяти и десяти", "между девятью и десятью", "между девять и десять"],
+        correctAnswers: { 1: "между девятью и десятью" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-fo-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-fo-01', exercises: p1exercises })
+    'panel-fo-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-fo-01', exercises: p1exercises }),
+    'panel-fo-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-fo-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
