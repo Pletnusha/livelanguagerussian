@@ -306,6 +306,344 @@ const p8cards = [
 ];
 
 // ============================================================
+// PANEL 9 — Quiz misto (multiple choice + match + write) · public — ripasso di tutto
+// 0-(MC_END-1):          multiple choice
+// MC_END-(MATCH_END-1):  match game
+// MATCH_END onwards:     text input
+// ============================================================
+function initPanelPd9() {
+    const panel = document.getElementById('panel-pd-9');
+    if (!panel) return;
+
+    const container = panel.querySelector('#pd-9-cards-container');
+    const prevBtn   = panel.querySelector('#pd-9-deck-prev');
+    const nextBtn   = panel.querySelector('#pd-9-deck-next');
+    const counterEl = panel.querySelector('#pd-9-deck-counter');
+
+    let currentCard = 0;
+
+    const multipleChoiceData = [
+        { question: "Сначала обед, потом кофе. Кофе пьют ___.", options: ["до обеда", "после обед", "после обеда"], answer: "после обеда" },
+        { question: "Магазин открывается в десять. Если придёшь ___, он закрыт.", options: ["до десяти", "после десяти", "до десять"], answer: "до десяти" },
+        { question: "(10:00–18:00) Библиотека работает ___.", options: ["с десяти по шесть", "с десяти до шести", "с десять до шести"], answer: "с десяти до шести" },
+        { question: "(15:00) Точно не знаю, приду ___.", options: ["около три", "около трёх", "около тремя"], answer: "около трёх" },
+        { question: "Врач: сначала таблетка, потом еда. Таблетку пьют ___.", options: ["после еды", "до еда", "до еды"], answer: "до еды" },
+        { question: "(12:00) — К какому часу нужно освободить номер? — ___.", options: ["К полудню", "К полдень", "К полудня"], answer: "К полудню" },
+        { question: "(23:00) Ночью соседи спят. ___ не шуметь!", options: ["До одиннадцати", "После одиннадцать", "После одиннадцати"], answer: "После одиннадцати" },
+        { question: "(18:30) Спектакль начинается ровно ___.", options: ["около половины седьмого", "в половине седьмого", "в половину седьмого"], answer: "в половине седьмого" },
+        { question: "Сначала уроки, потом футбол. Мы играем в футбол ___.", options: ["до уроков", "после уроков", "после уроки"], answer: "после уроков" },
+        { question: "(10:15) — Сколько времени? — ___.", options: ["В четверть одиннадцатого", "После четверти одиннадцатого", "Четверть одиннадцатого"], answer: "Четверть одиннадцатого" }
+    ];
+    const matchPairs = [
+        { left: "Сначала прогулка, потом обед. Прогулка — …", right: "до обеда" },
+        { left: "Сначала обед, потом прогулка. Прогулка — …", right: "после обеда" },
+        { left: "(18:00) Банк закрывается в шесть. Прийти нужно …", right: "до шести" },
+        { left: "(18:00) Банк открыт до шести. Закрыт …", right: "после шести" },
+        { left: "(15:00) Когда примерно?", right: "около трёх" },
+        { left: "(15:00) К какому часу?", right: "к трём" },
+        { left: "(15:00) Во сколько точно?", right: "в три часа" },
+        { left: "(15:00) Сколько времени?", right: "три часа" },
+        { left: "(9:00–18:00) Часы работы", right: "с девяти до шести" },
+        { left: "(0:00) Парк ночью закрыт. Вход запрещён …", right: "после полуночи" }
+    ];
+    const quizData = [
+        { id: "pd9-w1", promptPrefix: "Сначала работа, потом спортзал. В спортзал я хожу ", promptSuffix: ".", answers: ["после работы"] },
+        { id: "pd9-w2", promptPrefix: "Врач: сначала лекарство, потом завтрак. Лекарство пьют ", promptSuffix: ".", answers: ["до завтрака"] },
+        { id: "pd9-w3", promptPrefix: "(9:00) Рано утром не звони! Звони ", promptSuffix: ".", answers: ["после девяти", "после девяти часов"] },
+        { id: "pd9-w4", promptPrefix: "(20:00) Магазин закрывается в восемь. ", promptSuffix: " он уже закрыт.", answers: ["после восьми", "после восьми часов", "после восьми вечера", "после восьми часов вечера", "после двадцати часов"] },
+        { id: "pd9-w5", promptPrefix: "Сначала экзамен, потом каникулы. Каникулы будут ", promptSuffix: ".", answers: ["после экзамена"] },
+        { id: "pd9-w6", promptPrefix: "(12:30) Сначала работа, потом перерыв в половине первого. Я работаю ", promptSuffix: ".", answers: ["до половины первого"] },
+        { id: "pd9-w7", promptPrefix: "(17:00) — Когда примерно ты придёшь? — ", promptSuffix: ".", answers: ["около пяти", "около пяти часов", "часов в пять"] },
+        { id: "pd9-w8", promptPrefix: "(11:00) — К какому часу нужно прийти? — ", promptSuffix: ".", answers: ["к одиннадцати", "к одиннадцати часам"] },
+        { id: "pd9-w9", promptPrefix: "(0:00) Парк закрывается в полночь. ", promptSuffix: " вход запрещён.", answers: ["после полуночи", "после двенадцати"] },
+        { id: "pd9-w10", promptPrefix: "(19:00–21:00) Ужин в ресторане ", promptSuffix: ".", answers: ["с семи до девяти", "с семи до девяти вечера", "с семи часов до девяти часов", "с девятнадцати до двадцати одного"] }
+    ];
+
+    const MC_END      = multipleChoiceData.length;
+    const MATCH_END   = MC_END + matchPairs.length;
+    const TOTAL_CARDS = MATCH_END + quizData.length;
+
+    if (TOTAL_CARDS === 0) return;
+
+    // Typed answers: ignore case, ё/е, extra spaces and a final dot
+    // (Italian keyboards usually have no ё).
+    function normalizeInput(str) {
+        return str.trim().replace(/\s+/g, ' ').replace(/[.!]+$/, '').toLowerCase().replace(/ё/g, 'е');
+    }
+
+    function ensureCardTitle(card, index) {
+        const existingTitle = Array.from(card.children).find(child => child.tagName === 'H1');
+        if (existingTitle) {
+            if (index < MC_END) existingTitle.classList.add('exercise-counter');
+            if (card.firstElementChild !== existingTitle) card.insertBefore(existingTitle, card.firstElementChild);
+            return;
+        }
+        const title = document.createElement('h1');
+        title.textContent = `Esercizio ${index + 1} di ${TOTAL_CARDS}`;
+        if (index < MC_END) title.classList.add('exercise-counter');
+        card.insertBefore(title, card.firstElementChild);
+    }
+
+    function buildCards() {
+        container.innerHTML = '';
+
+        for (let i = 0; i < TOTAL_CARDS; i++) {
+            const card = document.createElement('div');
+            card.className = 'fca01-card-container pd-9-card';
+            card.dataset.index = i;
+            if (i === 0) card.classList.add('visible');
+            card.hidden = (i !== 0);
+
+            if (i < MC_END) {
+                const item = multipleChoiceData[i];
+                const opts = item.options.map((o, idx) => `<div class="word-option" data-word="${o}" data-index="${idx}">${o}</div>`).join('');
+                const questionText = item.question.replace('___', `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`);
+                card.innerHTML = `
+                    <div class="instruction">Completa la frase scegliendo la forma corretta</div>
+                    <div class="exercise-text">${questionText}</div>
+                    <div class="word-options">${opts}</div>
+                    <div class="controls">
+                        <button class="btn btn-primary verify-btn">Verifica</button>
+                        <button class="btn btn-secondary next-btn" style="display:none;">Prossimo</button>
+                        <div class="feedback"></div>
+                    </div>
+                `;
+                ensureCardTitle(card, i);
+
+            } else if (i < MATCH_END) {
+                const pairIdx = i - MC_END;
+                const pair = matchPairs[pairIdx];
+                const otherPairs = matchPairs.filter((_, idx) => idx !== pairIdx);
+                const shuffledOthers = otherPairs.sort(() => Math.random() - 0.5).slice(0, 2);
+                const allPairs = [pair, ...shuffledOthers].sort(() => Math.random() - 0.5);
+
+                let fronts = allPairs.map((p, idx) => ({ text: p.left,  type: 'front', id: idx }));
+                let backs  = allPairs.map((p, idx) => ({ text: p.right, type: 'back',  id: idx }));
+                fronts.sort(() => Math.random() - 0.5);
+                backs.sort(() => Math.random() - 0.5);
+
+                let selectedMatchCard = null;
+                let isProcessingMatch = false;
+
+                const matchContainer = document.createElement('div');
+                matchContainer.className = 'fca01-match-container';
+                const feedbackEl = document.createElement('p');
+                feedbackEl.className = 'fca01-match-feedback';
+                const matchGrid = document.createElement('div');
+                matchGrid.className = 'fca01-match-grid';
+                const colFronts = document.createElement('div');
+                colFronts.className = 'fca01-match-col';
+                const colBacks = document.createElement('div');
+                colBacks.className = 'fca01-match-col';
+
+                matchGrid.appendChild(colFronts);
+                matchGrid.appendChild(colBacks);
+                matchContainer.appendChild(feedbackEl);
+                matchContainer.appendChild(matchGrid);
+                card.appendChild(matchContainer);
+
+                function handleMatchClick(clickedCard) {
+                    if (isProcessingMatch || clickedCard.classList.contains('matched')) return;
+                    if (clickedCard === selectedMatchCard) return;
+
+                    if (!selectedMatchCard) {
+                        selectedMatchCard = clickedCard;
+                        clickedCard.classList.add('selected');
+                        return;
+                    }
+
+                    if (selectedMatchCard.dataset.type === clickedCard.dataset.type) {
+                        selectedMatchCard.classList.remove('selected');
+                        selectedMatchCard = clickedCard;
+                        clickedCard.classList.add('selected');
+                        return;
+                    }
+
+                    const firstId    = selectedMatchCard.dataset.id;
+                    const secondId   = clickedCard.dataset.id;
+                    const previousCard = selectedMatchCard;
+
+                    if (firstId === secondId) {
+                        previousCard.classList.add('matched');
+                        clickedCard.classList.add('matched');
+                        feedbackEl.textContent = "✨ Отлично!";
+                        feedbackEl.className = "fca01-match-feedback correct";
+                        selectedMatchCard = null;
+                        setTimeout(() => { feedbackEl.textContent = ""; }, 1000);
+                        const remaining = matchContainer.querySelectorAll('.fca01-match-card:not(.matched)').length;
+                        if (remaining === 0) feedbackEl.textContent = "🎉 ПОБЕДА! 🎉";
+                    } else {
+                        isProcessingMatch = true;
+                        clickedCard.classList.add('wrong');
+                        previousCard.classList.add('wrong');
+                        feedbackEl.textContent = "Неверно";
+                        feedbackEl.className = "fca01-match-feedback wrong";
+                        setTimeout(() => {
+                            clickedCard.classList.remove('selected', 'wrong');
+                            previousCard.classList.remove('selected', 'wrong');
+                            feedbackEl.textContent = "";
+                            isProcessingMatch = false;
+                        }, 800);
+                        selectedMatchCard = null;
+                    }
+                }
+
+                function createMatchElement(item) {
+                    const div = document.createElement('div');
+                    div.className = 'fca01-match-card';
+                    div.textContent = item.text;
+                    div.dataset.id   = item.id;
+                    div.dataset.type = item.type;
+                    div.addEventListener('click', () => handleMatchClick(div));
+                    return div;
+                }
+
+                fronts.forEach(item => colFronts.appendChild(createMatchElement(item)));
+                backs.forEach(item  => colBacks.appendChild(createMatchElement(item)));
+                ensureCardTitle(card, i);
+
+                const instructionEl = document.createElement('div');
+                instructionEl.className = 'instruction';
+                card.insertBefore(instructionEl, card.firstElementChild);
+
+            } else {
+                const item = quizData[i - MATCH_END];
+                card.innerHTML = `
+                    <h3 class="quiz-title">Write</h3>
+                    <p class="quiz-instruction">Scrivete la forma corretta</p>
+                    <div class="quiz-item" data-id="${item.id}">
+                        <div class="quiz-prompt">${item.promptPrefix}<input type="text" class="quiz-input" data-index="${i - MATCH_END}">${item.promptSuffix}</div>
+                        <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">Проверить</button></div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                `;
+                ensureCardTitle(card, i);
+
+                const instructionEl = document.createElement('div');
+                instructionEl.className = 'instruction';
+                card.insertBefore(instructionEl, card.firstElementChild);
+            }
+
+            container.appendChild(card);
+        }
+
+        attachHandlers();
+    }
+
+    function attachHandlers() {
+        container.querySelectorAll('.pd-9-card').forEach(card => {
+            const cardIndex = parseInt(card.dataset.index, 10);
+            if (cardIndex >= MC_END) return;
+
+            let checked = false;
+            const gapElements  = Array.from(card.querySelectorAll('.gap'));
+            const wordElements = Array.from(card.querySelectorAll('.word-option'));
+            const verifyBtn    = card.querySelector('.verify-btn');
+            const nextBtn      = card.querySelector('.next-btn');
+            const feedback     = card.querySelector('.feedback');
+
+            wordElements.forEach(wordElement => {
+                wordElement.addEventListener('click', function() {
+                    if (this.classList.contains('used') || checked) return;
+                    const emptyGap = gapElements.find(gap => !gap.classList.contains('filled'));
+                    if (!emptyGap) return;
+                    const word = this.dataset.word;
+                    emptyGap.textContent = word;
+                    emptyGap.classList.add('filled');
+                    emptyGap.dataset.word      = word;
+                    emptyGap.dataset.wordIndex = this.dataset.index;
+                    this.classList.add('used');
+                });
+            });
+
+            gapElements.forEach(gap => {
+                gap.addEventListener('click', function() {
+                    if (checked || !this.classList.contains('filled')) return;
+                    const wordIndex   = this.dataset.wordIndex;
+                    const wordElement = wordElements.find(w => w.dataset.index === wordIndex);
+                    this.textContent = '';
+                    this.classList.remove('filled');
+                    delete this.dataset.word;
+                    delete this.dataset.wordIndex;
+                    if (wordElement) wordElement.classList.remove('used');
+                });
+            });
+
+            if (nextBtn) nextBtn.addEventListener('click', () => showCard(currentCard + 1));
+
+            verifyBtn.addEventListener('click', function() {
+                checked = true;
+                const correctAnswer = multipleChoiceData[cardIndex].answer;
+                let correct = 0;
+                gapElements.forEach(gap => {
+                    if (gap.dataset.word === correctAnswer) {
+                        gap.classList.remove('filled');
+                        gap.classList.add('correct');
+                        correct = 1;
+                    } else {
+                        gap.classList.add('incorrect');
+                    }
+                });
+                feedback.textContent = `Corretto: ${correct} / 1`;
+                verifyBtn.style.display = 'none';
+                nextBtn.style.display   = 'inline-block';
+            });
+        });
+
+        container.querySelectorAll('.quiz-check-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card    = this.closest('.pd-9-card');
+                const idx     = parseInt(card.dataset.index) - MATCH_END;
+                const item    = quizData[idx];
+                const input   = card.querySelector('.quiz-input');
+                const fb      = card.querySelector('.quiz-feedback');
+                const userAnswer = normalizeInput(input.value);
+                const isCorrect  = item.answers.some(ans => userAnswer === normalizeInput(ans));
+                if (isCorrect) {
+                    input.classList.remove('incorrect');
+                    input.classList.add('correct');
+                    input.disabled = true;
+                    this.disabled  = true;
+                    fb.textContent = 'Правильно!';
+                    fb.className   = 'quiz-feedback correct';
+                } else {
+                    input.classList.remove('correct');
+                    input.classList.add('incorrect');
+                    fb.textContent = 'Неправильно. Попробуйте ещё раз.';
+                    fb.className   = 'quiz-feedback incorrect';
+                }
+            });
+        });
+
+        container.querySelectorAll('.quiz-input').forEach(input => {
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    const btn = this.closest('.quiz-item').querySelector('.quiz-check-btn');
+                    if (btn && !btn.disabled) btn.click();
+                }
+            });
+        });
+    }
+
+    function showCard(idx) {
+        currentCard = idx;
+        container.querySelectorAll('.pd-9-card').forEach((c, i) => {
+            c.classList.toggle('visible', i === idx);
+            c.hidden = (i !== idx);
+        });
+        counterEl.textContent = (idx + 1) + ' / ' + TOTAL_CARDS;
+        prevBtn.disabled = (idx === 0);
+        nextBtn.disabled = (idx === TOTAL_CARDS - 1);
+    }
+
+    prevBtn.addEventListener('click', () => { if (currentCard > 0)               showCard(currentCard - 1); });
+    nextBtn.addEventListener('click', () => { if (currentCard < TOTAL_CARDS - 1) showCard(currentCard + 1); });
+
+    buildCards();
+    showCard(0);
+}
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -316,7 +654,8 @@ const initializers = {
     'panel-pd-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-05', cards: p5cards }),
     'panel-pd-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-06', cards: p6cards }),
     'panel-pd-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-07', cards: p7cards }),
-    'panel-pd-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-08', cards: p8cards })
+    'panel-pd-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-pd-08', cards: p8cards }),
+    'panel-pd-9': () => initPanelPd9()
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
