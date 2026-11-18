@@ -256,6 +256,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto — Olimpiadi: anno fatto / momento / в этом году / anno breve (nuovo) + date: fatto, momento, с … по, к, между (vecchio)
+// ============================================================
+const p6cards = [
+    { front: "(2026) В каком году прошла Олимпиада в Милане и Кортине?", back: "В две тысячи двадцать шестом году", distractors: ["В две тысячи двадцать шестом годе", "Две тысячи двадцать шестой год"] },
+    { front: "(06.02) Какого числа открылась Олимпиада в Милане?", back: "Шестого февраля", distractors: ["Шестое февраля", "В шестое февраля"] },
+    { front: "(06.02–22.02) С какого по какое число шла Олимпиада?", back: "С шестого по двадцать второе февраля", distractors: ["С шестого по двадцать второго февраля", "Между шестым и двадцать вторым февраля"] },
+    { front: "(1960) Какой это год? Олимпиада в Риме.", back: "Тысяча девятьсот шестидесятый", distractors: ["Тысяча девятьсот шестидесятое", "В тысяча девятьсот шестидесятом году"] },
+    { front: "(22.02) Какое сегодня число? Закрытие Олимпиады.", back: "Двадцать второе февраля", distractors: ["Двадцать второго февраля", "Двадцать второй февраль"] },
+    { front: "(1980) Когда была Олимпиада в Москве? Коротко, как в разговоре.", back: "В восьмидесятом году", distractors: ["В восьмидесятый год", "В восьмидесятом годе"] },
+    { front: "(01.02) — К какому числу нужно купить билеты?", back: "К первому февраля", distractors: ["К первого февраля", "К первое февраля"] },
+    { front: "Сейчас 2026 год. Когда мы смотрели Олимпиаду по телевизору? (2026)", back: "В этом году", distractors: ["В этот год", "В этом годе"] },
+    { front: "(10.02–15.02) Когда мы купили сувениры?", back: "Между десятым и пятнадцатым февраля", distractors: ["С десятого по пятнадцатое февраля", "Между десятого и пятнадцатого февраля"] },
+    { front: "(2006) В каком году была Олимпиада в Турине?", back: "В две тысячи шестом году", distractors: ["В две тысячи шестой год", "В две тысячи шестом годе"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -263,7 +280,8 @@ const initializers = {
     'panel-afm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-02', exercises: p2exercises }),
     'panel-afm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-03', exercises: p3exercises }),
     'panel-afm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-04', cards: p4cards }),
-    'panel-afm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-05', cards: p5cards })
+    'panel-afm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-05', cards: p5cards }),
+    'panel-afm-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
