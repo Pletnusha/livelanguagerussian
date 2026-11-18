@@ -156,11 +156,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Nuovo: по + accusativo (anno compreso) ↔ до + genitivo (anno escluso), deciso dall'intervallo tra parentesi
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2014–2018) Мы жили в Риме с две тысячи четырнадцатого {{1}}.",
+        words: ["по две тысячи восемнадцатый год", "до две тысячи восемнадцатого года", "по две тысячи восемнадцатого года"],
+        correctAnswers: { 1: "по две тысячи восемнадцатый год" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2014–2017) Марина училась в Болонье с две тысячи четырнадцатого {{1}}.",
+        words: ["по две тысячи восемнадцатый год", "до две тысячи восемнадцатый год", "до две тысячи восемнадцатого года"],
+        correctAnswers: { 1: "до две тысячи восемнадцатого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2001–2010) Отец работал в Милане с две тысячи первого {{1}}.",
+        words: ["до две тысячи десятого года", "по две тысячи десятый год", "по две тысячи десятого года"],
+        correctAnswers: { 1: "по две тысячи десятый год" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2019–2022) Мы снимали квартиру в Турине с две тысячи девятнадцатого {{1}}.",
+        words: ["до две тысячи двадцать второго года", "по две тысячи двадцать второго года", "по две тысячи двадцать второй год"],
+        correctAnswers: { 1: "по две тысячи двадцать второй год" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1985–1989) Мама училась в институте с тысяча девятьсот восемьдесят пятого {{1}}.",
+        words: ["до тысяча девятьсот девяностого года", "по тысяча девятьсот девяностый год", "до тысяча девятьсот девяностый год"],
+        correctAnswers: { 1: "до тысяча девятьсот девяностого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2005–2011) — С какого по какой год ты жил в Москве? — С пятого {{1}}.",
+        words: ["до одиннадцатого", "по одиннадцатый", "по одиннадцатого"],
+        correctAnswers: { 1: "по одиннадцатый" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2015–2019) Магазин работал с две тысячи пятнадцатого {{1}}.",
+        words: ["по две тысячи двадцатый год", "до две тысячи двадцатого года", "до две тысячи двадцатый год"],
+        correctAnswers: { 1: "до две тысячи двадцатого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2007–2011) Я играла в оркестре с две тысячи седьмого {{1}}.",
+        words: ["до две тысячи двенадцатого года", "по две тысячи двенадцатый год", "по две тысячи двенадцатого года"],
+        correctAnswers: { 1: "до две тысячи двенадцатого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1996–2000) Брат жил в Лондоне с тысяча девятьсот девяносто шестого {{1}}.",
+        words: ["до двухтысячного года", "по двухтысячного года", "по двухтысячный год"],
+        correctAnswers: { 1: "по двухтысячный год" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2020–2023) Лука изучал русский язык в Москве с двадцатого {{1}} год.",
+        words: ["по двадцать третий", "до двадцать третьего", "по двадцать третьего"],
+        correctAnswers: { 1: "по двадцать третий" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-ap-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-01', exercises: p1exercises }),
-    'panel-ap-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-02', exercises: p2exercises })
+    'panel-ap-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-02', exercises: p2exercises }),
+    'panel-ap-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
