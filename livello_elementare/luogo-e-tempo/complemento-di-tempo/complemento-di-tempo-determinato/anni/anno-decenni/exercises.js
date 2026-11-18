@@ -156,11 +156,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Nuovo: в начале / в конце + genitivo (девяностых, двадцатого века); scelta inizio ↔ fine dall'anno tra parentesi
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1991) Мы переехали в Петербург в начале {{1}}.",
+        words: ["девяностые", "девяностых", "девяностом"],
+        correctAnswers: { 1: "девяностых" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1998) Дедушка вышел на пенсию в конце {{1}}.",
+        words: ["девяностом", "девяностые", "девяностых"],
+        correctAnswers: { 1: "девяностых" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1903) Мой прадедушка родился в начале {{1}} века.",
+        words: ["двадцатого", "двадцатом", "двадцатый"],
+        correctAnswers: { 1: "двадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1898) Прабабушка родилась в конце {{1}} века.",
+        words: ["девятнадцатом", "девятнадцатого", "девятнадцатый"],
+        correctAnswers: { 1: "девятнадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2001) Я пошёл в школу {{1}} двухтысячных.",
+        words: ["в конце", "в начало", "в начале"],
+        correctAnswers: { 1: "в начале" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1989) Родители поженились {{1}} восьмидесятых.",
+        words: ["в конце", "в начале", "в конец"],
+        correctAnswers: { 1: "в конце" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2009) Сестра окончила университет в конце {{1}}.",
+        words: ["двухтысячных", "двухтысячные", "двухтысячном"],
+        correctAnswers: { 1: "двухтысячных" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1962) Бабушка поступила в институт в начале {{1}}.",
+        words: ["шестидесятом", "шестидесятых", "шестидесятые"],
+        correctAnswers: { 1: "шестидесятых" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1999) {{1}} двадцатого века в Италии ещё были лиры.",
+        words: ["В начале", "В конце", "В конец"],
+        correctAnswers: { 1: "В конце" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2004) Мы купили квартиру в Милане в начале {{1}} века.",
+        words: ["двадцать первом", "двадцать первый", "двадцать первого"],
+        correctAnswers: { 1: "двадцать первого" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-ad-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-01', exercises: p1exercises }),
-    'panel-ad-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-02', exercises: p2exercises })
+    'panel-ad-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-02', exercises: p2exercises }),
+    'panel-ad-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
