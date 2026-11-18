@@ -273,6 +273,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni — biografia di Anna: anni (fatto / momento / breve / в этом году) + date
+// ============================================================
+const p7cards = [
+    { front: "(1995) В каком году родилась Анна?", back: "В тысяча девятьсот девяносто пятом году", distractors: ["В тысяча девятьсот девяносто пятом годе", "Тысяча девятьсот девяносто пятый год"], explanation: "В каком году? в + prepositivo: пятый → пятом, «году»." },
+    { front: "(14.03) Какого числа у Анны день рождения?", back: "Четырнадцатого марта", distractors: ["Четырнадцатое марта", "В четырнадцатое марта"], explanation: "Data: genitivo senza preposizione." },
+    { front: "(2002) В каком году Анна пошла в школу?", back: "В две тысячи втором году", distractors: ["В две тысячи втором годе", "Две тысячи второй год"], explanation: "второй → втором." },
+    { front: "(01.09) Какого числа она пошла в первый класс?", back: "Первого сентября", distractors: ["Первое сентября", "В первое сентября"], explanation: "Il 1° settembre: in Russia inizia la scuola." },
+    { front: "(2019) Когда Анна переехала в Италию? Коротко, как в разговоре.", back: "В девятнадцатом году", distractors: ["В девятнадцатый год", "В девятнадцатом годе"], explanation: "Nel parlato si omette «две тысячи»." },
+    { front: "(01.06–30.06) С какого по какое число она искала квартиру в Милане?", back: "С первого по тридцатое июня", distractors: ["С первого по тридцатого июня", "Между первым и тридцатым июня"], explanation: "Durata (tutto il mese) → с … по." },
+    { front: "Сейчас 2026 год. Когда Анна получила права? (2026)", back: "В этом году", distractors: ["В этот год", "В этом годе"], explanation: "Quest'anno: в этом году." },
+    { front: "(2023) Какой это был год? Год её свадьбы.", back: "Две тысячи двадцать третий", distractors: ["Две тысячи двадцать третье", "В две тысячи двадцать третьем году"], explanation: "Il fatto: nominativo maschile (год)." },
+    { front: "(10.09–20.09) Когда она нашла работу?", back: "Между десятым и двадцатым сентября", distractors: ["С десятого по двадцатое сентября", "Между десятого и двадцатого сентября"], explanation: "Un evento: между + strumentale." },
+    { front: "Сейчас 2026 год. Когда Анна поедет к маме в Россию? (2027)", back: "В следующем году", distractors: ["В следующий год", "В следующем годе"], explanation: "L'anno prossimo: в следующем году." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -281,7 +298,8 @@ const initializers = {
     'panel-afm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-03', exercises: p3exercises }),
     'panel-afm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-04', cards: p4cards }),
     'panel-afm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-05', cards: p5cards }),
-    'panel-afm-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-06', cards: p6cards })
+    'panel-afm-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-06', cards: p6cards }),
+    'panel-afm-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
