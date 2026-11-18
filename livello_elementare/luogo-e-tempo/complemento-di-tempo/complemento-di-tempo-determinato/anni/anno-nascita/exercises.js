@@ -238,13 +238,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Mese + anno (в марте девяностого года) e «Ты какого года?» — «Девяностого» (genitivo)
+// ============================================================
+const p5cards = [
+    { front: "(03.1990) Когда ты родился? Месяц и год.", back: "В марте девяностого года", distractors: ["В марте девяностом году", "В март девяностого года"] },
+    { front: "(05.2026) Когда вы переехали? Месяц и год.", back: "В мае двадцать шестого года", distractors: ["В мае двадцать шестом году", "В мая двадцать шестого года"] },
+    { front: "(1990) — Ты какого года?", back: "Девяностого", distractors: ["Девяностый", "В девяностом"] },
+    { front: "(2000) — Ты какого года?", back: "Двухтысячного", distractors: ["Двухтысячный", "В двухтысячном"] },
+    { front: "(09.2019) Когда Анна приехала в Италию? Месяц и год.", back: "В сентябре девятнадцатого года", distractors: ["В сентябре девятнадцатом году", "В сентябрь девятнадцатого года"] },
+    { front: "(1985) — Мама какого года?", back: "Восемьдесят пятого", distractors: ["Восемьдесят пятый", "В восемьдесят пятом"] },
+    { front: "(12.2023) Когда вы поженились? Месяц и год.", back: "В декабре двадцать третьего года", distractors: ["В декабре двадцать третьем году", "В декабря двадцать третьего года"] },
+    { front: "(1995) — Ты какого года рождения?", back: "Девяносто пятого", distractors: ["Девяносто пятый", "Девяносто пятом"] },
+    { front: "(07.2014) Когда ты окончил университет? Месяц и год.", back: "В июле четырнадцатого года", distractors: ["В июле четырнадцатом году", "В июль четырнадцатого года"] },
+    { front: "(2001) — Сын какого года?", back: "Две тысячи первого", distractors: ["Две тысячи первый", "В две тысячи первом"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-an-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-an-01', exercises: p1exercises }),
     'panel-an-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-an-02', exercises: p2exercises }),
     'panel-an-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-an-03', exercises: p3exercises }),
-    'panel-an-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-an-04', cards: p4cards })
+    'panel-an-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-an-04', cards: p4cards }),
+    'panel-an-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-an-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
