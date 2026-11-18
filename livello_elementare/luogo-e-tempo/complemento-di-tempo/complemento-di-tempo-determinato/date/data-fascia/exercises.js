@@ -222,12 +222,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Eventi in un intervallo di date (passato): между + strumentale, con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "(10.03–15.03) Когда пришла посылка?", back: "Между десятым и пятнадцатым марта", distractors: ["С десятого по пятнадцатое марта", "Между десятого и пятнадцатого марта"], explanation: "Arrivata = un momento: между + strumentale." },
+    { front: "(01.04–05.04) Когда вам починили стиральную машину?", back: "Между первым и пятым апреля", distractors: ["С первого по пятое апреля", "Между первое и пятое апреля"], explanation: "Un evento, non una durata → между." },
+    { front: "(02.06–03.06) Когда пришёл ответ из банка?", back: "Между вторым и третьим июня", distractors: ["Между второго и третьего июня", "Между вторым и третим июня"], explanation: "Третье → третьим (con «ь»)." },
+    { front: "(20.09–30.09) Когда вы нашли квартиру?", back: "Между двадцатым и тридцатым сентября", distractors: ["С двадцатого по тридцатое сентября", "Между двадцатым и тридцатого сентября"], explanation: "Entrambi i numeri allo strumentale: двадцатым, тридцатым." },
+    { front: "(11.02–14.02) Когда ты получил подарок?", back: "Между одиннадцатым и четырнадцатым февраля", distractors: ["Между одиннадцатого и четырнадцатого февраля", "Между одиннадцатое и четырнадцатое февраля"], explanation: "между + strumentale: одиннадцатым, четырнадцатым." },
+    { front: "(05.10–08.10) Когда закончили ремонт крыши?", back: "Между пятым и восьмым октября", distractors: ["С пятого по восьмое октября", "Между пятым и восьмого октября"], explanation: "Закончили = un momento → между." },
+    { front: "(21.07–23.07) Когда вам доставили мебель?", back: "Между двадцать первым и двадцать третьим июля", distractors: ["Между двадцать первого и двадцать третьего июля", "Между двадцать первом и двадцать третьем июля"], explanation: "Solo l'ultima parola cambia: двадцать первым, двадцать третьим." },
+    { front: "(13.05–18.05) Когда тебе позвонили с новой работы?", back: "Между тринадцатым и восемнадцатым мая", distractors: ["С тринадцатого по восемнадцатое мая", "Между тринадцатого и восемнадцатого мая"], explanation: "Позвонили = un momento: между." },
+    { front: "(01.12–10.12) Когда пришли счета?", back: "Между первым и десятым декабря", distractors: ["Между первого и десятого декабря", "С первого по десятое декабря"], explanation: "Il mese resta al genitivo alla fine: декабря." },
+    { front: "(25.08–31.08) Когда сын вернулся из лагеря?", back: "Между двадцать пятым и тридцать первым августа", distractors: ["С двадцать пятого по тридцать первое августа", "Между двадцать пятым и тридцать первом августа"], explanation: "Вернулся = un evento: между + strumentale." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-df-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-df-01', exercises: p1exercises }),
     'panel-df-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-df-02', exercises: p2exercises }),
-    'panel-df-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-df-03', exercises: p3exercises })
+    'panel-df-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-df-03', exercises: p3exercises }),
+    'panel-df-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-df-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
