@@ -256,6 +256,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto — il trasloco: около / числа / в начале, в конце (nuovo) + fatto / momento / с … по / giorno (vecchio)
+// ============================================================
+const p6cards = [
+    { front: "(10.06) — Когда примерно вы переезжаете? — Точной даты нет…", back: "Числа десятого июня", distractors: ["Десятого июня", "Числа десятое июня"] },
+    { front: "(01.06) Какое сегодня число? Мы начали собирать коробки.", back: "Первое июня", distractors: ["Первого июня", "Первый июнь"] },
+    { front: "(01.06–05.06) Когда мы ищем грузовик?", back: "В начале июня", distractors: ["В начало июня", "В начале июнь"] },
+    { front: "(сб, 12.06) Когда переезд? Точно!", back: "В субботу, двенадцатого", distractors: ["В субботу, двенадцатое", "Около субботы, двенадцатого"] },
+    { front: "(15.06) Точно не знаю: когда подключат интернет?", back: "Около пятнадцатого", distractors: ["Пятнадцатого", "Около пятнадцатое"] },
+    { front: "(14.06–20.06) С какого по какое число мы живём у друзей?", back: "С четырнадцатого по двадцатое июня", distractors: ["С четырнадцатого по двадцатого июня", "С четырнадцатое по двадцатое июня"] },
+    { front: "(26.06–30.06) Когда новоселье? Точной даты нет.", back: "В конце июня", distractors: ["В конец июня", "Тридцатого июня"] },
+    { front: "(20.06) Когда привезут мебель? Это есть в договоре.", back: "Двадцатого июня", distractors: ["Около двадцатого июня", "Двадцатое июня"] },
+    { front: "(05.07) — Когда примерно придут счета за новую квартиру? — Точно не знаю…", back: "Числа пятого июля", distractors: ["Числа пятое июля", "Пятого июля"] },
+    { front: "(01.07) Какое сегодня число? Мы уже живём в новой квартире!", back: "Первое июля", distractors: ["Первого июля", "Около первого июля"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -263,7 +280,8 @@ const initializers = {
     'panel-dc-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-02', exercises: p2exercises }),
     'panel-dc-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-03', exercises: p3exercises }),
     'panel-dc-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-04', cards: p4cards }),
-    'panel-dc-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-05', cards: p5cards })
+    'panel-dc-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-05', cards: p5cards }),
+    'panel-dc-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
