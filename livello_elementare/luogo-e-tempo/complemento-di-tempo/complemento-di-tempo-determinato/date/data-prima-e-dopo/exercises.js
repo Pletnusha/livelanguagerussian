@@ -273,6 +273,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni — lavoro e ferie: до / после + fatto / momento / с … по / к / около
+// ============================================================
+const p7cards = [
+    { front: "(15.07) Отпуск начинается пятнадцатого. Проект нужно закончить раньше. Когда?", back: "До пятнадцатого июля", distractors: ["После пятнадцатого июля", "До пятнадцатое июля"], explanation: "Prima: до + genitivo: пятнадцатого." },
+    { front: "(15.07) Какое сегодня число? Первый день отпуска!", back: "Пятнадцатое июля", distractors: ["Пятнадцатого июля", "До пятнадцатого июля"], explanation: "Il fatto: nominativo neutro." },
+    { front: "(15.07–29.07) С какого по какое число ты в отпуске?", back: "С пятнадцатого по двадцать девятое июля", distractors: ["С пятнадцатого по двадцать девятого июля", "С пятнадцатое по двадцать девятое июля"], explanation: "с + gen. … по + acc. (compreso)." },
+    { front: "(29.07) Отпуск заканчивается двадцать девятого. Когда ты снова на работе?", back: "После двадцать девятого июля", distractors: ["До двадцать девятого июля", "После двадцать девятое июля"], explanation: "Dopo: после + genitivo." },
+    { front: "Сначала отпуск, потом новый проект. Когда новый проект?", back: "После отпуска", distractors: ["До отпуска", "После отпуск"], explanation: "Отпуск → отпуска (genitivo)." },
+    { front: "(10.07) — К какому числу нужно сдать отчёт перед отпуском?", back: "К десятому июля", distractors: ["К десятого июля", "После десятого июля"], explanation: "Scadenza: к + dativo." },
+    { front: "Сначала отчёт, потом отпуск. Когда отчёт?", back: "До отпуска", distractors: ["После отпуска", "До отпуск"], explanation: "Prima: до отпуска." },
+    { front: "(01.08) — Когда примерно ты вернёшься в офис? — Точно не знаю…", back: "Около первого августа", distractors: ["Около первое августа", "Около одного августа"], explanation: "Circa: около + ordinale (первого), non «одного»." },
+    { front: "(20.07) Билеты домой дешевеют после двадцатого. Когда купим?", back: "После двадцатого июля", distractors: ["До двадцатого июля", "После двадцатое июля"], explanation: "Dopo il 20: после двадцатого." },
+    { front: "(14.07) — Какого числа ты уезжаешь в отпуск?", back: "Четырнадцатого июля", distractors: ["Четырнадцатое июля", "До четырнадцатого июля"], explanation: "Какого числа? → la data esatta al genitivo." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -281,7 +298,8 @@ const initializers = {
     'panel-dpd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-03', exercises: p3exercises }),
     'panel-dpd-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-04', cards: p4cards }),
     'panel-dpd-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-05', cards: p5cards }),
-    'panel-dpd-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-06', cards: p6cards })
+    'panel-dpd-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-06', cards: p6cards }),
+    'panel-dpd-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
