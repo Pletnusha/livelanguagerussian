@@ -222,12 +222,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Abitudini: перед + strumentale (subito prima), con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "Каждый вечер в кровати я читаю. Когда?", back: "Перед сном", distractors: ["Перед сон", "Перед сна"], explanation: "Espressione fissa: перед сном (сон → сном)." },
+    { front: "Обед на столе. Мама: «Помой руки!» Когда?", back: "Перед едой", distractors: ["Перед еда", "Перед еды"], explanation: "перед + strumentale: еда → едой." },
+    { front: "Ключи, телефон, кошелёк — я проверяю у двери. Когда?", back: "Перед выходом", distractors: ["Перед выход", "Перед выхода"], explanation: "перед + strumentale: выход → выходом." },
+    { front: "Через минуту экзамен, я очень волнуюсь. Когда я волнуюсь?", back: "Перед экзаменом", distractors: ["Перед экзамен", "Перед экзамена"], explanation: "перед + strumentale: экзамен → экзаменом." },
+    { front: "Я делаю разминку, а потом сразу бегаю. Когда разминка?", back: "Перед тренировкой", distractors: ["Перед тренировка", "Перед тренировки"], explanation: "Femminile -а → -ой: тренировка → тренировкой." },
+    { front: "Я пью кофе в 8:55, а работаю с 9:00. Когда я пью кофе?", back: "Перед работой", distractors: ["Перед работа", "Перед работы"], explanation: "Femminile -а → -ой: работа → работой." },
+    { front: "Дети повторяют слова, а потом сразу идут в класс. Когда они повторяют слова?", back: "Перед уроком", distractors: ["Перед урок", "Перед урока"], explanation: "перед + strumentale: урок → уроком." },
+    { front: "Вечером мы гуляем, потом сразу ужинаем. Когда мы гуляем?", back: "Перед ужином", distractors: ["Перед ужин", "Перед ужина"], explanation: "перед + strumentale: ужин → ужином." },
+    { front: "В пятницу вечером мы покупаем продукты на субботу и воскресенье. Когда?", back: "Перед выходными", distractors: ["Перед выходные", "Перед выходных"], explanation: "Выходные si declina come un aggettivo: выходными." },
+    { front: "Я собираю чемодан, а утром уезжаю. Когда я собираю чемодан?", back: "Перед поездкой", distractors: ["Перед поездка", "Перед поездки"], explanation: "Femminile -а → -ой: поездка → поездкой." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-pp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-01', exercises: p1exercises }),
     'panel-pp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-02', exercises: p2exercises }),
-    'panel-pp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-03', exercises: p3exercises })
+    'panel-pp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-03', exercises: p3exercises }),
+    'panel-pp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
