@@ -222,12 +222,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Feste russe: fatto (Какое сегодня число?) ↔ momento (Когда?), con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "(01.01) Какое сегодня число? Новый год!", back: "Первое января", distractors: ["Первого января", "Первый января"], explanation: "Il fatto: nominativo neutro: первое января." },
+    { front: "(01.01) Когда празднуют Новый год?", back: "Первого января", distractors: ["Первое января", "В первое января"], explanation: "Quando? Genitivo senza preposizione: первого января." },
+    { front: "(08.03) Какое сегодня число? Женский день!", back: "Восьмое марта", distractors: ["Восьмого марта", "Восьмой марта"], explanation: "Il fatto: восьмое марта. «Восьмое марта» è anche il nome della festa." },
+    { front: "(08.03) Когда мы дарим цветы женщинам?", back: "Восьмого марта", distractors: ["Восьмое марта", "В восьмое марта"], explanation: "Quando? Genitivo: восьмого марта, senza «в»." },
+    { front: "(09.05) Какое сегодня число? День Победы.", back: "Девятое мая", distractors: ["Девятого мая", "Девятый мая"], explanation: "Il fatto: nominativo neutro: девятое мая." },
+    { front: "(09.05) Когда в Москве парад?", back: "Девятого мая", distractors: ["Девятое мая", "В девятое мая"], explanation: "Quando? Genitivo: девятого мая." },
+    { front: "(01.09) Какое сегодня число? Дети идут в школу.", back: "Первое сентября", distractors: ["Первого сентября", "Первый сентябрь"], explanation: "Il mese resta al genitivo: сентября (non «сентябрь»)." },
+    { front: "(01.09) Когда начинается учебный год?", back: "Первого сентября", distractors: ["Первое сентября", "В первое сентября"], explanation: "Quando? Genitivo: первого сентября." },
+    { front: "(12.06) Какое сегодня число? День России.", back: "Двенадцатое июня", distractors: ["Двенадцатого июня", "Двенадцатый июнь"], explanation: "Il fatto: двенадцатое июня; il mese al genitivo (июня)." },
+    { front: "(07.01) Когда православные празднуют Рождество?", back: "Седьмого января", distractors: ["Седьмое января", "В седьмое января"], explanation: "Quando? Genitivo senza preposizione: седьмого января." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-dfm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-01', exercises: p1exercises }),
     'panel-dfm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-02', exercises: p2exercises }),
-    'panel-dfm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-03', exercises: p3exercises })
+    'panel-dfm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-03', exercises: p3exercises }),
+    'panel-dfm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dfm-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
