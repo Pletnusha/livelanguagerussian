@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T07:28:41.906Z",
-  "count": 17,
+  "generated": "2026-11-18T07:53:10.840Z",
+  "count": 18,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -254,6 +254,25 @@
       "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
       "focus": "fatto-o-momento",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\orari\\fatto-o-momento\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari-poco-prima",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/orari/poco-prima/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "ПЕРЕД ОБЕДОМ",
+      "title_it": "Poco prima: перед + strumentale / до + genitivo, за час до",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
+      "focus": "poco-prima",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\orari\\poco-prima\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari-prima-e-dopo",
