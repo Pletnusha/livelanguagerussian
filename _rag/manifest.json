@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-17T12:02:19.650Z",
-  "count": 16,
+  "generated": "2026-11-18T07:28:41.906Z",
+  "count": 17,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -273,6 +273,25 @@
       "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
       "focus": "prima-e-dopo",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\orari\\prima-e-dopo\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari-tra",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/orari/tra/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "ЧЕРЕЗ ЧАС",
+      "title_it": "Tra un'ora: через + accusativo / после + genitivo",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
+      "focus": "tra",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\orari\\tra\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-verbi-di-posizione",
