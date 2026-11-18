@@ -154,11 +154,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Anno o data completa? Coppie: senza data → в … ом году; con la data → … ого года (forma breve colloquiale dell'anno)
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1990) Папа родился {{1}}.",
+        words: ["девяностого года", "в девяностом году", "в девяностого года"],
+        correctAnswers: { 1: "в девяностом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(05.03.1990) Папа родился пятого марта {{1}}.",
+        words: ["девяностого года", "в девяностом году", "девяностом году"],
+        correctAnswers: { 1: "девяностого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2000) Я окончил школу {{1}}.",
+        words: ["в двухтысячного года", "двухтысячного года", "в двухтысячном году"],
+        correctAnswers: { 1: "в двухтысячном году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(25.06.2000) Я окончил школу двадцать пятого июня {{1}}.",
+        words: ["в двухтысячном году", "двухтысячный год", "двухтысячного года"],
+        correctAnswers: { 1: "двухтысячного года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1961) Гагарин полетел в космос {{1}}.",
+        words: ["в шестьдесят первом году", "шестьдесят первого года", "в шестьдесят первый год"],
+        correctAnswers: { 1: "в шестьдесят первом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(12.04.1961) Гагарин полетел в космос двенадцатого апреля {{1}}.",
+        words: ["в шестьдесят первом году", "шестьдесят первого года", "шестьдесят первый год"],
+        correctAnswers: { 1: "шестьдесят первого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2023) Мы поженились {{1}}.",
+        words: ["в двадцать третьем году", "двадцать третьего года", "в двадцать третий год"],
+        correctAnswers: { 1: "в двадцать третьем году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.06.2023) Мы поженились десятого июня {{1}}.",
+        words: ["двадцать третьем году", "в двадцать третьем году", "двадцать третьего года"],
+        correctAnswers: { 1: "двадцать третьего года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1995) Анна родилась {{1}}.",
+        words: ["девяносто пятого года", "в девяносто пятом году", "в девяносто пятого года"],
+        correctAnswers: { 1: "в девяносто пятом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(14.03.1995) Анна родилась четырнадцатого марта {{1}}.",
+        words: ["девяносто пятого года", "девяносто пятом году", "в девяносто пятом году"],
+        correctAnswers: { 1: "девяносто пятого года" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-an-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-an-01', exercises: p1exercises }),
-    'panel-an-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-an-02', exercises: p2exercises })
+    'panel-an-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-an-02', exercises: p2exercises }),
+    'panel-an-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-an-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
