@@ -155,11 +155,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Esatto o approssimativo? Contratto / biglietto / festa fissa → двадцатого; точно не знаю / точной даты нет → около / числа
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.05) В договоре написано: зарплата {{1}} мая.",
+        words: ["около двадцатого", "двадцатое", "двадцатого"],
+        correctAnswers: { 1: "двадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.06) — Когда вы переезжаете? — Точно не знаю, {{1}} июня.",
+        words: ["числа десятого", "десятого", "числа десятое"],
+        correctAnswers: { 1: "числа десятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(07.01) Православное Рождество {{1}} января.",
+        words: ["около седьмого", "седьмого", "седьмое"],
+        correctAnswers: { 1: "седьмого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.03) Точной даты нет: мы переедем {{1}} марта.",
+        words: ["пятнадцатого", "около пятнадцатого", "около пятнадцатое"],
+        correctAnswers: { 1: "около пятнадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.01) Новый год всегда {{1}} января.",
+        words: ["около первого", "первое", "первого"],
+        correctAnswers: { 1: "первого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(25.08) Точно не помню, когда мы вернулись: {{1}} августа.",
+        words: ["числа двадцать пятого", "двадцать пятого", "числа двадцать пятое"],
+        correctAnswers: { 1: "числа двадцать пятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(12.06) День России празднуют {{1}} июня.",
+        words: ["двенадцатого", "около двенадцатого", "двенадцатое"],
+        correctAnswers: { 1: "двенадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(05.09) Точной даты пока нет: ремонт закончат {{1}} сентября.",
+        words: ["пятого", "около пятое", "около пятого"],
+        correctAnswers: { 1: "около пятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(14.02) На билете: концерт {{1}} февраля.",
+        words: ["около четырнадцатого", "четырнадцатого", "четырнадцатое"],
+        correctAnswers: { 1: "четырнадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.10) Точно не знаю: отпуск начнётся {{1}} октября.",
+        words: ["двадцатого", "числа двадцатое", "числа двадцатого"],
+        correctAnswers: { 1: "числа двадцатого" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-dc-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-01', exercises: p1exercises }),
-    'panel-dc-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-02', exercises: p2exercises })
+    'panel-dc-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-02', exercises: p2exercises }),
+    'panel-dc-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
