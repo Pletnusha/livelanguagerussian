@@ -238,13 +238,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Messaggi al telefono: сейчас X, nel messaggio Y → через … (минуту, полчаса, четверть часа, numerali)
+// ============================================================
+const p5cards = [
+    { front: "Сейчас 18:00. Сообщение: «Я в метро, приеду в 18:10». Когда он приедет?", back: "Через десять минут", distractors: ["Через десять минуты", "Через десять минуту"] },
+    { front: "Сейчас 14:00. Сообщение: «Перезвоню в 15:00». Когда она перезвонит?", back: "Через час", distractors: ["Через часа", "Через часом"] },
+    { front: "Сейчас 20:00. Сообщение: «Пицца будет в 20:30». Когда привезут пиццу?", back: "Через полчаса", distractors: ["Через получаса", "Через пол часа"] },
+    { front: "Сейчас 9:00. Сообщение: «Выхожу! Буду у тебя в 9:15». Когда он придёт?", back: "Через четверть часа", distractors: ["Через четверти часа", "Через четвертью часа"] },
+    { front: "В чате: «Подожди секунду…» Когда он ответит?", back: "Через секунду", distractors: ["Через секунда", "Через секунды"] },
+    { front: "Сейчас 13:00. Сообщение: «Встреча в 16:00». Когда встреча?", back: "Через три часа", distractors: ["Через три часов", "Через три час"] },
+    { front: "Сейчас 21:58. Сообщение: «Буду дома в 22:00». Когда она будет дома?", back: "Через две минуты", distractors: ["Через два минуты", "Через две минут"] },
+    { front: "Сейчас 10:59. Сообщение: «Урок в 11:00». Когда урок?", back: "Через минуту", distractors: ["Через минута", "Через минуты"] },
+    { front: "Сейчас 17:00. Сообщение: «Поезд прибывает в 17:45». Когда прибывает поезд?", back: "Через сорок пять минут", distractors: ["Через сорок пять минуты", "Через сорок пять минуту"] },
+    { front: "Сейчас 11:00. Сообщение: «Доставка в 13:00». Когда доставка?", back: "Через два часа", distractors: ["Через два часов", "Через две часа"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-tra-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-01', exercises: p1exercises }),
     'panel-tra-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-02', exercises: p2exercises }),
     'panel-tra-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-03', exercises: p3exercises }),
-    'panel-tra-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-04', cards: p4cards })
+    'panel-tra-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-04', cards: p4cards }),
+    'panel-tra-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
