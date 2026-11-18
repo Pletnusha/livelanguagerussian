@@ -155,11 +155,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Il momento: ordinale al genitivo senza preposizione (пятого марта, третьего июля)
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(05.03) У мамы день рождения {{1}} марта.",
+        words: ["пятое", "пятого", "в пятое"],
+        correctAnswers: { 1: "пятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(03.07) Мы уезжаем на море {{1}} июля.",
+        words: ["третьего", "третего", "третье"],
+        correctAnswers: { 1: "третьего" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.05) Экзамен будет {{1}} мая.",
+        words: ["пятнадцатое", "в пятнадцатое", "пятнадцатого"],
+        correctAnswers: { 1: "пятнадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.06) Дети едут в лагерь {{1}} июня.",
+        words: ["первое", "в первое", "первого"],
+        correctAnswers: { 1: "первого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(24.12) Мы украшаем ёлку {{1}} декабря.",
+        words: ["двадцать четвёртого", "двадцать четвёртое", "в двадцать четвёртое"],
+        correctAnswers: { 1: "двадцать четвёртого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(02.10) Бабушка приедет {{1}} октября.",
+        words: ["второе", "второго", "в второе"],
+        correctAnswers: { 1: "второго" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(19.08) Я вернулся из отпуска {{1}} августа.",
+        words: ["девятнадцатое", "в девятнадцатое", "девятнадцатого"],
+        correctAnswers: { 1: "девятнадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(30.11) Концерт будет {{1}} ноября.",
+        words: ["тридцатого", "тридцатое", "тридцатый"],
+        correctAnswers: { 1: "тридцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(13.01) У брата день рождения {{1}} января.",
+        words: ["тринадцатое", "тринадцатого", "в тринадцатое"],
+        correctAnswers: { 1: "тринадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(23.02) {{1}} февраля мы поздравляем папу.",
+        words: ["Двадцать третье", "Двадцать третего", "Двадцать третьего"],
+        correctAnswers: { 1: "Двадцать третьего" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-dfm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-01', exercises: p1exercises }),
-    'panel-dfm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-02', exercises: p2exercises })
+    'panel-dfm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-02', exercises: p2exercises }),
+    'panel-dfm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dfm-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
