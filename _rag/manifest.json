@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T09:38:35.478Z",
-  "count": 19,
+  "generated": "2026-11-18T09:46:35.829Z",
+  "count": 20,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -180,6 +180,25 @@
       "title_ru": "ДАТЫ",
       "title_it": "Che giorno è? Le date in russo — giorno e mese",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\date\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date-data-fatto-o-momento",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/date/data-fatto-o-momento/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "КАКОЕ СЕГОДНЯ ЧИСЛО?",
+      "title_it": "Che giorno è? Восемнадцатое ноября / восемнадцатого ноября",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
+      "focus": "data-fatto-o-momento",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\date\\data-fatto-o-momento\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
