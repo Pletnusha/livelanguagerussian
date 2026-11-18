@@ -274,6 +274,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto: с … по … год, с … года, до (nuovo) + в … году, data completa, anno di nascita, с понедельника по пятницу, с первого по пятнадцатое (vecchio), con spiegazioni
+// ============================================================
+const p7cards = [
+    { front: "(2016–2021) — С какого по какой год ты учился в университете?", back: "С две тысячи шестнадцатого по две тысячи двадцать первый год", distractors: ["С две тысячи шестнадцатого по две тысячи двадцать первого года", "С две тысячи шестнадцатом по две тысячи двадцать первый год"], explanation: "с + genitivo … по + accusativo: il 2021 compreso." },
+    { front: "(2021) — В каком году ты окончил университет?", back: "В две тысячи двадцать первом году", distractors: ["С две тысячи двадцать первого года", "В две тысячи двадцать первый год"], explanation: "Un momento, solo l'anno: в + prepositivo." },
+    { front: "(2022) — С какого года ты работаешь в этой фирме?", back: "С две тысячи двадцать второго года", distractors: ["В две тысячи двадцать втором году", "По две тысячи двадцать второй год"], explanation: "Da quando? с + genitivo, con il presente (работаешь)." },
+    { front: "(пн–пт) — Когда ты работаешь?", back: "С понедельника по пятницу", distractors: ["С понедельник по пятницу", "С понедельника по пятницы"], explanation: "Con i giorni: с + genitivo … по + accusativo." },
+    { front: "(2019–2020) Я работала в Лондоне с две тысячи девятнадцатого… Закончи с «до».", back: "До две тысячи двадцать первого года", distractors: ["До две тысячи двадцатого года", "До две тысячи двадцать первый год"], explanation: "Il 2020 è compreso, quindi con «до» si nomina l'anno dopo: до … двадцать первого года." },
+    { front: "(01.09.2016) — Когда ты начал учиться в университете?", back: "Первого сентября две тысячи шестнадцатого года", distractors: ["Первое сентября две тысячи шестнадцатого года", "Первого сентября в две тысячи шестнадцатом году"], explanation: "Data completa: tutto al genitivo, senza «в»." },
+    { front: "(2012–2016) — С какого по какой год ты учился в лицее? Коротко.", back: "С двенадцатого по шестнадцатый", distractors: ["С двенадцатый по шестнадцатый", "С двенадцатого по шестнадцатого"], explanation: "Forma breve: с двенадцатого (genitivo) по шестнадцатый (accusativo)." },
+    { front: "(1995) — Какого года рождения твой начальник?", back: "Девяносто пятого", distractors: ["Девяносто пятый", "В девяносто пятом"], explanation: "Anno di nascita: genitivo, senza preposizione." },
+    { front: "(01.07–15.07) — Когда у тебя отпуск?", back: "С первого по пятнадцатое июля", distractors: ["С первого по пятнадцатого июля", "С первое по пятнадцатое июля"], explanation: "Con le date: с первого (genitivo) по пятнадцатое (accusativo)." },
+    { front: "(2018–2023) — С какого по какой год ты работал в банке?", back: "С две тысячи восемнадцатого по две тысячи двадцать третий год", distractors: ["С две тысячи восемнадцатого до две тысячи двадцать третий год", "С две тысячи восемнадцатого по две тысячи двадцать третьего года"], explanation: "по + accusativo: двадцать третий год (compreso)." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -282,7 +299,8 @@ const initializers = {
     'panel-ap-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-03', exercises: p3exercises }),
     'panel-ap-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-ap-04', cards: p4cards }),
     'panel-ap-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-ap-05', cards: p5cards }),
-    'panel-ap-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-ap-06', cards: p6cards })
+    'panel-ap-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-ap-06', cards: p6cards }),
+    'panel-ap-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-ap-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
