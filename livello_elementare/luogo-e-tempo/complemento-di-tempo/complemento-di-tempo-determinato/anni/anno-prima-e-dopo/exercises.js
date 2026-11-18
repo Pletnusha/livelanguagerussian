@@ -274,6 +274,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto: к + dativo (entro), между … годами (solo riconoscimento) (nuovo) + до, около, anno-fatto, secolo (vecchio), con spiegazioni. Con «к» mai «до» come distrattore
+// ============================================================
+const p7cards = [
+    { front: "(2030) — Когда вы хотите купить дом? — Мы хотим купить дом…", back: "К две тысячи тридцатому году", distractors: ["К две тысячи тридцатого года", "К две тысячи тридцатый год"], explanation: "Entro il 2030: к + dativo: к … тридцатому году (come «к пятому мая»)." },
+    { front: "(2027) — Когда ты выучишь русский? — Надеюсь, …", back: "К две тысячи двадцать седьмому году", distractors: ["К две тысячи двадцать седьмого года", "В две тысячи двадцать седьмой год"], explanation: "Entro il 2027: к + dativo: двадцать седьмому году." },
+    { front: "(2002) — Когда в Италии были лиры?", back: "До две тысячи второго года", distractors: ["После две тысячи второго года", "До две тысячи второй год"], explanation: "Prima del 2002: до + genitivo." },
+    { front: "(2010–2015) — Когда вы познакомились? — Точно не помню, где-то…", back: "Между две тысячи десятым и две тысячи пятнадцатым годами", distractors: ["Между две тысячи десятого и две тысячи пятнадцатого года", "С две тысячи десятого по две тысячи пятнадцатый год"], explanation: "Un momento qualsiasi tra il 2010 e il 2015: между + strumentale (десятым … пятнадцатым годами). Per tutto il periodo invece: с … по." },
+    { front: "(2026) — Какой сейчас год?", back: "Две тысячи двадцать шестой", distractors: ["Две тысячи двадцать шестого", "В две тысячи двадцать шестом году"], explanation: "Il fatto: nominativo." },
+    { front: "(2028) — Когда закончат строить новую линию метро? — Обещают…", back: "К две тысячи двадцать восьмому году", distractors: ["К две тысячи двадцать восьмого года", "К две тысячи двадцать восьмой год"], explanation: "Entro il 2028: к + dativo." },
+    { front: "(1990–1995) — Когда родители купили дачу? — Где-то…", back: "Между девяностым и девяносто пятым годами", distractors: ["Между девяностого и девяносто пятого года", "С девяностого по девяносто пятый год"], explanation: "Forma breve: между девяностым и девяносто пятым годами (strumentale)." },
+    { front: "(2000) — Когда ты в первый раз был в Москве? — Точно не помню…", back: "Около двухтысячного года", distractors: ["В двухтысячном году", "Около двухтысячном году"], explanation: "Non ricordo esattamente → около + genitivo." },
+    { front: "(2029) — К какому году нужно выплатить кредит?", back: "К две тысячи двадцать девятому году", distractors: ["К две тысячи двадцать девятого года", "К две тысячи двадцать девятый год"], explanation: "к + dativo: двадцать девятому году." },
+    { front: "(XXI в.) — Какой сейчас век?", back: "Двадцать первый", distractors: ["Двадцать первом", "Двадцать первого"], explanation: "Il fatto: nominativo." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -282,7 +299,8 @@ const initializers = {
     'panel-apd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-03', exercises: p3exercises }),
     'panel-apd-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-apd-04', cards: p4cards }),
     'panel-apd-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-apd-05', cards: p5cards }),
-    'panel-apd-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-apd-06', cards: p6cards })
+    'panel-apd-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-apd-06', cards: p6cards }),
+    'panel-apd-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-apd-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
