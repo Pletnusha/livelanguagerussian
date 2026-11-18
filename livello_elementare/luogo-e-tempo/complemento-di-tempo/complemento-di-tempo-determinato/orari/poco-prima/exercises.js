@@ -88,10 +88,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// перед + strumentale: -ом (ужином, уроком), -ой / -ей (работой, встречей), plurale -ями / -ыми (занятиями, выходными)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я пью кофе {{1}}.",
+        words: ["перед работа", "перед работой", "перед работы"],
+        correctAnswers: { 1: "перед работой" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы гуляем {{1}}.",
+        words: ["перед ужином", "перед ужин", "перед ужина"],
+        correctAnswers: { 1: "перед ужином" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я волнуюсь {{1}}.",
+        words: ["перед экзамена", "перед экзамене", "перед экзаменом"],
+        correctAnswers: { 1: "перед экзаменом" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Позвони мне {{1}}.",
+        words: ["перед встречей", "перед встреча", "перед встречи"],
+        correctAnswers: { 1: "перед встречей" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я принимаю душ {{1}}.",
+        words: ["перед завтрак", "перед завтраком", "перед завтрака"],
+        correctAnswers: { 1: "перед завтраком" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы покупаем продукты {{1}}.",
+        words: ["перед выходные", "перед выходных", "перед выходными"],
+        correctAnswers: { 1: "перед выходными" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Дети волнуются {{1}}.",
+        words: ["перед занятия", "перед занятиями", "перед занятий"],
+        correctAnswers: { 1: "перед занятиями" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я проверяю ключи {{1}}.",
+        words: ["перед выход", "перед выхода", "перед выходом"],
+        correctAnswers: { 1: "перед выходом" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я собираю чемодан {{1}}.",
+        words: ["перед поездка", "перед поездкой", "перед поездки"],
+        correctAnswers: { 1: "перед поездкой" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я повторяю слова {{1}}.",
+        words: ["перед уроком", "перед урока", "перед урок"],
+        correctAnswers: { 1: "перед уроком" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-pp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-01', exercises: p1exercises })
+    'panel-pp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-01', exercises: p1exercises }),
+    'panel-pp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
