@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T15:28:39.590Z",
-  "count": 25,
+  "generated": "2026-11-18T15:51:11.067Z",
+  "count": 26,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -182,6 +182,24 @@
       "title_ru": "COMPLEMENTO DI TEMPO DETERMINATO",
       "title_it": "Complemento di tempo determinato: quando? — orari e date in russo",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/anni/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato",
+        "tempo-continuato"
+      ],
+      "lessico": [],
+      "title_ru": "ГОДЫ",
+      "title_it": "In che anno? Gli anni in russo — anni, decenni, secoli",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\anni\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
