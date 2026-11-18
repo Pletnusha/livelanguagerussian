@@ -155,11 +155,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// между или с … по? Coppie sullo stesso intervallo: durata (работала, жила, был закрыт) → с … по; evento unico (доставили, приехала) → между
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.05–05.05) Выставка работала {{1}} мая.",
+        words: ["между первым и пятым", "с первого по пятое", "с первое по пятое"],
+        correctAnswers: { 1: "с первого по пятое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.05–05.05) Посылку доставили {{1}} мая.",
+        words: ["с первого по пятое", "между первого и пятого", "между первым и пятым"],
+        correctAnswers: { 1: "между первым и пятым" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.07–20.07) Мы были в отпуске {{1}} июля.",
+        words: ["с десятого по двадцатое", "между десятым и двадцатым", "с десятого по двадцатого"],
+        correctAnswers: { 1: "с десятого по двадцатое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.07–20.07) Мы купили билеты {{1}} июля.",
+        words: ["между десятым и двадцатым", "с десятого по двадцатое", "между десятого и двадцатого"],
+        correctAnswers: { 1: "между десятым и двадцатым" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.11–07.11) Музей был закрыт {{1}} ноября.",
+        words: ["между первым и седьмым", "с первого по седьмого", "с первого по седьмое"],
+        correctAnswers: { 1: "с первого по седьмое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.11–07.11) Мастер позвонил {{1}} ноября.",
+        words: ["с первого по седьмое", "между первым и седьмым", "между первого и седьмого"],
+        correctAnswers: { 1: "между первым и седьмым" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.08–25.08) Бабушка жила у нас {{1}} августа.",
+        words: ["с пятнадцатого по двадцать пятое", "между пятнадцатым и двадцать пятым", "с пятнадцатое по двадцать пятое"],
+        correctAnswers: { 1: "с пятнадцатого по двадцать пятое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.08–25.08) Бабушка приехала {{1}} августа.",
+        words: ["между пятнадцатого и двадцать пятого", "с пятнадцатого по двадцать пятое", "между пятнадцатым и двадцать пятым"],
+        correctAnswers: { 1: "между пятнадцатым и двадцать пятым" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.12–31.12) Ярмарка работала {{1}} декабря.",
+        words: ["между двадцатым и тридцать первым", "с двадцатого по тридцать первое", "с двадцатого по тридцать первого"],
+        correctAnswers: { 1: "с двадцатого по тридцать первое" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.12–31.12) Мы познакомились на ярмарке {{1}} декабря.",
+        words: ["между двадцатым и тридцать первым", "с двадцатого по тридцать первое", "между двадцатого и тридцать первого"],
+        correctAnswers: { 1: "между двадцатым и тридцать первым" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-df-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-df-01', exercises: p1exercises }),
-    'panel-df-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-df-02', exercises: p2exercises })
+    'panel-df-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-df-02', exercises: p2exercises }),
+    'panel-df-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-df-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
