@@ -272,6 +272,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni: alla stazione — через / после + periodo / около / к / в / fatto
+// ============================================================
+const p7cards = [
+    { front: "Сейчас 10:00, поезд в 10:15. Когда отправляется поезд?", back: "Через пятнадцать минут", distractors: ["Через пятнадцать минуты", "После пятнадцати минут"], explanation: "Da 5 in poi + genitivo plurale: пятнадцать минут." },
+    { front: "(6:00–23:00) Когда работает касса?", back: "С шести до одиннадцати", distractors: ["С шести по одиннадцать", "С шесть до одиннадцати"], explanation: "Periodo con le ore: с + genitivo … до + genitivo." },
+    { front: "Сначала контроль, потом посадка. Когда посадка?", back: "После контроля", distractors: ["Через контроль", "После контроль"], explanation: "Dopo un evento: после + genitivo: контроль → контроля." },
+    { front: "(14:00) Когда примерно прибудет поезд?", back: "Около двух", distractors: ["Около два", "Около двумя"], explanation: "Circa: около + genitivo: два → двух." },
+    { front: "Сейчас 8:00, электричка в 8:30. Когда электричка?", back: "Через полчаса", distractors: ["Через получаса", "После получаса"], explanation: "Tra mezz'ora: через полчаса." },
+    { front: "(7:00) К какому часу нужно приехать на вокзал?", back: "К семи", distractors: ["К семь", "К семью"], explanation: "Scadenza: к + dativo: семь → семи." },
+    { front: "Сейчас 9:00. Касса закрыта до 13:00. Когда можно купить билет?", back: "После часа", distractors: ["Через час", "После час"], explanation: "«После часа» = dopo le 13. «Через час» = tra un'ora: alle 10 la cassa è ancora chiusa." },
+    { front: "(23:30) Во сколько точно уходит ночной поезд?", back: "В половине двенадцатого", distractors: ["Около половины двенадцатого", "В половину двенадцатого"], explanation: "Ora esatta (точно): в половине двенадцатого." },
+    { front: "Сначала обед в вагоне-ресторане, потом сон. Когда мы спим?", back: "После обеда", distractors: ["Через обед", "После обед"], explanation: "Dopo un evento: после + genitivo: обед → обеда." },
+    { front: "(12:50) Сколько времени?", back: "Без десяти час", distractors: ["В без десяти час", "До без десяти час"], explanation: "Che ore sono? Il fatto, senza preposizione." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -280,7 +297,8 @@ const initializers = {
     'panel-tra-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-03', exercises: p3exercises }),
     'panel-tra-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-04', cards: p4cards }),
     'panel-tra-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-05', cards: p5cards }),
-    'panel-tra-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-06', cards: p6cards })
+    'panel-tra-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-06', cards: p6cards }),
+    'panel-tra-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
