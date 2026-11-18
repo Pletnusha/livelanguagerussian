@@ -273,6 +273,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni — arrivano i parenti: около / числа / в начале, в конце + fatto / momento / с … по / giorno
+// ============================================================
+const p7cards = [
+    { front: "(15.08) — Когда приедут родственники? — Точно не знаю…", back: "Около пятнадцатого августа", distractors: ["Пятнадцатого августа", "Около пятнадцатое августа"], explanation: "Data approssimativa: около + genitivo dell'ordinale." },
+    { front: "(15.08) Какое сегодня число? Гости приехали!", back: "Пятнадцатое августа", distractors: ["Пятнадцатого августа", "Около пятнадцатого августа"], explanation: "Il fatto: nominativo neutro; la data è esatta." },
+    { front: "(01.08–05.08) Когда мы убираем квартиру?", back: "В начале августа", distractors: ["В начало августа", "В начале август"], explanation: "в начале + genitivo del mese (начало → в начале)." },
+    { front: "(сб, 14.08) Когда мы встречаем гостей в аэропорту? Точно.", back: "В субботу, четырнадцатого", distractors: ["В суббота, четырнадцатого", "Около субботы, четырнадцатого"], explanation: "Esatto: в субботу (acc.) + четырнадцатого (gen.)." },
+    { front: "(20.08) — Когда примерно они уедут? — Точной даты нет…", back: "Числа двадцатого", distractors: ["Числа двадцатое", "Двадцатого"], explanation: "Inversione colloquiale = circa: числа двадцатого." },
+    { front: "(15.08–25.08) С какого по какое число гости у нас?", back: "С пятнадцатого по двадцать пятое августа", distractors: ["С пятнадцатого по двадцать пятого августа", "С пятнадцатое по двадцать пятое августа"], explanation: "с + gen. … по + acc. (compreso)." },
+    { front: "(26.08–31.08) Когда мы отдыхаем после гостей? Точной даты нет.", back: "В конце августа", distractors: ["В конец августа", "Тридцать первого августа"], explanation: "Periodo vago: в конце августа." },
+    { front: "(18.08) Когда у бабушки день рождения? Это мы знаем точно.", back: "Восемнадцатого августа", distractors: ["Около восемнадцатого августа", "Восемнадцатое августа"], explanation: "Esatto: genitivo senza preposizione." },
+    { front: "(10.09) — Когда примерно они приедут снова? — Точно не знаю…", back: "Около десятого сентября", distractors: ["Около десятое сентября", "Около десяти сентября"], explanation: "около + ordinale (десятого), non «около десяти»." },
+    { front: "(01.09) Какое сегодня число? Гости уехали, дети идут в школу.", back: "Первое сентября", distractors: ["Первого сентября", "Около первого сентября"], explanation: "Il fatto: первое сентября." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -281,7 +298,8 @@ const initializers = {
     'panel-dc-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-03', exercises: p3exercises }),
     'panel-dc-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-04', cards: p4cards }),
     'panel-dc-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-05', cards: p5cards }),
-    'panel-dc-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-06', cards: p6cards })
+    'panel-dc-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-06', cards: p6cards }),
+    'panel-dc-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
