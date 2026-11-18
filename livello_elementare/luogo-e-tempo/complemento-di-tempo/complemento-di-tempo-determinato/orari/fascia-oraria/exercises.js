@@ -223,12 +223,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Consegne e appuntamenti: между + strumentale con verbi di evento unico (con spiegazioni)
+// ============================================================
+const p4cards = [
+    { front: "(10:00–12:00) Когда приехал курьер?", back: "Между десятью и двенадцатью", distractors: ["С десяти до двенадцати", "Между десяти и двенадцати"], explanation: "Приехал = un momento nell'intervallo: между + strumentale." },
+    { front: "(19:00–20:00) Когда привезли пиццу?", back: "Между семью и восемью", distractors: ["Между семи и восьми", "Между семь и восемь"], explanation: "Восемь: sono corrette sia «восемью» sia «восьмью»." },
+    { front: "(9:00–10:00) Когда позвонил врач?", back: "Между девятью и десятью", distractors: ["Между девять и десять", "С девяти до десяти"], explanation: "Позвонил = un momento: между + strumentale: девять → девятью." },
+    { front: "(15:00–17:00) Когда пришёл мастер?", back: "Между тремя и пятью", distractors: ["Между трёх и пяти", "Между три и пять"], explanation: "между + strumentale: три → тремя, пять → пятью." },
+    { front: "(13:00–14:00) Когда пришло письмо?", back: "Между часом и двумя", distractors: ["Между часа и двух", "С часа до двух"], explanation: "между + strumentale: час → часом, два → двумя." },
+    { front: "(11:00–13:00) Когда принесли посылку?", back: "Между одиннадцатью и часом", distractors: ["Между одиннадцати и часа", "Между одиннадцать и час"], explanation: "между + strumentale: одиннадцать → одиннадцатью, час → часом." },
+    { front: "(16:00–17:00) Когда приехало такси?", back: "Между четырьмя и пятью", distractors: ["Между четырёх и пяти", "С четырёх до пяти"], explanation: "между + strumentale: четыре → четырьмя." },
+    { front: "(20:00–22:00) Когда ушли гости?", back: "Между восемью и десятью", distractors: ["Между восьми и десяти", "Между восемь и десять"], explanation: "Восемь → восемью (o восьмью: entrambe corrette)." },
+    { front: "(6:00–7:00) Когда ты встал?", back: "Между шестью и семью", distractors: ["Между шести и семи", "С шести до семи"], explanation: "между + strumentale: шесть → шестью, семь → семью." },
+    { front: "(12:00–14:00) Когда закончилось собрание?", back: "Между двенадцатью и двумя", distractors: ["Между двенадцати и двух", "Между двенадцать и два"], explanation: "между + strumentale: двенадцать → двенадцатью, два → двумя." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-fo-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-fo-01', exercises: p1exercises }),
     'panel-fo-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-fo-02', exercises: p2exercises }),
-    'panel-fo-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-fo-03', exercises: p3exercises })
+    'panel-fo-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-fo-03', exercises: p3exercises }),
+    'panel-fo-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
