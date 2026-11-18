@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T15:55:12.141Z",
-  "count": 27,
+  "generated": "2026-11-18T18:51:58.647Z",
+  "count": 28,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -219,6 +219,25 @@
       "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni",
       "focus": "anno-fatto-o-momento",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\anni\\anno-fatto-o-momento\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni-anno-nascita",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/anni/anno-nascita/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "КОГДА ТЫ РОДИЛСЯ?",
+      "title_it": "Quando sei nato? В девяностом году / пятого марта девяностого года",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni",
+      "focus": "anno-nascita",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\anni\\anno-nascita\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
