@@ -290,6 +290,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Misto — piani d'autunno: около / числа / в начале, в середине, в конце + fatto / momento / с … по / giorno
+// ============================================================
+const p8cards = [
+    { front: "(05.09) — Когда примерно у тебя отпуск? — Точной даты нет…", back: "Числа пятого сентября", distractors: ["Числа пятое сентября", "Пятого сентября"] },
+    { front: "(01.09–04.09) Когда мы покупаем учебники?", back: "В начале сентября", distractors: ["В начало сентября", "В начале сентябрь"] },
+    { front: "(пт, 10.09) Когда вечеринка у Кати? Точно.", back: "В пятницу, десятого", distractors: ["В пятница, десятого", "Около пятницы, десятого"] },
+    { front: "(15.09) Какое сегодня число?", back: "Пятнадцатое сентября", distractors: ["Пятнадцатого сентября", "Около пятнадцатого сентября"] },
+    { front: "(20.09) — Когда примерно придёт посылка? — Точно не знаю…", back: "Около двадцатого", distractors: ["Двадцатого", "Около двадцатое"] },
+    { front: "(20.09–30.09) С какого по какое число курсы?", back: "С двадцатого по тридцатое сентября", distractors: ["С двадцатого по тридцатого сентября", "С двадцатое по тридцатое сентября"] },
+    { front: "(26.09–30.09) Когда мы последний раз едем на дачу? Точной даты нет.", back: "В конце сентября", distractors: ["В конец сентября", "В конце сентябрь"] },
+    { front: "(сб, 02.10) Когда свадьба у Ивана? Точно.", back: "В субботу, второго", distractors: ["В субботу, второе", "Около субботы, второго"] },
+    { front: "(14.10–17.10) Когда фестиваль?", back: "В середине октября", distractors: ["В середину октября", "В середине октябрь"] },
+    { front: "(25.10) Когда концерт? Это написано на билете.", back: "Двадцать пятого октября", distractors: ["Около двадцать пятого октября", "Двадцать пятое октября"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -299,7 +316,8 @@ const initializers = {
     'panel-dc-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-04', cards: p4cards }),
     'panel-dc-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-05', cards: p5cards }),
     'panel-dc-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-06', cards: p6cards }),
-    'panel-dc-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-07', cards: p7cards })
+    'panel-dc-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-07', cards: p7cards }),
+    'panel-dc-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
