@@ -87,10 +87,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// через + accusativo senza numerali: час, минуту, неделю, месяц, год, полчаса, четверть часа
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Позвони мне {{1}}.",
+        words: ["через часа", "через час", "через часом"],
+        correctAnswers: { 1: "через час" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Подожди, я буду готова {{1}}.",
+        words: ["через минута", "через минуте", "через минуту"],
+        correctAnswers: { 1: "через минуту" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы едем в отпуск {{1}}.",
+        words: ["через неделю", "через неделе", "через неделя"],
+        correctAnswers: { 1: "через неделю" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мой день рождения {{1}}.",
+        words: ["через месяц", "через месяца", "через месяцем"],
+        correctAnswers: { 1: "через месяц" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Они поженятся {{1}}.",
+        words: ["через года", "через годом", "через год"],
+        correctAnswers: { 1: "через год" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Фильм начнётся {{1}}.",
+        words: ["через получаса", "через полчаса", "через полчас"],
+        correctAnswers: { 1: "через полчаса" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Не клади трубку, я отвечу {{1}}.",
+        words: ["через секунда", "через секунды", "через секунду"],
+        correctAnswers: { 1: "через секунду" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Автобус придёт {{1}}.",
+        words: ["через четверть часа", "через четверти часа", "через четвертью часа"],
+        correctAnswers: { 1: "через четверть часа" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Перезвоните, пожалуйста, {{1}}.",
+        words: ["через часом", "через час", "через часа"],
+        correctAnswers: { 1: "через час" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Приходите на контроль {{1}}.",
+        words: ["через неделю", "через недели", "через неделей"],
+        correctAnswers: { 1: "через неделю" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-tra-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-01', exercises: p1exercises })
+    'panel-tra-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-01', exercises: p1exercises }),
+    'panel-tra-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
