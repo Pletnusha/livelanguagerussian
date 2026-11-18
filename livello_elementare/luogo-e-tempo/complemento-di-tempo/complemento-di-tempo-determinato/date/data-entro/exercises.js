@@ -290,6 +290,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Misto — i lavori in casa: к / до / к концу / к празднику + fatto / momento / с … по / числа
+// ============================================================
+const p8cards = [
+    { front: "(15.11) — К какому числу мастер закончит кухню?", back: "К пятнадцатому ноября", distractors: ["К пятнадцатого ноября", "К пятнадцатое ноября"] },
+    { front: "(01.11) Какое сегодня число? Начинаем ремонт!", back: "Первое ноября", distractors: ["Первого ноября", "К первому ноября"] },
+    { front: "(01.11–15.11) С какого по какое число мы живём у мамы?", back: "С первого по пятнадцатое ноября", distractors: ["С первого по пятнадцатого ноября", "С первое по пятнадцатое ноября"] },
+    { front: "(20.11) — До какого числа магазин стройматериалов даёт скидку?", back: "До двадцатого ноября", distractors: ["К двадцатому ноября", "До двадцатое ноября"] },
+    { front: "(10.11) — Когда примерно привезут плитку? — Точно не знаю…", back: "Числа десятого", distractors: ["Числа десятое", "К десятому"] },
+    { front: "(03.11) — К какому числу нужно выбрать обои?", back: "К третьему ноября", distractors: ["К третего ноября", "К третьему ноябрь"] },
+    { front: "(12.11) Когда привезли новую мебель? Это есть в чеке.", back: "Двенадцатого ноября", distractors: ["Двенадцатое ноября", "Около двенадцатого ноября"] },
+    { front: "(30.11) Всё нужно закончить не позже последнего дня ноября, то есть…", back: "к концу ноября", distractors: ["к конец ноября", "к концу ноябрь"] },
+    { front: "(02.12) — К какому числу мы вернёмся домой?", back: "Ко второму декабря", distractors: ["К второму декабря", "Ко второго декабря"] },
+    { front: "(31.12) К какому празднику квартира будет как новая?", back: "К Новому году", distractors: ["К Новый год", "К Нового года"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -299,7 +316,8 @@ const initializers = {
     'panel-de-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-04', cards: p4cards }),
     'panel-de-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-05', cards: p5cards }),
     'panel-de-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-06', cards: p6cards }),
-    'panel-de-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-07', cards: p7cards })
+    'panel-de-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-07', cards: p7cards }),
+    'panel-de-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
