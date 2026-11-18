@@ -156,11 +156,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Nuovo: approssimato (около + genitivo, году в … ом, примерно в … году) ↔ esatto (в … году); il senso da точно не помню / точно помню / по документам
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2000) — Когда ты переехал в Италию? — Точно не помню, {{1}}.",
+        words: ["в двухтысячном году", "около двухтысячного года", "около двухтысячном году"],
+        correctAnswers: { 1: "около двухтысячного года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2000) Точно помню: мы переехали в Милан {{1}}.",
+        words: ["около двухтысячного года", "году в двухтысячном", "в двухтысячном году"],
+        correctAnswers: { 1: "в двухтысячном году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1995) — Когда вы познакомились? — Не помню точно, году в девяносто {{1}}.",
+        words: ["пятом", "пятого", "пятый"],
+        correctAnswers: { 1: "пятом" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1990) Дедушка купил дачу около тысяча девятьсот {{1}}, точной даты никто не знает.",
+        words: ["девяностом году", "девяностого года", "девяностый год"],
+        correctAnswers: { 1: "девяностого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2010) По документам я начал работать здесь {{1}}.",
+        words: ["в две тысячи десятом году", "около две тысячи десятого года", "году в две тысячи десятом"],
+        correctAnswers: { 1: "в две тысячи десятом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2005) Эту фотографию сделали примерно {{1}}.",
+        words: ["около две тысячи пятом году", "две тысячи пятого года", "в две тысячи пятом году"],
+        correctAnswers: { 1: "в две тысячи пятом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1985) Мама точно не помнит, когда это было: {{1}} в восемьдесят пятом.",
+        words: ["году", "года", "год"],
+        correctAnswers: { 1: "году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2003) Это было около две тысячи {{1}}, а может, позже.",
+        words: ["третьем году", "третий год", "третьего года"],
+        correctAnswers: { 1: "третьего года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2000) Я был маленький и точно не помню: это было {{1}}.",
+        words: ["в двухтысячный год", "около двухтысячного года", "около двухтысячный год"],
+        correctAnswers: { 1: "около двухтысячного года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1999) Точно помню: бабушка переехала в Италию {{1}}.",
+        words: ["в тысяча девятьсот девяносто девятом году", "около тысяча девятьсот девяносто девятого года", "году в тысяча девятьсот девяносто девятом"],
+        correctAnswers: { 1: "в тысяча девятьсот девяносто девятом году" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-apd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-01', exercises: p1exercises }),
-    'panel-apd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-02', exercises: p2exercises })
+    'panel-apd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-02', exercises: p2exercises }),
+    'panel-apd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
