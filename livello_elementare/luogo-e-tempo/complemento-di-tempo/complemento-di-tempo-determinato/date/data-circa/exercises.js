@@ -222,12 +222,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Inversione colloquiale: числа + genitivo (= около …), con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "около двадцатого = …", back: "числа двадцатого", distractors: ["число двадцатого", "числа двадцатое"], explanation: "Inversione: числа (genitivo di «число») + ordinale al genitivo = circa il 20." },
+    { front: "около пятого = …", back: "числа пятого", distractors: ["числа пятое", "числом пятого"], explanation: "Числа + genitivo: пятое → пятого." },
+    { front: "около десятого мая = …", back: "числа десятого мая", distractors: ["числа десятое мая", "число десятого мая"], explanation: "Il mese resta alla fine: числа десятого мая." },
+    { front: "около первого = …", back: "числа первого", distractors: ["числа первое", "число первого"], explanation: "Числа + genitivo: первое → первого." },
+    { front: "около пятнадцатого = …", back: "числа пятнадцатого", distractors: ["числа пятнадцатое", "числам пятнадцатого"], explanation: "«Числа» sempre al genitivo singolare." },
+    { front: "(25.04) — Когда примерно приедут гости? — Точной даты нет…", back: "Числа двадцать пятого", distractors: ["Числа двадцать пятое", "Около двадцать пятое"], explanation: "Data approssimativa: числа двадцать пятого." },
+    { front: "(03.06) — Когда ты уезжаешь? — Точно не знаю…", back: "Числа третьего", distractors: ["Числа третье", "Числа третего"], explanation: "Третье → третьего (con «ь»)." },
+    { front: "(12.12) — Когда будет готов ремонт? — Точной даты нет…", back: "Числа двенадцатого", distractors: ["Числа двенадцатое", "Число двенадцатого"], explanation: "Числа + genitivo: двенадцатого." },
+    { front: "(30.09) — Когда начнутся занятия? — Точно не помню…", back: "Числа тридцатого", distractors: ["Числа тридцатое", "Около тридцатое"], explanation: "Числа тридцатого = около тридцатого." },
+    { front: "(18.07) — Когда вы вернётесь? — Точно не знаю…", back: "Числа восемнадцатого", distractors: ["Числа восемнадцатое", "Число восемнадцатого"], explanation: "«Числа» si usa nel parlato; nello scritto: около восемнадцатого." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-dc-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-01', exercises: p1exercises }),
     'panel-dc-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-02', exercises: p2exercises }),
-    'panel-dc-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-03', exercises: p3exercises })
+    'panel-dc-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-03', exercises: p3exercises }),
+    'panel-dc-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dc-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
