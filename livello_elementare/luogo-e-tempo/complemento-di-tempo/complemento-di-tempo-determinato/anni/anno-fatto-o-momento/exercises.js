@@ -239,13 +239,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// в этом / в прошлом / в следующем году; anno abbreviato colloquiale (в девяностом году, в двадцать шестом году)
+// ============================================================
+const p5cards = [
+    { front: "Сейчас 2026 год. Когда ты начал учить русский? (2026)", back: "В этом году", distractors: ["В этот год", "В этом годе"] },
+    { front: "Сейчас 2026 год. Когда мы были в Москве? (2025)", back: "В прошлом году", distractors: ["В прошлый год", "В прошлом годе"] },
+    { front: "Сейчас 2026 год. Когда ты поедешь в Россию? (2027)", back: "В следующем году", distractors: ["В следующий год", "В следующем годе"] },
+    { front: "(1990) Когда родился папа? Скажи коротко, как в разговоре.", back: "В девяностом году", distractors: ["В девяностый год", "В девяностом годе"] },
+    { front: "(2026) Когда мы переехали? Коротко, как в разговоре.", back: "В двадцать шестом году", distractors: ["В двадцать шестой год", "В двадцать шестом годе"] },
+    { front: "(1985) Когда родилась мама? Коротко, как в разговоре.", back: "В восемьдесят пятом году", distractors: ["В восемьдесят пятый год", "В восемьдесят пятом годе"] },
+    { front: "Сейчас 2026 год. Когда открылось кафе у дома? (2025)", back: "В прошлом году", distractors: ["В прошлый год", "В прошлом годе"] },
+    { front: "(2000) Когда ты родился?", back: "В двухтысячном году", distractors: ["В двухтысячный год", "В двух тысячном году"] },
+    { front: "Сейчас 2026 год. Когда у нас свадьба? (2027)", back: "В следующем году", distractors: ["В следующий год", "В следующем годе"] },
+    { front: "(2014) Когда была Олимпиада в Сочи? Коротко, как в разговоре.", back: "В четырнадцатом году", distractors: ["В четырнадцатый год", "В четырнадцатом годе"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-afm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-01', exercises: p1exercises }),
     'panel-afm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-02', exercises: p2exercises }),
     'panel-afm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-afm-03', exercises: p3exercises }),
-    'panel-afm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-04', cards: p4cards })
+    'panel-afm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-04', cards: p4cards }),
+    'panel-afm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-afm-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
