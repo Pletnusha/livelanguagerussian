@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T14:29:28.734Z",
-  "count": 23,
+  "generated": "2026-11-18T15:13:06.771Z",
+  "count": 24,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -256,6 +256,25 @@
       "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
       "focus": "data-fatto-o-momento",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\date\\data-fatto-o-momento\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date-data-prima-e-dopo",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/date/data-prima-e-dopo/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "ДО И ПОСЛЕ ПЯТОГО",
+      "title_it": "Prima e dopo il cinque: до пятого / после пятого",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
+      "focus": "data-prima-e-dopo",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\date\\data-prima-e-dopo\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
