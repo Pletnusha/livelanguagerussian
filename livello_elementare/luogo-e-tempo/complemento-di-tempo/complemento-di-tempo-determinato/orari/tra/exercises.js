@@ -154,11 +154,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// через или после? Lo decide il contesto (сейчас X, evento alle Y / сначала … потом); trappola «после часа» = dopo le 13
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сейчас 12:00, встреча в 13:00, то есть {{1}}.",
+        words: ["через час", "после часа", "через часа"],
+        correctAnswers: { 1: "через час" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сначала урок, потом обед. Обед {{1}}.",
+        words: ["через урок", "после урок", "после урока"],
+        correctAnswers: { 1: "после урока" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сейчас 9:00. Я позвоню в 9:15, то есть {{1}}.",
+        words: ["после четверти часа", "через четверть часа", "через четверти часа"],
+        correctAnswers: { 1: "через четверть часа" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сначала фильм, потом ужин. Мы ужинаем {{1}}.",
+        words: ["через фильм", "после фильма", "после фильм"],
+        correctAnswers: { 1: "после фильма" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сейчас 9:00, лекция в 10:00. Лекция начнётся {{1}}.",
+        words: ["через час", "через часа", "после часа"],
+        correctAnswers: { 1: "через час" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сейчас 11:30, а перерыв в банке с 12:00 до 13:00. Приходите {{1}}.",
+        words: ["через час", "после часа", "после час"],
+        correctAnswers: { 1: "после часа" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сначала экзамен, потом каникулы. Каникулы начнутся {{1}}.",
+        words: ["через экзамен", "после экзамен", "после экзамена"],
+        correctAnswers: { 1: "после экзамена" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сегодня 1 мая. Отпуск начнётся 1 июня, то есть {{1}}.",
+        words: ["через месяц", "после месяца", "через месяца"],
+        correctAnswers: { 1: "через месяц" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сначала душ, потом кофе. Я пью кофе {{1}}.",
+        words: ["через душ", "после душ", "после душа"],
+        correctAnswers: { 1: "после душа" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сейчас 18:00, поезд в 18:30. Поезд уходит {{1}}.",
+        words: ["после полчаса", "через полчаса", "через полчас"],
+        correctAnswers: { 1: "через полчаса" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-tra-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-01', exercises: p1exercises }),
-    'panel-tra-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-02', exercises: p2exercises })
+    'panel-tra-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-02', exercises: p2exercises }),
+    'panel-tra-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-tra-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
