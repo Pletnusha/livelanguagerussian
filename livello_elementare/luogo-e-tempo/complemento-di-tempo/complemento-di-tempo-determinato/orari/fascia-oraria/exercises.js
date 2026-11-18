@@ -274,6 +274,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni: dal medico — между + с … до / около / за … до / перед / после
+// ============================================================
+const p7cards = [
+    { front: "(8:00–9:00) Когда позвонила медсестра?", back: "Между восемью и девятью", distractors: ["С восьми до девяти", "Между восьми и девяти"], explanation: "Позвонила = un momento: между + strumentale (восемью o восьмью)." },
+    { front: "(8:00–20:00) Когда работает поликлиника?", back: "С восьми до восьми", distractors: ["Между восемью и восемью", "С восемь до восьми"], explanation: "Работает = tutto il periodo: с … до + genitivo." },
+    { front: "Анализ в 8:00, приём у врача в 10:00, завтрак в 9:00. Когда я завтракаю?", back: "Между анализом и приёмом", distractors: ["Между анализа и приёма", "Между анализ и приём"], explanation: "Tra due eventi: между + strumentale: анализ → анализом, приём → приёмом." },
+    { front: "(11:00) Когда примерно освободится врач?", back: "Около одиннадцати", distractors: ["Около одиннадцать", "Около одиннадцатью"], explanation: "Circa: около + genitivo: одиннадцать → одиннадцати." },
+    { front: "(14:00–15:00) Когда пришли результаты?", back: "Между двумя и тремя", distractors: ["С двух до трёх", "Между два и три"], explanation: "Пришли = un momento: между + strumentale: два → двумя, три → тремя." },
+    { front: "Приём в 10:00, нужно прийти в 9:45. Когда?", back: "За пятнадцать минут до приёма", distractors: ["Через пятнадцать минут до приёма", "За пятнадцать минуты до приёма"], explanation: "за + accusativo … до + genitivo: за пятнадцать минут до приёма." },
+    { front: "(7:00–8:00) Когда ты сдал анализ?", back: "Между семью и восемью", distractors: ["С семи до восьми", "Между семи и восьми"], explanation: "Сдал = un momento: между семью и восемью." },
+    { front: "Врач: «Утром сначала анализ, потом еда. Ничего не ешьте прямо …»", back: "Перед анализом", distractors: ["Перед анализ", "Перед анализа"], explanation: "Subito prima: перед + strumentale: анализ → анализом." },
+    { front: "Первый приём в понедельник, второй в пятницу, в среду я пью лекарство. Когда?", back: "Между приёмами", distractors: ["Между приёмов", "Между приёмам"], explanation: "Plurale: приёмы → приёмами." },
+    { front: "Сначала приём, потом аптека. Когда я иду в аптеку?", back: "После приёма", distractors: ["Через приём", "После приём"], explanation: "Dopo un evento: после + genitivo: приём → приёма." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -282,7 +299,8 @@ const initializers = {
     'panel-fo-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-fo-03', exercises: p3exercises }),
     'panel-fo-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-04', cards: p4cards }),
     'panel-fo-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-05', cards: p5cards }),
-    'panel-fo-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-06', cards: p6cards })
+    'panel-fo-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-06', cards: p6cards }),
+    'panel-fo-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
