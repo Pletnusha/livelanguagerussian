@@ -273,6 +273,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni — cercare lavoro: между + fatto / momento / с … по / около / к / после
+// ============================================================
+const p7cards = [
+    { front: "(03.02–07.02) Когда тебе позвонили из банка?", back: "Между третьим и седьмым февраля", distractors: ["С третьего по седьмое февраля", "Между третьего и седьмого февраля"], explanation: "Позвонили = un momento: между + strumentale (третьим con «ь»)." },
+    { front: "(07.02) Какое сегодня число? Первый день на новой работе!", back: "Седьмое февраля", distractors: ["Седьмого февраля", "Седьмой февраль"], explanation: "Il fatto: nominativo neutro." },
+    { front: "(01.02–28.02) С какого по какое число у тебя испытательный срок?", back: "С первого по двадцать восьмое февраля", distractors: ["С первого по двадцать восьмого февраля", "Между первым и двадцать восьмым февраля"], explanation: "Durata (tutto il periodo) → с … по." },
+    { front: "(10.01–20.01) Когда ты отправил резюме?", back: "Между десятым и двадцатым января", distractors: ["С десятого по двадцатое января", "Между десятым и двадцатого января"], explanation: "Un evento → между + strumentale (entrambi i numeri)." },
+    { front: "(25.01) — Когда примерно будет собеседование? — Точно не знаю…", back: "Около двадцать пятого января", distractors: ["Около двадцать пятое января", "Около двадцати пяти января"], explanation: "Circa: около + ordinale al genitivo." },
+    { front: "(31.01) — К какому числу нужно прислать документы?", back: "К тридцать первому января", distractors: ["К тридцать первого января", "К тридцать первое января"], explanation: "Scadenza: к + dativo." },
+    { front: "Новый год прошёл, Рождество ещё не наступило. Когда ты нашёл вакансию?", back: "Между Новым годом и Рождеством", distractors: ["Между Нового года и Рождества", "Между Новым годом и Рождество"], explanation: "Tra le feste: между + strumentale." },
+    { front: "Зарплата пятого. Когда мы купим новый телефон?", back: "После пятого числа", distractors: ["До пятого числа", "После пятое число"], explanation: "Dopo lo stipendio: после + genitivo." },
+    { front: "(11.02–13.02) Когда тебе дали пропуск в офис?", back: "Между одиннадцатым и тринадцатым февраля", distractors: ["Между одиннадцатого и тринадцатого февраля", "С одиннадцатого по тринадцатое февраля"], explanation: "Dare = un momento → между." },
+    { front: "(05.02) Какого числа тебе предложили работу?", back: "Пятого февраля", distractors: ["Пятое февраля", "Около пятого февраля"], explanation: "Какого числа? → la data esatta al genitivo." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -281,7 +298,8 @@ const initializers = {
     'panel-df-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-df-03', exercises: p3exercises }),
     'panel-df-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-df-04', cards: p4cards }),
     'panel-df-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-df-05', cards: p5cards }),
-    'panel-df-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-df-06', cards: p6cards })
+    'panel-df-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-df-06', cards: p6cards }),
+    'panel-df-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-df-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
