@@ -155,11 +155,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// к или до? Coppie con la stessa data: К какому числу? → к + dativo; До какого числа? → до + genitivo
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(05.05) — К какому числу нужно сдать проект? — {{1}} мая.",
+        words: ["К пятому", "До пятого", "К пятого"],
+        correctAnswers: { 1: "К пятому" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(05.05) — До какого числа ты в отпуске? — {{1}} мая.",
+        words: ["К пятому", "До пятое", "До пятого"],
+        correctAnswers: { 1: "До пятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.06) — К какому числу будет готов ремонт? — {{1}} июня.",
+        words: ["До двадцатого", "К двадцатому", "К двадцатое"],
+        correctAnswers: { 1: "К двадцатому" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.06) — До какого числа открыта выставка? — {{1}} июня.",
+        words: ["До двадцатого", "К двадцатому", "До двадцатому"],
+        correctAnswers: { 1: "До двадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.09) — К какому числу нужно купить форму? — {{1}} сентября.",
+        words: ["До первого", "К первого", "К первому"],
+        correctAnswers: { 1: "К первому" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.09) — До какого числа вы живёте на даче? — {{1}} сентября.",
+        words: ["До первого", "К первому", "До первое"],
+        correctAnswers: { 1: "До первого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.12) — К какому числу оплатить счёт? — {{1}} декабря.",
+        words: ["До десятого", "К десятому", "К десятое"],
+        correctAnswers: { 1: "К десятому" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.12) — До какого числа действует скидка? — {{1}} декабря.",
+        words: ["К десятому", "До десятого", "До десятому"],
+        correctAnswers: { 1: "До десятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(02.03) — К какому числу будет готов паспорт? — {{1}} марта.",
+        words: ["Ко второму", "До второго", "К второму"],
+        correctAnswers: { 1: "Ко второму" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(02.03) — До какого числа бабушка у нас? — {{1}} марта.",
+        words: ["До второе", "Ко второму", "До второго"],
+        correctAnswers: { 1: "До второго" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-de-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-01', exercises: p1exercises }),
-    'panel-de-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-02', exercises: p2exercises })
+    'panel-de-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-02', exercises: p2exercises }),
+    'panel-de-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
