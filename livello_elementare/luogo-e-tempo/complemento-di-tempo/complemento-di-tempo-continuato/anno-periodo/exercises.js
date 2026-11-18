@@ -308,6 +308,344 @@ const p8cards = [
 ];
 
 // ============================================================
+// PANEL 9 — Quiz misto (multiple choice + match + write) · public — ripasso di tutto
+// 0-(MC_END-1):          multiple choice
+// MC_END-(MATCH_END-1):  match game
+// MATCH_END onwards:     text input
+// ============================================================
+function initPanelAp9() {
+    const panel = document.getElementById('panel-ap-9');
+    if (!panel) return;
+
+    const container = panel.querySelector('#ap-9-cards-container');
+    const prevBtn   = panel.querySelector('#ap-9-deck-prev');
+    const nextBtn   = panel.querySelector('#ap-9-deck-next');
+    const counterEl = panel.querySelector('#ap-9-deck-counter');
+
+    let currentCard = 0;
+
+    const multipleChoiceData = [
+        { question: "(2010–2020) Я работал в банке с две тысячи десятого ___.", options: ["по две тысячи двадцатого года", "до две тысячи двадцатый год", "по две тысячи двадцатый год"], answer: "по две тысячи двадцатый год" },
+        { question: "(2015–2019) Я учился в университете ___ по две тысячи девятнадцатый год.", options: ["с две тысячи пятнадцатого", "с две тысячи пятнадцатом", "с две тысячи пятнадцатый"], answer: "с две тысячи пятнадцатого" },
+        { question: "(2021) Я живу в Италии ___.", options: ["в две тысячи двадцать первом году", "с две тысячи двадцать первого года", "по две тысячи двадцать первый год"], answer: "с две тысячи двадцать первого года" },
+        { question: "(2006–2009) Мы жили в Генуе с две тысячи шестого ___.", options: ["по две тысячи десятый год", "до две тысячи десятого года", "до две тысячи десятый год"], answer: "до две тысячи десятого года" },
+        { question: "— ___ ты работаешь в этой школе? — С две тысячи восемнадцатого года.", options: ["Какой год", "В каком году", "С какого года"], answer: "С какого года" },
+        { question: "(2010–2020) — С какого по какой год ты жил в Риме? — С десятого ___.", options: ["по двадцатый", "по двадцатого", "до двадцатый"], answer: "по двадцатый" },
+        { question: "(1941–1945) Война шла с тысяча девятьсот сорок первого ___.", options: ["по тысяча девятьсот сорок пятый год", "по тысяча девятьсот сорок пятого года", "до тысяча девятьсот сорок пятого года"], answer: "по тысяча девятьсот сорок пятый год" },
+        { question: "(2019) Я окончил университет в две тысячи ___ году.", options: ["девятнадцатого", "девятнадцатый", "девятнадцатом"], answer: "девятнадцатом" },
+        { question: "(01.09.2015) Я начал работать первого сентября две тысячи ___.", options: ["пятнадцатом году", "пятнадцатого года", "пятнадцатый год"], answer: "пятнадцатого года" },
+        { question: "(пн–пт) Я работаю с понедельника ___.", options: ["по пятницу", "по пятницы", "до пятницу"], answer: "по пятницу" }
+    ];
+    const matchPairs = [
+        { left: "(2010–2020) С какого по какой год?", right: "с десятого по двадцатый год" },
+        { left: "(2017) С какого года?", right: "с семнадцатого года" },
+        { left: "(2017) В каком году?", right: "в семнадцатом году" },
+        { left: "(2010–2019) С десятого… Закончи с «до».", right: "до двадцатого года" },
+        { left: "(2012–2015) По какой год?", right: "по пятнадцатый год" },
+        { left: "(1990) Ты какого года?", right: "девяностого" },
+        { left: "(2026) Какой сейчас год?", right: "двадцать шестой" },
+        { left: "(05.03.1990) Когда ты родился? Полная дата.", right: "пятого марта девяностого года" },
+        { left: "(пн–пт) Когда ты работаешь?", right: "с понедельника по пятницу" },
+        { left: "(01.05–05.05) Когда работает выставка?", right: "с первого по пятое мая" }
+    ];
+    const quizData = [
+        { id: "ap9-w1", promptPrefix: "(2010–2020) Я работал в банке с две тысячи десятого по две тысячи ", promptSuffix: " год.", answers: ["двадцатый"] },
+        { id: "ap9-w2", promptPrefix: "(2015–2019) Я учился в университете с две тысячи ", promptSuffix: " по две тысячи девятнадцатый год.", answers: ["пятнадцатого"] },
+        { id: "ap9-w3", promptPrefix: "(2021) Я живу в Италии с две тысячи двадцать ", promptSuffix: " года.", answers: ["первого"] },
+        { id: "ap9-w4", promptPrefix: "(2006–2009) Мы жили в Генуе с две тысячи шестого ", promptSuffix: " две тысячи десятого года.", answers: ["до"] },
+        { id: "ap9-w5", promptPrefix: "(2012–2015) Я учился в Падуе с две тысячи двенадцатого ", promptSuffix: " две тысячи пятнадцатый год.", answers: ["по"] },
+        { id: "ap9-w6", promptPrefix: "(2000) Мы знаем друг друга с ", promptSuffix: " года.", answers: ["двухтысячного"] },
+        { id: "ap9-w7", promptPrefix: "— С какого ", promptSuffix: " ты живёшь в Милане? — С две тысячи девятнадцатого.", answers: ["года"] },
+        { id: "ap9-w8", promptPrefix: "(2010–2020) — С какого по какой год ты жил в Риме? — С десятого по ", promptSuffix: ".", answers: ["двадцатый", "двадцатый год"] },
+        { id: "ap9-w9", promptPrefix: "(2019) Я окончил университет в две тысячи ", promptSuffix: " году.", answers: ["девятнадцатом"] },
+        { id: "ap9-w10", promptPrefix: "(1990) — Ты какого года? — ", promptSuffix: ".", answers: ["девяностого", "девяностого года", "тысяча девятьсот девяностого", "тысяча девятьсот девяностого года"] }
+    ];
+
+    const MC_END      = multipleChoiceData.length;
+    const MATCH_END   = MC_END + matchPairs.length;
+    const TOTAL_CARDS = MATCH_END + quizData.length;
+
+    if (TOTAL_CARDS === 0) return;
+
+    // Typed answers: ignore case, ё/е, extra spaces and a final dot
+    // (Italian keyboards usually have no ё).
+    function normalizeInput(str) {
+        return str.trim().replace(/\s+/g, ' ').replace(/[.!]+$/, '').toLowerCase().replace(/ё/g, 'е');
+    }
+
+    function ensureCardTitle(card, index) {
+        const existingTitle = Array.from(card.children).find(child => child.tagName === 'H1');
+        if (existingTitle) {
+            if (index < MC_END) existingTitle.classList.add('exercise-counter');
+            if (card.firstElementChild !== existingTitle) card.insertBefore(existingTitle, card.firstElementChild);
+            return;
+        }
+        const title = document.createElement('h1');
+        title.textContent = `Esercizio ${index + 1} di ${TOTAL_CARDS}`;
+        if (index < MC_END) title.classList.add('exercise-counter');
+        card.insertBefore(title, card.firstElementChild);
+    }
+
+    function buildCards() {
+        container.innerHTML = '';
+
+        for (let i = 0; i < TOTAL_CARDS; i++) {
+            const card = document.createElement('div');
+            card.className = 'fca01-card-container ap-9-card';
+            card.dataset.index = i;
+            if (i === 0) card.classList.add('visible');
+            card.hidden = (i !== 0);
+
+            if (i < MC_END) {
+                const item = multipleChoiceData[i];
+                const opts = item.options.map((o, idx) => `<div class="word-option" data-word="${o}" data-index="${idx}">${o}</div>`).join('');
+                const questionText = item.question.replace('___', `<span class="gap" data-gap="1" data-correct="${item.answer}"></span>`);
+                card.innerHTML = `
+                    <div class="instruction">Completa la frase scegliendo la forma corretta</div>
+                    <div class="exercise-text">${questionText}</div>
+                    <div class="word-options">${opts}</div>
+                    <div class="controls">
+                        <button class="btn btn-primary verify-btn">Verifica</button>
+                        <button class="btn btn-secondary next-btn" style="display:none;">Prossimo</button>
+                        <div class="feedback"></div>
+                    </div>
+                `;
+                ensureCardTitle(card, i);
+
+            } else if (i < MATCH_END) {
+                const pairIdx = i - MC_END;
+                const pair = matchPairs[pairIdx];
+                const otherPairs = matchPairs.filter((_, idx) => idx !== pairIdx);
+                const shuffledOthers = otherPairs.sort(() => Math.random() - 0.5).slice(0, 2);
+                const allPairs = [pair, ...shuffledOthers].sort(() => Math.random() - 0.5);
+
+                let fronts = allPairs.map((p, idx) => ({ text: p.left,  type: 'front', id: idx }));
+                let backs  = allPairs.map((p, idx) => ({ text: p.right, type: 'back',  id: idx }));
+                fronts.sort(() => Math.random() - 0.5);
+                backs.sort(() => Math.random() - 0.5);
+
+                let selectedMatchCard = null;
+                let isProcessingMatch = false;
+
+                const matchContainer = document.createElement('div');
+                matchContainer.className = 'fca01-match-container';
+                const feedbackEl = document.createElement('p');
+                feedbackEl.className = 'fca01-match-feedback';
+                const matchGrid = document.createElement('div');
+                matchGrid.className = 'fca01-match-grid';
+                const colFronts = document.createElement('div');
+                colFronts.className = 'fca01-match-col';
+                const colBacks = document.createElement('div');
+                colBacks.className = 'fca01-match-col';
+
+                matchGrid.appendChild(colFronts);
+                matchGrid.appendChild(colBacks);
+                matchContainer.appendChild(feedbackEl);
+                matchContainer.appendChild(matchGrid);
+                card.appendChild(matchContainer);
+
+                function handleMatchClick(clickedCard) {
+                    if (isProcessingMatch || clickedCard.classList.contains('matched')) return;
+                    if (clickedCard === selectedMatchCard) return;
+
+                    if (!selectedMatchCard) {
+                        selectedMatchCard = clickedCard;
+                        clickedCard.classList.add('selected');
+                        return;
+                    }
+
+                    if (selectedMatchCard.dataset.type === clickedCard.dataset.type) {
+                        selectedMatchCard.classList.remove('selected');
+                        selectedMatchCard = clickedCard;
+                        clickedCard.classList.add('selected');
+                        return;
+                    }
+
+                    const firstId    = selectedMatchCard.dataset.id;
+                    const secondId   = clickedCard.dataset.id;
+                    const previousCard = selectedMatchCard;
+
+                    if (firstId === secondId) {
+                        previousCard.classList.add('matched');
+                        clickedCard.classList.add('matched');
+                        feedbackEl.textContent = "✨ Отлично!";
+                        feedbackEl.className = "fca01-match-feedback correct";
+                        selectedMatchCard = null;
+                        setTimeout(() => { feedbackEl.textContent = ""; }, 1000);
+                        const remaining = matchContainer.querySelectorAll('.fca01-match-card:not(.matched)').length;
+                        if (remaining === 0) feedbackEl.textContent = "🎉 ПОБЕДА! 🎉";
+                    } else {
+                        isProcessingMatch = true;
+                        clickedCard.classList.add('wrong');
+                        previousCard.classList.add('wrong');
+                        feedbackEl.textContent = "Неверно";
+                        feedbackEl.className = "fca01-match-feedback wrong";
+                        setTimeout(() => {
+                            clickedCard.classList.remove('selected', 'wrong');
+                            previousCard.classList.remove('selected', 'wrong');
+                            feedbackEl.textContent = "";
+                            isProcessingMatch = false;
+                        }, 800);
+                        selectedMatchCard = null;
+                    }
+                }
+
+                function createMatchElement(item) {
+                    const div = document.createElement('div');
+                    div.className = 'fca01-match-card';
+                    div.textContent = item.text;
+                    div.dataset.id   = item.id;
+                    div.dataset.type = item.type;
+                    div.addEventListener('click', () => handleMatchClick(div));
+                    return div;
+                }
+
+                fronts.forEach(item => colFronts.appendChild(createMatchElement(item)));
+                backs.forEach(item  => colBacks.appendChild(createMatchElement(item)));
+                ensureCardTitle(card, i);
+
+                const instructionEl = document.createElement('div');
+                instructionEl.className = 'instruction';
+                card.insertBefore(instructionEl, card.firstElementChild);
+
+            } else {
+                const item = quizData[i - MATCH_END];
+                card.innerHTML = `
+                    <h3 class="quiz-title">Write</h3>
+                    <p class="quiz-instruction">Scrivete la forma corretta</p>
+                    <div class="quiz-item" data-id="${item.id}">
+                        <div class="quiz-prompt">${item.promptPrefix}<input type="text" class="quiz-input" data-index="${i - MATCH_END}">${item.promptSuffix}</div>
+                        <div class="quiz-controls"><button class="btn btn-primary quiz-check-btn">Проверить</button></div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                `;
+                ensureCardTitle(card, i);
+
+                const instructionEl = document.createElement('div');
+                instructionEl.className = 'instruction';
+                card.insertBefore(instructionEl, card.firstElementChild);
+            }
+
+            container.appendChild(card);
+        }
+
+        attachHandlers();
+    }
+
+    function attachHandlers() {
+        container.querySelectorAll('.ap-9-card').forEach(card => {
+            const cardIndex = parseInt(card.dataset.index, 10);
+            if (cardIndex >= MC_END) return;
+
+            let checked = false;
+            const gapElements  = Array.from(card.querySelectorAll('.gap'));
+            const wordElements = Array.from(card.querySelectorAll('.word-option'));
+            const verifyBtn    = card.querySelector('.verify-btn');
+            const nextBtn      = card.querySelector('.next-btn');
+            const feedback     = card.querySelector('.feedback');
+
+            wordElements.forEach(wordElement => {
+                wordElement.addEventListener('click', function() {
+                    if (this.classList.contains('used') || checked) return;
+                    const emptyGap = gapElements.find(gap => !gap.classList.contains('filled'));
+                    if (!emptyGap) return;
+                    const word = this.dataset.word;
+                    emptyGap.textContent = word;
+                    emptyGap.classList.add('filled');
+                    emptyGap.dataset.word      = word;
+                    emptyGap.dataset.wordIndex = this.dataset.index;
+                    this.classList.add('used');
+                });
+            });
+
+            gapElements.forEach(gap => {
+                gap.addEventListener('click', function() {
+                    if (checked || !this.classList.contains('filled')) return;
+                    const wordIndex   = this.dataset.wordIndex;
+                    const wordElement = wordElements.find(w => w.dataset.index === wordIndex);
+                    this.textContent = '';
+                    this.classList.remove('filled');
+                    delete this.dataset.word;
+                    delete this.dataset.wordIndex;
+                    if (wordElement) wordElement.classList.remove('used');
+                });
+            });
+
+            if (nextBtn) nextBtn.addEventListener('click', () => showCard(currentCard + 1));
+
+            verifyBtn.addEventListener('click', function() {
+                checked = true;
+                const correctAnswer = multipleChoiceData[cardIndex].answer;
+                let correct = 0;
+                gapElements.forEach(gap => {
+                    if (gap.dataset.word === correctAnswer) {
+                        gap.classList.remove('filled');
+                        gap.classList.add('correct');
+                        correct = 1;
+                    } else {
+                        gap.classList.add('incorrect');
+                    }
+                });
+                feedback.textContent = `Corretto: ${correct} / 1`;
+                verifyBtn.style.display = 'none';
+                nextBtn.style.display   = 'inline-block';
+            });
+        });
+
+        container.querySelectorAll('.quiz-check-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card    = this.closest('.ap-9-card');
+                const idx     = parseInt(card.dataset.index) - MATCH_END;
+                const item    = quizData[idx];
+                const input   = card.querySelector('.quiz-input');
+                const fb      = card.querySelector('.quiz-feedback');
+                const userAnswer = normalizeInput(input.value);
+                const isCorrect  = item.answers.some(ans => userAnswer === normalizeInput(ans));
+                if (isCorrect) {
+                    input.classList.remove('incorrect');
+                    input.classList.add('correct');
+                    input.disabled = true;
+                    this.disabled  = true;
+                    fb.textContent = 'Правильно!';
+                    fb.className   = 'quiz-feedback correct';
+                } else {
+                    input.classList.remove('correct');
+                    input.classList.add('incorrect');
+                    fb.textContent = 'Неправильно. Попробуйте ещё раз.';
+                    fb.className   = 'quiz-feedback incorrect';
+                }
+            });
+        });
+
+        container.querySelectorAll('.quiz-input').forEach(input => {
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    const btn = this.closest('.quiz-item').querySelector('.quiz-check-btn');
+                    if (btn && !btn.disabled) btn.click();
+                }
+            });
+        });
+    }
+
+    function showCard(idx) {
+        currentCard = idx;
+        container.querySelectorAll('.ap-9-card').forEach((c, i) => {
+            c.classList.toggle('visible', i === idx);
+            c.hidden = (i !== idx);
+        });
+        counterEl.textContent = (idx + 1) + ' / ' + TOTAL_CARDS;
+        prevBtn.disabled = (idx === 0);
+        nextBtn.disabled = (idx === TOTAL_CARDS - 1);
+    }
+
+    prevBtn.addEventListener('click', () => { if (currentCard > 0)               showCard(currentCard - 1); });
+    nextBtn.addEventListener('click', () => { if (currentCard < TOTAL_CARDS - 1) showCard(currentCard + 1); });
+
+    buildCards();
+    showCard(0);
+}
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -318,7 +656,8 @@ const initializers = {
     'panel-ap-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-ap-05', cards: p5cards }),
     'panel-ap-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-ap-06', cards: p6cards }),
     'panel-ap-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-ap-07', cards: p7cards }),
-    'panel-ap-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-ap-08', cards: p8cards })
+    'panel-ap-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-ap-08', cards: p8cards }),
+    'panel-ap-9': () => initPanelAp9()
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
