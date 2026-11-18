@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T07:53:10.840Z",
-  "count": 18,
+  "generated": "2026-11-18T08:37:47.042Z",
+  "count": 19,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -235,6 +235,25 @@
       "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
       "focus": "entro",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\orari\\entro\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari-fascia-oraria",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/orari/fascia-oraria/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "МЕЖДУ ПЯТЬЮ И СЕМЬЮ",
+      "title_it": "Tra le cinque e le sette: между + strumentale / с … до + genitivo",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari",
+      "focus": "fascia-oraria",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\orari\\fascia-oraria\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-orari-fatto-o-momento",
