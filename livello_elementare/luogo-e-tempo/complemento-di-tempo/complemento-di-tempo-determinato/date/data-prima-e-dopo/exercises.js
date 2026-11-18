@@ -290,6 +290,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Misto — le bollette del mese: до / после (con «число» e feste) + fatto / momento / к / числа / с … по
+// ============================================================
+const p8cards = [
+    { front: "Свет оплачиваем раньше пятнадцатого. Когда?", back: "До пятнадцатого числа", distractors: ["После пятнадцатого числа", "До пятнадцатое число"] },
+    { front: "(01.11) Какое сегодня число? Пришли новые счета.", back: "Первое ноября", distractors: ["Первого ноября", "После первого ноября"] },
+    { front: "Зарплата пятого. Когда мы платим за интернет?", back: "После пятого числа", distractors: ["До пятого числа", "После пятое число"] },
+    { front: "(10.11) — К какому числу нужно оплатить квартиру?", back: "К десятому ноября", distractors: ["К десятого ноября", "После десятого ноября"] },
+    { front: "(20.11) — Когда примерно придёт счёт за газ? — Точно не знаю…", back: "Числа двадцатого", distractors: ["Числа двадцатое", "Число двадцатого"] },
+    { front: "(01.11–30.11) С какого по какое число действует тариф?", back: "С первого по тридцатое ноября", distractors: ["С первого по тридцатого ноября", "С первое по тридцатое ноября"] },
+    { front: "Скидка на интернет — только раньше двадцать пятого. Когда платим?", back: "До двадцать пятого числа", distractors: ["После двадцать пятого числа", "До двадцать пятое число"] },
+    { front: "(03.11) Когда пришёл счёт за воду? Это есть в письме.", back: "Третьего ноября", distractors: ["Третье ноября", "После третьего ноября"] },
+    { front: "Сначала праздники, потом большие счета. Когда приходят большие счета?", back: "После Нового года", distractors: ["До Нового года", "После Новый год"] },
+    { front: "Пенсия третьего. Когда бабушка платит за телефон?", back: "После третьего числа", distractors: ["До третьего числа", "После третье число"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -299,7 +316,8 @@ const initializers = {
     'panel-dpd-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-04', cards: p4cards }),
     'panel-dpd-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-05', cards: p5cards }),
     'panel-dpd-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-06', cards: p6cards }),
-    'panel-dpd-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-07', cards: p7cards })
+    'panel-dpd-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-07', cards: p7cards }),
+    'panel-dpd-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
