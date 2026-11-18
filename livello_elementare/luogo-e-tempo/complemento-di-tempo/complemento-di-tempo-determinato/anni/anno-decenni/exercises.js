@@ -240,13 +240,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Nuovo: decenni e secoli con la musica e il cinema (fatti verificati: Dafne 1598, Sanremo 1951, Celentano Ancona 1959, cinema Lumière 1895, Al Bano e Romina anni '80)
+// ============================================================
+const p5cards = [
+    { front: "(60-е) — Когда «Битлз» были очень популярны?", back: "В шестидесятые годы", distractors: ["В шестидесятом году", "В шестидесятый год"] },
+    { front: "(40-е) — Когда в Италии появился неореализм?", back: "В сороковые годы", distractors: ["В сороковом году", "В сороковой год"] },
+    { front: "(1951) — Когда начался фестиваль в Сан-Ремо? В начале…", back: "В начале пятидесятых", distractors: ["В начале пятидесятые", "В начало пятидесятых"] },
+    { front: "(70-е) — Когда было модно диско?", back: "В семидесятые годы", distractors: ["В семидесятом году", "В семидесятый год"] },
+    { front: "(1895) — Когда появилось кино? В конце…", back: "В конце девятнадцатого века", distractors: ["В конце девятнадцатом веке", "В конце двадцатого века"] },
+    { front: "(XIX в.) — В каком веке Верди писал оперы?", back: "В девятнадцатом веке", distractors: ["В девятнадцатый век", "В девятнадцатого века"] },
+    { front: "(XVIII в.) — В каком веке жил Вивальди?", back: "В восемнадцатом веке", distractors: ["В восемнадцатый век", "В восемнадцатого века"] },
+    { front: "(80-е) — Когда Аль Бано и Ромина Пауэр были очень популярны?", back: "В восьмидесятые годы", distractors: ["В восьмидесятом году", "В восьмидесятый год"] },
+    { front: "(1598) — Когда в Италии появилась опера? В конце…", back: "В конце шестнадцатого века", distractors: ["В конце шестнадцатом веке", "В конце семнадцатого века"] },
+    { front: "(1959) — Когда Челентано стал знаменитым? В конце…", back: "В конце пятидесятых", distractors: ["В конце пятидесятые", "В конец пятидесятых"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-ad-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-01', exercises: p1exercises }),
     'panel-ad-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-02', exercises: p2exercises }),
     'panel-ad-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-03', exercises: p3exercises }),
-    'panel-ad-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-ad-04', cards: p4cards })
+    'panel-ad-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-ad-04', cards: p4cards }),
+    'panel-ad-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-ad-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
