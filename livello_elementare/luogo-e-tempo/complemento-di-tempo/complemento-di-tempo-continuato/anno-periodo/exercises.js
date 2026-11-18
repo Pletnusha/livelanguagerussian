@@ -12,9 +12,87 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // I dati di ogni pannello si aggiungono dopo l'approvazione della PM.
 
 // ============================================================
+// PANEL 1 — DragDrop · public
+// Misto: с … по / до / с … года con gli anni (nuovo) + в … году, data completa, «Ты какого года?», с понедельника по пятницу (vecchio), con spiegazioni
+// ============================================================
+const p1exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2010–2020) Я работал в банке с две тысячи десятого {{1}}.",
+        words: ["по две тысячи двадцатого года", "по две тысячи двадцатый год", "до две тысячи двадцатый год"],
+        correctAnswers: { 1: "по две тысячи двадцатый год" },
+        explanation: "Fino al 2020 compreso: по + accusativo: двадцатый год (maschile inanimato = nominativo)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2019) Я окончил университет в две тысячи {{1}} году.",
+        words: ["девятнадцатого", "девятнадцатый", "девятнадцатом"],
+        correctAnswers: { 1: "девятнадцатом" },
+        explanation: "Un momento, solo l'anno: в + prepositivo: в … девятнадцатом году."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2015–2019) Я учился в университете {{1}} по две тысячи девятнадцатый год.",
+        words: ["с две тысячи пятнадцатого", "с две тысячи пятнадцатый", "с две тысячи пятнадцатом"],
+        correctAnswers: { 1: "с две тысячи пятнадцатого" },
+        explanation: "Inizio del periodo: с + genitivo. Cambia solo l'ultima parola: две тысячи пятнадцатого."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.09.2015) Я начал работать первого сентября две тысячи {{1}}.",
+        words: ["пятнадцатого года", "пятнадцатом году", "пятнадцатый год"],
+        correctAnswers: { 1: "пятнадцатого года" },
+        explanation: "Data completa: l'anno al genitivo, senza «в»."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2010–2019) Я жил в Москве с две тысячи десятого {{1}}.",
+        words: ["по две тысячи двадцатого года", "до две тысячи двадцатый год", "до две тысячи двадцатого года"],
+        correctAnswers: { 1: "до две тысячи двадцатого года" },
+        explanation: "Il 2020 escluso: до + genitivo: до … двадцатого года."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1990) — Ты какого года? — {{1}}.",
+        words: ["Девяностый", "Девяностого", "В девяностом"],
+        correctAnswers: { 1: "Девяностого" },
+        explanation: "Anno di nascita: genitivo, senza preposizione."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2021) Я живу в Италии {{1}}.",
+        words: ["в две тысячи двадцать первом году", "по две тысячи двадцать первый год", "с две тысячи двадцать первого года"],
+        correctAnswers: { 1: "с две тысячи двадцать первого года" },
+        explanation: "Dal 2021 a oggi: с + genitivo, con il presente (живу), come in italiano: vivo in Italia dal 2021."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(пн–пт) В офисе я работаю с понедельника {{1}}.",
+        words: ["по пятницу", "по пятницы", "до пятницу"],
+        correctAnswers: { 1: "по пятницу" },
+        explanation: "Con i giorni: по + accusativo: по пятницу."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2010–2020) — С какого по какой год ты жил в Риме? — С десятого {{1}} год.",
+        words: ["по двадцатого", "по двадцатый", "до двадцатый"],
+        correctAnswers: { 1: "по двадцатый" },
+        explanation: "Forma breve colloquiale: с десятого по двадцатый год."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— {{1}} ты работаешь в этой школе? — С две тысячи восемнадцатого года.",
+        words: ["В каком году", "Какой год", "С какого года"],
+        correctAnswers: { 1: "С какого года" },
+        explanation: "Da quando? С какого года? — с + genitivo. «В каком году?» chiede un momento e non va con «работаешь»."
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
+    'panel-ap-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-01', exercises: p1exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
