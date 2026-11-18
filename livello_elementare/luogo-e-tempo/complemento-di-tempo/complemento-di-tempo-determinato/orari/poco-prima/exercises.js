@@ -155,11 +155,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// до или перед? Ore → solo до; прямо / сразу → перед; задолго → solo до
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(9:00) Магазин открывается в девять. {{1}} он закрыт.",
+        words: ["Перед девятью", "До девяти", "До девять"],
+        correctAnswers: { 1: "До девяти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Прямо {{1}} я всегда волнуюсь.",
+        words: ["до концерта", "перед концерт", "перед концертом"],
+        correctAnswers: { 1: "перед концертом" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я купил билеты задолго {{1}}.",
+        words: ["до концерта", "перед концертом", "до концерт"],
+        correctAnswers: { 1: "до концерта" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сразу {{1}} я пью воду.",
+        words: ["перед тренировкой", "до тренировки", "перед тренировка"],
+        correctAnswers: { 1: "перед тренировкой" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(23:00) Шуметь можно только {{1}}.",
+        words: ["перед одиннадцатью", "до одиннадцати", "до одиннадцать"],
+        correctAnswers: { 1: "до одиннадцати" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Стоп! Прямо {{1}} нужно выключить телефоны.",
+        words: ["до фильма", "перед фильм", "перед фильмом"],
+        correctAnswers: { 1: "перед фильмом" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Каждый вечер прямо {{1}} я чищу зубы.",
+        words: ["до сна", "перед сна", "перед сном"],
+        correctAnswers: { 1: "перед сном" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(12:00) Обед в двенадцать. Позвони мне {{1}}.",
+        words: ["до двенадцати", "перед двенадцатью", "до двенадцать"],
+        correctAnswers: { 1: "до двенадцати" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мама: «Прямо {{1}} помой руки!»",
+        words: ["до еды", "перед едой", "перед еда"],
+        correctAnswers: { 1: "перед едой" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы познакомились ещё в школе, задолго {{1}}.",
+        words: ["перед свадьбой", "до свадьба", "до свадьбы"],
+        correctAnswers: { 1: "до свадьбы" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-pp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-01', exercises: p1exercises }),
-    'panel-pp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-02', exercises: p2exercises })
+    'panel-pp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-02', exercises: p2exercises }),
+    'panel-pp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
