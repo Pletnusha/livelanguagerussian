@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T21:37:02.325Z",
-  "count": 29,
+  "generated": "2026-11-18T21:40:26.761Z",
+  "count": 30,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -219,6 +219,25 @@
       "title_ru": "ГОДЫ",
       "title_it": "In che anno? Gli anni in russo — anni, decenni, secoli",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\anni\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni-anno-decenni",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/anni/anno-decenni/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "В ДЕВЯНОСТЫЕ ГОДЫ",
+      "title_it": "Negli anni Novanta, nel Novecento: в девяностые годы / в двадцатом веке",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni",
+      "focus": "anno-decenni",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\anni\\anno-decenni\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni-anno-fatto-o-momento",
