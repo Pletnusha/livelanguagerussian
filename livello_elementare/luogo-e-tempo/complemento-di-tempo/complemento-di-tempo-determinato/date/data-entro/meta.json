@@ -1,0 +1,18 @@
+{
+  "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date-data-entro",
+  "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/date/data-entro/",
+  "level": "b1",
+  "doc_type": "exercise",
+  "cluster": [
+    "luogo-e-tempo"
+  ],
+  "grammatica": [],
+  "complementi": [
+    "tempo-determinato"
+  ],
+  "lessico": [],
+  "title_ru": "К ПЯТОМУ МАЯ",
+  "title_it": "Entro il cinque maggio: к пятому / до пятого",
+  "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
+  "focus": "data-entro"
+}

@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T13:41:26.900Z",
-  "count": 22,
+  "generated": "2026-11-18T14:29:28.734Z",
+  "count": 23,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -218,6 +218,25 @@
       "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
       "focus": "data-circa",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\date\\data-circa\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date-data-entro",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/date/data-entro/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "К ПЯТОМУ МАЯ",
+      "title_it": "Entro il cinque maggio: к пятому / до пятого",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
+      "focus": "data-entro",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\date\\data-entro\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date-data-fatto-o-momento",
