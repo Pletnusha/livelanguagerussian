@@ -273,6 +273,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni: in viaggio — перед / до / за … до / задолго до + через / после / около / к / fatto
+// ============================================================
+const p7cards = [
+    { front: "Поезд через десять минут, мы покупаем воду в киоске. Когда?", back: "Перед отъездом", distractors: ["До отъезда", "Перед отъезд"], explanation: "Subito prima di partire: перед + strumentale: отъезд → отъездом." },
+    { front: "Сейчас 7:00, такси в 7:20. Когда приедет такси?", back: "Через двадцать минут", distractors: ["Через двадцать минуты", "После двадцати минут"], explanation: "Da 5 in poi + genitivo plurale: двадцать минут." },
+    { front: "Поезд в 18:00, мы на вокзале в 17:40. Когда мы на вокзале?", back: "За двадцать минут до отправления", distractors: ["Через двадцать минут до отправления", "За двадцать минуты до отправления"], explanation: "за + accusativo … до + genitivo: отправление → отправления." },
+    { front: "Сначала регистрация, потом паспортный контроль. Когда контроль?", back: "После регистрации", distractors: ["Через регистрацию", "После регистрация"], explanation: "Dopo un evento: после + genitivo: регистрация → регистрации." },
+    { front: "(12:00) Отель: номер нужно освободить в 12:00. Когда?", back: "До двенадцати", distractors: ["Перед двенадцатью", "До двенадцать"], explanation: "Con le ore solo до: до двенадцати." },
+    { front: "(16:00) Когда примерно мы приедем в Москву?", back: "Часа в четыре", distractors: ["Часов в четыре", "Около четыре"], explanation: "Circa con l'inversione: 2, 3, 4 → часа в четыре." },
+    { front: "Билеты мы купили в январе, а поездка в мае. Когда мы купили билеты?", back: "Задолго до поездки", distractors: ["Задолго перед поездкой", "Задолго до поездка"], explanation: "Задолго = molto prima: solo до (non «перед»)." },
+    { front: "(5:00) К какому часу нужно приехать в аэропорт?", back: "К пяти", distractors: ["К пять", "К пятью"], explanation: "Scadenza: к + dativo: пять → пяти." },
+    { front: "Самолёт вот-вот взлетит, пассажиры пристёгивают ремни. Когда?", back: "Перед взлётом", distractors: ["До взлёта", "Перед взлёт"], explanation: "Subito prima del decollo: перед + strumentale: взлёт → взлётом." },
+    { front: "(23:55) Сколько времени?", back: "Без пяти двенадцать", distractors: ["В без пяти двенадцать", "Перед без пяти двенадцать"], explanation: "Che ore sono? Il fatto, senza preposizione." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -281,7 +298,8 @@ const initializers = {
     'panel-pp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-03', exercises: p3exercises }),
     'panel-pp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-04', cards: p4cards }),
     'panel-pp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-05', cards: p5cards }),
-    'panel-pp-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-06', cards: p6cards })
+    'panel-pp-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-06', cards: p6cards }),
+    'panel-pp-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
