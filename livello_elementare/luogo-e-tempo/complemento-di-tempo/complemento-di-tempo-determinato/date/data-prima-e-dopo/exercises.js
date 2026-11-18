@@ -155,11 +155,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// до или после? Lo decide la logica del calendario (зарплата пятого → после; открывается десятого → до)
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(05.05) Зарплата пятого. Новый телефон купим {{1}} мая, когда будут деньги.",
+        words: ["до пятого", "после пятого", "после пятое"],
+        correctAnswers: { 1: "после пятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.06) Магазин открывается десятого. {{1}} он закрыт.",
+        words: ["До десятого", "После десятого", "До десятое"],
+        correctAnswers: { 1: "До десятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.08) Отпуск начинается пятнадцатого. Работу нужно закончить {{1}} августа.",
+        words: ["после пятнадцатого", "до пятнадцатое", "до пятнадцатого"],
+        correctAnswers: { 1: "до пятнадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(31.08) Каникулы заканчиваются тридцать первого. В школу дети идут {{1}} августа.",
+        words: ["до тридцать первого", "после тридцать первое", "после тридцать первого"],
+        correctAnswers: { 1: "после тридцать первого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.12) Билеты на Новый год дорожают двадцатого. Купи их {{1}} декабря!",
+        words: ["до двадцатого", "после двадцатого", "до двадцатое"],
+        correctAnswers: { 1: "до двадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.01) Сначала Новый год, потом отпуск: в отпуск поедем {{1}}.",
+        words: ["после Новый год", "после Нового года", "до Нового года"],
+        correctAnswers: { 1: "после Нового года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(07.01) Ёлку убираем, когда закончатся праздники, {{1}} января.",
+        words: ["после седьмого", "до седьмого", "после седьмое"],
+        correctAnswers: { 1: "после седьмого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(14.02) День святого Валентина четырнадцатого. Цветы закажем заранее, {{1}} февраля.",
+        words: ["до четырнадцатое", "после четырнадцатого", "до четырнадцатого"],
+        correctAnswers: { 1: "до четырнадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(25.12) Рождество двадцать пятого. Распродажи начинаются после праздника, {{1}} декабря.",
+        words: ["до двадцать пятого", "после двадцать пятого", "после двадцать пятое"],
+        correctAnswers: { 1: "после двадцать пятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.05) Майские праздники начинаются первого. Билеты на дачу купим заранее, {{1}} мая.",
+        words: ["до первого", "после первого", "до первое"],
+        correctAnswers: { 1: "до первого" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-dpd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-01', exercises: p1exercises }),
-    'panel-dpd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-02', exercises: p2exercises })
+    'panel-dpd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-02', exercises: p2exercises }),
+    'panel-dpd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
