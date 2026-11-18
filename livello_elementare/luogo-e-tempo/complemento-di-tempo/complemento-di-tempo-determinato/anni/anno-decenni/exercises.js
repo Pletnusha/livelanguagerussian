@@ -89,10 +89,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Nuovo: decennio (в … -ые годы) ↔ un solo anno (в … -ом году)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(80-е) Родители познакомились в институте {{1}}.",
+        words: ["в восьмидесятые годы", "в восьмидесятом году", "в восьмидесятый год"],
+        correctAnswers: { 1: "в восьмидесятые годы" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1980) Олимпиада в Москве была в тысяча девятьсот {{1}}.",
+        words: ["восьмидесятые годы", "восьмидесятый год", "восьмидесятом году"],
+        correctAnswers: { 1: "восьмидесятом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(60-е) {{1}} моя бабушка была студенткой в Милане.",
+        words: ["В шестидесятом году", "В шестидесятые годы", "В шестидесятый год"],
+        correctAnswers: { 1: "В шестидесятые годы" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1966) Мой папа родился в тысяча девятьсот шестьдесят {{1}}.",
+        words: ["шестом году", "шестого года", "шестой год"],
+        correctAnswers: { 1: "шестом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(70-е) {{1}} бабушка и дедушка жили в Ленинграде.",
+        words: ["В семидесятом году", "В семидесятые годы", "В семидесятый год"],
+        correctAnswers: { 1: "В семидесятые годы" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2000-е) Брат учился в Лондоне в {{1}} годы.",
+        words: ["двухтысячном", "двухтысячный", "двухтысячные"],
+        correctAnswers: { 1: "двухтысячные" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2000) Брат окончил школу в {{1}} году.",
+        words: ["двухтысячные", "двухтысячном", "двухтысячный"],
+        correctAnswers: { 1: "двухтысячном" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(90-е) Эта песня была очень популярна {{1}}.",
+        words: ["в девяностом году", "в девяностый год", "в девяностые годы"],
+        correctAnswers: { 1: "в девяностые годы" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1999) Я окончил школу в тысяча девятьсот девяносто {{1}}.",
+        words: ["девятом году", "девятого года", "девятый год"],
+        correctAnswers: { 1: "девятом году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(50-е) Дедушка работал на заводе {{1}}.",
+        words: ["в пятидесятом году", "в пятидесятые годы", "в пятидесятый год"],
+        correctAnswers: { 1: "в пятидесятые годы" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-ad-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-01', exercises: p1exercises })
+    'panel-ad-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-01', exercises: p1exercises }),
+    'panel-ad-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
