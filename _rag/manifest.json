@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T21:51:24.764Z",
-  "count": 30,
+  "generated": "2026-11-18T21:54:11.644Z",
+  "count": 31,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -276,6 +276,25 @@
       "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni",
       "focus": "anno-nascita",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\anni\\anno-nascita\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni-anno-prima-e-dopo",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/anni/anno-prima-e-dopo/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "ДО И ПОСЛЕ 2000 ГОДА",
+      "title_it": "Prima e dopo il 2000: до / после двухтысячного года, около",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni",
+      "focus": "anno-prima-e-dopo",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\anni\\anno-prima-e-dopo\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-date",
