@@ -289,6 +289,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Misto: dal medico — через / после + до / около / к / periodo / в
+// ============================================================
+const p8cards = [
+    { front: "Врач: «Пейте лекарство неделю, потом приходите». Когда снова к врачу?", back: "Через неделю", distractors: ["Через неделя", "После недели"] },
+    { front: "Врач: сначала лекарство, потом еда. Когда пить лекарство?", back: "До еды", distractors: ["После еды", "До еда"] },
+    { front: "Сначала анализ, потом завтрак. Когда завтракать?", back: "После анализа", distractors: ["Через анализ", "После анализ"] },
+    { front: "(10:00) Когда примерно освободится врач?", back: "Около десяти", distractors: ["Около десять", "Около десятью"] },
+    { front: "Сейчас 9:40, приём в 10:00. Когда приём?", back: "Через двадцать минут", distractors: ["Через двадцать минуты", "Через двадцать минуту"] },
+    { front: "(8:00) К какому часу нужно прийти на анализ?", back: "К восьми", distractors: ["К восемь", "К восьмью"] },
+    { front: "Сейчас 11:00. Врач принимает с 14:00. Когда приём?", back: "Через три часа", distractors: ["После трёх часов", "Через три часов"] },
+    { front: "(Пн–Пт) Когда работает поликлиника?", back: "С понедельника по пятницу", distractors: ["С понедельника до пятницу", "С понедельник по пятницу"] },
+    { front: "Сегодня 1 апреля, результаты анализов — 15 апреля. Когда будут результаты?", back: "Через две недели", distractors: ["Через два недели", "Через две неделю"] },
+    { front: "(15:30) Во сколько по записи приём?", back: "В половине четвёртого", distractors: ["Около половины четвёртого", "В половину четвёртого"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -298,7 +315,8 @@ const initializers = {
     'panel-tra-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-04', cards: p4cards }),
     'panel-tra-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-05', cards: p5cards }),
     'panel-tra-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-06', cards: p6cards }),
-    'panel-tra-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-07', cards: p7cards })
+    'panel-tra-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-07', cards: p7cards }),
+    'panel-tra-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-tra-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
