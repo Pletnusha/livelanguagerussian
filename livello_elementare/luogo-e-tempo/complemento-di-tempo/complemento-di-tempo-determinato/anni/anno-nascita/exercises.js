@@ -272,6 +272,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto con spiegazioni — compleanni in famiglia: data completa, solo anno, «какого года», mese + anno, fatto, date
+// ============================================================
+const p7cards = [
+    { front: "(14.03.1960) Когда родилась бабушка?", back: "Четырнадцатого марта тысяча девятьсот шестидесятого года", distractors: ["Четырнадцатого марта тысяча девятьсот шестидесятом году", "Четырнадцатое марта тысяча девятьсот шестидесятого года"], explanation: "Data completa: tutto al genitivo, senza «в»." },
+    { front: "(1960) В каком году родилась бабушка?", back: "В тысяча девятьсот шестидесятом году", distractors: ["Тысяча девятьсот шестидесятого года", "В тысяча девятьсот шестидесятом годе"], explanation: "Solo l'anno: в + prepositivo." },
+    { front: "(1985) — Папа какого года?", back: "Восемьдесят пятого", distractors: ["Восемьдесят пятый", "В восемьдесят пятом"], explanation: "«Какого года?» → risposta al genitivo." },
+    { front: "(11.2012) Когда родился брат? Месяц и год.", back: "В ноябре двенадцатого года", distractors: ["В ноябре двенадцатом году", "В ноябрь двенадцатого года"], explanation: "Mese: в + prepositivo (в ноябре); anno al genitivo." },
+    { front: "(14.03) Какого числа у бабушки день рождения?", back: "Четырнадцатого марта", distractors: ["Четырнадцатое марта", "В четырнадцатое марта"], explanation: "Data senza anno: genitivo." },
+    { front: "Сейчас 2026 год. Когда родилась внучка? (2026)", back: "В этом году", distractors: ["В этот год", "В этом годе"], explanation: "Quest'anno: в этом году." },
+    { front: "(2010) Какой это год на фото? Свадьба родителей.", back: "Две тысячи десятый", distractors: ["Две тысячи десятое", "В две тысячи десятом году"], explanation: "Il fatto: nominativo maschile." },
+    { front: "(23.02.1985) Когда родился папа?", back: "Двадцать третьего февраля тысяча девятьсот восемьдесят пятого года", distractors: ["Двадцать третье февраля тысяча девятьсот восемьдесят пятого года", "Двадцать третьего февраля тысяча девятьсот восемьдесят пятом году"], explanation: "Giorno e anno al genitivo." },
+    { front: "(01.06–31.08) С какого по какое число дети живут у бабушки?", back: "С первого июня по тридцать первое августа", distractors: ["С первого июня по тридцать первого августа", "Между первым июня и тридцать первым августа"], explanation: "Durata: с … по." },
+    { front: "(1958) Дедушка какого года рождения?", back: "Пятьдесят восьмого", distractors: ["Пятьдесят восьмой", "В пятьдесят восьмом"], explanation: "«Какого года рождения?» → genitivo." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -280,7 +297,8 @@ const initializers = {
     'panel-an-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-an-03', exercises: p3exercises }),
     'panel-an-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-an-04', cards: p4cards }),
     'panel-an-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-an-05', cards: p5cards }),
-    'panel-an-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-an-06', cards: p6cards })
+    'panel-an-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-an-06', cards: p6cards }),
+    'panel-an-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-an-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
