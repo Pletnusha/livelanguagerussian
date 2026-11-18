@@ -88,10 +88,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Inizio del periodo: с + genitivo dell'ordinale (с первого, со второго, с двадцать пятого мая)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.03–10.03) Скидки {{1}} по десятое марта.",
+        words: ["с первое", "с первого", "с первым"],
+        correctAnswers: { 1: "с первого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.06–30.06) Я в Италии {{1}} по тридцатое июня.",
+        words: ["с пятнадцатого", "с пятнадцатое", "с пятнадцатым"],
+        correctAnswers: { 1: "с пятнадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(03.08–17.08) Отпуск {{1}} по семнадцатое августа.",
+        words: ["с третье", "с третьим", "с третьего"],
+        correctAnswers: { 1: "с третьего" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.12–31.12) Ярмарка {{1}} по тридцать первое декабря.",
+        words: ["с двадцатым", "с двадцатого", "с двадцатое"],
+        correctAnswers: { 1: "с двадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(02.09–06.09) Конференция {{1}} по шестое сентября.",
+        words: ["с второго", "со второго", "со второе"],
+        correctAnswers: { 1: "со второго" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(11.04–14.04) Фестиваль {{1}} по четырнадцатое апреля.",
+        words: ["с одиннадцатого", "с одиннадцатое", "с одиннадцатым"],
+        correctAnswers: { 1: "с одиннадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(25.05–05.06) Сессия {{1}} по пятое июня.",
+        words: ["с двадцать пятое мая", "с двадцать пятым мая", "с двадцать пятого мая"],
+        correctAnswers: { 1: "с двадцать пятого мая" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(07.11–09.11) Мы на даче {{1}} по девятое ноября.",
+        words: ["с седьмое", "с седьмого", "с седьмым"],
+        correctAnswers: { 1: "с седьмого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(21.03–28.03) Каникулы {{1}} по двадцать восьмое марта.",
+        words: ["с двадцать первого", "с двадцать первое", "с двадцать первым"],
+        correctAnswers: { 1: "с двадцать первого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(13.01–19.01) Курсы {{1}} по девятнадцатое января.",
+        words: ["с тринадцатое", "с тринадцатым", "с тринадцатого"],
+        correctAnswers: { 1: "с тринадцатого" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-dp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dp-01', exercises: p1exercises })
+    'panel-dp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dp-01', exercises: p1exercises }),
+    'panel-dp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dp-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
