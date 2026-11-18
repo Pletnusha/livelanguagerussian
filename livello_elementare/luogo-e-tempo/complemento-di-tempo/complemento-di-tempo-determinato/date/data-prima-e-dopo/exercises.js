@@ -256,6 +256,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto — la dieta di Capodanno: до / после con date e feste (nuovo) + fatto / momento / с … по / числа / к (vecchio)
+// ============================================================
+const p6cards = [
+    { front: "Сначала праздники, потом спортзал. Когда начнём ходить в спортзал?", back: "После Нового года", distractors: ["До Нового года", "После Новый год"] },
+    { front: "(10.01) Какое сегодня число? Первый день диеты!", back: "Десятое января", distractors: ["Десятого января", "После десятого января"] },
+    { front: "(10.01–31.01) С какого по какое число мы на диете?", back: "С десятого по тридцать первое января", distractors: ["С десятого по тридцать первого января", "С десятое по тридцать первое января"] },
+    { front: "(14.02) Шоколад — только когда пройдёт День святого Валентина. Когда?", back: "После четырнадцатого февраля", distractors: ["До четырнадцатого февраля", "После четырнадцатое февраля"] },
+    { front: "(20.01) — Когда примерно ты сдашь анализы? — Точно не знаю…", back: "Числа двадцатого", distractors: ["Числа двадцатое", "Число двадцатого"] },
+    { front: "(01.03) Хочу похудеть к весне, раньше первого марта. Когда?", back: "До первого марта", distractors: ["После первого марта", "До первое марта"] },
+    { front: "(05.02) — К какому числу нужно записаться к врачу?", back: "К пятому февраля", distractors: ["К пятого февраля", "После пятого февраля"] },
+    { front: "(08.03) Торт можно, но только когда праздник прошёл. Когда?", back: "После Восьмого марта", distractors: ["До Восьмого марта", "После Восьмое марта"] },
+    { front: "(15.01) Когда у тебя приём у диетолога? Это есть в записи.", back: "Пятнадцатого января", distractors: ["Пятнадцатое января", "Около пятнадцатого января"] },
+    { front: "(25.12) Сладкое покупаем заранее, раньше Рождества. Когда?", back: "До Рождества", distractors: ["После Рождества", "До Рождество"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -263,7 +280,8 @@ const initializers = {
     'panel-dpd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-02', exercises: p2exercises }),
     'panel-dpd-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dpd-03', exercises: p3exercises }),
     'panel-dpd-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-04', cards: p4cards }),
-    'panel-dpd-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-05', cards: p5cards })
+    'panel-dpd-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-05', cards: p5cards }),
+    'panel-dpd-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-dpd-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
