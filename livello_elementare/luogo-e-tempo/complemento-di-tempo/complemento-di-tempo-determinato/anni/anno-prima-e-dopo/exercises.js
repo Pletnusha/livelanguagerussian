@@ -12,9 +12,87 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // I dati di ogni pannello si aggiungono dopo l'approvazione della PM.
 
 // ============================================================
+// PANEL 1 — DragDrop · public
+// Misto, lire ed euro (euro contabile 1.1.1999, banconote 1.1.2002, lira fino al 28.2.2002): до / после / около + genitivo (nuovo) + data completa, в … году, decennio, с … по … год (vecchio), con spiegazioni
+// ============================================================
+const p1exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2002) {{1}} две тысячи второго года в Италии платили лирами.",
+        words: ["До", "После", "Около"],
+        correctAnswers: { 1: "До" },
+        explanation: "Prima del 2002 c'erano le lire: до + genitivo. Qui «до» = prima di."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.01.2002) Наличные евро появились в Италии первого января две тысячи {{1}}.",
+        words: ["втором году", "второй год", "второго года"],
+        correctAnswers: { 1: "второго года" },
+        explanation: "Data completa: l'anno al genitivo, senza «в»."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2002) Мы открыли кафе в Риме после две тысячи {{1}}, и все цены были в евро.",
+        words: ["второй год", "второго года", "втором году"],
+        correctAnswers: { 1: "второго года" },
+        explanation: "после + genitivo: после две тысячи второго года."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1999) Безналичный евро появился в тысяча девятьсот девяносто {{1}}.",
+        words: ["девятом году", "девятого года", "девятый год"],
+        correctAnswers: { 1: "девятом году" },
+        explanation: "Un anno: в + prepositivo."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Когда ты был в Италии в первый раз? — Точно не помню, {{1}} двухтысячного года.",
+        words: ["после", "в", "около"],
+        correctAnswers: { 1: "около" },
+        explanation: "Non ricordo esattamente → около + genitivo: circa il 2000."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(90-е) {{1}} в Италии все платили лирами.",
+        words: ["В девяностом году", "В девяностые годы", "После девяностые годы"],
+        correctAnswers: { 1: "В девяностые годы" },
+        explanation: "Un decennio: в + accusativo plurale."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2002) Сначала были лиры, а {{1}} две тысячи второго года — евро.",
+        words: ["до", "после", "около"],
+        correctAnswers: { 1: "после" },
+        explanation: "Prima le lire, poi l'euro: после + genitivo."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2000) Мы жили в Москве до {{1}}.",
+        words: ["двухтысячном году", "двухтысячный год", "двухтысячного года"],
+        correctAnswers: { 1: "двухтысячного года" },
+        explanation: "до + genitivo: до двухтысячного года."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1995–2001) Я работал в банке в Милане с тысяча девятьсот девяносто пятого {{1}}.",
+        words: ["по две тысячи первый год", "по две тысячи первого года", "до две тысячи первый год"],
+        correctAnswers: { 1: "по две тысячи первый год" },
+        explanation: "Periodo: с + genitivo … по + accusativo."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1990) — Мама приехала в Италию до или после девяностого года? — {{1}}: в восемьдесят девятом.",
+        words: ["После", "Около", "До"],
+        correctAnswers: { 1: "До" },
+        explanation: "Il 1989 viene prima del 1990: до."
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
+    'panel-apd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-01', exercises: p1exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
