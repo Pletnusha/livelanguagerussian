@@ -257,6 +257,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto: consegne — между (ore ed eventi) + с … до / около / через / к / перед
+// ============================================================
+const p6cards = [
+    { front: "(14:00–16:00) Когда приехал курьер?", back: "Между двумя и четырьмя", distractors: ["С двух до четырёх", "Между двух и четырёх"] },
+    { front: "(10:00–19:00) Когда работает пункт выдачи?", back: "С десяти до семи", distractors: ["Между десятью и семью", "С десять до семи"] },
+    { front: "Обед в 13:00, ужин в 19:00, курьер пришёл в 16:00. Когда?", back: "Между обедом и ужином", distractors: ["Между обеда и ужина", "Между обед и ужин"] },
+    { front: "(15:00) Когда примерно приедет курьер?", back: "Около трёх", distractors: ["Около три", "Около тремя"] },
+    { front: "(9:00–10:00) Когда пришло СМС о доставке?", back: "Между девятью и десятью", distractors: ["С девяти до десяти", "Между девяти и десяти"] },
+    { front: "Сейчас 12:00, курьер в 12:20. Когда курьер?", back: "Через двадцать минут", distractors: ["Через двадцать минуты", "После двадцати минут"] },
+    { front: "(17:00–19:00) Когда ты получил посылку?", back: "Между пятью и семью", distractors: ["С пяти до семи", "Между пяти и семи"] },
+    { front: "(18:00) К какому часу нужно забрать посылку?", back: "К шести", distractors: ["К шесть", "К шестью"] },
+    { front: "(11:00–12:00) Когда позвонил оператор?", back: "Между одиннадцатью и двенадцатью", distractors: ["С одиннадцати до двенадцати", "Между одиннадцать и двенадцать"] },
+    { front: "Я проверяю посылку, а потом сразу ставлю подпись. Когда я проверяю посылку?", back: "Перед подписью", distractors: ["Перед подпись", "Перед подписи"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -264,7 +281,8 @@ const initializers = {
     'panel-fo-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-fo-02', exercises: p2exercises }),
     'panel-fo-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-fo-03', exercises: p3exercises }),
     'panel-fo-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-04', cards: p4cards }),
-    'panel-fo-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-05', cards: p5cards })
+    'panel-fo-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-05', cards: p5cards }),
+    'panel-fo-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-fo-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
