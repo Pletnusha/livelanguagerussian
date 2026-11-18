@@ -274,6 +274,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto, storia di famiglia: decennio, в начале / в конце, secolo (nuovo) + в … году, data completa, с … по … год, anno di nascita (vecchio), con spiegazioni
+// ============================================================
+const p7cards = [
+    { front: "(50-е) — Когда дедушка жил в деревне?", back: "В пятидесятые годы", distractors: ["В пятидесятом году", "В пятидесятый год"], explanation: "Un decennio: в + accusativo plurale: в пятидесятые годы." },
+    { front: "(1948) — Когда родился дедушка?", back: "В тысяча девятьсот сорок восьмом году", distractors: ["В тысяча девятьсот сорок восьмой год", "Тысяча девятьсот сорок восьмого года"], explanation: "Un solo anno: в + prepositivo: в … сорок восьмом году." },
+    { front: "(1972) — Когда познакомились бабушка и дедушка? В начале…", back: "В начале семидесятых", distractors: ["В начале семидесятые", "В начале семидесятом"], explanation: "в начале + genitivo plurale: семидесятых." },
+    { front: "(12.06.1976) — Когда родилась мама?", back: "Двенадцатого июня тысяча девятьсот семьдесят шестого года", distractors: ["Двенадцатое июня тысяча девятьсот семьдесят шестого года", "Двенадцатого июня в тысяча девятьсот семьдесят шестом году"], explanation: "Data completa: tutto al genitivo, senza «в»." },
+    { front: "(80-е) — В какие годы мама училась в школе?", back: "В восьмидесятые годы", distractors: ["В восьмидесятом году", "В восьмидесятый год"], explanation: "В какие годы? — в восьмидесятые годы. Si dice anche «в восьмидесятых»." },
+    { front: "(1994–1999) — С какого по какой год родители жили в Москве?", back: "С тысяча девятьсот девяносто четвёртого по тысяча девятьсот девяносто девятый год", distractors: ["С тысяча девятьсот девяносто четвёртого по тысяча девятьсот девяносто девятого года", "С тысяча девятьсот девяносто четвёртом по тысяча девятьсот девяносто девятый год"], explanation: "Periodo: с + genitivo … по + accusativo." },
+    { front: "(1999) — Когда родители переехали в Италию? В конце…", back: "В конце девяностых", distractors: ["В конце девяностые", "В начале девяностых"], explanation: "в конце + genitivo plurale: девяностых. Il 1999 è la fine del decennio." },
+    { front: "(2001) — Ты какого года?", back: "Две тысячи первого", distractors: ["Двухтысячные", "В две тысячи первом"], explanation: "Anno di nascita: genitivo. «Двухтысячные» è il decennio, non l'anno." },
+    { front: "(XX в.) — В каком веке родились бабушка, дедушка и мама?", back: "В двадцатом веке", distractors: ["В двадцатый век", "В двадцать первом веке"], explanation: "в + prepositivo: в двадцатом веке." },
+    { front: "(2001) — А ты? В каком веке ты родился?", back: "В двадцать первом веке", distractors: ["В двадцатом веке", "В двадцать первый век"], explanation: "Il XXI secolo comincia nel 2001: в двадцать первом веке." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -282,7 +299,8 @@ const initializers = {
     'panel-ad-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-ad-03', exercises: p3exercises }),
     'panel-ad-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-ad-04', cards: p4cards }),
     'panel-ad-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-ad-05', cards: p5cards }),
-    'panel-ad-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-ad-06', cards: p6cards })
+    'panel-ad-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-ad-06', cards: p6cards }),
+    'panel-ad-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-ad-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
