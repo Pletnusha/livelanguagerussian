@@ -11,9 +11,87 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // I dati di ogni pannello si aggiungono dopo l'approvazione della PM.
 
 // ============================================================
+// PANEL 1 — DragDrop · public
+// Misto: около / числа (nuovo) + fatto / momento / с … по (vecchio), con spiegazioni
+// ============================================================
+const p1exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.05) Точно не знаю, зарплата будет {{1}} мая.",
+        words: ["около двадцатое", "двадцатое", "около двадцатого"],
+        correctAnswers: { 1: "около двадцатого" },
+        explanation: "Data approssimativa: около + genitivo: двадцатое → двадцатого."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(20.05) — Какое сегодня число? — {{1}} мая.",
+        words: ["Двадцатое", "Двадцатого", "Около двадцатого"],
+        correctAnswers: { 1: "Двадцатое" },
+        explanation: "Che giorno è? Il fatto: nominativo neutro."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(10.06) — Примерно когда вы переезжаете? — {{1}} июня.",
+        words: ["Числа десятое", "Числа десятого", "Число десятого"],
+        correctAnswers: { 1: "Числа десятого" },
+        explanation: "Inversione colloquiale = circa: числа + genitivo (come «часа в три»)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.07–15.07) Отпуск с первого {{1}} июля.",
+        words: ["по пятнадцатого", "около пятнадцатого", "по пятнадцатое"],
+        correctAnswers: { 1: "по пятнадцатое" },
+        explanation: "Periodo compreso: по + accusativo: пятнадцатое."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(05.08) Точно не знаю: родители приедут {{1}} августа.",
+        words: ["около пяти", "около пятого", "около пятое"],
+        correctAnswers: { 1: "около пятого" },
+        explanation: "Con le date: около пятого (ordinale). «Около пяти» = verso le cinque (ore)!"
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(21.11) Свадьба {{1}} ноября, точно!",
+        words: ["двадцать первого", "около двадцать первого", "двадцать первое"],
+        correctAnswers: { 1: "двадцать первого" },
+        explanation: "Data esatta (точно): genitivo senza preposizione."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(15.09) — Когда примерно начнётся ремонт? — {{1}} сентября.",
+        words: ["Числом пятнадцатого", "Числа пятнадцатое", "Числа пятнадцатого"],
+        correctAnswers: { 1: "Числа пятнадцатого" },
+        explanation: "Числа + genitivo dell'ordinale: числа пятнадцатого."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(01.09) Сегодня {{1}} сентября, дети идут в школу.",
+        words: ["первое", "первого", "около первого"],
+        correctAnswers: { 1: "первое" },
+        explanation: "Il fatto: nominativo neutro: первое."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(25.12) Точно не помню, но мы познакомились {{1}} декабря.",
+        words: ["около двадцать пятое", "около двадцать пятого", "около двадцати пяти"],
+        correctAnswers: { 1: "около двадцать пятого" },
+        explanation: "Data: около двадцать пятого. «Около двадцати пяти» = circa venticinque (quantità)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(18.11) У Антона день рождения {{1}} ноября, это я знаю точно.",
+        words: ["около восемнадцатого", "восемнадцатое", "восемнадцатого"],
+        correctAnswers: { 1: "восемнадцатого" },
+        explanation: "Esatto (знаю точно): genitivo senza preposizione."
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
+    'panel-dc-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dc-01', exercises: p1exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
