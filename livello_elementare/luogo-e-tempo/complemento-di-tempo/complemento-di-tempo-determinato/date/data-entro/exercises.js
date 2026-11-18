@@ -256,6 +256,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto — il visto: к / до (con domanda), к концу (nuovo) + fatto / momento / с … по / числа / в конце (vecchio)
+// ============================================================
+const p6cards = [
+    { front: "(15.04) К какому числу нужно подать документы на визу?", back: "К пятнадцатому апреля", distractors: ["К пятнадцатого апреля", "К пятнадцатое апреля"] },
+    { front: "(10.04) Какое сегодня число? Мы заполняем анкету.", back: "Десятое апреля", distractors: ["Десятого апреля", "К десятому апреля"] },
+    { front: "(30.04) — До какого числа визовый центр работает в этом месяце?", back: "До тридцатого апреля", distractors: ["К тридцатому апреля", "До тридцатое апреля"] },
+    { front: "(20.04) — Когда примерно будет готова виза? — Точно не знаю…", back: "Числа двадцатого", distractors: ["Числа двадцатое", "К двадцатому"] },
+    { front: "(25.04) Когда нас вызвали в консульство? Это есть в письме.", back: "Двадцать пятого апреля", distractors: ["Двадцать пятое апреля", "Около двадцать пятого апреля"] },
+    { front: "(01.05–14.05) С какого по какое число мы в Москве?", back: "С первого по четырнадцатое мая", distractors: ["С первого по четырнадцатого мая", "С первое по четырнадцатое мая"] },
+    { front: "(30.04) Билеты нужно купить не позже последнего дня апреля, то есть…", back: "к концу апреля", distractors: ["к конец апреля", "к концу апрель"] },
+    { front: "(02.05) — К какому числу нужно приехать в Москву?", back: "Ко второму мая", distractors: ["К второму мая", "Ко второго мая"] },
+    { front: "(26.04–30.04) Когда примерно мы покупаем подарки друзьям? Точной даты нет.", back: "В конце апреля", distractors: ["В конец апреля", "В конце апрель"] },
+    { front: "(14.05) — До какого числа действует виза?", back: "До четырнадцатого мая", distractors: ["К четырнадцатому мая", "До четырнадцатое мая"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -263,7 +280,8 @@ const initializers = {
     'panel-de-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-02', exercises: p2exercises }),
     'panel-de-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-de-03', exercises: p3exercises }),
     'panel-de-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-04', cards: p4cards }),
-    'panel-de-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-05', cards: p5cards })
+    'panel-de-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-05', cards: p5cards }),
+    'panel-de-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-de-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
