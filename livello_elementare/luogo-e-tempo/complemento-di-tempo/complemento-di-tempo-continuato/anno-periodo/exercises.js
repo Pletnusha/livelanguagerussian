@@ -89,10 +89,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Nuovo: с + genitivo con gli anni (с … ого года; nel periodo с … ого по … ый год). Cambia solo l'ultima parola
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2018) Я изучаю русский язык с две тысячи {{1}}.",
+        words: ["восемнадцатом году", "восемнадцатый год", "восемнадцатого года"],
+        correctAnswers: { 1: "восемнадцатого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2012–2016) Анна жила в Петербурге с две тысячи {{1}} по две тысячи шестнадцатый год.",
+        words: ["двенадцатого", "двенадцатом", "двенадцатый"],
+        correctAnswers: { 1: "двенадцатого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2000) Мы знаем друг друга с {{1}}.",
+        words: ["двухтысячном году", "двухтысячного года", "двухтысячный год"],
+        correctAnswers: { 1: "двухтысячного года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1995–2005) Отец работал на заводе с тысяча девятьсот девяносто {{1}} по две тысячи пятый год.",
+        words: ["пятом", "пятого", "пятый"],
+        correctAnswers: { 1: "пятого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2023) Марко играет в футбольной команде с две тысячи двадцать {{1}}.",
+        words: ["третьего года", "третьем году", "третий год"],
+        correctAnswers: { 1: "третьего года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2008–2014) Ольга преподавала в школе с две тысячи {{1}} по две тысячи четырнадцатый год.",
+        words: ["восьмой", "восьмом", "восьмого"],
+        correctAnswers: { 1: "восьмого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1999) Эта школа существует с тысяча девятьсот девяносто {{1}}.",
+        words: ["девятого года", "девятом году", "девятый год"],
+        correctAnswers: { 1: "девятого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1991–1999) Родители жили в Новосибирске с тысяча девятьсот девяносто {{1}} по тысяча девятьсот девяносто девятый год.",
+        words: ["первым", "первом", "первого"],
+        correctAnswers: { 1: "первого" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2024) Мы снимаем эту квартиру с две тысячи двадцать {{1}}.",
+        words: ["четвёртом году", "четвёртого года", "четвёртый год"],
+        correctAnswers: { 1: "четвёртого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2016–2022) Паоло работал в Москве с две тысячи {{1}} по две тысячи двадцать второй год.",
+        words: ["шестнадцатого", "шестнадцатом", "шестнадцатый"],
+        correctAnswers: { 1: "шестнадцатого" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-ap-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-01', exercises: p1exercises })
+    'panel-ap-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-01', exercises: p1exercises }),
+    'panel-ap-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-ap-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
