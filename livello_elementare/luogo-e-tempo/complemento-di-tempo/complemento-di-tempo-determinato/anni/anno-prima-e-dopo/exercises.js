@@ -89,10 +89,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Nuovo: до ↔ после + genitivo; il senso dal contesto (сначала … потом, не было … а теперь), forma al genitivo
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2000) Сначала мы жили в Москве, а {{1}} двухтысячного года — в Риме.",
+        words: ["до", "после", "в"],
+        correctAnswers: { 1: "после" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2010) У меня не было смартфона {{1}} две тысячи десятого года.",
+        words: ["после", "в", "до"],
+        correctAnswers: { 1: "до" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2015) Я начал учить русский язык после две тысячи {{1}}.",
+        words: ["пятнадцатого года", "пятнадцатом году", "пятнадцатый год"],
+        correctAnswers: { 1: "пятнадцатого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1991) {{1}} тысяча девятьсот девяносто первого года был Советский Союз.",
+        words: ["До", "После", "В"],
+        correctAnswers: { 1: "До" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2008) Мы поженились в две тысячи восьмом году, а дети родились {{1}} две тысячи восьмого года.",
+        words: ["до", "после", "около"],
+        correctAnswers: { 1: "после" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2020) До две тысячи {{1}} я работал в офисе, а теперь работаю дома.",
+        words: ["двадцатом году", "двадцатый год", "двадцатого года"],
+        correctAnswers: { 1: "двадцатого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2012) Брат окончил университет, и {{1}} две тысячи двенадцатого года он уехал в Лондон.",
+        words: ["до", "после", "с"],
+        correctAnswers: { 1: "после" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1999) Бабушка жила в деревне до тысяча девятьсот девяносто {{1}}.",
+        words: ["девятом году", "девятый год", "девятого года"],
+        correctAnswers: { 1: "девятого года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2024) {{1}} две тысячи двадцать четвёртого года у нас не было собаки, а теперь есть.",
+        words: ["До", "После", "Около"],
+        correctAnswers: { 1: "До" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2005) Сначала я выучил итальянский, а после две тысячи {{1}} — русский.",
+        words: ["пятого года", "пятом году", "пятый год"],
+        correctAnswers: { 1: "пятого года" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-apd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-01', exercises: p1exercises })
+    'panel-apd-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-01', exercises: p1exercises }),
+    'panel-apd-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-apd-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
