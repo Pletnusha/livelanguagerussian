@@ -275,6 +275,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto: domande originali di «учиться прошедшее» (e «Кто всегда сдаёт экзамены?») rivolte ai personaggi → risposte dal testo «Катя, Лена, Андрей, Тимур, Женя» e da «Тимур и университет», portate al passato (permesso PM). 8 nuove + 2 vecchie (нравилась + dativo; … лет назад dal blocco Годы); con spiegazioni
+// ============================================================
+const p7cards = [
+    { front: "— Катя, ты часто прогуливала лекции?", back: "— Да, я редко ходила на лекции.", distractors: ["— Да, я редко сходила на лекции.", "— Да, я редко ходил на лекции."], explanation: "Редко = abitudine: imperfettivo (ходила). Parla Katja → femminile." },
+    { front: "— Катя, ты часто брала конспекты лекций?", back: "— Да, обычно я брала конспекты у Тимура.", distractors: ["— Да, обычно я взяла конспекты у Тимура.", "— Да, обычно я брал конспекты у Тимура."], explanation: "Обычно = abitudine: imperfettivo al passato (брала), femminile." },
+    { front: "— Тимур, ты часто прогуливал лекции?", back: "— Нет, я никогда не пропускал лекции.", distractors: ["— Нет, я никогда не пропущу лекции.", "— Нет, я никогда не пропускала лекции."], explanation: "Никогда не = mai, abitudine al passato: imperfettivo (не пропускал). Пропущу è futuro." },
+    { front: "— Тимур, ты часто давал свои конспекты?", back: "— Да, Катя обычно брала конспекты у меня.", distractors: ["— Да, Катя обычно взяла конспекты у меня.", "— Да, Катя обычно брал конспекты у меня."], explanation: "Il soggetto è Катя: брала (femminile). Обычно → imperfettivo." },
+    { front: "— Тимур, ты готовил много докладов?", back: "— Да, каждые две недели я готовил доклад или писал статью.", distractors: ["— Да, каждые две недели я подготовил доклад или написал статью.", "— Да, каждые две недели я готовила доклад или писала статью."], explanation: "Каждые две недели = ripetizione: imperfettivo (готовил, писал)." },
+    { front: "— Лена, ты читала статьи, чтобы подготовиться к экзамену?", back: "— Да, я много читала и искала дополнительные материалы в интернете.", distractors: ["— Да, я много читал и искал дополнительные материалы в интернете.", "— Да, я много читаю и ищу дополнительные материалы в интернете."], explanation: "Domanda al passato → risposta al passato. Parla Lena → читала, искала." },
+    { front: "— Женя, ты читал статьи, чтобы подготовиться к экзамену?", back: "— Нет, я не готовился заранее, а учил всё в последние три дня.", distractors: ["— Нет, я не готовилась заранее, а учила всё в последние три дня.", "— Нет, я не готовлюсь заранее, а учу всё в последние три дня."], explanation: "Al passato, maschile: готовился, учил. Abitudine → imperfettivo." },
+    { front: "— Лена, ты всегда сдавала экзамены?", back: "— Нет, я очень боялась экзаменов и иногда их проваливала.", distractors: ["— Нет, я очень боялась экзаменов и иногда их провалила.", "— Нет, я очень боялся экзаменов и иногда их проваливал."], explanation: "Иногда = qualche volta, abitudine: imperfettivo (проваливала), non провалила." },
+    { front: "— Какие предметы тебе нравились?", back: "— Мне нравилась история экономики.", distractors: ["— Мне нравился история экономики.", "— Я нравилась история экономики."], explanation: "Нравиться: ciò che piace è il soggetto (история, femminile → нравилась); a chi piace va al dativo (мне)." },
+    { front: "(2016; сейчас 2026) — Сколько лет назад ты закончил университет?", back: "— Десять лет назад.", distractors: ["— Через десять лет.", "— Десять года назад."], explanation: "Passato: … назад. Con 10: лет." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -283,7 +300,8 @@ const initializers = {
     'panel-sds-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-03', exercises: p3exercises }),
     'panel-sds-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-04', cards: p4cards }),
     'panel-sds-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-05', cards: p5cards }),
-    'panel-sds-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-06', cards: p6cards })
+    'panel-sds-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-06', cards: p6cards }),
+    'panel-sds-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
