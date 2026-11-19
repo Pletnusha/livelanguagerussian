@@ -239,13 +239,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Nuovo: piani — через полгода (una parola, come через полчаса), через несколько лет, много лет назад, через N лет
+// ============================================================
+const p5cards = [
+    { front: "(05.2027; сейчас 11.2026) — Когда ты поедешь в Москву?", back: "Через полгода", distractors: ["Полгода назад", "Через пол года"] },
+    { front: "(05.2026; сейчас 11.2026) — Когда вы купили квартиру?", back: "Полгода назад", distractors: ["Через полгода", "Пол года назад"] },
+    { front: "— Когда вы поженитесь? — Не знаем точно…", back: "Через несколько лет", distractors: ["Несколько лет назад", "Через несколько года"] },
+    { front: "— Когда вы познакомились? — Давно…", back: "Много лет назад", distractors: ["Через много лет", "Много года назад"] },
+    { front: "(2028; сейчас 2026) — Когда откроется новый театр?", back: "Через два года", distractors: ["Два года назад", "Через два лет"] },
+    { front: "(2036; сейчас 2026) — Когда сын станет взрослым?", back: "Через десять лет", distractors: ["Десять лет назад", "Через десять года"] },
+    { front: "(2027; сейчас 2026) — Когда у тебя будет длинный отпуск? — Только…", back: "Через год", distractors: ["Год назад", "Через один года"] },
+    { front: "(2033; сейчас 2026) — Через сколько лет закончится кредит?", back: "Через семь лет", distractors: ["Семь лет назад", "Через семь года"] },
+    { front: "(2048; сейчас 2026) Внук только родился. Через сколько лет он окончит университет?", back: "Через двадцать два года", distractors: ["Через двадцать два лет", "Двадцать два года назад"] },
+    { front: "(2029; сейчас 2026) — Когда вы будете жить в новом доме?", back: "Через три года", distractors: ["Три года назад", "Через три лет"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-aft-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-01', exercises: p1exercises }),
     'panel-aft-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-02', exercises: p2exercises }),
     'panel-aft-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-03', exercises: p3exercises }),
-    'panel-aft-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-aft-04', cards: p4cards })
+    'panel-aft-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-aft-04', cards: p4cards }),
+    'panel-aft-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-aft-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
