@@ -291,6 +291,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Misto, la sessione e gli esami: 8 frasi originali non ancora usate nei pannelli 4–5 (мне нужно подготовиться, обычно я готовлюсь, редко готовимся, закончить сдавать, нужно сдать экзамен в четверг, Тимуру нужно написать два доклада, редко выполняют, всегда читает) + 2 vecchie da «Обычно или хочу» (перестать + imperfettivo, хочет + perfettivo); senza spiegazioni
+// ============================================================
+const p8cards = [
+    { front: "Мне нужно ___ к сессии.", back: "подготовиться", distractors: ["готовлюсь", "подготовлюсь"] },
+    { front: "Обычно я ___ к сессии около месяца.", back: "готовлюсь", distractors: ["подготовиться", "готовиться"] },
+    { front: "Мы редко ___ к экзамену за месяц!", back: "готовимся", distractors: ["подготовиться", "готовиться"] },
+    { front: "Через неделю нужно закончить ___ сессию!", back: "сдавать", distractors: ["сдать", "сдаём"] },
+    { front: "— Нужно ___ экзамен в четверг?", back: "сдать", distractors: ["сдаём", "сдадим"] },
+    { front: "Тимуру нужно ___ два доклада к экзамену.", back: "написать", distractors: ["пишет", "напишет"] },
+    { front: "Студенты редко ___ задания к занятиям!", back: "выполняют", distractors: ["выполнить", "выполнять"] },
+    { front: "Он всегда ___ статьи к экзамену.", back: "читает", distractors: ["прочитать", "читать"] },
+    { front: "Андрей хочет перестать ___ с Женей.", back: "спорить", distractors: ["поспорить", "спорит"] },
+    { front: "Андрей хочет ___ на диету.", back: "сесть", distractors: ["садиться", "сядет"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -300,7 +317,8 @@ const initializers = {
     'panel-vun-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-04', cards: p4cards }),
     'panel-vun-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-05', cards: p5cards }),
     'panel-vun-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-06', cards: p6cards }),
-    'panel-vun-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-07', cards: p7cards })
+    'panel-vun-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-07', cards: p7cards }),
+    'panel-vun-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
