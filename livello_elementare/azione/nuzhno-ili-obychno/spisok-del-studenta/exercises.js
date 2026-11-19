@@ -157,11 +157,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Quando? Ogni quanto? al passato: всегда / редко / часто / два раза в год / один раз в месяц ↔ на прошлой неделе / к понедельнику / … лет назад — 4 frasi originali al passato + 6 della pagina 1 portate al passato; «на прошлой неделе» sbagliato solo dove è davvero sbagliato (con обычно o in frasi impossibili); senza spiegazioni
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Я уже два сдала. — Когда? — {{1}}.",
+        words: ["Два раза в год", "На прошлой неделе", "К каждому занятию"],
+        correctAnswers: { 1: "На прошлой неделе" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сессия проходила {{1}}.",
+        words: ["два раза в год", "к пятнице", "к каждому занятию"],
+        correctAnswers: { 1: "два раза в год" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно мы готовили доклад {{1}}.",
+        words: ["один раз в месяц", "на прошлой неделе", "один раз в месяце"],
+        correctAnswers: { 1: "один раз в месяц" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нам нужно было выучить спряжения глаголов {{1}}.",
+        words: ["к понедельника", "на понедельнике", "к понедельнику"],
+        correctAnswers: { 1: "к понедельнику" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы {{1}} готовились к экзамену за месяц!",
+        words: ["на прошлой неделе", "редко", "редкий"],
+        correctAnswers: { 1: "редко" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно в зимнюю сессию мы сдавали экзамены {{1}}.",
+        words: ["к каждому семинару", "до середина февраля", "до середины февраля"],
+        correctAnswers: { 1: "до середины февраля" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно я готовилась к сессии {{1}}.",
+        words: ["около месяца", "около месяц", "к пятнице"],
+        correctAnswers: { 1: "около месяца" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Ты {{1}} брал конспекты лекций?",
+        words: ["частый", "часто", "к пятнице"],
+        correctAnswers: { 1: "часто" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно мы заканчивали сдавать сессию {{1}}.",
+        words: ["к Новому году", "к Новый год", "на прошлой неделе"],
+        correctAnswers: { 1: "к Новому году" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сколько лет {{1}} ты закончил университет?",
+        words: ["через", "после", "назад"],
+        correctAnswers: { 1: "назад" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-sds-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-01', exercises: p1exercises }),
-    'panel-sds-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-02', exercises: p2exercises })
+    'panel-sds-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-02', exercises: p2exercises }),
+    'panel-sds-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
