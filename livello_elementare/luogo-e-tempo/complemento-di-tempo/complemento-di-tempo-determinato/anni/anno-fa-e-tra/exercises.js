@@ -155,11 +155,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Nuovo: numero + год / года / лет (1, 21 → год; 2–4, 22 → года; 5–20, 25, 50, 100 → лет), con назад e через
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2024; сейчас 2026) Мы переехали в Милан два {{1}} назад.",
+        words: ["года", "год", "лет"],
+        correctAnswers: { 1: "года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2031; сейчас 2026) Через пять {{1}} мы купим дом.",
+        words: ["год", "года", "лет"],
+        correctAnswers: { 1: "лет" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2005; сейчас 2026) Папа начал работать в банке двадцать один {{1}} назад.",
+        words: ["лет", "год", "года"],
+        correctAnswers: { 1: "год" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2048; сейчас 2026) Через двадцать два {{1}} я выйду на пенсию.",
+        words: ["лет", "год", "года"],
+        correctAnswers: { 1: "года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2001; сейчас 2026) Родители поженились двадцать пять {{1}} назад.",
+        words: ["лет", "года", "год"],
+        correctAnswers: { 1: "лет" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2027; сейчас 2026) Мы поженимся через {{1}}.",
+        words: ["года", "год", "лет"],
+        correctAnswers: { 1: "год" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1926; сейчас 2026) Этот дом построили сто {{1}} назад.",
+        words: ["год", "лет", "года"],
+        correctAnswers: { 1: "лет" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2029; сейчас 2026) Через три {{1}} брат окончит университет.",
+        words: ["года", "лет", "год"],
+        correctAnswers: { 1: "года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(1976; сейчас 2026) Бабушка приехала в Рим пятьдесят {{1}} назад.",
+        words: ["года", "год", "лет"],
+        correctAnswers: { 1: "лет" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2030; сейчас 2026) Через четыре {{1}} откроется новый вокзал.",
+        words: ["год", "года", "лет"],
+        correctAnswers: { 1: "года" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-aft-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-01', exercises: p1exercises }),
-    'panel-aft-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-02', exercises: p2exercises })
+    'panel-aft-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-02', exercises: p2exercises }),
+    'panel-aft-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
