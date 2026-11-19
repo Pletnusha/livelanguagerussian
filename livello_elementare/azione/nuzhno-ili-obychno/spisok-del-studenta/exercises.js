@@ -258,6 +258,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto: la stessa frase originale al presente (vecchio, pagina «В университете») e al passato (nuovo). Сейчас: «…» → Раньше: «… ___ …». Trappole: нужно было (non нужна была / нужно был), il verbo dopo нужно было resta all'infinito, genere e numero, perfettivo al passato sbagliato con обычно / редко; senza spiegazioni
+// ============================================================
+const p6cards = [
+    { front: "Сейчас: «Обычно мы учим новые слова к каждому занятию». Раньше: «Обычно мы ___ новые слова к каждому занятию».", back: "учили", distractors: ["выучили", "учил"] },
+    { front: "Сейчас: «Нам нужно выучить спряжения глаголов». Раньше: «Нам ___ выучить спряжения глаголов».", back: "нужно было", distractors: ["нужна была", "нужно был"] },
+    { front: "Сейчас: «К каждому семинару мы пишем доклад». Раньше: «К каждому семинару мы ___ доклад».", back: "писали", distractors: ["написали", "писал"] },
+    { front: "Сейчас: «Тебе нужно прочитать эту статью к семинару». Раньше: «Тебе нужно было ___ эту статью к семинару».", back: "прочитать", distractors: ["прочитал", "читал"] },
+    { front: "Сейчас: «Сессия проходит два раза в год». Раньше: «Сессия ___ два раза в год».", back: "проходила", distractors: ["проходило", "прошла"] },
+    { front: "Сейчас (Лена): «Обычно я беру конспект лекций у Ольги». Раньше: «Обычно я ___ конспект лекций у Ольги».", back: "брала", distractors: ["взяла", "брал"] },
+    { front: "Сейчас: «Обычно в зимнюю сессию мы сдаём экзамены до середины февраля». Раньше: «Обычно мы ___ экзамены до середины февраля».", back: "сдавали", distractors: ["сдали", "сдавал"] },
+    { front: "Сейчас: «Экзамены проходят в аудитории 23». Раньше: «Экзамены ___ в аудитории 23».", back: "проходили", distractors: ["проходила", "прошли"] },
+    { front: "Сейчас: «Мы редко готовим доклады к экзамену». Раньше: «Мы редко ___ доклады к экзамену».", back: "готовили", distractors: ["подготовили", "готовил"] },
+    { front: "Сейчас (Тимур): «Обычно я готовлюсь к сессии около месяца». Раньше: «Обычно я ___ к сессии около месяца».", back: "готовился", distractors: ["подготовился", "готовилась"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -265,7 +282,8 @@ const initializers = {
     'panel-sds-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-02', exercises: p2exercises }),
     'panel-sds-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-03', exercises: p3exercises }),
     'panel-sds-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-04', cards: p4cards }),
-    'panel-sds-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-05', cards: p5cards })
+    'panel-sds-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-05', cards: p5cards }),
+    'panel-sds-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
