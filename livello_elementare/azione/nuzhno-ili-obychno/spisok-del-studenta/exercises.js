@@ -292,6 +292,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Misto, chi fa che cosa all'università (al passato): il professore читал лекции, отвечал, принимал экзамен; lo studente слушал / посещал лекции, задавал вопросы, сдавал экзамены, брал конспект. Dal testo su Тимур e su Андрей + lista «ЛЕКЦИИ» (PDF «университет нужно можно обычно»). Sbagliate: verbo dell'altro ruolo (senso) + forma. 9 nuove + 1 vecchia (presente); senza spiegazioni
+// ============================================================
+const p8cards = [
+    { front: "Большинство профессоров интересно ___ лекции, и Тимуру нравилось их слушать.", back: "читали", distractors: ["слушали", "читал"] },
+    { front: "Андрей ___ много лекций, которые читали разные профессора на YouTube.", back: "слушал", distractors: ["читал", "слушала"] },
+    { front: "Тимур часто ___ много вопросов профессорам после лекции.", back: "задавал", distractors: ["отвечал", "задавала"] },
+    { front: "Профессора обычно ___ очень подробно.", back: "отвечали", distractors: ["задавали", "отвечал"] },
+    { front: "Лекции по истории экологии Тимур практически не ___.", back: "посещал", distractors: ["принимал", "посещала"] },
+    { front: "Лекций он не посещал, поэтому Тимуру ___ написать два доклада к экзамену.", back: "нужно было", distractors: ["нужен был", "нужно был"] },
+    { front: "Ему было сложно писать доклады, но он смог ___ их в срок.", back: "сдать", distractors: ["принять", "сдал"] },
+    { front: "Иногда профессор ___ экзамен до позднего вечера.", back: "принимал", distractors: ["сдавал", "принимала"] },
+    { front: "Обычно в зимнюю сессию мы ___ экзамены до середины февраля.", back: "сдавали", distractors: ["принимали", "сдавал"] },
+    { front: "Обычно я ___ конспект лекций у Ольги.", back: "беру", distractors: ["даю", "брать"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -301,7 +318,8 @@ const initializers = {
     'panel-sds-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-04', cards: p4cards }),
     'panel-sds-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-05', cards: p5cards }),
     'panel-sds-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-06', cards: p6cards }),
-    'panel-sds-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-07', cards: p7cards })
+    'panel-sds-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-07', cards: p7cards }),
+    'panel-sds-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
