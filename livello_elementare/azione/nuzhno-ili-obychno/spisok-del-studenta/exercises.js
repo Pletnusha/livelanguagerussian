@@ -13,9 +13,87 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // I dati di ogni pannello si aggiungono dopo l'approvazione della PM.
 
 // ============================================================
+// PANEL 1 — DragDrop · public
+// Lessico al passato (PDF «список дел студента»): нужно было + quale verbo — 5 cose della lista + 2 frasi della pagina 1 portate al passato; 3 vecchie dalla pagina «В университете» (presente); con spiegazioni
+// ============================================================
+const p1exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нам нужно было {{1}} доклад к экзамену.",
+        words: ["написать", "выполнить", "подготовиться"],
+        correctAnswers: { 1: "написать" },
+        explanation: "Scrivere una relazione: написать доклад. Al passato: нужно было (sempre «было»)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нам нужно было {{1}} новые слова к следующей лекции.",
+        words: ["взять", "подготовиться", "выучить"],
+        correctAnswers: { 1: "выучить" },
+        explanation: "Imparare a memoria: выучить слова."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нам нужно было {{1}} к экзамену.",
+        words: ["подготовить", "подготовиться", "сдать"],
+        correctAnswers: { 1: "подготовиться" },
+        explanation: "Prepararsi a qualcosa: подготовиться к + dativo. Senza oggetto ci vuole -ся."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Ему нужно было {{1}} статьи к экзамену.",
+        words: ["выполнить", "прочитать", "подготовиться"],
+        correctAnswers: { 1: "прочитать" },
+        explanation: "Leggere fino alla fine: прочитать статьи. A lui serviva → ему нужно было."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мне нужно было {{1}} конспект лекций у Ольги.",
+        words: ["взять", "выполнить", "подготовиться"],
+        correctAnswers: { 1: "взять" },
+        explanation: "Prendere in prestito gli appunti: взять конспект у кого-то."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно было {{1}} задание к семинару.",
+        words: ["подготовиться", "выучить", "выполнить"],
+        correctAnswers: { 1: "выполнить" },
+        explanation: "Fare un compito: выполнить задание."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "В прошлую сессию нам нужно было {{1}} пять экзаменов.",
+        words: ["выполнить", "прочитать", "сдать"],
+        correctAnswers: { 1: "сдать" },
+        explanation: "Dare (e superare) un esame: сдать экзамен. Пять → экзаменов (genitivo plurale)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно мы {{1}} десять–двадцать новых слов к каждому занятию.",
+        words: ["учим", "выучить", "учить"],
+        correctAnswers: { 1: "учим" },
+        explanation: "Presente: обычно = abitudine → imperfettivo (учим)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нам нужно {{1}} спряжения глаголов к понедельнику.",
+        words: ["учим", "выучить", "выучим"],
+        correctAnswers: { 1: "выучить" },
+        explanation: "Presente: нам нужно + infinito perfettivo (un risultato entro lunedì)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "К каждому семинару мы {{1}} доклад или читаем статьи.",
+        words: ["пишем", "написать", "писать"],
+        correctAnswers: { 1: "пишем" },
+        explanation: "Presente: «к каждому семинару» = ogni volta → imperfettivo (пишем)."
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
+    'panel-sds-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-01', exercises: p1exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
