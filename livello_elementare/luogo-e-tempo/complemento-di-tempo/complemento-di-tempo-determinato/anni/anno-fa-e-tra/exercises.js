@@ -273,6 +273,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto: год назад ↔ в прошлом году, через год ↔ в следующем году, в этом году, через … после (nuovo) + в … году, с … года, около, к … году (vecchio), con spiegazioni. Adesso = 11.2026
+// ============================================================
+const p7cards = [
+    { front: "(03.2025; сейчас 11.2026) — Когда вы были в Риме?", back: "В прошлом году", distractors: ["Год назад", "В прошлый год"], explanation: "Marzo 2025 è l'anno scorso (в прошлом году), ma non «un anno fa»: sono passati 20 mesi." },
+    { front: "(11.2025; сейчас 11.2026) — Когда ты купил собаку?", back: "Год назад", distractors: ["Через год", "В прошлый год"], explanation: "Esattamente 12 mesi fa: год назад. Qui va bene anche «в прошлом году»." },
+    { front: "(2027; сейчас 2026) — В каком году ты поедешь в Россию?", back: "В следующем году", distractors: ["В следующий год", "Год назад"], explanation: "Il 2027 = l'anno prossimo: в следующем году (в + prepositivo, come «в прошлом году»)." },
+    { front: "(2026; сейчас 2026) — Когда ты начал учить русский?", back: "В этом году", distractors: ["В этот год", "Год назад"], explanation: "Quest'anno: в этом году." },
+    { front: "(2025) — В каком году вы поженились?", back: "В две тысячи двадцать пятом году", distractors: ["Две тысячи двадцать пятого года", "В две тысячи двадцать пятый год"], explanation: "Un anno: в + prepositivo." },
+    { front: "(11.2027; сейчас 11.2026) — Когда закончится ремонт?", back: "Через год", distractors: ["Год назад", "После года"], explanation: "Tra esattamente un anno: через год." },
+    { front: "(2015 → 2017) — Через сколько лет после свадьбы родился сын?", back: "Через два года", distractors: ["Два года назад", "Через два лет"], explanation: "Contato da un evento, non da oggi: через два года после свадьбы." },
+    { front: "(2017) — С какого года вы живёте в Риме?", back: "С две тысячи семнадцатого года", distractors: ["В две тысячи семнадцатом году", "С две тысячи семнадцатый год"], explanation: "Dal 2017 a oggi: с + genitivo." },
+    { front: "(2000) — Когда ты в первый раз был в Москве? — Точно не помню…", back: "Около двухтысячного года", distractors: ["В двухтысячном году", "Около двухтысячном году"], explanation: "Non ricordo esattamente → около + genitivo." },
+    { front: "(2030) — К какому году вы хотите купить дом?", back: "К две тысячи тридцатому году", distractors: ["К две тысячи тридцатого года", "К две тысячи тридцатый год"], explanation: "Entro il 2030: к + dativo." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -281,7 +298,8 @@ const initializers = {
     'panel-aft-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-03', exercises: p3exercises }),
     'panel-aft-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-aft-04', cards: p4cards }),
     'panel-aft-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-aft-05', cards: p5cards }),
-    'panel-aft-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-aft-06', cards: p6cards })
+    'panel-aft-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-aft-06', cards: p6cards }),
+    'panel-aft-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-aft-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
