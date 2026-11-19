@@ -90,10 +90,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Nuovo: il passato secondo genere e numero (он читал, она учила, мы писали, сессия проходила, экзамены проходили, ему было) — 6 frasi originali al passato + 4 frasi della pagina 1 portate al passato; sbagliate = stesso verbo in altro genere / numero; senza spiegazioni
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Она всегда {{1}} новые слова к следующей лекции.",
+        words: ["учил", "учили", "учила"],
+        correctAnswers: { 1: "учила" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно мы {{1}} доклад к экзамену.",
+        words: ["писали", "писал", "писала"],
+        correctAnswers: { 1: "писали" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Он всегда {{1}} статьи к экзамену.",
+        words: ["читала", "читал", "читали"],
+        correctAnswers: { 1: "читал" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы редко {{1}} к экзамену за месяц!",
+        words: ["готовился", "готовились", "готовилась"],
+        correctAnswers: { 1: "готовились" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Лекции по истории экологии Тимур практически не {{1}}.",
+        words: ["посещал", "посещала", "посещали"],
+        correctAnswers: { 1: "посещал" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Лена говорит: «Обычно я {{1}} конспект лекций у Ольги».",
+        words: ["брал", "брали", "брала"],
+        correctAnswers: { 1: "брала" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Сессия {{1}} два раза в год.",
+        words: ["проходил", "проходила", "проходили"],
+        correctAnswers: { 1: "проходила" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Экзамены {{1}} в аудитории 23 на втором этаже.",
+        words: ["проходила", "проходило", "проходили"],
+        correctAnswers: { 1: "проходили" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно в зимнюю сессию мы {{1}} экзамены до середины февраля.",
+        words: ["сдавали", "сдавал", "сдавала"],
+        correctAnswers: { 1: "сдавали" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Тимуру {{1}} очень сложно писать доклады.",
+        words: ["было", "был", "была"],
+        correctAnswers: { 1: "было" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-sds-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-01', exercises: p1exercises })
+    'panel-sds-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-01', exercises: p1exercises }),
+    'panel-sds-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
