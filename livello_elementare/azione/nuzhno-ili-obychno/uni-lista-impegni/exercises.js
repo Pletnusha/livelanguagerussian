@@ -225,12 +225,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Nuovo: domanda → risposta. Что нужно сделать? → нужно + perfettivo; Что вы обычно делаете? / Как часто? → imperfettivo al presente; con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "— Что тебе нужно сделать к понедельнику?", back: "Мне нужно написать доклад.", distractors: ["Мне нужно писать доклад.", "Мне нужно напишу доклад."], explanation: "«Сделать» nella domanda = una cosa da finire: нужно + perfettivo (написать)." },
+    { front: "— Что вы обычно делаете к семинару?", back: "Обычно мы читаем статьи.", distractors: ["Обычно мы прочитаем статьи.", "Обычно мы читают статьи."], explanation: "«Обычно … делаете» = abitudine: imperfettivo al presente (читаем)." },
+    { front: "— Что Лене нужно сделать сегодня в библиотеке?", back: "Ей нужно взять книгу.", distractors: ["Ей нужно брать книгу.", "Ей нужно возьмёт книгу."], explanation: "Oggi, una volta: нужно + perfettivo. A Lena serve → ей нужно (dativo)." },
+    { front: "— Что Катя обычно делает перед семинаром?", back: "Она берёт конспект у Тимура.", distractors: ["Она возьмёт конспект у Тимура.", "Она берут конспект у Тимура."], explanation: "«Обычно» nella domanda → imperfettivo anche nella risposta (берёт)." },
+    { front: "— Что студентам нужно сделать к следующему занятию?", back: "Им нужно выполнить задание.", distractors: ["Им нужно выполнять задание.", "Им нужно выполнят задание."], explanation: "Un compito da finire per la prossima lezione: нужно + perfettivo. Agli studenti → им нужно." },
+    { front: "— Как часто вы пишете доклады?", back: "Мы пишем доклад каждую неделю.", distractors: ["Мы напишем доклад каждую неделю.", "Мы пишут доклад каждую неделю."], explanation: "«Каждую неделю» = ripetizione: imperfettivo (пишем)." },
+    { front: "— У вас завтра контрольная по лексике?", back: "Да, нам нужно выучить все слова урока.", distractors: ["Да, нам нужно учить все слова урока.", "Да, нам нужно выучим все слова урока."], explanation: "Tutte le parole per domani = risultato: нужно + perfettivo (выучить)." },
+    { front: "— Когда вы обычно учите новые слова?", back: "Обычно я учу слова по утрам.", distractors: ["Обычно я выучу слова по утрам.", "Обычно я учит слова по утрам."], explanation: "«Обычно», «по утрам» = abitudine: imperfettivo (учу)." },
+    { front: "— Что Андрею нужно сделать к среде?", back: "Ему нужно подготовить презентацию.", distractors: ["Ему нужно готовить презентацию.", "Ему нужно подготовит презентацию."], explanation: "Una cosa da finire entro mercoledì: нужно + perfettivo. Ad Andrej → ему нужно." },
+    { front: "— Кто обычно готовит презентации в вашей группе?", back: "Обычно их готовит Андрей.", distractors: ["Обычно их подготовит Андрей.", "Обычно их готовят Андрей."], explanation: "Abitudine: imperfettivo. Il soggetto è Андрей (lui) → готовит." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-uli-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-uli-01', exercises: p1exercises }),
     'panel-uli-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-uli-02', exercises: p2exercises }),
-    'panel-uli-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-uli-03', exercises: p3exercises })
+    'panel-uli-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-uli-03', exercises: p3exercises }),
+    'panel-uli-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-uli-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
