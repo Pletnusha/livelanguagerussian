@@ -88,10 +88,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Nuovo: назад (passato) ↔ через (futuro), scelto dal tempo del verbo; ordine delle parole (… назад dopo, через … prima)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2024; сейчас 2026) Мы купили машину {{1}}.",
+        words: ["через два года", "два года назад", "два года через"],
+        correctAnswers: { 1: "два года назад" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2029; сейчас 2026) Сын пойдёт в школу {{1}}.",
+        words: ["три года назад", "три года через", "через три года"],
+        correctAnswers: { 1: "через три года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2025; сейчас 2026) Я начал учить русский {{1}}.",
+        words: ["год назад", "через год", "назад год"],
+        correctAnswers: { 1: "год назад" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2027; сейчас 2026) Мы поедем в Петербург {{1}}.",
+        words: ["через год", "год назад", "назад год"],
+        correctAnswers: { 1: "через год" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2022; сейчас 2026) Бабушка переехала к нам {{1}}.",
+        words: ["через четыре года", "назад четыре года", "четыре года назад"],
+        correctAnswers: { 1: "четыре года назад" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2030; сейчас 2026) Я выйду на пенсию {{1}}.",
+        words: ["четыре года назад", "через четыре года", "четыре года через"],
+        correctAnswers: { 1: "через четыре года" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2016; сейчас 2026) Они познакомились {{1}}.",
+        words: ["через десять лет", "десять лет назад", "назад десять лет"],
+        correctAnswers: { 1: "десять лет назад" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2031; сейчас 2026) Кредит закончится {{1}}.",
+        words: ["пять лет назад", "пять лет через", "через пять лет"],
+        correctAnswers: { 1: "через пять лет" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2006; сейчас 2026) Родители купили дачу {{1}}.",
+        words: ["двадцать лет назад", "через двадцать лет", "назад двадцать лет"],
+        correctAnswers: { 1: "двадцать лет назад" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "(2028; сейчас 2026) Дочь окончит университет {{1}}.",
+        words: ["два года назад", "через два года", "два года через"],
+        correctAnswers: { 1: "через два года" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-aft-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-01', exercises: p1exercises })
+    'panel-aft-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-01', exercises: p1exercises }),
+    'panel-aft-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
