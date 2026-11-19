@@ -1,0 +1,19 @@
+{
+  "id": "b1-azione-nuzhno-ili-obychno",
+  "url": "/livello_elementare/azione/nuzhno-ili-obychno/",
+  "level": "b1",
+  "doc_type": "hub",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [
+    "aspetto/perfettivo-vs-imperfettivo",
+    "modali/nuzhno"
+  ],
+  "complementi": [],
+  "lessico": [
+    "universita"
+  ],
+  "title_ru": "НУЖНО ИЛИ ОБЫЧНО",
+  "title_it": "Bisogna o di solito: aspetto perfettivo e imperfettivo all'università"
+}

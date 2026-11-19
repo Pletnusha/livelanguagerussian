@@ -1,7 +1,49 @@
 {
-  "generated": "2026-11-19T07:28:38.244Z",
-  "count": 32,
+  "generated": "2026-11-19T15:34:24.173Z",
+  "count": 34,
   "pages": [
+    {
+      "id": "b1-azione-nuzhno-ili-obychno",
+      "url": "/livello_elementare/azione/nuzhno-ili-obychno/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "aspetto/perfettivo-vs-imperfettivo",
+        "modali/nuzhno"
+      ],
+      "complementi": [],
+      "lessico": [
+        "universita"
+      ],
+      "title_ru": "НУЖНО ИЛИ ОБЫЧНО",
+      "title_it": "Bisogna o di solito: aspetto perfettivo e imperfettivo all'università",
+      "_source": "livello_elementare\\azione\\nuzhno-ili-obychno\\meta.json"
+    },
+    {
+      "id": "b1-azione-nuzhno-ili-obychno-uni-lista-impegni",
+      "url": "/livello_elementare/azione/nuzhno-ili-obychno/uni-lista-impegni/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "aspetto/perfettivo-vs-imperfettivo",
+        "modali/nuzhno"
+      ],
+      "complementi": [],
+      "lessico": [
+        "universita"
+      ],
+      "title_ru": "СПИСОК ДЕЛ СТУДЕНТА",
+      "title_it": "Cosa bisogna fare e cosa facciamo di solito: нужно написать / обычно пишем",
+      "source_doc": "b1-azione-nuzhno-ili-obychno",
+      "focus": "uni-lista-impegni",
+      "_source": "livello_elementare\\azione\\nuzhno-ili-obychno\\uni-lista-impegni\\meta.json"
+    },
     {
       "id": "b1-azione-verbi-collocativi",
       "url": "/livello_elementare/azione/verbi-collocativi/",
