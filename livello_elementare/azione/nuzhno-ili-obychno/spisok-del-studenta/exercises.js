@@ -241,13 +241,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Tre forme al passato: infinito perfettivo / passato imperfettivo / passato perfettivo (написать / писали / написали). 10 frasi originali della pagina 1 e del testo su Тимур portate al passato, diverse da quelle del pannello 4; senza spiegazioni
+// ============================================================
+const p5cards = [
+    { front: "Обычно мы ___ десять–двадцать новых слов к каждому занятию.", back: "учили", distractors: ["выучить", "выучили"] },
+    { front: "Нам нужно было ___ спряжения глаголов к понедельнику.", back: "выучить", distractors: ["учили", "выучили"] },
+    { front: "Обычно в зимнюю сессию мы ___ экзамены до середины февраля.", back: "сдавали", distractors: ["сдать", "сдали"] },
+    { front: "В прошлую сессию нам нужно было ___ пять экзаменов.", back: "сдать", distractors: ["сдавали", "сдали"] },
+    { front: "Обычно мы ___ доклад один раз в месяц.", back: "готовили", distractors: ["подготовить", "подготовили"] },
+    { front: "Доклад о социальных сетях нужно было ___ к пятнице.", back: "подготовить", distractors: ["готовили", "подготовили"] },
+    { front: "К каждому семинару мы ___ доклад или читали статьи.", back: "писали", distractors: ["написать", "написали"] },
+    { front: "Студентам нужно было ___ задание к следующему занятию.", back: "выполнить", distractors: ["выполняли", "выполнили"] },
+    { front: "Студенты редко ___ задания к занятиям!", back: "выполняли", distractors: ["выполнить", "выполнили"] },
+    { front: "Тимуру нужно было ___ два доклада к экзамену.", back: "написать", distractors: ["писал", "написал"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-sds-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-01', exercises: p1exercises }),
     'panel-sds-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-02', exercises: p2exercises }),
     'panel-sds-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-03', exercises: p3exercises }),
-    'panel-sds-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-04', cards: p4cards })
+    'panel-sds-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-04', cards: p4cards }),
+    'panel-sds-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
