@@ -223,12 +223,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Aspetto (scheda, es. 4 «Di solito o bisogna?»): 10 frasi originali. Обычно → imperfettivo al presente (sbagliate: infinito perfettivo, infinito imperfettivo). Нужно → infinito perfettivo (sbagliate: presente imperfettivo, presente perfettivo — come nella scheda, mai l'infinito imperfettivo, che a volte è corretto); con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "Обычно мы ___ десять–двадцать новых слов к каждому занятию.", back: "учим", distractors: ["выучить", "учить"], explanation: "Обычно = abitudine: imperfettivo al presente (мы учим)." },
+    { front: "Нам нужно ___ спряжения глаголов к понедельнику.", back: "выучить", distractors: ["учим", "выучим"], explanation: "Нам нужно + infinito perfettivo: un risultato entro lunedì." },
+    { front: "Обычно в зимнюю сессию мы ___ экзамены до середины февраля.", back: "сдаём", distractors: ["сдать", "сдавать"], explanation: "Обычно = ogni anno: imperfettivo al presente (мы сдаём)." },
+    { front: "Ты знаешь, что в эту сессию нам нужно ___ пять экзаменов?", back: "сдать", distractors: ["сдаём", "сдадим"], explanation: "Questa sessione, cinque esami da superare: нужно + infinito perfettivo (сдать)." },
+    { front: "Обычно мы ___ доклад один раз в месяц.", back: "готовим", distractors: ["подготовить", "готовить"], explanation: "Обычно, один раз в месяц = abitudine: imperfettivo al presente (мы готовим)." },
+    { front: "К пятнице нужно ___ доклад о социальных сетях в интернете.", back: "подготовить", distractors: ["готовим", "подготовим"], explanation: "Un risultato entro venerdì: нужно + infinito perfettivo (подготовить)." },
+    { front: "К каждому семинару мы ___ доклад или читаем статьи.", back: "пишем", distractors: ["написать", "писать"], explanation: "«К каждому семинару» = ogni volta: imperfettivo al presente (мы пишем)." },
+    { front: "Мы обычно ___ несколько статей к семинару.", back: "читаем", distractors: ["прочитать", "читать"], explanation: "Обычно = abitudine: imperfettivo al presente (мы читаем)." },
+    { front: "Тебе нужно ___ эту статью к семинару.", back: "прочитать", distractors: ["читаешь", "прочитаешь"], explanation: "Questo articolo, entro il seminario: тебе нужно + infinito perfettivo (прочитать)." },
+    { front: "Студентам нужно ___ задание к следующему занятию.", back: "выполнить", distractors: ["выполняют", "выполнят"], explanation: "Agli studenti serve finire il compito: студентам нужно + infinito perfettivo (выполнить)." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-vun-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-vun-01', exercises: p1exercises }),
     'panel-vun-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-vun-02', exercises: p2exercises }),
-    'panel-vun-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-vun-03', exercises: p3exercises })
+    'panel-vun-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-vun-03', exercises: p3exercises }),
+    'panel-vun-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
