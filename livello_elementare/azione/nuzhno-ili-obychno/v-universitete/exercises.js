@@ -274,6 +274,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto (scheda, es. 7 «Abbina l'inizio alla fine»): inizio → fine, casi e accordo (к + dativo, до + genitivo, о / в + prepositivo, сессия проходит / экзамены проходят). 8 frasi originali + 2 vecchie da «Обычно или хочу» (не нравится + imperfettivo, начать + imperfettivo); con spiegazioni
+// ============================================================
+const p7cards = [
+    { front: "Нужно подготовиться к…", back: "сессии.", distractors: ["сессию.", "сессия."], explanation: "Подготовиться к + dativo: к сессии." },
+    { front: "Нужно выполнить…", back: "задание к завтрашнему семинару.", distractors: ["заданию к завтрашнему семинару.", "задание к завтрашний семинар."], explanation: "Выполнить что? задание (accusativo). Scadenza: к + dativo (к завтрашнему семинару)." },
+    { front: "К пятнице нужно подготовить доклад…", back: "о социальных сетях в интернете.", distractors: ["о социальные сети в интернете.", "о социальных сетях в интернет."], explanation: "О + prepositivo: о социальных сетях. Dove? в интернете (prepositivo)." },
+    { front: "Обычно в зимнюю сессию мы сдаём экзамены до…", back: "середины февраля.", distractors: ["середина февраля.", "середину февраля."], explanation: "До + genitivo: до середины февраля." },
+    { front: "Сессия…", back: "проходит два раза в год.", distractors: ["проходят два раза в год.", "проходит два раза на год."], explanation: "Сессия (una, singolare) → проходит. Ogni quanto? два раза в год." },
+    { front: "Экзамены…", back: "проходят в аудитории 23 на втором этаже.", distractors: ["проходит в аудитории 23 на втором этаже.", "проходят в аудиторию 23 на втором этаже."], explanation: "Экзамены (plurale) → проходят. Dove? в + prepositivo: в аудитории." },
+    { front: "Нам нужно подготовиться к последнему экзамену и закончить зимнюю…", back: "сессию!", distractors: ["сессии!", "сессия!"], explanation: "Закончить что? accusativo: сессию." },
+    { front: "Нам нужно выучить спряжения…", back: "глаголов к понедельнику.", distractors: ["глаголы к понедельнику.", "глаголов к понедельник."], explanation: "Спряжения di che cosa? genitivo plurale: глаголов. Scadenza: к понедельнику." },
+    { front: "Жене не нравится…", back: "читать Достоевского.", distractors: ["прочитать Достоевского.", "читает Достоевского."], explanation: "Dopo «(не) нравится» l'infinito imperfettivo: un'attività, non un risultato." },
+    { front: "Андрей хочет начать…", back: "заниматься спортом.", distractors: ["заняться спортом.", "занимается спортом."], explanation: "Dopo «начать» sempre l'infinito imperfettivo: начать заниматься." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -282,7 +299,8 @@ const initializers = {
     'panel-vun-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-vun-03', exercises: p3exercises }),
     'panel-vun-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-04', cards: p4cards }),
     'panel-vun-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-05', cards: p5cards }),
-    'panel-vun-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-06', cards: p6cards })
+    'panel-vun-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-06', cards: p6cards }),
+    'panel-vun-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
