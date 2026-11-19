@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T22:10:18.682Z",
-  "count": 31,
+  "generated": "2026-11-19T06:43:50.810Z",
+  "count": 32,
   "pages": [
     {
       "id": "b1-azione-verbi-collocativi",
@@ -238,6 +238,25 @@
       "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni",
       "focus": "anno-decenni",
       "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\anni\\anno-decenni\\meta.json"
+    },
+    {
+      "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni-anno-fa-e-tra",
+      "url": "/livello_elementare/luogo-e-tempo/complemento-di-tempo/complemento-di-tempo-determinato/anni/anno-fa-e-tra/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "tempo-determinato"
+      ],
+      "lessico": [],
+      "title_ru": "ГОД НАЗАД, ЧЕРЕЗ ГОД",
+      "title_it": "Un anno fa, tra un anno: два года назад / через два года",
+      "source_doc": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni",
+      "focus": "anno-fa-e-tra",
+      "_source": "livello_elementare\\luogo-e-tempo\\complemento-di-tempo\\complemento-di-tempo-determinato\\anni\\anno-fa-e-tra\\meta.json"
     },
     {
       "id": "b1-luogo-e-tempo-complemento-di-tempo-determinato-anni-anno-fatto-o-momento",
