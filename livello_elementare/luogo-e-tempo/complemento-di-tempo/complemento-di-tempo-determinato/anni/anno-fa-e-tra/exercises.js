@@ -222,12 +222,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Nuovo: Сколько лет назад? Через сколько лет? Когда? → … назад / через …, год / года / лет, ordine delle parole; con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "(2023; сейчас 2026) — Сколько лет назад ты переехал в Италию?", back: "Три года назад", distractors: ["Через три года", "Три лет назад"], explanation: "Passato (переехал): назад. Con 2–4: года." },
+    { front: "(2031; сейчас 2026) — Через сколько лет вы вернётесь в Россию?", back: "Через пять лет", distractors: ["Пять лет назад", "Через пять года"], explanation: "Futuro (вернётесь): через. Con 5–20: лет." },
+    { front: "(2025; сейчас 2026) — Когда ты купил эту машину?", back: "Год назад", distractors: ["Через год", "Один года назад"], explanation: "Con 1 di solito senza «один»: год назад = un anno fa." },
+    { front: "(2005; сейчас 2026) — Сколько лет назад вы познакомились?", back: "Двадцать один год назад", distractors: ["Двадцать один года назад", "Двадцать один лет назад"], explanation: "21 si comporta come 1: двадцать один год." },
+    { front: "(2027; сейчас 2026) — Когда у вас будет свадьба?", back: "Через год", distractors: ["Год назад", "После года"], explanation: "Tra un anno = через год. «После года» non vuol dire «tra un anno»." },
+    { front: "(2016; сейчас 2026) — Когда ты в первый раз был в Москве?", back: "Десять лет назад", distractors: ["Десять года назад", "Через десять лет"], explanation: "Passato: назад. Con 10: лет." },
+    { front: "(2048; сейчас 2026) — Через сколько лет ты выйдешь на пенсию?", back: "Через двадцать два года", distractors: ["Через двадцать два лет", "Двадцать два года назад"], explanation: "22 si comporta come 2: двадцать два года." },
+    { front: "(1926; сейчас 2026) — Сколько лет назад построили этот дом?", back: "Сто лет назад", distractors: ["Сто года назад", "Через сто лет"], explanation: "Con 100: лет. Сто лет назад = cento anni fa." },
+    { front: "(2024; сейчас 2026) — Когда родилась твоя дочь?", back: "Два года назад", distractors: ["Два лет назад", "Назад два года"], explanation: "Ordine come in italiano: prima il numero, poi назад (due anni fa)." },
+    { front: "(2029; сейчас 2026) — Через сколько лет сын окончит школу?", back: "Через три года", distractors: ["Через три лет", "Три года через"], explanation: "Ordine come in italiano: через prima del numero (tra tre anni)." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-aft-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-01', exercises: p1exercises }),
     'panel-aft-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-02', exercises: p2exercises }),
-    'panel-aft-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-03', exercises: p3exercises })
+    'panel-aft-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-aft-03', exercises: p3exercises }),
+    'panel-aft-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-aft-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
