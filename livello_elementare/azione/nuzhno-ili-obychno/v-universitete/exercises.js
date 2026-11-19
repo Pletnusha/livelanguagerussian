@@ -89,10 +89,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Lessico (scheda, es. 2 «Le parole dell'università»): il nome giusto nella forma giusta — 10 frasi originali dei PDF dell'università; sbagliate: stessa parola in un altro caso + parola sbagliata; senza spiegazioni
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно мы учим десять–двадцать новых {{1}} к каждому занятию.",
+        words: ["слова", "слов", "экзаменов"],
+        correctAnswers: { 1: "слов" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "{{1}} проходит два раза в год.",
+        words: ["Доклад", "Сессию", "Сессия"],
+        correctAnswers: { 1: "Сессия" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Экзамены проходят в {{1}} 23 на втором этаже.",
+        words: ["сессии", "аудиторию", "аудитории"],
+        correctAnswers: { 1: "аудитории" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Привет! Сколько {{1}} у нас в эту сессию? — Привет! Обычно мы сдаём три, но в эту сессию их пять!",
+        words: ["экзаменов", "экзамены", "слов"],
+        correctAnswers: { 1: "экзаменов" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "К каждому {{1}} мы пишем доклад или читаем статьи.",
+        words: ["семинара", "семинару", "этажу"],
+        correctAnswers: { 1: "семинару" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно мы готовим {{1}} один раз в месяц, но доклад о социальных сетях нужно подготовить к пятнице.",
+        words: ["доклад", "сессию", "доклада"],
+        correctAnswers: { 1: "доклад" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно выполнить {{1}} к завтрашнему семинару.",
+        words: ["задание", "заданию", "экзамен"],
+        correctAnswers: { 1: "задание" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Тебе нужно прочитать эту {{1}} к семинару.",
+        words: ["сессию", "статья", "статью"],
+        correctAnswers: { 1: "статью" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно я беру {{1}} лекций у Ольги.",
+        words: ["экзамен", "конспект", "конспекта"],
+        correctAnswers: { 1: "конспект" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Сколько глаголов? — Много {{1}}.",
+        words: ["глаголы", "экзаменов", "глаголов"],
+        correctAnswers: { 1: "глаголов" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-vun-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-vun-01', exercises: p1exercises })
+    'panel-vun-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-vun-01', exercises: p1exercises }),
+    'panel-vun-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-vun-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
