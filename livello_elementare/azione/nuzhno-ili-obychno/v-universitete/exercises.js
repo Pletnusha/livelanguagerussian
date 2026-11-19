@@ -240,13 +240,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Aspetto (scheda, es. 5 «Abitudine o risultato entro una scadenza?»): tre forme dello stesso verbo — infinito imperfettivo, infinito perfettivo, presente. 10 frasi originali; dopo нужно l'infinito imperfettivo è sbagliato solo con scadenza + oggetto concreto (come nella scheda); senza spiegazioni
+// ============================================================
+const p5cards = [
+    { front: "Нужно ___ задание к завтрашнему семинару.", back: "выполнить", distractors: ["выполняем", "выполнять"] },
+    { front: "— Сколько экзаменов у нас в эту сессию? — Обычно мы ___ три, но в эту сессию их пять!", back: "сдаём", distractors: ["сдать", "сдавать"] },
+    { front: "Обычно мы готовим доклад один раз в месяц, но доклад о социальных сетях нужно ___ к пятнице.", back: "подготовить", distractors: ["готовить", "готовим"] },
+    { front: "К каждому семинару мы пишем доклад или ___ статьи.", back: "читаем", distractors: ["читать", "прочитать"] },
+    { front: "Нам нужно ___ спряжения глаголов к понедельнику.", back: "выучить", distractors: ["учить", "учим"] },
+    { front: "Обычно мы ___ десять–двадцать новых слов к каждому занятию.", back: "учим", distractors: ["выучить", "учить"] },
+    { front: "Нам нужно ___ доклад к семинару.", back: "написать", distractors: ["писать", "пишем"] },
+    { front: "Мы обычно ___ доклады к семинару.", back: "пишем", distractors: ["писать", "написать"] },
+    { front: "Нам нужно подготовиться к последнему экзамену и ___ зимнюю сессию!", back: "закончить", distractors: ["заканчивать", "заканчиваем"] },
+    { front: "Обычно мы ___ сдавать сессию к Новому году.", back: "заканчиваем", distractors: ["закончить", "заканчивать"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-vun-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-vun-01', exercises: p1exercises }),
     'panel-vun-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-vun-02', exercises: p2exercises }),
     'panel-vun-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-vun-03', exercises: p3exercises }),
-    'panel-vun-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-04', cards: p4cards })
+    'panel-vun-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-04', cards: p4cards }),
+    'panel-vun-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-vun-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
