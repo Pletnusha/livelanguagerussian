@@ -224,12 +224,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Aspetto al passato, 5 coppie dalla lista originale: обычно / всегда / редко + passato imperfettivo (sbagliate: passato perfettivo, infinito perfettivo) ↔ нужно было + infinito perfettivo (sbagliate: passato imperfettivo, passato perfettivo — mai l'infinito imperfettivo); con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "Обычно мы ___ доклад к экзамену.", back: "писали", distractors: ["написали", "написать"], explanation: "Обычно = abitudine al passato: imperfettivo (мы писали)." },
+    { front: "Нам нужно было ___ доклад к экзамену.", back: "написать", distractors: ["писали", "написали"], explanation: "Нужно было + infinito perfettivo: una cosa da finire. Dopo «нужно было» mai il passato." },
+    { front: "Она всегда ___ новые слова к следующей лекции.", back: "учила", distractors: ["выучила", "выучить"], explanation: "Всегда = ogni volta: imperfettivo al passato (она учила)." },
+    { front: "Ей нужно было ___ новые слова к следующей лекции.", back: "выучить", distractors: ["учила", "выучила"], explanation: "A lei serviva un risultato: ей нужно было + infinito perfettivo (выучить)." },
+    { front: "Мы редко ___ к экзамену за месяц!", back: "готовились", distractors: ["подготовились", "подготовиться"], explanation: "Редко = poche volte: anche così è un'abitudine → imperfettivo (мы готовились)." },
+    { front: "Нам нужно было ___ к последнему экзамену.", back: "подготовиться", distractors: ["готовились", "подготовились"], explanation: "Un esame preciso, un risultato: нужно было + infinito perfettivo (подготовиться)." },
+    { front: "Он всегда ___ статьи к экзамену.", back: "читал", distractors: ["прочитал", "прочитать"], explanation: "Всегда = abitudine: imperfettivo al passato (он читал)." },
+    { front: "Ему нужно было ___ статьи к экзамену.", back: "прочитать", distractors: ["читал", "прочитал"], explanation: "A lui serviva leggerli tutti: ему нужно было + infinito perfettivo (прочитать)." },
+    { front: "Лена: «Обычно я ___ конспект лекций у Ольги».", back: "брала", distractors: ["взяла", "взять"], explanation: "Обычно = abitudine: imperfettivo al passato. Parla Lena → я брала (femminile)." },
+    { front: "Мне нужно было ___ конспект лекций у Ольги.", back: "взять", distractors: ["брала", "взяла"], explanation: "Una volta, un risultato: мне нужно было + infinito perfettivo (взять)." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-sds-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-01', exercises: p1exercises }),
     'panel-sds-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-02', exercises: p2exercises }),
-    'panel-sds-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-03', exercises: p3exercises })
+    'panel-sds-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sds-03', exercises: p3exercises }),
+    'panel-sds-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-sds-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
