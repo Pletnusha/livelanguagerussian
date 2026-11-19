@@ -158,11 +158,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Nuovo, gli appunti di Olga (dialogo Лена — Ольга + gruppo): нужно + perfettivo ↔ каждую неделю / обычно / часто + imperfettivo; tutte le persone (я, ты, мы, вы, они), senza spiegazioni
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Оля, мне нужно {{1}} у тебя конспект вчерашней лекции.",
+        words: ["взять", "возьму", "брать"],
+        correctAnswers: { 1: "взять" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Опять? Ты каждую неделю {{1}} у меня конспекты!",
+        words: ["возьмёшь", "берёт", "берёшь"],
+        correctAnswers: { 1: "берёшь" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Мы с Катей обычно {{1}} твои конспекты вместе.",
+        words: ["прочитаем", "читаем", "читают"],
+        correctAnswers: { 1: "читаем" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Хорошо. Но к семинару тебе нужно {{1}} весь конспект.",
+        words: ["читать", "прочитаешь", "прочитать"],
+        correctAnswers: { 1: "прочитать" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Ольга обычно {{1}} конспект очень подробно.",
+        words: ["пишет", "пишут", "напишет"],
+        correctAnswers: { 1: "пишет" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "К завтрашнему тесту Кате нужно {{1}} по конспекту все даты.",
+        words: ["выучить", "учить", "выучит"],
+        correctAnswers: { 1: "выучить" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Тимур часто {{1}} задания вместе с Ольгой.",
+        words: ["выполнит", "выполняет", "выполняют"],
+        correctAnswers: { 1: "выполняет" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Вам нужно {{1}} это упражнение до конца занятия, — говорит профессор.",
+        words: ["выполните", "выполнять", "выполнить"],
+        correctAnswers: { 1: "выполнить" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Ребята, к пятнице вам нужно {{1}} доклады и прислать их мне.",
+        words: ["готовить", "подготовить", "подготовите"],
+        correctAnswers: { 1: "подготовить" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "В группе Ольги студенты обычно {{1}} доклады вдвоём.",
+        words: ["готовят", "готовит", "подготовят"],
+        correctAnswers: { 1: "готовят" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-uli-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-uli-01', exercises: p1exercises }),
-    'panel-uli-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-uli-02', exercises: p2exercises })
+    'panel-uli-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-uli-02', exercises: p2exercises }),
+    'panel-uli-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-uli-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
