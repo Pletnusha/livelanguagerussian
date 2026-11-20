@@ -293,6 +293,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Misto, chi fa che cosa in ufficio: il direttore назначает встречи, встречается с клиентами, firma (подпись); l'assistente (Катя) составляет график встреч, отвечает на звонки, porta i documenti на подпись; i colleghi звонят партнёрам, получают ответ, приходят на собрание. Fonti: «нужно обычно в офисе», dialoghi «Срочно», MICRO «в офисе», «Катя в офисе» (doveri al presente). 8 nuove + 2 vecchie (профессор принимает / мы сдаём экзамены). Sbagliate = verbo dell'altro ruolo + forma; senza spiegazioni
+// ============================================================
+const p8cards = [
+    { front: "Обычно директор ___ встречи в первой половине дня.", back: "назначает", distractors: ["составляет", "назначают"] },
+    { front: "Директор редко ___ с клиентами.", back: "встречается", distractors: ["звонит", "встречаются"] },
+    { front: "Нужно ___ документы директору на подпись.", back: "отнести", distractors: ["подписать", "относим"] },
+    { front: "Катя ___ график встреч для директора.", back: "составляет", distractors: ["назначает", "составляют"] },
+    { front: "Катя ___ на звонки.", back: "отвечает", distractors: ["звонит", "отвечаю"] },
+    { front: "Сегодня нужно ___ партнёрам и назначить встречи.", back: "позвонить", distractors: ["подписать", "позвоним"] },
+    { front: "Нужно отправить е-мейл и ___ ответ.", back: "получить", distractors: ["назначить", "получим"] },
+    { front: "Сотрудникам нужно ___ на собрание.", back: "прийти", distractors: ["подписать", "придут"] },
+    { front: "Иногда профессор ___ экзамен до позднего вечера.", back: "принимает", distractors: ["сдаёт", "принимают"] },
+    { front: "Обычно в зимнюю сессию мы ___ экзамены до середины февраля.", back: "сдаём", distractors: ["принимаем", "сдаёт"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -302,7 +319,8 @@ const initializers = {
     'panel-vof-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-04', cards: p4cards }),
     'panel-vof-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-05', cards: p5cards }),
     'panel-vof-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-06', cards: p6cards }),
-    'panel-vof-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-07', cards: p7cards })
+    'panel-vof-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-07', cards: p7cards }),
+    'panel-vof-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
