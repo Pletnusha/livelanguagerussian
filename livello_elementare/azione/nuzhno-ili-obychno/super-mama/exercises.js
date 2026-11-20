@@ -225,12 +225,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Aspetto: 5 coppie da «список дел молодой мамы» e dai dialoghi «Супермама» — стирать / постирать, мыть / вымыть, звонить / позвонить, покупать / купить, готовить / приготовить. Presente imperfettivo (sbagliate: due infiniti) ↔ нужно + infinito perfettivo (sbagliate: presente e futuro, mai l'infinito imperfettivo). Niente гладить / погладить: in MATCH «погладить рубашки» e «постирать вещи» sarebbero corretti entrambi; con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "Обычно я ___ рубашки в стиральной машине.", back: "стираю", distractors: ["постирать", "стирать"], explanation: "Обычно = abitudine: imperfettivo al presente (я стираю)." },
+    { front: "Сегодня нужно ___ рубашки в стиральной машине.", back: "постирать", distractors: ["стираю", "постираю"], explanation: "Oggi, una cosa da finire: нужно + perfettivo (по-стирать)." },
+    { front: "Она ___ полы два раза в неделю.", back: "моет", distractors: ["вымыть", "мыть"], explanation: "Два раза в неделю = abitudine: imperfettivo al presente (она моет)." },
+    { front: "Сегодня нужно ___ полы.", back: "вымыть", distractors: ["мою", "вымою"], explanation: "Oggi, un risultato: нужно + perfettivo (вы-мыть)." },
+    { front: "Она ___ педиатру пятый раз!", back: "звонит", distractors: ["позвонить", "звонить"], explanation: "Пятый раз = un'azione che si ripete: imperfettivo al presente (она звонит)." },
+    { front: "Сегодня нужно ___ педиатру.", back: "позвонить", distractors: ["звоню", "позвоню"], explanation: "Una telefonata da fare oggi: нужно + perfettivo (по-звонить)." },
+    { front: "Мы ___ продукты на рынке.", back: "покупаем", distractors: ["купить", "покупать"], explanation: "Dove facciamo di solito la spesa: abitudine → imperfettivo al presente (мы покупаем)." },
+    { front: "Сегодня нужно ___ продукты на рынке.", back: "купить", distractors: ["покупаю", "куплю"], explanation: "Oggi, una cosa da fare: нужно + perfettivo (купить — un'altra radice, non un prefisso!)." },
+    { front: "— Ты что делаешь сегодня вечером? — После вечеринки мою посуду, убираю квартиру, ___ ужин.", back: "готовлю", distractors: ["приготовить", "готовить"], explanation: "Il presente russo ha solo l'imperfettivo: мою, убираю, готовлю (anche per stasera)." },
+    { front: "До обеда нужно сходить за продуктами, ___ обед, постирать бельё.", back: "приготовить", distractors: ["готовлю", "приготовлю"], explanation: "Una lista di cose da finire: нужно + perfettivo (при-готовить)." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-smm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-01', exercises: p1exercises }),
     'panel-smm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-02', exercises: p2exercises }),
-    'panel-smm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-03', exercises: p3exercises })
+    'panel-smm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-03', exercises: p3exercises }),
+    'panel-smm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
