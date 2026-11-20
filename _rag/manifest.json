@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-20T17:06:25.569Z",
-  "count": 40,
+  "generated": "2026-11-20T19:55:45.051Z",
+  "count": 41,
   "pages": [
     {
       "id": "b1-azione-nuzhno-ili-obychno",
@@ -169,6 +169,29 @@
       "title_ru": "ИДТИ / ХОДИТЬ С ПРИСТАВКАМИ",
       "title_it": "Andare a piedi con i prefissi: войти, выйти, прийти, уйти, подойти, отойти, дойти, зайти, перейти, пройти, обойти",
       "_source": "livello_di_base\\azione\\verbi-di-moto-con-prefissi\\idti-xodit-prefissi\\meta.json"
+    },
+    {
+      "id": "b1-azione-verbi-di-moto-con-prefissi-idti-xodit-prefissi-arrivare-andarsene",
+      "url": "/livello_di_base/azione/verbi-di-moto-con-prefissi/idti-xodit-prefissi/arrivare-andarsene/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "verbi-di-moto/prefissi",
+        "aspetto/perfettivo-vs-imperfettivo"
+      ],
+      "complementi": [
+        "moto-a-luogo",
+        "moto-da-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "ПРИЙТИ ИЛИ УЙТИ",
+      "title_it": "Arrivare o andarsene: приходить / прийти ↔ уходить / уйти",
+      "source_doc": "b1-azione-verbi-di-moto-con-prefissi-idti-xodit-prefissi",
+      "focus": "arrivare-andarsene",
+      "_source": "livello_di_base\\azione\\verbi-di-moto-con-prefissi\\idti-xodit-prefissi\\arrivare-andarsene\\meta.json"
     },
     {
       "id": "b1-azione-verbi-di-moto-con-prefissi-idti-xodit-prefissi-entrare-uscire",
