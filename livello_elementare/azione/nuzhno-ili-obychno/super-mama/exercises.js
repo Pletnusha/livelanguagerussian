@@ -91,10 +91,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Lessico: le faccende di casa — il nome giusto nella forma giusta. 10 frasi originali («список дел молодой мамы», dialoghi «Супермама», «нужно-обычно Дома»), solo presente e нужно + perfettivo; sbagliate = stessa parola in un altro caso + oggetto che con quel verbo non va (стирать полы, мыть рубашки); senza spiegazioni
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно я стираю {{1}} в стиральной машине.",
+        words: ["полы", "рубашек", "рубашки"],
+        correctAnswers: { 1: "рубашки" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я всегда глажу детские {{1}}.",
+        words: ["вещи", "вещей", "зубы"],
+        correctAnswers: { 1: "вещи" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Она моет {{1}} два раза в неделю.",
+        words: ["рубашки", "полы", "полов"],
+        correctAnswers: { 1: "полы" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Как часто вы ходите в {{1}}?",
+        words: ["продукты", "парикмахерскую", "парикмахерской"],
+        correctAnswers: { 1: "парикмахерскую" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Она звонит {{1}} пятый раз!",
+        words: ["педиатра", "педиатр", "педиатру"],
+        correctAnswers: { 1: "педиатру" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы покупаем {{1}} на рынке.",
+        words: ["продукты", "продуктов", "посуду"],
+        correctAnswers: { 1: "продукты" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно вымыть {{1}} после вечеринки.",
+        words: ["посуду", "посуда", "рубашки"],
+        correctAnswers: { 1: "посуду" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно убрать {{1}}.",
+        words: ["зубы", "квартира", "квартиру"],
+        correctAnswers: { 1: "квартиру" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "После обеда нужно вымыть {{1}}.",
+        words: ["бельё", "окна", "окон"],
+        correctAnswers: { 1: "окна" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мой сын обычно умывается, чистит {{1}}, ест шоколад.",
+        words: ["зубы", "зубов", "педиатру"],
+        correctAnswers: { 1: "зубы" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-smm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-01', exercises: p1exercises })
+    'panel-smm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-01', exercises: p1exercises }),
+    'panel-smm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
