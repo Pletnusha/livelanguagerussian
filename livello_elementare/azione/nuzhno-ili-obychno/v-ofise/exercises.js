@@ -259,6 +259,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto (scheda, es. 8 «Scegli la fine giusta»): inizio → fine. 6 nuove (обычно мы / я обычно / директор редко + imperfettivo; нам сегодня нужно + perfettivo; встречу заказчику; три встречи) + 4 vecchie (pagina «В университете»: пять экзаменов, много глаголов, десять–двадцать слов; «Обычно или хочу»: нравится читать). Inizi scelti in modo che in MATCH ogni fine stia solo con il suo inizio (persona, caso); senza spiegazioni
+// ============================================================
+const p6cards = [
+    { front: "Обычно мы…", back: "готовим отчёт в мае.", distractors: ["нужно подготовить отчёт в мае.", "подготовить отчёт в мае."] },
+    { front: "Я обычно…", back: "заканчиваю отчёт к концу недели.", distractors: ["нужно закончить отчёт к концу недели.", "закончить отчёт к концу недели."] },
+    { front: "Директор редко…", back: "встречается с клиентами.", distractors: ["встретиться с клиентами.", "встречаются с клиентами."] },
+    { front: "Нам сегодня…", back: "нужно составить договоры.", distractors: ["составляем договоры.", "составим договоры."] },
+    { front: "Коллеге нужно назначить встречу…", back: "заказчику.", distractors: ["заказчик.", "заказчиком."] },
+    { front: "— Тебе нужно проверить эти договоры. — Я не успею, у меня три…", back: "встречи сегодня.", distractors: ["встреч сегодня.", "встреча сегодня."] },
+    { front: "Ты знаешь, что в эту сессию нам нужно сдать пять…", back: "экзаменов?", distractors: ["экзамены?", "экзамена?"] },
+    { front: "— Сколько глаголов? — Много…", back: "глаголов.", distractors: ["глаголы.", "глагола."] },
+    { front: "Обычно мы учим десять–двадцать новых…", back: "слов к каждому занятию.", distractors: ["слова к каждому занятию.", "слово к каждому занятию."] },
+    { front: "Андрею нравится…", back: "читать Достоевского.", distractors: ["прочитать Достоевского.", "читает Достоевского."] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -266,7 +283,8 @@ const initializers = {
     'panel-vof-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-02', exercises: p2exercises }),
     'panel-vof-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-03', exercises: p3exercises }),
     'panel-vof-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-04', cards: p4cards }),
-    'panel-vof-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-05', cards: p5cards })
+    'panel-vof-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-05', cards: p5cards }),
+    'panel-vof-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
