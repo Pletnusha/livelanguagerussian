@@ -241,13 +241,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Nuovo: прийти / уйти — «Я ухожу!»: presente 5, futuro 2, passato 3; frasi dei pannelli 1–3 in formato carta (senza spiegazioni)
+// ============================================================
+const p5cards = [
+    { front: "Я не могу и не хочу всё это выслушивать! Я ___!", back: "ухожу", distractors: ["прихожу", "ухожю"] },
+    { front: "Я ___, нужно купить что-нибудь?", back: "ухожу", distractors: ["прихожу", "ухажу"] },
+    { front: "— Уже ___? — Да, мне пора, завтра рано вставать!", back: "уходишь", distractors: ["приходишь", "уходеш"] },
+    { front: "Каждое утро я ___ в офис первой и включаю кофемашину.", back: "прихожу", distractors: ["ухожу", "прихажу"] },
+    { front: "Поезд на Москву ___ в восемь пятнадцать с третьего пути.", back: "уходит", distractors: ["приходит", "уходет"] },
+    { front: "Когда ты ___ к нам на обед?", back: "придёшь", distractors: ["уйдёшь", "прийдёшь"] },
+    { front: "Мы завтра устраиваем вечеринку. Вы ___ к нам?", back: "придёте", distractors: ["уйдёте", "прийдёте"] },
+    { front: "Они ___ вчера с вечеринки первыми.", back: "ушли", distractors: ["пришли", "ушлы"] },
+    { front: "— Ты слышала, что вчера случилось на вечеринке в ресторане? — Нет, я ___ из ресторана рано.", back: "ушла", distractors: ["вошла", "ушола"] },
+    { front: "Наконец он ___ в офис — на полчаса позже, чем обычно.", back: "пришёл", distractors: ["ушёл", "пришол"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-aa-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-aa-01', exercises: p1exercises }),
     'panel-aa-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-aa-02', exercises: p2exercises }),
     'panel-aa-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-aa-03', exercises: p3exercises }),
-    'panel-aa-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-aa-04', cards: p4cards })
+    'panel-aa-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-aa-04', cards: p4cards }),
+    'panel-aa-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-aa-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
