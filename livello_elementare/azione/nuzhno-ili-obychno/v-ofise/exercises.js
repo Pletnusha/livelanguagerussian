@@ -91,10 +91,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Lessico (scheda, es. 2 «Le parole dell'ufficio» + es. 8): il nome giusto nella forma giusta — 10 frasi originali; sbagliate = stessa parola in un altro caso + parola che non può stare lì (mai una che sia anche corretta); senza spiegazioni
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно подготовить {{1}} к понедельнику.",
+        words: ["отчёта", "отчёт", "отчётом"],
+        correctAnswers: { 1: "отчёт" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы редко составляем {{1}}.",
+        words: ["договоры", "договоров", "встречи"],
+        correctAnswers: { 1: "договоры" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы всегда проверяем {{1}} заранее.",
+        words: ["обеда", "документов", "документы"],
+        correctAnswers: { 1: "документы" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно директор назначает {{1}} в первой половине дня.",
+        words: ["встреч", "договоры", "встречи"],
+        correctAnswers: { 1: "встречи" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы редко начинаем {{1}} к презентации перед выходными.",
+        words: ["подготовка", "подготовку", "заказчика"],
+        correctAnswers: { 1: "подготовку" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Вам нужно встретиться с {{1}} в понедельник.",
+        words: ["заказчиком", "заказчик", "отчётом"],
+        correctAnswers: { 1: "заказчиком" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Им нужно прочитать отчёт до {{1}}.",
+        words: ["обеда", "обед", "обедом"],
+        correctAnswers: { 1: "обеда" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Тебе нужно проверить эти договоры. — Я не успею, у меня три {{1}} сегодня.",
+        words: ["встреча", "встреч", "встречи"],
+        correctAnswers: { 1: "встречи" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Директор редко встречается с {{1}}.",
+        words: ["клиенты", "клиентами", "договорами"],
+        correctAnswers: { 1: "клиентами" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Коллеге нужно назначить встречу {{1}}.",
+        words: ["заказчик", "отчёту", "заказчику"],
+        correctAnswers: { 1: "заказчику" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-vof-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-01', exercises: p1exercises })
+    'panel-vof-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-01', exercises: p1exercises }),
+    'panel-vof-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
