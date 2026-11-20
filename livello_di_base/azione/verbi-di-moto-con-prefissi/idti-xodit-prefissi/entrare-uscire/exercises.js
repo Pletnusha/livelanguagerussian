@@ -224,12 +224,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Nuovo: aspetto — входить / войти, выходить / выйти: forme (tabelle СПРЯЖЕНИЯ) + abitudine / processo, con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "входить → я …", back: "вхожу", distractors: ["войду", "входю"], explanation: "Входить (НСВ), presente: вхожу, входишь… «д» → «ж» alla 1ª persona." },
+    { front: "выходить → я …", back: "выхожу", distractors: ["выйду", "выходю"], explanation: "Выходить: выхожу, выходишь… come входить." },
+    { front: "войти → он, прошедшее время …", back: "вошёл", distractors: ["входил", "войшёл"], explanation: "Passato di войти: вошёл, вошла, вошли (senza «й»)." },
+    { front: "выйти → она, прошедшее время …", back: "вышла", distractors: ["выходила", "выйшла"], explanation: "Passato di выйти: вышел, вышла, вышли." },
+    { front: "войти → я, будущее время …", back: "войду", distractors: ["вхожу", "войдю"], explanation: "Войти (СВ) non ha presente: войду = entrerò." },
+    { front: "выйти → мы, будущее время …", back: "выйдем", distractors: ["выходим", "выйдим"], explanation: "Futuro di выйти: выйду, выйдешь, выйдем. Accento sempre su вы́-." },
+    { front: "Когда начальник ___ в офис, все замирают.", back: "входит", distractors: ["войдёт", "вхадит"], explanation: "Ogni volta (abitudine) → НСВ: входит." },
+    { front: "Извини, не могу больше говорить, я ___ в магазин.", back: "вхожу", distractors: ["войду", "входю"], explanation: "Sto entrando adesso (processo) → НСВ: вхожу." },
+    { front: "Каждый раз, когда мы ___ в ресторан, нас встречал один и тот же официант.", back: "входили", distractors: ["вошли", "вхадили"], explanation: "Каждый раз = azione ripetuta → НСВ: входили." },
+    { front: "Она всегда ___ ко мне в комнату без стука.", back: "входит", distractors: ["вошла", "вхадит"], explanation: "Всегда = abitudine → НСВ: входит." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-eu-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-eu-01', exercises: p1exercises }),
     'panel-eu-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-eu-02', exercises: p2exercises }),
-    'panel-eu-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-eu-03', exercises: p3exercises })
+    'panel-eu-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-eu-03', exercises: p3exercises }),
+    'panel-eu-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-eu-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
