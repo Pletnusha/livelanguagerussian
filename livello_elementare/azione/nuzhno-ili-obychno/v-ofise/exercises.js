@@ -158,11 +158,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Quando? Ogni quanto? Entro quando? (scheda, es. 3, senza domande tra parentesi — regola 7.1) + «чем ты занимаешься на работе»: 10 frasi originali; sbagliate solo se davvero sbagliate (на прошлой неделе con il presente, сегодня con обычно / всегда) o errori di forma; senza spiegazioni
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно подготовить отчёт {{1}}.",
+        words: ["редко", "к понедельника", "к понедельнику"],
+        correctAnswers: { 1: "к понедельнику" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно мы готовим отчёт {{1}}.",
+        words: ["сегодня", "в мае", "в май"],
+        correctAnswers: { 1: "в мае" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы {{1}} составляем договоры.",
+        words: ["редко", "редкий", "на прошлой неделе"],
+        correctAnswers: { 1: "редко" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно директор назначает встречи {{1}}.",
+        words: ["в первой половине дня", "на прошлой неделе", "в первой половине дню"],
+        correctAnswers: { 1: "в первой половине дня" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мне нужно закончить отчёт {{1}}.",
+        words: ["всегда", "до обед", "до обеда"],
+        correctAnswers: { 1: "до обеда" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы редко начинаем подготовку к презентации {{1}}.",
+        words: ["перед выходные", "перед выходными", "на прошлой неделе"],
+        correctAnswers: { 1: "перед выходными" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы всегда проверяем документы {{1}}.",
+        words: ["сегодня", "заранее", "на прошлой неделе"],
+        correctAnswers: { 1: "заранее" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Вам нужно встретиться с заказчиком {{1}}.",
+        words: ["в понедельнике", "в понедельника", "в понедельник"],
+        correctAnswers: { 1: "в понедельник" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мне нужно позвонить коллеге {{1}}.",
+        words: ["после обеда", "после обед", "после обедом"],
+        correctAnswers: { 1: "после обеда" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я звоню им обычно {{1}}.",
+        words: ["по понедельник", "по понедельникам", "на прошлой неделе"],
+        correctAnswers: { 1: "по понедельникам" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-vof-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-01', exercises: p1exercises }),
-    'panel-vof-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-02', exercises: p2exercises })
+    'panel-vof-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-02', exercises: p2exercises }),
+    'panel-vof-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
