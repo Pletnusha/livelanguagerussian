@@ -90,10 +90,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Nuovo: войти / выйти, входить / выходить — ufficio, banca, casa (senza spiegazioni)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Перед дверью стояла очередь — я подошла, подождала и {{1}} в банк.",
+        words: ["вышла", "вошла", "войшла"],
+        correctAnswers: { 1: "вошла" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Как только дверь открылась, вся шумная группа {{1}} в банк и начала нажимать на кнопки автомата электронной очереди.",
+        words: ["вышла", "вашла", "вошла"],
+        correctAnswers: { 1: "вошла" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "В офис {{1}} Андрей, который оживлённо разговаривал с кем-то по телефону, и прошёл к себе в кабинет.",
+        words: ["вошёл", "вышел", "вошол"],
+        correctAnswers: { 1: "вошёл" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Эдуардо {{1}} в кабинет начальника таможни. В кабинете никого не было.",
+        words: ["вошёл", "войшёл", "вышел"],
+        correctAnswers: { 1: "вошёл" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Когда я {{1}} в кабинет к начальнику, он разговаривал по телефону.",
+        words: ["вышел", "вашёл", "вошёл"],
+        correctAnswers: { 1: "вошёл" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Когда мы уже {{1}} из офиса, шеф вспомнил, что нужно закончить документы к утру, и мы вернулись.",
+        words: ["входили", "выходили", "выхадили"],
+        correctAnswers: { 1: "выходили" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Она всегда {{1}} ко мне в комнату без стука.",
+        words: ["выходит", "вхадит", "входит"],
+        correctAnswers: { 1: "входит" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Когда будешь {{1}} из дома, не забудь взять мусор, выкинешь по дороге.",
+        words: ["выходить", "входить", "выхадить"],
+        correctAnswers: { 1: "выходить" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мне нужно {{1}} сейчас, чтобы успеть на поезд.",
+        words: ["войти", "выйти", "выйдти"],
+        correctAnswers: { 1: "выйти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мне нужно {{1}} из дома утром.",
+        words: ["выйти", "выдти", "войти"],
+        correctAnswers: { 1: "выйти" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-eu-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-eu-01', exercises: p1exercises })
+    'panel-eu-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-eu-01', exercises: p1exercises }),
+    'panel-eu-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-eu-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
