@@ -28,8 +28,12 @@ export default class GapTextExercise {
         this.render();
     }
 
+    // Latin letters that look identical to Cyrillic ones (students on an
+    // Italian keyboard type "HA" / "B" for «НА» / «В»). Applied to both the
+    // expected answer and the user input, so comparison stays symmetric.
     normalize(str) {
-        return str.trim().toLowerCase().replace(/ё/g, 'е');
+        const lookalikes = { a: 'а', b: 'в', c: 'с', e: 'е', h: 'н', k: 'к', m: 'м', o: 'о', p: 'р', t: 'т', x: 'х', y: 'у' };
+        return str.trim().toLowerCase().replace(/ё/g, 'е').replace(/[abcehkmoptxy]/g, ch => lookalikes[ch]);
     }
 
     render() {
