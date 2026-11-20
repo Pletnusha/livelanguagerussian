@@ -158,11 +158,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Quando? Ogni quanto? Dove? — 10 frasi originali («список дел молодой мамы», dialoghi «Супермама», «нужно-обычно Дома»), solo presente e нужно + perfettivo; sbagliate = errori di forma o «на прошлой неделе» / «часто» dove non possono stare (mai «поздно», «обычно», «как долго», che sarebbero corretti); senza spiegazioni
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Она моет полы {{1}}.",
+        words: ["на прошлой неделе", "два раза в неделю", "два раза в недели"],
+        correctAnswers: { 1: "два раза в неделю" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно встать очень {{1}}.",
+        words: ["часто", "ранний", "рано"],
+        correctAnswers: { 1: "рано" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Ты же знаешь, что обычно я ложусь {{1}}!",
+        words: ["поздно", "поздний", "на прошлой неделе"],
+        correctAnswers: { 1: "поздно" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "{{1}} нужно сходить за продуктами, приготовить обед, постирать бельё.",
+        words: ["До обеда", "До обед", "На прошлой неделе"],
+        correctAnswers: { 1: "До обеда" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "После {{1}} нужно погладить вещи, убраться, вымыть окна.",
+        words: ["обед", "обедом", "обеда"],
+        correctAnswers: { 1: "обеда" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно вымыть посуду после {{1}}.",
+        words: ["вечеринка", "вечеринки", "вечеринку"],
+        correctAnswers: { 1: "вечеринки" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно я стираю рубашки в {{1}} машине.",
+        words: ["стиральная", "стиральной", "стиральную"],
+        correctAnswers: { 1: "стиральной" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы покупаем продукты на {{1}}.",
+        words: ["рынке", "рынок", "рынка"],
+        correctAnswers: { 1: "рынке" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Как {{1}} вы ходите в парикмахерскую?",
+        words: ["частый", "частое", "часто"],
+        correctAnswers: { 1: "часто" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Мне нужно лечь {{1}}.",
+        words: ["в двух", "в двое", "в два"],
+        correctAnswers: { 1: "в два" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-smm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-01', exercises: p1exercises }),
-    'panel-smm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-02', exercises: p2exercises })
+    'panel-smm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-02', exercises: p2exercises }),
+    'panel-smm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
