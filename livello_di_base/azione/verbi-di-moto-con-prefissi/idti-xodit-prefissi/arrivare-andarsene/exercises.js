@@ -224,12 +224,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Nuovo: aspetto — приходить / прийти, уходить / уйти: forme (tabelle СПРЯЖЕНИЯ) + abitudine / risultato, con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "приходить → я …", back: "прихожу", distractors: ["приду", "приходю"], explanation: "Приходить (НСВ), presente: прихожу, приходишь… «д» → «ж» alla 1ª persona." },
+    { front: "уходить → ты …", back: "уходишь", distractors: ["уйдёшь", "уходешь"], explanation: "Уходить: ухожу, уходишь… come приходить." },
+    { front: "прийти → он, прошедшее время …", back: "пришёл", distractors: ["приходил", "пришол"], explanation: "Passato di прийти: пришёл, пришла, пришли." },
+    { front: "уйти → она, прошедшее время …", back: "ушла", distractors: ["уходила", "ушола"], explanation: "Passato di уйти: ушёл, ушла, ушли." },
+    { front: "прийти → я, будущее время …", back: "приду", distractors: ["прихожу", "прийду"], explanation: "Futuro di прийти: приду, придёшь (senza «й»: non «прийду»)." },
+    { front: "уйти → мы, будущее время …", back: "уйдём", distractors: ["уходим", "уйдим"], explanation: "Futuro di уйти: уйду, уйдёшь, уйдём." },
+    { front: "Он каждый день ___ на работу около девяти.", back: "приходит", distractors: ["придёт", "прихадит"], explanation: "Ogni giorno (abitudine) → НСВ: приходит." },
+    { front: "Каждый раз, когда она ___ от нас, она забывает зонтик.", back: "уходит", distractors: ["уйдёт", "уходет"], explanation: "Каждый раз = azione ripetuta → НСВ: уходит." },
+    { front: "Наконец-то она ___ к нам в гости.", back: "пришла", distractors: ["приходила", "прийшла"], explanation: "Наконец-то = risultato atteso, una volta → СВ: пришла." },
+    { front: "Он ___ от родителей, когда ему было восемнадцать.", back: "ушёл", distractors: ["уходил", "ушол"], explanation: "Un fatto unico nella vita → СВ: ушёл." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-aa-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-aa-01', exercises: p1exercises }),
     'panel-aa-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-aa-02', exercises: p2exercises }),
-    'panel-aa-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-aa-03', exercises: p3exercises })
+    'panel-aa-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-aa-03', exercises: p3exercises }),
+    'panel-aa-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-aa-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
