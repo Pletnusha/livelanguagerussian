@@ -276,6 +276,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Mattina «Уже!»: dialogo 1 (трудный день, уговорить детей), dialogo 5 (тебе нужно умыться — уже) e «Мой сын обычно…» (нужно-обычно Дома). La mamma: нужно + perfettivo (risultato) → il figlio: «Уже!» (il risultato c'è); l'abitudine del figlio: imperfettivo presente. In MATCH un solo infinito intransitivo (встать): проснуться / умыться / позавтракать andrebbero con ogni «нужно ___»; niente «снова» come risposta (andrebbe con «Уже»); con spiegazioni
+// ============================================================
+const p7cards = [
+    { front: "Мой сын обычно ___, чистит зубы, ест шоколад.", back: "умывается", distractors: ["умыться", "умываться"], explanation: "Обычно = ogni mattina: imperfettivo presente. Il -ся resta in tutte e due le forme: умываться / умыться." },
+    { front: "Мой сын обычно умывается, ___ зубы, ест шоколад.", back: "чистит", distractors: ["почистить", "чистить"], explanation: "Abitudine: imperfettivo presente (он чистит). Perfettivo: по-чистить." },
+    { front: "Мой сын обычно умывается, чистит зубы, ___ шоколад и снова чистит зубы.", back: "ест", distractors: ["съесть", "есть"], explanation: "Abitudine: imperfettivo presente (он ест). Perfettivo: с-ъесть." },
+    { front: "— Тебе нужно умыться. — ___!", back: "Уже", distractors: ["Обычно", "Рано"], explanation: "«Уже!» = è già fatto: il risultato c'è. Per questo la mamma dice нужно + perfettivo." },
+    { front: "— …и снова ___ зубы. — Блин!", back: "почистить", distractors: ["чистишь", "почистишь"], explanation: "«…» = (тебе нужно). Снова = ancora una volta, ma con un risultato: perfettivo." },
+    { front: "— …Почистить зубы. — Уже! — …___ шоколад. — Уже!", back: "съесть", distractors: ["ешь", "съешь"], explanation: "Съесть = mangiare tutto (perfettivo con с-). Dopo «нужно» l'infinito perfettivo." },
+    { front: "Ох, трудный день! Нужно ___ очень рано.", back: "встать", distractors: ["встаю", "встану"], explanation: "Встать (perf.) / вставать (imperf., con -ва-: я встаю). Domani mattina, una volta: нужно встать." },
+    { front: "…потому что нужно уговорить ___ проснуться, умыться, почистить зубы.", back: "детей", distractors: ["дети", "детям"], explanation: "Уговорить кого? accusativo plurale animato: детей." },
+    { front: "…потому что нужно ___ детей проснуться, умыться, почистить зубы.", back: "уговорить", distractors: ["уговариваю", "уговорю"], explanation: "Уговорить = convincere (perf., ci si riesce). Imperfettivo: уговаривать." },
+    { front: "— Привет! Как дела? — Привет! Ох, ___ день!", back: "трудный", distractors: ["трудная", "трудное"], explanation: "День è maschile: трудный день — una giornata pesante." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -284,7 +301,8 @@ const initializers = {
     'panel-smm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-03', exercises: p3exercises }),
     'panel-smm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-04', cards: p4cards }),
     'panel-smm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-05', cards: p5cards }),
-    'panel-smm-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-06', cards: p6cards })
+    'panel-smm-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-06', cards: p6cards }),
+    'panel-smm-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
