@@ -276,6 +276,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Misto (scheda, es. 7 «Abbina l'inizio alla fine»), reggenza dei verbi: встретиться с + strumentale, позвонить + dativo, пользоваться + strumentale, спросить + accusativo, к + dativo, в + prepositivo, составить + accusativo. 7 nuove (нужно обычно в офисе, чем ты занимаешься на работе) + 3 vecchie da «В университете» (сессия проходит, экзамены проходят, до + genitivo). Ogni fine ha un caso diverso → nel MATCH un solo abbinamento possibile; con spiegazioni
+// ============================================================
+const p7cards = [
+    { front: "Вам нужно встретиться…", back: "с заказчиком в понедельник.", distractors: ["с заказчик в понедельник.", "заказчиком в понедельник."], explanation: "Встретиться с кем? с + strumentale: с заказчиком." },
+    { front: "Мне нужно позвонить…", back: "коллеге после обеда.", distractors: ["коллегу после обеда.", "коллега после обеда."], explanation: "Позвонить кому? dativo: коллеге (in italiano «telefonare a»)." },
+    { front: "Мы редко пользуемся…", back: "телефоном.", distractors: ["телефон.", "с телефоном."], explanation: "Пользоваться чем? strumentale senza preposizione: телефоном." },
+    { front: "В понедельник нужно спросить…", back: "начальника.", distractors: ["начальнику.", "начальник."], explanation: "Спросить кого? accusativo: начальника (in italiano «chiedere a» — in russo senza dativo!)." },
+    { front: "Мы редко начинаем подготовку к…", back: "презентации перед выходными.", distractors: ["презентация перед выходными.", "презентацию перед выходными."], explanation: "Подготовка к чему? к + dativo: к презентации." },
+    { front: "Обычно директор назначает встречи в первой…", back: "половине дня.", distractors: ["половины дня.", "половиной дня."], explanation: "Когда? в + prepositivo: в первой половине дня." },
+    { front: "Нам сегодня нужно составить…", back: "договоры.", distractors: ["договоров.", "договорами."], explanation: "Составить что? accusativo: договоры." },
+    { front: "Экзамены…", back: "проходят в аудитории 23 на втором этаже.", distractors: ["проходит в аудитории 23 на втором этаже.", "проходят в аудиторию 23 на втором этаже."], explanation: "Dalla pagina «В университете»: экзамены (plurale) → проходят; где? в аудитории." },
+    { front: "Сессия…", back: "проходит два раза в год.", distractors: ["проходят два раза в год.", "проходит два раза на год."], explanation: "Dalla pagina «В университете»: сессия (singolare) → проходит; два раза в год." },
+    { front: "Обычно в зимнюю сессию мы сдаём экзамены до…", back: "середины февраля.", distractors: ["середина февраля.", "середину февраля."], explanation: "Dalla pagina «В университете»: до + genitivo — до середины февраля." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -284,7 +301,8 @@ const initializers = {
     'panel-vof-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-03', exercises: p3exercises }),
     'panel-vof-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-04', cards: p4cards }),
     'panel-vof-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-05', cards: p5cards }),
-    'panel-vof-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-06', cards: p6cards })
+    'panel-vof-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-06', cards: p6cards }),
+    'panel-vof-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
