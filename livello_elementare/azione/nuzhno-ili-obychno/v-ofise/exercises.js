@@ -242,13 +242,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Aspetto (scheda, es. 5 «Abitudine o risultato?»): le altre coppie — закончить / заканчивать, начать / начинать, встретиться / встречаться, написать, подготовить, звонить. 10 frasi originali (es. 5 + dialoghi «Срочно» + «чем ты занимаешься на работе»). Dopo нужно sbagliate = forme coniugate (mai l'infinito imperfettivo: «нужно начинать подготовку» è corretto); dopo обычно / редко = due infiniti; «я обычно заканчивают» dell'originale → заканчиваю; senza spiegazioni
+// ============================================================
+const p5cards = [
+    { front: "Мне нужно ___ отчёт до обеда.", back: "закончить", distractors: ["заканчиваю", "закончу"] },
+    { front: "Я обычно ___ отчёт к концу недели.", back: "заканчиваю", distractors: ["закончить", "заканчивать"] },
+    { front: "Нужно ___ подготовку к презентации.", back: "начать", distractors: ["начинаем", "начнём"] },
+    { front: "Мы редко ___ подготовку к презентации перед выходными.", back: "начинаем", distractors: ["начать", "начинать"] },
+    { front: "Вам нужно ___ с заказчиком в понедельник.", back: "встретиться", distractors: ["встречаетесь", "встретитесь"] },
+    { front: "Директор редко ___ с клиентами.", back: "встречается", distractors: ["встретиться", "встречаться"] },
+    { front: "Вам нужно прочитать отчёт и ___ ваши замечания.", back: "написать", distractors: ["пишете", "напишете"] },
+    { front: "Сегодня нужно ___ документы к переговорам.", back: "подготовить", distractors: ["готовим", "подготовим"] },
+    { front: "Как обычно, мы ___ документы к переговорам.", back: "готовим", distractors: ["подготовить", "готовить"] },
+    { front: "Я ___ им обычно по понедельникам.", back: "звоню", distractors: ["позвонить", "звонить"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-vof-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-01', exercises: p1exercises }),
     'panel-vof-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-02', exercises: p2exercises }),
     'panel-vof-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-03', exercises: p3exercises }),
-    'panel-vof-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-04', cards: p4cards })
+    'panel-vof-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-04', cards: p4cards }),
+    'panel-vof-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
