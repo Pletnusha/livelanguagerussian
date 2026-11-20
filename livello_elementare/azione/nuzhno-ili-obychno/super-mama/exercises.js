@@ -14,9 +14,87 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // I dati di ogni pannello si aggiungono dopo l'approvazione della PM.
 
 // ============================================================
+// PANEL 1 — DragDrop · public
+// Lessico (lista «Список дел молодой мамы на сегодня» + dialoghi «Супермама»): quale verbo con quale oggetto — 8 frasi originali + 2 vecchie dalla pagina «В офисе»; sbagliate = verbi della stessa lista che lì non possono stare; con spiegazioni
+// ============================================================
+const p1exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} рубашки.",
+        words: ["позвонить", "постирать", "лечь"],
+        correctAnswers: { 1: "постирать" },
+        explanation: "Lavare i vestiti (in lavatrice): постирать рубашки."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} детские вещи.",
+        words: ["погладить", "позавтракать", "сходить"],
+        correctAnswers: { 1: "погладить" },
+        explanation: "Stirare: погладить вещи."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} полы.",
+        words: ["позвонить", "купить", "вымыть"],
+        correctAnswers: { 1: "вымыть" },
+        explanation: "Lavare il pavimento: вымыть полы. Мыть per pavimenti, piatti, finestre; стирать solo per i vestiti."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} в парикмахерскую.",
+        words: ["погладить", "вымыть", "сходить"],
+        correctAnswers: { 1: "сходить" },
+        explanation: "Andare (e tornare) dal parrucchiere: сходить в парикмахерскую."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} педиатру.",
+        words: ["позвонить", "купить", "постирать"],
+        correctAnswers: { 1: "позвонить" },
+        explanation: "Telefonare a qualcuno: позвонить + dativo (педиатру)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} продукты.",
+        words: ["умыться", "купить", "лечь"],
+        correctAnswers: { 1: "купить" },
+        explanation: "Comprare: купить продукты (fare la spesa)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "До обеда нужно {{1}} обед.",
+        words: ["приготовить", "почистить", "умыться"],
+        correctAnswers: { 1: "приготовить" },
+        explanation: "Preparare da mangiare: приготовить обед."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Тебе нужно {{1}} зубы.",
+        words: ["погладить", "почистить", "лечь"],
+        correctAnswers: { 1: "почистить" },
+        explanation: "Lavarsi i denti: почистить зубы."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} отчёт к понедельнику.",
+        words: ["назначить", "встретиться", "подготовить"],
+        correctAnswers: { 1: "подготовить" },
+        explanation: "Dalla pagina «В офисе»: preparare un rapporto — подготовить отчёт."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Коллеге нужно {{1}} встречу заказчику.",
+        words: ["назначить", "составить", "закончить"],
+        correctAnswers: { 1: "назначить" },
+        explanation: "Dalla pagina «В офисе»: fissare un appuntamento — назначить встречу кому."
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
+    'panel-smm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-01', exercises: p1exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
