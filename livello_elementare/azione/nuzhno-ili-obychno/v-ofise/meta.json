@@ -1,0 +1,22 @@
+{
+  "id": "b1-azione-nuzhno-ili-obychno-v-ofise",
+  "url": "/livello_elementare/azione/nuzhno-ili-obychno/v-ofise/",
+  "level": "b1",
+  "doc_type": "exercise",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [
+    "aspetto/perfettivo-vs-imperfettivo",
+    "modali/nuzhno"
+  ],
+  "complementi": [],
+  "lessico": [
+    "ufficio",
+    "lavoro"
+  ],
+  "title_ru": "В ОФИСЕ: НУЖНО ИЛИ ОБЫЧНО",
+  "title_it": "In ufficio: bisogna o di solito — нужно подготовить отчёт / обычно готовим отчёт",
+  "source_doc": "b1-azione-nuzhno-ili-obychno",
+  "focus": "v-ofise"
+}
