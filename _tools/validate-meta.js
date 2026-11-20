@@ -15,7 +15,7 @@ const CLUSTERS = ['descrizione', 'luogo-e-tempo', 'azione', 'lessico'];
 const LIVELLO_LEVELS = {
   'principianti':        ['a1', 'a2'],
   'livello_elementare':  ['b1'],
-  'livello_di_base':     ['b2'],
+  'livello_di_base':     ['b1', 'b2'],
 };
 
 // ── Collect all meta.json ────────────────────────────────────────────
