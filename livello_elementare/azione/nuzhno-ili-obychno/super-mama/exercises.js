@@ -259,6 +259,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto: inizio → fine. 6 frasi originali («список дел молодой мамы», dialoghi «Супермама», «нужно-обычно Дома»: trappole «обычно я нужно», «тебе умываешься», caso dopo в) + 4 vecchie (pagina «В университете»: к каждому семинару мы пишем, пять экзаменов; pagina «В офисе»: встречу заказчику, три встречи). Inizi scelti in modo che in MATCH ogni fine stia solo con il suo inizio (persona, caso): niente «Нам…» / «Директор редко…»; senza spiegazioni
+// ============================================================
+const p6cards = [
+    { front: "Обычно я…", back: "стираю рубашки в стиральной машине.", distractors: ["нужно постирать рубашки в стиральной машине.", "постирать рубашки в стиральной машине."] },
+    { front: "Мой сын обычно…", back: "умывается, чистит зубы, ест шоколад.", distractors: ["нужно умыться, почистить зубы, съесть шоколад.", "умыться, почистить зубы, съесть шоколад."] },
+    { front: "Тебе…", back: "нужно умыться.", distractors: ["умываешься.", "умоешься."] },
+    { front: "— Привет, какие планы? — До обеда нужно…", back: "сходить за продуктами, приготовить обед, постирать бельё.", distractors: ["хожу за продуктами, готовлю обед, стираю бельё.", "сходим за продуктами, приготовим обед, постираем бельё."] },
+    { front: "Как часто вы ходите в…", back: "парикмахерскую?", distractors: ["парикмахерской?", "парикмахерская?"] },
+    { front: "Она моет полы два раза в…", back: "неделю.", distractors: ["неделя.", "недели."] },
+    { front: "К каждому семинару мы…", back: "пишем доклад или читаем статьи.", distractors: ["нужно написать доклад или прочитать статьи.", "написать доклад или прочитать статьи."] },
+    { front: "Ты знаешь, что в эту сессию нам нужно сдать пять…", back: "экзаменов?", distractors: ["экзамены?", "экзамена?"] },
+    { front: "Коллеге нужно назначить встречу…", back: "заказчику.", distractors: ["заказчик.", "заказчиком."] },
+    { front: "— Тебе нужно проверить эти договоры. — Я не успею, у меня три…", back: "встречи сегодня.", distractors: ["встреч сегодня.", "встреча сегодня."] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -266,7 +283,8 @@ const initializers = {
     'panel-smm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-02', exercises: p2exercises }),
     'panel-smm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-03', exercises: p3exercises }),
     'panel-smm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-04', cards: p4cards }),
-    'panel-smm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-05', cards: p5cards })
+    'panel-smm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-05', cards: p5cards }),
+    'panel-smm-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
