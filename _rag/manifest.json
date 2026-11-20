@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-20T16:59:36.624Z",
-  "count": 39,
+  "generated": "2026-11-20T17:06:25.569Z",
+  "count": 40,
   "pages": [
     {
       "id": "b1-azione-nuzhno-ili-obychno",
@@ -44,6 +44,29 @@
       "source_doc": "b1-azione-nuzhno-ili-obychno",
       "focus": "spisok-del-studenta",
       "_source": "livello_elementare\\azione\\nuzhno-ili-obychno\\spisok-del-studenta\\meta.json"
+    },
+    {
+      "id": "b1-azione-nuzhno-ili-obychno-super-mama",
+      "url": "/livello_elementare/azione/nuzhno-ili-obychno/super-mama/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "aspetto/perfettivo-vs-imperfettivo",
+        "modali/nuzhno"
+      ],
+      "complementi": [],
+      "lessico": [
+        "casa",
+        "routine"
+      ],
+      "title_ru": "ДОМА: СУПЕР МАМА",
+      "title_it": "A casa: bisogna o di solito — нужно постирать / обычно стираю",
+      "source_doc": "b1-azione-nuzhno-ili-obychno",
+      "focus": "super-mama",
+      "_source": "livello_elementare\\azione\\nuzhno-ili-obychno\\super-mama\\meta.json"
     },
     {
       "id": "b1-azione-nuzhno-ili-obychno-v-ofise",
