@@ -2,7 +2,8 @@
 
 Usage:  python _tools/add_quiz.py PAGE_DIR PREFIX SPEC.json [--source SOURCE_EXERCISES_JS]
 
-PAGE_DIR  folder of the page (contains index.html + exercises.js, panels 1–8 already written)
+PAGE_DIR  folder of the page (contains index.html + exercises.js, all other panels already written;
+          their number depends on the topic — the quiz keeps the id panel-PREFIX-9 and goes last)
 PREFIX    panel prefix of the page (e.g. "an" → panel-an-9, #an-9-…, initPanelAn9)
 SPEC.json {"mc": [[question, [opt1, opt2, opt3], answer], ...],
            "match": [[left, right], ...],
@@ -51,9 +52,11 @@ t = raw.decode('utf-8').replace('\r\n', '\n')
 anchor = '// ============================================================\n// PANEL MANAGER'
 assert ('initPanel%s9' % cap(P)) not in t, 'quiz already present'
 t = t.replace(anchor, blk + anchor)
-o = "    'panel-%s-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-%s-08', cards: p8cards })" % (P, P)
-assert o in t, 'panel 8 initializer not found'
-t = t.replace(o, o + ",\n    'panel-%s-9': () => initPanel%s9()" % (P, cap(P)))
+# The quiz is always panel-<P>-9; it goes after the last initializer, whatever the number of panels before it.
+a = t.index('const initializers = {'); b = t.index('\n};', a)
+body = t[a + len('const initializers = {'):b].rstrip()
+assert body.strip(), 'no panel initializers found: write the panels before the quiz'
+t = t[:a] + 'const initializers = {' + body + ",\n    'panel-%s-9': () => initPanel%s9()" % (P, cap(P)) + t[b:]
 if crlf: t = t.replace('\n', '\r\n')
 open(dst, 'wb').write(t.encode('utf-8'))
 print('ok: quiz added', len(D['mc']), len(D['match']), len(D['write']))

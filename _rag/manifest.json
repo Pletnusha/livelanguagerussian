@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-19T18:13:46.755Z",
-  "count": 35,
+  "generated": "2026-11-20T09:03:41.158Z",
+  "count": 38,
   "pages": [
     {
       "id": "b1-azione-nuzhno-ili-obychno",
@@ -81,6 +81,71 @@
       "title_ru": "КОЛЛОКАТИВНЫЕ ГЛАГОЛЫ",
       "title_it": "Verbi collocativi — ставить, класть, вешать nella vita quotidiana",
       "_source": "livello_elementare\\azione\\verbi-collocativi\\meta.json"
+    },
+    {
+      "id": "b1-azione-verbi-di-moto-con-prefissi",
+      "url": "/livello_di_base/azione/verbi-di-moto-con-prefissi/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "verbi-di-moto/prefissi"
+      ],
+      "complementi": [
+        "moto-a-luogo",
+        "moto-da-luogo",
+        "moto-per-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "ГЛАГОЛЫ ДВИЖЕНИЯ С ПРИСТАВКАМИ",
+      "title_it": "Verbi di moto con prefissi",
+      "_source": "livello_di_base\\azione\\verbi-di-moto-con-prefissi\\meta.json"
+    },
+    {
+      "id": "b1-azione-verbi-di-moto-con-prefissi-idti-xodit-prefissi",
+      "url": "/livello_di_base/azione/verbi-di-moto-con-prefissi/idti-xodit-prefissi/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "verbi-di-moto/prefissi"
+      ],
+      "complementi": [
+        "moto-a-luogo",
+        "moto-da-luogo",
+        "moto-per-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "ИДТИ / ХОДИТЬ С ПРИСТАВКАМИ",
+      "title_it": "Andare a piedi con i prefissi: войти, выйти, прийти, уйти, подойти, отойти, дойти, зайти, перейти, пройти, обойти",
+      "_source": "livello_di_base\\azione\\verbi-di-moto-con-prefissi\\idti-xodit-prefissi\\meta.json"
+    },
+    {
+      "id": "b1-azione-verbi-di-moto-con-prefissi-idti-xodit-prefissi-entrare-uscire",
+      "url": "/livello_di_base/azione/verbi-di-moto-con-prefissi/idti-xodit-prefissi/entrare-uscire/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "verbi-di-moto/prefissi",
+        "aspetto/perfettivo-vs-imperfettivo"
+      ],
+      "complementi": [
+        "moto-a-luogo",
+        "moto-da-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "ВОЙТИ ИЛИ ВЫЙТИ",
+      "title_it": "Entrare o uscire: входить / войти ↔ выходить / выйти",
+      "source_doc": "b1-azione-verbi-di-moto-con-prefissi-idti-xodit-prefissi",
+      "focus": "entrare-uscire",
+      "_source": "livello_di_base\\azione\\verbi-di-moto-con-prefissi\\idti-xodit-prefissi\\entrare-uscire\\meta.json"
     },
     {
       "id": "b1-azione-zamok",
