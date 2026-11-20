@@ -242,13 +242,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Tre forme: 5 nuove coppie dai dialoghi «Супермама» e da «нужно-обычно Дома» — чистить / почистить, ложиться / лечь, ходить / сходить, убирать / убрать, умываться / умыться. Presente imperfettivo (sbagliate: due infiniti) ↔ нужно + infinito perfettivo (sbagliate: presente e futuro, mai l'infinito imperfettivo). Niente гладить / погладить: in MATCH «нужно ___ вещи» andrebbe anche con убрать / почистить (va nel pannello 8); senza spiegazioni
+// ============================================================
+const p5cards = [
+    { front: "Мой сын обычно умывается, ___ зубы, ест шоколад.", back: "чистит", distractors: ["почистить", "чистить"] },
+    { front: "— Тебе нужно умыться. — Уже! — …___ зубы.", back: "почистить", distractors: ["чистишь", "почистишь"] },
+    { front: "Ты же знаешь, что обычно я ___ поздно!", back: "ложусь", distractors: ["лечь", "ложиться"] },
+    { front: "Мне нужно ___ в два.", back: "лечь", distractors: ["ложусь", "лягу"] },
+    { front: "Как часто вы ___ в парикмахерскую?", back: "ходите", distractors: ["сходить", "ходить"] },
+    { front: "Сегодня нужно ___ в парикмахерскую.", back: "сходить", distractors: ["хожу", "схожу"] },
+    { front: "После вечеринки мою посуду, ___ квартиру, мою полы.", back: "убираю", distractors: ["убрать", "убирать"] },
+    { front: "Нужно вымыть посуду после вечеринки, ___ квартиру, вымыть пол.", back: "убрать", distractors: ["убираю", "уберу"] },
+    { front: "Мой сын обычно ___, чистит зубы, ест шоколад.", back: "умывается", distractors: ["умыться", "умываться"] },
+    { front: "Нужно уговорить детей проснуться, ___, почистить зубы.", back: "умыться", distractors: ["умываются", "умоются"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-smm-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-01', exercises: p1exercises }),
     'panel-smm-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-02', exercises: p2exercises }),
     'panel-smm-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-smm-03', exercises: p3exercises }),
-    'panel-smm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-04', cards: p4cards })
+    'panel-smm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-04', cards: p4cards }),
+    'panel-smm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
