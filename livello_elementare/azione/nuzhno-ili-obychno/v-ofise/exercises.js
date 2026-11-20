@@ -225,12 +225,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Aspetto (scheda, es. 4 «Di solito o bisogna?»): 5 coppie da «нужно обычно в офисе». Обычно / всегда / редко → imperfettivo al presente (sbagliate: infinito perfettivo, infinito imperfettivo). Нужно → infinito perfettivo (sbagliate: presente imperfettivo, futuro perfettivo; mai l'infinito imperfettivo); con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "Обычно мы ___ отчёт в мае.", back: "готовим", distractors: ["подготовить", "готовить"], explanation: "Обычно = abitudine: imperfettivo al presente (мы готовим)." },
+    { front: "Нужно ___ отчёт к понедельнику.", back: "подготовить", distractors: ["готовим", "подготовим"], explanation: "Un risultato entro lunedì: нужно + infinito perfettivo (подготовить)." },
+    { front: "Мы редко ___ договоры.", back: "составляем", distractors: ["составить", "составлять"], explanation: "Редко = poche volte, abitudine: imperfettivo al presente (мы составляем)." },
+    { front: "Нам сегодня нужно ___ договоры.", back: "составить", distractors: ["составляем", "составим"], explanation: "Oggi, una cosa da finire: нам нужно + infinito perfettivo (составить)." },
+    { front: "Мы всегда ___ документы заранее.", back: "проверяем", distractors: ["проверить", "проверять"], explanation: "Всегда = ogni volta: imperfettivo al presente (мы проверяем)." },
+    { front: "Нужно ___ эти документы.", back: "проверить", distractors: ["проверяем", "проверим"], explanation: "Questi documenti, un risultato: нужно + infinito perfettivo (проверить)." },
+    { front: "Обычно директор ___ встречи в первой половине дня.", back: "назначает", distractors: ["назначить", "назначать"], explanation: "Обычно = abitudine. Il direttore (lui) → назначает." },
+    { front: "Коллеге нужно ___ встречу заказчику.", back: "назначить", distractors: ["назначает", "назначит"], explanation: "Al collega serve un risultato: коллеге нужно + infinito perfettivo (назначить)." },
+    { front: "Она всегда ___ отчёты в первой половине дня.", back: "читает", distractors: ["прочитать", "читать"], explanation: "Всегда = abitudine: imperfettivo al presente (она читает)." },
+    { front: "Им нужно ___ отчёт до обеда.", back: "прочитать", distractors: ["читают", "прочитают"], explanation: "Leggerlo tutto prima di pranzo: им нужно + infinito perfettivo (прочитать)." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-vof-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-01', exercises: p1exercises }),
     'panel-vof-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-02', exercises: p2exercises }),
-    'panel-vof-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-03', exercises: p3exercises })
+    'panel-vof-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-vof-03', exercises: p3exercises }),
+    'panel-vof-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-vof-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
