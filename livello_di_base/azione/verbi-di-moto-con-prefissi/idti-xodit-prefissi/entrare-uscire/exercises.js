@@ -157,11 +157,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Nuovo: выйти на / к (вы- + «куда?») — percorsi «Как добраться» e «Питер за один день» (senza spiegazioni; pronomi originali: его, по ней, вдоль него)
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Затем нам нужно будет перейти мост и {{1}} на Кронверкскую набережную.",
+        words: ["выйти", "войти", "выйдти"],
+        correctAnswers: { 1: "выйти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Повернуть налево к Биржевому мосту, перейти его, повернуть налево к Ростральной колонне и {{1}} на Стрелку Васильевского острова.",
+        words: ["войти", "выдти", "выйти"],
+        correctAnswers: { 1: "выйти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Пройти через Биржевой сквер мимо второй Ростральной колонны, перейти дорогу и {{1}} к Зоологическому музею.",
+        words: ["вытти", "выйти", "войти"],
+        correctAnswers: { 1: "выйти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Из Александровского сада мы {{1}} на Адмиралтейский проспект к Исаакиевскому собору.",
+        words: ["войдём", "выйдем", "выйдим"],
+        correctAnswers: { 1: "выйдем" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Затем перейти мост через реку Мойку и {{1}} к Летнему саду.",
+        words: ["выйти", "выйдти", "войти"],
+        correctAnswers: { 1: "выйти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нам нужно повернуть на Малую Морскую улицу и пройти по ней прямо до Невского проспекта, {{1}} на Невский проспект и повернуть направо.",
+        words: ["войти", "вытти", "выйти"],
+        correctAnswers: { 1: "выйти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мне нужно доехать до остановки Площадь мира, {{1}} из автобуса и сразу повернуть налево.",
+        words: ["выйти", "войти", "выдти"],
+        correctAnswers: { 1: "выйти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Там будет детский сад, пройти вдоль него, никуда не сворачивая, {{1}} на улицу Горького и сразу повернуть налево.",
+        words: ["войти", "выйти", "выйдти"],
+        correctAnswers: { 1: "выйти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Чтобы дойти до офиса, вам нужно {{1}} к площади Ленина: там будет киоск, за ним выход на набережную.",
+        words: ["войти", "выдти", "выйти"],
+        correctAnswers: { 1: "выйти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Пройти через Михайловский сад и {{1}} на Садовую улицу.",
+        words: ["войти", "выйти", "выйдти"],
+        correctAnswers: { 1: "выйти" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-eu-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-eu-01', exercises: p1exercises }),
-    'panel-eu-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-eu-02', exercises: p2exercises })
+    'panel-eu-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-eu-02', exercises: p2exercises }),
+    'panel-eu-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-eu-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
