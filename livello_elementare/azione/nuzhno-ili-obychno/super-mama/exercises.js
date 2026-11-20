@@ -293,6 +293,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Come si forma il perfettivo: imperfettivo + oggetto originale → coppia perfettiva. 7 coppie di casa (по-, вы-, при-, с-, forma più corta, altra forma) + 3 vecchie (pagina «В университете»: учить → выучить, сдавать → сдать; pagina «В офисе»: заканчивать → закончить). Sbagliate = perfettivi veri di altri verbi, spesso con lo stesso prefisso (si riconosce la radice); mai un prefisso «sbagliato» che esiste (помыть, выстирать, выгладить). Niente убрать (у- fa parte della radice); con spiegazioni
+// ============================================================
+const p8cards = [
+    { front: "гладить детские вещи →", back: "погладить", distractors: ["почистить", "позвонить"], explanation: "по- + гладить. Con по- anche: постирать, почистить, позвонить, позавтракать." },
+    { front: "мыть полы →", back: "вымыть", distractors: ["выучить", "выполнить"], explanation: "вы- + мыть: вымыть полы, посуду, окна." },
+    { front: "готовить обед →", back: "приготовить", distractors: ["погладить", "вымыть"], explanation: "при- + готовить: il cibo. Un documento invece si подготовить (pagina «В офисе»)." },
+    { front: "есть шоколад →", back: "съесть", distractors: ["сходить", "сдать"], explanation: "с- + есть; davanti a е si scrive съ-: съесть." },
+    { front: "ходить в парикмахерскую →", back: "сходить", distractors: ["съесть", "сдать"], explanation: "с- + ходить: andare e tornare (una volta)." },
+    { front: "покупать продукты →", back: "купить", distractors: ["закончить", "встать"], explanation: "Attenzione: qui il perfettivo è più corto, senza по-! покупать → купить." },
+    { front: "ложиться спать →", back: "лечь", distractors: ["встать", "купить"], explanation: "Due forme diverse: ложиться / лечь (я ложусь — мне нужно лечь)." },
+    { front: "учить слова →", back: "выучить", distractors: ["вымыть", "выполнить"], explanation: "Dalla pagina «В университете»: вы- + учить, imparare fino in fondo." },
+    { front: "сдавать экзамены →", back: "сдать", distractors: ["встать", "съесть"], explanation: "Dalla pagina «В университете»: -ва- solo nell'imperfettivo — сдавать / сдать, come вставать / встать." },
+    { front: "заканчивать отчёт →", back: "закончить", distractors: ["купить", "лечь"], explanation: "Dalla pagina «В офисе»: il perfettivo è più corto — заканчивать → закончить." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -302,7 +319,8 @@ const initializers = {
     'panel-smm-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-04', cards: p4cards }),
     'panel-smm-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-05', cards: p5cards }),
     'panel-smm-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-06', cards: p6cards }),
-    'panel-smm-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-07', cards: p7cards })
+    'panel-smm-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-07', cards: p7cards }),
+    'panel-smm-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-smm-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
