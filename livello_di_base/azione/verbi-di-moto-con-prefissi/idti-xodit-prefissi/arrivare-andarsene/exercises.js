@@ -157,11 +157,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Nuovo: прийти / уйти — «Работа и вокзал» (senza spiegazioni); frasi 2, 5, 6, 8, 9, 10 nuove approvate dalla PM, 3 adattata (Наконец)
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Во сколько ты обычно {{1}} с работы?",
+        words: ["входишь", "уходишь", "уходеш"],
+        correctAnswers: { 1: "уходишь" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Каждое утро я {{1}} в офис первой и включаю кофемашину.",
+        words: ["прихажу", "ухожу", "прихожу"],
+        correctAnswers: { 1: "прихожу" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Наконец он {{1}} в офис — на полчаса позже, чем обычно.",
+        words: ["пришёл", "ушёл", "пришол"],
+        correctAnswers: { 1: "пришёл" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Знаешь, Андрей опять {{1}} с работы. — Опять уволился?!",
+        words: ["пришёл", "ушол", "ушёл"],
+        correctAnswers: { 1: "ушёл" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Не звони Андрею на работу: он уже {{1}}.",
+        words: ["ушёл", "пришёл", "ушол"],
+        correctAnswers: { 1: "ушёл" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Лена в офисе? — Нет, она ещё не {{1}}: у неё приём у врача.",
+        words: ["ушла", "пришла", "прийшла"],
+        correctAnswers: { 1: "пришла" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Поезд {{1}} через десять минут.",
+        words: ["уйдёт", "войдёт", "уйдёть"],
+        correctAnswers: { 1: "уйдёт" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Поезд на Москву {{1}} в восемь пятнадцать с третьего пути.",
+        words: ["приходит", "уходет", "уходит"],
+        correctAnswers: { 1: "уходит" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Поезд уже {{1}}, следующий через час.",
+        words: ["пришёл", "ушёл", "ушол"],
+        correctAnswers: { 1: "ушёл" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Завтра вы {{1}} в офис к восьми: у нас важная встреча.",
+        words: ["придёте", "уйдёте", "прийдёте"],
+        correctAnswers: { 1: "придёте" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-aa-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-aa-01', exercises: p1exercises }),
-    'panel-aa-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-aa-02', exercises: p2exercises })
+    'panel-aa-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-aa-02', exercises: p2exercises }),
+    'panel-aa-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-aa-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
