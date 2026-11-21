@@ -235,13 +235,13 @@ function initPanelPo9() {
         { id: "po9-w1", promptPrefix: "(подходить / подойти) Когда звонит телефон, бабушка всегда первая ", promptSuffix: " к нему.", answers: ["подходит"] },
         { id: "po9-w2", promptPrefix: "(подходить / подойти) Я уже ", promptSuffix: "! Буду через пять минут.", answers: ["подхожу"] },
         { id: "po9-w3", promptPrefix: "(подойти) Подожди, я сейчас ", promptSuffix: " к тебе и всё объясню.", answers: ["подойду"] },
-        { id: "po9-w4", promptPrefix: "(подходить / подойти) Анна ", promptSuffix: " ко мне и заговорила первой.", answers: ["подошла"] },
+        { id: "po9-w4", promptPrefix: "(отходить / отойти) Не ", promptSuffix: " от кассы, пока не проверите сдачу.", answers: ["отходите"] },
         { id: "po9-w5", promptPrefix: "(отходить / отойти) Я купила билет и сразу ", promptSuffix: " от автомата.", answers: ["отошла"] },
         { id: "po9-w6", promptPrefix: "(отойти) ", promptSuffix: " от меня!", answers: ["Отойди", "отойди"] },
         { id: "po9-w7", promptPrefix: "(отойти) Вы ", promptSuffix: " от машины?", answers: ["отошли"] },
         { id: "po9-w8", promptPrefix: "(подойти) Мы ", promptSuffix: " к кабинету, но входить не стали.", answers: ["подошли"] },
         { id: "po9-w9", promptPrefix: "(отойти) Они ", promptSuffix: " от края платформы.", answers: ["отошли"] },
-        { id: "po9-w10", promptPrefix: "(подходить / подойти) Я дождалась, когда все получат свои номера, и ", promptSuffix: " к автомату.", answers: ["подошла"] }
+        { id: "po9-w10", promptPrefix: "(подойти) Встречаемся у метро. Я ", promptSuffix: " к семи, хорошо?", answers: ["подойду"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
