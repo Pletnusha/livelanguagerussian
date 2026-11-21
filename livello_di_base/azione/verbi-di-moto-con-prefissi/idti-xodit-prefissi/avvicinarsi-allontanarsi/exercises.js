@@ -5,15 +5,16 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // Pagina «Подойти или отойти» (Livello di base · Verbi di moto con prefissi · Идти / ходить):
 // avvicinarsi ↔ allontanarsi — под- + к + dat. ↔ от- + от + gen. (anche отойти в сторону), coppie подходить / подойти ↔ отходить / отойти.
 // Trappole: подошёл к Анне (vicino a lei) ≠ пришёл к Анне (a casa sua); под- vuole «к», non «под»; подойти к телефону = rispondere;
-// поезд подходит (arriva al binario) ↔ отходит (parte); подойти ≠ войти («подошли к кабинету, но входить не стали»).
-// Gramota.ru (БТС): подойти к начальнику, к телефону; подошёл поезд; отойти от прилавка, в сторону; отойти = отлучиться; поезд должен отойти.
+// подойти ≠ войти («подошли к кабинету, но входить не стали»); «Я уже подхожу!» = sto arrivando (НСВ, in corso).
+// Niente treni: per la PM il lessico giusto è поезд отправляется / прибывает, non подходит / отходит. Frasi nuove: lessico città / incontro (PM).
+// Gramota.ru (БТС): подойти к начальнику, к телефону; отойти от прилавка, в сторону; отойти = отлучиться.
 // Esclusi i sensi figurati: подойдёт тебе, отойти от дел, отошёл (si è ripreso), отойти ко сну. «Отойти» mai come distrattore di «выйти на минутку».
 // Pochi originali (11): 4 pannelli + quiz, approvato dalla PM. Frasi nuove solo con il permesso della PM. Tempi misti in ogni pannello.
 // Schema: 1 D&D (con spiegazioni) · 2 D&D · 3 FC misto (pagine 1–2) · 4 FC (forme + aspetto, con spiegazioni) · Quiz (panel-po-9)
 
 // ============================================================
 // PANEL 1 — DragDrop · public
-// Misto: подойти / отойти (nuovo, 7) + к + dat., от + gen., в сторону (vecchio, 3), con spiegazioni; frasi 7–10 nuove approvate dalla PM
+// Misto: подойти / отойти (nuovo, 7) + к + dat., от + gen., в сторону (vecchio, 3), con spiegazioni; frasi 7–10 nuove approvate dalla PM (n. 10 della PM: «Она отошла в сторону, чтобы ответить на звонок», niente treni)
 // ============================================================
 const p1exercises = [
     {
@@ -81,10 +82,10 @@ const p1exercises = [
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "Поезд {{1}} от платформы ровно в восемь.",
-        words: ["отходит", "подходит", "отходет"],
-        correctAnswers: { 1: "отходит" },
-        explanation: "Il treno parte = поезд отходит (от + genitivo). Подходит = arriva al binario."
+        text: "Она {{1}} в сторону, чтобы ответить на звонок.",
+        words: ["отошла", "подошла", "атошла"],
+        correctAnswers: { 1: "отошла" },
+        explanation: "Spostarsi di lato = отойти в сторону. Подойти vuole «к»: подошла к двери, non «подошла в сторону»."
     }
 ];
 
@@ -173,12 +174,30 @@ const p3cards = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Nuovo: aspetto — подходить / подойти, отходить / отойти: forme (tabelle СПРЯЖЕНИЯ) + abitudine / azione in corso / risultato, con spiegazioni; n. 9 della PM (lessico città / incontro); niente treni (PM: поезд отправляется / прибывает)
+// ============================================================
+const p4cards = [
+    { front: "подходить → я …", back: "подхожу", distractors: ["подойду", "подходю"], explanation: "Подходить (НСВ), presente: подхожу, подходишь… «д» → «ж» alla 1ª persona." },
+    { front: "отходить → ты …", back: "отходишь", distractors: ["отойдёшь", "отходешь"], explanation: "Отходить: отхожу, отходишь… come подходить." },
+    { front: "подойти → он, прошедшее время …", back: "подошёл", distractors: ["подходил", "подошол"], explanation: "Passato di подойти: подошёл, подошла, подошли." },
+    { front: "отойти → она, прошедшее время …", back: "отошла", distractors: ["отходила", "отошола"], explanation: "Passato di отойти: отошёл, отошла, отошли." },
+    { front: "подойти → я, будущее время …", back: "подойду", distractors: ["подхожу", "подойдю"], explanation: "Futuro di подойти: подойду, подойдёшь (non «подойдю»)." },
+    { front: "отойти → мы, будущее время …", back: "отойдём", distractors: ["отходим", "отойдим"], explanation: "Futuro di отойти: отойду, отойдёшь, отойдём." },
+    { front: "Когда звонит телефон, бабушка всегда первая ___ к нему.", back: "подходит", distractors: ["подойдёт", "подходет"], explanation: "Всегда = abitudine → НСВ: подходит." },
+    { front: "Я дождалась, когда все получат свои номера, и ___ к автомату.", back: "подошла", distractors: ["подходила", "падашла"], explanation: "Un'azione unica e conclusa, in sequenza → СВ: подошла." },
+    { front: "Я уже ___! Буду через пять минут.", back: "подхожу", distractors: ["подойду", "подхажу"], explanation: "Sto arrivando: azione in corso adesso → НСВ presente: подхожу. Con «уже» non va il futuro «подойду»." },
+    { front: "Я купила билет и сразу ___ от автомата.", back: "отошла", distractors: ["отходила", "атошла"], explanation: "Un'azione unica e conclusa («сразу») → СВ: отошла." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-po-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-po-01', exercises: p1exercises }),
     'panel-po-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-po-02', exercises: p2exercises }),
-    'panel-po-3': () => new FlashcardExercise({ rootId: 'ex-flashcards-po-03', cards: p3cards })
+    'panel-po-3': () => new FlashcardExercise({ rootId: 'ex-flashcards-po-03', cards: p3cards }),
+    'panel-po-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-po-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
