@@ -89,10 +89,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Как добраться до…? — testi-percorso della PM (дойти до + gen.); n. 6 e 8 adattati da ехать a идти; n. 7 e 10 nuovi approvati dalla PM; distrattori mai «идите» (anche giusto)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Чтобы добраться от работы до дома, мне нужно {{1}} до остановки автобуса.",
+        words: ["дойти", "зайти", "дайти"],
+        correctAnswers: { 1: "дойти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Чтобы {{1}} до супермаркета, вам нужно идти прямо по дороге метров двести.",
+        words: ["зайти", "дойтить", "дойти"],
+        correctAnswers: { 1: "дойти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Чтобы дойти {{1}}, вам нужно выйти к площади Ленина.",
+        words: ["в офис", "до офиса", "до офис"],
+        correctAnswers: { 1: "до офиса" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Поверните налево и {{1}} до большого современного здания с вывеской «Гута-банк».",
+        words: ["дойдите", "зайдите", "дойдити"],
+        correctAnswers: { 1: "дойдите" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Чтобы {{1}} до почты, нужно пройти прямо до площади и перейти дорогу возле аптеки.",
+        words: ["войти", "дойти", "дайти"],
+        correctAnswers: { 1: "дойти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы ещё не {{1}} до вокзала, когда стало ясно, что мы опоздали на поезд.",
+        words: ["зашли", "дашли", "дошли"],
+        correctAnswers: { 1: "дошли" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно я {{1}} до остановки за пять минут.",
+        words: ["захожу", "дохожу", "дахожу"],
+        correctAnswers: { 1: "дохожу" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Он всегда {{1}} пешком до станции «Автово», а завтра дойдёт до «Нарвской».",
+        words: ["доходит", "заходит", "доходет"],
+        correctAnswers: { 1: "доходит" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "{{1}} до парка и идите вдоль велосипедной дорожки прямо до дома.",
+        words: ["Зайдите", "Дойдити", "Дойдите"],
+        correctAnswers: { 1: "Дойдите" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Ты уже {{1}} до дома? Напиши мне!",
+        words: ["зашла", "дошла", "дашла"],
+        correctAnswers: { 1: "дошла" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-dz-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-01', exercises: p1exercises })
+    'panel-dz-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-01', exercises: p1exercises }),
+    'panel-dz-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
