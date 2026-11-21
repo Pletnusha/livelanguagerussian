@@ -156,11 +156,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// По дороге: зайти в / на + acc., к + dat., за + strum.; n. 2 (orig. телеграф), 5 (orig. туда), 10 (orig. забежала) adattati; n. 7–8 nuovi approvati dalla PM; distrattori mai пошла / вошла / пришли (anche giusti)
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "По дороге Нина {{1}} в обувной магазин.",
+        words: ["дошла", "зашла", "зошла"],
+        correctAnswers: { 1: "зашла" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "По дороге он {{1}} на почту и отправил письмо.",
+        words: ["зашёл", "дошёл", "зашол"],
+        correctAnswers: { 1: "зашёл" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Утром зайди {{1}}, вместе пойдём в университет.",
+        words: ["за меня", "за мне", "за мной"],
+        correctAnswers: { 1: "за мной" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Ты идёшь в кино один? — Нет, с Олегом, он {{1}} за мной.",
+        words: ["дойдёт", "зайдит", "зайдёт"],
+        correctAnswers: { 1: "зайдёт" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Когда я шла в университет, я увидела красивый сад и {{1}} в него.",
+        words: ["зашла", "дошла", "зашола"],
+        correctAnswers: { 1: "зашла" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы {{1}} в магазин, чтобы купить хлеб.",
+        words: ["дошли", "зашли", "зашлы"],
+        correctAnswers: { 1: "зашли" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "По дороге на работу я всегда {{1}} в кафе за кофе.",
+        words: ["дохожу", "захажу", "захожу"],
+        correctAnswers: { 1: "захожу" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я {{1}} в магазин, тебе что-нибудь купить?",
+        words: ["захожу", "дохожу", "захожю"],
+        correctAnswers: { 1: "захожу" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы {{1}} к доктору за справкой.",
+        words: ["дошли", "зашлы", "зашли"],
+        correctAnswers: { 1: "зашли" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Лена, как обычно, опаздывала, но по дороге на работу {{1}} за круассанами в свою любимую пекарню.",
+        words: ["дошла", "зашла", "зошла"],
+        correctAnswers: { 1: "зашла" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-dz-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-01', exercises: p1exercises }),
-    'panel-dz-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-02', exercises: p2exercises })
+    'panel-dz-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-02', exercises: p2exercises }),
+    'panel-dz-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
