@@ -223,12 +223,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Nuovo: aspetto — заходить / зайти, доходить / дойти: forme + abitudine / visita precisa / risultato / invito, con spiegazioni; n. 5 frase (PM), adattata da «Я ненадолго заеду к бабушке»; n. 10 dal dialogo «Можно? — Заходи, заходи!»
+// ============================================================
+const p4cards = [
+    { front: "заходить → я …", back: "захожу", distractors: ["зайду", "заходю"], explanation: "Заходить (НСВ), presente: захожу, заходишь… «д» → «ж» alla 1ª persona." },
+    { front: "доходить → ты …", back: "доходишь", distractors: ["дойдёшь", "доходешь"], explanation: "Доходить: дохожу, доходишь… come заходить." },
+    { front: "зайти → он, прошедшее время …", back: "зашёл", distractors: ["заходил", "зашол"], explanation: "Passato di зайти: зашёл, зашла, зашли." },
+    { front: "дойти → она, прошедшее время …", back: "дошла", distractors: ["доходила", "дашла"], explanation: "Passato di дойти: дошёл, дошла, дошли (con «о»)." },
+    { front: "Я ненадолго ___ к бабушке.", back: "зайду", distractors: ["дойду", "зайдю"], explanation: "Futuro di зайти: зайду (non «зайдю»). Passare da qualcuno = зайти к + dativo; «дойду» vorrebbe «до»." },
+    { front: "дойти → вы, будущее время …", back: "дойдёте", distractors: ["доходите", "дойдёти"], explanation: "Futuro di дойти: дойду, дойдёшь, дойдёте." },
+    { front: "— Когда ___ к нам на кофе? Ты уже месяц обещаешь!", back: "зайдёшь", distractors: ["заходишь", "зайдишь"], explanation: "Una visita precisa nel futuro → СВ: зайдёшь." },
+    { front: "Обычно я ___ до остановки за пять минут.", back: "дохожу", distractors: ["дойду", "дахожу"], explanation: "Обычно = abitudine → НСВ: дохожу." },
+    { front: "Ты уже ___ до дома? Напиши мне!", back: "дошла", distractors: ["доходила", "дашла"], explanation: "Уже = il risultato è raggiunto → СВ: дошла." },
+    { front: "— Можно? — ___!", back: "Заходи", distractors: ["Дойди", "Захади"], explanation: "Invitare a entrare = imperativo НСВ: заходи! Si usa per dire «prego, entra»." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-dz-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-01', exercises: p1exercises }),
     'panel-dz-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-02', exercises: p2exercises }),
-    'panel-dz-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-03', exercises: p3exercises })
+    'panel-dz-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-03', exercises: p3exercises }),
+    'panel-dz-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dz-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
