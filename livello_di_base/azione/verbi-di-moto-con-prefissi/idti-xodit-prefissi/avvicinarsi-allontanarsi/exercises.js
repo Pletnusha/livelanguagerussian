@@ -89,10 +89,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// В банке: testo della PM «В банке» (7) + frasi nuove approvate (3: подхожу, отошла от автомата — versione PM, подходят); ripasso войти (n. 1, 7)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Как только дверь открылась, вся шумная группа {{1}} в банк и начала нажимать на кнопки автомата электронной очереди.",
+        words: ["подошла", "вашла", "вошла"],
+        correctAnswers: { 1: "вошла" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "К ним на помощь уже {{1}} администратор.",
+        words: ["отошла", "подошла", "подашла"],
+        correctAnswers: { 1: "подошла" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я дождалась, когда все получат свои номера, и {{1}} к автомату.",
+        words: ["подошла", "отошла", "подошёл"],
+        correctAnswers: { 1: "подошла" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Только тогда я поняла, зачем был нужен администратор: она {{1}} и вежливо спросила: «Доброе утро, чем я могу вам помочь?»",
+        words: ["отошла", "подошла", "падашла"],
+        correctAnswers: { 1: "подошла" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Противный голос объявлял номер и окно, к которому нужно было {{1}}.",
+        words: ["подойти", "отойти", "подойтить"],
+        correctAnswers: { 1: "подойти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Бабушки шумно обсуждали новости, пока не {{1}} к автомату.",
+        words: ["отошли", "подошлы", "подошли"],
+        correctAnswers: { 1: "подошли" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Перед дверью стояла очередь — я подошла, подождала и {{1}} в банк.",
+        words: ["подошла", "войшла", "вошла"],
+        correctAnswers: { 1: "вошла" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "В банке я всегда сначала {{1}} к администратору, а потом беру талон.",
+        words: ["подхожу", "отхожу", "подхажу"],
+        correctAnswers: { 1: "подхожу" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я купила билет и сразу {{1}} от автомата.",
+        words: ["подошла", "отошла", "атошла"],
+        correctAnswers: { 1: "отошла" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Посетители {{1}} к окну, только когда слышат свой номер.",
+        words: ["подходят", "отходят", "подходют"],
+        correctAnswers: { 1: "подходят" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-po-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-po-01', exercises: p1exercises })
+    'panel-po-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-po-01', exercises: p1exercises }),
+    'panel-po-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-po-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
