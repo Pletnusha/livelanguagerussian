@@ -1,0 +1,19 @@
+{
+  "id": "b1-azione-si-puo-bisogna-non-si-puo",
+  "url": "/livello_elementare/aspetto/si-puo-bisogna-non-si-puo/",
+  "level": "b1",
+  "doc_type": "hub",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [
+    "aspetto/perfettivo-vs-imperfettivo",
+    "modali/nuzhno",
+    "modali/mozhno",
+    "modali/nelzya"
+  ],
+  "complementi": [],
+  "lessico": [],
+  "title_ru": "НУЖНО · МОЖНО · НЕЛЬЗЯ",
+  "title_it": "Bisogna, si può, non si può: aspetto perfettivo e imperfettivo"
+}

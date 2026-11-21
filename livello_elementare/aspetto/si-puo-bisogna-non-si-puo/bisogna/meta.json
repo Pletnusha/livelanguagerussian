@@ -1,0 +1,19 @@
+{
+  "id": "b1-azione-si-puo-bisogna-non-si-puo-bisogna",
+  "url": "/livello_elementare/aspetto/si-puo-bisogna-non-si-puo/bisogna/",
+  "level": "b1",
+  "doc_type": "exercise",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [
+    "aspetto/perfettivo-vs-imperfettivo",
+    "modali/nuzhno"
+  ],
+  "complementi": [],
+  "lessico": [],
+  "title_ru": "НУЖНО",
+  "title_it": "Bisogna: нужно + infinito",
+  "source_doc": "b1-azione-si-puo-bisogna-non-si-puo",
+  "focus": "bisogna"
+}

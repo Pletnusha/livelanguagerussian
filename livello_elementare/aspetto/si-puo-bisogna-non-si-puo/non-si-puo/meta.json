@@ -1,0 +1,19 @@
+{
+  "id": "b1-azione-si-puo-bisogna-non-si-puo-non-si-puo",
+  "url": "/livello_elementare/aspetto/si-puo-bisogna-non-si-puo/non-si-puo/",
+  "level": "b1",
+  "doc_type": "exercise",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [
+    "aspetto/perfettivo-vs-imperfettivo",
+    "modali/nelzya"
+  ],
+  "complementi": [],
+  "lessico": [],
+  "title_ru": "НЕЛЬЗЯ",
+  "title_it": "Non si può: нельзя + infinito",
+  "source_doc": "b1-azione-si-puo-bisogna-non-si-puo",
+  "focus": "non-si-puo"
+}

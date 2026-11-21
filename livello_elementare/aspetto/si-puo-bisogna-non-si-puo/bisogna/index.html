@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НУЖНО - LIVE LANGUAGE_RUSSIAN</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/access-control.css">
+    <link rel="stylesheet" href="/livello_elementare/complementi/complementi.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        document.documentElement.style.visibility = 'hidden';
+        (async () => {
+            const SUPABASE_URL = 'https://itjjgblqdpopzoxqeufd.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ampnYmxxZHBvcHpveHFldWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2MTY5OTUsImV4cCI6MjA4NjE5Mjk5NX0.hIcwr45dq4ApcAWH6dP_ZyE9UA7XXQ2jvuEAD1YR5Mc';
+            await new Promise((res, rej) => {
+                const s = document.createElement('script');
+                s.src = 'https://unpkg.com/@supabase/supabase-js@2.46.1/dist/umd/supabase.js';
+                s.onload = res; s.onerror = rej;
+                document.head.appendChild(s);
+            });
+            const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            const { data: { session } } = await client.auth.getSession();
+            if (!session) {
+                window.location.href = '/login.html?redirect=livello_elementare/aspetto/si-puo-bisogna-non-si-puo/bisogna';
+            } else {
+                document.documentElement.style.visibility = '';
+            }
+        })();
+    </script>
+</head>
+<body class="page-bisogna">
+
+    <section class="argomento-header">
+        <h1 class="argomento-title">НУЖНО</h1>
+        <p class="argomento-focus">Bisogna ·&nbsp;нужно&nbsp;+&nbsp;infinito</p>
+    </section>
+
+    <main class="exercises-section">
+
+        <!-- ============================================================ -->
+        <!-- Panel 1 - Collegamento all'hub «Нужно или обычно» -->
+        <!-- ============================================================ -->
+        <a href="/livello_elementare/azione/nuzhno-ili-obychno/" class="exercise-card" style="display: block; text-decoration: none; color: inherit;">
+            <h3 class="exercise-title">НУЖНО ИЛИ ОБЫЧНО</h3>
+        </a>
+
+        <!-- ============================================================ -->
+        <!-- Panel 2 - tipo e livello di accesso da definire (PM) -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="closed" data-target="panel-nb-2">
+            <h3 class="exercise-title">НУЖНО ХОРОШО УЧИТЬСЯ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nb-2" data-access="public" hidden>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Panel 3 - tipo e livello di accesso da definire (PM) -->
+        <!-- ============================================================ -->
+        <article class="exercise-card" data-status="closed" data-target="panel-nb-3">
+            <h3 class="exercise-title">ЧТОБЫ ПОЛУЧИТЬ РЕЗУЛЬТАТ, НУЖНО ТРУДИТЬСЯ</h3>
+        </article>
+
+        <div class="exercise-panel" id="panel-nb-3" data-access="public" hidden>
+        </div>
+
+        <!-- I dati dei pannelli si aggiungono dopo l'approvazione della PM -->
+
+    </main>
+
+    <footer class="level-footer">
+        <a href="/livello_elementare/aspetto/si-puo-bisogna-non-si-puo/" class="back-link">&larr; Torna indietro</a>
+    </footer>
+
+    <script type="module" src="exercises.js"></script>
+</body>
+</html>

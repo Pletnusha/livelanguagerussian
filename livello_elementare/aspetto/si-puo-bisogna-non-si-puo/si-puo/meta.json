@@ -1,0 +1,19 @@
+{
+  "id": "b1-azione-si-puo-bisogna-non-si-puo-si-puo",
+  "url": "/livello_elementare/aspetto/si-puo-bisogna-non-si-puo/si-puo/",
+  "level": "b1",
+  "doc_type": "exercise",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [
+    "aspetto/perfettivo-vs-imperfettivo",
+    "modali/mozhno"
+  ],
+  "complementi": [],
+  "lessico": [],
+  "title_ru": "МОЖНО",
+  "title_it": "Si può: можно + infinito",
+  "source_doc": "b1-azione-si-puo-bisogna-non-si-puo",
+  "focus": "si-puo"
+}

@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-21T06:10:36.447Z",
-  "count": 42,
+  "generated": "2026-11-21T08:47:11.455Z",
+  "count": 46,
   "pages": [
     {
       "id": "b1-azione-nuzhno-ili-obychno",
@@ -112,6 +112,86 @@
       "source_doc": "b1-azione-nuzhno-ili-obychno",
       "focus": "v-universitete",
       "_source": "livello_elementare\\azione\\nuzhno-ili-obychno\\v-universitete\\meta.json"
+    },
+    {
+      "id": "b1-azione-si-puo-bisogna-non-si-puo",
+      "url": "/livello_elementare/aspetto/si-puo-bisogna-non-si-puo/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "aspetto/perfettivo-vs-imperfettivo",
+        "modali/nuzhno",
+        "modali/mozhno",
+        "modali/nelzya"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "НУЖНО · МОЖНО · НЕЛЬЗЯ",
+      "title_it": "Bisogna, si può, non si può: aspetto perfettivo e imperfettivo",
+      "_source": "livello_elementare\\aspetto\\si-puo-bisogna-non-si-puo\\meta.json"
+    },
+    {
+      "id": "b1-azione-si-puo-bisogna-non-si-puo-bisogna",
+      "url": "/livello_elementare/aspetto/si-puo-bisogna-non-si-puo/bisogna/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "aspetto/perfettivo-vs-imperfettivo",
+        "modali/nuzhno"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "НУЖНО",
+      "title_it": "Bisogna: нужно + infinito",
+      "source_doc": "b1-azione-si-puo-bisogna-non-si-puo",
+      "focus": "bisogna",
+      "_source": "livello_elementare\\aspetto\\si-puo-bisogna-non-si-puo\\bisogna\\meta.json"
+    },
+    {
+      "id": "b1-azione-si-puo-bisogna-non-si-puo-non-si-puo",
+      "url": "/livello_elementare/aspetto/si-puo-bisogna-non-si-puo/non-si-puo/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "aspetto/perfettivo-vs-imperfettivo",
+        "modali/nelzya"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "НЕЛЬЗЯ",
+      "title_it": "Non si può: нельзя + infinito",
+      "source_doc": "b1-azione-si-puo-bisogna-non-si-puo",
+      "focus": "non-si-puo",
+      "_source": "livello_elementare\\aspetto\\si-puo-bisogna-non-si-puo\\non-si-puo\\meta.json"
+    },
+    {
+      "id": "b1-azione-si-puo-bisogna-non-si-puo-si-puo",
+      "url": "/livello_elementare/aspetto/si-puo-bisogna-non-si-puo/si-puo/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "aspetto/perfettivo-vs-imperfettivo",
+        "modali/mozhno"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "МОЖНО",
+      "title_it": "Si può: можно + infinito",
+      "source_doc": "b1-azione-si-puo-bisogna-non-si-puo",
+      "focus": "si-puo",
+      "_source": "livello_elementare\\aspetto\\si-puo-bisogna-non-si-puo\\si-puo\\meta.json"
     },
     {
       "id": "b1-azione-verbi-collocativi",
