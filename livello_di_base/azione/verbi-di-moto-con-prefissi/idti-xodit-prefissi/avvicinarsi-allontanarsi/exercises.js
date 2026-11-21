@@ -156,11 +156,29 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — Flashcard · paid
+// Misto: под- / от- (pagina 3) ↔ в- / вы- (pagina 1) ↔ при- / у- (pagina 2); подошли к кабинету (davanti alla porta) ≠ пришла ко мне домой (PM: пришёл = punto di vista di chi riceve); n. 2 presente * (orig. входили… встречал)
+// ============================================================
+const p3cards = [
+    { front: "Мы ___ к кабинету, но входить не стали.", back: "подошли", distractors: ["вошли", "подошлы"] },
+    { front: "Каждый раз, когда мы ___ в ресторан, нас встречает один и тот же официант.", back: "входим", distractors: ["подходим", "входем"] },
+    { front: "Наконец-то она ___ к нам в гости.", back: "пришла", distractors: ["подошла", "прийшла"] },
+    { front: "Когда звонит телефон, бабушка всегда первая ___ к нему.", back: "подходит", distractors: ["входит", "подходет"] },
+    { front: "Вы ___ от машины?", back: "отошли", distractors: ["вышли", "отошлы"] },
+    { front: "Я ___, нужно купить что-нибудь?", back: "ухожу", distractors: ["подхожу", "ухажу"] },
+    { front: "Вчера вечером Анна ___ ко мне домой, и мы смотрели фильм.", back: "пришла", distractors: ["подошла", "пришола"] },
+    { front: "Обычно я ___ из дома в 8 часов.", back: "выхожу", distractors: ["подхожу", "выхажу"] },
+    { front: "Я ___ на минутку, сейчас вернусь.", back: "выйду", distractors: ["подойду", "выйдю"] },
+    { front: "___ от меня!", back: "Отойди", distractors: ["Подойди", "Отайди"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-po-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-po-01', exercises: p1exercises }),
-    'panel-po-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-po-02', exercises: p2exercises })
+    'panel-po-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-po-02', exercises: p2exercises }),
+    'panel-po-3': () => new FlashcardExercise({ rootId: 'ex-flashcards-po-03', cards: p3cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
