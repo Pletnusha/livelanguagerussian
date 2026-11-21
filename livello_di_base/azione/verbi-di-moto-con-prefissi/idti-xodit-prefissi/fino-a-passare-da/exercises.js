@@ -137,7 +137,7 @@ const p2exercises = [
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "Он всегда {{1}} пешком до станции «Автово», а завтра дойдёт до «Нарвской».",
+        text: "Он всегда {{1}} пешком до станции «Автово».",
         words: ["доходит", "заходит", "доходет"],
         correctAnswers: { 1: "доходит" }
     },
@@ -240,13 +240,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Заходи! — dialoghi e quiz della PM + frasi dei pannelli 1–3 in formato carta; 5 до- + 5 за- (PM); n. 4 adattato da «добегу»
+// ============================================================
+const p5cards = [
+    { front: "— Да ладно тебе, ___! Так и будешь на пороге стоять?", back: "заходи", distractors: ["доходи", "захади"] },
+    { front: "Степан ___ за мной, и мы вместе поедем на работу.", back: "зайдёт", distractors: ["дойдёт", "зайдит"] },
+    { front: "Тебе нужно ___ к бабушке?", back: "зайти", distractors: ["дойти", "заити"] },
+    { front: "Я только ___ до супермаркета и обратно!", back: "дойду", distractors: ["зайду", "дойдю"] },
+    { front: "Ты уже ___ до дома? Напиши мне!", back: "дошла", distractors: ["зашла", "дашла"] },
+    { front: "Я ___ в магазин, тебе что-нибудь купить?", back: "захожу", distractors: ["дохожу", "захожю"] },
+    { front: "Он всегда ___ пешком до станции «Автово».", back: "доходит", distractors: ["заходит", "доходет"] },
+    { front: "Начальник попросил ___ к нему на пару слов.", back: "зайти", distractors: ["дойти", "зайтить"] },
+    { front: "Обычно я ___ до остановки за пять минут.", back: "дохожу", distractors: ["захожу", "дахожу"] },
+    { front: "Им нужно ___ до магазина и вернуться.", back: "дойти", distractors: ["зайти", "дайти"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-dz-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-01', exercises: p1exercises }),
     'panel-dz-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-02', exercises: p2exercises }),
     'panel-dz-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-dz-03', exercises: p3exercises }),
-    'panel-dz-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dz-04', cards: p4cards })
+    'panel-dz-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-dz-04', cards: p4cards }),
+    'panel-dz-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-dz-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
