@@ -225,15 +225,15 @@ const p3exercises = [
 
 // ============================================================
 // PANEL 4 — Flashcard · public
-// Nuovo: aspetto — приходить / прийти, уходить / уйти: forme (tabelle СПРЯЖЕНИЯ) + abitudine / risultato, con spiegazioni
+// Nuovo: aspetto — приходить / прийти, уходить / уйти: solo frasi con marcatori (PM 21.11: niente carte con sole forme) — abitudine / risultato, con spiegazioni
 // ============================================================
 const p4cards = [
-    { front: "приходить → я …", back: "прихожу", distractors: ["приду", "приходю"], explanation: "Приходить (НСВ), presente: прихожу, приходишь… «д» → «ж» alla 1ª persona." },
-    { front: "уходить → ты …", back: "уходишь", distractors: ["уйдёшь", "уходешь"], explanation: "Уходить: ухожу, уходишь… come приходить." },
-    { front: "прийти → он, прошедшее время …", back: "пришёл", distractors: ["приходил", "пришол"], explanation: "Passato di прийти: пришёл, пришла, пришли." },
-    { front: "уйти → она, прошедшее время …", back: "ушла", distractors: ["уходила", "ушола"], explanation: "Passato di уйти: ушёл, ушла, ушли." },
-    { front: "прийти → я, будущее время …", back: "приду", distractors: ["прихожу", "прийду"], explanation: "Futuro di прийти: приду, придёшь (senza «й»: non «прийду»)." },
-    { front: "уйти → мы, будущее время …", back: "уйдём", distractors: ["уходим", "уйдим"], explanation: "Futuro di уйти: уйду, уйдёшь, уйдём." },
+    { front: "Каждое утро я ___ в офис первой и включаю кофемашину.", back: "прихожу", distractors: ["приду", "приходю"], explanation: "Каждое утро = abitudine → НСВ: прихожу («д» → «ж»)." },
+    { front: "Во сколько ты обычно ___ с работы?", back: "уходишь", distractors: ["уйдёшь", "уходешь"], explanation: "Обычно → НСВ: уходишь." },
+    { front: "Он ___ в библиотеку и принёс ноутбук, потому что дома он не мог ничего написать.", back: "пришёл", distractors: ["ушёл", "пришол"], explanation: "È arrivato ed è lì → прийти. Passato: пришёл, пришла, пришли." },
+    { front: "— Где Маша? — Она уже ___ домой, будет только завтра.", back: "ушла", distractors: ["уходила", "ушола"], explanation: "Уже, e non c'è più → СВ: ушла." },
+    { front: "Когда ты ___ к нам на обед?", back: "придёшь", distractors: ["уйдёшь", "прийдёшь"], explanation: "Una visita precisa nel futuro → СВ: придёшь (senza «й»: non «прийдёшь»)." },
+    { front: "Мы ждём вас в субботу. ___ к часу!", back: "Приходите", distractors: ["Уходите", "Прийдите"], explanation: "Invito → imperativo НСВ: приходите! (non «прийдите»)." },
     { front: "Он каждый день ___ на работу около девяти.", back: "приходит", distractors: ["придёт", "прихадит"], explanation: "Ogni giorno (abitudine) → НСВ: приходит." },
     { front: "Каждый раз, когда она ___ от нас, она забывает зонтик.", back: "уходит", distractors: ["уйдёт", "уходет"], explanation: "Каждый раз = azione ripetuta → НСВ: уходит." },
     { front: "Наконец-то она ___ к нам в гости.", back: "пришла", distractors: ["приходила", "прийшла"], explanation: "Наконец-то = risultato atteso, una volta → СВ: пришла." },
@@ -304,28 +304,28 @@ function initPanelAa9() {
         { question: "Наконец-то она ___ к нам в гости.", options: ["пришла", "ушла", "прийшла"], answer: "пришла" }
     ];
     const matchPairs = [
-        { left: "приходить", right: "прийти" },
-        { left: "уходить", right: "уйти" },
-        { left: "прихожу", right: "приду" },
-        { left: "ухожу", right: "уйду" },
-        { left: "приходил", right: "пришёл" },
-        { left: "уходил", right: "ушёл" },
-        { left: "приходишь", right: "придёшь" },
-        { left: "уходишь", right: "уйдёшь" },
-        { left: "приходят", right: "придут" },
-        { left: "уходят", right: "уйдут" }
+        { left: "Каждое утро я ___ в офис первой и включаю кофемашину.", right: "прихожу" },
+        { left: "Я не могу и не хочу всё это выслушивать! Я ___!", right: "ухожу" },
+        { left: "— Уже ___? — Да, мне пора, завтра рано вставать!", right: "уходишь" },
+        { left: "Он каждый день ___ на работу около девяти.", right: "приходит" },
+        { left: "Когда ты ___ к нам на обед?", right: "придёшь" },
+        { left: "Мы завтра устраиваем вечеринку. Вы ___ к нам?", right: "придёте" },
+        { left: "Наконец-то она ___ к нам в гости.", right: "пришла" },
+        { left: "Он ___ от родителей, когда ему было восемнадцать.", right: "ушёл" },
+        { left: "Они ___ вчера с вечеринки первыми.", right: "ушли" },
+        { left: "Мы ждём вас в субботу. ___ к часу!", right: "Приходите" }
     ];
     const quizData = [
-        { id: "aa9-w1", promptPrefix: "(приходить / прийти) Он каждый день ", promptSuffix: " на работу около девяти.", answers: ["приходит"] },
-        { id: "aa9-w2", promptPrefix: "(уходить / уйти) Во сколько ты обычно ", promptSuffix: " с работы?", answers: ["уходишь"] },
-        { id: "aa9-w3", promptPrefix: "(прийти) Когда ты ", promptSuffix: " к нам на обед?", answers: ["придёшь", "придешь"] },
-        { id: "aa9-w4", promptPrefix: "(приходить / прийти) Наконец-то она ", promptSuffix: " к нам в гости.", answers: ["пришла"] },
-        { id: "aa9-w5", promptPrefix: "(уходить / уйти) Он ", promptSuffix: " от родителей, когда ему было восемнадцать.", answers: ["ушёл", "ушел"] },
-        { id: "aa9-w6", promptPrefix: "(уходить / уйти) Каждый раз, когда она ", promptSuffix: " от нас, она забывает зонтик.", answers: ["уходит"] },
-        { id: "aa9-w7", promptPrefix: "(уйти) Поезд ", promptSuffix: " через десять минут.", answers: ["уйдёт", "уйдет"] },
-        { id: "aa9-w8", promptPrefix: "(приходить / прийти) Каждое утро я ", promptSuffix: " в офис первой и включаю кофемашину.", answers: ["прихожу"] },
-        { id: "aa9-w9", promptPrefix: "(уходить / уйти) Они ", promptSuffix: " вчера с вечеринки первыми.", answers: ["ушли"] },
-        { id: "aa9-w10", promptPrefix: "(уходить / уйти) — Уже ", promptSuffix: "? — Да, мне пора, завтра рано вставать!", answers: ["уходишь"] }
+        { id: "aa9-w1", promptPrefix: "Каждое утро я ", promptSuffix: " в офис первой и включаю кофемашину.", answers: ["прихожу", "приезжаю"] },
+        { id: "aa9-w2", promptPrefix: "— Уже ", promptSuffix: "? — Да, мне пора, завтра рано вставать!", answers: ["уходишь", "уезжаешь"] },
+        { id: "aa9-w3", promptPrefix: "Когда ты ", promptSuffix: " к нам на обед?", answers: ["придёшь", "придешь", "приедешь", "зайдёшь", "зайдешь"] },
+        { id: "aa9-w4", promptPrefix: "Наконец-то она ", promptSuffix: " к нам в гости.", answers: ["пришла", "приехала", "зашла"] },
+        { id: "aa9-w5", promptPrefix: "Он ", promptSuffix: " от родителей, когда ему было восемнадцать.", answers: ["ушёл", "ушел", "уехал"] },
+        { id: "aa9-w6", promptPrefix: "Каждый раз, когда она ", promptSuffix: " от нас, она забывает зонтик.", answers: ["уходит", "уезжает"] },
+        { id: "aa9-w7", promptPrefix: "Я не могу и не хочу всё это выслушивать! Я ", promptSuffix: "!", answers: ["ухожу"] },
+        { id: "aa9-w8", promptPrefix: "Мы завтра устраиваем вечеринку. Вы ", promptSuffix: " к нам?", answers: ["придёте", "придете", "приедете", "зайдёте", "зайдете"] },
+        { id: "aa9-w9", promptPrefix: "Они ", promptSuffix: " вчера с вечеринки первыми.", answers: ["ушли", "уехали"] },
+        { id: "aa9-w10", promptPrefix: "— Где Маша? — Она уже ", promptSuffix: " домой, будет только завтра.", answers: ["ушла", "уехала", "пошла"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
