@@ -223,12 +223,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Nuovo: aspetto — переходить / перейти, проходить / пройти, обходить / обойти: solo frasi con marcatori (всегда, каждый день, смотри!, sequenza, futuro), con spiegazioni; n. 10 nuova approvata dalla PM
+// ============================================================
+const p4cards = [
+    { front: "Я каждый день ___ мимо этого кафе.", back: "прохожу", distractors: ["пройду", "проходю"], explanation: "Каждый день → НСВ: прохожу («д» → «ж»)." },
+    { front: "Смотри, она ___ дорогу на красный свет!", back: "переходит", distractors: ["перейдёт", "переходет"], explanation: "Sta succedendo adesso («смотри!») → НСВ presente: переходит." },
+    { front: "Вчера мы ___ через Казанский мост и повернули налево.", back: "перешли", distractors: ["переходили", "перешлы"], explanation: "Azioni in sequenza (перешли… и повернули) → СВ." },
+    { front: "Мы ___ дом и увидели вход во двор.", back: "обошли", distractors: ["обходили", "обашли"], explanation: "Prima un'azione conclusa, poi il risultato (увидели) → СВ: обошли." },
+    { front: "Мы ___ через сад и выйдем к Александровской колонне.", back: "пройдём", distractors: ["проходим", "прайдём"], explanation: "Futuro, un'azione sola (выйдем) → СВ: пройдём." },
+    { front: "Я всегда ___ дом с правой стороны.", back: "обхожу", distractors: ["обойду", "обхажу"], explanation: "Всегда → НСВ: обхожу." },
+    { front: "___ прямо ещё метров пятьдесят.", back: "Пройдите", distractors: ["Перейдите", "Пройдити"], explanation: "Per indicare la strada: пройдите (imperativo СВ, fino a un punto preciso)." },
+    { front: "Мы всегда ___ дорогу очень осторожно.", back: "переходим", distractors: ["перейдём", "переходем"], explanation: "Всегда → НСВ: переходим." },
+    { front: "Они ___ мимо нас.", back: "прошли", distractors: ["перешли", "прошлы"], explanation: "Passato di пройти: прошёл, прошла, прошли (мимо + genitivo)." },
+    { front: "Простите, как ___ к метро?", back: "пройти", distractors: ["перейти", "пройтить"], explanation: "Per chiedere la strada: Как пройти к…?" }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-pp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-01', exercises: p1exercises }),
     'panel-pp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-02', exercises: p2exercises }),
-    'panel-pp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-03', exercises: p3exercises })
+    'panel-pp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-03', exercises: p3exercises }),
+    'panel-pp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
