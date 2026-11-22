@@ -229,12 +229,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Aspetto: 5 coppie della scheda — резать / нарезать, мыть / вымыть, варить / сварить, жарить / обжарить, кипятить / вскипятить; frasi riconoscibili dei pannelli 2–3 + «Сегодня у Андрея гости» dal testo. Presente imperfettivo (sbagliate: due infiniti) ↔ нужно + perfettivo (sbagliate: presente e futuro, mai l'infinito imperfettivo). Niente чистить / почистить: in MATCH «моет картофель в раковине» e «чистит морковь в раковине» si scambierebbero; l'altro perfettivo (отварить, пожарить) solo nella spiegazione; con spiegazioni
+// ============================================================
+const p4cards = [
+    { front: "Обычно Андрей ___ овощи на столе.", back: "режет", distractors: ["нарезать", "резать"], explanation: "Обычно = abitudine: imperfettivo presente (он режет)." },
+    { front: "Сегодня у Андрея гости, нужно ___ овощи на столе.", back: "нарезать", distractors: ["режет", "нарежет"], explanation: "Oggi, una cosa da finire: нужно + perfettivo (на-резать)." },
+    { front: "Обычно Андрей ___ картофель в раковине.", back: "моет", distractors: ["вымыть", "мыть"], explanation: "Abitudine: imperfettivo presente (он моет)." },
+    { front: "Сегодня нужно ___ картофель в раковине.", back: "вымыть", distractors: ["моет", "вымоет"], explanation: "Un risultato oggi: нужно + perfettivo (вы-мыть)." },
+    { front: "Обычно Андрей ___ мясо в кастрюле.", back: "варит", distractors: ["сварить", "варить"], explanation: "Abitudine: imperfettivo presente (он варит)." },
+    { front: "Сегодня у Андрея гости, нужно ___ мясо в кастрюле.", back: "сварить", distractors: ["варит", "сварит"], explanation: "Нужно + perfettivo: с-варить (va bene anche от-варить)." },
+    { front: "Обычно Андрей ___ рыбу на сковородке.", back: "жарит", distractors: ["обжарить", "жарить"], explanation: "Abitudine: imperfettivo presente (он жарит)." },
+    { front: "Сегодня нужно ___ рыбу на сковородке.", back: "обжарить", distractors: ["жарит", "обжарит"], explanation: "Нужно + perfettivo: об-жарить (va bene anche по-жарить)." },
+    { front: "Обычно Андрей ___ воду в чайнике.", back: "кипятит", distractors: ["вскипятить", "кипятить"], explanation: "Abitudine: imperfettivo presente (он кипятит)." },
+    { front: "Сегодня нужно ___ воду в чайнике.", back: "вскипятить", distractors: ["кипятит", "вскипятит"], explanation: "Нужно + perfettivo: вс-кипятить." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-kuh-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-01', exercises: p1exercises }),
     'panel-kuh-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-02', exercises: p2exercises }),
-    'panel-kuh-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-03', exercises: p3exercises })
+    'panel-kuh-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-03', exercises: p3exercises }),
+    'panel-kuh-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
