@@ -263,6 +263,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Misto: inizio → fine. 6 frasi della cucina (testo su Андрей + scheda: trappole «обычно Андрей нужно», «ему покупает», caso dopo за / в) + 4 vecchie identiche (pagina «Супер мама»: парикмахерскую, два раза в неделю; pagina «В офисе»: встречу заказчику, три встречи). In MATCH ogni fine sta solo con il suo inizio: niente «Мой сын обычно…», «Тебе… нужно умыться», «сварить мясо в кастрюле»; senza spiegazioni
+// ============================================================
+const p6cards = [
+    { front: "Обычно Андрей…", back: "режет овощи на столе.", distractors: ["нужно нарезать овощи на столе.", "нарезать овощи на столе."] },
+    { front: "Сегодня у Андрея гости, поэтому ему…", back: "нужно купить продукты.", distractors: ["покупает продукты.", "купит продукты."] },
+    { front: "Сегодня нужно…", back: "обжарить рыбу на сковородке.", distractors: ["жарит рыбу на сковородке.", "обжарит рыбу на сковородке."] },
+    { front: "Обычно он ходит за…", back: "продуктами по воскресеньям.", distractors: ["продукты по воскресеньям.", "продуктов по воскресеньям."] },
+    { front: "Нужно вскипятить воду в…", back: "чайнике.", distractors: ["чайник.", "чайника."] },
+    { front: "Нужно не забыть купить…", back: "воду.", distractors: ["вода.", "водой."] },
+    { front: "Как часто вы ходите в…", back: "парикмахерскую?", distractors: ["парикмахерской?", "парикмахерская?"] },
+    { front: "Она моет полы два раза в…", back: "неделю.", distractors: ["неделя.", "недели."] },
+    { front: "Коллеге нужно назначить встречу…", back: "заказчику.", distractors: ["заказчик.", "заказчиком."] },
+    { front: "— Тебе нужно проверить эти договоры. — Я не успею, у меня три…", back: "встречи сегодня.", distractors: ["встреч сегодня.", "встреча сегодня."] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -270,7 +287,8 @@ const initializers = {
     'panel-kuh-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-02', exercises: p2exercises }),
     'panel-kuh-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-03', exercises: p3exercises }),
     'panel-kuh-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-04', cards: p4cards }),
-    'panel-kuh-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-05', cards: p5cards })
+    'panel-kuh-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-05', cards: p5cards }),
+    'panel-kuh-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
