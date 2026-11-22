@@ -257,6 +257,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Sensi figurati frequenti (PM 22.11): как прошёл день, платёж не прошёл (testo «В банке»), всё пройдёт хорошо, прошло несколько лет, перейти на ты, обойти проблему, голова прошла, дождь прошёл, перейти на другую работу, проходить собеседование; mai «прошли несколько лет» né «пройду собеседование» come distrattori
+// ============================================================
+const p6cards = [
+    { front: "— Как ___ день? — Отлично, спасибо!", back: "прошёл", distractors: ["перешёл", "прошол"] },
+    { front: "У меня не ___ платёж, карта открыта для платежей в Северной Америке.", back: "прошёл", distractors: ["перешёл", "прашёл"] },
+    { front: "Не волнуйся, всё ___ хорошо!", back: "пройдёт", distractors: ["перейдёт", "прайдёт"] },
+    { front: "С тех пор ___ несколько лет.", back: "прошло", distractors: ["обошло", "прашло"] },
+    { front: "Давай ___ на ты!", back: "перейдём", distractors: ["пройдём", "перайдём"] },
+    { front: "Как нам ___ эту проблему?", back: "обойти", distractors: ["перейти", "обайти"] },
+    { front: "Голова уже ___, спасибо.", back: "прошла", distractors: ["перешла", "прашла"] },
+    { front: "Дождь ___, можно идти.", back: "прошёл", distractors: ["перешёл", "прашёл"] },
+    { front: "Он ___ на другую работу.", back: "перешёл", distractors: ["прошёл", "перешол"] },
+    { front: "Завтра я ___ собеседование.", back: "прохожу", distractors: ["перехожу", "проходю"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -264,7 +281,8 @@ const initializers = {
     'panel-pp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-02', exercises: p2exercises }),
     'panel-pp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-03', exercises: p3exercises }),
     'panel-pp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-04', cards: p4cards }),
-    'panel-pp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-05', cards: p5cards })
+    'panel-pp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-05', cards: p5cards }),
+    'panel-pp-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
