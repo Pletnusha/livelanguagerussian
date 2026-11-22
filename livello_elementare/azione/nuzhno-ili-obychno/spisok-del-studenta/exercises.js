@@ -350,16 +350,16 @@ function initPanelSds9() {
         { left: "Студенты сдавали экзамены…", right: "до середины февраля." }
     ];
     const quizData = [
-        { id: "sds9-w1", promptPrefix: "Обычно мы ", promptSuffix: " (писать / написать) доклад к экзамену.", answers: ["писали"] },
-        { id: "sds9-w2", promptPrefix: "Нам нужно было ", promptSuffix: " (писать / написать) доклад к экзамену.", answers: ["написать"] },
-        { id: "sds9-w3", promptPrefix: "Она всегда ", promptSuffix: " (учить / выучить) новые слова к следующей лекции.", answers: ["учила"] },
-        { id: "sds9-w4", promptPrefix: "Ей нужно было ", promptSuffix: " (учить / выучить) новые слова к следующей лекции.", answers: ["выучить"] },
-        { id: "sds9-w5", promptPrefix: "Мы редко ", promptSuffix: " (готовиться / подготовиться) к экзамену за месяц!", answers: ["готовились"] },
-        { id: "sds9-w6", promptPrefix: "Лена: «Обычно я ", promptSuffix: " (брать / взять) конспект лекций у Ольги».", answers: ["брала"] },
-        { id: "sds9-w7", promptPrefix: "Иногда профессор ", promptSuffix: " (принимать / сдавать) экзамен до позднего вечера.", answers: ["принимал"] },
+        { id: "sds9-w1", promptPrefix: "Обычно мы ", promptSuffix: " доклад к экзамену.", answers: ["писали", "готовили", "делали"] },
+        { id: "sds9-w2", promptPrefix: "Нам нужно было ", promptSuffix: " доклад к экзамену.", answers: ["написать", "подготовить", "сделать"] },
+        { id: "sds9-w3", promptPrefix: "Она всегда ", promptSuffix: " новые слова к следующей лекции.", answers: ["учила", "выучивала"] },
+        { id: "sds9-w4", promptPrefix: "Ей нужно было ", promptSuffix: " новые слова к следующей лекции.", answers: ["выучить"] },
+        { id: "sds9-w5", promptPrefix: "Мы редко ", promptSuffix: " к экзамену за месяц!", answers: ["готовились"] },
+        { id: "sds9-w6", promptPrefix: "Лена: «Обычно я ", promptSuffix: " конспект лекций у Ольги».", answers: ["брала", "просила"] },
+        { id: "sds9-w7", promptPrefix: "Иногда профессор ", promptSuffix: " экзамен до позднего вечера.", answers: ["принимал", "проводил"] },
         { id: "sds9-w8", promptPrefix: "Нам ", promptSuffix: " подготовиться к последнему экзамену.", answers: ["нужно было", "было нужно"] },
-        { id: "sds9-w9", promptPrefix: "Сессия ", promptSuffix: " (проходить) два раза в год.", answers: ["проходила"] },
-        { id: "sds9-w10", promptPrefix: "(2016; сейчас 2026) Я закончил университет десять лет ", promptSuffix: ".", answers: ["назад"] }
+        { id: "sds9-w9", promptPrefix: "Сейчас: «Сессия проходит два раза в год». Раньше: «Сессия ", promptSuffix: " два раза в год».", answers: ["проходила", "была"] },
+        { id: "sds9-w10", promptPrefix: "Я закончил университет десять лет ", promptSuffix: ".", answers: ["назад"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
