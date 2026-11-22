@@ -162,11 +162,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Dove? Quando? — posti della scheda (на столе, в раковине, в кастрюле, на сковородке, в чайнике: prepositivo; sbagliate anche l'accusativo «куда?» — solo come sbagliata, niente положить / поставить), по воскресеньям / сегодня dal testo su Андрей, scelta del marcatore Обычно / Нужно; senza spiegazioni
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно Андрей режет овощи на {{1}}.",
+        words: ["стол", "столе", "столом"],
+        correctAnswers: { 1: "столе" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно вымыть картофель в {{1}}.",
+        words: ["раковина", "раковину", "раковине"],
+        correctAnswers: { 1: "раковине" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно сварить мясо в {{1}}.",
+        words: ["кастрюле", "кастрюлю", "кастрюля"],
+        correctAnswers: { 1: "кастрюле" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно Андрей жарит рыбу на {{1}}.",
+        words: ["сковородке", "сковородку", "сковородка"],
+        correctAnswers: { 1: "сковородке" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно вскипятить воду в {{1}}.",
+        words: ["чайник", "чайника", "чайнике"],
+        correctAnswers: { 1: "чайнике" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно он ходит за продуктами по {{1}}.",
+        words: ["воскресенье", "воскресеньям", "воскресенья"],
+        correctAnswers: { 1: "воскресеньям" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно он ходит за продуктами по воскресеньям. Но {{1}} у него гости.",
+        words: ["сегодня", "обычно", "всегда"],
+        correctAnswers: { 1: "сегодня" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "{{1}} Андрей режет овощи на столе.",
+        words: ["Нужно", "Обычно", "Сегодня нужно"],
+        correctAnswers: { 1: "Обычно" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "{{1}} вымыть картофель в раковине.",
+        words: ["Обычно", "Всегда", "Нужно"],
+        correctAnswers: { 1: "Нужно" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно он чистит морковь в {{1}}.",
+        words: ["раковине", "раковиной", "раковину"],
+        correctAnswers: { 1: "раковине" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-kuh-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-01', exercises: p1exercises }),
-    'panel-kuh-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-02', exercises: p2exercises })
+    'panel-kuh-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-02', exercises: p2exercises }),
+    'panel-kuh-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
