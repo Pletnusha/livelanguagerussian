@@ -81,10 +81,10 @@ const p1exercises = [
     },
     {
         instruction: "Trascina la forma giusta.",
-        text: "Я каждый день {{1}} мимо этого кафе.",
-        words: ["прохожу", "перехожу", "проходю"],
-        correctAnswers: { 1: "прохожу" },
-        explanation: "Каждый день → НСВ: прохожу мимо (passo davanti)."
+        text: "Она {{1}} мимо меня и даже не заметила.",
+        words: ["прошла", "перешла", "прашла"],
+        correctAnswers: { 1: "прошла" },
+        explanation: "Passare accanto = пройти мимо + genitivo (мимо меня)."
     }
 ];
 
@@ -227,7 +227,7 @@ const p3exercises = [
 // Nuovo: aspetto — переходить / перейти, проходить / пройти, обходить / обойти: solo frasi con marcatori (всегда, каждый день, смотри!, sequenza, futuro), con spiegazioni; n. 10 nuova approvata dalla PM
 // ============================================================
 const p4cards = [
-    { front: "Я каждый день ___ мимо этого кафе.", back: "прохожу", distractors: ["пройду", "проходю"], explanation: "Каждый день → НСВ: прохожу («д» → «ж»)." },
+    { front: "Я каждый день ___ пешком пять километров.", back: "прохожу", distractors: ["пройду", "проходю"], explanation: "Каждый день → НСВ: прохожу. Пройти + quanto: пять километров." },
     { front: "Смотри, она ___ дорогу на красный свет!", back: "переходит", distractors: ["перейдёт", "переходет"], explanation: "Sta succedendo adesso («смотри!») → НСВ presente: переходит." },
     { front: "Вчера мы ___ через Казанский мост и повернули налево.", back: "перешли", distractors: ["переходили", "перешлы"], explanation: "Azioni in sequenza (перешли… и повернули) → СВ." },
     { front: "Мы ___ дом и увидели вход во двор.", back: "обошли", distractors: ["обходили", "обашли"], explanation: "Prima un'azione conclusa, poi il risultato (увидели) → СВ: обошли." },
