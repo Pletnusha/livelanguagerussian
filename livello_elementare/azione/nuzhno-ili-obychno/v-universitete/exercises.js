@@ -349,13 +349,13 @@ function initPanelVun9() {
         { left: "Обычно я беру конспект лекций…", right: "у Ольги." }
     ];
     const quizData = [
-        { id: "vun9-w1", promptPrefix: "Обычно мы ", promptSuffix: " (учить / выучить) десять–двадцать новых слов к каждому занятию.", answers: ["учим"] },
-        { id: "vun9-w2", promptPrefix: "Нужно ", promptSuffix: " (выполнять / выполнить) задание к завтрашнему семинару.", answers: ["выполнить"] },
-        { id: "vun9-w3", promptPrefix: "Обычно в зимнюю сессию мы ", promptSuffix: " (сдавать / сдать) экзамены до середины февраля.", answers: ["сдаём"] },
-        { id: "vun9-w4", promptPrefix: "Нам нужно подготовиться к последнему экзамену и ", promptSuffix: " (заканчивать / закончить) зимнюю сессию!", answers: ["закончить"] },
-        { id: "vun9-w5", promptPrefix: "К каждому семинару мы ", promptSuffix: " (писать / написать) доклад или читаем статьи.", answers: ["пишем"] },
-        { id: "vun9-w6", promptPrefix: "Обычно мы ", promptSuffix: " (готовить / подготовить) доклад один раз в месяц.", answers: ["готовим"] },
-        { id: "vun9-w7", promptPrefix: "Доклад о социальных сетях нужно ", promptSuffix: " (готовить / подготовить) к пятнице.", answers: ["подготовить"] },
+        { id: "vun9-w1", promptPrefix: "Обычно мы ", promptSuffix: " десять–двадцать новых слов к каждому занятию.", answers: ["учим", "выучиваем"] },
+        { id: "vun9-w2", promptPrefix: "Нужно ", promptSuffix: " задание к завтрашнему семинару.", answers: ["выполнить", "сделать", "написать"] },
+        { id: "vun9-w3", promptPrefix: "Обычно в зимнюю сессию мы ", promptSuffix: " экзамены до середины февраля.", answers: ["сдаём", "пишем"] },
+        { id: "vun9-w4", promptPrefix: "Нам нужно подготовиться к последнему экзамену и ", promptSuffix: " зимнюю сессию!", answers: ["закончить", "сдать"] },
+        { id: "vun9-w5", promptPrefix: "К каждому семинару мы ", promptSuffix: " доклад или читаем статьи.", answers: ["пишем", "готовим", "делаем"] },
+        { id: "vun9-w6", promptPrefix: "Обычно мы ", promptSuffix: " доклад один раз в месяц.", answers: ["готовим", "пишем", "делаем"] },
+        { id: "vun9-w7", promptPrefix: "Доклад о социальных сетях нужно ", promptSuffix: " к пятнице.", answers: ["подготовить", "написать", "сделать"] },
         { id: "vun9-w8", promptPrefix: "Сессия проходит два раза в ", promptSuffix: ".", answers: ["год"] },
         { id: "vun9-w9", promptPrefix: "— Я уже два сдала. — Когда? — На прошлой ", promptSuffix: ".", answers: ["неделе"] },
         { id: "vun9-w10", promptPrefix: "Нам нужно выучить спряжения глаголов к ", promptSuffix: ".", answers: ["понедельнику"] }
