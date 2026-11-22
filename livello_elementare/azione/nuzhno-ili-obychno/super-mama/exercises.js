@@ -294,19 +294,19 @@ const p7cards = [
 
 // ============================================================
 // PANEL 8 — Flashcard · student
-// Come si forma il perfettivo: imperfettivo + oggetto originale → coppia perfettiva. 7 coppie di casa (по-, вы-, при-, с-, forma più corta, altra forma) + 3 vecchie (pagina «В университете»: учить → выучить, сдавать → сдать; pagina «В офисе»: заканчивать → закончить). Sbagliate = perfettivi veri di altri verbi, spesso con lo stesso prefisso (si riconosce la radice); mai un prefisso «sbagliato» che esiste (помыть, выстирать, выгладить). Niente убрать (у- fa parte della radice); con spiegazioni
+// Come si forma il perfettivo, in frasi (regola PM 21–22.11: niente carte «НСВ → СВ»): prima la frase riconoscibile con l'imperfettivo, poi «нужно ___» → la coppia perfettiva; in MATCH ogni frase va solo con la sua coppia, perché l'imperfettivo è nella frase. 7 coppie di casa (по-, вы-, при-, с-, forma più corta, altra forma) + 3 vecchie (pagina «В университете»: учить → выучить, сдавать → сдать; pagina «В офисе»: заканчивать → закончить). Sbagliate = perfettivi veri di altri verbi, spesso con lo stesso prefisso (si riconosce la radice); mai un prefisso «sbagliato» che esiste (помыть, выстирать, выгладить). Niente убрать (у- fa parte della radice); con spiegazioni
 // ============================================================
 const p8cards = [
-    { front: "гладить детские вещи →", back: "погладить", distractors: ["почистить", "позвонить"], explanation: "по- + гладить. Con по- anche: постирать, почистить, позвонить, позавтракать." },
-    { front: "мыть полы →", back: "вымыть", distractors: ["выучить", "выполнить"], explanation: "вы- + мыть: вымыть полы, посуду, окна." },
-    { front: "готовить обед →", back: "приготовить", distractors: ["погладить", "вымыть"], explanation: "при- + готовить: il cibo. Un documento invece si подготовить (pagina «В офисе»)." },
-    { front: "есть шоколад →", back: "съесть", distractors: ["сходить", "сдать"], explanation: "с- + есть; davanti a е si scrive съ-: съесть." },
-    { front: "ходить в парикмахерскую →", back: "сходить", distractors: ["съесть", "сдать"], explanation: "с- + ходить: andare e tornare (una volta)." },
-    { front: "покупать продукты →", back: "купить", distractors: ["закончить", "встать"], explanation: "Attenzione: qui il perfettivo è più corto, senza по-! покупать → купить." },
-    { front: "ложиться спать →", back: "лечь", distractors: ["встать", "купить"], explanation: "Due forme diverse: ложиться / лечь (я ложусь — мне нужно лечь)." },
-    { front: "учить слова →", back: "выучить", distractors: ["вымыть", "выполнить"], explanation: "Dalla pagina «В университете»: вы- + учить, imparare fino in fondo." },
-    { front: "сдавать экзамены →", back: "сдать", distractors: ["встать", "съесть"], explanation: "Dalla pagina «В университете»: -ва- solo nell'imperfettivo — сдавать / сдать, come вставать / встать." },
-    { front: "заканчивать отчёт →", back: "закончить", distractors: ["купить", "лечь"], explanation: "Dalla pagina «В офисе»: il perfettivo è più corto — заканчивать → закончить." }
+    { front: "Я всегда глажу детские вещи. Сегодня нужно ___ детские вещи.", back: "погладить", distractors: ["почистить", "позвонить"], explanation: "по- + гладить. Con по- anche: постирать, почистить, позвонить, позавтракать." },
+    { front: "Она моет полы два раза в неделю. Сегодня нужно ___ полы.", back: "вымыть", distractors: ["выучить", "выполнить"], explanation: "вы- + мыть: вымыть полы, посуду, окна." },
+    { front: "Обычно я готовлю ужин. До обеда нужно ___ обед.", back: "приготовить", distractors: ["погладить", "вымыть"], explanation: "при- + готовить: il cibo. Un documento invece si подготовить (pagina «В офисе»)." },
+    { front: "Мой сын обычно ест шоколад. — …___ шоколад. — Уже!", back: "съесть", distractors: ["сходить", "сдать"], explanation: "с- + есть; davanti a е si scrive съ-: съесть." },
+    { front: "Как часто вы ходите в парикмахерскую? Сегодня нужно ___ в парикмахерскую.", back: "сходить", distractors: ["съесть", "сдать"], explanation: "с- + ходить: andare e tornare (una volta)." },
+    { front: "Мы покупаем продукты на рынке. Сегодня нужно ___ продукты.", back: "купить", distractors: ["закончить", "встать"], explanation: "Attenzione: qui il perfettivo è più corto, senza по-! покупать → купить." },
+    { front: "Обычно я ложусь поздно, но сегодня мне нужно ___ в два.", back: "лечь", distractors: ["купить", "съесть"], explanation: "Due forme diverse: ложиться / лечь (я ложусь — мне нужно лечь)." },
+    { front: "Обычно мы учим новые слова. К понедельнику нужно ___ спряжения глаголов.", back: "выучить", distractors: ["вымыть", "выполнить"], explanation: "Dalla pagina «В университете»: вы- + учить, imparare fino in fondo." },
+    { front: "Обычно мы сдаём три экзамена, но в эту сессию нужно ___ пять!", back: "сдать", distractors: ["встать", "съесть"], explanation: "Dalla pagina «В университете»: -ва- solo nell'imperfettivo — сдавать / сдать, come вставать / встать." },
+    { front: "Я обычно заканчиваю отчёт к концу недели, а сегодня нужно ___ отчёт до обеда.", back: "закончить", distractors: ["купить", "лечь"], explanation: "Dalla pagina «В офисе»: il perfettivo è più corto — заканчивать → закончить." }
 ];
 
 // ============================================================
@@ -351,16 +351,16 @@ function initPanelSmm9() {
         { left: "Сегодня нужно позвонить…", right: "педиатру." }
     ];
     const quizData = [
-        { id: "smm9-w1", promptPrefix: "Обычно я ", promptSuffix: " (стирать / постирать) рубашки в стиральной машине.", answers: ["стираю"] },
-        { id: "smm9-w2", promptPrefix: "После обеда нужно ", promptSuffix: " (гладить / погладить) вещи.", answers: ["погладить"] },
-        { id: "smm9-w3", promptPrefix: "Она ", promptSuffix: " (мыть / вымыть) полы два раза в неделю.", answers: ["моет"] },
-        { id: "smm9-w4", promptPrefix: "Нужно ", promptSuffix: " (мыть / вымыть) посуду после вечеринки.", answers: ["вымыть"] },
-        { id: "smm9-w5", promptPrefix: "Мы ", promptSuffix: " (покупать / купить) продукты на рынке.", answers: ["покупаем"] },
-        { id: "smm9-w6", promptPrefix: "До обеда нужно ", promptSuffix: " (готовить / приготовить) обед.", answers: ["приготовить"] },
-        { id: "smm9-w7", promptPrefix: "Ты же знаешь, что обычно я ", promptSuffix: " (ложиться / лечь) поздно!", answers: ["ложусь"] },
-        { id: "smm9-w8", promptPrefix: "Мне нужно ", promptSuffix: " (ложиться / лечь) в два.", answers: ["лечь"] },
-        { id: "smm9-w9", promptPrefix: "Мой сын обычно ", promptSuffix: " (умываться / умыться), чистит зубы, ест шоколад.", answers: ["умывается"] },
-        { id: "smm9-w10", promptPrefix: "Тебе нужно ", promptSuffix: " (чистить / почистить) зубы.", answers: ["почистить"] }
+        { id: "smm9-w1", promptPrefix: "Обычно я ", promptSuffix: " рубашки в стиральной машине.", answers: ["стираю"] },
+        { id: "smm9-w2", promptPrefix: "После обеда нужно ", promptSuffix: " вещи, убраться, вымыть окна.", answers: ["погладить", "постирать", "убрать"] },
+        { id: "smm9-w3", promptPrefix: "Она ", promptSuffix: " полы два раза в неделю.", answers: ["моет"] },
+        { id: "smm9-w4", promptPrefix: "Нужно ", promptSuffix: " посуду после вечеринки.", answers: ["вымыть", "помыть"] },
+        { id: "smm9-w5", promptPrefix: "Мы ", promptSuffix: " продукты на рынке.", answers: ["покупаем", "берём"] },
+        { id: "smm9-w6", promptPrefix: "До обеда нужно сходить за продуктами, ", promptSuffix: " обед, постирать бельё.", answers: ["приготовить", "сварить", "сделать"] },
+        { id: "smm9-w7", promptPrefix: "— Ты ещё не в постели? — Ты же знаешь, что обычно я ", promptSuffix: " поздно!", answers: ["ложусь"] },
+        { id: "smm9-w8", promptPrefix: "Мне нужно ", promptSuffix: " в два.", answers: ["лечь", "встать"] },
+        { id: "smm9-w9", promptPrefix: "Мой сын обычно ", promptSuffix: ", чистит зубы, ест шоколад.", answers: ["умывается"] },
+        { id: "smm9-w10", promptPrefix: "Тебе нужно ", promptSuffix: " зубы.", answers: ["почистить"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
