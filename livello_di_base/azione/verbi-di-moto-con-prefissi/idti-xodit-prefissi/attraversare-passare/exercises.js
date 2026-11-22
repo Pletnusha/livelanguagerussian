@@ -156,11 +156,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// Обойти ↔ пройти / перейти; n. 2–3 nuovi approvati dalla PM; n. 6 con le opzioni del quiz della PM; n. 8–9 originali con contesto *; mai «перейди лужу», «прошли дом», «вокруг / около нас» come distrattori
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Поиски начались. Мы {{1}} все базары.",
+        words: ["перешли", "обошли", "обашли"],
+        correctAnswers: { 1: "обошли" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Осторожно, {{1}} лужу!",
+        words: ["обойди", "выйди", "обайди"],
+        correctAnswers: { 1: "обойди" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы {{1}} дом и увидели вход во двор.",
+        words: ["перешли", "обошлы", "обошли"],
+        correctAnswers: { 1: "обошли" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я {{1}} дом с правой стороны.",
+        words: ["обхожу", "перехожу", "обхажу"],
+        correctAnswers: { 1: "обхожу" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Они прошли {{1}} нас.",
+        words: ["через", "мимо", "к"],
+        correctAnswers: { 1: "мимо" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Путешественники {{1}} через пустыню пешком.",
+        words: ["зашли", "ушли", "прошли"],
+        correctAnswers: { 1: "прошли" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "{{1}} прямо ещё метров пятьдесят.",
+        words: ["Пройдите", "Обойдите", "Пройдити"],
+        correctAnswers: { 1: "Пройдите" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы {{1}} мост и сразу поворачиваем налево.",
+        words: ["выходим", "переходим", "переходем"],
+        correctAnswers: { 1: "переходим" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Смотри, она {{1}} дорогу на красный свет!",
+        words: ["переходит", "проходит", "переходет"],
+        correctAnswers: { 1: "переходит" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Туристы {{1}} мост утром.",
+        words: ["вышли", "перешлы", "перешли"],
+        correctAnswers: { 1: "перешли" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-pp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-01', exercises: p1exercises }),
-    'panel-pp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-02', exercises: p2exercises })
+    'panel-pp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-02', exercises: p2exercises }),
+    'panel-pp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
