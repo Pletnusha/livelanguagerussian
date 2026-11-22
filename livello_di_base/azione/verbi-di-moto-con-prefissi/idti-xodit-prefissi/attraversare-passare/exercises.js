@@ -240,13 +240,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Проходите! — frasi quotidiane; n. 2–3 nuove approvate; n. 5, 7, 9, 10 nella versione della PM («нужно пройти метров сто», «нельзя переходить», «мы уже все магазины обошли», «Она прошла мимо меня и даже не заметила»)
+// ============================================================
+const p5cards = [
+    { front: "___, садитесь!", back: "Проходите", distractors: ["Переходите", "Праходите"] },
+    { front: "Извините, разрешите ___!", back: "пройти", distractors: ["перейти", "пройтить"] },
+    { front: "Давай ___ на другую сторону улицы, там тень.", back: "перейдём", distractors: ["обойдём", "перайдём"] },
+    { front: "Вы ___ через парк?", back: "прошли", distractors: ["обошли", "прошлы"] },
+    { front: "Нужно ___ метров сто.", back: "пройти", distractors: ["перейти", "пройтить"] },
+    { front: "Вам нужно пройти прямо, дойти до магазина, повернуть направо и ___ дорогу на перекрёстке.", back: "перейти", distractors: ["обойти", "перейтить"] },
+    { front: "Нельзя ___ дорогу на красный свет!", back: "переходить", distractors: ["проходить", "переходеть"] },
+    { front: "Осторожно, ___ лужу!", back: "обойди", distractors: ["выйди", "обайди"] },
+    { front: "Мы ищем маме подарок уже два дня, мы уже все магазины ___.", back: "обошли", distractors: ["перешли", "обашли"] },
+    { front: "Она ___ мимо меня и даже не заметила.", back: "прошла", distractors: ["перешла", "прашла"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-pp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-01', exercises: p1exercises }),
     'panel-pp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-02', exercises: p2exercises }),
     'panel-pp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-03', exercises: p3exercises }),
-    'panel-pp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-04', cards: p4cards })
+    'panel-pp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-04', cards: p4cards }),
+    'panel-pp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-pp-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
