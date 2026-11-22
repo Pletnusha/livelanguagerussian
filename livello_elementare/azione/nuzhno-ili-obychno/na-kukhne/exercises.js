@@ -18,9 +18,87 @@ import { initPanelManager } from '/assets/js/panel-manager.js';
 // I dati di ogni pannello si aggiungono dopo l'approvazione della PM.
 
 // ============================================================
+// PANEL 1 — DragDrop · public
+// Lista della spesa: 10 frasi dal testo «Когда ждёшь гостей» (Андрей; la 8 unisce «нужно купить» e la lista dello stesso testo). Il nome giusto nella forma giusta; sbagliate = nominativo, dativo, strumentale — mai il genitivo partitivo («купить воды / помидоров / телятины» sarebbe corretto); con spiegazioni
+// ============================================================
+const p1exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "У Андрея в холодильнике нет {{1}}.",
+        words: ["нечего", "ничто", "ничего"],
+        correctAnswers: { 1: "ничего" },
+        explanation: "«Нет ничего» = non c'è niente: dopo «нет» il genitivo."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно он ходит за {{1}} по воскресеньям.",
+        words: ["продуктами", "продукты", "продуктов"],
+        correctAnswers: { 1: "продуктами" },
+        explanation: "Ходить за + strumentale: andare a prendere (за продуктами = a fare la spesa)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Но сегодня у него {{1}}.",
+        words: ["гости", "гостей", "гостям"],
+        correctAnswers: { 1: "гости" },
+        explanation: "«У него гости» = ha ospiti: гости è il soggetto (nominativo)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно купить {{1}} бумагу, шампунь и мыло.",
+        words: ["туалетная", "туалетной", "туалетную"],
+        correctAnswers: { 1: "туалетную" },
+        explanation: "Купить что? accusativo femminile: туалетную бумагу."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно не забыть купить {{1}}.",
+        words: ["вода", "воду", "водой"],
+        correctAnswers: { 1: "воду" },
+        explanation: "Купить что? accusativo: воду."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "…и заодно купить продукты на следующую {{1}}.",
+        words: ["неделя", "неделю", "недели"],
+        correctAnswers: { 1: "неделю" },
+        explanation: "На + accusativo = per (la settimana prossima)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно купить шампунь и мыло на всякий {{1}}.",
+        words: ["случай", "случае", "случая"],
+        correctAnswers: { 1: "случай" },
+        explanation: "«На всякий случай» = per ogni evenienza (espressione fissa)."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно купить морковь, лук, чеснок, огурцы и {{1}}.",
+        words: ["помидорам", "помидорами", "помидоры"],
+        correctAnswers: { 1: "помидоры" },
+        explanation: "Купить что? accusativo plurale: помидоры."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно купить салфетки и гель для мытья {{1}}.",
+        words: ["посуду", "посуды", "посуда"],
+        correctAnswers: { 1: "посуды" },
+        explanation: "Мытьё чего? genitivo: гель для мытья посуды = detersivo per i piatti."
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно купить {{1}} и фарш.",
+        words: ["телятиной", "телятина", "телятину"],
+        correctAnswers: { 1: "телятину" },
+        explanation: "Купить что? accusativo femminile: телятину."
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
+    'panel-kuh-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-01', exercises: p1exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
