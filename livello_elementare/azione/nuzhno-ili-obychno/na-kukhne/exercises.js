@@ -246,13 +246,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Tre forme: ходить / сходить за продуктами e покупать / купить продукты (testo su Андрей: «Обычно он ходит за продуктами по воскресеньям», «нужно купить продукты»), чистить / почистить морковь, тушить / потушить рыбу, кипятить / вскипятить воду (scheda). Presente imperfettivo (sbagliate: due infiniti) ↔ нужно + perfettivo (sbagliate: presente e futuro, mai l'infinito imperfettivo). Тушить qui sì: senza варит / сварить nel pannello il MATCH resta univoco; senza spiegazioni
+// ============================================================
+const p5cards = [
+    { front: "Обычно он ___ за продуктами по воскресеньям.", back: "ходит", distractors: ["сходить", "ходить"] },
+    { front: "Сегодня нужно ___ за продуктами.", back: "сходить", distractors: ["ходит", "сходит"] },
+    { front: "Обычно Андрей ___ продукты по воскресеньям.", back: "покупает", distractors: ["купить", "покупать"] },
+    { front: "Но сегодня у него гости, поэтому нужно ___ продукты.", back: "купить", distractors: ["покупает", "купит"] },
+    { front: "Обычно Андрей ___ морковь в раковине.", back: "чистит", distractors: ["почистить", "чистить"] },
+    { front: "Нужно ___ морковь в раковине.", back: "почистить", distractors: ["чистит", "почистит"] },
+    { front: "Обычно Андрей ___ рыбу в кастрюле.", back: "тушит", distractors: ["потушить", "тушить"] },
+    { front: "Сегодня нужно ___ рыбу в кастрюле.", back: "потушить", distractors: ["тушит", "потушит"] },
+    { front: "Андрей всегда ___ воду в чайнике.", back: "кипятит", distractors: ["вскипятить", "кипятить"] },
+    { front: "Сейчас нужно ___ воду в чайнике.", back: "вскипятить", distractors: ["кипятит", "вскипятит"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-kuh-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-01', exercises: p1exercises }),
     'panel-kuh-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-02', exercises: p2exercises }),
     'panel-kuh-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-03', exercises: p3exercises }),
-    'panel-kuh-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-04', cards: p4cards })
+    'panel-kuh-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-04', cards: p4cards }),
+    'panel-kuh-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
