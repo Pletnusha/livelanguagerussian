@@ -175,15 +175,15 @@ const p3cards = [
 
 // ============================================================
 // PANEL 4 — Flashcard · public
-// Nuovo: aspetto — подходить / подойти, отходить / отойти: forme (tabelle СПРЯЖЕНИЯ) + abitudine / azione in corso / risultato, con spiegazioni; n. 9 della PM (lessico città / incontro); niente treni (PM: поезд отправляется / прибывает)
+// Nuovo: aspetto — подходить / подойти, отходить / отойти: solo frasi con marcatori (PM 21.11: niente carte con sole forme) — abitudine / azione in corso / risultato, con spiegazioni; n. 9 della PM (lessico città / incontro); niente treni (PM: поезд отправляется / прибывает)
 // ============================================================
 const p4cards = [
-    { front: "подходить → я …", back: "подхожу", distractors: ["подойду", "подходю"], explanation: "Подходить (НСВ), presente: подхожу, подходишь… «д» → «ж» alla 1ª persona." },
-    { front: "отходить → ты …", back: "отходишь", distractors: ["отойдёшь", "отходешь"], explanation: "Отходить: отхожу, отходишь… come подходить." },
-    { front: "подойти → он, прошедшее время …", back: "подошёл", distractors: ["подходил", "подошол"], explanation: "Passato di подойти: подошёл, подошла, подошли." },
-    { front: "отойти → она, прошедшее время …", back: "отошла", distractors: ["отходила", "отошола"], explanation: "Passato di отойти: отошёл, отошла, отошли." },
-    { front: "подойти → я, будущее время …", back: "подойду", distractors: ["подхожу", "подойдю"], explanation: "Futuro di подойти: подойду, подойдёшь (non «подойдю»)." },
-    { front: "отойти → мы, будущее время …", back: "отойдём", distractors: ["отходим", "отойдим"], explanation: "Futuro di отойти: отойду, отойдёшь, отойдём." },
+    { front: "Подожди, я сейчас ___ к тебе и всё объясню.", back: "подойду", distractors: ["отойду", "подойдю"], explanation: "Futuro di подойти: подойду (non «подойдю»). Подойти к = avvicinarsi a." },
+    { front: "Не ___ от кассы, пока не проверите сдачу.", back: "отходите", distractors: ["отойдите", "отходити"], explanation: "Imperativo negativo → НСВ: не отходите (non «не отойдите»)." },
+    { front: "Мы ___ к кабинету, но входить не стали.", back: "подошли", distractors: ["вошли", "подошлы"], explanation: "Siamo arrivati alla porta, ma non siamo entrati → подошли, non вошли." },
+    { front: "Она ___ в сторону, чтобы ответить на звонок.", back: "отошла", distractors: ["подошла", "атошла"], explanation: "Spostarsi di lato = отойти в сторону. Passato: отошёл, отошла, отошли." },
+    { front: "___ от меня!", back: "Отойди", distractors: ["Подойди", "Отайди"], explanation: "Imperativo di отойти: отойди! (allontanati!)." },
+    { front: "Они ___ от края платформы.", back: "отошли", distractors: ["подошли", "отошлы"], explanation: "Allontanarsi da = отойти от + genitivo (от края платформы)." },
     { front: "Когда звонит телефон, бабушка всегда первая ___ к нему.", back: "подходит", distractors: ["подойдёт", "подходет"], explanation: "Всегда = abitudine → НСВ: подходит." },
     { front: "Я дождалась, когда все получат свои номера, и ___ к автомату.", back: "подошла", distractors: ["подходила", "падашла"], explanation: "Un'azione unica e conclusa, in sequenza → СВ: подошла." },
     { front: "Я уже ___! Буду через пять минут.", back: "подхожу", distractors: ["подойду", "подхажу"], explanation: "Sto arrivando: azione in corso adesso → НСВ presente: подхожу. Con «уже» non va il futuro «подойду»." },
@@ -220,28 +220,28 @@ function initPanelPo9() {
         { question: "Вчера вечером Анна ___ ко мне, чтобы посмотреть фильм.", options: ["пришла", "подошла", "пришола"], answer: "пришла" }
     ];
     const matchPairs = [
-        { left: "подходить", right: "подойти" },
-        { left: "отходить", right: "отойти" },
-        { left: "подхожу", right: "подойду" },
-        { left: "отхожу", right: "отойду" },
-        { left: "подходил", right: "подошёл" },
-        { left: "отходил", right: "отошёл" },
-        { left: "подходишь", right: "подойдёшь" },
-        { left: "отходишь", right: "отойдёшь" },
-        { left: "подходят", right: "подойдут" },
-        { left: "отходят", right: "отойдут" }
+        { left: "Когда звонит телефон, бабушка всегда первая ___ к нему.", right: "подходит" },
+        { left: "Я уже ___! Буду через пять минут.", right: "подхожу" },
+        { left: "Встречаемся у метро. Я ___ к семи, хорошо?", right: "подойду" },
+        { left: "Не ___ от кассы, пока не проверите сдачу.", right: "отходите" },
+        { left: "___ от меня!", right: "Отойди" },
+        { left: "Мы ___ к кабинету, но входить не стали.", right: "подошли" },
+        { left: "Они ___ от края платформы.", right: "отошли" },
+        { left: "Анна ___ ко мне и заговорила первой.", right: "подошла" },
+        { left: "Она ___ в сторону, чтобы ответить на звонок.", right: "отошла" },
+        { left: "Вчера вечером Анна ___ ко мне, чтобы посмотреть фильм.", right: "пришла" }
     ];
     const quizData = [
-        { id: "po9-w1", promptPrefix: "(подходить / подойти) Когда звонит телефон, бабушка всегда первая ", promptSuffix: " к нему.", answers: ["подходит"] },
-        { id: "po9-w2", promptPrefix: "(подходить / подойти) Я уже ", promptSuffix: "! Буду через пять минут.", answers: ["подхожу"] },
-        { id: "po9-w3", promptPrefix: "(подойти) Подожди, я сейчас ", promptSuffix: " к тебе и всё объясню.", answers: ["подойду"] },
-        { id: "po9-w4", promptPrefix: "(отходить / отойти) Не ", promptSuffix: " от кассы, пока не проверите сдачу.", answers: ["отходите"] },
-        { id: "po9-w5", promptPrefix: "(отходить / отойти) Я купила билет и сразу ", promptSuffix: " от автомата.", answers: ["отошла"] },
-        { id: "po9-w6", promptPrefix: "(отойти) ", promptSuffix: " от меня!", answers: ["Отойди", "отойди"] },
-        { id: "po9-w7", promptPrefix: "(отойти) Вы ", promptSuffix: " от машины?", answers: ["отошли"] },
-        { id: "po9-w8", promptPrefix: "(подойти) Мы ", promptSuffix: " к кабинету, но входить не стали.", answers: ["подошли"] },
-        { id: "po9-w9", promptPrefix: "(отойти) Они ", promptSuffix: " от края платформы.", answers: ["отошли"] },
-        { id: "po9-w10", promptPrefix: "(подойти) Встречаемся у метро. Я ", promptSuffix: " к семи, хорошо?", answers: ["подойду"] }
+        { id: "po9-w1", promptPrefix: "Когда звонит телефон, бабушка всегда первая ", promptSuffix: " к нему.", answers: ["подходит"] },
+        { id: "po9-w2", promptPrefix: "Я уже ", promptSuffix: "! Буду через пять минут.", answers: ["подхожу", "подъезжаю"] },
+        { id: "po9-w3", promptPrefix: "Подожди, я сейчас ", promptSuffix: " к тебе и всё объясню.", answers: ["подойду", "подхожу", "приду", "подъеду"] },
+        { id: "po9-w4", promptPrefix: "Не ", promptSuffix: " от кассы, пока не проверите сдачу.", answers: ["отходите"] },
+        { id: "po9-w5", promptPrefix: "Я купила билет и сразу ", promptSuffix: " от автомата.", answers: ["отошла"] },
+        { id: "po9-w6", promptPrefix: "", promptSuffix: " от меня!", answers: ["Отойди", "отойди", "Уйди", "уйди"] },
+        { id: "po9-w7", promptPrefix: "Вы ", promptSuffix: " от машины?", answers: ["отошли", "отходили", "ушли", "отъехали"] },
+        { id: "po9-w8", promptPrefix: "Мы ", promptSuffix: " к кабинету, но входить не стали.", answers: ["подошли", "подходили"] },
+        { id: "po9-w9", promptPrefix: "Они ", promptSuffix: " от края платформы.", answers: ["отошли"] },
+        { id: "po9-w10", promptPrefix: "Встречаемся у метро. Я ", promptSuffix: " к семи, хорошо?", answers: ["подойду", "приду", "подъеду"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
