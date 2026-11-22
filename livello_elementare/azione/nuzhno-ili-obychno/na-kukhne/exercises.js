@@ -280,6 +280,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// «Сегодня гости»: domanda → risposta sul testo «Когда ждёшь гостей». 1–5 domande originali del PDF (p. 12; corretto «купить Андрей» → «Андрею»), 6–10 costruite sullo stesso testo (approvate dalla PM). Sbagliate = casi sbagliati, mai il genitivo partitivo dopo купить; la 8 = нужно (oggi, una volta) ↔ по воскресеньям (обычно); con spiegazioni
+// ============================================================
+const p7cards = [
+    { front: "Как часто Андрей ходит в супермаркет?", back: "По воскресеньям.", distractors: ["В воскресенье.", "Каждый день."], explanation: "По + dativo plurale = ogni domenica; в воскресенье = una domenica sola." },
+    { front: "Почему Андрею нужно сегодня идти в супермаркет?", back: "Потому что у него гости.", distractors: ["Потому что у него гостей.", "Потому что у него гостям."], explanation: "«У него гости»: гости è il soggetto (nominativo)." },
+    { front: "Чего нет дома у Андрея?", back: "Туалетной бумаги и шампуня.", distractors: ["Туалетная бумага и шампунь.", "Туалетную бумагу и шампунь."], explanation: "«Нет чего?» → genitivo." },
+    { front: "Что нужно не забыть купить Андрею?", back: "Воду.", distractors: ["Вода.", "Водой."], explanation: "Купить что? accusativo: воду." },
+    { front: "Из чего состоит список покупок у Андрея?", back: "Из продуктов, салфеток и шампуня.", distractors: ["Из продукты, салфетки и шампунь.", "Продукты, салфетки и шампунь."], explanation: "Состоять из + genitivo." },
+    { front: "Что нужно приготовить?", back: "Ужин.", distractors: ["Ужина.", "Ужином."], explanation: "Приготовить что? accusativo (ужин)." },
+    { front: "На какую неделю нужно купить продукты?", back: "На следующую.", distractors: ["На следующей.", "На следующая."], explanation: "На + accusativo = per (la settimana prossima)." },
+    { front: "Когда Андрею нужно идти в супермаркет?", back: "Сегодня.", distractors: ["По воскресеньям.", "Обычно."], explanation: "Нужно = oggi, una volta (ci sono ospiti); по воскресеньям = обычно, l'abitudine." },
+    { front: "Что нужно купить на всякий случай?", back: "Туалетную бумагу, шампунь и мыло.", distractors: ["Туалетная бумага, шампунь и мыло.", "Туалетной бумагой, шампунем и мылом."], explanation: "Купить что? accusativo: туалетную бумагу." },
+    { front: "Что есть в холодильнике у Андрея?", back: "Ничего.", distractors: ["Ничто.", "Нечего."], explanation: "«Ничего (нет)» = non c'è niente." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -288,7 +305,8 @@ const initializers = {
     'panel-kuh-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-03', exercises: p3exercises }),
     'panel-kuh-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-04', cards: p4cards }),
     'panel-kuh-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-05', cards: p5cards }),
-    'panel-kuh-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-06', cards: p6cards })
+    'panel-kuh-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-06', cards: p6cards }),
+    'panel-kuh-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
