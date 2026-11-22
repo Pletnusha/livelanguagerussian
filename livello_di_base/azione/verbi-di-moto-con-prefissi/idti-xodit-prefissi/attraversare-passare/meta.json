@@ -1,0 +1,21 @@
+{
+  "id": "b1-azione-verbi-di-moto-con-prefissi-idti-xodit-prefissi-attraversare-passare",
+  "url": "/livello_di_base/azione/verbi-di-moto-con-prefissi/idti-xodit-prefissi/attraversare-passare/",
+  "level": "b1",
+  "doc_type": "exercise",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [
+    "verbi-di-moto/prefissi",
+    "aspetto/perfettivo-vs-imperfettivo"
+  ],
+  "complementi": [
+    "moto-per-luogo"
+  ],
+  "lessico": [],
+  "title_ru": "ПЕРЕЙТИ, ПРОЙТИ, ОБОЙТИ",
+  "title_it": "Attraversare, passare, girare intorno: переходить / перейти, проходить / пройти, обходить / обойти",
+  "source_doc": "b1-azione-verbi-di-moto-con-prefissi-idti-xodit-prefissi",
+  "focus": "attraversare-passare"
+}
