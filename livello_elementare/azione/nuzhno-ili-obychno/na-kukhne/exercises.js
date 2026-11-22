@@ -95,10 +95,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// In cucina: quale verbo con quale prodotto e dove (scheda «Приготовить что? где?», frasi «coppia + oggetto + dove» con Андрей, permesso PM). Обычно + imperfettivo presente / нужно + perfettivo. Sbagliate = verbi della scheda che non vanno con quel posto («варит картофель в раковине»); mai una combinazione corretta (тушит мясо в кастрюле, чистит картофель); niente тушить / потушить (рыбу в кастрюле: anche варить); senza spiegazioni
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно Андрей {{1}} овощи на столе.",
+        words: ["кипятит", "жарит", "режет"],
+        correctAnswers: { 1: "режет" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} овощи на столе.",
+        words: ["нарезать", "вскипятить", "обжарить"],
+        correctAnswers: { 1: "нарезать" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно Андрей {{1}} картофель в раковине.",
+        words: ["варит", "моет", "жарит"],
+        correctAnswers: { 1: "моет" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} картофель в раковине.",
+        words: ["сварить", "вымыть", "обжарить"],
+        correctAnswers: { 1: "вымыть" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно он {{1}} морковь в раковине.",
+        words: ["чистит", "кипятит", "тушит"],
+        correctAnswers: { 1: "чистит" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} морковь в раковине.",
+        words: ["вскипятить", "потушить", "почистить"],
+        correctAnswers: { 1: "почистить" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно Андрей {{1}} мясо в кастрюле.",
+        words: ["варит", "режет", "чистит"],
+        correctAnswers: { 1: "варит" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} мясо в кастрюле.",
+        words: ["нарезать", "почистить", "сварить"],
+        correctAnswers: { 1: "сварить" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Обычно Андрей {{1}} рыбу на сковородке.",
+        words: ["моет", "жарит", "режет"],
+        correctAnswers: { 1: "жарит" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Нужно {{1}} воду в чайнике.",
+        words: ["обжарить", "нарезать", "вскипятить"],
+        correctAnswers: { 1: "вскипятить" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-kuh-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-01', exercises: p1exercises })
+    'panel-kuh-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-01', exercises: p1exercises }),
+    'panel-kuh-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-kuh-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
