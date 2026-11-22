@@ -89,10 +89,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// Как пройти к…? — testo della PM «Питер за один день»; n. 8 e 10 con marcatore (каждое утро / вчера) *; pronomi его / по ней; mai «пройти мост» o «вдоль набережной» come distrattori
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Затем нам нужно будет {{1}} мост и выйти на Кронверкскую набережную.",
+        words: ["выйти", "перейти", "перейтить"],
+        correctAnswers: { 1: "перейти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "{{1}} до площади Академика Лихачёва и повернуть налево к Биржевому мосту.",
+        words: ["Пройти", "Перейти", "Пройдти"],
+        correctAnswers: { 1: "Пройти" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Повернуть налево к Биржевому мосту, перейти {{1}} и выйти на Стрелку Васильевского острова.",
+        words: ["его", "ему", "им"],
+        correctAnswers: { 1: "его" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Пройти {{1}} Биржевой сквер мимо второй Ростральной колонны.",
+        words: ["мимо", "вдоль", "через"],
+        correctAnswers: { 1: "через" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Пройти через Биржевой сквер {{1}} второй Ростральной колонны, перейти дорогу и выйти к Зоологическому музею.",
+        words: ["через", "мимо", "к"],
+        correctAnswers: { 1: "мимо" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Затем мы повернём на Дворцовый мост, {{1}} его и выйдем к Саду Зимнего дворца.",
+        words: ["перешли", "перейдёте", "перейдём"],
+        correctAnswers: { 1: "перейдём" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы {{1}} через него и выйдем к Александровской колонне на Дворцовой площади.",
+        words: ["пройдём", "перейдём", "прайдём"],
+        correctAnswers: { 1: "пройдём" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Каждое утро я {{1}} через Михайловский сад и выхожу на Садовую улицу.",
+        words: ["перехожу", "прохожу", "проходю"],
+        correctAnswers: { 1: "прохожу" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "От него нам нужно повернуть на Малую Морскую улицу и пройти {{1}} ней прямо до Невского проспекта.",
+        words: ["через", "вдоль", "по"],
+        correctAnswers: { 1: "по" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Вчера мы {{1}} через Казанский мост и повернули налево на Грибоедовскую набережную.",
+        words: ["перешли", "вышли", "перешлы"],
+        correctAnswers: { 1: "перешли" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-pp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-01', exercises: p1exercises })
+    'panel-pp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-01', exercises: p1exercises }),
+    'panel-pp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-pp-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
