@@ -273,6 +273,23 @@ const p6cards = [
 ];
 
 // ============================================================
+// PANEL 7 — Flashcard · public
+// Spirale: a piedi ↔ con un mezzo / in volo / di corsa — 6 frasi di questa pagina + 4 delle pagine 1–5 (вышел из кабинета, подошли к кабинету, входит в комнату, вышли из аудитории); con spiegazioni; esclusi пришёл в офис / пришла ко мне / ушла домой / зашли на чай (anche ехать giusto)
+// ============================================================
+const p7cards = [
+    { front: "Женя ___ в аэропорт на такси около шести.", back: "приехал", distractors: ["пришёл", "прийехал"], explanation: "Con un mezzo (на такси) → приехать. A piedi → прийти." },
+    { front: "Директор ___ из кабинета покурить и сейчас вернётся.", back: "вышел", distractors: ["выехал", "вышол"], explanation: "Da una stanza si esce a piedi → выйти. Выехать solo con un mezzo." },
+    { front: "Мы оттуда еле ___! Повсюду пробки!", back: "выехали", distractors: ["вышли", "выехоли"], explanation: "Пробки = siamo in macchina → выехать." },
+    { front: "Студентка, опаздывая, ___ в аудиторию.", back: "вбежала", distractors: ["въехала", "вбежла"], explanation: "Di corsa (опаздывая) → вбежать в + accusativo." },
+    { front: "Мы ___ к кабинету, но входить не стали.", back: "подошли", distractors: ["подъехали", "подашли"], explanation: "Dentro un edificio ci si avvicina a piedi → подойти к + dativo." },
+    { front: "Самолёт ___ в 12 часов.", back: "вылетает", distractors: ["выходит", "вылитает"], explanation: "L'aereo parte = вылетать. Orario fisso → presente НСВ." },
+    { front: "Она всегда ___ ко мне в комнату без стука.", back: "входит", distractors: ["въезжает", "входют"], explanation: "In una stanza si entra a piedi → входить. Всегда → НСВ." },
+    { front: "Мы поехали на рынок, потом ___ в ИКЕА — забрали заказ.", back: "заехали", distractors: ["доехали", "заехалы"], explanation: "Passare da un posto lungo la strada in macchina = заехать в + accusativo." },
+    { front: "Мы ___ из аудитории после лекции.", back: "вышли", distractors: ["выехали", "вышлы"], explanation: "Da un'aula si esce a piedi → выйти из + genitivo." },
+    { front: "Самолёт опоздал на два часа, и Андрей и Женя ___ в гостиницу поздно ночью.", back: "приехали", distractors: ["прилетели", "приехили"], explanation: "In città si arriva in volo (прилететь), all'albergo con l'auto o il taxi → приехать." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -281,7 +298,8 @@ const initializers = {
     'panel-sp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-03', exercises: p3exercises }),
     'panel-sp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-04', cards: p4cards }),
     'panel-sp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-05', cards: p5cards }),
-    'panel-sp-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-06', cards: p6cards })
+    'panel-sp-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-06', cards: p6cards }),
+    'panel-sp-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-07', cards: p7cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
