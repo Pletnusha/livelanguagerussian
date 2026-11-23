@@ -1,0 +1,18 @@
+{
+  "id": "a1-luogo-e-tempo-strumentale-pod-nim",
+  "url": "/principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/pod-nim/",
+  "level": "a1",
+  "doc_type": "exercise",
+  "cluster": [
+    "luogo-e-tempo"
+  ],
+  "grammatica": [],
+  "complementi": [
+    "stato-in-luogo"
+  ],
+  "lessico": [],
+  "title_ru": "ПОД НИМ, ЗА НЕЙ",
+  "title_it": "Sotto di lui, dietro di lei: под ним, за ней (strumentale)",
+  "source_doc": "a1-luogo-e-tempo-strumentale-stato-in-luogo",
+  "focus": "pod-nim"
+}
