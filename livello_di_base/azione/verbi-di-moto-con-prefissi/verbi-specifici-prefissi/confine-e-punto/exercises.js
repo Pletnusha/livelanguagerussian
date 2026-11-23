@@ -88,10 +88,78 @@ const p1exercises = [
 ];
 
 // ============================================================
+// PANEL 2 — DragDrop · student
+// В аэропорту: лететь (вылетать / прилетать / улетать) + приехать in aeroporto / in albergo; n. 2 e 5 originali con marcatore (встретишь меня?, поедем встречать) *; esclusi «прилетают / улетают в Лондон», «прилетели из Италии» (due risposte giuste)
+// ============================================================
+const p2exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Они {{1}} во вторник из Флоренции.",
+        words: ["залетают", "вылетают", "вылитают"],
+        correctAnswers: { 1: "вылетают" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я {{1}} завтра после обеда, встретишь меня?",
+        words: ["прилетаю", "улетаю", "прилитаю"],
+        correctAnswers: { 1: "прилетаю" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Вы только что {{1}} в аэропорт Шереметьево, вам нужно добраться до гостиницы.",
+        words: ["вылетели", "прилители", "прилетели"],
+        correctAnswers: { 1: "прилетели" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы вчера прилетели {{1}} Италии.",
+        words: ["из", "с", "от"],
+        correctAnswers: { 1: "из" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Они должны {{1}} около шести вечера, поедем их встречать.",
+        words: ["улететь", "прилететь", "прилетить"],
+        correctAnswers: { 1: "прилететь" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы {{1}} двадцать шестого мая и возвращаемся пятнадцатого июня.",
+        words: ["улетаем", "прилетаем", "улитаем"],
+        correctAnswers: { 1: "улетаем" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Он {{1}} завтра утром, и документы ему нужны в поездке.",
+        words: ["прилетает", "улитает", "улетает"],
+        correctAnswers: { 1: "улетает" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "На каникулы друг всегда {{1}} домой, а в этот раз улетел в Крым.",
+        words: ["улетел", "улетает", "улитает"],
+        correctAnswers: { 1: "улетает" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы {{1}} в аэропорт очень рано, потому что боялись опоздать на свой рейс.",
+        words: ["приехали", "прилетели", "приехале"],
+        correctAnswers: { 1: "приехали" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Самолёт опоздал на два часа, и Андрей и Женя {{1}} в гостиницу поздно ночью.",
+        words: ["прилетели", "приехили", "приехали"],
+        correctAnswers: { 1: "приехали" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
-    'panel-sp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-01', exercises: p1exercises })
+    'panel-sp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-01', exercises: p1exercises }),
+    'panel-sp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-02', exercises: p2exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
