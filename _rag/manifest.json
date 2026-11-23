@@ -1,7 +1,358 @@
 {
-  "generated": "2026-11-22T08:32:56.043Z",
-  "count": 48,
+  "generated": "2026-11-23T09:08:04.372Z",
+  "count": 67,
   "pages": [
+    {
+      "id": "a1-luogo-e-tempo-genitivo-okolo-nego",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/okolo-nego/",
+      "level": "a1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "stato-in-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "ОКОЛО НЕГО, У НЕЁ",
+      "title_it": "Vicino a lui, da lei: около него, у неё (genitivo)",
+      "source_doc": "a1-luogo-e-tempo-genitivo-stato-in-luogo",
+      "focus": "okolo-nego",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\stato-in-luogo\\okolo-nego\\meta.json"
+    },
+    {
+      "id": "a1-luogo-e-tempo-genitivo-stato-in-luogo",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/",
+      "level": "a1",
+      "doc_type": "hub",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "stato-in-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "ГДЕ? ОКОЛО ТЕБЯ",
+      "title_it": "Stato in luogo (genitivo) — dove? (vicino)",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\stato-in-luogo\\meta.json"
+    },
+    {
+      "id": "a1-luogo-e-tempo-prepositivo-il-caso-di-luogo",
+      "url": "/principianti/casi/prepositivo-il-caso-di-luogo/",
+      "level": "a1",
+      "doc_type": "hub",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "stato-in-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "ПРЕДЛОЖНЫЙ ПАДЕЖ",
+      "title_it": "Il caso di luogo",
+      "_source": "principianti\\casi\\prepositivo-il-caso-di-luogo\\meta.json"
+    },
+    {
+      "id": "a1-luogo-e-tempo-prepositivo-na-nyom",
+      "url": "/principianti/casi/prepositivo-il-caso-di-luogo/na-nyom/",
+      "level": "a1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "stato-in-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "НА НЁМ, НА НЕЙ",
+      "title_it": "Su di lui, su di lei: на нём, на ней (prepositivo)",
+      "source_doc": "a1-luogo-e-tempo-prepositivo-il-caso-di-luogo",
+      "focus": "na-nyom",
+      "_source": "principianti\\casi\\prepositivo-il-caso-di-luogo\\na-nyom\\meta.json"
+    },
+    {
+      "id": "a1-luogo-e-tempo-strumentale-pod-nim",
+      "url": "/principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/pod-nim/",
+      "level": "a1",
+      "doc_type": "exercise",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "stato-in-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "ПОД НИМ, ЗА НЕЙ",
+      "title_it": "Sotto di lui, dietro di lei: под ним, за ней (strumentale)",
+      "source_doc": "a1-luogo-e-tempo-strumentale-stato-in-luogo",
+      "focus": "pod-nim",
+      "_source": "principianti\\casi\\strumentale-il-caso-tecnico\\stato-in-luogo\\pod-nim\\meta.json"
+    },
+    {
+      "id": "a1-luogo-e-tempo-strumentale-stato-in-luogo",
+      "url": "/principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/",
+      "level": "a1",
+      "doc_type": "hub",
+      "cluster": [
+        "luogo-e-tempo"
+      ],
+      "grammatica": [],
+      "complementi": [
+        "stato-in-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "ГДЕ? ЗА / ПЕРЕД",
+      "title_it": "Stato in luogo (strumentale) — dietro/davanti",
+      "_source": "principianti\\casi\\strumentale-il-caso-tecnico\\stato-in-luogo\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-femminile-a-ya",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/femminile-a-ya/",
+      "doc_type": "exercise",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "ЖЕНСКИЙ РОД НА -А / -Я",
+      "title_it": "Femminile in -а / -я → desinenza zero · улица → улиц, гостиница → гостиниц, кастрюля → кастрюль",
+      "source_doc": "a2-descrizione-genitivo-plurale-forme",
+      "focus": "femminile-a-ya",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\forme-genitivo-plurale\\femminile-a-ya\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-forme",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/",
+      "doc_type": "hub",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "ФОРМЫ РОДИТЕЛЬНОГО МНОЖЕСТВЕННОГО ЧИСЛА",
+      "title_it": "Le forme del genitivo plurale",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\forme-genitivo-plurale\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-forme-speciali",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/forme-speciali/",
+      "doc_type": "exercise",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "ОСОБЫЕ ФОРМЫ",
+      "title_it": "Forme particolari e sostantivi indeclinabili · человек → людей, ребёнок → детей, друг → друзей · пальто, кофе",
+      "source_doc": "a2-descrizione-genitivo-plurale-forme",
+      "focus": "forme-speciali",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\forme-genitivo-plurale\\forme-speciali\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-maschile-in-i",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/maschile-in-i/",
+      "doc_type": "exercise",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "МУЖСКОЙ РОД НА -Й",
+      "title_it": "Maschile in -й → -ев · трамвай → трамваев, музей → музеев, край → краёв",
+      "source_doc": "a2-descrizione-genitivo-plurale-forme",
+      "focus": "maschile-in-i",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\forme-genitivo-plurale\\maschile-in-i\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-maschile-ov",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/maschile-ov/",
+      "doc_type": "exercise",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "МУЖСКОЙ РОД НА СОГЛАСНУЮ",
+      "title_it": "Maschile in consonante (desinenza zero) → -ов · парк → парков, фонтан → фонтанов, ресторан → ресторанов",
+      "source_doc": "a2-descrizione-genitivo-plurale-forme",
+      "focus": "maschile-ov",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\forme-genitivo-plurale\\maschile-ov\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-mnogo-malo",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/",
+      "doc_type": "hub",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "МНОГО ИЛИ МАЛО",
+      "title_it": "Genitivo plurale · много, мало + родительный множественного числа",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-neutro-o-e",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/neutro-o-e/",
+      "doc_type": "exercise",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "СРЕДНИЙ РОД НА -О / -Е",
+      "title_it": "Neutro in -о / -е → desinenza zero (ma: море → морей) · озеро → озёр, окно → окон, полотенце → полотенец",
+      "source_doc": "a2-descrizione-genitivo-plurale-forme",
+      "focus": "neutro-o-e",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\forme-genitivo-plurale\\neutro-o-e\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-numerabili-non-numerabili",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/numerabili-non-numerabili/",
+      "doc_type": "exercise",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "ИСЧИСЛЯЕМЫЕ И НЕИСЧИСЛЯЕМЫЕ",
+      "title_it": "Numerabili e non numerabili · много огурцов (gen. plurale) / много моркови (gen. singolare)",
+      "source_doc": "a2-descrizione-genitivo-plurale-mnogo-malo",
+      "focus": "numerabili-non-numerabili",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\numerabili-non-numerabili\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-plurale-in-ya",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/plurale-in-ya/",
+      "doc_type": "exercise",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "МНОЖЕСТВЕННОЕ ЧИСЛО НА -ЬЯ",
+      "title_it": "Plurale in -ья → -ьев · стул → стулья → стульев, дерево → деревья → деревьев",
+      "source_doc": "a2-descrizione-genitivo-plurale-forme",
+      "focus": "plurale-in-ya",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\forme-genitivo-plurale\\plurale-in-ya\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-segno-morbido",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/segno-morbido/",
+      "doc_type": "exercise",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "МЯГКИЙ ЗНАК НА КОНЦЕ",
+      "title_it": "Sostantivi in -ь (maschili e femminili) → -ей · площадь → площадей, день → дней, тетрадь → тетрадей",
+      "source_doc": "a2-descrizione-genitivo-plurale-forme",
+      "focus": "segno-morbido",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\forme-genitivo-plurale\\segno-morbido\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-sibilanti",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/sibilanti/",
+      "doc_type": "exercise",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "ШИПЯЩАЯ НА КОНЦЕ",
+      "title_it": "Sostantivi con sibilante finale → -ей · нож → ножей, овощ → овощей, ключ → ключей",
+      "source_doc": "a2-descrizione-genitivo-plurale-forme",
+      "focus": "sibilanti",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\forme-genitivo-plurale\\sibilanti\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-suffisso-ek",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/suffisso-ek/",
+      "doc_type": "exercise",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "СУФФИКС -К- ПОСЛЕ ШИПЯЩИХ",
+      "title_it": "Suffisso -к- dopo una sibilante → -ек · чашка → чашек, ложка → ложек, крышка → крышек",
+      "source_doc": "a2-descrizione-genitivo-plurale-forme",
+      "focus": "suffisso-ek",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\forme-genitivo-plurale\\suffisso-ek\\meta.json"
+    },
+    {
+      "id": "a2-descrizione-genitivo-plurale-suffisso-ok",
+      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/suffisso-ok/",
+      "doc_type": "exercise",
+      "level": "a2",
+      "cluster": [
+        "descrizione"
+      ],
+      "grammatica": [
+        "casi/genitivo-plurale"
+      ],
+      "complementi": [],
+      "lessico": [],
+      "title_ru": "ЖЕНСКИЙ РОД С СУФФИКСОМ -К-",
+      "title_it": "Femminile con suffisso -к- → -ок · площадка → площадок, остановка → остановок, тетрадка → тетрадок",
+      "source_doc": "a2-descrizione-genitivo-plurale-forme",
+      "focus": "suffisso-ok",
+      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\genitivo-plurale-mnogo-malo\\forme-genitivo-plurale\\suffisso-ok\\meta.json"
+    },
     {
       "id": "b1-azione-nuzhno-ili-obychno",
       "url": "/livello_elementare/azione/nuzhno-ili-obychno/",
