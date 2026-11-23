@@ -239,13 +239,31 @@ const p4cards = [
 ];
 
 // ============================================================
+// PANEL 5 — Flashcard · student
+// Забегу на минутку! — бежать con в- / вы-, при- / у-, под- / от-, до- / за-; originali della PM; distrattori sbagliati per la preposizione; mai «пришла», «выбегает из дома»
+// ============================================================
+const p5cards = [
+    { front: "Алёнка ___ в аудиторию за минуту до звонка.", back: "вбежала", distractors: ["выбежала", "вбижала"] },
+    { front: "Мы ___ из леса.", back: "выбежали", distractors: ["вбежали", "выбижали"] },
+    { front: "Аня ___ ко мне вся в слезах и упала на стул.", back: "прибежала", distractors: ["убежала", "прибижала"] },
+    { front: "Дети ___ к дому.", back: "подбегают", distractors: ["отбегают", "подбегуют"] },
+    { front: "Кот ___ от миски.", back: "отбежал", distractors: ["подбежал", "атбежал"] },
+    { front: "Я только ___ до супермаркета и обратно!", back: "добегу", distractors: ["забегу", "добежу"] },
+    { front: "Мы ___ к вам на минутку! Дорогу совсем снегом занесло!", back: "забежали", distractors: ["добежали", "забежалы"] },
+    { front: "— Ох, совершенно нет времени! Попробую ___ в пятницу.", back: "забежать", distractors: ["добежать", "забежить"] },
+    { front: "Наш кот постоянно ___ из дома.", back: "убегает", distractors: ["подбегает", "убегет"] },
+    { front: "Лена, как обычно, опаздывала, но по дороге на работу ___ за круассанами в свою любимую пекарню.", back: "забежала", distractors: ["добежала", "забежла"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-sp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-01', exercises: p1exercises }),
     'panel-sp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-02', exercises: p2exercises }),
     'panel-sp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-03', exercises: p3exercises }),
-    'panel-sp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-04', cards: p4cards })
+    'panel-sp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-04', cards: p4cards }),
+    'panel-sp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-05', cards: p5cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
