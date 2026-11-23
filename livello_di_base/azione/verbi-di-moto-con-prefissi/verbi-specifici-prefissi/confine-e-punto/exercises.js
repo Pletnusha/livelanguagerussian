@@ -222,12 +222,30 @@ const p3exercises = [
 ];
 
 // ============================================================
+// PANEL 4 — Flashcard · public
+// Nuovo: forme (-езжать, ъ, бежать: забегу) + aspetto, solo frasi con marcatori, con spiegazioni; n. 2–3 al presente con marcatore * (orig. заезжали… задели; подъехала к магазину); n. 10 distrattore «выходим» (non «выедем», anche giusto)
+// ============================================================
+const p4cards = [
+    { front: "Он всегда ___ до станции «Автово».", back: "доезжает", distractors: ["доедет", "доежает"], explanation: "Всегда → НСВ. L'imperfettivo di ехать con prefisso è -езжать: доезжать, приезжать (con «зж»)." },
+    { front: "Каждый раз, когда мы ___ в гараж, мы задеваем зеркало.", back: "заезжаем", distractors: ["заедем", "заежаем"], explanation: "Каждый раз → НСВ: заезжаем." },
+    { front: "Смотри, к магазину ___ машина!", back: "подъезжает", distractors: ["подъедет", "подезжает"], explanation: "Sta succedendo adesso («смотри!») → НСВ: подъезжает. Dopo под- si scrive «ъ»." },
+    { front: "Когда вы ___ к нам в деревню?", back: "приедете", distractors: ["уедете", "приедите"], explanation: "Una visita precisa nel futuro → СВ: приедете (non «приедите»)." },
+    { front: "Звони в автосервис, пусть ___ и заберут её.", back: "приедут", distractors: ["приезжают", "приедит"], explanation: "Пусть + futuro СВ: приедут (e poi заберут)." },
+    { front: "Ваша подруга только что ___ из Вероны.", back: "приехала", distractors: ["приезжала", "прийехала"], explanation: "Только что = appena arrivata → СВ: приехала (senza «й»)." },
+    { front: "На каникулы друг всегда улетает домой, а в этот раз ___ в Крым.", back: "улетел", distractors: ["улетал", "улител"], explanation: "Una volta, in contrasto con «всегда» → СВ: улетел." },
+    { front: "Друзья ___ в город вчера.", back: "приехали", distractors: ["прийехали", "приехоли"], explanation: "Passato di приехать: приехал, приехала, приехали (senza «й»)." },
+    { front: "Я ___ к тебе на минутку!", back: "забегу", distractors: ["забежу", "забежит"], explanation: "Futuro di забежать: забегу (non «забежу»), come бегу, бежишь… бегут." },
+    { front: "Мы ___ из Рима в восемь.", back: "выезжаем", distractors: ["выходим", "выежаем"], explanation: "Partire da una città con un mezzo = выезжать из + genitivo. Partenza in programma → presente НСВ: выезжаем." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-sp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-01', exercises: p1exercises }),
     'panel-sp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-02', exercises: p2exercises }),
-    'panel-sp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-03', exercises: p3exercises })
+    'panel-sp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-03', exercises: p3exercises }),
+    'panel-sp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-04', cards: p4cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
