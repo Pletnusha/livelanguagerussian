@@ -297,6 +297,23 @@ const p7cards = [
 ];
 
 // ============================================================
+// PANEL 8 — Flashcard · student
+// Come si forma il perfettivo, in frasi (regola PM 21–22.11: niente carte «НСВ → СВ»): prima la frase riconoscibile con l'imperfettivo, poi «нужно ___» → la coppia perfettiva. на- (нарезать), вы- (вымыть), по- (почистить, потушить), с- (сварить, сходить), об- (обжарить), вс- (вскипятить), forma più corta (купить) + 1 vecchia identica da «Супер мама» (приготовить). Sbagliate = perfettivi veri di altri verbi che con quel prodotto non vanno (mai съесть мясо, нарезать / вымыть рыбу); in MATCH «рыбу» due volte ma l'imperfettivo nella frase decide; con spiegazioni
+// ============================================================
+const p8cards = [
+    { front: "Обычно Андрей режет овощи на столе. Сегодня нужно ___ овощи.", back: "нарезать", distractors: ["написать", "назначить"], explanation: "на- + резать: tagliare tutto, a pezzi." },
+    { front: "Обычно Андрей моет картофель в раковине. Сегодня нужно ___ картофель.", back: "вымыть", distractors: ["выучить", "выполнить"], explanation: "вы- + мыть." },
+    { front: "Обычно он чистит морковь в раковине. Сегодня нужно ___ морковь.", back: "почистить", distractors: ["позвонить", "погладить"], explanation: "по- + чистить." },
+    { front: "Обычно Андрей варит мясо в кастрюле. Сегодня нужно ___ мясо.", back: "сварить", distractors: ["сходить", "сдать"], explanation: "с- + варить (va bene anche от-варить)." },
+    { front: "Обычно Андрей жарит рыбу на сковородке. Сегодня нужно ___ рыбу.", back: "обжарить", distractors: ["вскипятить", "позвонить"], explanation: "об- + жарить (va bene anche по-жарить)." },
+    { front: "Обычно Андрей тушит рыбу в кастрюле. Сегодня нужно ___ рыбу.", back: "потушить", distractors: ["позвонить", "погладить"], explanation: "по- + тушить." },
+    { front: "Андрей всегда кипятит воду в чайнике. Сейчас нужно ___ воду.", back: "вскипятить", distractors: ["вымыть", "выучить"], explanation: "вс- + кипятить." },
+    { front: "Обычно Андрей покупает продукты по воскресеньям. Сегодня нужно ___ продукты.", back: "купить", distractors: ["закончить", "встать"], explanation: "Il perfettivo è più corto, senza по-: покупать → купить." },
+    { front: "Обычно он ходит за продуктами по воскресеньям. Сегодня нужно ___ за продуктами.", back: "сходить", distractors: ["съесть", "сдать"], explanation: "с- + ходить: andare e tornare." },
+    { front: "Обычно я готовлю ужин. До обеда нужно ___ обед.", back: "приготовить", distractors: ["погладить", "вымыть"], explanation: "Dalla pagina «Супер мама»: при- + готовить (il cibo); un documento — подготовить." }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -306,7 +323,8 @@ const initializers = {
     'panel-kuh-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-04', cards: p4cards }),
     'panel-kuh-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-05', cards: p5cards }),
     'panel-kuh-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-06', cards: p6cards }),
-    'panel-kuh-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-07', cards: p7cards })
+    'panel-kuh-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-07', cards: p7cards }),
+    'panel-kuh-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-kuh-08', cards: p8cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
