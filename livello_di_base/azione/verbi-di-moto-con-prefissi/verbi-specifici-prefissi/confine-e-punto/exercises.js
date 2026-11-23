@@ -256,6 +256,23 @@ const p5cards = [
 ];
 
 // ============================================================
+// PANEL 6 — Flashcard · paid
+// Приплыли на Сицилию — плыть (при-, за- = al largo) + misto ехать / лететь; n. 2, 5, 6 con tempo cambiato e marcatore * (orig. приплыли на лодке; приехало много туристов; приехала к нам из Москвы); esclusi «уплыл / доплыл» con «как далеко», «влетела» al n. 9
+// ============================================================
+const p6cards = [
+    { front: "Рыбаки ___ на лодке к острову.", back: "приплыли", distractors: ["выплыли", "приплылы"] },
+    { front: "— Они прилетают? — Нет, они ___ на пароме.", back: "приплывают", distractors: ["прилетают", "приплавают"] },
+    { front: "Мы сели на паром поздно ночью и ___ на Сицилию рано утром.", back: "приплыли", distractors: ["прилетели", "приплылы"] },
+    { front: "Посмотри, как далеко Саша ___! Он так хорошо плавает!", back: "заплыл", distractors: ["выплыл", "заплил"] },
+    { front: "Сюда каждое лето ___ много туристов из разных стран.", back: "приезжает", distractors: ["приехало", "приезжяет"] },
+    { front: "Она ___ к нам из Москвы в субботу.", back: "приедет", distractors: ["уедет", "приедит"] },
+    { front: "Мы ___ от родителей около девяти.", back: "уехали", distractors: ["приехали", "уехоли"] },
+    { front: "В открытое окно ___ красивые птицы.", back: "влетели", distractors: ["вылетели", "влители"] },
+    { front: "В комнату ___ муха.", back: "залетела", distractors: ["вылетела", "залитела"] },
+    { front: "Он ___ из Италии и привёз нам вино.", back: "приехал", distractors: ["уехал", "приехол"] }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
@@ -263,7 +280,8 @@ const initializers = {
     'panel-sp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-02', exercises: p2exercises }),
     'panel-sp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-03', exercises: p3exercises }),
     'panel-sp-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-04', cards: p4cards }),
-    'panel-sp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-05', cards: p5cards })
+    'panel-sp-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-05', cards: p5cards }),
+    'panel-sp-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-sp-06', cards: p6cards })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
