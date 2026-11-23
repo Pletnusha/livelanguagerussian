@@ -155,11 +155,79 @@ const p2exercises = [
 ];
 
 // ============================================================
+// PANEL 3 — DragDrop · paid
+// На машине: ехать con в- / вы-, от-, за- (passare da, «куда мы заехали?!»), до-; n. 4 al presente con «сейчас» * (orig. въехали… связь прервалась); esclusi «заехала за дом» (за- dietro), «выезжаем / уезжаем» (entrambi giusti), treni
+// ============================================================
+const p3exercises = [
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Вчера мы {{1}} в дерево, слава богу, все живы, но машина в ремонте.",
+        words: ["вьехали", "въехали", "заехали"],
+        correctAnswers: { 1: "въехали" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы оттуда еле {{1}}! Повсюду пробки!",
+        words: ["выехали", "въехали", "выехоли"],
+        correctAnswers: { 1: "выехали" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы уже {{1}} от вокзала, когда я вспомнила, что оставила сумку в поезде.",
+        words: ["подъехали", "отехали", "отъехали"],
+        correctAnswers: { 1: "отъехали" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы {{1}} в тоннель, сейчас пропадёт связь.",
+        words: ["въезжаем", "въехали", "вьезжаем"],
+        correctAnswers: { 1: "въезжаем" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы поехали на рынок, потом {{1}} в ИКЕА — забрали заказ.",
+        words: ["доехали", "заехали", "заехалы"],
+        correctAnswers: { 1: "заехали" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "— Жень, мы куда {{1}}?! Мы что, потерялись?!",
+        words: ["отъехали", "заехоли", "заехали"],
+        correctAnswers: { 1: "заехали" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Я ненадолго {{1}} к бабушке.",
+        words: ["заеду", "доеду", "заедю"],
+        correctAnswers: { 1: "заеду" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы заехали к родителям {{1}} вареньем.",
+        words: ["на", "за", "для"],
+        correctAnswers: { 1: "за" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Как {{1}} до Ленинградского вокзала?",
+        words: ["заехать", "доехоть", "доехать"],
+        correctAnswers: { 1: "доехать" }
+    },
+    {
+        instruction: "Trascina la forma giusta.",
+        text: "Мы ещё не {{1}} до вокзала, когда стало ясно, что мы опоздали на поезд.",
+        words: ["доехали", "заехали", "даехали"],
+        correctAnswers: { 1: "доехали" }
+    }
+];
+
+// ============================================================
 // PANEL MANAGER
 // ============================================================
 const initializers = {
     'panel-sp-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-01', exercises: p1exercises }),
-    'panel-sp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-02', exercises: p2exercises })
+    'panel-sp-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-02', exercises: p2exercises }),
+    'panel-sp-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-sp-03', exercises: p3exercises })
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
