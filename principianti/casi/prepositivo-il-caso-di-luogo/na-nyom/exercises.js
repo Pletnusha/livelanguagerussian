@@ -152,32 +152,133 @@ const p2exercises = [
 ];
 
 // ============================================================
-// PANEL 3 — DragDrop · paid
-// TODO: contenuto da approvare con PM (tabella → «да» → scrivere)
+// PANEL 3 — DragDrop · paid · "ВСЁ НА МЕСТЕ"
+// Solo posizione di oggetti. Frasi da doma (7) + plurale da in-citta (1) e ripetuti
+// «Обувь в коробках» (p1), «Машины на подземных парковках» (p2). Nessuna explanation (paid).
+// Approvato PM 23.11.2026.
 // ============================================================
-const p3exercises = [];
+const P3_INSTR = "Sostituisci il nome con il pronome.";
+const p3exercises = [
+    {
+        instruction: P3_INSTR,
+        text: "Ковёр на&nbsp;полу. → Ковёр {{1}}.",
+        words: ["на него", "на нём", "на ней"],
+        correctAnswers: { 1: "на нём" }
+    },
+    {
+        instruction: P3_INSTR,
+        text: "Квартиры в&nbsp;современных домах. → Квартиры {{1}}.",
+        words: ["в нём", "в них", "в их"],
+        correctAnswers: { 1: "в них" }
+    },
+    {
+        instruction: P3_INSTR,
+        text: "Картина на&nbsp;стене. → Картина {{1}}.",
+        words: ["на неё", "на нём", "на ней"],
+        correctAnswers: { 1: "на ней" }
+    },
+    {
+        instruction: P3_INSTR,
+        text: "Лампа на&nbsp;столе. → Лампа {{1}}.",
+        words: ["на ней", "на нём", "на него"],
+        correctAnswers: { 1: "на нём" }
+    },
+    {
+        instruction: P3_INSTR,
+        text: "Обувь в&nbsp;коробках. → Обувь {{1}}.",
+        words: ["в них", "в их", "в ней"],
+        correctAnswers: { 1: "в них" }
+    },
+    {
+        instruction: P3_INSTR,
+        text: "Полотенца на&nbsp;двери. → Полотенца {{1}}.",
+        words: ["на нём", "на неё", "на ней"],
+        correctAnswers: { 1: "на ней" }
+    },
+    {
+        instruction: P3_INSTR,
+        text: "Ботинки в&nbsp;тёмном коридоре. → Ботинки {{1}}.",
+        words: ["в нём", "в ней", "в него"],
+        correctAnswers: { 1: "в нём" }
+    },
+    {
+        instruction: P3_INSTR,
+        text: "Машины на&nbsp;подземных парковках. → Машины {{1}}.",
+        words: ["на их", "на нём", "на них"],
+        correctAnswers: { 1: "на них" }
+    },
+    {
+        instruction: P3_INSTR,
+        text: "Подушки на&nbsp;широкой кровати. → Подушки {{1}}.",
+        words: ["на ней", "на неё", "на нём"],
+        correctAnswers: { 1: "на ней" }
+    },
+    {
+        instruction: P3_INSTR,
+        text: "Ножи в&nbsp;ящике. → Ножи {{1}}.",
+        words: ["в нём", "в ней", "в него"],
+        correctAnswers: { 1: "в нём" }
+    }
+];
 
 // ============================================================
-// PANEL 4 — Flashcard · public · explanation (it.)
-// TODO: contenuto da approvare con PM (tabella → «да» → scrivere)
+// PANEL 4 — Flashcard · public · "ПОРЯДОК В ДОМЕ"
+// front = frase originale, back = stessa frase con il pronome; distractors: genere/numero + forma.
+// 5 frasi nuove da doma + 5 ripetute dai pannelli 1–3. Approvato PM 23.11.2026.
 // ============================================================
-const p4cards = [];
+const P4_RULE = " Dopo в / на il pronome prende н-: на нём, на ней, на них.";
+const p4cards = [
+    { front: "Ваза на столе", back: "Ваза на нём", distractors: ["Ваза на ней", "Ваза на него"], explanation: "стол (m.) → на нём." + P4_RULE },
+    { front: "Платья на вешалках", back: "Платья на них", distractors: ["Платья на нём", "Платья на их"], explanation: "вешалки (pl.) → на них." + P4_RULE },
+    { front: "Ключи в сумке", back: "Ключи в ней", distractors: ["Ключи в нём", "Ключи в неё"], explanation: "сумка (f.) → в ней." + P4_RULE },
+    { front: "Пульт на диване", back: "Пульт на нём", distractors: ["Пульт на ней", "Пульт на него"], explanation: "диван (m.) → на нём." + P4_RULE },
+    { front: "Вода в старинных фонтанах", back: "Вода в них", distractors: ["Вода в нём", "Вода в их"], explanation: "фонтаны (pl.) → в них." + P4_RULE },
+    { front: "Книги на полке", back: "Книги на ней", distractors: ["Книги на нём", "Книги на неё"], explanation: "полка (f.) → на ней." + P4_RULE },
+    { front: "Мясо в холодильнике", back: "Мясо в нём", distractors: ["Мясо в ней", "Мясо в него"], explanation: "холодильник (m.) → в нём." + P4_RULE },
+    { front: "Обувь в коробках", back: "Обувь в них", distractors: ["Обувь в ней", "Обувь в их"], explanation: "коробки (pl.) → в них." + P4_RULE },
+    { front: "Суп в кастрюле", back: "Суп в ней", distractors: ["Суп в нём", "Суп в неё"], explanation: "кастрюля (f.) → в ней." + P4_RULE },
+    { front: "Кофе в шкафу", back: "Кофе в нём", distractors: ["Кофе в ней", "Кофе в него"], explanation: "шкаф (m.) → в нём." + P4_RULE }
+];
 
 // ============================================================
-// PANEL 5 — Flashcard · student
-// TODO: contenuto da approvare con PM (tabella → «да» → scrivere)
+// PANEL 5 — Flashcard · student · "ГДЕ ЭТО?"
+// 7 frasi nuove da doma + 3 plurali ripetuti. Nessuna explanation (student). Approvato PM 23.11.2026.
 // ============================================================
-const p5cards = [];
+const p5cards = [
+    { front: "Курица в духовке", back: "Курица в ней", distractors: ["Курица в нём", "Курица в неё"] },
+    { front: "Лампа на высоком потолке", back: "Лампа на нём", distractors: ["Лампа на ней", "Лампа на него"] },
+    { front: "Джинсы на полках", back: "Джинсы на них", distractors: ["Джинсы на ней", "Джинсы на их"] },
+    { front: "Чай в чашке", back: "Чай в ней", distractors: ["Чай в нём", "Чай в неё"] },
+    { front: "Бокалы в шкафу", back: "Бокалы в нём", distractors: ["Бокалы в ней", "Бокалы в него"] },
+    { front: "Машины на подземных парковках", back: "Машины на них", distractors: ["Машины на нём", "Машины на их"] },
+    { front: "Посуда в раковине", back: "Посуда в ней", distractors: ["Посуда в нём", "Посуда в неё"] },
+    { front: "Кресло в этом углу", back: "Кресло в нём", distractors: ["Кресло в ней", "Кресло в него"] },
+    { front: "Квартиры в современных домах", back: "Квартиры в них", distractors: ["Квартиры в нём", "Квартиры в их"] },
+    { front: "Шампунь на полке", back: "Шампунь на ней", distractors: ["Шампунь на нём", "Шампунь на неё"] }
+];
 
 // ============================================================
-// PANEL 6 — Flashcard · paid
-// TODO: contenuto da approvare con PM (tabella → «да» → scrivere)
+// PANEL 6 — Flashcard · paid · "ВСЁ НА ВИДУ"
+// 6 ultime frasi nuove da doma + 1 singolare e 3 plurali ripetuti. Nessuna explanation (paid).
+// Approvato PM 23.11.2026.
 // ============================================================
-const p6cards = [];
+const p6cards = [
+    { front: "Тарелки на полке", back: "Тарелки на ней", distractors: ["Тарелки на нём", "Тарелки на неё"] },
+    { front: "Платья на вешалках", back: "Платья на них", distractors: ["Платья на нём", "Платья на их"] },
+    { front: "Салатница на столе", back: "Салатница на нём", distractors: ["Салатница на ней", "Салатница на него"] },
+    { front: "Туалетная бумага в коробке", back: "Туалетная бумага в ней", distractors: ["Туалетная бумага в нём", "Туалетная бумага в неё"] },
+    { front: "Йогурты на полках в молочном отделе", back: "Йогурты на них в молочном отделе", distractors: ["Йогурты на ней в молочном отделе", "Йогурты на их в молочном отделе"] },
+    { front: "Платье в шкафу", back: "Платье в нём", distractors: ["Платье в ней", "Платье в него"] },
+    { front: "Тарелки в раковине", back: "Тарелки в ней", distractors: ["Тарелки в нём", "Тарелки в неё"] },
+    { front: "Подушки на диване", back: "Подушки на нём", distractors: ["Подушки на ней", "Подушки на него"] },
+    { front: "Вода в старинных фонтанах", back: "Вода в них", distractors: ["Вода в нём", "Вода в их"] },
+    { front: "Картина на стене", back: "Картина на ней", distractors: ["Картина на нём", "Картина на неё"] }
+];
 
 // ============================================================
 // PANEL 7 — Quiz misto (multiple choice + match + write) · public
-// TODO: contenuto in attesa di materiale da PM
+// «ТЕСТ»: 10 scelta multipla + 10 abbinamento + 10 da scrivere; solo frasi ripetute dai pannelli 1–6.
+// Verifica scrittura indulgente (maiuscole, ё/е, punto finale) come anno-nascita. Approvato PM 23.11.2026.
 // 0-(MC_END-1):          multiple choice
 // MC_END-(MATCH_END-1):  match game
 // MATCH_END onwards:     text input
@@ -193,16 +294,49 @@ function initPanelPronPrep7() {
 
     let currentCard = 0;
 
-    const multipleChoiceData = [];
-    const matchPairs = [];
-    const quizData = [];
+    const multipleChoiceData = [
+        { question: "Зубная паста на раковине. → Зубная паста ___.", options: ["на нём",  "на ней",  "на неё"], answer: "на ней" },
+        { question: "Джинсы на полках. → Джинсы ___.", options: ["на их",  "на них",  "на ней"], answer: "на них" },
+        { question: "Бутылка воды в холодильнике. → Бутылка воды ___.", options: ["в ней",  "в него",  "в нём"], answer: "в нём" },
+        { question: "Ценник на рубашке. → Ценник ___.", options: ["на нём",  "на ней",  "на неё"], answer: "на ней" },
+        { question: "Обувь в коробках. → Обувь ___.", options: ["в них",  "в нём",  "в их"], answer: "в них" },
+        { question: "Пульт на диване. → Пульт ___.", options: ["на него",  "на ней",  "на нём"], answer: "на нём" },
+        { question: "Ключи в сумке. → Ключи ___.", options: ["в ней",  "в неё",  "в нём"], answer: "в ней" },
+        { question: "Машины на подземных парковках. → Машины ___.", options: ["на нём",  "на их",  "на них"], answer: "на них" },
+        { question: "Занавеска на окне. → Занавеска ___.", options: ["на ней",  "на нём",  "на него"], answer: "на нём" },
+        { question: "Курица в духовке. → Курица ___.", options: ["в нём",  "в неё",  "в ней"], answer: "в ней" }
+    ];
+    const matchPairs = [
+        { left: "Ваза на столе", right: "Ваза на нём" },
+        { left: "Платья на вешалках", right: "Платья на них" },
+        { left: "Картина на стене", right: "Картина на ней" },
+        { left: "Мясо в холодильнике", right: "Мясо в нём" },
+        { left: "Вода в старинных фонтанах", right: "Вода в них" },
+        { left: "Книги на полке", right: "Книги на ней" },
+        { left: "Ковёр на полу", right: "Ковёр на нём" },
+        { left: "Квартиры в современных домах", right: "Квартиры в них" },
+        { left: "Суп в кастрюле", right: "Суп в ней" },
+        { left: "Хлеб на прилавке", right: "Хлеб на нём" }
+    ];
+    const quizData = [
+        { id: "pron-prep-001", promptPrefix: "Кофе в шкафу. → Кофе ", promptSuffix: ".", answers: ["в нём"] },
+        { id: "pron-prep-002", promptPrefix: "Йогурты на полках в молочном отделе. → Йогурты ", promptSuffix: " в молочном отделе.", answers: ["на них"] },
+        { id: "pron-prep-003", promptPrefix: "Кастрюля на плите. → Кастрюля ", promptSuffix: ".", answers: ["на ней"] },
+        { id: "pron-prep-004", promptPrefix: "Подушка в кресле. → Подушка ", promptSuffix: ".", answers: ["в нём"] },
+        { id: "pron-prep-005", promptPrefix: "Новая коллекция на витрине. → Новая коллекция ", promptSuffix: ".", answers: ["на ней"] },
+        { id: "pron-prep-006", promptPrefix: "Квартиры в современных домах. → Квартиры ", promptSuffix: ".", answers: ["в них"] },
+        { id: "pron-prep-007", promptPrefix: "Лампа на столе. → Лампа ", promptSuffix: ".", answers: ["на нём"] },
+        { id: "pron-prep-008", promptPrefix: "Тарелки в раковине. → Тарелки ", promptSuffix: ".", answers: ["в ней"] },
+        { id: "pron-prep-009", promptPrefix: "Джинсы на полках. → Джинсы ", promptSuffix: ".", answers: ["на них"] },
+        { id: "pron-prep-010", promptPrefix: "Ботинки в тёмном коридоре. → Ботинки ", promptSuffix: ".", answers: ["в нём"] }
+    ];
 
     const MC_END      = multipleChoiceData.length;
     const MATCH_END   = MC_END + matchPairs.length;
     const TOTAL_CARDS = MATCH_END + quizData.length;
 
     function normalizeInput(str) {
-        return str.trim().replace(/\s+/g, ' ');
+        return str.trim().replace(/\s+/g, ' ').replace(/[.!]+$/, '').toLowerCase().replace(/ё/g, 'е');
     }
 
     function ensureCardTitle(card, index) {
@@ -432,7 +566,7 @@ function initPanelPronPrep7() {
                 const input   = card.querySelector('.quiz-input');
                 const fb      = card.querySelector('.quiz-feedback');
                 const userAnswer = normalizeInput(input.value);
-                const isCorrect  = item.answers.some(ans => userAnswer === ans);
+                const isCorrect  = item.answers.some(ans => userAnswer === normalizeInput(ans));
                 if (isCorrect) {
                     input.classList.remove('incorrect');
                     input.classList.add('correct');
