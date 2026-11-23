@@ -1,115 +1,7 @@
 {
-  "generated": "2026-11-23T09:08:04.372Z",
-  "count": 68,
+  "generated": "2026-11-23T17:39:44.330Z",
+  "count": 64,
   "pages": [
-    {
-      "id": "a1-luogo-e-tempo-genitivo-okolo-nego",
-      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/okolo-nego/",
-      "level": "a1",
-      "doc_type": "exercise",
-      "cluster": [
-        "luogo-e-tempo"
-      ],
-      "grammatica": [],
-      "complementi": [
-        "stato-in-luogo"
-      ],
-      "lessico": [],
-      "title_ru": "ОКОЛО НЕГО, У НЕЁ",
-      "title_it": "Vicino a lui, da lei: около него, у неё (genitivo)",
-      "source_doc": "a1-luogo-e-tempo-genitivo-stato-in-luogo",
-      "focus": "okolo-nego",
-      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\stato-in-luogo\\okolo-nego\\meta.json"
-    },
-    {
-      "id": "a1-luogo-e-tempo-genitivo-stato-in-luogo",
-      "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/stato-in-luogo/",
-      "level": "a1",
-      "doc_type": "hub",
-      "cluster": [
-        "luogo-e-tempo"
-      ],
-      "grammatica": [],
-      "complementi": [
-        "stato-in-luogo"
-      ],
-      "lessico": [],
-      "title_ru": "ГДЕ? ОКОЛО ТЕБЯ",
-      "title_it": "Stato in luogo (genitivo) — dove? (vicino)",
-      "_source": "principianti\\casi\\genitivo-il-caso-piu-triste-del-mondo\\stato-in-luogo\\meta.json"
-    },
-    {
-      "id": "a1-luogo-e-tempo-prepositivo-il-caso-di-luogo",
-      "url": "/principianti/casi/prepositivo-il-caso-di-luogo/",
-      "level": "a1",
-      "doc_type": "hub",
-      "cluster": [
-        "luogo-e-tempo"
-      ],
-      "grammatica": [],
-      "complementi": [
-        "stato-in-luogo"
-      ],
-      "lessico": [],
-      "title_ru": "ПРЕДЛОЖНЫЙ ПАДЕЖ",
-      "title_it": "Il caso di luogo",
-      "_source": "principianti\\casi\\prepositivo-il-caso-di-luogo\\meta.json"
-    },
-    {
-      "id": "a1-luogo-e-tempo-prepositivo-na-nyom",
-      "url": "/principianti/casi/prepositivo-il-caso-di-luogo/na-nyom/",
-      "level": "a1",
-      "doc_type": "exercise",
-      "cluster": [
-        "luogo-e-tempo"
-      ],
-      "grammatica": [],
-      "complementi": [
-        "stato-in-luogo"
-      ],
-      "lessico": [],
-      "title_ru": "НА НЁМ, НА НЕЙ",
-      "title_it": "Su di lui, su di lei: на нём, на ней (prepositivo)",
-      "source_doc": "a1-luogo-e-tempo-prepositivo-il-caso-di-luogo",
-      "focus": "na-nyom",
-      "_source": "principianti\\casi\\prepositivo-il-caso-di-luogo\\na-nyom\\meta.json"
-    },
-    {
-      "id": "a1-luogo-e-tempo-strumentale-pod-nim",
-      "url": "/principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/pod-nim/",
-      "level": "a1",
-      "doc_type": "exercise",
-      "cluster": [
-        "luogo-e-tempo"
-      ],
-      "grammatica": [],
-      "complementi": [
-        "stato-in-luogo"
-      ],
-      "lessico": [],
-      "title_ru": "ПОД НИМ, ЗА НЕЙ",
-      "title_it": "Sotto di lui, dietro di lei: под ним, за ней (strumentale)",
-      "source_doc": "a1-luogo-e-tempo-strumentale-stato-in-luogo",
-      "focus": "pod-nim",
-      "_source": "principianti\\casi\\strumentale-il-caso-tecnico\\stato-in-luogo\\pod-nim\\meta.json"
-    },
-    {
-      "id": "a1-luogo-e-tempo-strumentale-stato-in-luogo",
-      "url": "/principianti/casi/strumentale-il-caso-tecnico/stato-in-luogo/",
-      "level": "a1",
-      "doc_type": "hub",
-      "cluster": [
-        "luogo-e-tempo"
-      ],
-      "grammatica": [],
-      "complementi": [
-        "stato-in-luogo"
-      ],
-      "lessico": [],
-      "title_ru": "ГДЕ? ЗА / ПЕРЕД",
-      "title_it": "Stato in luogo (strumentale) — dietro/davanti",
-      "_source": "principianti\\casi\\strumentale-il-caso-tecnico\\stato-in-luogo\\meta.json"
-    },
     {
       "id": "a2-descrizione-genitivo-plurale-femminile-a-ya",
       "url": "/principianti/casi/genitivo-il-caso-piu-triste-del-mondo/genitivo-plurale-mnogo-malo/forme-genitivo-plurale/femminile-a-ya/",
@@ -372,6 +264,29 @@
       "title_ru": "НУЖНО ИЛИ ОБЫЧНО",
       "title_it": "Bisogna o di solito: aspetto perfettivo e imperfettivo all'università",
       "_source": "livello_elementare\\azione\\nuzhno-ili-obychno\\meta.json"
+    },
+    {
+      "id": "b1-azione-nuzhno-ili-obychno-na-kukhne",
+      "url": "/livello_elementare/azione/nuzhno-ili-obychno/na-kukhne/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "aspetto/perfettivo-vs-imperfettivo",
+        "modali/nuzhno"
+      ],
+      "complementi": [],
+      "lessico": [
+        "cucina",
+        "cibo"
+      ],
+      "title_ru": "НА КУХНЕ: АНДРЕЙ ЖДЁТ ГОСТЕЙ",
+      "title_it": "In cucina: bisogna o di solito — нужно нарезать / обычно режет",
+      "source_doc": "b1-azione-nuzhno-ili-obychno",
+      "focus": "na-kukhne",
+      "_source": "livello_elementare\\azione\\nuzhno-ili-obychno\\na-kukhne\\meta.json"
     },
     {
       "id": "b1-azione-nuzhno-ili-obychno-spisok-del-studenta",
@@ -714,6 +629,50 @@
       "source_doc": "b1-azione-verbi-di-moto-con-prefissi-idti-xodit-prefissi",
       "focus": "fino-a-passare-da",
       "_source": "livello_di_base\\azione\\verbi-di-moto-con-prefissi\\idti-xodit-prefissi\\fino-a-passare-da\\meta.json"
+    },
+    {
+      "id": "b1-azione-verbi-di-moto-con-prefissi-verbi-specifici-prefissi",
+      "url": "/livello_di_base/azione/verbi-di-moto-con-prefissi/verbi-specifici-prefissi/",
+      "level": "b1",
+      "doc_type": "hub",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "verbi-di-moto/prefissi"
+      ],
+      "complementi": [
+        "moto-a-luogo",
+        "moto-da-luogo",
+        "moto-per-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "ЕХАТЬ, БЕЖАТЬ, ПЛЫТЬ, ЛЕТЕТЬ С ПРИСТАВКАМИ",
+      "title_it": "Verbi specifici con i prefissi: въехать, выехать, приехать, уехать, подъехать, отъехать, доехать, заехать, прилететь, прибежать, приплыть",
+      "_source": "livello_di_base\\azione\\verbi-di-moto-con-prefissi\\verbi-specifici-prefissi\\meta.json"
+    },
+    {
+      "id": "b1-azione-verbi-di-moto-con-prefissi-verbi-specifici-prefissi-confine-e-punto",
+      "url": "/livello_di_base/azione/verbi-di-moto-con-prefissi/verbi-specifici-prefissi/confine-e-punto/",
+      "level": "b1",
+      "doc_type": "exercise",
+      "cluster": [
+        "azione"
+      ],
+      "grammatica": [
+        "verbi-di-moto/prefissi",
+        "aspetto/perfettivo-vs-imperfettivo"
+      ],
+      "complementi": [
+        "moto-a-luogo",
+        "moto-da-luogo"
+      ],
+      "lessico": [],
+      "title_ru": "ПРИЕХАТЬ ИЛИ ПРИЙТИ?",
+      "title_it": "A piedi o con un mezzo: въехать, выехать, приехать, уехать, подъехать, отъехать, доехать, заехать, прилететь, прибежать, приплыть",
+      "source_doc": "b1-azione-verbi-di-moto-con-prefissi-verbi-specifici-prefissi",
+      "focus": "confine-e-punto",
+      "_source": "livello_di_base\\azione\\verbi-di-moto-con-prefissi\\verbi-specifici-prefissi\\confine-e-punto\\meta.json"
     },
     {
       "id": "b1-azione-zamok",
@@ -1289,29 +1248,6 @@
       "title_ru": "ГЛАГОЛЫ ПОЛОЖЕНИЯ",
       "title_it": "Verbi di posizione — стоять, лежать, сидеть, висеть e verbi collocativi",
       "_source": "livello_elementare\\luogo-e-tempo\\verbi-di-posizione\\meta.json"
-    },
-    {
-      "id": "b1-azione-nuzhno-ili-obychno-na-kukhne",
-      "url": "/livello_elementare/azione/nuzhno-ili-obychno/na-kukhne/",
-      "level": "b1",
-      "doc_type": "exercise",
-      "cluster": [
-        "azione"
-      ],
-      "grammatica": [
-        "aspetto/perfettivo-vs-imperfettivo",
-        "modali/nuzhno"
-      ],
-      "complementi": [],
-      "lessico": [
-        "cucina",
-        "cibo"
-      ],
-      "title_ru": "НА КУХНЕ: АНДРЕЙ ЖДЁТ ГОСТЕЙ",
-      "title_it": "In cucina: bisogna o di solito — нужно нарезать / обычно режет",
-      "source_doc": "b1-azione-nuzhno-ili-obychno",
-      "focus": "na-kukhne",
-      "_source": "livello_elementare\\azione\\nuzhno-ili-obychno\\na-kukhne\\meta.json"
     }
   ]
 }

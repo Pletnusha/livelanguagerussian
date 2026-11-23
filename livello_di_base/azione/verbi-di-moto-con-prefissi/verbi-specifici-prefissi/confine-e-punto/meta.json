@@ -1,0 +1,22 @@
+{
+  "id": "b1-azione-verbi-di-moto-con-prefissi-verbi-specifici-prefissi-confine-e-punto",
+  "url": "/livello_di_base/azione/verbi-di-moto-con-prefissi/verbi-specifici-prefissi/confine-e-punto/",
+  "level": "b1",
+  "doc_type": "exercise",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [
+    "verbi-di-moto/prefissi",
+    "aspetto/perfettivo-vs-imperfettivo"
+  ],
+  "complementi": [
+    "moto-a-luogo",
+    "moto-da-luogo"
+  ],
+  "lessico": [],
+  "title_ru": "ПРИЕХАТЬ ИЛИ ПРИЙТИ?",
+  "title_it": "A piedi o con un mezzo: въехать, выехать, приехать, уехать, подъехать, отъехать, доехать, заехать, прилететь, прибежать, приплыть",
+  "source_doc": "b1-azione-verbi-di-moto-con-prefissi-verbi-specifici-prefissi",
+  "focus": "confine-e-punto"
+}

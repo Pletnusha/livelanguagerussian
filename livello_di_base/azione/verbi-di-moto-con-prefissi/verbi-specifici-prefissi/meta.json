@@ -1,0 +1,20 @@
+{
+  "id": "b1-azione-verbi-di-moto-con-prefissi-verbi-specifici-prefissi",
+  "url": "/livello_di_base/azione/verbi-di-moto-con-prefissi/verbi-specifici-prefissi/",
+  "level": "b1",
+  "doc_type": "hub",
+  "cluster": [
+    "azione"
+  ],
+  "grammatica": [
+    "verbi-di-moto/prefissi"
+  ],
+  "complementi": [
+    "moto-a-luogo",
+    "moto-da-luogo",
+    "moto-per-luogo"
+  ],
+  "lessico": [],
+  "title_ru": "ЕХАТЬ, БЕЖАТЬ, ПЛЫТЬ, ЛЕТЕТЬ С ПРИСТАВКАМИ",
+  "title_it": "Verbi specifici con i prefissi: въехать, выехать, приехать, уехать, подъехать, отъехать, доехать, заехать, прилететь, прибежать, приплыть"
+}
