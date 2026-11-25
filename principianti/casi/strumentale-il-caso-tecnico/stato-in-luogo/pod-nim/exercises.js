@@ -3,28 +3,239 @@ import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public · explanation (it.)
-// TODO: contenuto da approvare con PM (tabella → «да» → scrivere)
+// PANEL 1 — DragDrop · public · "В КОМНАТЕ"
+// Frasi da strumentale doma (pannelli 1 e 3). Distrattori: senso (genere/numero) + forma
+// senza н- (за им, над ей, между ими). Plurale: между X и Y → между ними. Approvato PM 23.11.2026.
 // ============================================================
-const p1exercises = [];
+const P1_INSTR = "Sostituisci il nome con il pronome.";
+const P1_RULE = "Dopo за / перед / над / под / рядом с / между il pronome prende н-: за ним, над ней, между ними.";
+const p1exercises = [
+    {
+        instruction: P1_INSTR,
+        text: "Ключи лежат за&nbsp;зеркалом. → Ключи лежат {{1}}.",
+        words: ["за ней", "за ним", "за им"],
+        correctAnswers: { 1: "за ним" },
+        explanation: "зеркало (n.) → за ним. " + P1_RULE
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Тумбочка стоит рядом с&nbsp;кроватью. → Тумбочка стоит {{1}}.",
+        words: ["рядом с ним", "рядом с ей", "рядом с ней"],
+        correctAnswers: { 1: "рядом с ней" },
+        explanation: "кровать (f.) → рядом с ней. " + P1_RULE
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Шкаф стоит между дверью и&nbsp;окном. → Шкаф стоит {{1}}.",
+        words: ["между ними", "между ним", "между ими"],
+        correctAnswers: { 1: "между ними" },
+        explanation: "дверь и окно (due oggetti) → между ними. " + P1_RULE
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Картина висит над&nbsp;полкой. → Картина висит {{1}}.",
+        words: ["над ней", "над ним", "над ей"],
+        correctAnswers: { 1: "над ней" },
+        explanation: "полка (f.) → над ней. " + P1_RULE
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Диван стоит перед&nbsp;телевизором. → Диван стоит {{1}}.",
+        words: ["перед ней", "перед им", "перед ним"],
+        correctAnswers: { 1: "перед ним" },
+        explanation: "телевизор (m.) → перед ним. " + P1_RULE
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Ванная находится рядом с&nbsp;кухней. → Ванная находится {{1}}.",
+        words: ["рядом с ними", "рядом с ней", "рядом с ей"],
+        correctAnswers: { 1: "рядом с ней" },
+        explanation: "кухня (f.) → рядом с ней. " + P1_RULE
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Коридор находится между кухней и&nbsp;спальней. → Коридор находится {{1}}.",
+        words: ["между ней", "между ними", "между ими"],
+        correctAnswers: { 1: "между ними" },
+        explanation: "кухня e спальня (due stanze) → между ними. " + P1_RULE
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Лампа висит над&nbsp;столом. → Лампа висит {{1}}.",
+        words: ["над ним", "над ней", "над им"],
+        correctAnswers: { 1: "над ним" },
+        explanation: "стол (m.) → над ним. " + P1_RULE
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Коврик лежит перед&nbsp;холодильником. → Коврик лежит {{1}}.",
+        words: ["перед ними", "перед им", "перед ним"],
+        correctAnswers: { 1: "перед ним" },
+        explanation: "холодильник (m.) → перед ним. " + P1_RULE
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Часы висят рядом с&nbsp;картиной. → Часы висят {{1}}.",
+        words: ["рядом с ним", "рядом с ней", "рядом с ей"],
+        correctAnswers: { 1: "рядом с ней" },
+        explanation: "картина (f.) → рядом с ней. " + P1_RULE
+    }
+];
 
 // ============================================================
-// PANEL 2 — DragDrop · student
-// TODO: contenuto da approvare con PM (tabella → «да» → scrivere)
+// PANEL 2 — DragDrop · student · "В КВАРТИРЕ"
+// Frasi con aggettivo da strumentale doma (pannelli 2 e 3). Nessuna spiegazione (student).
+// Approvato PM 24.11.2026.
 // ============================================================
-const p2exercises = [];
+const p2exercises = [
+    {
+        instruction: P1_INSTR,
+        text: "Полка висит рядом с&nbsp;квадратной картиной. → Полка висит {{1}}.",
+        words: ["рядом с ним", "рядом с ней", "рядом с ей"],
+        correctAnswers: { 1: "рядом с ней" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Ведро стоит под&nbsp;круглой раковиной. → Ведро стоит {{1}}.",
+        words: ["под ним", "под ей", "под ней"],
+        correctAnswers: { 1: "под ней" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Зеркало висит между входной дверью и&nbsp;большим окном. → Зеркало висит {{1}}.",
+        words: ["между ними", "между ней", "между ими"],
+        correctAnswers: { 1: "между ними" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Стул стоит перед&nbsp;большим холодильником. → Стул стоит {{1}}.",
+        words: ["перед ним", "перед ней", "перед им"],
+        correctAnswers: { 1: "перед ним" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Часы висят над&nbsp;старинным камином. → Часы висят {{1}}.",
+        words: ["над ними", "над им", "над ним"],
+        correctAnswers: { 1: "над ним" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Кладовая находится рядом с&nbsp;новой кухней. → Кладовая находится {{1}}.",
+        words: ["рядом с ним", "рядом с ней", "рядом с ей"],
+        correctAnswers: { 1: "рядом с ней" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Полотенце висит за&nbsp;душевой кабиной. → Полотенце висит {{1}}.",
+        words: ["за ним", "за ей", "за ней"],
+        correctAnswers: { 1: "за ней" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Ковёр лежит между книжным шкафом и&nbsp;обеденным столом. → Ковёр лежит {{1}}.",
+        words: ["между ним", "между ними", "между ими"],
+        correctAnswers: { 1: "между ними" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Коробки стоят за&nbsp;белым шкафом. → Коробки стоят {{1}}.",
+        words: ["за ним", "за ними", "за им"],
+        correctAnswers: { 1: "за ним" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Пульт лежит перед&nbsp;новым телевизором. → Пульт лежит {{1}}.",
+        words: ["перед ней", "перед ним", "перед им"],
+        correctAnswers: { 1: "перед ним" }
+    }
+];
 
 // ============================================================
-// PANEL 3 — DragDrop · paid
-// TODO: contenuto da approvare con PM (tabella → «да» → scrivere)
+// PANEL 3 — DragDrop · paid · "ВСЁ НА МЕСТЕ"
+// Frasi nuove da strumentale doma p3 (лампа, мусорное ведро, кресло) + ripetizioni dai pannelli 1–2.
+// Nessuna spiegazione (paid). Approvato PM 24.11.2026.
 // ============================================================
-const p3exercises = [];
+const p3exercises = [
+    {
+        instruction: P1_INSTR,
+        text: "Лампа висит над&nbsp;старинным диваном. → Лампа висит {{1}}.",
+        words: ["над ней", "над им", "над ним"],
+        correctAnswers: { 1: "над ним" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Мусорное ведро стоит рядом с&nbsp;кухонным столом. → Мусорное ведро стоит {{1}}.",
+        words: ["рядом с ним", "рядом с ними", "рядом с им"],
+        correctAnswers: { 1: "рядом с ним" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Коридор находится между кухней и&nbsp;спальней. → Коридор находится {{1}}.",
+        words: ["между ней", "между ними", "между ими"],
+        correctAnswers: { 1: "между ними" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Кресло стоит рядом с&nbsp;книжной полкой. → Кресло стоит {{1}}.",
+        words: ["рядом с ним", "рядом с ней", "рядом с ей"],
+        correctAnswers: { 1: "рядом с ней" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Ведро стоит под&nbsp;круглой раковиной. → Ведро стоит {{1}}.",
+        words: ["под ней", "под ними", "под ей"],
+        correctAnswers: { 1: "под ней" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Тумбочка стоит рядом с&nbsp;кроватью. → Тумбочка стоит {{1}}.",
+        words: ["рядом с ним", "рядом с ей", "рядом с ней"],
+        correctAnswers: { 1: "рядом с ней" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Шкаф стоит между дверью и&nbsp;окном. → Шкаф стоит {{1}}.",
+        words: ["между ними", "между ним", "между ими"],
+        correctAnswers: { 1: "между ними" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Полотенце висит за&nbsp;душевой кабиной. → Полотенце висит {{1}}.",
+        words: ["за ним", "за ей", "за ней"],
+        correctAnswers: { 1: "за ней" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Коврик лежит перед&nbsp;холодильником. → Коврик лежит {{1}}.",
+        words: ["перед ней", "перед ним", "перед им"],
+        correctAnswers: { 1: "перед ним" }
+    },
+    {
+        instruction: P1_INSTR,
+        text: "Зеркало висит между входной дверью и&nbsp;большим окном. → Зеркало висит {{1}}.",
+        words: ["между ней", "между ими", "между ними"],
+        correctAnswers: { 1: "между ними" }
+    }
+];
 
 // ============================================================
-// PANEL 4 — Flashcard · public · explanation (it.)
-// TODO: contenuto da approvare con PM (tabella → «да» → scrivere)
+// PANEL 4 — Flashcard · public · "ПОРЯДОК В ДОМЕ"
+// Fronte = frase dai pannelli 1–3 senza verbo; retro = frase con pronome.
+// Distrattori: genere/numero + forma senza н-. Approvato PM 24.11.2026.
 // ============================================================
-const p4cards = [];
+const P4_RULE = " Dopo за / перед / над / под / рядом с / между il pronome prende н-: за ним, над ней, между ними.";
+const p4cards = [
+    { front: "Ключи за зеркалом", back: "Ключи за ним", distractors: ["Ключи за ней", "Ключи за им"], explanation: "зеркало (n.) → за ним." + P4_RULE },
+    { front: "Шкаф между дверью и окном", back: "Шкаф между ними", distractors: ["Шкаф между ним", "Шкаф между ими"], explanation: "дверь и окно (due oggetti) → между ними." + P4_RULE },
+    { front: "Картина над полкой", back: "Картина над ней", distractors: ["Картина над ним", "Картина над ей"], explanation: "полка (f.) → над ней." + P4_RULE },
+    { front: "Ведро под круглой раковиной", back: "Ведро под ней", distractors: ["Ведро под ним", "Ведро под ей"], explanation: "раковина (f.) → под ней." + P4_RULE },
+    { front: "Стул перед большим холодильником", back: "Стул перед ним", distractors: ["Стул перед ней", "Стул перед им"], explanation: "холодильник (m.) → перед ним." + P4_RULE },
+    { front: "Ковёр между книжным шкафом и обеденным столом", back: "Ковёр между ними", distractors: ["Ковёр между ним", "Ковёр между ими"], explanation: "шкаф e стол (due oggetti) → между ними." + P4_RULE },
+    { front: "Часы рядом с картиной", back: "Часы рядом с ней", distractors: ["Часы рядом с ним", "Часы рядом с ей"], explanation: "картина (f.) → рядом с ней." + P4_RULE },
+    { front: "Коробки за белым шкафом", back: "Коробки за ним", distractors: ["Коробки за ними", "Коробки за им"], explanation: "шкаф (m.) → за ним." + P4_RULE },
+    { front: "Коридор между кухней и спальней", back: "Коридор между ними", distractors: ["Коридор между ней", "Коридор между ими"], explanation: "кухня e спальня (due stanze) → между ними." + P4_RULE },
+    { front: "Кресло рядом с книжной полкой", back: "Кресло рядом с ней", distractors: ["Кресло рядом с ним", "Кресло рядом с ей"], explanation: "полка (f.) → рядом с ней." + P4_RULE }
+];
 
 // ============================================================
 // PANEL 5 — Flashcard · student
