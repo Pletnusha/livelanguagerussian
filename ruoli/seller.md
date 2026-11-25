@@ -338,8 +338,8 @@ Wrap final deliverables inside `<sales_campaign>` tags, broken down using `<funn
         Il risultato: KPI fermi. Investimento non recuperato. 
         E una finestra competitiva che si chiude.
 
-        CERT — Cognitive-Emotional Resonance Training — è una 
-        metodologia che affronta l'adozione AI dal punto in cui 
+        CERT — Cognitive-Emotional Resonance Training — è un 
+        protocollo che affronta l'adozione AI dal punto in cui 
         fallisce davvero: la capacità delle persone di integrare 
         il cambiamento senza perdere efficacia operativa.
 
