@@ -3,7 +3,7 @@ import FlashcardExercise from '/assets/js/engines/FlashcardExercise.js';
 import { initPanelManager } from '/assets/js/panel-manager.js';
 
 // ============================================================
-// PANEL 1 — DragDrop · public · ЛЁГКАЯ ОДЕЖДА
+// PANEL 1 — DragDrop · ЛЁГКАЯ ОДЕЖДА
 // ============================================================
 const p1exercises = [
     {
@@ -14,88 +14,148 @@ const p1exercises = [
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "la camicia = {{1}}, i pantaloni = {{2}}, la sciarpa = {{3}}",
-        words: ["рубашка", "брюки", "шарф", "юбка"],
-        correctAnswers: { 1: "рубашка", 2: "брюки", 3: "шарф" }
+        text: "la camicia = {{1}}, i pantaloni = {{2}}, la giacca = {{3}}",
+        words: ["рубашка", "брюки", "пиджак", "юбка"],
+        correctAnswers: { 1: "рубашка", 2: "брюки", 3: "пиджак" }
     }
 ];
 
 // ============================================================
-// PANEL 2 — DragDrop · student · ВЕРХНЯЯ ОДЕЖДА
+// PANEL 2 — DragDrop · ОБУВЬ
 // ============================================================
 const p2exercises = [
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "la giacca = {{1}}, il maglione = {{2}}, gli stivali = {{3}}",
-        words: ["пиджак", "свитер", "ботинки", "шапка"],
-        correctAnswers: { 1: "пиджак", 2: "свитер", 3: "ботинки" }
+        text: "gli stivali = {{1}}, le scarpe = {{2}}, le sneakers = {{3}}",
+        words: ["ботинки", "туфли", "кроссовки", "кеды"],
+        correctAnswers: { 1: "ботинки", 2: "туфли", 3: "кроссовки" }
     },
     {
         instruction: "Abbina la parola italiana alla traduzione russa.",
-        text: "il berretto = {{1}}, il cappotto = {{2}}, il giubbotto = {{3}}",
-        words: ["шапка", "пальто", "куртка", "пиджак"],
-        correctAnswers: { 1: "шапка", 2: "пальто", 3: "куртка" }
+        text: "le scarpe da ginnastica = {{1}}, gli stivali alti = {{2}}, le scarpe = {{3}}",
+        words: ["кеды", "сапоги", "туфли", "ботинки"],
+        correctAnswers: { 1: "кеды", 2: "сапоги", 3: "туфли" }
     }
 ];
 
 // ============================================================
-// PANEL 3 — Flashcards · public · ЛЕКСИКА: ЛЁГКАЯ ОДЕЖДА
+// PANEL 3 — DragDrop · ТЁПЛАЯ ОДЕЖДА
 // ============================================================
-const p3cards = [
+const p3exercises = [
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "la sciarpa = {{1}}, il berretto = {{2}}, il maglione = {{3}}",
+        words: ["шарф", "шапка", "свитер", "пуховик"],
+        correctAnswers: { 1: "шарф", 2: "шапка", 3: "свитер" }
+    },
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "il piumino = {{1}}, il montone = {{2}}, la sciarpa = {{3}}",
+        words: ["пуховик", "дублёнка", "шарф", "свитер"],
+        correctAnswers: { 1: "пуховик", 2: "дублёнка", 3: "шарф" }
+    }
+];
+
+// ============================================================
+// PANEL 4 — DragDrop · ВЕРХНЯЯ ОДЕЖДА
+// ============================================================
+const p4exercises = [
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "il cappotto = {{1}}, il giubbotto = {{2}}, l'impermeabile = {{3}}",
+        words: ["пальто", "куртка", "плащ", "дублёнка"],
+        correctAnswers: { 1: "пальто", 2: "куртка", 3: "плащ" }
+    },
+    {
+        instruction: "Abbina la parola italiana alla traduzione russa.",
+        text: "il montone = {{1}}, il piumino = {{2}}, il cappotto = {{3}}",
+        words: ["дублёнка", "пуховик", "пальто", "куртка"],
+        correctAnswers: { 1: "дублёнка", 2: "пуховик", 3: "пальто" }
+    }
+];
+
+// ============================================================
+// PANEL 5 — Flashcards · ЛЁГКАЯ ОДЕЖДА
+// ============================================================
+const p5cards = [
     { front: "la maglietta", back: "футболка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/futbolka.png" },
     { front: "il vestito", back: "платье", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/platye.png" },
     { front: "la gonna", back: "юбка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/юбка.png" },
     { front: "la camicia", back: "рубашка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/rubashka.png" },
     { front: "i pantaloni", back: "брюки", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/БРЮКИ.png" },
-    { front: "la sciarpa", back: "шарф", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/ШАРФ.png" }
+    { front: "la giacca", back: "пиджак", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/ПИДЖАК.png" }
 ];
 
 // ============================================================
-// PANEL 4 — Flashcards · student · ЛЕКСИКА: ВЕРХНЯЯ ОДЕЖДА
+// PANEL 6 — Flashcards · ОБУВЬ
 // ============================================================
-const p4cards = [
-    { front: "la giacca", back: "пиджак", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/ПИДЖАК.png" },
-    { front: "il maglione", back: "свитер", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/sviter.png" },
+const p6cards = [
     { front: "gli stivali", back: "ботинки", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/БОТИНКИ.png" },
-    { front: "il berretto", back: "шапка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/shapka.png" },
-    { front: "il cappotto", back: "пальто", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/пальто.png" },
-    { front: "il giubbotto", back: "куртка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/куртка.png" }
+    { front: "le scarpe", back: "туфли", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/tufli.png" },
+    { front: "le sneakers", back: "кроссовки", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/krossovki.png" },
+    { front: "le scarpe da ginnastica", back: "кеды", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/kedy.png" },
+    { front: "gli stivali alti", back: "сапоги", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/sapogi.png" }
 ];
 
 // ============================================================
-// PANEL 5 — Quiz misto · public
-// MC (4) + Match (4) + Scrivi (4) = 12
+// PANEL 7 — Flashcards · ТЁПЛАЯ ОДЕЖДА
 // ============================================================
-function initPanelAbb5() {
-    const panel = document.getElementById('panel-abb-5');
+const p7cards = [
+    { front: "la sciarpa", back: "шарф", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/ШАРФ.png" },
+    { front: "il berretto", back: "шапка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/shapka.png" },
+    { front: "il maglione", back: "свитер", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/sviter.png" },
+    { front: "il piumino", back: "пуховик", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/pukhovik.png" },
+    { front: "il montone", back: "дублёнка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/dublyonka.png" }
+];
+
+// ============================================================
+// PANEL 8 — Flashcards · ВЕРХНЯЯ ОДЕЖДА
+// ============================================================
+const p8cards = [
+    { front: "il cappotto", back: "пальто", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/пальто.png" },
+    { front: "il giubbotto", back: "куртка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/куртка.png" },
+    { front: "l'impermeabile", back: "плащ", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/plashch.png" },
+    { front: "il montone", back: "дублёнка", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/dublyonka.png" },
+    { front: "il piumino", back: "пуховик", frontImg: "/assets/img/principianti/vocaboli/abbigliamento/pukhovik.png" }
+];
+
+// ============================================================
+// PANEL 9 — Quiz misto
+// MC (5) + Match (5) + Scrivi (5) = 15
+// ============================================================
+function initPanelAbb9() {
+    const panel = document.getElementById('panel-abb-9');
     if (!panel) return;
 
-    const container = panel.querySelector('#abb-5-cards-container');
-    const prevBtn   = panel.querySelector('#abb-5-deck-prev');
-    const nextBtn   = panel.querySelector('#abb-5-deck-next');
-    const counterEl = panel.querySelector('#abb-5-deck-counter');
+    const container = panel.querySelector('#abb-9-cards-container');
+    const prevBtn   = panel.querySelector('#abb-9-deck-prev');
+    const nextBtn   = panel.querySelector('#abb-9-deck-next');
+    const counterEl = panel.querySelector('#abb-9-deck-counter');
 
     let currentCard = 0;
 
     const multipleChoiceData = [
         { question: "Come si dice 'la maglietta' in russo?", options: ["футболка", "рубашка", "куртка"], answer: "футболка" },
-        { question: "Come si dice 'gli stivali' in russo?", options: ["ботинки", "брюки", "шапка"], answer: "ботинки" },
+        { question: "Come si dice 'gli stivali alti' in russo?", options: ["сапоги", "ботинки", "кеды"], answer: "сапоги" },
         { question: "Come si dice 'il cappotto' in russo?", options: ["пальто", "пиджак", "свитер"], answer: "пальто" },
-        { question: "Come si dice 'la gonna' in russo?", options: ["юбка", "платье", "шарф"], answer: "юбка" }
+        { question: "Come si dice 'il piumino' in russo?", options: ["пуховик", "плащ", "дублёнка"], answer: "пуховик" },
+        { question: "Come si dice 'le scarpe da ginnastica' in russo?", options: ["кеды", "кроссовки", "сапоги"], answer: "кеды" }
     ];
 
     const matchPairs = [
         { left: "il vestito", right: "платье" },
-        { left: "la camicia", right: "рубашка" },
+        { left: "la sciarpa", right: "шарф" },
         { left: "il maglione", right: "свитер" },
-        { left: "il giubbotto", right: "куртка" }
+        { left: "il giubbotto", right: "куртка" },
+        { left: "l'impermeabile", right: "плащ" }
     ];
 
     const quizData = [
         { id: "abb-001", promptPrefix: "i pantaloni = ", promptSuffix: "", answers: ["брюки"] },
-        { id: "abb-002", promptPrefix: "la sciarpa = ", promptSuffix: "", answers: ["шарф"] },
+        { id: "abb-002", promptPrefix: "il berretto = ", promptSuffix: "", answers: ["шапка"] },
         { id: "abb-003", promptPrefix: "la giacca = ", promptSuffix: "", answers: ["пиджак"] },
-        { id: "abb-004", promptPrefix: "il berretto = ", promptSuffix: "", answers: ["шапка"] }
+        { id: "abb-004", promptPrefix: "il montone = ", promptSuffix: "", answers: ["дублёнка"] },
+        { id: "abb-005", promptPrefix: "le sneakers = ", promptSuffix: "", answers: ["кроссовки"] }
     ];
 
     const MC_END      = multipleChoiceData.length;
@@ -204,9 +264,13 @@ function initPanelAbb5() {
 const initializers = {
     'panel-abb-1': () => new DragDropExercise({ rootId: 'ex-dragdrop-abb-01', exercises: p1exercises }),
     'panel-abb-2': () => new DragDropExercise({ rootId: 'ex-dragdrop-abb-02', exercises: p2exercises }),
-    'panel-abb-3': () => new FlashcardExercise({ rootId: 'ex-flashcards-abb-03', cards: p3cards }),
-    'panel-abb-4': () => new FlashcardExercise({ rootId: 'ex-flashcards-abb-04', cards: p4cards }),
-    'panel-abb-5': () => initPanelAbb5(),
+    'panel-abb-3': () => new DragDropExercise({ rootId: 'ex-dragdrop-abb-03', exercises: p3exercises }),
+    'panel-abb-4': () => new DragDropExercise({ rootId: 'ex-dragdrop-abb-04', exercises: p4exercises }),
+    'panel-abb-5': () => new FlashcardExercise({ rootId: 'ex-flashcards-abb-05', cards: p5cards }),
+    'panel-abb-6': () => new FlashcardExercise({ rootId: 'ex-flashcards-abb-06', cards: p6cards }),
+    'panel-abb-7': () => new FlashcardExercise({ rootId: 'ex-flashcards-abb-07', cards: p7cards }),
+    'panel-abb-8': () => new FlashcardExercise({ rootId: 'ex-flashcards-abb-08', cards: p8cards }),
+    'panel-abb-9': () => initPanelAbb9(),
 };
 
 initPanelManager({ initializers, enableAccessControl: true });
